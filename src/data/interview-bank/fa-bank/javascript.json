@@ -1,0 +1,1017 @@
+[
+ {
+  "en": "What is the difference between `==` and `===` in JavaScript?",
+  "q": "تفاوت == و === در JavaScript چیست؟",
+  "qa": "`==` عملگر برابری انتزاعی و `===` عملگر برابری سخت‌گیرانه است؛ `==` اول نوع عملوندها را چک می‌کند. وقتی یکی باشند مقایسه بدون تبدیل نوع انجام می‌شود مثل `===`. وقتی نوع‌ها فرق کنند، الگوریتم Abstract Equality Comparison اجرا می‌شود که ممکن است یکی یا هر دو عملوند را تبدیل کند. `===` هرگز تبدیل نوع نمی‌کند و در تفاوت نوع، `false` برمی‌گرداند."
+ },
+ {
+  "en": "What's the difference between a JavaScript variable that is: `null`, `undefined` or undeclared?",
+  "q": "تفاوت متغیر JavaScript با مقدار null و undefined و undeclared چیست؟",
+  "qa": "| ویژگی | null | undefined | Undeclared | | معنی | توسعه‌دهنده صریحاً «بدون مقدار» ست کرده | متغیر اعلان شده ولی مقدار نگرفته | متغیر اصلاً اعلان نشده | | typeof | 'object' | 'undefined' | 'undefined' | خواندن مستقیم undeclared خطای ReferenceError می‌دهد."
+ },
+ {
+  "en": "What's the difference between `.call` and `.apply` in JavaScript?",
+  "q": "تفاوت .call و .apply در JavaScript چیست؟",
+  "qa": "هر دو برای فراخوانی تابع با `this` مشخص و آرگومان‌ها استفاده می‌شوند؛ تفاوت اصلی در نحوه‌ی گرفتن آرگومان‌هاست: `.call` آرگومان‌ها را جدا‌جدا و `.apply` به‌صورت آرایه می‌گیرد."
+ },
+ {
+  "en": "Explain the concept of a callback function in asynchronous operations",
+  "q": "مفهوم callback function در عملیات ناهم‌زمان را توضیح دهید.",
+  "qa": "کال‌بک تابعی است که به API دیگری می‌دهی تا بعداً یا حین کارش صدا بزند. در APIهای ناهم‌زمان، قرارداد باید تعریف کند کِی و چند بار صدا زده می‌شود."
+ },
+ {
+  "en": "Explain the concept of a microtask queue",
+  "q": "مفهوم microtask queue را توضیح دهید.",
+  "qa": "صف microtask نگه‌دارنده‌ی callbackهایی مثل واکنش‌های promise، `queueMicrotask()` و اعلان‌های `MutationObserver` است؛ در نقطه‌چک microtask تا خالی‌شدن کامل اجرا می‌شود."
+ },
+ {
+  "en": "Explain the concept of caching and how it can be used to improve performance",
+  "q": "مفهوم کش و بهبود عملکرد با آن را توضیح دهید.",
+  "qa": "کش یعنی استفاده‌ی مجدد از نتیجه‌ی قبلاً محاسبه‌شده یا واکشی‌شده برای کاهش تاخیر، پهنای باند و بار سرور. کش فقط وقتی درست است که کلید، سیاست تازگی و…"
+ },
+ {
+  "en": "Explain the concept of code coverage and how it can be used to assess test quality",
+  "q": "مفهوم code coverage و استفاده‌اش برای سنجش کیفیت تست را توضیح دهید.",
+  "qa": "Code coverage گزارش می‌دهد کدام دستور، شاخه، تابع یا خط حین تست اجرا شده؛ به‌عنوان نقشه‌ای برای پیدا‌کردن رفتارهای پوشش‌داده‌نشده استفاده‌اش کنید، نه نمره‌ای که کیفیت تست را اثبات کند."
+ },
+ {
+  "en": "Explain the concept of Content Security Policy (CSP) and how it enhances security",
+  "q": "مفهوم CSP و تقویت امنیت با آن را توضیح دهید.",
+  "qa": "**CSP** سیاست دفاع‌درعمقِ تحمیل‌شده توسط مرورگر برای کنترل اجرای اسکریپت، بارگذاری منابع، framing و قابلیت‌های دیگر است."
+ },
+ {
+  "en": "Explain the concept of Cross-Site Request Forgery (CSRF) and its mitigation techniques",
+  "q": "مفهوم CSRF و تکنیک‌های کاهشش را توضیح دهید.",
+  "qa": "**CSRF** مرورگر را فریب می‌دهد درخواست تغییر وضعیتِ ناخواسته با اعتبارنامه‌های محیطی مثل کوکی بفرستد. دفاع: کوکی `SameSite`، توکن CSRF غیرقابل‌حدس یا چک Origin/Referer سمت سرور."
+ },
+ {
+  "en": "Explain the concept of debouncing and throttling",
+  "q": "مفهوم debouncing و throttling را توضیح دهید.",
+  "qa": "دو تکنیک کنترل نرخ اجرای تابع‌اند. **Debounce** اجرا را فقط بعد از گذشت تاخیر مشخص از آخرین فراخوانی تضمین می‌کند؛ **Throttle** حداکثر یک اجرا در بازه‌ی زمانی مشخص."
+ },
+ {
+  "en": "Explain the concept of destructuring assignment for objects and arrays",
+  "q": "مفهوم destructuring assignment برای آبجکت‌ها و آرایه‌ها را توضیح دهید.",
+  "qa": "**Destructuring** سینتکسی در JS است که مقادیر آرایه یا propertyهای آبجکت را به متغیرهای مجزا باز می‌کند. برای آرایه‌ها بر اساس ترتیب و برای آبجکت‌ها بر اساس نام."
+ },
+ {
+  "en": "Explain the concept of error propagation in JavaScript",
+  "q": "مفهوم error propagation در JavaScript را توضیح دهید.",
+  "qa": "استثناهای هم‌زمان تا رسیدن به `catch` متناظر در call stack بالا می‌روند؛ rejectهای Promise در زنجیره‌ی Promise پخش می‌شوند تا rejection handler بیابند."
+ },
+ {
+  "en": "Explain the concept of hoisting with regards to functions",
+  "q": "مفهوم hoisting در ارتباط با توابع را توضیح دهید.",
+  "qa": "«هویستینگ» نتیجه‌ی مشاهده‌شده‌ی ساخت اعلان‌ها قبل از اجرای دستورات اسکوپ است؛ موتور متن سورس را جابه‌جا نمی‌کند. اعلان تابع با خود تابع مقدار‌دهی می‌شود…"
+ },
+ {
+  "en": "Explain the concept of inheritance in ES2015 classes",
+  "q": "مفهوم وراثت در کلاس‌های ES2015 را توضیح دهید.",
+  "qa": "وراثت `class` در JavaScript با `extends` زنجیره‌ی constructor و prototype را وصل می‌کند؛ constructor فرزند باید قبل از `this` صدا بزند `super()` و `super.method()` رفتار والد را فراخوانی می‌کند."
+ },
+ {
+  "en": "Explain the concept of input validation and its importance in security",
+  "q": "مفهوم input validation و اهمیتش در امنیت را توضیح دهید.",
+  "qa": "اعتبارسنجی ورودی چک می‌کند داده‌ی نامطمئن نوع، فرمت، طول، بازه و معنای کسب‌وکاری موردانتظار را داشته باشد؛ اعتبارسنجی مرورگر فقط feedback است و مرز امنیتی باید روی سرورِ قابل‌اعتماد باشد."
+ },
+ {
+  "en": "Explain the concept of lazy loading and how it can improve performance",
+  "q": "مفهوم lazy loading و بهبود عملکرد با آن را توضیح دهید.",
+  "qa": "Lazy loading منابع غیرحیاتی را تا احتمال نیاز به تعویق می‌اندازد؛ کار اولیه‌ی شبکه و پردازش کم می‌شود. برای تصاویر زیرین `loading=\"lazy\"` و برای JS اختیاری `import()` داینامیک."
+ },
+ {
+  "en": "Explain the concept of lexical scoping",
+  "q": "مفهوم lexical scoping را توضیح دهید.",
+  "qa": "**Lexical scoping** یعنی اسکوپ متغیر بر اساس جایگاهش در سورس‌کد تعیین می‌شود و توابع تودرتو به متغیرهای اعلان‌شده در محیط والد دسترسی دارند."
+ },
+ {
+  "en": "Explain the concept of partial application",
+  "q": "مفهوم partial application را توضیح دهید.",
+  "qa": "تکنیکی در برنامه‌نویسی تابعی که تابع را با بعضی آرگومان‌ها اعمال می‌کند و تابع جدیدی می‌دهد که بقیه‌ی آرگومان‌ها را می‌گیرد؛ مثلاً از `add(a, b)` می‌توان `add5` ساخت که همیشه ۵ اضافه می‌کند."
+ },
+ {
+  "en": "Explain the concept of scope in JavaScript",
+  "q": "مفهوم scope در JavaScript را توضیح دهید.",
+  "qa": "در JavaScript، **scope** دسترسی‌پذیری متغیرها و توابع را در بخش‌های مختلف کد تعیین می‌کند؛ سه نوع اصلی: سراسری، تابعی و بلوکی."
+ },
+ {
+  "en": "Explain the concept of tagged templates",
+  "q": "مفهوم tagged templates را توضیح دهید.",
+  "qa": "**Tagged templateها** در JS اجازه می‌دهند template literalها را با تابع parse کنید؛ تابع رشته‌های literal و مقادیر را به‌عنوان آرگومان می‌گیرد."
+ },
+ {
+  "en": "Explain the concept of test-driven development (TDD)",
+  "q": "مفهوم TDD را توضیح دهید.",
+  "qa": "**TDD** چرخه‌ی بازخورد کوتاهی است: برای رفتار بعدی یک تست شکست‌خورده بنویس (**قرمز**)، کمترین پیاده‌سازی که پاس شود (**سبز**) و بعد بازآرایی."
+ },
+ {
+  "en": "Explain the concept of the Prototype pattern",
+  "q": "مفهوم الگوی Prototype را توضیح دهید.",
+  "qa": "**الگوی Prototype** آبجکتی از prototype یا قالب موجود می‌سازد وقتی ساخت باید بر اساس state موجود پیکربندی شود؛ در JS با Object.create یا کپی از نمونه‌ی مرجع."
+ },
+ {
+  "en": "Explain the concept of the Singleton pattern",
+  "q": "مفهوم الگوی Singleton را توضیح دهید.",
+  "qa": "**الگوی Singleton** یک نمونه‌ی مشترک در اسکوپ مشخص و یک نقطه‌ی دسترسی به آن می‌دهد؛ در JavaScript، export یک ES module معمولاً همین نقش را دارد."
+ },
+ {
+  "en": "Explain the concept of the spread operator and its uses",
+  "q": "مفهوم spread operator و کاربردهایش را توضیح دهید.",
+  "qa": "عملگر **spread** (`...`) عناصر iterable (مثل آرایه) را به عناصر منفرد باز می‌کند و propertyهای قابل‌شماره‌ی خود آبجکت را کپی می‌کند."
+ },
+ {
+  "en": "Explain the concept of the Strategy pattern",
+  "q": "مفهوم الگوی Strategy را توضیح دهید.",
+  "qa": "**الگوی Strategy** پیاده‌سازی‌های قابل‌جایگزین را پشت قرارداد یکسان تعریف می‌کند؛ فراخوان بدون انباشت شرط‌های بزرگ، رفتار را انتخاب می‌کند."
+ },
+ {
+  "en": "Explain the concept of the Web Socket API",
+  "q": "مفهوم WebSocket API را توضیح دهید.",
+  "qa": "**WebSocket API** راهی برای بازکردن اتصال ماندگار کلاینت-سرور و ارتباط بلادرنگ دوطرفه است؛ برخلاف HTTP، پس از handshake پیام در هر دو جهت آزاد است."
+ },
+ {
+  "en": "Explain the concept of this binding in event handlers",
+  "q": "مفهوم اتصال this در event handler ها را توضیح دهید.",
+  "qa": "برای تابع غیرفلشی ثبت‌شده با `addEventListener()`، مرورگر listener را با `this` برابر عنصری که listener رویش ثبت شده صدا می‌زند."
+ },
+ {
+  "en": "Explain the concept of tree shaking in module bundling",
+  "q": "مفهوم tree shaking در module bundling را توضیح دهید.",
+  "qa": "**Tree shaking** بهینه‌سازی باندلر است: ساختار ایستای ماژول + تحلیل side-effect برای حذف کدِ اثبات‌نا‌رسیده به entry pointها. ES module syntax تحلیل را ممکن می‌کند ولی تضمین حذف نیست."
+ },
+ {
+  "en": "Explain the difference between classical inheritance and prototypal inheritance",
+  "q": "تفاوت وراثت کلاسیک و نمونه‌ای چیست؟",
+  "qa": "**وراثت کلاسیک** مدلی است که کلاس‌ها از کلاس‌ها ارث می‌برند — رایج در Java و C++. **وراثت نمونه‌ای** مدل JS است که آبجکت‌ها مستقیم از آبجکت‌ها ارث می‌برند."
+ },
+ {
+  "en": "Explain the difference between document.querySelector() and document.getElementById()",
+  "q": "تفاوت document.querySelector و document.getElementById چیست؟",
+  "qa": "هر دو برای انتخاب عنصر از DOM استفاده می‌شوند با تفاوت‌های کلیدی: `querySelector` با هر CSS selector اولین تطابق را می‌دهد؛ `getElementById` با ID، عنصر با همان ID را."
+ },
+ {
+  "en": "Explain the difference between dot notation and bracket notation for accessing object properties",
+  "q": "تفاوت dot notation و bracket notation برای دسترسی به propertyهای آبجکت چیست؟",
+  "qa": "**Dot** مختصرتر و خواناتر است ولی فقط با کلیدهای معتبر identifier کار می‌کند؛ **bracket** هر رشته‌ای — حتی داینامیک — را می‌پذیرد."
+ },
+ {
+  "en": "Explain the difference between global scope, function scope, and block scope",
+  "q": "تفاوت global scope و function scope و block scope چیست؟",
+  "qa": "**Global scope** یعنی از هرجای کد قابل‌دسترسی؛ **function scope** فقط داخل همان تابع؛ **block scope** فقط داخل بلوک `{}` که متغیر در آن اعلان شده."
+ },
+ {
+  "en": "Explain the difference between shallow copy and deep copy",
+  "q": "تفاوت shallow copy و deep copy چیست؟",
+  "qa": "**Shallow copy** فقط propertyهای سطح اول را کپی می‌کند و آبجکت‌های تو در تو همچنان مرجع‌اند؛ **deep copy** همه‌ی سطوح را با نمونه‌های کاملاً تازه کپی می‌کند."
+ },
+ {
+  "en": "Explain the difference between unit testing, integration testing, and end-to-end testing",
+  "q": "تفاوت unit testing و integration testing و end-to-end testing چیست؟",
+  "qa": "- **Unit**: رفتار کوچک با وابستگی‌های کنترل‌شده؛ سریع و دقیق ولی اتصال ماژول‌ها را اثبات نمی‌کند. - **Integration**: ماژول‌های هم‌کار یا مرز واقعی مثل HTTP handler + دیتابیس."
+ },
+ {
+  "en": "Explain the difference in hoisting between var, let, and const",
+  "q": "تفاوت hoisting بین var و let و const چیست؟",
+  "qa": "قبل از اجرای دستورات اسکوپ، JS اعلان‌های `var`، `let` و `const` را می‌سازد؛ متن سورس جابه‌جا نمی‌شود. اعلان `var` به undefined مقدار‌دهی…"
+ },
+ {
+  "en": "Explain the different states of a Promise",
+  "q": "وضعیت‌های مختلف Promise را توضیح دهید.",
+  "qa": "Promise سه وضعیت انحصاری دارد: **Pending** (هنوز نه fulfiilled نه rejected)، **Fulfilled** (با مقدار تمام شد)، **Rejected** (با دلیل شکست خورد)."
+ },
+ {
+  "en": "Explain the different ways the `this` keyword can be bound",
+  "q": "روش‌های مختلف اتصال this را توضیح دهید.",
+  "qa": "کلیدواژه‌ی `this` چند روش اتصال دارد: **Default** (در non-strict به global object)، **Implicit** (به‌عنوان متد آبجکت)، **Explicit** (call/apply/bind) و **new binding**. توابع فلشی lexical می‌گیرند."
+ },
+ {
+  "en": "Explain the event phases in a browser",
+  "q": "فازهای رویداد در مرورگر را توضیح دهید.",
+  "qa": "رویدادها سه فاز دارند: **capturing** (از ریشه به هدف)، **target** و **bubbling** (از هدف به بالا). در فاز capturing رویداد از ریشه شروع می‌شود."
+ },
+ {
+  "en": "Explain the Observer pattern and its use cases",
+  "q": "الگوی Observer و کاربردهایش را توضیح دهید.",
+  "qa": "**الگوی Observer** به subject اجازه می‌دهد تغییرات را به observerهای مشترک‌شده منتشر کند بدون دانستن پیاده‌سازی‌شان؛ مناسب UI events، state management و اعلان‌ها."
+ },
+ {
+  "en": "How can closures be used to create private variables?",
+  "q": "بستارها چطور متغیر خصوصی می‌سازند؟",
+  "qa": "با تعریف تابع داخل تابع دیگر: تابع داخلی به متغیرهای بیرونی دسترسی دارد ولی از بیرون کلاس دسترسی مستقیم نیست — داده‌ی خصوصی می‌سازد."
+ },
+ {
+  "en": "How can you avoid problems related to hoisting?",
+  "q": "چطور از مشکلات hoisting دوری می‌کنید؟",
+  "qa": "به‌صورت پیش‌فرض `const` و در صورت نیاز به تغییر `let`؛ اعلان‌ها نزدیک اولین استفاده؛ و هرگز قبل از مقدار‌دهی، binding را نخوانید. let و const هم hoist می‌شوند ولی در TDZ می‌مانند."
+ },
+ {
+  "en": "How can you create custom error objects?",
+  "q": "چطور error object سفارشی می‌سازید؟",
+  "qa": "وقتی مصرف‌کننده باید خطای دامنه را از دیگر استثناها تشخیص دهد، از `Error` ارث‌بری کنید: `super(message, options)` صدا بزنید و context ساختاریافته اضافه کنید."
+ },
+ {
+  "en": "How can you implement secure authentication and authorization in JavaScript applications?",
+  "q": "احراز هویت و مجوزدهی امن در اپ‌های JS چطور پیاده می‌شود؟",
+  "qa": "از identity provider معتبر استفاده کنید نه ساخت پروتکل دست‌ساز؛ HTTPS برای اطلاعات ورود؛ passkeys مقاوم به فیشینگ یا پسورد هش‌شده با MFA؛ نشست کوتاه یا توکن اعتبارسنجی‌شده با کوکی HttpOnly و Secure."
+ },
+ {
+  "en": "How can you optimize DOM manipulation for better performance?",
+  "q": "دستکاری DOM برای عملکرد بهتر چطور بهینه می‌شود؟",
+  "qa": "اول با ابزارهای performance اندازه بگیرید؛ بعد کارهای غیرضروری DOM را کم، تغییرهای مرتبط را دسته‌ای و درخت DOM را قابل‌مدیریت نگه دارید و از forced synchronous layout دوری کنید."
+ },
+ {
+  "en": "How can you optimize network requests for better performance?",
+  "q": "درخواست‌های شبکه را چطور برای عملکرد بهتر بهینه می‌کنید؟",
+  "qa": "ترافیک واقعی را اندازه بگیرید؛ بعد بایت‌های منتقل‌شده را کم، درخواست‌های اضافی/تکراری را حذف، assetهای تغییرناپذیر را کش و داده‌ی متغیر را revalidate کنید."
+ },
+ {
+  "en": "How can you prevent clickjacking attacks?",
+  "q": "چطور از حملات clickjacking جلوگیری می‌کنید؟",
+  "qa": "در مرز سرور با دستورالعمل CSP `frame-ancestors`: `'none'` وقتی هرگز نباید فریم شود، `'self'` برای همان origin یا فهرست originهای قابل‌اعتماد."
+ },
+ {
+  "en": "How can you prevent SQL injection vulnerabilities in JavaScript applications?",
+  "q": "چطور از آسیب‌پذیری SQL injection در اپ‌های JS جلوگیری می‌کنید؟",
+  "qa": "مقادیر نامطمئن را از سینتکس SQL جدا نگه دارید: کوئری پارامتری یا prepared statement روی سرور؛ هرگز کوئری را با چسباندن داده‌ی درخواست نسازید."
+ },
+ {
+  "en": "How can you test asynchronous code in JavaScript?",
+  "q": "کد ناهم‌زمان در JS چطور تست می‌شود؟",
+  "qa": "کار ناهم‌زمان را `return` یا `await` کنید تا runner بداند تست کی تمام می‌شود؛ مسیرهای موفق و شکست را با وابستگی‌های کنترل‌شده تست و از شبکه‌ی واقعی و sleepهای دلخواه دوری کنید."
+ },
+ {
+  "en": "How do currying and partial application differ from each other?",
+  "q": "تفاوت currying و partial application چیست؟",
+  "qa": "**Currying** تابع چندآرگومانی را به زنجیره‌ی توابع تک‌آرگومانی تبدیل می‌کند: `f(a, b, c)` → `f(a)(b)(c)`؛ **partial application** بعضی آرگومان‌ها را ثابت می‌کند و بقیه را می‌گیرد."
+ },
+ {
+  "en": "How do `<iframe>` on a page communicate?",
+  "q": "iframe های یک صفحه چطور با هم ارتباط برقرار می‌کنند؟",
+  "qa": "با `postMessage()` ارتباط بین originها ممکن می‌شود؛ امن فقط وقتی فرستنده target origin دقیق بدهد و گیرنده `event.origin` و ساختار `event.data` را اعتبارسنجی کند."
+ },
+ {
+  "en": "How do you access the index of an element in an array during iteration?",
+  "q": "حین پیمایش آرایه، اندیس عنصر را چطور می‌گیرید؟",
+  "qa": "با `forEach`، `map`، حلقه‌ی `for...of` با `entries()` یا حلقه‌ی سنتی `for` — هرکدام اندیس را در اختیار می‌گذارند."
+ },
+ {
+  "en": "How do you add, remove and modify HTML elements using JavaScript?",
+  "q": "افزودن، حذف و ویرایش عنصرهای HTML با JavaScript چطور انجام می‌شود؟",
+  "qa": "ساخت با `document.createElement()`، متن با `textContent` و درج با `append()`، `prepend()`، `before()`، `after()`؛ حذف با `remove()`."
+ },
+ {
+  "en": "How do you add, remove and update elements in an array?",
+  "q": "افزودن، حذف و به‌روزرسانی عناصر آرایه چطور انجام می‌شود؟",
+  "qa": "برای تغییر درجا: `push()`/`unshift()` افزودن، `pop()`/`shift()` حذف از انتها، `splice()` برای بازه‌های دلخواه و انتساب اندیس برای جایگزینی."
+ },
+ {
+  "en": "How do you check if an object has a specific property?",
+  "q": "چطور چک می‌کنید آبجکت property خاصی دارد؟",
+  "qa": "با `in` وقتی propertyهای ارثی هم باید شمرده شوند؛ با `Object.hasOwn()` وقتی فقط propertyهای خود آبجکت مدنظر است. از `obj.hasOwnProperty()` مستقیم دوری کنید."
+ },
+ {
+  "en": "How do you check the data type of a variable?",
+  "q": "نوع داده‌ی متغیر را چطور چک می‌کنید؟",
+  "qa": "برای انواع اولیه و توابع از `typeof` استفاده کنید؛ نتایج ممکن: `undefined`، `boolean`، `number`، `bigint`، `string`، `symbol`، `object`، `function`."
+ },
+ {
+  "en": "How do you convert a Set to an array in JavaScript?",
+  "q": "Set را در JavaScript چطور به آرایه تبدیل می‌کنید؟",
+  "qa": "با `Array.from()` یا عملگر spread: `const arr = [...mySet]` — هر دو سبک و استانداردند."
+ },
+ {
+  "en": "How do you convert a string to a number in JavaScript?",
+  "q": "رشته را در JavaScript چطور به عدد تبدیل می‌کنید؟",
+  "qa": "اگر کل رشته باید عدد باشد از `Number(value)`؛ اگر پذیرش پیشوند عددی عمدی است از `parseInt(value, radix)` یا `parseFloat`. نتیجه را با `Number.isNaN()` چک کنید."
+ },
+ {
+  "en": "How do you create a constructor function?",
+  "q": "constructor function چطور ساخته می‌شود؟",
+  "qa": "تابعی عادی با نام بزرگ‌حرف تعریف کنید که constructor بودنش را نشان دهد؛ با `this` وضعیت نمونه را ست و موقع فراخوانی با `new` آبجکت تازه بسازید."
+ },
+ {
+  "en": "How do you detect if JavaScript is disabled on a page?",
+  "q": "چطور تشخیص می‌دهید JavaScript صفحه غیرفعال است؟",
+  "qa": "با تگ `<noscript>`: محتوا یا پیامی داخلش بگذارید که فقط وقتی JS غیرفعال است نمایش داده می‌شود."
+ },
+ {
+  "en": "How do you get the query string values of the current page in JavaScript?",
+  "q": "مقادیر query string صفحه‌ی فعلی را در JS چطور می‌گیرید؟",
+  "qa": "با آبجکت `URLSearchParams`: یک نمونه از `location.search` بسازید و با `get()` مقادیر پارامترها را بخوانید."
+ },
+ {
+  "en": "How do you handle errors in asynchronous operations?",
+  "q": "خطاهای عملیات ناهم‌زمان را چطور هندل می‌کنید؟",
+  "qa": "rejectهای promise را با `try...catch` دور `await` یا با `.catch()` روی زنجیره بگیرید. یادتان باشد Fetch برای خطاهای HTTP reject نمی‌کند — `response.ok` را چک کنید."
+ },
+ {
+  "en": "How do you handle errors using try...catch blocks?",
+  "q": "خطاها با بلوک‌های try...catch چطور هندل می‌شوند؟",
+  "qa": "کدِ ممکن‌الخطا را داخل `try` می‌پیچید؛ خطا رخ دهد، کنترل به بلوک `catch` می‌رود و بلوک `finally` همیشه — با یا بدون خطا — اجرا می‌شود."
+ },
+ {
+  "en": "How do you import and export modules in JavaScript?",
+  "q": "ماژول‌ها در JavaScript چطور import و export می‌شوند؟",
+  "qa": "ES modules با `export` bindingهای عمومی ماژول را تعریف و با `import` مصرف می‌کنند؛ named imports باید با نام‌های export شده تطبیق داشته باشند."
+ },
+ {
+  "en": "How do you make an HTTP request using the Fetch API?",
+  "q": "با Fetch API درخواست HTTP چطور زده می‌شود؟",
+  "qa": "`fetch()` را صدا می‌زنید که promise برای `Response` می‌دهد؛ برای URL خراب و خطای شبکه reject می‌شود ولی برای خطاهای HTTP نه — پس `response.ok` را چک کنید."
+ },
+ {
+  "en": "How do you manipulate CSS styles using JavaScript?",
+  "q": "استایل‌های CSS با JavaScript چطور دستکاری می‌شوند؟",
+  "qa": "با دسترسی به property `style` عنصر HTML: مثلاً `el.style.backgroundColor = 'blue'` رنگ پس‌زمینه را عوض می‌کند؛ برای کلاس‌ها از `classList` استفاده کنید."
+ },
+ {
+  "en": "How do you prevent the default behavior of an event?",
+  "q": "رفتار پیش‌فرض رویداد چطور متوقف می‌شود؟",
+  "qa": "با متد `preventDefault` روی آبجکت رویداد: مثلاً برای جلوگیری از ارسال فرم یا پیمایش لینک، قبل از هندل‌کردن منطق خودتان صدا بزنید."
+ },
+ {
+  "en": "How do you redirect to a new page in JavaScript?",
+  "q": "در JavaScript چطور به صفحه‌ی جدید ریدایرکت می‌کنید؟",
+  "qa": "برای ناوبری مرورگر از `location.assign(url)` (یا `location.href`) استفاده کنید وقتی Back باید به صفحه‌ی فعلی برگردد؛ `location.replace()` در تاریخچه ثبت نمی‌کند."
+ },
+ {
+  "en": "How do you reliably determine whether an object is empty?",
+  "q": "خالی‌بودن آبجکت را چطور قابل‌اعتماد تشخیص می‌دهید؟",
+  "qa": "اول تعریف کنید «خالی» یعنی چه. برای حالت رایج «بدون property قابل‌شماره‌ی خودِ رشته‌کلیدی»: `Object.keys(obj).length === 0`؛ اگر symbol هم مهم است…"
+ },
+ {
+  "en": "How do you use window.history API?",
+  "q": "API ی window.history چطور استفاده می‌شود؟",
+  "qa": "History API اجازه می‌دهد بدون reload، entryهای هم‌مبدأ به تاریخچه‌ی نشست اضافه یا جایگزین شوند: `pushState()` اضافه می‌کند و `replaceState()` جایگزین می‌کند."
+ },
+ {
+  "en": "How do `Set`s and `Map`s handle equality checks for objects?",
+  "q": "Set ها و Map ها برابری آبجکت‌ها را چطور هندل می‌کنند؟",
+  "qa": "بر اساس **هویت مرجع** نه برابری عمیق: دو آبجکت فقط وقتی برابرند که همان مرجع باشند — محتوای یکسان کافی نیست."
+ },
+ {
+  "en": "How do you validate form elements using the Constraint Validation API?",
+  "q": "اعتبارسنجی عناصر فرم با Constraint Validation API چطور انجام می‌شود؟",
+  "qa": "قواعد پایه را در HTML بگذارید (`required`، `type`، `min`، `max`، `minlength`، `maxlength`، `pattern`) و بعد از API برای روابط سفارشی و بازخورد استفاده کنید: `checkValidity()` بولی می‌دهد و `invalid` می‌آورد."
+ },
+ {
+  "en": "How do you write unit tests for JavaScript code?",
+  "q": "unit test برای کد JavaScript چطور نوشته می‌شود؟",
+  "qa": "واحد رفتاری کوچکی انتخاب، ورودی‌ها و وابستگی‌های کنترل‌شده بدهید، اجرا کنید و نتیجه‌ی مشاهده‌پذیر یا side effect را ادعا کنید؛ مسیرهای خطا را هم پوشش دهید."
+ },
+ {
+  "en": "How does hoisting affect function declarations and expressions?",
+  "q": "hoisting روی اعلان و عبارت تابع چه اثری دارد؟",
+  "qa": "اعلان تابع هنگام ساخت اسکوپ مقدار‌دهی می‌شود و قبل از اعلان منبعی قابل فراخوانی است؛ **عبارت تابع** فقط بعد از ارزیابی خط اعلان در دسترس می‌آید."
+ },
+ {
+  "en": "How is Promise.all() different from Promise.allSettled()?",
+  "q": "تفاوت Promise.all و Promise.allSettled چیست؟",
+  "qa": "هر دو چند promise را هندل می‌کنند ولی متفاوت: **`all()`** وقتی همه لازم است و fail-fast می‌کند؛ **`allSettled()`** وقتی باید همه‌ی نتایج مستقلاً بررسی شوند."
+ },
+ {
+  "en": "Provide some examples of how currying and partial application can be used",
+  "q": "چند مثال از کاربرد currying و partial application بزنید.",
+  "qa": "**Currying** تابع چندآرگومانی را به زنجیره‌ی توابع تک‌آرگومانی می‌شکند؛ **partial application** بعضی آرگومان‌ها را ثابت می‌کند و تابع باقی‌مانده می‌دهد."
+ },
+ {
+  "en": "What are callback functions and how are they used?",
+  "q": "callback function ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "کال‌بک تابعی است که به کد دیگر می‌دهید تا طبق قرارداد آن API صدا زده شود؛ بعضی هم‌زمان‌اند مثل `Array.map` و بعضی ناهم‌زمان مثل event handlerها."
+ },
+ {
+  "en": "What are default parameters and how are they used?",
+  "q": "default parameter ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "وقتی آرگومان حذف یا صریحاً `undefined` باشد مقدار می‌دهند؛ برای `null`، `0`، `false` یا `''` اعمال نمی‌شوند. عبارت در زمان فراخوانی ارزیابی می‌شود."
+ },
+ {
+  "en": "What are design patterns and why are they useful?",
+  "q": "design pattern ها چیستند و چرا مفیدند؟",
+  "qa": "**الگوهای طراحی** رویکردهای نام‌دار و قابل‌استفاده‌مجدد برای مسائل و موازنه‌های تکرارشونده‌اند؛ ابزار ارتباط و نقطه‌ی شروع‌اند، نه نسخه‌ی نهایی."
+ },
+ {
+  "en": "What are event listeners and how are they used?",
+  "q": "event listener ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "listenerها callbackها را روی `EventTarget` برای رویدادهایی مثل کلیک، ورودی، وضعیت شبکه یا اعلان سفارشی ثبت می‌کنند؛ با `addEventListener`."
+ },
+ {
+  "en": "What are mocks and stubs and how are they used in testing?",
+  "q": "mock ها و stub ها در تست چیستند و چطور استفاده می‌شوند؟",
+  "qa": "**Stub** رفتار کنترل‌شده می‌دهد (مثل پاسخ تأیید از کلاینت پرداخت)؛ **spy** فراخوانی‌ها را ثبت می‌کند؛ **mock** رفتار + انتظار را ترکیب می‌کند."
+ },
+ {
+  "en": "What are modules and why are they useful?",
+  "q": "ماژول‌ها چیستند و چرا مفیدند؟",
+  "qa": "ماژول‌ها اسکوپ فایل‌سطح و وابستگی‌های صریح برای اشتراک کد بدون افزودن global می‌دهند؛ در ES modules با `import` و `export`."
+ },
+ {
+  "en": "What are Progressive Web Applications (PWAs)?",
+  "q": "Progressive Web Application ها چیستند؟",
+  "qa": "**PWAها** اپ‌های وبی با قابلیت‌هایی مثل نصب، رفتار آفلاین، کار پس‌زمینه و push — با Service Worker و manifest ساخته می‌شوند."
+ },
+ {
+  "en": "What are Promises and how do they work?",
+  "q": "Promise ها چیستند و چطور کار می‌کنند؟",
+  "qa": "Promiseها نتیجه‌ی نهایی عملیات ناهم‌زمان را نشان می‌دهند: با pending شروع و یک‌بار با مقدار fulfilled یا با دلیل rejected می‌شوند. `.then()`، `.catch()` و `.finally()` زنجیره می‌سازند."
+ },
+ {
+  "en": "What are proxies in JavaScript used for?",
+  "q": "proxy ها در JavaScript برای چه استفاده می‌شوند؟",
+  "qa": "**Proxy** آبجکتی است که واسط بین آبجکت و کد می‌شود؛ interceptor و سفارشی‌سازی عملیات‌هایی مثل get، set و has را ممکن می‌کند."
+ },
+ {
+  "en": "What are rest parameters and how are they used?",
+  "q": "rest parameter ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "rest parameterها اجازه می‌دهند تابع تعداد نامحدود آرگومان را به‌صورت آرایه بپذیرد؛ با سه نقطه (`...`) در امضای تابع تعریف می‌شوند."
+ },
+ {
+  "en": "What are some best practices for handling sensitive data in JavaScript?",
+  "q": "بهترین روش‌های هندل داده‌ی حساس در JS چیست؟",
+  "qa": "اسرار و داده‌ی حساسِ غیرضروری را از کد مرورگر و Web Storage دور نگه دارید؛ مدت حضور در حافظه را کم و انتقال را با HTTPS انجام دهید."
+ },
+ {
+  "en": "What are some best practices for writing maintainable and effective tests in JavaScript?",
+  "q": "بهترین روش‌های نوشتن تست‌های قابل‌نگهداری و مؤثر در JS چیست؟",
+  "qa": "تست را حول رفتار مشاهده‌پذیر و ریسک‌های مهم بنویسید؛ نام هر تست سناریو و نتیجه را توصیف کند و شکست‌ها آسان قابل‌تشخیص باشند."
+ },
+ {
+  "en": "What are some common performance bottlenecks in JavaScript applications?",
+  "q": "گلوگاه‌های رایج عملکرد در اپ‌های JS کدام‌اند؟",
+  "qa": "شامل: JS زیاد در startup، وظایف طولانی main thread، کار تکراری layout، رندر افراطی، درخواست‌های کند یا تکراری و…"
+ },
+ {
+  "en": "What are some common security headers and their purpose?",
+  "q": "هدرهای امنیتی رایج و هدفشان کدام‌اند؟",
+  "qa": "**هدرهای امنیتی** هدرهای پاسخ HTTP برای محافظت اپ از حملات مختلف‌اند؛ شامل `Content-Security-Policy`، `X-Frame-Options`، `Strict-Transport-Security` و…"
+ },
+ {
+  "en": "What are some popular JavaScript testing frameworks?",
+  "q": "فریم‌ورک‌های محبوب تست JS کدام‌اند؟",
+  "qa": "انتخاب بر اساس لایه و runtime: **Jest** و **Vitest** برای unit/integration با همه‌چیز آماده؛ **Mocha** منعطف و Playwright و Cypress برای e2e."
+ },
+ {
+  "en": "What are some techniques for reducing reflows and repaints?",
+  "q": "تکنیک‌های کاهش reflow و repaint کدام‌اند؟",
+  "qa": "اول کار رندر را اندازه بگیرید؛ DOM و ناحیه‌ی layout را کوچک نگه دارید، تغییرهای مرتبط را دسته‌ای و خواندن layout را قبل از نوشتن گروه کنید."
+ },
+ {
+  "en": "What are some tools and techniques for identifying security vulnerabilities in JavaScript code?",
+  "q": "ابزارها و تکنیک‌های شناسایی آسیب‌پذیری‌های امنیتی در کد JS کدام‌اند؟",
+  "qa": "لایه‌های مکمل: threat modeling و مرور دستی برای نقص طراحی؛ linter و تحلیل ایستا برای جریان داده‌ی پرریسک؛ اسکن وابستگی و اسرار."
+ },
+ {
+  "en": "What are some tools that can be used for JavaScript testing?",
+  "q": "ابزارهای تست JS کدام‌اند؟",
+  "qa": "انتخاب‌های رایج: **Jest**، **Vitest**، **Mocha**، **Jasmine** و test runner داخلی Node برای unit/integration؛ **Playwright** و **Cypress** برای e2e."
+ },
+ {
+  "en": "What are some tools that can be used to measure and analyze JavaScript performance?",
+  "q": "ابزارهای اندازه‌گیری و تحلیل عملکرد JS کدام‌اند؟",
+  "qa": "از مسئله‌ی قابل‌مشاهده برای کاربر شروع و ابزار متناسب با لایه را انتخاب کنید: تعامل کند یا جَنکی → Profiler تعامل را ضبط می‌کند…"
+ },
+ {
+  "en": "What are template literals and how are they used?",
+  "q": "template literal ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "**Template literalها** قابلیتی در JS برای درون‌یابی آسان رشته و متن چندخطی‌اند؛ با بک‌تیک (`` ` ``) محصور می‌شوند و `${expression}` داخلشان جا می‌گیرد."
+ },
+ {
+  "en": "What are the advantages of using the spread operator with arrays and objects?",
+  "q": "مزایای استفاده از spread operator با آرایه‌ها و آبجکت‌ها چیست؟",
+  "qa": "عملگر `...` در JS کپی آسان آرایه‌ها و آبجکت‌ها، ادغام‌شان و افزودن عناصر یا propertyهای جدید را ساده می‌کند."
+ },
+ {
+  "en": "What are the benefits of using a module bundler?",
+  "q": "سودهای استفاده از module bundler چیست؟",
+  "qa": "**باندلر** گراف وابستگی می‌سازد و ماژول‌های اپ را به assetهای قابل‌استقرار تبدیل می‌کند؛ بسته به ابزار و پیکربندی…"
+ },
+ {
+  "en": "What are the benefits of using currying and partial application?",
+  "q": "سودهای currying و partial application چیست؟",
+  "qa": "**Currying** تابع چندآرگومانی را به زنجیره‌ی توابع تک‌آرگومانی می‌شکند؛ **partial application** بعضی آرگومان‌ها را ثابت می‌کند."
+ },
+ {
+  "en": "What are the common pitfalls of using the this keyword?",
+  "q": "تله‌های رایج این کلمه‌ی کلیدی (this) چیست؟",
+  "qa": "مقدار `this` به نحوه‌ی فراخوانی تابع بستگی دارد و همین تله‌ساز است: گم‌شدن context در callback، آرگومان‌دهی غلط، استخراج متد از آبجکت و رفتار متفاوت توابع فلشی."
+ },
+ {
+  "en": "What are the different methods for iterating over an array?",
+  "q": "روش‌های مختلف پیمایش آرایه کدام‌اند؟",
+  "qa": "ساختار پیمایش را بر اساس نتیجه و جریان کنترل انتخاب کنید: `map()` تبدیل به آرایه‌ی تازه، `filter()` انتخاب، `reduce()` ترکیب و…"
+ },
+ {
+  "en": "What are the different types of errors in JavaScript?",
+  "q": "انواع مختلف خطا در JavaScript کدام‌اند؟",
+  "qa": "بر اساس زمان ظهور دسته‌بندی می‌شوند: خطای syntax در parse، استثنای runtime و خطای منطقی با نتیجه‌ی غلط. کلاس‌های داخلی: `SyntaxError`، `ReferenceError`، `TypeError` و…"
+ },
+ {
+  "en": "What are the different types of testing in software development?",
+  "q": "انواع مختلف تست در توسعه‌ی نرم‌افزار کدام‌اند؟",
+  "qa": "تست‌ها بر اساس دامنه، هدف و شیوه‌ی اجرا دسته می‌شوند و هم‌پوشانی دارند: unit، component، integration، system/e2e و…"
+ },
+ {
+  "en": "What are the different ways to copy an object or an array?",
+  "q": "روش‌های مختلف کپی آبجکت یا آرایه کدام‌اند؟",
+  "qa": "برای کپی سطح اول از spread یا `Object.assign()`؛ برای کپی عمیق `structuredClone()` — شامل مقادیر پشتیبانی‌شده توسط الگوریتم structured clone."
+ },
+ {
+  "en": "What are `Set`s and `Map`s and how are they used?",
+  "q": "Set ها و Map ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "`Set` کالکشن مقادیر یکتا و `Map` نگاشت key به value است؛ هر دو built-in برای مدیریت کالکشن‌های داده در JS."
+ },
+ {
+  "en": "What are the different ways to make an API call in JavaScript?",
+  "q": "روش‌های مختلف درخواست API در JS کدام‌اند؟",
+  "qa": "برای کد جدید مرورگر و Node مدرن از `fetch()` داخلی استفاده کنید: promise، استریم body و لغو با AbortController را پشتیبانی می‌کند ولی برای خطاهای HTTP reject نمی‌شود — `response.ok` را چک کنید."
+ },
+ {
+  "en": "What are the metadata fields of a module?",
+  "q": "فیلدهای متادیتای یک ماژول کدام‌اند؟",
+  "qa": "برای پکیج npm، متادیتای `package.json` هویت (`name`، `version`)، کشف و مالکیت (`description`، `keywords`، `repository`) و… را توصیف می‌کند."
+ },
+ {
+  "en": "What are the potential issues caused by hoisting?",
+  "q": "مشکلات بالقوه‌ی hoisting چیست؟",
+  "qa": "JS اعلان‌ها را قبل از اجرای دستورات اسکوپ می‌سازد ولی شکل‌های مختلف اعلان متفاوت مقدار‌دهی می‌شوند؛ خواندن زودهنگام بسته به نوع اعلان یا undefined می‌دهد یا خطا."
+ },
+ {
+  "en": "What are the potential pitfalls of using closures?",
+  "q": "تله‌های احتمالی استفاده از closure ها چیست؟",
+  "qa": "بستار ذاتاً نشت یا مشکل عملکرد نیست؛ ریسک اصلی رساندن تصادفی closure از طریق listener، تایمر یا کشِ طولانی‌عمر است که داده‌ی بزرگی را زنده نگه می‌دارد."
+ },
+ {
+  "en": "What are the various data types in JavaScript?",
+  "q": "انواع مختلف داده در JavaScript کدام‌اند؟",
+  "qa": "انواع داده به **primitive** و **non-primitive** دسته می‌شوند: **Primitive**ها — Number، String، Boolean، Undefined، Null، Symbol، BigInt — و بقیه آبجکت‌اند."
+ },
+ {
+  "en": "What are Web Workers and how can they be used to improve performance?",
+  "q": "Web Worker ها چیستند و چطور عملکرد را بهتر می‌کنند؟",
+  "qa": "Web Workerها JS را در نخ پس‌زمینه اجرا می‌کنند تا کارهای CPU-سنگین ورودی مرورگر و رندر را بلاک نکنند؛ worker بسازید، پیام رد و بدل کنید."
+ },
+ {
+  "en": "What is async/await and how does it simplify asynchronous code?",
+  "q": "async/await چیست و کد ناهم‌زمان را چطور ساده می‌کند؟",
+  "qa": "`async/await` سینتکس مدرن JS برای ساده‌سازی کار با promiseهاست؛ با `async` قبل از تابع، کد ناهم‌زمان خط‌به‌خط مثل کد هم‌زمان خوانده می‌شود."
+ },
+ {
+  "en": "What is Cross-Site Scripting (XSS) and how can you prevent it?",
+  "q": "XSS چیست و چطور از آن جلوگیری می‌کنید؟",
+  "qa": "**XSS** وقتی رخ می‌دهد که داده‌ی نامطمئن به بستر اجرایی مرورگر برسد و با origin سایت مورد‌اعتماد اجرا شود؛ جلوگیری با output encoding متناسب با context و APIهای امن."
+ },
+ {
+  "en": "What is currying and how does it work?",
+  "q": "currying چیست و چطور کار می‌کند؟",
+  "qa": "**Currying** تکنیکی در برنامه‌نویسی تابعی است که تابع چندآرگومانی را به دنباله‌ای از توابع می‌شکند که هرکدام یک آرگومان می‌گیرند."
+ },
+ {
+  "en": "What is Object.freeze() for?",
+  "q": "Object.freeze() برای چیست؟",
+  "qa": "`Object.freeze()` آبجکت را non-extensible می‌کند و propertyهای خودش را طوری تغییر می‌دهد که حذف یا بازپیکربندی نشوند؛ مقدار data propertyها هم ثابت می‌ماند."
+ },
+ {
+  "en": "What is Object.preventExtensions() for?",
+  "q": "Object.preventExtensions() برای چیست؟",
+  "qa": "`Object.preventExtensions(object)` آبجکت را non-extensible می‌کند: property خودِ جدید نمی‌توان افزود و prototypeاش هم قابل تغییر نیست."
+ },
+ {
+  "en": "What is Object.seal() for?",
+  "q": "Object.seal() برای چیست؟",
+  "qa": "`Object.seal()` جلوگیری از توسعه می‌کند و هر property خودِ موجود را non-configurable می‌کند؛ مقادیر data propertyهای موجود هنوز قابل تغییرند."
+ },
+ {
+  "en": "What is recursion and how is it used in JavaScript?",
+  "q": "recursion چیست و در JS چطور استفاده می‌شود؟",
+  "qa": "**بازگشت** مسئله را با فراخوانی همان تابع روی ورودی‌های کوچک‌تر حل می‌کند تا به base case برسد؛ برای ساختارهای بازگشتی طبیعی است."
+ },
+ {
+  "en": "What is the Command pattern and how is it used?",
+  "q": "الگوی Command چیست و چطور استفاده می‌شود؟",
+  "qa": "**الگوی Command** الگوی رفتاری است که درخواست را به آبجکت مستقلی با همه‌ی اطلاعات آن تبدیل می‌کند؛ صف‌بندی، لاگ و undo را ممکن می‌کند."
+ },
+ {
+  "en": "What is the Decorator pattern and how is it used?",
+  "q": "الگوی Decorator چیست و چطور استفاده می‌شود؟",
+  "qa": "**الگوی Decorator** الگوی ساختاری است که رفتار را به آبجکت‌های تکی به‌صورت پویا اضافه می‌کند بدون اثر بر کلاس‌های دیگر."
+ },
+ {
+  "en": "What is the difference between a Map object and a plain object in JavaScript?",
+  "q": "تفاوت Map object و plain object در JS چیست؟",
+  "qa": "هر دو می‌توانند جفت key-value نگه دارند با تفاوت‌های کلیدی: نوع کلید، ترتیب، خاصیت size و پیمایش — `Map` هر نوع کلید و size را دارد."
+ },
+ {
+  "en": "What is the difference between a parameter and an argument?",
+  "q": "تفاوت parameter و argument چیست؟",
+  "qa": "**parameter** متغیری است در تعریف تابع؛ **argument** مقدار واقعی‌ای که موقع فراخوانی به تابع داده می‌شود."
+ },
+ {
+  "en": "What is the difference between event.preventDefault() and event.stopPropagation()?",
+  "q": "تفاوت event.preventDefault و event.stopPropagation چیست؟",
+  "qa": "`preventDefault()` عمل پیش‌فرض مرورگر رویدادِ cancelable را لغو می‌کند (مثل ناوبری لینک یا ارسال فرم)؛ `stopPropagation()` انتشار رویداد در درخت DOM را متوقف می‌کند."
+ },
+ {
+  "en": "What is the difference between innerHTML and textContent?",
+  "q": "تفاوت innerHTML و textContent چیست؟",
+  "qa": "`innerHTML` مارک‌آپ HTML را می‌گیرد/جایگزین می‌کند و تخصیص به آن پارسر HTML را فعال می‌کند؛ `textContent` فقط متن — امن‌تر و سریع‌تر برای متن خالص."
+ },
+ {
+  "en": "What is the difference between mouseenter and mouseover event in JavaScript and browsers?",
+  "q": "تفاوت رویداد mouseenter و mouseover چیست؟",
+  "qa": "تفاوت اصلی در **رفتار حباب‌شدن** است: `mouseenter` حباب نمی‌کند و `mouseover` حباب می‌کند؛ برای tooltipهای ثابت mouseenter مناسب‌تر است."
+ },
+ {
+  "en": "What is the difference between setTimeout(), setImmediate(), and process.nextTick()?",
+  "q": "تفاوت setTimeout و setImmediate و process.nextTick چیست؟",
+  "qa": "در Node.js، `setTimeout()` callback تایمر را بعد از حداقل تاخیر زمان‌بندی می‌کند؛ `setImmediate()` برای فاز check و `process.nextTick()` قبل از ادامه‌ی عملیات جاری."
+ },
+ {
+  "en": "What is the difference between the Window object and the Document object?",
+  "q": "تفاوت Window object و Document object چیست؟",
+  "qa": "**Window** نماینده‌ی پنجره‌ی مرورگر و متدهای کنترلش — پنجره‌ی جدید، تاریخچه‌ی مرورگر — است؛ **Document** خود سند HTML و درخت DOM."
+ },
+ {
+  "en": "What is the DOM and how is it structured?",
+  "q": "DOM چیست و چطور ساختار می‌گیرد؟",
+  "qa": "**DOM (Document Object Model)** رابط برنامه‌نویسی سندهای وب است؛ صفحه را طوری نمایش می‌دهد که برنامه‌ها بتوانند ساختار، استایل و محتوا را تغییر دهند — درخت گره‌ها."
+ },
+ {
+  "en": "What is the Factory pattern and how is it used?",
+  "q": "الگوی Factory چیست و چطور استفاده می‌شود؟",
+  "qa": "**الگوی Factory** برای ساخت آبجکت بدون تعیین کلاس دقیق آبجکتِ ساخته‌شده است؛ تابع صنعتی بسته به ورودی، نمونه‌ی مناسب را می‌سازد."
+ },
+ {
+  "en": "What is the Intl namespace object for?",
+  "q": "آبجکت Intl برای چیست؟",
+  "qa": "`Intl` فرمت‌دهی و مقایسه‌ی locale-aware برای اعداد، ارز، تاریخ، زمان، لیست‌ها، زمان نسبی، دسته‌های جمع و segmentبندی متن را فراهم می‌کند."
+ },
+ {
+  "en": "What is the Module pattern and how does it help with encapsulation?",
+  "q": "الگوی Module چیست و کپسوله‌سازی را چطور کمک می‌کند؟",
+  "qa": "**الگوی Module** کلاسیک با IIFE و بستار، آبجکت عمومی کوچکی را نمایش می‌دهد و بقیه‌ی bindingها را خصوصی نگه می‌دارد؛ پیش از ES modules بسیار رایج بود."
+ },
+ {
+  "en": "What is the prototype chain and how does it work?",
+  "q": "زنجیره‌ی prototype چیست و چطور کار می‌کند؟",
+  "qa": "**زنجیره‌ی prototype** مکانیزمی است که آبجکت‌ها propertyها و متدها را از آبجکت‌های دیگر ارث می‌برند؛ جست‌وجو در زنجیره ادامه می‌یابد تا پیدا شود یا null."
+ },
+ {
+  "en": "What is the purpose of the break and continue statements?",
+  "q": "هدف دستورات break و continue چیست؟",
+  "qa": "`break` حلقه یا switch را زودهنگام خارج می‌کند؛ `continue` فقط تکرار فعلی حلقه را رد می‌کند و به تکرار بعدی می‌رود."
+ },
+ {
+  "en": "What is the purpose of the finally block?",
+  "q": "هدف بلوک finally چیست؟",
+  "qa": "بلوک `finally` هنگام خروج کنترل از `try`/`catch` اجرا می‌شود — چه عادی، چه با `return`، `throw` یا `break`؛ برای پاک‌سازی ایده‌آل است."
+ },
+ {
+  "en": "What is the purpose of the new keyword?",
+  "q": "هدف کلیدواژه‌ی new چیست؟",
+  "qa": "فراخوانی تابع قابل‌ساخت با `new` آبجکت تازه می‌سازد، prototypeاش را به `prototype` سازنده وصل، سازنده را با `this` آبجکت تازه اجرا و نتیجه را برمی‌گرداند."
+ },
+ {
+  "en": "What is the purpose of the switch statement?",
+  "q": "هدف دستور switch چیست؟",
+  "qa": "`switch` برای اجرای یکی از چند بلوک کد بر اساس مقدار یک عبارت به‌کار می‌رود؛ جایگزین خواناتر زنجیره‌های if-else هست."
+ },
+ {
+  "en": "What is the spread operator and how is it used?",
+  "q": "عملگر spread چیست و چطور استفاده می‌شود؟",
+  "qa": "عملگر **spread** (`...`) iterableهایی مثل آرایه و رشته را به عناصر منفرد باز می‌کند؛ کپی، ادغام و افزودن را ساده می‌کند."
+ },
+ {
+  "en": "What is the ternary operator and how is it used?",
+  "q": "عملگر ternary چیست و چطور استفاده می‌شود؟",
+  "qa": "**عملگر سه‌گانه** خلاصه‌ی `if-else` است با سه عملوند: شرط، نتیجه‌ی درست و نتیجه‌ی نادرست — `شرط ? مقداردرست : مقدارنادرست`."
+ },
+ {
+  "en": "What is the use of Promise.all()",
+  "q": "کاربرد Promise.all چیست؟",
+  "qa": "`Promise.all()` iterableی از promiseها یا مقادیر می‌پذیرد و promiseی می‌دهد که وقتی همه fulfilled شدند، با نتایج به ترتیب ورودی fulfilled می‌شود."
+ },
+ {
+  "en": "What's the difference between an \"attribute\" and a \"property\" in the DOM?",
+  "q": "تفاوت attribute و property در DOM چیست؟",
+  "qa": "**Attribute**ها در HTML تعریف می‌شوند و مقدار اولیه‌ی propertyها را می‌دهند؛ **propertyها** جزء DOM هستند و وضعیت فعلی را نشان می‌دهند."
+ },
+ {
+  "en": "What is the output of below code",
+  "q": "خروجی کد زیر چیست؟",
+  "qa": "- ۱: Undefined - ۲: ReferenceError - ۳: null - ۴: {model: \"Honda\", color: \"white\", year: \"2010\", country: \"UK\"}. اعلان تابع مثل متغیرها hoist می‌شود؛ پس جای اعلان `Vehicle` تفاوتی ندارد."
+ },
+ {
+  "en": "What is the output of below equality check",
+  "q": "خروجی بررسی برابری زیر چیست؟",
+  "qa": "- ۱: false - ۲: true. دلیل: مشکل محاسبات اعشاری؛ اعداد ممیز شناور در باینری کدگذاری می‌شوند و جمع‌ها خطای گرد‌کردن می‌دهند."
+ },
+ {
+  "en": "What is the output of below code in latest Chrome",
+  "q": "خروجی کد زیر در جدیدترین Chrome چیست؟",
+  "qa": "- ۱: [undefined × 3]… - ۲: [empty × 3]… - ۳: [null × 3]… - ۴: [], [100], []. نسخه‌های جدید Chrome آرایه‌های sparse را با علامت empty × n نمایش می‌دهند."
+ },
+ {
+  "en": "What is the output of below code in non-strict mode",
+  "q": "خروجی کد زیر در non-strict mode چیست؟",
+  "qa": "- ۱: ۱, ۲, ۳ - ۲: ۳, ۲, ۳ - ۳: SyntaxError: Duplicate parameter name… - ۴: ۱, ۲, ۱. در non-strict تابع‌ها پارامتر تکراری می‌پذیرند."
+ },
+ {
+  "en": "Write a function that returns a random HEX color",
+  "q": "تابعی بنویس که یک رنگ HEX تصادفی برگرداند.",
+  "qa": "تابع random HEX: از `Math.random()` ضرب‌در 0xffffff، تبدیل به base 16 با `toString(16)` و padStart تا طول ۶."
+ },
+ {
+  "en": "What is the output of below code in an order?",
+  "q": "خروجی کد زیر به ترتیب چیست؟",
+  "qa": "- ۱: undefined, first, default - ۲: default, default, default - ۳: first, first, default - ۴: undefined… هر context متغیرمحیط خودش را دارد و callstack به‌صورت LIFO کار می‌کند."
+ },
+ {
+  "en": "What is the type of below function?",
+  "q": "نوع تابع زیر چیست؟",
+  "qa": "- ۱: Pure function - ۲: Impure function. تابع خالص برای ورودی یکسان خروجی یکسان دارد و side effect ندارد."
+ },
+ {
+  "en": "What is the time taken to execute below timeout callback?",
+  "q": "زمان اجرای callback تایم‌اوت زیر چقدر است؟",
+  "qa": "- ۱: بیش از ۱۰ ثانیه - ۲: بلافاصله - ۳: کمتر از ۱۰ ثانیه - ۴: ≤ ۵ ثانیه. تایمر دقیق نیست و بعد از خالی‌شدن پشته اجرا می‌شود."
+ },
+ {
+  "en": "Describe event bubbling in JavaScript and browsers",
+  "q": "event bubbling در JavaScript و مرورگرها را توضیح دهید.",
+  "qa": "**Event bubbling** مکانیزم پخش رویداد DOM است: رویداد از عنصر هدف شروع و تا ریشه حباب می‌شود."
+ },
+ {
+  "en": "Describe event capturing in JavaScript and browsers",
+  "q": "event capturing در JavaScript و مرورگرها را توضیح دهید.",
+  "qa": "**Event capturing** همتای کم‌استفاده‌ی event bubbling است؛ رویداد از ریشه به سمت هدف حرکت می‌کند و listenerهای capture قبل از bubble اجرا می‌شوند."
+ },
+ {
+  "en": "Describe the difference between a cookie, sessionStorage and localStorage in browsers",
+  "q": "تفاوت cookie و sessionStorage و localStorage در مرورگرها چیست؟",
+  "qa": "هر سه داده را در مرورگر نگه می‌دارند ولی در طول عمر، scope، تعامل با سرور و کنترل‌های امنیتی متفاوت‌اند. Web Storage هرگز خودکار به درخواست‌ها attach نمی‌شود."
+ },
+ {
+  "en": "Describe the difference between script, script async and script defer",
+  "q": "تفاوت script و script async و script defer چیست؟",
+  "qa": "هر سه برای بارگذاری و اجرای فایل JS در سند HTML استفاده می‌شوند؛ تفاوت در زمان‌بندی: `async` به‌محض رسیدن اجرا و `defer` بعد از اتمام parse و حفظ ترتیب."
+ },
+ {
+  "en": "Explain event delegation in JavaScript",
+  "q": "event delegation در JavaScript را توضیح دهید.",
+  "qa": "تکنیکی است که به‌جای listenerهای متعدد فرزند، **یک listener روی والد** می‌گذارد؛ رویداد حباب می‌شود و والد با target تصمیم می‌گیرد."
+ },
+ {
+  "en": "Explain Function.prototype.bind in JavaScript",
+  "q": "Function.prototype.bind را توضیح دهید.",
+  "qa": "`Function.prototype.bind` متدی برای ساخت تابع جدید با `this` مشخص و آرگومان‌های اولیه‌ی اختیاری است؛ تابع bind‌شده context را قفل می‌کند."
+ },
+ {
+  "en": "Explain how prototypal inheritance works in JavaScript",
+  "q": "وراثت نمونه‌ای در JavaScript چطور کار می‌کند؟",
+  "qa": "وراثت نمونه‌ای یعنی جست‌وجوی property با delegation: `[[Prototype]]` داخلی آبجکت یا آبجکت دیگر است یا null؛ با `Object.getPrototypeOf` بررسی و با `Object.create` یا `class` لینک می‌شود."
+ },
+ {
+  "en": "Explain the difference between synchronous and asynchronous functions in JavaScript",
+  "q": "تفاوت توابع هم‌زمان و ناهم‌زمان در JavaScript چیست؟",
+  "qa": "کد **هم‌زمان** روی call stack فعلی تا اتمام اجرا می‌شود قبل از دستورات بعدی؛ **APIهای ناهم‌زمان** نتیجه را بعداً از طریق callback، promise یا event تحویل می‌دهند."
+ },
+ {
+  "en": "What advantage is there for using the JavaScript arrow syntax for a method in a constructor?",
+  "q": "مزیت استفاده از سینتکس فلش برای متد درون constructor چیست؟",
+  "qa": "مزیت اصلی: مقدار `this` در زمان **ساخت تابع** ست می‌شود و بعداً تغییر نمی‌کند؛ هر نمونه‌ی ساخته‌شده از constructor، `this` پایدار دارد."
+ },
+ {
+  "en": "What are the differences between JavaScript variables created using let, var or const?",
+  "q": "تفاوت متغیرهای JS ساخته‌شده با let و var و const چیست؟",
+  "qa": "هر سه برای تعریف متغیر به‌کار می‌روند اما تفاوت مهم در **scope، مقدار‌دهی اولیه و تغییرپذیری** دارند: `var` تابعی و hoist به undefined؛ `let`/`const` بلوکی با TDZ."
+ },
+ {
+  "en": "What are the pros and cons of using Promises instead of callbacks in JavaScript?",
+  "q": "مزایا و معایب Promises نسبت به callbacks چیست؟",
+  "qa": "Promises یک نتیجه‌ی نهایی را استاندارد و جریان‌های ترتیبی/موازی/خطا را ترکیب‌پذیر می‌کنند؛ ولی کار را لغو نمی‌کنند، رویداد تکراری را نشان نمی‌دهند و…"
+ },
+ {
+  "en": "What are the various ways to create objects in JavaScript?",
+  "q": "روش‌های مختلف ساخت آبجکت در JS کدام‌اند؟",
+  "qa": "- **Object literals (`{}`)**: ساده‌ترین و رایج‌ترین. - **`Object()` constructor** - **`Object.create()`**: با prototype آبجکت موجود…"
+ },
+ {
+  "en": "What is a closure in JavaScript and how/why would you use one?",
+  "q": "closure در JS چیست و چرا/چطور استفاده می‌شود؟",
+  "qa": "طبق کتاب YDKJS کایل سیمپسون: «بستار وقتی است که تابع به اسکوپ lexical خود حتی خارج از آن دسترسی داشته باشد» — توابع به متغیرهای زمان ساخته‌شان دسترسی دارند."
+ },
+ {
+  "en": "What is the definition of a higher-order function in JavaScript?",
+  "q": "تعریف higher-order function در JS چیست؟",
+  "qa": "**higher-order function** تابعی است که یک یا چند تابع را به‌عنوان آرگومان می‌گیرد و/یا تابع برمی‌گرداند؛ مثل `map`، `filter` و `reduce`."
+ },
+ {
+  "en": "What's a typical use case for anonymous functions in JavaScript?",
+  "q": "کاربرد معمول anonymous function ها در JS چیست؟",
+  "qa": "**تابع بی‌نام** تابعی است که نامی ندارد؛ معمولاً به‌عنوان آرگومانِ توابع دیگر یا IIFE به‌کار می‌رود."
+ },
+ {
+  "en": "Can you offer a use case for the new arrow => function syntax?",
+  "q": "یک کاربرد برای سینتکس فلش => بزنید.",
+  "qa": "**توابع فلشی** سینتکس مختصر دارند و `this` و `arguments` را از اسکوپ اطراف می‌گیرند؛ برای تبدیل آرایه‌ها عالی‌اند."
+ },
+ {
+  "en": "Difference between document load event and document DOMContentLoaded event?",
+  "q": "تفاوت رویداد load و DOMContentLoaded در سند چیست؟",
+  "qa": "`DOMContentLoaded` بعد از parse کامل HTML و اجرای اسکریپت‌های defer و module می‌آید و مستقیم منتظر تصاویر نمی‌ماند؛ `load` منتظر همه‌ی منابع است."
+ },
+ {
+  "en": "Explain the difference between mutable and immutable objects in JavaScript",
+  "q": "تفاوت آبجکت‌های mutable و immutable در JS چیست؟",
+  "qa": "**Mutableها** اجازه تغییر propertyها و مقادیر بعد از ساخت را می‌دهند — رفتار پیش‌فرض بیشتر آبجکت‌ها؛ **immutableها** بعد از ساخت تغییر نمی‌کنند."
+ },
+ {
+  "en": "How can you share code between JavaScript files?",
+  "q": "کد را بین فایل‌های JavaScript چطور به اشتراک می‌گذارید؟",
+  "qa": "از ماژول‌ها با API عمومی صریح استفاده کنید. ES modules (`export`/`import`) استاندارد زبان است و در مرورگر، Node.js و toolchainها کار می‌کند."
+ },
+ {
+  "en": "How do you organize your code?",
+  "q": "کد را چطور سازمان‌دهی می‌کنید؟",
+  "qa": "کد را حول قابلیت‌های محصول و مرزهای وابستگی سازمان دهید، نه یک قالب پوشه‌ی جهانی؛ هر ماژول API عمومی کوچکی داشته باشد."
+ },
+ {
+  "en": "What are JavaScript object getters and setters for?",
+  "q": "getter ها و setter ها برای چیست؟",
+  "qa": "**getter و setterها** کنترل دسترسی به propertyهای آبجکت را فراهم می‌کنند؛ پیاده‌سازی را کپسوله و اعتبارسنجی را ممکن می‌کنند."
+ },
+ {
+  "en": "What are JavaScript object property flags and descriptors?",
+  "q": "property flag ها و descriptor ها در JS چیستند؟",
+  "qa": "**flagها و descriptorها** رفتار و ویژگی‌های propertyهای آبجکت را مدیریت می‌کنند: `writable`، `enumerable`، `configurable` و…"
+ },
+ {
+  "en": "What are JavaScript polyfills for?",
+  "q": "polyfill ها در JS برای چیستند؟",
+  "qa": "**Polyfillها** API گمشده‌ی JS یا وب را در محیط‌هایی که آن را فراهم نمی‌کنند پیاده می‌کنند؛ از ماتریس پشتیبانی صریح انتخاب‌شان کنید."
+ },
+ {
+  "en": "What are some of the advantages and disadvantages of using TypeScript and compile-to-JavaScript languages?",
+  "q": "مزایا و معایب TypeScript و زبان‌های compile-to-JavaScript چیست؟",
+  "qa": "زبان‌های کامپایل‌شونده به JS می‌توانند **static type**، سینتکس متفاوت، مدل‌سازی دامنه‌ی قوی‌تر و refactor با ابزار بیاورند؛ هزینه: مرحله‌ی build و منحنی یادگیری."
+ },
+ {
+  "en": "What are `Symbol`s used for in JavaScript?",
+  "q": "Symbol ها در JS برای چه استفاده می‌شوند؟",
+  "qa": "**Symbolها** مقادیر primitive برای کلیدهای property ضدتداخل و قلاب‌های پروتکلی مثل `Symbol.iterator` هستند؛ هر Symbol یکتاست."
+ },
+ {
+  "en": "What are the benefits of using spread syntax in JavaScript and how is it different from rest syntax?",
+  "q": "سودهای spread syntax و تفاوتش با rest syntax چیست؟",
+  "qa": "**Spread** (`...`) را iterable به عناصر منفرد باز می‌کند — کپی و ادغام آسان آرایه/آبجکت؛ **rest** برعکس، آرگومان‌های متعدد را به یک آرایه جمع می‌کند."
+ },
+ {
+  "en": "What are the differences between Map/Set and WeakMap/WeakSet in JavaScript?",
+  "q": "تفاوت Map/Set با WeakMap/WeakSet در JS چیست؟",
+  "qa": "تفاوت اصلی در هندل **کلیدهاست**: `Map`/`Set` کلیدها را قوی نگه می‌دارند و `WeakMap`/`WeakSet` ضعیف — وقتی مرجع کلید حذف شود، entry جمع‌آوری می‌شود."
+ },
+ {
+  "en": "What are workers in JavaScript used for?",
+  "q": "worker ها در JS برای چه استفاده می‌شوند؟",
+  "qa": "**Workerها** نخ‌های پس‌زمینه برای اجرای اسکریپت‌ها موازی با نخ اصلی‌اند؛ بدون بلاک‌کردن یا تداخل با تعامل کاربر و رندر."
+ },
+ {
+  "en": "What do you think of CommonJS vs ESM?",
+  "q": "نظرت درباره‌ی CommonJS در برابر ESM چیست؟",
+  "qa": "**ESM** استاندارد JS و بهترین پیش‌فرض برای کد جدید در مرورگر، Node.js یا باندلرهاست؛ ساختار ایستا tree shaking و تحلیل build را ممکن می‌کند."
+ },
+ {
+  "en": "What language constructs do you use for iterating over object properties and array items in JavaScript?",
+  "q": "برای پیمایش propertyهای آبجکت و عناصر آرایه در JS چه ساختارهایی استفاده می‌کنید؟",
+  "qa": "چند روش هست: **`for...in`** برای propertyهای قابل‌شماره (حتی ارثی — پس چک own لازم است)، `for...of` برای iterableها، و متدهای آرایه مثل `forEach`."
+ },
+ {
+  "en": "Why is extending built-in JavaScript objects not a good idea?",
+  "q": "چرا توسعه‌دادن آبجکت‌های built-in در JS ایده‌ی خوبی نیست؟",
+  "qa": "توسعه‌ی آبجکت built-in یعنی افزودن به `prototype` آن؛ در عمل خطرناک است چون propertyهای خودتان با نسخه‌های آینده‌ی زبان تداخل می‌کنند و همه‌ی کد را آلوده می‌کنند."
+ },
+ {
+  "en": "Why might you want to create static class members in JavaScript?",
+  "q": "چرا ممکن است static class member بسازید؟",
+  "qa": "**فیلدها و متدهای static** مال constructor کلاس‌اند نه هر instance؛ برای رفتار یا داده‌ای که مفهوماً به کلاس وصل است نه به هر نمونه."
+ },
+ {
+  "en": "How do you verify two strings are anagrams or not?",
+  "q": "چطور بررسی می‌کنید دو رشته anagram هستند یا نه؟",
+  "qa": "**Anagram** کلمه/عبارتی است که از چیدن دوباره‌ی همه‌ی حروف کلمه/عبارت دیگر ساخته می‌شود. راه‌حل: مرتب‌سازی حروف و مقایسه یا شمارش با hash map."
+ },
+ {
+  "en": "What will be the output of this code, and how would you modify it to get the actual user data instead of an array of promises?",
+  "q": "خروجی این کد چیست و چطور تغییرش می‌دهید تا داده‌ی واقعی کاربر به‌جای آرایه‌ی promiseها برگردد؟",
+  "qa": "خروجی آرایه‌ای از **Promise objectهاست نه داده‌ی واقعی کاربر**؛ چون `Array.map()` منتظر resolve شدن callback ناهم‌زمان نمی‌ماند. راه‌حل: `Promise.all()` یا حلقه‌ی `for...of` با `await`."
+ },
+ {
+  "en": "Explain the concept of \"hoisting\" in JavaScript",
+  "q": "مفهوم hoisting در JavaScript را توضیح دهید.",
+  "qa": "«هویستینگ» خلاصه‌ی غیررسمی نحوه‌ی ساختن و مقدار‌دهی bindingها هنگام ساخت اسکوپ، قبل از ارزیابی دستورات است؛ موتور متن سورس را جابه‌جا نمی‌کند."
+ },
+ {
+  "en": "Explain how this works in JavaScript",
+  "q": "this در JavaScript چطور کار می‌کند؟",
+  "qa": "برای توابع عادی، `this` به شکل فراخوانی و binding صریح وابسته است؛ **توابع فلشی** `this` را از اسکوپ اطراف می‌گیرند."
+ },
+ {
+  "en": "What are the differences between JavaScript ES2015 classes and ES5 function constructors?",
+  "q": "تفاوت کلاس‌های ES2015 و ES5 function constructor ها چیست؟",
+  "qa": "ES2015 روش جدید و شهودی‌تری برای تعریف کلاس‌ها و وراثت معرفی کرد؛ مقایسه با ES5 function constructor ها…"
+ },
+ {
+  "en": "What is the event loop in JavaScript runtimes?",
+  "q": "event loop در runtime های JavaScript چیست؟",
+  "qa": "**event loop** مکانیزم زمان‌بندی runtime میزبان برای هماهنگی وظایف JS، عملیات ناهم‌زمان و (در مرورگر) رندر است."
+ },
+ {
+  "en": "Explain AJAX in as much detail as possible",
+  "q": "AJAX را با حداکثر جزئیات توضیح دهید.",
+  "qa": "**AJAX (Asynchronous JavaScript and XML)** ارتباط ناهم‌زمان کلاینت-سرور را ممکن می‌کند و به‌روزرسانی پویای صفحات وب را بدون reload کامل می‌سازد."
+ },
+ {
+  "en": "Explain how JSONP works and how it's not really Ajax",
+  "q": "JSONP چطور کار می‌کند و چرا واقعاً Ajax نیست؟",
+  "qa": "**JSONP** تکنیک قدیمی خواندن داده‌ی بین‌مبدأ با بارگذاری آن به‌عنوان `<script>` کلاسیک — منبعی که SOP را دور می‌زند؛ با callback global جواب می‌گیرد."
+ },
+ {
+  "en": "Explain the differences between CommonJS modules and ES modules in JavaScript",
+  "q": "تفاوت‌های CommonJS modules و ES modules را توضیح دهید.",
+  "qa": "ماژول‌ها کد قابل‌استفاده‌مجددند؛ **CommonJS** قدیمی‌تر و مخصوص Node با `require` است و **ES modules** استاندارد زبان با `import`/`export` و تحلیل ایستا."
+ },
+ {
+  "en": "Explain the same-origin policy with regards to JavaScript",
+  "q": "Same-Origin Policy را در ارتباط با JavaScript توضیح دهید.",
+  "qa": "**SOP** محدود می‌کند کد یک origin چطور با منابع origin دیگر تعامل کند؛ origin ترکیب scheme، host و port است — دفاع اصلی در برابر نشت داده."
+ },
+ {
+  "en": "Explain what a single page app is and how to make one SEO-friendly",
+  "q": "SPA چیست و چطور SEO-friendly می‌شود؟",
+  "qa": "**SPA** ناوبری مسیر و به‌روزرسانی view را در مرورگر انجام می‌دهد نه بارگذاری سند جدید؛ برای SEO هر route باید URL پایدار و HTML معنادار بدهد."
+ },
+ {
+  "en": "How do you abort a web request using AbortController in JavaScript?",
+  "q": "درخواست وب را با AbortController در JS چطور لغو می‌کنید؟",
+  "qa": "یک `AbortController` بسازید، `signal`اش را به `fetch()` بدهید و وقتی نتیجه لازم نیست `controller.abort()` را صدا بزنید؛ `fetch()` و خواننده‌ی body با AbortError لغو می‌شوند."
+ },
+ {
+  "en": "How does JavaScript garbage collection work?",
+  "q": "garbage collection در JS چطور کار می‌کند؟",
+  "qa": "موتورهای JS آبجکت‌های غیرقابل‌رسیدن از ریشه‌ها — call stack فعلی، آبجکت‌های global و… — را خودکار بازیابی می‌کنند."
+ },
+ {
+  "en": "What are iterators and generators in JavaScript and what are they used for?",
+  "q": "iterator ها و generator ها چیستند و برای چه استفاده می‌شوند؟",
+  "qa": "**Iteratorها و generatorها** ابزار مدیریت توالی داده و کنترل جریان اجرا به شکل منعطف‌تر هستند؛ iterator پروتکل پیمایش و generator با yield مقادیر تولید می‌کند."
+ },
+ {
+  "en": "What are server-sent events?",
+  "q": "Server-Sent Events چیستند؟",
+  "qa": "**SSE** فرمت `text/event-stream` برای استریم سرور-به-کلاینت روی HTTP است؛ مرورگرها با `EventSource` برای اتصال GET ماندگار با reconnect و last-event-ID در دسترس‌اند."
+ },
+ {
+  "en": "What are the advantages and disadvantages of using AJAX?",
+  "q": "مزایا و معایب استفاده از AJAX چیست؟",
+  "qa": "**AJAX** تکنیک JS برای ارسال و دریافت ناهم‌زمان داده از سرور بدون reload کامل است؛ سود: UX روان — زیان: پیچیدگی مدیریت state و SEO."
+ },
+ {
+  "en": "What are the differences between XMLHttpRequest and fetch() in JavaScript and browsers?",
+  "q": "تفاوت XMLHttpRequest و fetch() چیست؟",
+  "qa": "هر دو برای درخواست HTTP ناهم‌زمان در JS استفاده می‌شوند؛ **fetch()** سینتکس تمیزتر، promise-native و streaming دارد ولی XHR upload progress و سازگاری قدیمی را می‌دهد."
+ },
+ {
+  "en": "What is 'use strict'; (strict mode) in JavaScript for?",
+  "q": "'use strict' در JS برای چیست؟",
+  "qa": "`'use strict'` برای فعال‌کردن **حالت سخت‌گیرانه** در کل اسکریپت یا توابع مجزا است؛ اشتباهات خاموش را به خطای واقعی تبدیل می‌کند."
+ },
+ {
+  "en": "What tools and techniques do you use for debugging JavaScript code?",
+  "q": "ابزارها و تکنیک‌های دیباگ JS کدام‌اند؟",
+  "qa": "بازتولید قابل‌اعتماد خطا، کاهش به کوچک‌ترین سناریو، فرضیه‌ی مشخص و بازرسی در مرزِ اختلاف رفتار موردانتظار و واقعی."
+ },
+ {
+  "en": "When would you use document.write()?",
+  "q": "کِی document.write() استفاده می‌کنید؟",
+  "qa": "تقریباً **هرگز** در کد اپ جدید. حین parse، مارک‌آپ را به جریان ورودی تزریق می‌کند؛ بعد از load، صفحه را جایگزین می‌کند و sink تزریق هم هست."
+ },
+ {
+  "en": "Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}` in JavaScript",
+  "q": "تفاوت استفاده‌ی foo بین function foo() {} و var foo = function() {} چیست؟",
+  "qa": "`function foo() {}` **اعلان تابع** است و `var foo = function() {}` **عبارت تابع**؛ تفاوت کلیدی در hoisting و زمان در دسترس‌بودن است."
+ },
+ {
+  "en": "Why is it, in general, a good idea to leave the global JavaScript scope of a website as-is and never touch it?",
+  "q": "چرا معمولاً بهتر است global scope سایت را دست‌نخورده بگذارید؟",
+  "qa": "JS اجراشده در مرورگر به global scope دسترسی دارد؛ آلوده‌کردن global با متغیرهای بی‌محافظ ریسک تداخل و باگ است."
+ },
+ {
+  "en": "Explain why the following doesn't work as an IIFE: `function foo(){}();`. What needs to be changed to properly make it an IIFE?",
+  "q": "چرا function foo(){}() به‌عنوان IIFE کار نمی‌کند؟ چه باید تغییر کند؟",
+  "qa": "پارسر `function foo(){}` را اعلان تابع می‌بیند و `()` بعدش syntax error است؛ با پیچ‌کردن در پرانتز `(function foo(){}())` درست می‌شود."
+ },
+ {
+  "en": "'Difference between: `function Person(){}`, `const person = Person()`, and `const person = new Person()` in JavaScript?'",
+  "q": "تفاوت function Person() و const person = Person() و const person = new Person() چیست؟",
+  "qa": "- `function Person(){}`: اعلان تابع در JS؛ به‌عنوان تابع عادی یا constructor قابل استفاده. - `const person = Person()`: فراخوانی به‌عنوان تابع عادی نه constructor؛ بدون `new` رفتار غیرمنتظره می‌دهد. - `const person = new Person()`: نمونه‌ی واقعی از کلاس با `new` می‌سازد."
+ }
+]

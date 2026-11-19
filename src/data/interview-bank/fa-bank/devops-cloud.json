@@ -1,0 +1,602 @@
+[
+ {
+  "en": "Define _branching_ in _Git_ and its importance.",
+  "q": "branching در Git را تعریف کنید و اهمیتش را بگویید.",
+  "qa": "**Branching** در **Git** اجازه می‌دهد ویژگی‌ها یا بخش‌های مختلف کدبیس به‌طور مستقل توسعه یابند؛ استراتژی حیاتی کنترل نسخه، مخصوصاً در تیم‌ها."
+ },
+ {
+  "en": "What is a `HEAD` in Git?",
+  "q": "HEAD در Git چیست؟",
+  "qa": "در **Git**، `HEAD` مدیریار **working directory**، **staging area** (index) و **repository** (تاریخچه‌ی commitها) است — نشانگر مکان فعلی شما."
+ },
+ {
+  "en": "What is the difference between Vertical Scaling and Horizontal Scaling in AWS?",
+  "q": "تفاوت Vertical Scaling و Horizontal Scaling در AWS چیست؟",
+  "qa": "**Vertical scaling** یعنی افزایش منابع یک ماشین (CPU/RAM)؛ **horizontal scaling** یعنی افزودن ماشین‌های بیشتر به مجموعه."
+ },
+ {
+  "en": "What are the advantages and disadvantages of round-robin load balancing?",
+  "q": "مزایا و معایب round-robin load balancing چیست؟",
+  "qa": "**Round-robin** ترافیک را بین سرورها به‌طور یکنواخت پخش می‌کند؛ وقتی سرورها عملکرد همگن دارند مؤثرترین است."
+ },
+ {
+  "en": "How does a load balancer distribute traffic in a stateless vs stateful scenario?",
+  "q": "load balancer در سناریوی stateless و stateful چطور ترافیک را پخش می‌کند؟",
+  "qa": "**Load balancerها** در سناریوهای stateless و stateful ترافیک را متفاوت توزیع می‌کنند و معمولاً الگوریتم‌های جداگانه‌ای برای هرکدام دارند."
+ },
+ {
+  "en": "What is the difference between availability and reliability in the context of a software system?",
+  "q": "تفاوت availability و reliability در سیستم نرم‌افزاری چیست؟",
+  "qa": "**Availability** یعنی دسترس‌پذیری سیستم هنگام استفاده — فعال و پاسخ‌گو؛ **reliability** یعنی اتکاپذیری عملکرد در طول زمان."
+ },
+ {
+  "en": "What is DevOps and how does it enhance software delivery?",
+  "q": "DevOps چیست و تحویل نرم‌افزار را چطور بهتر می‌کند؟",
+  "qa": "**DevOps** رویکردی تعاونی و تکرارشونده است که **توسعه‌ی** نرم‌افزار و **عملیات IT** را ترکیب می‌کند؛ مدل هم‌افزایی که تحویل را متحول کرد."
+ },
+ {
+  "en": "How do continuous integration and continuous deployment (CI/CD) relate to DevOps?",
+  "q": "CI/CD چه نسبتایی با DevOps دارد؟",
+  "qa": "**CI** و **CD** روش‌های بنیادی **DevOps** هستند؛ هم‌افزایی بی‌درز آن‌ها توسعه، تست و استقرار را یکپارچه می‌کند."
+ },
+ {
+  "en": "What is meant by \"Shift Left\" in DevOps?",
+  "q": "معنای Shift Left در DevOps چیست؟",
+  "qa": "**Shift Left** یعنی انجام فرایندهای توسعه و تست در **اوایل** چرخه‌ی حیات نرم‌افزار؛ مشکلات زود پیدا و ارزان‌تر رفع می‌شوند."
+ },
+ {
+  "en": "How does version control support DevOps practices?",
+  "q": "کنترل نسخه چطور از روش‌های DevOps پشتیبانی می‌کند؟",
+  "qa": "ابزارهای **کنترل نسخه** مثل Git ستون فقرات DevOps‌اند: همکاری بی‌درز توسعه‌دهندگان، تسترها و تیم عملیات را ممکن می‌کنند."
+ },
+ {
+  "en": "Name some configuration management tools used in DevOps.",
+  "q": "برخی ابزارهای configuration management در DevOps را نام ببرید.",
+  "qa": "ابزارهای کلاسیک CM مثل **Puppet**، **Chef**، **Ansible**، **SaltStack** و **CFEngine** برای مدیریت زیرساخت محبوب‌اند."
+ },
+ {
+  "en": "Can you explain what a Docker image is?",
+  "q": "Docker image چیست؟",
+  "qa": "**Docker image** بسته‌ی نرم‌افزاری سبک، خودکفا و اجراپذیری است که همه‌ی لازم‌ها را دارد: کد، runtime، کتابخانه‌ها و تنظیمات."
+ },
+ {
+  "en": "How does a Docker container differ from a Docker image?",
+  "q": "کانتینر Docker چه تفاوتی با Docker image دارد؟",
+  "qa": "**Docker image** قالب کانتینرهاست؛ **Docker container** نمونه‌ی در حال اجرای همان image است."
+ },
+ {
+  "en": "How does Docker use layers to build images?",
+  "q": "Docker با لایه‌ها چطور image می‌سازد؟",
+  "qa": "Docker رویکرد **Layered File System** دارد و با Union File Systemهایی مثل **AUFS**، **OverlayFS** و **Device Mapper** لایه‌ها را روی هم می‌چیند."
+ },
+ {
+  "en": "What's the purpose of the .dockerignore file?",
+  "q": "هدف فایل .dockerignore چیست؟",
+  "qa": "فایل **`.dockerignore`** مثل gitignore فهرست الگوهایی است که از build image **کنار گذاشته** می‌شوند."
+ },
+ {
+  "en": "How would you go about creating a Docker image from an existing container?",
+  "q": "چطور از یک کانتینر موجود، Docker image می‌سازید؟",
+  "qa": "دو روش اصلی را می‌بینیم: روش `docker container commit` و روش Dockerfile."
+ },
+ {
+  "en": "In practice, how do you reduce the size of Docker images?",
+  "q": "در عمل اندازه‌ی Docker imageها را چطور کم می‌کنید؟",
+  "qa": "کم‌کردن **اندازه‌ی Docker imageها** برای استقرار بهینه‌ی منابع حیاتی است؛ استراتژی‌های متعددی دارد."
+ },
+ {
+  "en": "What command is used to run a Docker container from an image?",
+  "q": "برای اجرای کانتینر از روی image چه دستوری استفاده می‌شود؟",
+  "qa": "نسخه‌ی خلاصه و به‌روزشده‌ی جواب همه‌ی نکات ضروری را دارد — دستور `docker run`."
+ },
+ {
+  "en": "Can you explain what a Docker namespace is and its benefits?",
+  "q": "Docker namespace چیست و سودهایش چیست؟",
+  "qa": "**Docker namespace** آبجکت‌های Docker — کانتینر، image، volume — را یکتا شناسایی می‌کند؛ سازمان‌دهی منابع و ایزوله‌سازی داده را روان می‌کند."
+ },
+ {
+  "en": "What is a Docker volume, and when would you use it?",
+  "q": "Docker volume چیست و کِی استفاده می‌کنید؟",
+  "qa": "**Docker volume** دایرکتوری یا فایلی در لایه‌ی نوشتنیِ Docker Host است که به کانتینر خاصی گره نخورده؛ جدا بودنش پایداری داده را می‌دهد."
+ },
+ {
+  "en": "What types of Services exist in Kubernetes, and how do they facilitate pod communication?",
+  "q": "انواع Service ها در Kubernetes کدام‌اند و ارتباط podها را چطور ممکن می‌کنند؟",
+  "qa": "**Kubernetes** انواع مختلفی از **serviceها** برای ارتباط منعطف و قابل‌اعتماد بین podها دارد؛ تک‌تک را بررسی می‌کنیم."
+ },
+ {
+  "en": "Explain the functionality of Namespaces in Kubernetes.",
+  "q": "کارکرد Namespace ها در Kubernetes را توضیح دهید.",
+  "qa": "**Kubernetes** با **Namespaceها** کلاسترهای مجازی جدا روی کلاستر فیزیکی می‌سازد؛ multi-tenancy و مدیریت داده و منابع را قدرتمند می‌کند."
+ },
+ {
+  "en": "What would you consider when performing a rolling update in Kubernetes?",
+  "q": "موقع rolling update در Kubernetes چه ملاحظاتی دارید؟",
+  "qa": "در **Kubernetes**، **rolling update** اپ را بدون downtime به‌روز می‌کند: podهای قدیمی با دقت و **health check** جای podهای جدید می‌شوند."
+ },
+ {
+  "en": "How do Services route traffic to pods in Kubernetes?",
+  "q": "Service ها در Kubernetes ترافیک را چطور به podها route می‌کنند؟",
+  "qa": "در Kubernetes، Serviceها لایه‌ی انتزاعی برای دسترسی ثابت به Podهاست؛ ترافیک عمدتاً با **Selectorها** و **Endpointها** route می‌شود."
+ },
+ {
+  "en": "Explain Kubernetes DNS resolution for services.",
+  "q": "DNS resolution برای سرویس‌ها در Kubernetes را توضیح دهید.",
+  "qa": "**Kubernetes** از DNS مرکزی و یکپارچه برای کانتینرها و سرویس‌ها استفاده می‌کند؛ discovery آسان و ارتباط مؤثر می‌دهد."
+ },
+ {
+  "en": "What is the Container Network Interface (CNI), and how does it integrate with Kubernetes?",
+  "q": "Container Network Interface چیست و با Kubernetes چطور یکپارچه می‌شود؟",
+  "qa": "**CNI** استانداردی برای وصل کانتینرها و podها به زیرساخت شبکه در Kubernetes است."
+ },
+ {
+  "en": "What is the difference between Git and GitHub?",
+  "q": "تفاوت Git و GitHub چیست؟",
+  "qa": "**Git** و **GitHub** به‌خاطر نام مشابه اشتباه گرفته می‌شوند اما هدف‌های متفاوتی دارند: **کنترل نسخه** در برابر میزبانی توسعه."
+ },
+ {
+  "en": "Explain the concept of a commit in Git.",
+  "q": "مفهوم commit در Git را توضیح دهید.",
+  "qa": "در **Git**، **commit** snapshot پروژه در یک لحظه‌ی خاص است؛ تغییرات، نویسنده و شناسه‌ی یکتا را ثبت می‌کند."
+ },
+ {
+  "en": "What is the difference between a working directory, staging area, and repository in Git?",
+  "q": "تفاوت working directory و staging area و repository در Git چیست؟",
+  "qa": "**Git** معماری سه‌لایه دارد که این لایه‌ها را شامل می‌شود:"
+ },
+ {
+  "en": "How does Git store information?",
+  "q": "Git اطلاعات را چطور ذخیره می‌کند؟",
+  "qa": "اگرچه **Git** از فایل‌سیستم برای ذخیره استفاده می‌کند، کاملاً فایل‌محور نیست؛ سه جزء اصلی ساختار داده‌ی Git: **repository** و…"
+ },
+ {
+  "en": "How do you initialize a new Git repository?",
+  "q": "چطور یک Git repository جدید را initialize می‌کنید؟",
+  "qa": "فرایند قدم‌به‌قدم **ساخت repository جدید** و سپس **افزودن فایل‌ها**، **commit زدن** و **push** را می‌بینیم."
+ },
+ {
+  "en": "Explain the purpose of the git status command.",
+  "q": "هدف دستور git status چیست؟",
+  "qa": "**`git status`** دستور حیاتی **ردیابی تغییرات** در repository است؛ state فایل‌ها، شاخه‌ی فعلی و… را می‌دهد."
+ },
+ {
+  "en": "What does the git add command do?",
+  "q": "دستور git add چه‌کار می‌کند؟",
+  "qa": "**`git add`** اولین قدم ردیابی تغییرات فایل‌های موجود یا افزودن فایل‌های جدید است؛ تغییرها را برای commit بعدی آماده می‌کند."
+ },
+ {
+  "en": "How do you create a commit in Git?",
+  "q": "در Git چطور commit می‌سازید؟",
+  "qa": "فرایند **ساخت commit در Git** را می‌بینیم:"
+ },
+ {
+  "en": "What information is contained in a commit object in Git?",
+  "q": "commit object در Git چه اطلاعاتی دارد؟",
+  "qa": "**commit object** در Git داده‌ی متنی غنی‌ای برای ردیابی و مدیریت تغییرات repository در خود دارد."
+ },
+ {
+  "en": "Describe the difference between Elastic IP and Public IP in AWS.",
+  "q": "تفاوت Elastic IP و Public IP در AWS چیست؟",
+  "qa": "در AWS هر instance با **EC2** خودکار **Public IP** می‌گیرد و به‌اختیار می‌شود **Elastic IP** انعطاف‌پذیرتر اختصاص داد."
+ },
+ {
+  "en": "Describe the AWS Shared Responsibility Model.",
+  "q": "مدل Shared Responsibility در AWS را توضیح دهید.",
+  "qa": "مدل **Shared Responsibility در AWS** مسئولیت‌های **امنیت و انطباق** بین AWS و مشتری را شفاف می‌کند؛ بسته به سرویس متفاوت است."
+ },
+ {
+  "en": "Explain the use of Azure regions and availability zones.",
+  "q": "کاربرد Azure regions و availability zones را توضیح دهید.",
+  "qa": "**منطقه‌های Azure** جغرافیاهای جداگانه‌ی میزبان **datacenterها** هستند؛ **availability zone**ها داخل هر منطقه، دیتاسنترهای جدا و مقاوم به خطا هستند."
+ },
+ {
+  "en": "How do you deploy a Docker container to Azure Container Instances?",
+  "q": "کانتینر Docker را چطور در Azure Container Instances مستقر می‌کنید؟",
+  "qa": "۱. **ساخت Resource Group**: با Azure CLI یا پورتال. سپس container instance را تعریف و مستقر می‌کنید."
+ },
+ {
+  "en": "How does load balancing improve application reliability?",
+  "q": "load balancing اطمینان‌پذیری اپ را چطور بهتر می‌کند؟",
+  "qa": "**Load balancing** اطمینان‌پذیری اپ را با چند مکانیزم کلیدی به‌طور قابل‌توجه بالا می‌برد و جزء جدایی‌ناپذیر معماری HA است."
+ },
+ {
+  "en": "How do load balancers perform health checks on backend servers?",
+  "q": "load balancer ها health check روی سرورهای پشتیبان را چطور انجام می‌دهند؟",
+  "qa": "**Health check**ها (heartbeat monitoring) حیاتی‌اند تا معلوم شود سرورهای داخل pool فعال‌اند؛ انواع مختلفی دارند."
+ },
+ {
+  "en": "Explain how a load balancer might handle failure in one of the servers it manages.",
+  "q": "load balancer خرابی یکی از سرورها را چطور مدیریت می‌کند؟",
+  "qa": "**Load balancerها** چند سرور مدیریت می‌کنند؛ وقتی یکی می‌میرد، ترافیک دیگر به آن هدایت نمی‌شود و عملکرد بی‌درز می‌ماند."
+ },
+ {
+  "en": "How do you define system availability and what are the key components to measure it?",
+  "q": "دسترس‌پذیری سیستم را چطور تعریف می‌کنید و اجزای کلیدی سنجش‌اش چیست؟",
+  "qa": "**دسترس‌پذیری سیستم** زمانِ فعال و پاسخ‌گوی مستقل سیستم را کمّی می‌کند؛ معمولاً درصد بیان می‌شود."
+ },
+ {
+  "en": "What is the role of Mean Time to Repair (MTTR) in maintaining system availability?",
+  "q": "نقش MTTR در حفظ دسترس‌پذیری سیستم چیست؟",
+  "qa": "**MTTR (میانگین زمان ترمیم)** سنجه‌ی حیاتی ارزیابی **اطمینان‌پذیری** و **دسترس‌پذیری** سیستم است."
+ },
+ {
+  "en": "How can load balancing improve system availability, and what are some of its potential pitfalls?",
+  "q": "load balancing دسترس‌پذیری را چطور بهتر می‌کند و تله‌های احتمالی‌اش چیست؟",
+  "qa": "**Load balancing** با توزیع بهینه‌ی ترافیک بین چند سرور دسترس‌پذیری را بالا می‌برد؛ اما تله‌های بالقوه‌ای هم دارد."
+ },
+ {
+  "en": "What is the purpose of a circuit breaker pattern in a distributed system?",
+  "q": "هدف الگوی circuit breaker در سیستم توزیع‌شده چیست؟",
+  "qa": "**الگوی Circuit Breaker** محافظِ سیستم‌های توزیع‌شده در برابر خرابی‌ها و اضافه‌بار موقتی است؛ جزء هسته‌ی الگوهای مقاوم‌سازی."
+ },
+ {
+  "en": "Can you describe the key principles of DevOps?",
+  "q": "اصول کلیدی DevOps را توصیف کنید.",
+  "qa": "**DevOps** مجموعه روش‌هایی برای **روان‌سازی و یکپارچه‌سازی توسعه** (Dev) و عملیات IT (Ops) است — تحویل سریع‌تر و قابل‌اعتمادتر."
+ },
+ {
+  "en": "What are the benefits of DevOps in software development and operations?",
+  "q": "سودهای DevOps در توسعه و عملیات نرم‌افزار چیست؟",
+  "qa": "**DevOps (توسعه + عملیات)** رویکردی تعاونی است که توسعه‌ی نرم‌افزار را با عملیات IT گره می‌زند و کل چرخه را مدیریت می‌کند."
+ },
+ {
+  "en": "Can you explain the concept of Infrastructure as Code (IaC)?",
+  "q": "مفهوم Infrastructure as Code را توضیح می‌دهید؟",
+  "qa": "**IaC** روشی DevOps است که **مدیریت و آماده‌سازی** زیرساخت را خودکار، بهینه و سازگار می‌کند."
+ },
+ {
+  "en": "What role does automation play in DevOps?",
+  "q": "نقش automation در DevOps چیست؟",
+  "qa": "**اتوماسیون** قلب **DevOps** است: جریان توسعه، تست و استقرار را روان می‌کند؛ سازگاری، بهره‌وری و تکرار سریع را تضمین می‌کند."
+ },
+ {
+  "en": "What are the common metrics used to measure DevOps success?",
+  "q": "سنجه‌های رایج سنجش موفقیت DevOps کدام‌اند؟",
+  "qa": "موفقیت **DevOps** با شاخص‌های **کمّی** و **کیفی** سنجیده می‌شود که همکاری روان، توسعه‌ی چابک و… را نشان می‌دهند."
+ },
+ {
+  "en": "How does DevOps differ from the Agile methodology?",
+  "q": "DevOps چه تفاوتی با متدولوژی Agile دارد؟",
+  "qa": "**DevOps** و **Agile** هر دو برای بهبود توسعه طراحی شده‌اند؛ اما Agile عمدتاً روی تکرارِ توسعه تمرکز دارد و DevOps کل مسیر تا عملیات را می‌گیرد."
+ },
+ {
+  "en": "What are some popular tools used in the DevOps ecosystem for version control?",
+  "q": "ابزارهای محبوب version control در اکوسیستم DevOps کدام‌اند؟",
+  "qa": "**Git** نقش محوری در انقلاب کنترل نسخه داشته و انتخاب اول تیم‌هاست؛ محیط همکاری بلادرنگ…"
+ },
+ {
+  "en": "Can you list some CI/CD tools commonly used in DevOps?",
+  "q": "ابزارهای رایج CI/CD در DevOps را نام ببرید.",
+  "qa": "بله! ابزارهای **رایج CI/CD** را در دسته‌بندی‌های منطقی دسته‌بندی می‌کنیم."
+ },
+ {
+  "en": "What containerization technologies are commonly used in DevOps?",
+  "q": "فناوری‌های رایج containerization در DevOps کدام‌اند؟",
+  "qa": "**فناوری‌های containerization** توسعه و استقرار را با پکیج‌کردن اپ و وابستگی‌هایش در واحدهای خودکفا بهینه می‌کنند."
+ },
+ {
+  "en": "What monitoring tools are popular in DevOps?",
+  "q": "ابزارهای محبوب monitoring در DevOps کدام‌اند؟",
+  "qa": "با توجه به نیازها و محتوای موجود، فهرست کوتاه این‌هاست:"
+ },
+ {
+  "en": "What is Docker and how is it different from virtual machines?",
+  "q": "Docker چیست و چه تفاوتی با ماشین‌های مجازی دارد؟",
+  "qa": "**Docker** پلتفرم **containerization** است که استقرار اپ را با اجرای یکسان نرم‌افزار و وابستگی‌هایش روی هر زیرساخت ساده می‌کند."
+ },
+ {
+  "en": "What is the Docker Hub and what is it used for?",
+  "q": "Docker Hub چیست و برای چه استفاده می‌شود؟",
+  "qa": "**Docker Hub** رجیستری ابری عمومی برای Docker imageهاست؛ هاب مرکزی یافتن، مدیریت و اشتراک imageها."
+ },
+ {
+  "en": "Explain the Dockerfile and its significance in Docker.",
+  "q": "Dockerfile و اهمیتش در Docker را توضیح دهید.",
+  "qa": "از ویژگی‌های تعیین‌کننده‌ی **Docker** استفاده از `Dockerfile`ها برای خودکارسازی ساخت imageهاست؛ سند متنی حاوی دستورات ساخت."
+ },
+ {
+  "en": "What's the difference between the COPY and ADD commands in a Dockerfile?",
+  "q": "تفاوت COPY و ADD در Dockerfile چیست؟",
+  "qa": "تفاوت‌های ظریف `COPY` و `ADD` در Dockerfile را بررسی می‌کنیم."
+ },
+ {
+  "en": "Explain the use and significance of the `docker-compose` tool.",
+  "q": "کاربرد و اهمیت ابزار docker-compose را توضیح دهید.",
+  "qa": "**Docker Compose** ابزار خط فرمانی برای اپ‌های چندکانتینره‌ی Docker است؛ با یک فایل YAML معماری و نحوه‌ی اتصال کانتینرها به هم را تعریف می‌کند."
+ },
+ {
+  "en": "Can Docker containers running on the same host communicate with each other by default? If so, how?",
+  "q": "کانتینرهای Docker روی یک host به‌صورت پیش‌فرض با هم حرف می‌زنند؟ چطور؟",
+  "qa": "بله، **کانتینرهای Docker روی یک host** به‌صورت پیش‌فرض با هم ارتباط دارند؛ چون وقتی کانتینر اجرا می‌شود، روی یک **شبکه‌ی مشترک** قرار می‌گیرد."
+ },
+ {
+  "en": "What is Kubernetes and why is it used for container orchestration?",
+  "q": "Kubernetes چیست و چرا برای orchestration کانتینرها استفاده می‌شود؟",
+  "qa": "**Kubernetes** پلتفرم مقاومی برای استقرار، مقیاس و مدیریت اپ‌های کانتینری است؛ برخلاف Docker Swarm که مخصوص Docker است، پشتیبانی گسترده‌تر دارد."
+ },
+ {
+  "en": "Describe the roles of master and worker nodes in the Kubernetes architecture.",
+  "q": "نقش master node ها و worker node ها در معماری Kubernetes را توضیح دهید.",
+  "qa": "در کلاستر **Kubernetes** هر **نوع نود** مسئولیت متمایزی دارد:"
+ },
+ {
+  "en": "How do Pods facilitate the management of containers in Kubernetes?",
+  "q": "Pod ها مدیریت کانتینرها در Kubernetes را چطور ممکن می‌کنند؟",
+  "qa": "در **Kubernetes**، **Pod** کوچک‌ترین واحد استقرار است که معمولاً یک اپ را در خود دارد؛ کارکرد اصلی‌اش فراهم‌کردن محیط مشترک برای کانتینرهاست."
+ },
+ {
+  "en": "Differentiate between Deployments, StatefulSets, and DaemonSets.",
+  "q": "تفاوت Deployments و StatefulSets و DaemonSets را توضیح دهید.",
+  "qa": "**Kubernetes** انتزاع‌های مختلفی برای مدیریت اپ‌های کانتینری بر اساس نیاز عملیاتی دارد: **Deployment**، **StatefulSet** و **DaemonSet**."
+ },
+ {
+  "en": "How do ReplicaSets ensure pod availability?",
+  "q": "ReplicaSet ها دسترس‌پذیری pod ها را چطور تضمین می‌کنند؟",
+  "qa": "**Kubernetes** با مکانیزم‌های مقاومی مثل **ReplicaSet** دسترس‌پذیری ثابت podها را تضمین می‌کند؛ در خرابی یا مقیاس دستی، تعداد را حفظ می‌کند."
+ },
+ {
+  "en": "What are Jobs in Kubernetes and when is it suitable to use them?",
+  "q": "Job ها در Kubernetes چیستند و کِی مناسب‌اند؟",
+  "qa": "در **Kubernetes**، آبجکت **job** وظیفه‌ای مشخص را تا اتمام یا تعداد دفعات مشخص اجرا می‌کند؛ برای کارهای کوتاه و بسته‌بندی‌شده ایده‌آل است."
+ },
+ {
+  "en": "How do Labels and Selectors work together in Kubernetes?",
+  "q": "Label ها و Selector ها در Kubernetes چطور با هم کار می‌کنند؟",
+  "qa": "در Kubernetes، **Labelها** جفت‌های key-value چسبیده به منابع هستند و **Selectorها** ابزار مدیریت و تعامل با همین منابع برچسب‌خورده‌اند."
+ },
+ {
+  "en": "Describe the purpose of Ingress and its key components.",
+  "q": "هدف Ingress و اجزای کلیدی‌اش را توضیح دهید.",
+  "qa": "**Ingress** سرویس قدرتمند Kubernetes است که به‌عنوان **load balancer** HTTP و HTTPS عمل می‌کند و ترافیک بیرونی را به سرویس‌های داخل کلاستر route می‌کند."
+ },
+ {
+  "en": "How do you implement Network Policies and what are their benefits?",
+  "q": "Network Policy ها چطور پیاده می‌شوند و سودهایشان چیست؟",
+  "qa": "**Network Policyهای Kubernetes** ترافیک داخل کلاستر را تنظیم می‌کنند؛ امنیت و عملکرد را هر دو بالا می‌برند."
+ },
+ {
+  "en": "What is Git and why is it used?",
+  "q": "Git چیست و چرا استفاده می‌شود؟",
+  "qa": "**Git** سیستم کنترل نسخه‌ی توزیع‌شده (**DVCS**) است که توسعه‌دهندگان برای مدیریت سورس‌کد در پروژه‌های مختلف استفاده می‌کنند؛ همکاری بهتر را تضمین می‌کند."
+ },
+ {
+  "en": "How does Git differ from other version control systems (VCS)?",
+  "q": "Git چه تفاوتی با دیگر سیستم‌های کنترل نسخه (VCS) دارد؟",
+  "qa": "**Git** نسبت به **VCSهای** سنتی مزیت‌های متعددی دارد: مدل توزیع‌شده و بهینه‌ی کنترل نسخه."
+ },
+ {
+  "en": "What is a repository in Git?",
+  "q": "repository در Git چیست؟",
+  "qa": "**Git repository** محلی است که همه‌ی فایل‌های **نسخه‌کنترل‌شده** و تاریخچه‌شان نگه داشته می‌شود؛ هسته‌ی همکاری و نسخه‌بندی."
+ },
+ {
+  "en": "What does the clone operation in Git do?",
+  "q": "عملیات clone در Git چه‌کار می‌کند؟",
+  "qa": "**Clone** در **Git** یک **کپی محلی** از repository می‌سازد و امکان نسخه‌کنترل و کار گروهی را می‌دهد؛ لینک به ریموت مشخص را هم برقرار می‌کند."
+ },
+ {
+  "en": "What is Amazon Web Services (AWS) and what are its key features?",
+  "q": "Amazon Web Services چیست و ویژگی‌های کلیدی‌اش کدام‌اند؟",
+  "qa": "**AWS** پلتفرم ابری است که طیف گسترده‌ای از سرویس‌ها را ارائه می‌دهد: قدرت محاسباتی، ذخیره‌سازی، پایگاه داده — برای کسب‌وکارها."
+ },
+ {
+  "en": "Explain the concept of Regions and Availability Zones in AWS.",
+  "q": "مفهوم Regions و Availability Zones در AWS را توضیح دهید.",
+  "qa": "در کار با **AWS** فهم **بلوک‌های بنیادی Regions و Availability Zones** مهم است."
+ },
+ {
+  "en": "What is an Amazon Machine Image (AMI) and how is it used?",
+  "q": "Amazon Machine Image (AMI) چیست و چطور استفاده می‌شود؟",
+  "qa": "**AMI** قالبی برای سرورهای مجازی — یعنی instanceهای EC2 — است؛ provisioning سریع و یکنواخت را ممکن می‌کند."
+ },
+ {
+  "en": "What is the role of the AWS Management Console?",
+  "q": "نقش AWS Management Console چیست؟",
+  "qa": "**AWS Management Console** رابط گرافیکی کار با سرویس‌های AWS است؛ راهی شهودی برای دسترسی و مدیریت طیف گسترده‌ای از سرویس‌ها."
+ },
+ {
+  "en": "Explain the concept of Elastic Computing in AWS.",
+  "q": "مفهوم Elastic Computing در AWS را توضیح دهید.",
+  "qa": "**Elastic Computing** در AWS یعنی تنظیم پویای نیازهای محاسباتی بر اساس تقاضای لحظه‌ای و پرداخت فقط به اندازه‌ی مصرف — با autoscaling."
+ },
+ {
+  "en": "What is AWS Identity and Access Management (IAM) and why is it important?",
+  "q": "AWS IAM چیست و چرا مهم است؟",
+  "qa": "**AWS IAM** سرویس رایگان AWS برای **دسترسی امن** به منابع است؛ کنترل می‌کند چه‌کسی به کدام منابع AWS دسترسی دارد."
+ },
+ {
+  "en": "Explain the concept of High Availability in AWS.",
+  "q": "مفهوم High Availability در AWS را توضیح دهید.",
+  "qa": "**High Availability** در AWS تضمین می‌کند اپ و داده‌ها در برابر خرابی سخت‌افزار و نرم‌افزار در دسترس و مقاوم بمانند؛ با معماری چند منطقه‌ای."
+ },
+ {
+  "en": "What is Amazon Elastic Compute Cloud (EC2) and what are its key features?",
+  "q": "Amazon EC2 چیست و ویژگی‌های کلیدی‌اش کدام‌اند؟",
+  "qa": "**EC2** سرویس وبی است که ظرفیت محاسباتیِ قابل‌تغییر در ابر می‌دهد؛ طراحی‌اش برای کنترل کامل توسعه‌دهنده روی منابع است."
+ },
+ {
+  "en": "Describe the different EC2 instance types and their use cases.",
+  "q": "انواع مختلف EC2 instance و کاربردهایشان را توضیح دهید.",
+  "qa": "**EC2** طیف گسترده‌ای از instance typeها برای کاربردهای مختلف دارد؛ گروه‌بندی: General Purpose، Compute Optimi…"
+ },
+ {
+  "en": "What is Amazon Elastic Container Service (ECS) and how does it work?",
+  "q": "Amazon ECS چیست و چطور کار می‌کند؟",
+  "qa": "**ECS** سرویس مدیریت کانتینرِ مقیاس‌پذیر و پربازدهی است که کانتینرهای Docker را پشتیبانی می‌کند و استقرار را آسان می‌کند."
+ },
+ {
+  "en": "Explain the difference between Amazon EC2 and AWS Lambda.",
+  "q": "تفاوت Amazon EC2 و AWS Lambda چیست؟",
+  "qa": "**EC2** و **Lambda** هر دو سرویس محاسباتی‌اند ولی در پارادایم استفاده تفاوت بنیادی دارند: سرور مدیریت‌شده در برابر serverless."
+ },
+ {
+  "en": "What is AWS Elastic Beanstalk and when would you use it?",
+  "q": "AWS Elastic Beanstalk چیست و کِی استفاده می‌کنید؟",
+  "qa": "**Elastic Beanstalk** سرویس PaaS است که استقرار و مدیریت اپ‌های ابری را روان می‌کند؛ زیرساخت را خودش هندل می‌کند."
+ },
+ {
+  "en": "What are the core components of Microsoft Azure's architecture?",
+  "q": "اجزای هسته‌ی معماری Microsoft Azure کدام‌اند؟",
+  "qa": "معماری **Azure** **اجزای بنیادی** را در بر می‌گیرد که ستون فقرات سرویس‌های ابری متنوع پلتفرم هستند."
+ },
+ {
+  "en": "Explain the difference between Infrastructure as a Service (IaaS) and Platform as a Service (PaaS).",
+  "q": "تفاوت IaaS و PaaS چیست؟",
+  "qa": "**IaaS** و **PaaS** مدل‌های سرویس و قابلیت‌های متمایزی برای **نیازهای متفاوت اپ و زیرساخت** ارائه می‌دهند."
+ },
+ {
+  "en": "What is Azure Resource Manager and how does it benefit Azure resource management?",
+  "q": "Azure Resource Manager چیست و چه سودی برای مدیریت منابع دارد؟",
+  "qa": "**ARM (Azure Resource Manager)** چارچوب مدیریتی برای استقرار، مدیریت و سازمان‌دهی منابع Azure است؛ هماهنگی استقرارها را روان می‌کند."
+ },
+ {
+  "en": "Describe the main categories of services offered by Azure.",
+  "q": "دسته‌های اصلی سرویس‌های Azure را توضیح دهید.",
+  "qa": "**Azure** سرویس‌های ابری فراوانی با گستره و عمق زیاد دارد؛ در سه دسته‌ی اصلی گروه می‌شوند: **IaaS**، **PaaS** و **SaaS**."
+ },
+ {
+  "en": "How does Azure ensure data redundancy and failover?",
+  "q": "Azure افزونگی داده و failover را چطور تضمین می‌کند؟",
+  "qa": "**Azure** مکانیزم‌هایی برای مقاومت داده و دسترس‌پذیری بالا دارد: **افزونگی داده**، **geo-replication** و **failover خودکار**."
+ },
+ {
+  "en": "In what scenarios would you use Azure App Service Environment?",
+  "q": "در چه سناریوهایی از Azure App Service Environment استفاده می‌کنید؟",
+  "qa": "**App Service Environment** پلتفرم مدیریتی اجرای وب‌اپ، بک‌اند موبایل، API app و workflowهای خودکار است؛ با زیرساخت اختصاصی."
+ },
+ {
+  "en": "What is the Azure Service Level Agreement (SLA) and how does it impact application design?",
+  "q": "SLA در Azure چیست و بر طراحی اپ چه اثری دارد؟",
+  "qa": "**SLA در Azure** رضایت مشتری را با تضمین uptime سرویس‌ها تضمین می‌کند؛ برای انطباق اپ شما با آن، طراحی باید متناسب باشد."
+ },
+ {
+  "en": "Describe the difference between Azure Classic and Azure Resource Manager deployment models.",
+  "q": "تفاوت مدل استقرار Azure Classic و Azure Resource Manager چیست؟",
+  "qa": "**Azure Classic** و **Azure Resource Manager (ARM)** مدل‌های استقرار متمایزی‌اند: Classic گزینه‌ی نسل اول سنتی است و ARM مدرن."
+ },
+ {
+  "en": "Explain the concept of Azure Resource Groups.",
+  "q": "مفهوم Azure Resource Groups را توضیح دهید.",
+  "qa": "**Resource Groupها** ظرف‌های منطقی مدیریت و استقرار منابع هستند: وب‌اپ، دیتابیس، ماشین مجازی و بیشتر."
+ },
+ {
+  "en": "When should you choose Azure Functions over Azure App Service?",
+  "q": "کِی Azure Functions را به App Service ترجیح می‌دهید؟",
+  "qa": "سناریوهای مناسب **Azure Functions** و **Azure App Service** را مرور می‌کنیم."
+ },
+ {
+  "en": "Describe how you would scale an Azure Virtual Machine.",
+  "q": "مقیاس‌دادن ماشین مجازی Azure را توضیح دهید.",
+  "qa": "مقیاس‌دادن **VMهای Azure** عمدتاً با تنظیم **سایز و نوع** ماشین یا با **Virtual Machine Scale Sets** انجام می‌شود."
+ },
+ {
+  "en": "What are the different types of Azure Virtual Machines available and how do you choose one?",
+  "q": "انواع ماشین مجازی Azure کدام‌اند و چطور انتخاب می‌کنید؟",
+  "qa": "**VMهای Azure** برای طیف گسترده‌ای از نیازها — از اپ کوچک تا راه‌حل‌های سازمانی کلاسترشده — طراحی شده‌اند؛ شناخت گزینه‌ها و انتخاب…"
+ },
+ {
+  "en": "Explain the purpose of Azure Batch service.",
+  "q": "هدف سرویس Azure Batch را توضیح دهید.",
+  "qa": "**Azure Batch** برای کارهای محاسباتی سنگین و مقیاس بزرگ طراحی شده؛ وظایف را روی pool پویا از نودهای محاسباتی مدیریت می‌کند."
+ },
+ {
+  "en": "Define load balancing in the context of modern web services.",
+  "q": "load balancing را در بستر سرویس‌های وب مدرن تعریف کنید.",
+  "qa": "**Load balancing** یعنی توزیع یکنواخت ترافیک ورودی شبکه بین گروهی از سرورهای پشتیبان یا منابع برای بهینه‌سازی عملکرد، اطمینان‌پذیری و…"
+ },
+ {
+  "en": "What are the primary objectives of implementing load balancing?",
+  "q": "اهداف اصلی پیاده‌سازی load balancing چیست؟",
+  "qa": "**Load balancing** عمدتاً برای **استفاده‌ی بهینه از منابع**، **اطمینان‌پذیری بالاتر** و **عملکرد بهتر** در شبکه پیاده می‌شود."
+ },
+ {
+  "en": "Explain the difference between hardware and software load balancers.",
+  "q": "تفاوت load balancer سخت‌افزاری و نرم‌افزاری چیست؟",
+  "qa": "هر دو برای **توزیع بهینه‌ی ترافیک** و سرویس‌هایی مثل SSL termination و محافظت DDoS استفاده می‌شوند."
+ },
+ {
+  "en": "Can you list some common load balancing algorithms and briefly describe how they work?",
+  "q": "چند الگوریتم رایج load balancing را نام ببرید و مختصر توضیح دهید.",
+  "qa": "**الگوریتم‌های Load Balancing** ترافیک ورودی را بین سرورهای پشتیبان یکنواخت پخش می‌کنند؛ پرکاربردترین‌ها را می‌بینیم."
+ },
+ {
+  "en": "Describe the term \"sticky session\" in load balancing.",
+  "q": "اصطلاح sticky session در load balancing را توضیح دهید.",
+  "qa": "**Sticky session**ها (پایداری نشست) روشی در load balancer است که درخواست‌های بعدی کاربر را به همان سرور هدایت می‌کند."
+ },
+ {
+  "en": "In load balancing, what is the significance of the least connections method?",
+  "q": "اهمیت روش least connections در load balancing چیست؟",
+  "qa": "**Least Connections** روش کلیدی **load balancing** است: ترافیک پیوسته به سروری با **کمترین اتصال فعال** هدایت می‌شود."
+ },
+ {
+  "en": "What is the concept of session persistence and why is it important?",
+  "q": "مفهوم session persistence چیست و چرا مهم است؟",
+  "qa": "**Session persistence** (استیک‌بودن نشست) تکنیکی در **load balancing** است که همه‌ی درخواست‌های یک کلاینت را به یک سرور می‌فرستد."
+ },
+ {
+  "en": "Discuss the role of DNS in load balancing.",
+  "q": "نقش DNS در load balancing را بررسی کنید.",
+  "qa": "اگرچه **DNS** مستقیماً load balancer نیست، هوشمندانه **load balancing** را در توزیع ترافیک بین چند سرور مکمل می‌کند."
+ },
+ {
+  "en": "In what scenarios would you use weighted load balancing?",
+  "q": "در چه سناریوهایی از weighted load balancing استفاده می‌کنید؟",
+  "qa": "**Weighted Load Balancing** ترافیک را فقط به‌صورت یکنواخت تقسیم نمی‌کند؛ به هر سرور وزن متفاوتی می‌دهد تا تناسب با توان واقعی رعایت شود."
+ },
+ {
+  "en": "How can load balancers help mitigate DDoS attacks?",
+  "q": "load balancer ها چطور در کاهش حملات DDoS کمک می‌کنند؟",
+  "qa": "Load balancerها برای توزیع ترافیک ضروری‌اند و در **کاهش حملات DDoS** هم نقش حیاتی دارند: تشخیص و پخش بار حمله."
+ },
+ {
+  "en": "Can you explain the concept of Five Nines and how it relates to system availability?",
+  "q": "مفهوم Five Nines و رابطه‌اش با دسترس‌پذیری سیستم را توضیح دهید.",
+  "qa": "**«Five Nines»** یا ۹۹.۹۹۹٪ دسترس‌پذیری، قله‌ی اطمینان‌پذیری سیستم است: فقط ۵.۲۶ دقیقه downtime در سال."
+ },
+ {
+  "en": "How does redundancy contribute to the reliability of a system?",
+  "q": "افزونگی چطور به اطمینان‌پذیری سیستم کمک می‌کند؟",
+  "qa": "**افزونگی** با به‌کارگیری نسخه‌های پشتیبان از اجزا یا فرایندها، اثر خرابی‌های احتمالی را کم می‌کند."
+ },
+ {
+  "en": "What is a single point of failure (SPOF) and how can it be mitigated?",
+  "q": "SPOF چیست و چطور کاهش می‌یابد؟",
+  "qa": "**SPOF (نقطه‌ی تک‌خرابی)** اجزایی در سیستم است که خرابیش می‌تواند به قطع کامل سیستم منجر شود."
+ },
+ {
+  "en": "Discuss the significance of Mean Time Between Failures (MTBF) in reliability engineering.",
+  "q": "اهمیت MTBF در مهندسی اطمینان‌پذیری را بررسی کنید.",
+  "qa": "**MTBF** میانگین زمان بین دو خرابی سیستم یا جزء را برآورد می‌کند."
+ },
+ {
+  "en": "Can you differentiate between high availability (HA) and fault tolerance (FT)?",
+  "q": "تفاوت high availability و fault tolerance چیست؟",
+  "qa": "**Fault tolerance (FT)** و **high availability (HA)** هر دو ملاحظات کلیدی طراحی سیستم‌اند با تأکید و استراتژی متفاوت."
+ },
+ {
+  "en": "How would you architect a system for high availability?",
+  "q": "سیستم را برای high availability چطور معماری می‌کنید؟",
+  "qa": "طراحی سیستم برای **HA** معماری مقاومی می‌خواهد که downtime را کم و تجربه‌ی کاربر را بی‌درز نگه دارد؛ مراحل ذکر شده است."
+ },
+ {
+  "en": "What design patterns are commonly used to improve system availability?",
+  "q": "الگوهای طراحی رایج برای بهبود دسترس‌پذیری سیستم کدام‌اند؟",
+  "qa": "برای بهبود **دسترس‌پذیری سیستم** این الگوهای طراحی را در نظر بگیرید."
+ },
+ {
+  "en": "Explain the role of health checks in maintaining an available system.",
+  "q": "نقش health check ها در حفظ دسترس‌پذیری سیستم چیست؟",
+  "qa": "**Health checkها** بخش جدایی‌ناپذیر عملیات سیستم‌اند: **رفع پیش‌دستانه‌ی خطا** و اطمینان از اینکه اجزا وظیفه‌ی موردنظر را می‌توانند انجام دهند."
+ },
+ {
+  "en": "What are some key indicators you would monitor to ensure system reliability?",
+  "q": "شاخص‌های کلیدی رصد برای اطمینان‌پذیری سیستم کدام‌اند؟",
+  "qa": "**اطمینان‌پذیری** یعنی رفتار سازگار و قابل‌پیش‌بینی در طول زمان؛ رصد مجموعه‌ای از شاخص‌های کلیدی به حفظ و بهبود کمک می‌کند."
+ },
+ {
+  "en": "How do you implement a monitoring system that accurately reflects system availability?",
+  "q": "سیستم رصدی که دسترس‌پذیری سیستم را دقیق بازتاب دهد چطور پیاده می‌شود؟",
+  "qa": "برای سرویس‌های حیاتی، **دسترس‌پذیری بالا** ضروری است؛ **سیستم رصد جامع** کلید تشخیص و رفع سریع هر مشکل است."
+ }
+]

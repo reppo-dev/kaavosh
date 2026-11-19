@@ -1,0 +1,152 @@
+[
+ {
+  "en": "What is _SQL Injection_ and how can you defend against it?",
+  "q": "SQL Injection چیست و چطور در برابرش دفاع می‌کنید؟",
+  "qa": "**SQL Injection** یکی از خطرناک‌ترین و رایج‌ترین بردارهای حمله است: تغییر مخرب دستورات SQL از طریق اپلیکیشن وب. دفاع: پارامترسازی و اعتبارسنجی."
+ },
+ {
+  "en": "How does a _stream cipher_ differ from a _block cipher_?",
+  "q": "رمز جریانی چه تفاوتی با رمز بلوکی دارد؟",
+  "qa": "عملیات رمزنگاری — **رمزگذاری** و **رمزگشایی** — با **رمز جریانی** یا **رمز بلوکی** انجام می‌شود و هرکدام ویژگی‌های خودش را دارد."
+ },
+ {
+  "en": "Can you explain what _HTTPS_ is and how it differs from _HTTP_?",
+  "q": "HTTPS چیست و چه تفاوتی با HTTP دارد؟",
+  "qa": "**HTTPS** (HyperText Transfer Protocol Secure) توسعه‌یافته‌ی HTTP با پروتکل‌های امنیتی برای ارتباط امن‌تر داده است؛ برای تبادل حساس ضروری است."
+ },
+ {
+  "en": "How do _SSL certificates_ work, and what is the purpose of a Certificate Authority (_CA_)?",
+  "q": "گواهی‌های SSL چطور کار می‌کنند و هدف Certificate Authority چیست؟",
+  "qa": "هدف و مکانیزم **گواهی‌های SSL** و نقش **مراجع گواهی (CA)** را قدم‌به‌قدم بررسی می‌کنیم."
+ },
+ {
+  "en": "What is the difference between _encryption_ and _hashing_?",
+  "q": "تفاوت رمزنگاری و هش‌کردن چیست؟",
+  "qa": "هر دو **رمزنگاری** و **هش** روش‌های رمزنگاری برای امنیت داده‌اند اما اهداف متفاوتی دارند و هر انتخاب پیامدهای خودش را دارد."
+ },
+ {
+  "en": "What is _cryptography_, and what are its main goals?",
+  "q": "رمزنگاری چیست و اهداف اصلی‌اش کدام‌اند؟",
+  "qa": "**رمزنگاری** حوزه‌ای میان‌رشته‌ای است — ترکیب ریاضیات، علوم کامپیوتر و مهندسی برق — برای انتقال امن اطلاعات."
+ },
+ {
+  "en": "What is a _cryptographic hash function_, and what properties must it have?",
+  "q": "تابع هش رمزنگاری چیست و باید چه ویژگی‌هایی داشته باشد؟",
+  "qa": "**توابع هش رمزنگاری** توابع یک‌طرفه‌اند که داده (مثل پسورد یا فایل) را به رشته‌ی ثابت‌طول تبدیل می‌کنند؛ ویژگی‌های ضروری‌شان مشخص است."
+ },
+ {
+  "en": "What is a _digital signature_, and how does it work?",
+  "q": "امضای دیجیتال چیست و چطور کار می‌کند؟",
+  "qa": "**امضای دیجیتال** اصالت و یکپارچگی محتوای دیجیتال — سند، ایمیل، کد — را تضمین می‌کند."
+ },
+ {
+  "en": "Can you explain what a _nonce_ is and how it's used in _cryptography_?",
+  "q": "nonce چیست و در رمزنگاری چطور استفاده می‌شود؟",
+  "qa": "در رمزنگاری، **nonce** (عددِ یک‌بارمصرف) رشته‌ی بیتی یکتا و معمولاً تصادفی است که در ارتباطات امن شبکه به‌کار می‌رود."
+ },
+ {
+  "en": "Describe the concept of perfect secrecy and name an encryption system that achieves it.",
+  "q": "مفهوم perfect secrecy را توضیح دهید و یک سیستم رمزنگاری که به آن می‌رسد نام ببرید.",
+  "qa": "**امنیت کامل** یا امنیت بدون‌شرط، ویژگی‌ای در رمزنگاری است که امنیتِ نظریه‌اطلاعات تضمین می‌کند — مستقل از قدرت محاسباتی مهاجم."
+ },
+ {
+  "en": "What are substitution and permutation in the context of encryption algorithms?",
+  "q": "substitution و permutation در الگوریتم‌های رمزنگاری چیستند؟",
+  "qa": "سیستم‌های رمز مدرن روی دو مفهوم بنیادی ساخته شده‌اند: **جایگزینی (substitution)** و **جابه‌جایی (permutation)**."
+ },
+ {
+  "en": "Explain the basic principle behind the AES encryption algorithm.",
+  "q": "اصل پایه‌ی الگوریتم رمز AES را توضیح دهید.",
+  "qa": "**AES (Advanced Encryption Standard)** الگوریتم متقارن و انتخاب اول securing داده است؛ با **رمز بلوکی** کار می‌کند."
+ },
+ {
+  "en": "What is web security and why is it important?",
+  "q": "امنیت وب چیست و چرا مهم است؟",
+  "qa": "**امنیت وب** مجموعه استراتژی‌ها و فناوری‌های محافظت از سیستم‌های متصل به اینترنت — اپ‌ها و سرویس‌های وب — است."
+ },
+ {
+  "en": "What are SSL and TLS and what role do they play in web security?",
+  "q": "SSL و TLS چیستند و چه نقشی در امنیت وب دارند؟",
+  "qa": "**SSL** و **TLS** پروتکل‌های رمزنگاری هستند که اتصال امن و رمز‌شده بین کلاینت و سرور می‌سازند."
+ },
+ {
+  "en": "Define the concept of a secure session and explain how it is established.",
+  "q": "مفهوم نشست امن را تعریف کنید و توضیح دهید چطور برقرار می‌شود.",
+  "qa": "**نشست امن** یعنی تبادل تعاملی محافظت‌شده بین وب‌سرور و کاربر از طریق یک اتصال رمز‌شده‌ی پیوسته."
+ },
+ {
+  "en": "What are some common web security vulnerabilities?",
+  "q": "آسیب‌پذیری‌های رایج امنیت وب کدام‌اند؟",
+  "qa": "شناخت **آسیب‌پذیری‌های رایج وب** برای ساخت اپ‌های محکم و امن حیاتی است؛ فهرست مهم‌ها را می‌بینیم."
+ },
+ {
+  "en": "Can you explain the Cross-Site Scripting (XSS) attack and how to prevent it?",
+  "q": "حمله‌ی XSS چیست و چطور از آن جلوگیری می‌کنید؟",
+  "qa": "در اپ‌های وب، **XSS** یعنی تزریق اسکریپت مخرب به سایت‌های بی‌خطر و مورد‌اعتماد."
+ },
+ {
+  "en": "Describe what Cross-Site Request Forgery (CSRF) is and how to prevent it.",
+  "q": "CSRF چیست و چطور از آن جلوگیری می‌کنید؟",
+  "qa": "**CSRF** — معروف به session riding یا حمله‌ی یک‌کلیکی — کاربر را فریب می‌دهد تا کارهای ناخواسته را در حالت احراز‌شده انجام دهد."
+ },
+ {
+  "en": "Explain the Same-Origin Policy and its importance in web security.",
+  "q": "Same-Origin Policy چیست و اهمیتش در امنیت وب چیست؟",
+  "qa": "**SOP** مفهوم بنیادی امنیت وب است که در برابر **حملات بین‌مبدأ** و افشای داده محافظت می‌کند و محیط امن می‌سازد."
+ },
+ {
+  "en": "What is Clickjacking and what measures can prevent it?",
+  "q": "Clickjacking چیست و چه تمهیداتی از آن جلوگیری می‌کند؟",
+  "qa": "**Clickjacking** (حمله‌ی بازترسیم UI) تهدیدی است که کاربر را **فریب می‌دهد روی چیز متفاوتی کلیک کند**."
+ },
+ {
+  "en": "How can web cookies compromise security and how do you safeguard against these risks?",
+  "q": "کوکی‌ها چطور امنیت را به خطر می‌اندازند و چطور محافظت می‌کنید؟",
+  "qa": "**کوکی‌ها** می‌توانند ریسک‌هایی مثل **سرقت نشست**، **XSS** و **افشای داده** بسازند؛ با تمهیدات مشخص کاهش می‌یابند."
+ },
+ {
+  "en": "What is a Man-in-the-Middle (MitM) attack and how can it be prevented?",
+  "q": "حمله‌ی Man-in-the-Middle چیست و چطور پیشگیری می‌شود؟",
+  "qa": "**حمله‌ی MitM** وقتی رخ می‌دهد که مهاجم ارتباط دو طرف را شنود کند؛ می‌تواند به سرقت داده یا دستکاری منجر شود."
+ },
+ {
+  "en": "Describe the concept of session management in web security.",
+  "q": "مفهوم session management در امنیت وب را توضیح دهید.",
+  "qa": "**مدیریت نشست** مکانیزم محوری امنیت وب است؛ state بین صفحات را نگه می‌دارد و هویت و مجوز کاربران را امن مدیریت می‌کند."
+ },
+ {
+  "en": "Explain the difference between symmetric and asymmetric cryptography.",
+  "q": "تفاوت رمزنگاری متقارن و نامتقارن چیست؟",
+  "qa": "**رمزنگاری متقارن و نامتقارن** هرکدام نقش متمایزی در امنیت ارتباط دیجیتال دارند؛ تفاوت در مدیریت کلید، هزینه‌ی محاسباتی و کاربرد است."
+ },
+ {
+  "en": "Describe the concept of public key infrastructure (PKI).",
+  "q": "مفهوم Public Key Infrastructure را توضیح دهید.",
+  "qa": "**PKI** سیستم جامعی برای مدیریت **رمزنگاری کلید عمومی** و مکانیزم‌های امضای دیجیتال امن است."
+ },
+ {
+  "en": "What does it mean for a cryptographic algorithm to be computationally secure?",
+  "q": "یعنی چه که الگوریتم رمزنگاری «computationally secure» است؟",
+  "qa": "یعنی الگوریتم در برابر **محدودیت‌های منطقی محاسباتی** مهاجم مقاوم می‌ماند — شکستنش عملی نیست، حتی اگر نظریاً ممکن باشد."
+ },
+ {
+  "en": "What is the Data Encryption Standard (DES) and why is it considered insecure today?",
+  "q": "DES چیست و چرا امروز ناامن شمرده می‌شود؟",
+  "qa": "**DES** رمزنگار متقارنی بود که IBM در دهه‌ی ۷۰ برای کاربرد مالی و دولتی ساخت و NIST استانداردش کرد؛ امروز به دلیل طول کلید کم ناامن است."
+ },
+ {
+  "en": "Describe the differences between RSA and ECC (Elliptic Curve Cryptography).",
+  "q": "تفاوت‌های RSA و ECC را توضیح دهید.",
+  "qa": "هر دو **RSA** و **ECC** سیستم‌های کلید عمومی‌اند اما در سرعت، اندازه‌ی کلید و کاربرد تفاوت متمایز دارند."
+ },
+ {
+  "en": "Can you describe the Feistel cipher structure?",
+  "q": "ساختار رمز Feistel را توصیف کنید.",
+  "qa": "**رمزهای Feistel** رمزهای بلوکی متقارن‌اند با رویکرد **تقسیم و غلبه**: بلوک ورودی به دو نیمه می‌شکند و این نیمه‌ها در چند دور پردازش می‌شوند."
+ },
+ {
+  "en": "What are the key differences between DES and 3DES?",
+  "q": "تفاوت‌های کلیدی DES و 3DES چیست؟",
+  "qa": "**DES** و جانشینش **Triple DES (3DES)** هر دو رمزهای متقارن با اندازه‌ی بلوک ثابت‌اند؛ تفاوت‌ها را می‌بینیم."
+ }
+]

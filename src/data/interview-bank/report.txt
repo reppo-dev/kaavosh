@@ -1,0 +1,17 @@
+javascript: dedupe removed 77 duplicates
+javascript.json: 203 questions ({"junior":147,"mid":37,"senior":19})
+react: dedupe removed 5 duplicates
+react.json: 489 questions ({"junior":306,"mid":155,"senior":28})
+system-design: dedupe removed 0 duplicates
+system-design.json: 83 questions ({"junior":3,"mid":14,"senior":66})
+behavioral.json: 48 questions ({"junior":4,"mid":17,"senior":27})
+frontend.json: 60 questions ({"junior":19,"mid":29,"senior":12})
+CORRECTED: backend.json | how would you detect and handle websocket connection lo-websocket-8
+backend.json: 240 questions ({"junior":30,"mid":91,"senior":119})
+devops-cloud.json: 120 questions ({"junior":6,"mid":40,"senior":74})
+cybersecurity.json: 30 questions ({"junior":2,"mid":10,"senior":18})
+ai-ml.json: 60 questions ({"junior":5,"mid":23,"senior":32})
+CORRECTED: algorithms.json | how to implement a queue such that enqueue has o 1 and -queue-data-structure-8
+CORRECTED: algorithms.json | what is sentinel search-searching-algorithms-5
+algorithms.json: 316 questions ({"junior":69,"mid":167,"senior":80})
+mobile.json: 75 questions ({"junior":19,"mid":30,"senior":26})

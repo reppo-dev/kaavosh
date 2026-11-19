@@ -1,0 +1,1582 @@
+[
+ {
+  "en": "Explain how you would reverse an array in place.",
+  "q": "معکوس‌کردن آرایه درجا (in-place) را توضیح دهید.",
+  "qa": "**In-place reversal** آرایه اصلی را بدون فضای اضافی تغییر می‌دهد؛ دو اشاره‌گر از دو سر جابه‌جا می‌شوند."
+ },
+ {
+  "en": "Can you explain how to perform a binary search on a sorted array?",
+  "q": "binary search روی آرایه مرتب را توضیح می‌دهید؟",
+  "qa": "استراتژی سطح بالا و سپس **مثال قدم‌به‌قدم** binary search را می‌بینیم."
+ },
+ {
+  "en": "How would you rotate a two-dimensional array by 90 degrees?",
+  "q": "چطور آرایه دوبعدی را ۹۰ درجه می‌چرخانید؟",
+  "qa": "چرخش ۹۰ درجه آرایه دوبعدی = **transpose** + **معکوس‌کردن سطرها یا ستون‌ها**."
+ },
+ {
+  "en": "Describe an algorithm to compress a string such as aabbccc to a2b2c3.",
+  "q": "الگوریتم فشرده‌سازی رشته مثل aabbccc به a2b2c3 را توضیح دهید.",
+  "qa": "رشته را با شمارش تعداد هر کاراکتر فشرده می‌کنید: aabbccc می‌شود a2b2c3."
+ },
+ {
+  "en": "What is an array slice and how is it implemented in programming languages?",
+  "q": "array slice چیست و در زبان‌های برنامه‌نویسی چطور پیاده می‌شود؟",
+  "qa": "**Array Slice** چیست و در بعضی زبان‌ها چطور پیاده شده است."
+ },
+ {
+  "en": "What are the major operations you can perform on a linked list and their time complexities?",
+  "q": "عملیات اصلی روی لیست پیوندی و پیچیدگی زمانی‌شان کدام‌اند؟",
+  "qa": "عملیات اصلی روی **لیست پیوندی یک‌طرفه** و پیچیدگی زمانی هرکدام:"
+ },
+ {
+  "en": "What is Dynamic Programming and how does it differ from recursion?",
+  "q": "Dynamic Programming چیست و چه تفاوتی با recursion دارد؟",
+  "qa": "**DP** و **recursion** هر دو راه‌حل محاسباتی‌اند ولی متفاوت عمل می‌کنند."
+ },
+ {
+  "en": "Define memoization and how it improves performance in Dynamic Programming.",
+  "q": "memoization را تعریف کنید و بهبود عملکرد در DP را توضیح دهید.",
+  "qa": "DP از دو استراتژی رایج برای بهبود عملکرد استفاده می‌کند: **Tabulation** و **Memoization**."
+ },
+ {
+  "en": "Explain Open Addressing and its different probing techniques.",
+  "q": "Open Addressing و تکنیک‌های probing آن را توضیح دهید.",
+  "qa": "**Open Addressing** تکنیک حل برخورد است که جدول هش جای جایگزین برای عنصر برخوردی پیدا می‌کند."
+ },
+ {
+  "en": "What is a Load Factor in the context of Hash Tables?",
+  "q": "load factor در بستر Hash Table چیست؟",
+  "qa": "**load factor** سنجه‌ی کلیدی عملکرد جدول هش است؛ آستانه‌ای برای resize کردن جدول که زمان و فضا را متوازن می‌کند."
+ },
+ {
+  "en": "What is Binary Heap?",
+  "q": "Binary Heap چیست؟",
+  "qa": "**Binary Heap** درخت دودویی خاصی است که **Heap Property** را رعایت می‌کند: والد نسبت به فرزندان مرتب است."
+ },
+ {
+  "en": "What is a Treap and how does it combine the properties of a binary search tree and a heap?",
+  "q": "Treap چیست و چطور BST و Heap را ترکیب می‌کند؟",
+  "qa": "**Treap** (Cartesian Tree) BST خاصی است که ساختار دوگانه‌ای از BST و Heap دارد."
+ },
+ {
+  "en": "What is a Balanced Tree?",
+  "q": "Balanced Tree چیست؟",
+  "qa": "**درخت متوازن** تضمین می‌کند **Balance Factor** — اختلاف ارتفاع زیردرخت چپ و راست هر نود — از یک بیشتر نشود."
+ },
+ {
+  "en": "What are advantages and disadvantages of BST?",
+  "q": "مزایا و معایب BST چیست؟",
+  "qa": "**BST** ساختار داده‌ی چندمنظوره‌ای با مزایا و محدودیت‌های مشخص است."
+ },
+ {
+  "en": "When is a Circular Linked List useful?",
+  "q": "Circular Linked List کِی مفید است؟",
+  "qa": "**لیست پیوندی حلقوی** نوعی لیست است که انتهایش به ابتدا وصل شده و حلقه می‌سازد."
+ },
+ {
+  "en": "When is Doubly Linked List more efficient than Singly Linked List?",
+  "q": "کِی Doubly Linked List کارآمدتر از Singly Linked List است؟",
+  "qa": "**لیست پیوندی دوجهته** در کاربردهای خاص سود دارد ولی حافظه بیشتر و thread-safety پیچیده‌تری می‌خواهد."
+ },
+ {
+  "en": "What is a Graph?",
+  "q": "Graph چیست؟",
+  "qa": "**گراف** ساختار داده‌ای است که مجموعه‌ای از **نودهای** به‌هم‌متصل را از طریق **یال‌ها** نمایش می‌دهد."
+ },
+ {
+  "en": "What are some common Types and Categories of Graphs?",
+  "q": "انواع و دسته‌های رایج Graph ها کدام‌اند؟",
+  "qa": "گراف‌ها ساختارهای داده‌ی **انعطاف‌پذیر** برای وظایف محاسباتی و کاربردهای واقعی‌اند؛ انواع متنوع را می‌بینیم."
+ },
+ {
+  "en": "What is the difference between a Tree and a Graph?",
+  "q": "تفاوت Tree و Graph چیست؟",
+  "qa": "**گراف‌ها** و **درخت‌ها** هر دو ساختارهای غیرخطی‌اند ولی تفاوت‌های بنیادی دارند."
+ },
+ {
+  "en": "How can you determine the Minimum number of edges for a graph to remain connected?",
+  "q": "حداقل تعداد یال برای متصل‌ماندن گراف را چطور تعیین می‌کنید؟",
+  "qa": "برای **متصل‌ماندن گراف**، حداقل تعداد یال بر اساس تعداد رأس‌ها مشخص می‌شود — این همان…"
+ },
+ {
+  "en": "Define Euler Path and Euler Circuit in the context of graph theory.",
+  "q": "Euler Path و Euler Circuit را در نظریه‌ی گراف تعریف کنید.",
+  "qa": "در **نظریه‌ی گراف**، **Euler Path** و **Euler Circuit** روش‌های پیمایش همه‌ی یال‌ها دقیقاً یک‌بار هستند با تفاوت…"
+ },
+ {
+  "en": "Explain how to save space while storing a graph using Compressed Sparse Row (CSR).",
+  "q": "ذخیره‌ی گراف با Compressed Sparse Row را توضیح دهید.",
+  "qa": "در **CSR** گراف با سه آرایه‌ی پیوسته نمایش داده می‌شود؛ این روش فشرده حافظه را به‌طور قابل‌توجه کم می‌کند."
+ },
+ {
+  "en": "Explain the Depth-First Search (DFS) algorithm.",
+  "q": "الگوریتم Depth-First Search را توضیح دهید.",
+  "qa": "**DFS** الگوریتم پیمایش گرافی است که ساده‌تر و **اغلب سریع‌تر** از BFS است؛ اما…"
+ },
+ {
+  "en": "What is a Bipartite Graph? How to detect one?",
+  "q": "Bipartite Graph چیست و چطور تشخیص داده می‌شود؟",
+  "qa": "**گراف دو‌بخشی** گرافی است که رأس‌هایش به دو مجموعه‌ی متمایز U و V تقسیم می‌شوند به‌طوری که هر یال از U به V برود."
+ },
+ {
+  "en": "What is an Array?",
+  "q": "آرایه (Array) چیست؟",
+  "qa": "**آرایه** ساختار داده‌ی بنیادی برای ذخیره‌ی **توالی** عناصر با دسترسی از طریق **اندیس** است."
+ },
+ {
+  "en": "What defines the Dimensionality of an array?",
+  "q": "dimensionality آرایه را چه چیزی تعریف می‌کند؟",
+  "qa": "**بعد آرایه** یعنی تعداد اندیس لازم برای انتخاب عنصر؛ مثال کلاسیک: جدول tic-tac-toe دوبعدی است."
+ },
+ {
+  "en": "Name some Advantages and Disadvantages of arrays.",
+  "q": "مزایا و معایب آرایه‌ها را نام ببرید.",
+  "qa": "**آرایه‌ها** نقاط قوت و ضعف مشخصی دارند که آن‌ها را برای بعضی کاربردها بهتر و بعضی نامناسب می‌کند."
+ },
+ {
+  "en": "What are the advantages of Heaps over Sorted Arrays?",
+  "q": "مزایای Heap ها نسبت به Sorted Array ها چیست؟",
+  "qa": "هر دو نقاط قوت دارند ولی **heapها** برای داده‌ی پویا با درج و حذف مکرر ترجیح دارند."
+ },
+ {
+  "en": "How does Indexing work in arrays?",
+  "q": "Indexing در آرایه‌ها چطور کار می‌کند؟",
+  "qa": "**Indexing** یعنی دسترسی به عنصر با اندیس یکتا از ۰ تا n-1 برای آرایه‌ی n عنصری."
+ },
+ {
+  "en": "Reverse an Array in place.",
+  "q": "آرایه را درجا معکوس کنید.",
+  "qa": "هدف: **معکوس‌کردن توالی عناصر آرایه** با فضای کمکی ثابت."
+ },
+ {
+  "en": "Remove Duplicates from a sorted array without using extra space.",
+  "q": "تکراری‌ها را از آرایه مرتب بدون فضای اضافی حذف کنید.",
+  "qa": "در **آرایه مرتب**، حذف تکراری‌ها درجا با فضای ثابت و برگرداندن طول جدید."
+ },
+ {
+  "en": "What is a Heap?",
+  "q": "Heap چیست؟",
+  "qa": "**Heap** ساختار داده‌ی **درخت‌محور** است که معمولاً برای **priority queue** استفاده می‌شود؛ دو نوع اصلی دارد."
+ },
+ {
+  "en": "How does the Binary Heap property differ between a max heap and a min heap?",
+  "q": "خاصیت Binary Heap در max heap و min heap چه تفاوتی دارد؟",
+  "qa": "**Binary heapها** دو نوع دارند: **max heap** و **min heap**؛ تفاوت در فرایند heapify و رابطه‌ی والد-فرزند است."
+ },
+ {
+  "en": "Name some ways to implement Priority Queue.",
+  "q": "چند روش پیاده‌سازی Priority Queue را نام ببرید.",
+  "qa": "روش‌های مختلف پیاده‌سازی **Priority Queue** و پیچیدگی زمانی هرکدام:"
+ },
+ {
+  "en": "What are some Practical Applications of Heaps?",
+  "q": "کاربردهای عملی Heap ها کدام‌اند؟",
+  "qa": "**Heapها** در الگوریتم‌ها و وظایف مختلف داده‌یابی کاربرد دارند."
+ },
+ {
+  "en": "What is a Stack?",
+  "q": "Stack چیست؟",
+  "qa": "**Stack** ساختار داده‌ی ساده‌ای با اصل **LIFO** است؛ مثل دسته‌ی کتاب که آخرین کتابی که گذاشته‌اید اول برداشته می‌شود."
+ },
+ {
+  "en": "What are the primary operations performed on a Stack and their time complexities?",
+  "q": "عملیات اصلی Stack و پیچیدگی زمانی‌شان کدام‌اند؟",
+  "qa": "عملیات بنیادی **stack** و پیچیدگی زمانی هرکدام:"
+ },
+ {
+  "en": "When should I use Stack or Queue data structures instead of Arrays/Lists?",
+  "q": "کِی Stack یا Queue را به‌جای آرایه/لیست استفاده می‌کنم؟",
+  "qa": "**صف‌ها** و **پشته‌ها** ساختارهای منظم هندل داده با مزایای مشخص نسبت به لیست‌های عمومی دارند."
+ },
+ {
+  "en": "What are Infix, Prefix, and Postfix notations?",
+  "q": "نمادهای Infix و Prefix و Postfix چیستند؟",
+  "qa": "در علوم کامپیوتر سه روش نوشتن عبارات ریاضی هستند: **infix** برای انسان، **prefix** و **postfix** برای ماشین."
+ },
+ {
+  "en": "Describe an application where Stacks are naturally suited over other data structures.",
+  "q": "کاربردی را توضیح دهید که Stack برای آن طبیعی‌تر از بقیه باشد.",
+  "qa": "**Stackها** در ویرایشگرهای متن برای undo/redo و در مرورگرها برای back/forward طبیعی‌اند."
+ },
+ {
+  "en": "When should I use a Stack or a Queue instead of Arrays/Lists?",
+  "q": "کِی Stack یا Queue را به‌جای آرایه/لیست استفاده می‌کنم؟",
+  "qa": "**صف‌ها** و **پشته‌ها** ساختارهای منظمی برای هندل داده با مزایای مشخص نسبت به لیست‌های عمومی دارند."
+ },
+ {
+  "en": "Write an algorithm to enqueue and dequeue an item from a Queue.",
+  "q": "الگوریتمی بنویسید که enqueue و dequeue در صف را انجام دهد.",
+  "qa": "هدف: نوشتن الگوریتمی برای **enqueue** (افزودن) و **dequeue** (حذف) روی **صف**."
+ },
+ {
+  "en": "What is a String in Data Structures?",
+  "q": "String در ساختارهای داده چیست؟",
+  "qa": "**رشته** توالی کاراکترهاست و برای ذخیره‌ی متن در زبان‌هایی مثل Python و Java بنیادی است."
+ },
+ {
+  "en": "What is a Null-Terminated String?",
+  "q": "رشته‌ی null-terminated چیست؟",
+  "qa": "رشته‌ای که با کاراکتر '\\0' تمام می‌شود؛ برای مدیریت حافظه قبل از تخصیص پویا ضروری بود و امروز در C هنوز رایج است."
+ },
+ {
+  "en": "What are Pascal Strings?",
+  "q": "Pascal String ها چیستند؟",
+  "qa": "**Pascal Stringها** در زبان Pascal به‌کار می‌رفتند: طول رشته در بایت اول ذخیره و داده بعدش می‌آمد."
+ },
+ {
+  "en": "Define Leaf and Internal nodes in a Tree.",
+  "q": "Leaf و Internal node را در درخت تعریف کنید.",
+  "qa": "در **درخت**، نودها دو نقش دارند: **leaf** بدون فرزند و **internal** با حداقل یک فرزند."
+ },
+ {
+  "en": "What is the significance of the degree of a node in a tree?",
+  "q": "اهمیت درجه‌ی نود در درخت چیست؟",
+  "qa": "**درجه‌ی درخت** از بیشترین درجه‌ی نودهایش تعیین می‌شود — بیشترین تعداد فرزند یک نود."
+ },
+ {
+  "en": "Define a Perfect Binary Tree and its characteristics.",
+  "q": "Perfect Binary Tree و ویژگی‌هایش را تعریف کنید.",
+  "qa": "**درخت باینری کامل** نوعی درخت است که هر نود داخلی دقیقاً دو فرزند دارد و همه‌ی leafها در یک سطح‌اند."
+ },
+ {
+  "en": "What are some Practical Applications of a Trie?",
+  "q": "کاربردهای عملی Trie کدام‌اند؟",
+  "qa": "**Trie** برای تطبیق دقیق رشته و **auto-completion** مؤثر است؛ کاربردهای واقعی:"
+ },
+ {
+  "en": "What is Stability in the context of Sorting Algorithms?",
+  "q": "Stability در الگوریتم‌های مرتب‌سازی یعنی چه؟",
+  "qa": "در **مرتب‌سازی**، تفکیک **stable** و **unstable** مهم است: الگوریتم stable ترتیب نسبی عناصر برابر را حفظ می‌کند."
+ },
+ {
+  "en": "How does the presence of duplicates affect the performance of Linear Search?",
+  "q": "حضور تکراری‌ها بر عملکرد Linear Search چه اثری دارد؟",
+  "qa": "با **تکراری‌ها** در داده، **linear search** حتی بعد از یافتن تطابق به جست‌وجو ادامه می‌دهد — مگر اینکه زودتر متوقف شود."
+ },
+ {
+  "en": "What is the difference between Greedy and Heuristic algorithms?",
+  "q": "تفاوت الگوریتم Greedy و Heuristic چیست؟",
+  "qa": "هر **الگوریتم greedy** یک **heuristic** است ولی برعکس نه؛ مقایسه‌ی کنار هم این دو:"
+ },
+ {
+  "en": "What is the role of recursion in Divide & Conquer algorithms?",
+  "q": "نقش recursion در الگوریتم‌های Divide & Conquer چیست؟",
+  "qa": "الگوریتم‌های **Divide & Conquer** مسائل پیچیده را به زیرمسئله‌های ساده‌تر می‌شکنند؛ **recursion** ابزار طبیعی این تجزیه است."
+ },
+ {
+  "en": "What are the three main steps in a typical Divide & Conquer algorithm?",
+  "q": "سه گام اصلی یک الگوریتم Divide & Conquer چیست؟",
+  "qa": "الگوریتم‌های **Divide & Conquer** مسائل را به **بخش‌های کوچک‌تر و قابل‌مدیریت** می‌شکنند و سه گام دارند: تقسیم، حل، ترکیب."
+ },
+ {
+  "en": "How would you use a Divide & Conquer approach to calculate the power of a number?",
+  "q": "با رویکرد Divide & Conquer توان یک عدد را چطور محاسبه می‌کنید؟",
+  "qa": "محاسبه‌ی **توان** با تفکیک حالت زوج و فرد انجام می‌شود تا پیچیدگی از O(n) به O(log n) کاهش یابد."
+ },
+ {
+  "en": "What are the considerations for choosing candidates at each step in a backtracking algorithm?",
+  "q": "ملاحظات انتخاب candidate در هر گام backtracking چیست؟",
+  "qa": "ملاحظات مختلفی در **انتخاب candidateها** در هر گام backtracking دخیل است:"
+ },
+ {
+  "en": "What is the difference between Backtracking and Recursion?",
+  "q": "تفاوت Backtracking و Recursion چیست؟",
+  "qa": "**Backtracking** اغلب از **recursion** برای کاوش فضای راه‌حل‌ها استفاده می‌کند؛ اما همه‌ی الگوریتم‌های بازگشتی backtracking نیستند."
+ },
+ {
+  "en": "Define Base Case in the context of recursive functions.",
+  "q": "Base Case را در توابع بازگشتی تعریف کنید.",
+  "qa": "**Base Case** شرط توقف توابع بازگشتی است؛ بدون آن تابع وارد حلقه‌ی بی‌نهایت می‌شود و stack overflow می‌دهد."
+ },
+ {
+  "en": "Explain the Depth-First Search algorithm.",
+  "q": "الگوریتم Depth-First Search را توضیح دهید.",
+  "qa": "**DFS** الگوریتم پیمایش گرافی است که ساده‌تر و **اغلب سریع‌تر** از BFS است؛ با پشته یا بازگشت پیاده می‌شود."
+ },
+ {
+  "en": "Implement a Recursive Algorithm to perform a Binary Search.",
+  "q": "الگوریتم بازگشتی برای Binary Search پیاده کنید.",
+  "qa": "هدف: نوشتن **الگوریتم بازگشتی** که **binary search** روی آرایه‌ی n عددی انجام و وجود عنصر را تشخیص دهد."
+ },
+ {
+  "en": "Explain the process of performing a recursive In-order Tree Traversal.",
+  "q": "فرایند In-order Tree Traversal بازگشتی را توضیح دهید.",
+  "qa": "**پیمایش in-order** یا «چپ-ریشه-راست» مثال کلاسیک recursion است: از فرزند چپ شروع، ریشه، بعد فرزند راست."
+ },
+ {
+  "en": "What is the difference between Head Recursion and Tail Recursion?",
+  "q": "تفاوت Head Recursion و Tail Recursion چیست؟",
+  "qa": "**Head recursion** اول خودش را صدا می‌زند بعد پردازش می‌کند؛ **tail recursion** بعد از بازگشت دیگر کاری نمی‌کند و قابل بهینه‌سازی است."
+ },
+ {
+  "en": "What is the Fibonacci sequence?",
+  "q": "دنباله‌ی Fibonacci چیست؟",
+  "qa": "**دنباله‌ی Fibonacci** سری اعدادی است که هر عدد F(n) جمع دو عدد قبلی است و با ۰ و ۱ شروع می‌شود."
+ },
+ {
+  "en": "Solve the nth Fibonacci number problem using matrix exponentiation and analyze its efficiency.",
+  "q": "عدد nام Fibonacci را با matrix exponentiation حل و کارایی‌اش را تحلیل کنید.",
+  "qa": "محاسبه‌ی F(n) با **توان‌رسانی ماتریسی** و تحلیل کارایی‌اش."
+ },
+ {
+  "en": "How can the Fibonacci sequence be used to solve the tiling problem, where you need to cover a 2xN rectangle with 2x1 tiles?",
+  "q": "دنباله‌ی Fibonacci چطور مسئله‌ی tiling (پوشاندن مستطیل 2×N با کاشی 2×1) را حل می‌کند؟",
+  "qa": "**دنباله‌ی Fibonacci** با مسئله‌ی پوشاندن مستطیل 2×N با کاشی‌های 2×1 ارتباط مستقیم دارد: تعداد راه‌ها دقیقاً F(n+1) است."
+ },
+ {
+  "en": "Explain the difference between Big-O, Big-Theta, and Big-Omega notations.",
+  "q": "تفاوت Big-O و Big-Theta و Big-Omega را توضیح دهید.",
+  "qa": "سه نماد مهم و کاربردهایشان: **O** (حد بالایی)، **Θ** (مرز دقیق) و **Ω** (حد پایینی)."
+ },
+ {
+  "en": "Describe the role of constants and lower-order terms in Big-O analysis.",
+  "q": "نقش ثابت‌ها و جمله‌های مرتبه‌ی پایین در تحلیل Big-O را توضیح دهید.",
+  "qa": "فهم **ثابت‌ها** و **جمله‌های مرتبه‌ی پایین** در تحلیل Big-O به تفکیک عملکرد خوب در عمل از نظری کمک می‌کند."
+ },
+ {
+  "en": "Give examples of how amortized analysis can provide a more balanced complexity measure.",
+  "q": "چند مثال از amortized analysis برای سنجش متوازن‌تر پیچیدگی بزنید.",
+  "qa": "**تحلیل amortized** با میانگین‌گیری هزینه در طول عملیات متوالی، تصویر متوازن‌تری از عملکرد می‌دهد."
+ },
+ {
+  "en": "Describe how the coefficients of higher-order terms affect Big-O Notation in practical scenarios.",
+  "q": "ضرایب جمله‌های مرتبه‌ی بالاتر چطور در عمل بر Big-O اثر می‌گذارند؟",
+  "qa": "اگرچه **جمله‌ی غالب** پیچیدگی را تعیین می‌کند، ضرایب مرتبه‌ی بالاتر در عمل قابل‌چشم‌پوشی نیستند."
+ },
+ {
+  "en": "Analyze the Big-O time complexity of array operations.",
+  "q": "پیچیدگی زمانی Big-O عملیات آرایه را تحلیل کنید.",
+  "qa": "عملیات رایج آرایه و پیچیدگی زمانی Big-O هرکدام:"
+ },
+ {
+  "en": "Discuss the Big-O space complexity of using linked lists.",
+  "q": "پیچیدگی فضایی Big-O لیست پیوندی را بررسی کنید.",
+  "qa": "**لیست‌های پیوندی** درج و حذف O(1) دارند ولی **پیچیدگی فضایی** به‌خاطر pointer هر نود…"
+ },
+ {
+  "en": "Compare the Big-O complexities of various sorting algorithms.",
+  "q": "پیچیدگی Big-O الگوریتم‌های مرتب‌سازی مختلف را مقایسه کنید.",
+  "qa": "**پیچیدگی Big-O** الگوریتم‌های بنیادی مرتب‌سازی را می‌بینیم."
+ },
+ {
+  "en": "Evaluate the Big-O time complexity of binary search.",
+  "q": "پیچیدگی زمانی Big-O binary search را ارزیابی کنید.",
+  "qa": "**Binary Search** الگوریتم Divide and Conquer روی **لیست‌های مرتب** است؛ پیچیدگی زمانی O(log n) دارد."
+ },
+ {
+  "en": "Discuss the Big-O complexities of tree operations including binary search trees and AVL trees.",
+  "q": "پیچیدگی Big-O عملیات درخت (شامل BST و AVL) را بررسی کنید.",
+  "qa": "**BST** برای جست‌وجو و درج میانگین O(log n) دارد؛ اما در بدترین حالت (درخت نامتوازن) به O(n) می‌رسد. **AVL** با چرخش خودکار توازن را حفظ می‌کند."
+ },
+ {
+  "en": "Analyze the Big-O complexity of graph algorithms including traversal and shortest path algorithms.",
+  "q": "پیچیدگی Big-O الگوریتم‌های گراف شامل پیمایش و کوتاه‌ترین مسیر را تحلیل کنید.",
+  "qa": "**الگوریتم‌های گراف** نیازهای محاسباتی متفاوتی دارند و پیچیدگی معمولاً با Big O بیان می‌شود: BFS/DFS با O(V+E) و Dijkstra با O(V²) یا O(E log V)."
+ },
+ {
+  "en": "Discuss time and space complexities of various heap operations.",
+  "q": "پیچیدگی زمان و فضای عملیات‌های Heap را بررسی کنید.",
+  "qa": "**Heapها** درخت‌های خاصی هستند که درج، حذف و min/max lookup سریع را ممکن می‌کنند؛ در priority queueها پرکاربردند."
+ },
+ {
+  "en": "What is the difference between an array and a linked list?",
+  "q": "تفاوت آرایه و لیست پیوندی چیست؟",
+  "qa": "دو نوع بنیادی لیست — **آرایه** و **لیست پیوندی** — را کنار هم می‌گذاریم: آرایه دسترسی تصادفی O(1) و لیست پیوندی درج/حذف O(1) در سر دارد."
+ },
+ {
+  "en": "How would you check for duplicates in an array without using extra space?",
+  "q": "چطور بدون فضای اضافی تکراری‌های آرایه را چک می‌کنید؟",
+  "qa": "**چک تکراری** بدون فضای اضافی با hash function، مرتب‌سازی یا روش ریاضی حل می‌شود."
+ },
+ {
+  "en": "Can you discuss the time complexity of array insertion and deletion?",
+  "q": "پیچیدگی زمانی درج و حذف در آرایه را بررسی کنید.",
+  "qa": "هر دو **درج** و **حذف** در آرایه به‌خاطر جابه‌جایی عناصر بعدی، پیچیدگی O(n) دارند."
+ },
+ {
+  "en": "What are some ways to merge two sorted arrays into one sorted array?",
+  "q": "چند روش ادغام دو آرایه مرتب را بگویید.",
+  "qa": "ادغام دو آرایه مرتب با تکنیک‌های تعریف‌شده‌ای مثل **merge دو نشانگر** انجام می‌شود."
+ },
+ {
+  "en": "Explain how a singly linked list differs from a doubly linked list.",
+  "q": "تفاوت لیست پیوندی یک‌طرفه و دوجهته چیست؟",
+  "qa": "**لیست یک‌طرفه** فقط اشاره‌گر بعدی دارد؛ **دوجهته** هر دو next و prev را دارد — پیمایش معکوس ممکن می‌شود."
+ },
+ {
+  "en": "How would you detect a cycle in a linked list?",
+  "q": "چرخه در لیست پیوندی را چطور تشخیص می‌دهید؟",
+  "qa": "**تشخیص چرخه** الگوریتم بنیادی‌ای است با اشاره‌گرها که توالی تکراری را در لیست پیوندی پیدا می‌کند — الگوریتم فلوید (دو سرعت)."
+ },
+ {
+  "en": "Can you describe an in-place algorithm to reverse a linked list?",
+  "q": "الگوریتم in-place برای معکوس‌کردن لیست پیوندی را توصیف کنید.",
+  "qa": "**الگوریتم‌های In-place** با فضای کمکی O(1) ساختار را تغییر می‌دهند؛ برای معکوس‌کردن لیست پیوندی فقط اشاره‌گرها را تغییر جهت می‌دهید."
+ },
+ {
+  "en": "Explain how you would find the middle element of a linked list in one pass.",
+  "q": "وسط لیست پیوندی را در یک pass چطور پیدا می‌کنید؟",
+  "qa": "**یافتن عنصر میانی** با تکنیک **دو‌اشاره‌گر (runner)** در یک pass انجام می‌شود: سریع دو‌برابر و کند تک‌گام."
+ },
+ {
+  "en": "Can you explain the concept of overlapping subproblems?",
+  "q": "مفهوم overlapping subproblems را توضیح دهید.",
+  "qa": "**زیرمسئله‌های هم‌پوشان** اصل هسته‌ی **برنامه‌نویسی پویا** است: همان زیرمسئله مکرراً در محاسبه ظاهر می‌شود و memoization آن را ذخیره می‌کند."
+ },
+ {
+  "en": "What is the difference between top-down and bottom-up approaches in Dynamic Programming?",
+  "q": "تفاوت رویکرد top-down و bottom-up در DP چیست؟",
+  "qa": "هر دو استراتژی هدف بهینه‌سازی دارند: **top-down** با memoization و بازگشت؛ **bottom-up** با tabulation و حل از پایه."
+ },
+ {
+  "en": "Compute the Fibonacci sequence using Dynamic Programming.",
+  "q": "دنباله‌ی Fibonacci را با Dynamic Programming محاسبه کنید.",
+  "qa": "محاسبه‌ی **Fibonacci** با DP پیچیدگی را از نمایی به خطی کاهش می‌دهد."
+ },
+ {
+  "en": "Implement a solution to the Coin Change Problem using DP.",
+  "q": "مسئله‌ی Coin Change را با DP حل کنید.",
+  "qa": "**مسئله‌ی Coin Change** مسئله‌ی بهینه‌سازی است: حداقل تعداد سکه برای رسیدن به مبلغ هدف با DP محاسبه می‌شود."
+ },
+ {
+  "en": "Use Dynamic Programming approach to solve the 0/1 Knapsack problem.",
+  "q": "مسئله‌ی 0/1 Knapsack را با DP حل کنید.",
+  "qa": "سناریو: دزد با n آیتم (هرکدام وزن wi و ارزش vi) و **کوله‌پشتی** با ظرفیت محدود — DP جدولی بهترین ارزش را پیدا می‌کند."
+ },
+ {
+  "en": "Implement an algorithm for computing the longest common subsequence of two sequences.",
+  "q": "الگوریتمی برای محاسبه‌ی طولانی‌ترین زیردنباله‌ی مشترک دو رشته پیاده کنید.",
+  "qa": "هدف: یافتن **LCS** دو رشته — می‌تواند هر رشته‌ای باشد حتی رشته‌های DNA."
+ },
+ {
+  "en": "Solve matrix chain multiplication problem with Dynamic Programming.",
+  "q": "مسئله‌ی matrix chain multiplication را با DP حل کنید.",
+  "qa": "با توالی ماتریس‌های A1 تا An، **matrix chain multiplication** بهینه‌ترین ترتیب ضرب را با DP پیدا می‌کند."
+ },
+ {
+  "en": "How do you determine the time complexity of a Dynamic Programming algorithm?",
+  "q": "پیچیدگی زمانی الگوریتم DP را چطور تعیین می‌کنید؟",
+  "qa": "**DP** مسائل را به زیرمسئله‌های ساده‌تر می‌شکند؛ پیچیدگی زمانی = تعداد زیرمسئله × هزینه‌ی هر زیرمسئله."
+ },
+ {
+  "en": "Describe techniques to optimize space complexity in Dynamic Programming problems.",
+  "q": "تکنیک‌های بهینه‌سازی فضای DP را توضیح دهید.",
+  "qa": "**DP** به‌خاطر رویکرد جدولی حافظه زیاد مصرف می‌کند؛ روش‌هایی مثل rolling array و فقط نگه‌داشتن ردیف قبلی فضا را کم می‌کنند."
+ },
+ {
+  "en": "What is state transition and how do you derive state transition relations?",
+  "q": "state transition چیست و روابط گذار وضعیت را چطور استخراج می‌کنید؟",
+  "qa": "**روابط گذار وضعیت** توصیف می‌کنند که وضعیت مسئله حین محاسبه چطور پیش می‌رود؛ مفهوم بنیادی DP."
+ },
+ {
+  "en": "Find the longest palindromic substring in a given string.",
+  "q": "طولانی‌ترین زیررشته‌ی متقارن در رشته‌ی داده‌شده را پیدا کنید.",
+  "qa": "یافتن **زیررشته‌ی متقارن طولانی‌تر** در رشته‌ی s."
+ },
+ {
+  "en": "What is a Hash Table?",
+  "q": "Hash Table چیست؟",
+  "qa": "**Hash Table** (همان Hash Map) ساختار داده‌ای برای **ذخیره و واکشی** داده بر اساس **key-value** است."
+ },
+ {
+  "en": "How do hash tables work under the hood specifically in languages like Java, Python and C++?",
+  "q": "hash table در زبان‌هایی مثل Java و Python و C++ از داخل چطور کار می‌کند؟",
+  "qa": "**Hash tableها** هسته‌ی خیلی از زبان‌ها هستند: Java با HashMap، Python با dict و C++ با unordered_map — همه با اندیس‌گذاری هش."
+ },
+ {
+  "en": "Name some Collision Handling Techniques.",
+  "q": "چند تکنیک هندل برخورد (collision) را نام ببرید.",
+  "qa": "در **جدول‌های هش**، **برخورد** وقتی رخ می‌دهد که کلیدهای مختلف به یک اندیس برسند؛ روش‌های رایج:"
+ },
+ {
+  "en": "What is Separate Chaining and how does it handle collisions?",
+  "q": "Separate Chaining چیست و برخوردها را چطور هندل می‌کند؟",
+  "qa": "**Separate Chaining** تکنیک حل برخورد در **Hash Table** است: لیست ورودی‌ها (معمولاً linked list) در هر خانه نگه داشته می‌شود."
+ },
+ {
+  "en": "Explain the Time and Space Complexity of a Hash Table.",
+  "q": "پیچیدگی زمان و فضای Hash Table را توضیح دهید.",
+  "qa": "**Hash tableها** در بیشتر شرایط عملکرد زمانی و فضایی چشمگیری دارند؛ تفکیک کامل:"
+ },
+ {
+  "en": "How does the load factor affect performance in a hash table?",
+  "q": "load factor بر عملکرد hash table چه اثری دارد؟",
+  "qa": "**load factor** پارامتر کلیدی عملکرد و بهره‌وری حافظه است؛ میزان پر بودن جدول هش را نشان می‌دهد."
+ },
+ {
+  "en": "Give an example of a _recurrence relation_ that can describe the _time complexity_ of a _Divide & Conquer_ algorithm.",
+  "q": "مثالی از یک recurrence relation برای توصیف پیچیدگی زمانی الگوریتم Divide & Conquer بزنید.",
+  "qa": "الگوریتم **merge sort** با استراتژی Divide & Conquer این رابطه‌ی بازگشتی را دارد: T(n) = 2T(n/2) + O(n)."
+ },
+ {
+  "en": "Can the _nth Fibonacci number_ be found using the _golden ratio_, and if so, how would you implement this method?",
+  "q": "آیا می‌توان عدد nام Fibonacci را با golden ratio پیدا کرد؟ اگر بله، این روش را چطور پیاده‌سازی می‌کنید؟",
+  "qa": "بله — با **نسبت طلایی** (φ ≈ 1.61803) و فرمول Binet می‌توان F(n) را مستقیم و بدون حلقه محاسبه کرد: F(n) = (φⁿ − ψⁿ)/√5، که در آن ψ = 1 − φ."
+ },
+ {
+  "en": "Present an approach to precomputing _Fibonacci numbers_ to answer multiple _nth Fibonacci queries_ efficiently.",
+  "q": "روشی برای پیش‌محاسبه‌ی اعداد Fibonacci برای پاسخ‌دهی کارآمد به چندین کوئری nth Fibonacci ارائه دهید.",
+  "qa": "هدف، محاسبه‌ی کارآمد F(n) برای **چندین کوئری** است: دنباله‌ی Fibonacci را یک‌بار تا سقف کوئری‌ها در یک آرایه پیش‌محاسبه می‌کنیم؛ پس از آن هر کوئری با یک lookup ساده در O(1) جواب می‌دهد."
+ },
+ {
+  "en": "How might the _Fibonacci sequence_ be altered to start with two arbitrary initial values? Provide an algorithm for such a sequence.",
+  "q": "چگونه می‌توان دنباله‌ی Fibonacci را طوری تغییر داد که با دو مقدار اولیه‌ی دلخواه شروع شود؟ الگوریتمی برای چنین دنباله‌ای ارائه دهید.",
+  "qa": "با شروع از دو مقدار دلخواه a و b، ساختار بازگشتی حفظ می‌شود: هر جمله برابر جمع دو جمله‌ی قبلی است. الگوریتم: F(0)=a و F(1)=b، و برای n ≥ 2 داریم F(n) = F(n−1) + F(n−2) — با یک حلقه‌ی ساده تولید می‌شود."
+ },
+ {
+  "en": "Discuss different ways to _resize a hash table_. What is the complexity involved?",
+  "q": "روش‌های مختلف resize کردن hash table را بررسی کنید. پیچیدگی آن چقدر است؟",
+  "qa": "Resize برای حفظ **کارایی** با رشد تعداد عناصر لازم است. روش رایج: ساختن جدول جدید (معمولاً دو برابر) و rehash کردن همه‌ی کلیدها در O(n). خود این عملیات O(n) است اما به‌صورت amortized هزینه‌ی هر insert را در O(1) نگه می‌دارد. **Incremental resizing** هم وجود دارد که rehash را به‌تدریج پخش می‌کند تا از توقف‌های طولانی جلوگیری شود."
+ },
+ {
+  "en": "What is a _Binary Tree_?",
+  "q": "Binary Tree چیست؟",
+  "qa": "**درخت دودویی** (Binary Tree) ساختاری سلسله‌مراتبی است که هر گره‌ی آن حداکثر دو فرزند دارد: **فرزند چپ** و **فرزند راست**. هر گره یک داده و دو اشاره‌گر به فرزندانش را نگه می‌دارد."
+ },
+ {
+  "en": "What is _AVL Tree_? How to _Balance_ it?",
+  "q": "AVL Tree چیست؟ چطور آن را متعادل می‌کنند؟",
+  "qa": "**درخت‌های AVL** — به نام مخترعانشان Adelson-Velsky و Landis — نوعی BST خودمتعادل‌شونده‌اند که جست‌وجو، درج و حذف را در O(log n) بهینه می‌کند. تعادل با **چرخش‌ها** (LL، RR، LR، RL) حفظ می‌شود: بعد از هر insert/delete اگر اختلاف ارتفاع زیردرخت‌های چپ و راست بیشتر از ۱ شد، چرخش مناسب اعمال می‌شود."
+ },
+ {
+  "en": "What is a _Red-Black Tree_?",
+  "q": "Red-Black Tree چیست؟",
+  "qa": "**درخت سرخ-سیاه** یک BST خودمتعادل‌شونده است که جست‌وجو و درج/حذف را بهینه می‌کند و این کار را با مجموعه قوانینی موسوم به **تعادل سرخ-سیاه** انجام می‌دهد: هر گره قرمز یا سیاه است، ریشه سیاه است، گره‌ی قرمز فرزند قرمز ندارد و هر مسیر ریشه تا برگ تعداد گره‌ی سیاهی یکسان دارد — همین قوانین ارتفاع را در O(log n) نگه می‌دارند."
+ },
+ {
+  "en": "What is a _Segment Tree_, and how does it differ from a traditional binary tree in usage and efficiency?",
+  "q": "Segment Tree چیست و در کاربرد و کارایی چه تفاوتی با درخت دودویی سنتی دارد؟",
+  "qa": "**درخت قطعه‌بندی** (Segment Tree) نوعی درخت جست‌وجوی دودویی بهینه‌شده برای **کوئری‌های بازه‌ای** سریع روی یک بازه از آرایه‌ی معلوم است (جمع، مینیمم، ماکسیمم و…) و به‌روزرسانی عناصر را هم در O(log n) پشتیبانی می‌کند؛ در حالی که درخت دودویی سنتی برای نمایش سلسله‌مراتب داده است، نه کوئری بازه‌ای."
+ },
+ {
+  "en": "Explain the concept and structure of a _Ternary Tree_.",
+  "q": "مفهوم و ساختار Ternary Tree را توضیح دهید.",
+  "qa": "**درخت سه‌تایی** (Ternary Tree) نوعی درخت چندفرزندی است که هر گره می‌تواند تا سه فرزند داشته باشد و به‌طور سنتی برای ذخیره‌سازی روی دیسک به کار می‌رفت. امروزه کاربردهایش بیشتر الگوریتمی است (مثل Ternary Search Tree برای رشته‌ها) و اگرچه به‌اندازه‌ی درخت دودویی رایج نیست، مفاهیم یادگیری غنی‌ای دارد."
+ },
+ {
+  "en": "Describe a _Lazy Segment Tree_ and when it is used over a regular Segment Tree.",
+  "q": "Lazy Segment Tree را توصیف کنید و بگویید چه زمانی به‌جای Segment Tree معمولی استفاده می‌شود.",
+  "qa": "**درخت قطعه‌بندی تنبل** به Segment Tree استاندارد امکان به‌روزرسانی‌های **به تعویق افتاده** را می‌دهد: به‌روزرسانی بازه‌ای فقط روی گره‌های مرتبط علامت می‌گذارد و انتشار آن به زمان نیاز موکول می‌شود. برای سناریوی **Range Update و Point Query** بهترین است، مخصوصاً وقتی تعداد به‌روزرسانی‌ها زیاد است."
+ },
+ {
+  "en": "What is a _Linked List_?",
+  "q": "Linked List چیست؟",
+  "qa": "**لیست پیوندی** ساختاری پویاست که برای درج و حذف سریع ایده‌آل است. برخلاف آرایه، عناصرش به‌طور پیوسته در حافظه ذخیره نمی‌شوند، بلکه با **اشاره‌گرها** به هم متصل می‌شوند."
+ },
+ {
+  "en": "What are some pros and cons of _Linked List_ compared to _Arrays_?",
+  "q": "مزایا و معایب Linked List در مقایسه با آرایه‌ها چیست؟",
+  "qa": "مزایا: درج/حذف در O(1) با داشتن اشاره‌گر، اندازه‌ی پویا، عدم نیاز به حافظه‌ی پیوسته. معایب: دسترسی تصادفی O(n)، سربار حافظه‌ی اشاره‌گرها، و ضعف locality که cache را کم‌بهره می‌کند — آرایه در دسترسی مستقیم و پیمایش سریع برتری دارد."
+ },
+ {
+  "en": "Explain the difference between _Singly Linked Lists_ and _Doubly Linked Lists_.",
+  "q": "تفاوت Singly Linked List و Doubly Linked List را توضیح دهید.",
+  "qa": "**لیست پیوندی یک‌طرفه (SLL)** و **دوطرفه (DLL)** در بهینه‌سازی حافظه و قابلیت پیمایش رفتار متفاوتی دارند: SLL فقط اشاره‌گر next دارد (حافظه‌ی کمتر) و پیمایش فقط رو به جلو ممکن است؛ DLL هر دو اشاره‌گر next و prev را دارد، پیمایش دوطرفه و حذف گره‌ی مشخص را آسان‌تر می‌کند اما حافظه‌ی بیشتری مصرف می‌کند."
+ },
+ {
+  "en": "What are the basic operations that can be performed on a _Linked List_?",
+  "q": "عملیات پایه‌ای که روی Linked List انجام می‌شود کدام‌اند؟",
+  "qa": "عملیات اصلی: **درج** (در ابتدا، انتها یا وسط)، **حذف**، **جست‌وجو**، **پیمایش** (traverse)، شمارش طول و معکوس کردن لیست. با اشاره‌گرِ head، درج در ابتدا O(1) است اما دسترسی به عنصر nام O(n) می‌گیرد."
+ },
+ {
+  "en": "What are some real-life _Use Cases_ of _Linked Lists_?",
+  "q": "چند کاربرد واقعی Linked List نام ببرید.",
+  "qa": "کاربردهای واقعی: پیاده‌سازی صف و پشته، undo/redo در ویرایشگرها، مدیریت حافظه در سیستم‌عامل (فهرست بلوک‌های آزاد)، playlistهای موسیقی، جدول هش با زنجیره‌سازی (chaining) و پیاده‌سازی LRU cache."
+ },
+ {
+  "en": "Describe a scenario where the use of a _Linked List_ is more suitable than a _Dynamic Array_.",
+  "q": "سناریویی توصیف کنید که استفاده از Linked List در آن مناسب‌تر از Dynamic Array باشد.",
+  "qa": "وقتی عملیات غالب **درج و حذف مکرر** باشد و به دسترسی تصادفی نیازی نباشد — مثلاً صف‌های پردازش یا فهرست‌های دائماً در حال تغییر — Linked List مناسب‌تر است، چون برخلاف Dynamic Array نیازی به جابه‌جایی عناصر یا تخصیص مجدد کل بلوک حافظه ندارد."
+ },
+ {
+  "en": "When would you use a _Linked List_ over a _Hash Table_?",
+  "q": "چه زمانی Linked List را به Hash Table ترجیح می‌دهید؟",
+  "qa": "بستگی به **ملاحظات کارایی** و ماهیت عملیات دارد: وقتی حفظ ترتیب عناصر مهم است، حافظه باید حداقلی و قابل پیش‌بینی باشد، یا فقط پیمایش ترتیبی و درج/حذف سریع لازم است، Linked List مناسب‌تر است؛ Hash Table برای lookup سریع کلید-مقدار طراحی شده، نه برای نگهداری ترتیب."
+ },
+ {
+  "en": "Is it possible to _Traverse a Linked List_ in _O(n1/2)_? (Jump Pointers).",
+  "q": "آیا پیمایش Linked List در O(√n) ممکن است؟ (Jump Pointers)",
+  "qa": "در معنای دقیق، پیمایش کامل لیست بهتر از O(n) نمی‌شود، اما تکنیک‌هایی مثل **Jump Pointers** (و Skip List) می‌توانند پیمایش را در برخی زمینه‌ها — مثلاً رسیدن سریع به عنصر خاص — کارآمدتر کنند."
+ },
+ {
+  "en": "Is it possible to do _Binary Search_ on a _Doubly Linked List_ in _O(n)_ time?",
+  "q": "آیا Binary Search روی Doubly Linked List در زمان O(n) ممکن است؟",
+  "qa": "اعمال **جست‌وجوی دودویی** روی لیست‌های پیوندی دومطرفه چالش دارد، چون این لیست‌ها **دسترسی تصادفی** ندارند که شرط کارایی binary search است. پیاده‌سازی ممکن است از هر دو سر به سمت هم پیش برود و کل هزینه هم‌مرتبه‌ی O(n) می‌ماند — یعنی نسبت به جست‌وجوی خطی سودی نمی‌دهد."
+ },
+ {
+  "en": "What is an _Incidence Matrix_, and when would you use it?",
+  "q": "Incidence Matrix چیست و چه زمانی از آن استفاده می‌کنیم؟",
+  "qa": "**ماتریس رخ‌داد** (Incidence Matrix) نمایشی دودویی از گراف است که رئوس را به یال‌ها نگاشت می‌کند — سطرها رئوس و ستون‌ها یال‌ها هستند و مقدارها 0 و 1 (یا −1/1 در گراف جهت‌دار) رابطه‌ی «رأس متصل به یال» را نشان می‌دهند. برای **گراف‌های جهت‌دار** و **multigraph** به‌ویژه مفید است."
+ },
+ {
+  "en": "Discuss _Edge List_ as a graph representation and its use cases.",
+  "q": "Edge List را به‌عنوان نمایش گراف بررسی کنید و کاربردهایش را بگویید.",
+  "qa": "**فهرست یال** راهی ساده برای نمایش گراف است: فهرستی از جفت‌های رئوس (یا سه‌تایی‌های وزن‌دار). برای گراف‌های متراکم مناسب است و راهی سریع برای کوئری اطلاعات یال می‌دهد؛ در الگوریتم‌هایی مثل Kruskal و Bellman-Ford که فقط به فهرست یال‌ها نیاز دارند ایده‌آل است."
+ },
+ {
+  "en": "Explain the _Breadth-First Search_ (BFS) traversing method.",
+  "q": "روش پیمایش Breadth-First Search (BFS) را توضیح دهید.",
+  "qa": "**BFS** تکنیک پیمایش گراف است که به‌طور نظام‌مند لایه‌به‌لایه پیش می‌رود: از یک **صف** برای ثبت گره‌های بعدی و یک لیست visited برای جلوگیری از بازدید تکراری استفاده می‌کند. برای یافتن کوتاه‌ترین مسیر در گراف بی‌وزن ایده‌آل است."
+ },
+ {
+  "en": "What are the key differences between _BFS_ and _DFS_?",
+  "q": "تفاوت‌های کلیدی BFS و DFS چیست؟",
+  "qa": "هر دو الگوریتم اساسی پیمایش گراف‌اند اما در استراتژی، حافظه و کاربرد فرق دارند: **BFS** با **صف** لایه‌به‌لایه می‌رود و برای کوتاه‌ترین مسیر در گراف بی‌وزن مناسب است؛ **DFS** با **پشته/بازگشت** تا عمق ممکن می‌رود و برای تشخیص حلقه و topological sort مناسب است. BFS در گراف‌های پهن حافظه‌ی بیشتری می‌خواهد؛ DFS به اندازه‌ی عمق."
+ },
+ {
+  "en": "Implement a method to check if there is a _Path between two vertices_ in a graph.",
+  "q": "روشی پیاده‌سازی کنید که وجود مسیر بین دو رأس در گراف را بررسی کند.",
+  "qa": "با گراف **بی‌جهت**، هدف تعیین این است که آیا بین دو رأس مشخص **مسیری** وجود دارد یا نه. راه‌حل: از یکی BFS/DFS بزنیم و ببینیم به دیگری می‌رسیم؛ یا با **Union-Find** یال‌ها را اضافه کنیم و هم‌کامپوننت بودن دو رأس را بپرسیم."
+ },
+ {
+  "en": "Solve the problem of printing all _Paths from a source to destination_ in a Directed Graph with BFS or DFS.",
+  "q": "چاپ همه‌ی مسیرهای source تا destination در گراف جهت‌دار را با BFS یا DFS حل کنید.",
+  "qa": "با گراف **جهت‌دار** و دو رأس src و dest، هدف **چاپ همه‌ی مسیرها** است: با DFS بازگشتی مسیر جاری را نگه می‌داریم، در رسیدن به dest آن را چاپ و گره را از مسیر برمی‌داریم (backtrack) تا مسیرهای بعدی امتحان شوند. تعداد مسیرها می‌تواند نمایی باشد، پس این روش برای گراف‌های کوچک است."
+ },
+ {
+  "en": "What are _Dynamic Arrays_?",
+  "q": "Dynamic Array چیست؟",
+  "qa": "**آرایه‌های پویا** با ظرفیت اولیه‌ی مشخص شروع می‌کنند و در صورت نیاز **خودشان resize می‌شوند**: وقتی پر می‌شوند، بلوک حافظه‌ی بزرگ‌تری (اغلب دو برابر) تخصیص می‌دهند و عناصر موجود را کپی می‌کنند. مثال: vector در ++C و ArrayList در Java."
+ },
+ {
+  "en": "What is an _Associative Array_ (Dictionary)?",
+  "q": "Associative Array (Dictionary) چیست؟",
+  "qa": "**آرایه‌ی انجمنی** — که Map، Hash یا Dictionary هم نامیده می‌شود — یک نوع داده‌ی انتزاعی است که **دسترسی بر اساس کلید** به عناصر می‌دهد و lookup سریع و اندازه‌ی پویا ارائه می‌کند. پیاده‌سازی متداولش hash table است."
+ },
+ {
+  "en": "Explain _Sparse_ and _Dense_ arrays.",
+  "q": "آرایه‌های Sparse و Dense را توضیح دهید.",
+  "qa": "**آرایه‌ی sparse** برای داده‌هایی بهینه است که بیشتر مقادیرشان پیش‌فرض (مثل صفر یا null) است: فقط مقادیر غیرپیش‌فرض و اندکس‌شان را ذخیره می‌کند و حافظه صرفه‌جویی می‌کند. در مقابل، **آرایه‌ی dense** برای هر عنصر — حتی پیش‌فرض‌ها — حافظه تخصیص می‌دهد."
+ },
+ {
+  "en": "What are advantages and disadvantages of _Sorted Arrays_?",
+  "q": "مزایا و معایب Sorted Array چیست؟",
+  "qa": "مزایا: جست‌وجوی دودویی در O(log n)، پیمایش ترتیبی، و دسترسی سریع به میانه/کمینه/بیشینه. معایب: درج و حذف در وسط آرایه O(n) طول می‌کشد چون عناصر باید جابه‌جا شوند، و نگه داشتن مرتبی هنگام ورود داده‌ی پویا هزینه دارد."
+ },
+ {
+  "en": "_Merge_ two _Sorted Arrays_ into one _Sorted Array_.",
+  "q": "دو آرایه‌ی مرتب را در یک آرایه‌ی مرتب merge کنید.",
+  "qa": "دو اشاره‌گر روی سر هر آرایه می‌گذاریم، هر بار عنصر کوچک‌تر را در آرایه‌ی خروجی می‌گذاریم و اشاره‌گرش را جلو می‌بریم؛ باقی‌مانده‌ی هر آرایه هم در انتها کپی می‌شود. زمان O(n + m) و حافظه O(n + m)."
+ },
+ {
+  "en": "Implement three _Stacks_ with one _Array_.",
+  "q": "سه پشته را با یک آرایه پیاده‌سازی کنید.",
+  "qa": "هدف، پیاده‌سازی **سه پشته** با یک **آرایه‌ی پویای** واحد است. دو راه رایج: تقسیم آرایه به **سه بخش ثابت** (ساده، ولی اتلاف حافظه وقتی یک پشته پر و دیگری خالی است)، یا **اشاره‌گرهای شناور** که فضای آزاد را به‌صورت دینامیک بین پشته‌ها تقسیم می‌کند."
+ },
+ {
+  "en": "How do you perform _Array Rotation_ and what are its applications?",
+  "q": "چرخش آرایه (Array Rotation) چطور انجام می‌شود و چه کاربردهایی دارد؟",
+  "qa": "**چرخش آرایه** یعنی جابه‌جایی عناصر به اندازه‌ی k خانه (چپ یا راست) — از مبهم‌سازی داده تا بهینه‌سازی الگوریتمی کاربرد دارد. روش بهینه: سه معکوس‌سازی (کل آرایه، سپس دو بخش) در زمان O(n) و حافظه‌ی O(1). کاربردها: بافر حلقه‌ای، الگوریتم‌های تقویمی و جابه‌جایی صف‌ها."
+ },
+ {
+  "en": "Implement a _Queue_ using an array.",
+  "q": "صف را با آرایه پیاده‌سازی کنید.",
+  "qa": "با آرایه‌ای با اندازه‌ی مشخص و دو اشاره‌گر front و rear: enqueue در rear و dequeue از front. مشکل اصلی، اتلاف فضای ابتدای آرایه پس از حذف‌هاست که با **صف حلقوی** (circular) حل می‌شود: اندکس‌ها با mod ظرفیت می‌پیچند."
+ },
+ {
+  "en": "What is a _Priority Queue_?",
+  "q": "Priority Queue چیست؟",
+  "qa": "**صف اولویت‌دار** ساختاری تخصصی است که عناصر را بر اساس **اولویت** مدیریت می‌کند: عناصر با اولویت بالاتر قبل از اولویت پایین‌تر پردازش می‌شوند، نه به ترتیب ورود. پیاده‌سازی متداولش heap است و در زمان‌بندی پردازه‌ها و الگوریتم Dijkstra به کار می‌رود."
+ },
+ {
+  "en": "Can you explain heap property maintenance after an _Insert_ operation and a _Delete_ operation?",
+  "q": "می‌توانید توضیح دهید بعد از عملیات Insert و Delete چطور خاصیت heap حفظ می‌شود؟",
+  "qa": "**خاصیت heap** (رابطه‌ی والد با فرزندان) در هر دو عملیات حفظ می‌شود: بعد از insert، عنصر جدید تا جایی که شرط برقرار شود **بالا** می‌رود (sift-up)؛ بعد از delete ریشه، آخرین عنصر جای ریشه را می‌گیرد و به سمت پایین هدایت می‌شود (sift-down). هر دو O(log n) هستند."
+ },
+ {
+  "en": "How can you implement a heap efficiently using _Dynamic Arrays_?",
+  "q": "چطور heap را به‌طور کارآمد با Dynamic Array پیاده‌سازی می‌کنید؟",
+  "qa": "**آرایه‌ی پویا** نمایشی حافظه‌کارآمدتر از آرایه‌ی ثابت برای heap می‌دهد: برای گره در اندکس i، فرزندان در 2i+1 و 2i+2 و والد در (i−1)/2 قرار می‌گیرند؛ نیازی به اشاره‌گر نیست و resize خودکار، رشد heap را مدیریت می‌کند."
+ },
+ {
+  "en": "How does the _Lazy deletion_ technique work in a heap and what is its purpose?",
+  "q": "تکنیک Lazy deletion در heap چطور کار می‌کند و هدفش چیست؟",
+  "qa": "**حذف تنبل** فرایند حذف را ساده نگه می‌دارد و برای صرفه‌جویی زمان و فضا بهینه شده: به‌جای برداشتن فوری عنصر، آن را «حذف‌شده» علامت می‌زنیم و در pop واقعی نادیده می‌گیریم. هدف اصلی، کاهش تعداد **سوراخ‌های heap** و به حداقل رساندن عملیات‌های مرتب‌سازی مجدد است."
+ },
+ {
+  "en": "What is _Heap Sort_?",
+  "q": "Heap Sort چیست؟",
+  "qa": "**Heap Sort** الگوریتم مرتب‌سازی مقایسه‌ای مقاومی است که از ساختار **heap دودویی** استفاده می‌کند: ابتدا یک «درخت heap» می‌سازد، سپس مکرراً ریشه (بزرگ‌ترین عنصر) را برمی‌دارد و در انتهای آرایه می‌گذارد تا عناصر مرتب شوند. زمان تضمینی O(n log n) و in-place است."
+ },
+ {
+  "en": "Describe the _algorithm_ for _Merging k Sorted Arrays_ using a heap.",
+  "q": "الگوریتم merge کردن k آرایه‌ی مرتب با heap را توصیف کنید.",
+  "qa": "برای merge کارآمد k آرایه‌ی مرتب، از **min-heap** برای ردیابی **کوچک‌ترین** عنصر باقی‌مانده‌ی هر آرایه استفاده می‌کنیم: سر همه‌ی آرایه‌ها را در heap می‌گذاریم، مکرراً کمینه را بیرون می‌کشیم و عنصر بعدی همان آرایه را جایگزین می‌کنیم. اگر n طول متوسط آرایه‌ها باشد، کل زمان O(n·k·log k) است."
+ },
+ {
+  "en": "Implement a heap that efficiently supports _Find-Max and Find-Min_ operations.",
+  "q": "heapی پیاده‌سازی کنید که عملیات Find-Max و Find-Min را کارآمد پشتیبانی کند.",
+  "qa": "هدف، ساخت **ساختار داده‌ای** است که نماینده‌ی min-heap یا max-heap باشد و یافتن هم **کمینه** و هم **بیشینه** را کارآمد پشتیبانی کند. راه‌حل استاندارد: دو heap موازی (یک min و یک max) که داده‌ی یکسانی را نگه می‌دارند — هر insert در هر دو ثبت می‌شود و min/max هرکدام در O(1) به دست می‌آیند."
+ },
+ {
+  "en": "Why _Stack_ is considered a _Recursive_ data structure?",
+  "q": "چرا پشته ساختاری بازگشتی (Recursive) محسوب می‌شود؟",
+  "qa": "چون تعریفش **خودارجاع** است: پشته در هر لحظه می‌تواند به‌صورت «یک عنصر بالا (top) به‌همراه یک پشته‌ی دیگر» تعریف شود — یعنی پشته از پشته ساخته می‌شود."
+ },
+ {
+  "en": "Explain how _Stacks_ are used in _Function Call management_ in programming languages.",
+  "q": "توضیح دهید پشته‌ها در مدیریت فراخوانی توابع (Function Call) در زبان‌های برنامه‌نویسی چطور استفاده می‌شوند.",
+  "qa": "وقتی **تابعی** صدا زده می‌شود، سیستم معمولاً از یک **call stack** برای مدیریت ترتیب فراخوانی و تخصیص حافظه استفاده می‌کند: هر فراخوانی frameی شامل پارامترها، متغیرهای محلی و آدرس بازگشت روی پشته می‌گذارد و با بازگشت تابع برداشته می‌شود — همین ساختار، بازگشت را ممکن می‌کند."
+ },
+ {
+  "en": "Implement a _Dynamic Stack_ that automatically resizes itself.",
+  "q": "پشته‌ای پویا پیاده‌سازی کنید که خودش به‌طور خودکار resize شود.",
+  "qa": "هدف، پیاده‌سازی **پشته‌ی پویایی** است که هنگام رسیدن به ظرفیت، خودش را بزرگ کند: از **آرایه‌ی پویا** استفاده می‌کنیم؛ وقتی پر شد، آرایه‌ی جدیدی (دو برابر) تخصیص و عناصر کپی می‌شوند. push در حالت عادی O(1) است و به‌صورت amortized هم O(1) می‌ماند."
+ },
+ {
+  "en": "What are the performance implications of a _Fixed-size Array Stack Implementation_?",
+  "q": "پیامدهای کارایی پیاده‌سازی پشته با آرایه‌ی اندازه‌ثابت چیست؟",
+  "qa": "**پشته‌ی آرایه‌ای ثابت** سادگی و در برخی عملیات — مثل data caching و پردازش real-time — کارایی خوبی می‌دهد، اما محدودیت‌هایی دارد: سرریز (overflow) وقتی پر شود، اتلاف حافظه وقتی خالی بماند، و اندازه‌ی از پیش معلوم که برای داده‌های متغیر نامناسب است."
+ },
+ {
+  "en": "Design a _Stack_ that supports _Retrieving_ the min element in _O(1)_.",
+  "q": "پشته‌ای طراحی کنید که گرفتن عنصر کمینه در O(1) ممکن باشد.",
+  "qa": "هدف، طراحی **پشته‌ای** است که بازیابی هم عنصر کمینه و هم عنصر بالایی را در زمان O(1) ممکن کند. راه‌حل: دو پشته‌ی موازی — یکی برای عناصر اصلی و دیگری برای **کمینه‌های جاری**؛ در push اگر عنصر کوچک‌تر یا مساوی بالای پشته‌ی min بود، آن را هم ثبت می‌کنیم و در pop هماهنگ برمی‌داریم."
+ },
+ {
+  "en": "How can you design a _Stack_ to be thread-safe?",
+  "q": "چطور می‌توان پشته‌ای thread-safe طراحی کرد؟",
+  "qa": "تضمین **thread safety** در پشته‌ی سنتی (با رویکرد LIFO) با تکنیک‌های مختلفی ممکن است. سه رویکرد: (۱) **قفل‌گذاری** (mutex/synchronized) روی push و pop، (۲) استفاده از ساختارهای آماده‌ی همگام‌شده یا concurrent (مثل ConcurrentLinkedDeque)، (۳) رویکرد **قفل‌آزاد** (lock-free) با عملیات اتمیک CAS روی اشاره‌گر بالا."
+ },
+ {
+  "en": "Implement a _Stack_ with a _Find-Middle_ operation in _O(1)_ time.",
+  "q": "پشته‌ای پیاده‌سازی کنید که عملیات Find-Middle در زمان O(1) داشته باشد.",
+  "qa": "هدف، طراحی **پشته‌ای** است که عملیات‌های **push**، **pop**، **findMiddle** و **deleteMiddle** را همگی در زمان ثابت O(1) پشتیبانی کند. راه‌حل: **لیست پیوندی دومطرفه** با اشاره‌گر mid که با هر عملیات به‌روز می‌شود (در تعداد زوج یک گره جلو می‌رود، در فرد ثابت می‌ماند)."
+ },
+ {
+  "en": "Implement a _Linked List_ using _Stack_.",
+  "q": "Linked List را با پشته پیاده‌سازی کنید.",
+  "qa": "هدف، پیاده‌سازی **لیست پیوندی** با **پشته** است: عناصر در یک پشته‌ی اصلی نگه داشته می‌شوند و یک پشته‌ی کمکی برای حفظ ترتیب دسترسی/پیمایش به کار می‌رود؛ عملیات درج و حذف با انتقال کنترل‌شده‌ی عناصر بین دو پشته شبیه‌سازی می‌شود."
+ },
+ {
+  "en": "Implement Doubly Linked List using Stacks with min complexity.",
+  "q": "Doubly Linked List را با پشته‌ها و کمترین پیچیدگی ممکن پیاده‌سازی کنید.",
+  "qa": "هدف، پیاده‌سازی **لیست پیوندی دومطرفه** با **پشته‌ها** است: دو پشته‌ی موازی رفتار اشاره‌گرهای next و prev را شبیه‌سازی می‌کنند — یکی برای پیمایش رو به جلو و دیگری رو به عقب — تا هر دو جهت با کمترین پیچیدگی ممکن پشتیبانی شود."
+ },
+ {
+  "en": "What is a _Queue_?",
+  "q": "Queue چیست؟",
+  "qa": "**صف** ساختاری داده است که بر اصل **FIFO (اولین ورود، اولین خروج)** عمل می‌کند و برای نگهداری مجموعه‌ای از عناصر طراحی شده: ورود از انتهای صف (rear) و خروج از ابتدای آن (front)."
+ },
+ {
+  "en": "What is a _Priority Queue_ and how does it differ from a standard _Queue_?",
+  "q": "Priority Queue چیست و چه تفاوتی با Queue استاندارد دارد؟",
+  "qa": "**صف‌ها** ساختارهایی با ترتیب **FIFO** هستند: عناصر به همان ترتیب ورود خارج می‌شوند. **صف اولویت‌دار** به‌جای ترتیب ورود بر اساس **اولویت** خارج می‌کند (معمولاً با heap پیاده می‌شود)؛ پس مهم‌ترین عنصر همیشه اول خارج می‌شود حتی اگر تازه وارد شده باشد."
+ },
+ {
+  "en": "How do you reverse a _Queue_?",
+  "q": "چطور یک Queue را معکوس می‌کنید؟",
+  "qa": "معکوس کردن صف با **یک پشته** یا **بازگشتی** ممکن است: با پشته، همه‌ی عناصر را dequeue و در پشته push کنید، سپس دوباره به صف برگردانید؛ با بازگشت، عنصر جلو را بردارید، بقیه را بازگشتی معکوس کنید و بعد عنصر را enqueue کنید. هر دو روش عنصر اول ورودی را آخر خروجی می‌کنند."
+ },
+ {
+  "en": "How to implement a _Queue_ such that _enqueue_ has _O(1)_ and _dequeue_ has _O(n)_ complexity?",
+  "q": "چطور Queueی پیاده‌سازی کنید که enqueue در O(1) و dequeue در O(n) باشد؟",
+  "qa": "از **آرایه‌ی پویا** استفاده کنید: افزودن به انتها O(1) amortized است، و حذف اندکس ۰ همه‌ی عناصر باقی‌مانده را جابه‌جا می‌کند — دقیقاً همان dequeue با هزینه‌ی O(n) که مسئله خواسته است."
+ },
+ {
+  "en": "Explain how you can efficiently track the _Minimum_ or _Maximum_ element in a _Queue_.",
+  "q": "توضیح دهید چطور می‌توان کمینه یا بیشینه‌ی عنصر در Queue را کارآمد ردیابی کرد.",
+  "qa": "استفاده از **لیست پیوندی یک‌طرفه به‌عنوان صف** برای عملیات استاندارد صف O(1) می‌دهد، اما یافتن دقیق کمینه و بیشینه O(n) می‌شود. راه‌حل بهینه: **صف دودویی‌نما (monotonic deque)** که کاندیدهای کمینه/بیشینه را نگه می‌دارد و کوئری را در O(1) جواب می‌دهد."
+ },
+ {
+  "en": "Discuss an algorithm to merge two or more _Queues_ into one with efficient _Dequeuing_.",
+  "q": "الگوریتمی برای merge کردن دو یا چند Queue در یکی با dequeue کارآمد بررسی کنید.",
+  "qa": "**merge کردن چند صف** از نظر مفهومی شبیه merge دو لیست است، اما merge مستقیم به‌ازای هر آیتم هزینه‌ی O(n) می‌گذارد. با استفاده از صف کمکی auxQueue می‌توان کل فرایند را در O(n + m) انجام داد: عناصر صف‌ها را یکی‌یکی به صف خروجی منتقل می‌کنیم."
+ },
+ {
+  "en": "Describe an array-based implementation of a _Queue_ and its disadvantages.",
+  "q": "پیاده‌سازی صف بر پایه‌ی آرایه و معایبش را توصیف کنید.",
+  "qa": "هرچند **صف‌های آرایه‌ای** ساده‌اند، محدودیت ذاتی دارند: ظرفیت ثابت (سرریز)، و در پیاده‌سازی غیرحلقوی، فضای آزادشده‌ی ابتدای آرایه دیگر قابل استفاده نمی‌شود. **صف حلقوی** این مشکل را با چرخاندن اندکس‌ها حل می‌کند."
+ },
+ {
+  "en": "What are the benefits of implementing a _Queue_ with a _Doubly Linked List_ versus a _Singly Linked List_?",
+  "q": "مزایای پیاده‌سازی صف با لیست پیوندی دومطرفه نسبت به یک‌طرفه چیست؟",
+  "qa": "با **لیست دومطرفه** علاوه بر O(1) بودن enqueue/dequeue، می‌توان صف **دودویی (deque)** داشت: افزودن و حذف از هر دو سر در O(1). لیست یک‌طرفه هم با نگهداشتن اشاره‌گر tail صف معمولی را O(1) می‌کند، اما حذف از انتها O(n) است."
+ },
+ {
+  "en": "Compare _Strings_ and _Character Arrays_.",
+  "q": "رشته‌ها (Strings) و آرایه‌های کاراکتری را مقایسه کنید.",
+  "qa": "هر دو دنباله‌ی کاراکترند و شباهت‌های زیادی دارند، اما تفاوت‌های کلیدی در کاربرد و رفتار دارند: رشته نوعی سطح‌بالاست با توابع آماده و معمولاً immutable؛ آرایه‌ی کاراکتری دسترسی خام به بایت‌ها می‌دهد، mutable است و در زبان‌هایی مثل ++C مدیریت طول را به برنامه‌نویس می‌سپارد."
+ },
+ {
+  "en": "Explain _Mutability_ and _Immutability_ in the context of _Strings_.",
+  "q": "مفاهیم Mutability و Immutability را در رابطه با رشته‌ها توضیح دهید.",
+  "qa": "در بستر رشته‌ها، **تغییرپذیری** یعنی توانایی تغییر شیء رشته‌ی موجود، و **تغییرناپذیری** یعنی رشته پس از ساخته‌شدن دیگر قابل تغییر نیست — هر «تغییر» شیء جدیدی می‌سازد (مثل String در Java و Python). تغییرناپذیری اشتراک‌گذاری و thread-safety را آسان می‌کند ولی ساخت رشته‌های متوالی را گران؛ به همین دلیل StringBuilder وجود دارد."
+ },
+ {
+  "en": "Discuss how indexing works in _Strings_ and how it affects various operations.",
+  "q": "نحوه‌ی کار اندکس‌گذاری در رشته‌ها و اثرش بر عملیات‌های مختلف را بررسی کنید.",
+  "qa": "**اندکس‌گذاری رشته** به هر کاراکتر یک برچسب عددی یکتا می‌دهد — عملاً کاراکترها را در یک «**دنباله**»ی مرتب می‌چیند. دسترسی به یک کاراکتر O(1) است، اما عملیاتی مثل substring و جایگزینی و جست‌وجو به ساختار زبان بستگی دارد: در رشته‌های immutable هر تغییر کپی جدید می‌سازد."
+ },
+ {
+  "en": "Explain how _String Concatenation_ works and the time complexity associated with it.",
+  "q": "نحوه‌ی کار String Concatenation و پیچیدگی زمانی آن را توضیح دهید.",
+  "qa": "**چسباندن رشته‌ها** دو یا چند رشته را برای ساخت یک رشته‌ی واحد ادغام می‌کند. این فرایند می‌تواند **حافظه‌بر** باشد، به‌ویژه برای چند عملیات چسباندن پیاپی با رشته‌های طولانی — چون هر بار محتوای قبلی کپی می‌شود؛ با StringBuilder/buffer هزینه‌ی کل در O(n) می‌ماند."
+ },
+ {
+  "en": "Describe the _Time Complexity_ of substring search in _Strings_.",
+  "q": "پیچیدگی زمانی جست‌وجوی زیررشته در رشته‌ها را توصیف کنید.",
+  "qa": "**جست‌وجوی زیررشته** — که به pattern matching هم معروف است — نقش حیاتی در پردازش متن دارد و کارایی‌اش معمولاً برحسب پیچیدگی زمانی تحلیل می‌شود: روش ساده‌ی naive در بدترین حالت O(n·m) است، در حالی که **KMP** و **Boyer-Moore** به O(n + m) می‌رسند."
+ },
+ {
+  "en": "Explain _Height_ and _Depths_ in the context of a _Tree_.",
+  "q": "Height و Depth را در بستر درخت توضیح دهید.",
+  "qa": "در ساختارهای داده‌ی درختی، **ارتفاع (height)** و **عمق (depth)** به ویژگی‌های متفاوتی از گره‌ها اشاره دارند: عمق یک گره طول مسیر از ریشه تا آن گره است و ارتفاع، طول بلندترین مسیر از آن گره تا عمیق‌ترین برگ. ارتفاع درخت = ارتفاع ریشه."
+ },
+ {
+  "en": "What is a _Rooted Tree_, and how does it differ from an _Unrooted Tree_?",
+  "q": "Rooted Tree چیست و چه تفاوتی با Unrooted Tree دارد؟",
+  "qa": "در علوم کامپیوتر، **درخت ریشه‌دار** — که معمولاً فقط «درخت» نامیده می‌شود — ساختاری از گره‌های متصل با یال است که به‌طور معمول از ریشه در بالا به سمت پایین جهت‌گذاری می‌شود؛ هر گره والد مشخصی دارد. درخت **بی‌ریشه** رأس ممتازی ندارد و فقط ساختار اتصال اهمیت دارد."
+ },
+ {
+  "en": "What is a _N-ary Tree_, and how does it generalize a binary tree?",
+  "q": "N-ary Tree چیست و چگونه درخت دودویی را تعمیم می‌دهد؟",
+  "qa": "**درخت N-تایی** ساختاری است که گره‌هایش می‌توانند تا N فرزند داشته باشند و بیش از دو گره‌ی فرزند را ممکن می‌کند. همین خاصیت، سلسله‌مراتب انعطاف‌پذیرتری نسبت به قاعده‌ی سخت‌گیرانه‌ی دوفرزندی **درخت دودویی** می‌دهد — سازمان‌دهی گره‌ها می‌تواند دودویی یا غیردودویی باشد."
+ },
+ {
+  "en": "Discuss the properties of a _Full Binary Tree_.",
+  "q": "ویژگی‌های Full Binary Tree را بررسی کنید.",
+  "qa": "**درخت دودویی کامل (Full)** — که «درخت دودویی سخت‌گیرانه» هم نامیده می‌شود — ساختاری ریاضی غنی با ویژگی‌های متمایز است: هر گره یا هیچ فرزندی ندارد یا دقیقاً دو فرزند دارد؛ گره‌ی تک‌فرزندی وجود ندارد. از این خاصیت رابطه‌ی شمارشی «تعداد برگ‌ها = تعداد گره‌های دوفرزندی + ۱» برمی‌آید."
+ },
+ {
+  "en": "Explain the concept of a _Path_ in a tree.",
+  "q": "مفهوم Path در درخت را توضیح دهید.",
+  "qa": "**مسیر** در درخت دنباله‌ای از گره‌های متصل است که پیمایش از یک گره به گره‌ی دیگر را نشان می‌دهد — می‌تواند جهت‌دار (از ریشه به گره‌ای خاص) یا بدون جهت باشد و کوتاه‌ترین فاصله‌ی دو گره گاهی **مسیر ژئودزیک** نامیده می‌شود. انواع مسیر در درخت‌ها: **مسیر رو به پایین (Downward)**، **مسیر درخت ریشه‌دار** و **مسیر درخت بی‌ریشه**."
+ },
+ {
+  "en": "Explain the difference between a _Binary Tree_ and a _Binary Search Tree_ (BST).",
+  "q": "تفاوت Binary Tree و Binary Search Tree (BST) را توضیح دهید.",
+  "qa": "هرچند **درخت‌های دودویی** و **درخت‌های جست‌وجوی دودویی** ساختار درختی مشترکی دارند، در ویژگی‌های کلیدی مثل **ترتیب گره‌ها** و کارایی عملیات متمایز می‌شوند: درخت دودویی فقط محدودیت دوفرزندی دارد؛ در BST زیردرخت چپ هر گره مقادیر کوچک‌تر و زیردرخت راست مقادیر بزرگ‌تر را نگه می‌دارد — همین قانون جست‌وجو را در حالت متعادل O(log n) می‌کند."
+ },
+ {
+  "en": "What is a _Complete Binary Tree_?",
+  "q": "Complete Binary Tree چیست؟",
+  "qa": "**درخت دودویی کامل** (CBT) تعادلی بین سلسله‌مراتب سخت‌گیرانه‌ی درخت full و محدودیت‌های آزادتر درخت عمومی است: همه‌ی سطوح — به‌جز شاید آخرین — کاملاً پرند و گره‌های آخرین سطح تا جای ممکن در چپ قرار دارند. همین ساختار است که نمایش آرایه‌ای heap را ممکن می‌کند."
+ },
+ {
+  "en": "Explain what a _Degenerate (or Pathological) Tree_ is and its impact on operations.",
+  "q": "درخت Degenerate (Pathological) چیست و چه اثری بر عملیات دارد؟",
+  "qa": "**درخت منحط** (Degenerate Tree) درختی است که هر والد فقط یک فرزند دارد؛ در نتیجه درخت عملاً به لیست پیوندی تبدیل می‌شود. پیامد: همه‌ی عملیات (search/insert/delete) از O(log n) به **O(n)** سقوط می‌کنند — دقیقاً همان دلیلی که درخت‌های خودمتعادل مثل AVL و Red-Black وجود دارند."
+ },
+ {
+  "en": "What is a _Trie_?",
+  "q": "Trie چیست؟",
+  "qa": "**Trie** — معروف به **درخت پیشوندی** و برگرفته از واژه‌ی reTRIEval — ساختاری درختی برای عملیات رشته‌ای است: به‌جای ذخیره‌ی داده در گره‌ها، **یال‌ها** اطلاعات را رمز می‌کنند. جست‌وجوی یک کلمه به طول کلمه وابسته است، نه به تعداد کلمات ذخیره‌شده."
+ },
+ {
+  "en": "What are the advantages of _Tries_ over _Hash Tables_?",
+  "q": "مزایای Trieها نسبت به Hash Tableها چیست؟",
+  "qa": "در بعضی سناریوها **Trieها** می‌توانند بهتر از **Hash Table** عمل کنند: پیشوندهای مشترک یک‌بار ذخیره می‌شوند (حافظه‌ی کمتر برای واژگان مشابه)، عملیات‌های وابسته به پیشوند مثل autocomplete طبیعی پشتیبانی می‌شوند، و در بدترین حالت هم هزینه‌ی lookup به طول کلمه وابسته است، نه به کیفیت تابع هش."
+ },
+ {
+  "en": "How do you handle the case sensitivity problem in _Tries_?",
+  "q": "مشکل حساسیت به بزرگی/کوچکی حروف در Trieها چطور حل می‌شود؟",
+  "qa": "**Trieها** به‌طور رایج در پردازش زبان طبیعی برای ذخیره و lookup کارآمد کلمات به کار می‌روند و برای زبان انگلیسی — که به بزرگی/کوچکی حروف **حساس** است — کاملاً مناسب‌اند. اگر جست‌وجوی بی‌حساسیت لازم باشد: نرمال‌سازی (تبدیل همه به حروف کوچک) هنگام درج و جست‌وجو، یا ذخیره‌ی نگاشت‌های اضافی برای شکل‌های مختلف هر کلمه."
+ },
+ {
+  "en": "Describe how a _Trie_ can be used for implementing autocomplete functionality.",
+  "q": "توصیف کنید Trie چطور برای پیاده‌سازی قابلیت autocomplete استفاده می‌شود.",
+  "qa": "**Trie** ساختاری درختی و انتخاب بهینه برای ساخت **سیستم‌های autocomplete** است: هر گره یک کاراکتر را نمایندگی می‌کند که با داده‌های متنی بسیار کارآمد است. پس از تایپ پیشوند، گره‌ی متناظر را پیدا و همه‌ی دنباله‌های زیر آن را (با DFS) پیشنهاد می‌دهیم؛ شمارنده‌ی تکرار در هر گره هم رتبه‌بندی پیشنهادها را ممکن می‌کند."
+ },
+ {
+  "en": "How is a _Trie_ used in text _spell-checking_ and correction systems?",
+  "q": "Trie در سیستم‌های غلط‌یابی و اصلاح متن چطور به کار می‌رود؟",
+  "qa": "**Trie** ساختاری درختی قدرتمند است که به‌ویژه برای عملیات متنی مثل **اصلاح املا** مناسب است: واژگان دیکشنری در Trie ذخیره می‌شود؛ برای هر کلمه‌ی ورودی در زمان O(طول کلمه) بررسی می‌کنیم آیا در دیکشنری هست، و برای پیشنهاد اصلاح، جست‌وجوهای نزدیک (کلمات با فاصله‌ی ویرایشی کم) روی همان ساختار انجام می‌شود."
+ },
+ {
+  "en": "Write the code to insert a word into a _Trie_.",
+  "q": "کد درج یک کلمه در Trie را بنویسید.",
+  "qa": "هدف، نوشتن کد **درج** یک کلمه در **ساختار داده‌ی Trie** است: از ریشه شروع می‌کنیم، برای هر کاراکتر اگر فرزندِ متناظر نبود بسازیم و به آن برویم؛ در پایان گره‌ی آخر را «انتهای کلمه» علامت می‌زنیم. زمان O(طول کلمه)."
+ },
+ {
+  "en": "Implement a _Search_ function to determine if a word is included in a _Trie_.",
+  "q": "تابع Searchی پیاده‌سازی کنید که وجود یک کلمه را در Trie تعیین کند.",
+  "qa": "هدف، پیاده‌سازی **تابع جست‌وجویی** است که تعیین کند آیا کلمه‌ی خاصی در ساختار داده‌ی **Trie** شامل می‌شود یا نه: کاراکتر به کاراکتر پایین می‌رویم؛ اگر در میانه‌ی راه مسیر قطع شد کلمه وجود ندارد و در پایان باید گره هم موجود باشد هم علامت «انتهای کلمه» را داشته باشد."
+ },
+ {
+  "en": "Write a script to _Delete_ a word from a _Trie_.",
+  "q": "اسکریپتی برای حذف یک کلمه از Trie بنویسید.",
+  "qa": "حذف کلمه در **Trie** معمولاً با false کردن صفت is_end_of_word گره‌ی آخر کلمه انجام می‌شود — این کار لازم است حتی وقتی کلمه صریحاً موجود نیست؛ مثلاً اگر «and» حذف شود، «a» باید کلمه بماند. اگر گره‌ای بعد از حذف نه انتهای کلمه باشد و نه فرزندی داشته باشد، می‌توان آن را کامل پاک کرد."
+ },
+ {
+  "en": "What would be an _Ideal Sorting Algorithm_?",
+  "q": "الگوریتم مرتب‌سازی ایده‌آل چه ویژگی‌هایی دارد؟",
+  "qa": "الگوریتم مرتب‌سازی ایده‌آل این ویژگی‌های کلیدی را دارد: زمان **O(n log n)** در بدترین حالت، حافظه‌ی O(1) (in-place)، پایدار (stable)، سازگار با داده‌ی مرتب (adaptive) و ساده برای پیاده‌سازی. در عمل هیچ الگوریتمی همه را با هم ندارد — به همین دلیل مرتب‌سازی‌های هیبریدی مثل Timsort و Introsort به کار می‌روند."
+ },
+ {
+  "en": "What does _Sort in Place_ mean?",
+  "q": "معنای Sort in Place چیست؟",
+  "qa": "**مرتب‌سازی درجا (in-place)** به الگوریتم‌هایی گفته می‌شود که داده را در همان فضای ذخیره‌شده بازآرایی می‌کنند و برای نتیجه‌ی مرتب به حافظه‌ی اضافه‌ی قابل توجه نیاز ندارند (حداکثر O(log n)). نمونه‌ها: QuickSort و Heap Sort؛ در مقابل، Merge Sort حافظه‌ی O(n) می‌خواهد."
+ },
+ {
+  "en": "What is _QuickSort_?",
+  "q": "QuickSort چیست؟",
+  "qa": "**QuickSort** الگوریتم مرتب‌سازی تقسیم‌وغلبه‌ای بسیار کارآمدی است که آرایه را با یک **عنصر محوری (pivot)** به زیرآرایه‌ها تقسیم می‌کند: عناصر کوچک‌تر از pivot جدا و بزرگ‌ترها جدا؛ سپس همین کار بازگشتی روی هر بخش تکرار می‌شود. زمان متوسط O(n log n) و in-place است."
+ },
+ {
+  "en": "What is _Linear Search_ (Sequential Search)?",
+  "q": "Linear Search (جست‌وجوی ترتیبی) چیست؟",
+  "qa": "**جست‌وجوی خطی** — معروف به **جست‌وجوی ترتیبی** — الگوریتمی ساده و آسان‌فهم است که برای مجموعه‌های داده‌ی **کوچک** و **نامرتب** خوب کار می‌کند؛ اما روی مجموعه‌های داده‌ی بزرگ ممکن است ناکارآمد باشد چون همه‌ی عناصر را یکی‌یکی چک می‌کند (O(n))."
+ },
+ {
+  "en": "Compare _Binary Search_ vs. _Linear Search_.",
+  "q": "Binary Search و Linear Search را مقایسه کنید.",
+  "qa": "هر دو الگوریتم بنیادین برای یافتن داده در آرایه‌اند؛ تفاوت‌هایشان را مرور کنیم: **Linear Search** داده‌ی نامرتب را می‌پذیرد و ساده است ولی O(n) می‌گیرد؛ **Binary Search** به آرایه‌ی **مرتب** نیاز دارد اما با حذف نیمی از فضای جست‌وجو در هر گام در O(log n) می‌رسد."
+ },
+ {
+  "en": "What characteristics of the data determine the choice of a _searching algorithm_?",
+  "q": "چه ویژگی‌هایی از داده، انتخاب الگوریتم جست‌وجو را تعیین می‌کنند؟",
+  "qa": "الگوریتم جست‌وجوی ایده‌آل بر اساس عوامل داده‌محور متفاوت است: **مرتب بودن** داده (شرط binary search)، **حجم** داده، ساختار حافظه (آرایه با دسترسی تصادفی یا لیست پیوندی)، **توزیع مقادیر**، و تعداد دفعات جست‌وجو — اگر جست‌وجو مکرر است، یک‌بار مرتب‌سازی اولیه می‌ارزد."
+ },
+ {
+  "en": "Name some _Optimization Techniques_ for _Linear Search_.",
+  "q": "چند تکنیک بهینه‌سازی برای Linear Search نام ببرید.",
+  "qa": "**جست‌وجوی خطی** تکنیکی ساده است و کارایی‌اش روی مجموعه‌های بزرگ کاهش می‌یابد. تکنیک‌های بهبود: **Sentinel search** (حذف بررسی مرزها)، ترتیب‌های **خودسازمان‌ده** مثل Move-to-Front (عناصر پرتکرار جلوتر می‌آیند)، **Transpose** (جابه‌جایی عنصر یافت‌شده با قبلی)، و برای جست‌وجوی مکرر: ایندکس‌گذاری یا مرتب‌سازی + binary search."
+ },
+ {
+  "en": "What is _Sentinel Search_?",
+  "q": "Sentinel Search چیست؟",
+  "qa": "**جست‌وجوی نگهبان (Sentinel Search)** بهینه‌سازی‌ای روی جست‌وجوی خطی است: مقدار هدف را به‌عنوان «نگهبان» در انتهای آرایه می‌گذاریم تا حلقه بدون بررسی شرط پایان (خروج از اندکس) ساده‌تر و سریع‌تر بدود؛ پس از یافتن، فقط اگر اندکس کوچک‌تر از اندازه‌ی آرایه باشد جست‌وجو واقعاً موفق است. تعداد مقایسه‌ها را کاهش می‌دهد و برای آرایه‌های کوچک کارآمد است."
+ },
+ {
+  "en": "Implement an _Order-Agnostic Linear Search_ that works on _sorted_ and _unsorted arrays_.",
+  "q": "جست‌وجوی خطی Order-Agnostic پیاده‌سازی کنید که روی آرایه‌های مرتب و نامرتب کار کند.",
+  "qa": "الگوریتم **جست‌وجوی خطی بی‌توجه‌به‌ترتیب** روی آرایه‌هایی کار می‌کند که ممکن است **صعودی یا نزولی مرتب** باشند و هدف آن یافتن مقدار مشخصی است. چون جست‌وجو خطی است ترتیب اهمیتی ندارد و همه‌ی عناصر چک می‌شوند؛ نکته این است که نسخه‌ی «مرتب-آگاه» فقط برای binary search لازم است، نه جست‌وجوی خطی."
+ },
+ {
+  "en": "Modify _Linear Search_ to perform on a _multi-dimensional array_.",
+  "q": "Linear Search را طوری تغییر دهید که روی آرایه‌ی چندبعدی کار کند.",
+  "qa": "هدف، **تطبیق** الگوریتم **جست‌وجوی خطی** برای عملکرد روی آرایه‌ی **چندبعدی** است: به‌جای یک حلقه، حلقه‌های تودرتو برای هر بُعد داریم (برای ۲بعدی: سطرها و ستون‌ها) و در هر خانه مقدار با هدف مقایسه می‌شود؛ با تخت‌کردن (flatten) اندیس‌ها می‌توان از یک حلقه‌ی واحد هم استفاده کرد."
+ },
+ {
+  "en": "Explain why complexity of _Binary Search_ is _O(log n)_.",
+  "q": "چرا پیچیدگی Binary Search برابر O(log n) است؟ توضیح دهید.",
+  "qa": "الگوریتم **Binary Search** به‌خاطر کارایی‌اش معروف است و اغلب در زمان $O(\\log n)$ — یعنی زمان **لگاریتمی** — تمام می‌شود؛ دلیل: در هر گام فضای جست‌وجو **نصف** می‌شود، پس بعد از k گام فقط n/2^k عنصر می‌ماند و وقتی n/2^k = 1 شود، k = log₂n است."
+ },
+ {
+  "en": "In _Binary Search_, why _Round Down_ the midpoint instead of _Rounding Up_?",
+  "q": "در Binary Search چرا میانه را به پایین گرد می‌کنند نه به بالا؟",
+  "qa": "هر دو **گردکردن به بالا** و **گردکردن به پایین** در binary search قابل قبول‌اند؛ جوهره‌ی روش در توزیع عناصر نسبت به حدس ماست. گردکردن به پایین (mid = (lo+hi)/2) قرارداد رایج‌تری است و در حلقه‌های lo < hi جلوگیری از حلقه‌ی بی‌نهایت را ساده‌تر می‌کند. نکته‌ی مهم دیگر: سرریز محاسبه‌ی (lo+hi)/2 در زبان‌هایی مثل Java و ++C که با lo + (hi−lo)/2 حل می‌شود."
+ },
+ {
+  "en": "Write a _Binary Search_ algorithm that finds the first occurrence of a given value.",
+  "q": "الگوریتم Binary Searchی بنویسید که اولین تکرار (occurrence) یک مقدار مشخص را پیدا کند.",
+  "qa": "هدف، استفاده از **Binary Search** برای یافتن **اولین تکرار** یک مقدار است: وقتی مقدار هدف پیدا شد، بلافاصله برنمی‌گردیم — به‌جای آن hi را به mid − 1 می‌بریم و آخرین mid موفق را نگه می‌داریم تا جست‌وجو در سمت چپ ادامه یابد و اولین تکرار به دست آید."
+ },
+ {
+  "en": "What is a _Greedy Algorithm_?",
+  "q": "الگوریتم حریصانه (Greedy) چیست؟",
+  "qa": "الگوریتم **حریصانه** مسائل بهینه‌سازی را با گرفتن **بهترین انتخاب محلی** در هر گام حل می‌کند. این اغلب به **راه‌حل بهینه‌ی سراسری** می‌رسد اما در همه‌ی موارد تضمین نیست. این الگوریتم‌ها معمولاً از روش‌هایی مثل برنامه‌نویسی پویا پیاده‌سازی‌شان ساده‌تر و سریع‌تر است، ولی ممکن است همیشه دقیق‌ترین راه‌حل را ندهند."
+ },
+ {
+  "en": "What are _Greedy Algorithms_ used for?",
+  "q": "الگوریتم‌های حریصانه برای چه به کار می‌روند؟",
+  "qa": "الگوریتم‌های **حریصانه** اغلب برای مسائلی انتخاب می‌شوند که راه‌حل بهینه می‌تواند **به‌تدریج** ساخته شود و **تصمیم‌های محلی** به **راه‌حل بهینه‌ی سراسری** منجر شوند: مثل MST (Kruskal/Prim)، Dijkstra، کدگذاری هافمن و مسائل زمان‌بندی."
+ },
+ {
+  "en": "Is _Dijkstra's algorithm_ a _Greedy_ or _Dynamic Programming_ algorithm?",
+  "q": "الگوریتم Dijkstra حریصانه است یا برنامه‌نویسی پویا؟",
+  "qa": "الگوریتم **Dijkstra** ترکیبی از تکنیک‌های حریصانه و برنامه‌نویسی پویا را به کار می‌گیرد: انتخاب حریصانه‌ی رأس با کمترین فاصله قلب الگوریتم است، و به‌روزرسانی فاصله‌ها بر پایه‌ی مسیرهای از پیش بهینه (خاصیت زیرساختار بهینه) ماهیت DP دارد. در طبقه‌بندی رایج، الگوریتم حریصانه شمرده می‌شود."
+ },
+ {
+  "en": "Is there a way to _Mathematically Prove_ that a _Greedy Algorithm_ will yield the _Optimal Solution_?",
+  "q": "آیا راهی برای اثبات ریاضی این است که الگوریتم حریصانه راه‌حل بهینه می‌دهد؟",
+  "qa": "پاسخ — اینکه **آیا الگوریتم حریصانه همیشه راه‌حل بهینه می‌دهد** — به مسئله‌ی خاص بستگی دارد، اما معمولاً دو خاصیت اصلی برای کارآمدی الگوریتم حریصانه لازم است: **خاصیت انتخاب حریصانه** (انتخاب محلی بهینه می‌تواند بخشی از راه‌حل بهینه‌ی سراسری باشد) و **زیرساختار بهینه** (راه‌حل بهینه شامل راه‌حل‌های بهینه‌ی زیرمسئله‌هاست). اثبات معمولاً با استدلال جایگزینی (exchange argument) انجام می‌شود."
+ },
+ {
+  "en": "Design a _greedy algorithm_ for making change using the fewest coins possible.",
+  "q": "الگوریتم حریصانه‌ای برای برگرداندن بقیه‌ی پول با کمترین تعداد سکه طراحی کنید.",
+  "qa": "با مجموعه‌ای مشخص از سکه‌ها و مبلغ هدف، هدف تعیین **کمترین تعداد سکه** لازم برای برگرداندن بقیه است. راه‌حل حریصانه: همیشه بزرگ‌ترین سکه‌ی ممکن را بردارید تا مبلغ تمام شود. برای سیستم‌های استاندارد پول بهینه است؛ برای سکه‌های دلخواه (مثل ۱، ۳، ۴) حریصانه ممکن است بهینه نباشد و برنامه‌نویسی پویا لازم شود."
+ },
+ {
+  "en": "Describe a greedy strategy for scheduling events that use the fewest number of resources.",
+  "q": "استراتژی حریصانه‌ای برای زمان‌بندی رویدادها با کمترین تعداد منابع توصیف کنید.",
+  "qa": "برای زمان‌بندی رویدادها با هدف **کمینه کردن مصرف منابع**، استراتژی حریصانه به‌صورت انتخاب **زودترین‌شروع‌کننده‌ها** بدون تداخل عمل می‌کند — رویدادها را مرتب می‌کنیم و هر رویدادی که با انتخاب‌های قبلی تداخل نداشت را به همان منبع می‌دهیم تا تعداد منابع لازم حداقل شود."
+ },
+ {
+  "en": "Explain how to apply a greedy approach to minimize the total waiting time for a given set of queries.",
+  "q": "توضیح دهید چطور با رویکرد حریصانه زمان انتظار کل مجموعه‌ای از کوئری‌ها را کمینه کنیم.",
+  "qa": "برای **کمینه کردن زمان انتظار** مجموعه‌ای از n کوئری، باید کارهای کوتاه‌تر را قبل از بلندها پردازش کنید — الگوریتم **SPT (Shortest Processing Time)**: مرتب‌سازی صعودی بر اساس زمان سرویس و پردازش به همان ترتیب. این رویکرد ترتیبی با **روش حریصانه** بهترین بهینه‌سازی را می‌دهد."
+ },
+ {
+  "en": "Develop a _greedy algorithm_ for the _activity selection problem_ to maximize the number of activities.",
+  "q": "الگوریتم حریصانه‌ای برای مسئله‌ی انتخاب فعالیت‌ها (Activity Selection) طراحی کنید که تعداد فعالیت‌ها را بیشینه کند.",
+  "qa": "با زمان‌های **شروع** و **پایان** n فعالیت، هدف **مسئله‌ی انتخاب فعالیت (ASP)** انتخاب مجموعه‌ای با بیشینه‌ی اندازه از فعالیت‌های سازگار است — دو فعالیت سازگارند که همپوشان نباشند. راه‌حل حریصانه: مرتب بر اساس **زمان پایان**، و انتخاب همیشگی فعالیتی که زودتر تمام می‌شود و با انتخاب‌های قبلی تداخل ندارد."
+ },
+ {
+  "en": "How can you establish the correctness of a _greedy algorithm_?",
+  "q": "چطور می‌توان درستی یک الگوریتم حریصانه را اثبات کرد؟",
+  "qa": "الگوریتم‌های **حریصانه** انتخاب‌های بهینه‌ی محلی می‌کنند به امید رسیدن به راه‌حل بهینه‌ی سراسری؛ **چالش کلیدی** این است که انتخاب بهینه‌ی محلی ممکن است همیشه جزئی از بهینه‌ی سراسری نباشد. اثبات درستی معمولاً با **استدلال جایگزینی** انجام می‌شود: نشان می‌دهیم هر راه‌حل بهینه را می‌توان بدون افت کیفیت به راه‌حل حریصانه تبدیل کرد."
+ },
+ {
+  "en": "Define _Divide & Conquer_ algorithms and their main characteristics.",
+  "q": "الگوریتم‌های Divide & Conquer و ویژگی‌های اصلی‌شان را تعریف کنید.",
+  "qa": "**تقسیم و غلبه (Divide & Conquer)** رویکردی حل مسئله است که مسئله را به **زیرمسئله‌های** کوچک‌تر و آسان‌تر می‌شکند، هر یک را به‌طور مستقل حل می‌کند و سپس راه‌حل‌ها را برای حل مسئله‌ی اصلی ترکیب می‌کند. سه گام: Divide (تقسیم)، Conquer (حل بازگشتی) و Combine (ترکیب) — مثل merge sort."
+ },
+ {
+  "en": "Explain the _Master Theorem_ and its importance in analyzing _Divide & Conquer_ algorithms.",
+  "q": "Master Theorem را توضیح دهید و اهمیتش در تحلیل الگوریتم‌های Divide & Conquer را بگویید.",
+  "qa": "**قضیه‌ی اصلی (Master Theorem)** ابزار قدرتمندی برای تحلیل پیچیدگی زمانی الگوریتم‌های با الگوی **تقسیم و غلبه** فراهم می‌کند: برای رابطه‌ی بازگشتی T(n) = aT(n/b) + f(n)، با مقایسه‌ی رشد aT(n/b) با f(n)، پیچیدگی در یکی از سه حالت استاندارد تعیین می‌شود — بدون نیاز به حل دستی رابطه‌ی بازگشتی."
+ },
+ {
+  "en": "How can the _Master Theorem_ be applied to find the _time complexity_ of a _binary search algorithm_?",
+  "q": "چطور می‌توان Master Theorem را برای یافتن پیچیدگی زمانی binary search به کار برد؟",
+  "qa": "Master Theorem راهی برای تعیین پیچیدگی زمانی الگوریتم‌های با الگوی مشخص **تقسیم‌وغلبه** فراهم می‌کند: برای binary search رابطه‌ی بازگشتی T(n) = T(n/2) + O(1) است (یک زیرمسئله‌ی نصف‌شده به‌علاوه‌ی مقایسه‌ی ثابت) که در حالت دوم قضیه قرار می‌گیرد و پیچیدگی O(log n) می‌دهد."
+ },
+ {
+  "en": "Explain how _Quicksort_ works and how it adopts the _Divide & Conquer_ strategy.",
+  "q": "توضیح دهید Quicksort چطور کار می‌کند و چگونه استراتژی Divide & Conquer را به کار می‌گیرد.",
+  "qa": "**Quicksort** الگوریتم مرتب‌سازی بسیار کارآمدی است که از استراتژی **تقسیم و غلبه** برای مرتب‌سازی سریع داده‌ها استفاده می‌کند: آرایه را با یک pivot به دو آرایه‌ی کوچک‌تر تقسیم می‌کند — یکی با عناصر کوچک‌تر از pivot و دیگری با بزرگ‌ترها — و بازگشتی هر بخش را مرتب می‌کند. برخلاف merge sort، مرحله‌ی ترکیب آن تقریباً رایگان است چون partition خودش مرتب‌سازی محلی را انجام می‌دهد."
+ },
+ {
+  "en": "How does the _Karatsuba algorithm_ for _multiplying_ large numbers employ _Divide & Conquer_?",
+  "q": "الگوریتم Karatsuba برای ضرب اعداد بزرگ چگونه از Divide & Conquer استفاده می‌کند؟",
+  "qa": "**الگوریتم Karatsuba** از **استراتژی تقسیم و غلبه** برای کاهش چشمگیر تعداد عملیات ریاضی لازم در ضرب اعداد بزرگ استفاده می‌کند: هر عدد را دو نیم می‌کند و به‌جای ۴ ضرب نیم‌اندازه، با یک ترفند فقط ۳ ضرب انجام می‌دهد — پیچیدگی را از O(n²) به حدود O(n^1.58) می‌رساند."
+ },
+ {
+  "en": "Describe the _Strassen's algorithm_ for _matrix multiplication using_ _Divide & Conquer_.",
+  "q": "الگوریتم Strassen برای ضرب ماتریسی با Divide & Conquer را توصیف کنید.",
+  "qa": "**الگوریتم Strassen** روشی تقسیم‌وغلبه‌ای است که تعداد عملیات لازم برای ضرب ماتریس را کاهش می‌دهد: هر ماتریس را به چهار بلوک تقسیم و به‌جای ۸ ضرب بلوکی، با ۷ ضرب و چند جمع/تفریق جواب می‌سازد — پیچیدگی را از O(n³) به حدود O(n^2.81) کم می‌کند."
+ },
+ {
+  "en": "Solve the _Tower of Hanoi_ problem using _Divide & Conquer_ techniques.",
+  "q": "مسئله‌ی Tower of Hanoi را با تکنیک‌های Divide & Conquer حل کنید.",
+  "qa": "برج هانوی مسئله‌ای کلاسیک با سه میله و تعدادی دیسک با اندازه‌های مختلف است که می‌توانند روی هر میله سُر بخورند؛ **هدف** انتقال کل پشته به میله‌ی دیگر با این قوانین است که همیشه فقط یک دیسک جابه‌جا شود و دیسک بزرگ‌تر هرگز روی کوچک‌تر گذاشته نشود. راه‌حل تقسیم‌وغلبه: n−1 دیسک بالا را به میله‌ی کمکی ببر، بزرگ‌ترین را منتقل کن، n−1 دیسک را روی آن بگذار — بازگشتی. تعداد حرکات: 2ⁿ−1."
+ },
+ {
+  "en": "Solve the _Closest Pair of Points_ problem using _Divide & Conquer_.",
+  "q": "مسئله‌ی نزدیک‌ترین جفت نقاط (Closest Pair of Points) را با Divide & Conquer حل کنید.",
+  "qa": "با مجموعه‌ای از n نقطه در صفحه‌ی ۲بعدی، نزدیک‌ترین جفت نقاط را پیدا کنید: نقاط را بر اساس x مرتب و از وسط تقسیم می‌کنیم؛ پاسخ، حداقلِ سه حالت است — نزدیک‌ترین جفت در نیمه‌ی چپ، در نیمه‌ی راست، و جفتی که از خط وسط عبور می‌کند (فقط چند نقطه‌ی مجاور نوار میانی باید چک شوند). زمان O(n log n) در مقابل روش ساده‌ی O(n²)."
+ },
+ {
+  "en": "What is _Backtracking_?",
+  "q": "Backtracking چیست؟",
+  "qa": "**Backtracking** تکنیکی الگوریتمی است که با رویکرد **جست‌وجوی عمق‌اول** به‌طور نظام‌مند کاندیداهای راه‌حل را می‌سازد: هر راه‌حل بالقوه به‌صورت **گره‌ای** در **ساختار درختی** نمایش داده می‌شود و به محض مشخص شدن بی‌راه بودن مسیر، عقب‌نشینی کرده و شاخه‌ی بعدی را امتحان می‌کنیم."
+ },
+ {
+  "en": "Explain the concept of a _decision tree_ in _backtracking_ algorithms.",
+  "q": "مفهوم درخت تصمیم (decision tree) در الگوریتم‌های backtracking را توضیح دهید.",
+  "qa": "**درخت‌های تصمیم** جزء بنیادین **الگوریتم‌های backtracking** هستند: این درخت‌ها به‌صورت بصری توالی تصمیم‌ها و گام‌های گرفته‌شده در طول backtracking برای رسیدن به راه‌حل را نمایش می‌دهند — هر سطح یک تصمیم و هر شاخه یک گزینه‌ی ممکن."
+ },
+ {
+  "en": "Describe the role of _state space tree_ in understanding backtracking algorithms.",
+  "q": "نقش درخت فضای حالت (state space tree) را در فهم الگوریتم‌های backtracking توصیف کنید.",
+  "qa": "**درخت‌های فضای حالت** نمایش بصری فرایند حل مسئله در **الگوریتم‌های backtracking** هستند: ریشه حالت اولیه، هر گره یک حالت جزئی و هر برگ یک راه‌حل کامل یا بن‌بست است. این درخت‌ها هم برای **توضیح** و هم **پیاده‌سازی** رویکرد backtracking کمک می‌کنند."
+ },
+ {
+  "en": "Explain the concept of _constraint satisfaction_ in backtracking.",
+  "q": "مفهوم constraint satisfaction (ارضای محدودیت) در backtracking را توضیح دهید.",
+  "qa": "**ارضای محدودیت** جنبه‌ای بنیادین از **الگوریتم‌های backtracking** است که نقش حیاتی در وظایف گوناگون حل مسئله — به‌ویژه بهینه‌سازی ترکیبیاتی — دارد: در هر گام بررسی می‌کنیم که حالت جزئی هنوز با محدودیت‌های مسئله سازگار است یا نه؛ اگر نقض شد، شاخه هرس می‌شود و به گزینه‌ی بعدی می‌رویم. مثال کلاسیک: n-Queens و سودوکو."
+ },
+ {
+  "en": "Outline a method to implement _backtracking iteratively_.",
+  "q": "روشی برای پیاده‌سازی backtracking به‌صورت حلقه‌ای (iterative) ارائه دهید.",
+  "qa": "هرچند «backtracking حلقه‌ای» با توجه به ماهیت تکراری این فرایند متناقض به نظر برسد، پیاده‌سازی آن با **مدیریت هدفمند پشته** ممکن است: به‌جای فریم‌های بازگشتی، یک پشته‌ی صریح از حالت‌ها (انتخاب‌های انجام‌شده در هر سطح) نگه می‌داریم؛ push یعنی انتخاب گزینه و pop یعنی عقب‌نشینی به گزینه‌ی بعدی."
+ },
+ {
+  "en": "How can _memoization_ be integrated with _backtracking_?",
+  "q": "چطور memoization را با backtracking ترکیب می‌کنید؟",
+  "qa": "**Backtracking** اغلب همه‌ی راه‌حل‌های ممکن مسئله را بررسی می‌کند؛ فرایندی که با مجموعه‌ای از قواعد هدایت و با **بازگشت** مدیریت می‌شود — کامل است اما می‌تواند کند باشد. با **memoization** نتیجه‌ی حالت‌هایی که قبلاً دیده‌ایم را ذخیره می‌کنیم؛ اگر دوباره به همان حالت برسیم، به‌جای جست‌وجوی مجدد از نتیجه‌ی ذخیره‌شده استفاده می‌کنیم — این ترکیب همان پل به برنامه‌نویسی پویاست."
+ },
+ {
+  "en": "Explain the impact of _variable ordering_ on the performance of backtracking algorithms.",
+  "q": "اثر ترتیب متغیرها (variable ordering) بر کارایی الگوریتم‌های backtracking را توضیح دهید.",
+  "qa": "تکنیک‌های **ترتیب متغیرها** نقشی حیاتی در کارایی **الگوریتم‌های backtracking** دارند: ترتیب انتخاب متغیرها از فضای تصمیم را مدیریت می‌کنند و بر استراتژی جست‌وجو و کارایی الگوریتم اثر می‌گذارند. انتخاب متغیر با کمترین مقادیر باقی‌مانده (MRV) بن‌بست‌ها را زودتر آشکار و شاخه‌ها را هرس می‌کند."
+ },
+ {
+  "en": "Explain the _time_ and _space complexity_ of a typical _backtracking algorithm_.",
+  "q": "پیچیدگی زمان و فضای یک الگوریتم backtracking معمولی را توضیح دهید.",
+  "qa": "الگوریتم‌های **backtracking** به‌تدریج راه‌حل می‌سازند و اگر مسیر جاری به راه‌حل نرسد **عقب‌نشینی** می‌کنند. پیچیدگی زمان در بدترین حالت نمایی است (پیمایش کل درخت فضای حالت)؛ حافظه هم O(عمق درخت) برای پشته‌ی بازگشت و ساختارهای کمکی است. هرس کردن (pruning) همان چیزی است که زمان واقعی را قابل قبول می‌کند."
+ },
+ {
+  "en": "How do _worst-case scenarios_ in _backtracking_ compare to other algorithms?",
+  "q": "بدترین حالت‌ها در backtracking در مقایسه با الگوریتم‌های دیگر چگونه است؟",
+  "qa": "هرچند **backtracking** ابزار الگوریتمی قدرتمندی است، ماهیتش محدودیت‌هایی در بدترین حالت دارد: بدترین حالت آن معمولاً **نمایی** است — از مرتبه‌های چندجمله‌ای الگوریتم‌هایی مثل برنامه‌نویسی پویا یا حریصانه بدتر. با این حال backtracking برای مسائلی به کار می‌رود که راه‌حل چندجمله‌ای شناخته‌شده‌ای ندارند."
+ },
+ {
+  "en": "How _Dynamic Programming_ is different from _Recursion_ and _Memoization_?",
+  "q": "برنامه‌نویسی پویا (DP) چه تفاوتی با Recursion و Memoization دارد؟",
+  "qa": "**برنامه‌نویسی پویا (DP)**، **بازگشت** و **memoization** تکنیک‌هایی برای حل مسائلی هستند که به زیرمسئله‌های کوچک و همپوشان تقسیم می‌شوند. هر سه این اشتراک را دارند اما مزیت‌ها و محدودیت‌های یکتای خود را دارند: بازگشت تعریف مسئله به خودش است؛ memoization بازگشت + ذخیره‌ی نتایج (top-down)؛ و DP معمولاً همان کار را **پایین‌به‌بالا** (tabulation) و بدون سربار پشته انجام می‌دهد."
+ },
+ {
+  "en": "What are some _Common Examples of Recursion_ in computer science?",
+  "q": "چند مثال متداول از بازگشت در علوم کامپیوتر نام ببرید.",
+  "qa": "بیایید چند مثال را بررسی کنیم و ببینیم چگونه از مفاهیم اصلی **بازگشت** استفاده می‌کنند: پیمایش ساختارهای درختی (tree traversal)، مرتب‌سازی‌های merge و quick، برج هانوی، دنباله‌ی Fibonacci، عقب‌نشینی (backtracking) در n-Queens و سودوکو، و پیمایش DFS در گراف‌ها."
+ },
+ {
+  "en": "Explain the concept of _Recursion Depth_ and its implications on algorithm complexity.",
+  "q": "مفهوم عمق بازگشت (Recursion Depth) و پیامدهایش بر پیچیدگی الگوریتم را توضیح دهید.",
+  "qa": "**عمق بازگشت** به تعداد دفعاتی گفته می‌شود که تابع خودش را صدا می‌زند و معمولاً به‌صورت پشته‌ی فراخوانی تصور می‌شود. پیامدها: هر سطح سربار حافظه‌ی پشته دارد، عمق زیاد خطر **stack overflow** ایجاد می‌کند، و پیچیدگی فضایی الگوریتم بازگشتی به اندازه‌ی عمق بازگشت است — همان دلیلی که نسخه‌های حلقه‌ای گاهی ترجیح داده می‌شوند."
+ },
+ {
+  "en": "How does the _Call Stack_ operate in recursive function calls?",
+  "q": "Call Stack در فراخوانی‌های بازگشتی چطور عمل می‌کند؟",
+  "qa": "**پشته‌های فراخوانی** استراتژی‌ای برای ردیابی **فراخوانی‌های فعال توابع** و مدیریت **متغیرهای محلی** فراهم می‌کنند: هر فراخوانی frame جدیدی می‌گذارد (پارامترها، متغیرها، آدرس بازگشت) و با بازگشت برداشته می‌شود. در بازگشت، frameها تا رسیدن به حالت پایه روی هم انبار می‌شوند و سپس به ترتیب معکوس برداشته می‌شوند."
+ },
+ {
+  "en": "Solve the _Tower of Hanoi_ problem recursively.",
+  "q": "مسئله‌ی Tower of Hanoi را بازگشتی حل کنید.",
+  "qa": "معمای برج هانوی سه میله و تعدادی دیسک با اندازه‌های مختلف دارد که می‌توانند روی هر میله سُر بخورند؛ معما با همه‌ی دیسک‌ها به ترتیب صعودی اندازه روی میله‌ی اول شروع می‌شود و **هدف** انتقال کل پشته به میله‌ی آخر با قوانین معماست (یک دیسک در هر حرکت، بزرگ روی کوچک ممنوع). راه‌حل بازگشتی: n−1 دیسک را به میله‌ی کمکی ببر، بزرگ‌ترین را به مقصد ببر، n−1 دیسک را روی آن بگذار. تعداد حرکات: 2ⁿ−1."
+ },
+ {
+  "en": "Recursively _Check for Palindromes_ in a string.",
+  "q": "به‌صورت بازگشتی بررسی کنید که یک رشته palindrome است یا نه.",
+  "qa": "هدف، **تعیین** palindrome بودن رشته‌ی s است: حالت پایه — رشته‌ی خالی یا تک‌کاراکتری palindrome است؛ گام بازگشتی — اگر کاراکتر اول و آخر برابرند، زیررشته‌ی وسط را بازگشتی چک کن؛ در غیر این صورت پاسخ «خیر» است. زمان O(n) و عمق بازگشت O(n)."
+ },
+ {
+  "en": "Calculate _N-th Fibonacci Number_ using _Tail Recursion_.",
+  "q": "عدد nام Fibonacci را با بازگشت دمی (Tail Recursion) محاسبه کنید.",
+  "qa": "هدف، **محاسبه‌ی** nامین عدد Fibonacci با روش **tail recursive** است: فراخوانی بازگشتی باید آخرین عملیات تابع باشد — با دو پارامتر انباره (a و b) که نتیجه‌ی جاری را حمل می‌کنند: fib(n, a=0, b=1) در هر فراخوانی به fib(n−1, b, a+b) می‌رسد تا n صفر شود."
+ },
+ {
+  "en": "Discuss how _Tail Recursion_ can be optimized by compilers and its benefits.",
+  "q": "بررسی کنید کامپایلرها بازگشت دمی را چطور بهینه می‌کنند و مزایایش چیست.",
+  "qa": "**بهینه‌سازی فراخوانی دمی (TCO)** ویژگی‌ای کامپایلری است که در زبان‌هایی مثل Erlang، Haskell و Scheme **مصرف حافظه‌ی کارآمد** را ترویج می‌کند: انواع خاصی از توابع بازگشتی معروف به «فراخوانی‌های tail-recursive» را به ساختار حلقه تبدیل می‌کند، به‌جای به‌کارگیری پشته‌ی فراخوانی سنتی — پس عمق بازگشت هرگز به سقف پشته برخورد نمی‌کند."
+ },
+ {
+  "en": "Write a function to calculate the _nth Fibonacci number_ using a _recursive_ approach.",
+  "q": "تابعی بنویسید که nامین عدد Fibonacci را با رویکرد بازگشتی محاسبه کند.",
+  "qa": "هدف، نوشتن تابعی است که **nامین عدد Fibonacci** را با **رویکرد بازگشتی** برگرداند: حالت پایه F(0)=0 و F(1)=1، و گام بازگشتی F(n) = F(n−1) + F(n−2). ساده و خوانا، ولی ناکارآمد: به دلیل محاسبه‌ی مکرر زیرمسئله‌ها، پیچیدگی نمایی O(2ⁿ) دارد."
+ },
+ {
+  "en": "Provide a non-recursive implementation for generating the _Fibonacci sequence_ to the _nth number_.",
+  "q": "پیاده‌سازی غیربازگشتی برای تولید دنباله‌ی Fibonacci تا عدد nام ارائه دهید.",
+  "qa": "هدف، **تولید** دنباله‌ی Fibonacci تا nامین عدد با **رویکرد غیربازگشتی** است: با دو متغیر که دو جمله‌ی آخر را نگه می‌دارند، در یک حلقه از ۲ تا n مقادیر را محاسبه و در خروجی ذخیره می‌کنیم — زمان O(n) و حافظه O(n) برای کل دنباله."
+ },
+ {
+  "en": "What is the _time complexity_ of the recursive Fibonacci solution, and how can this be improved?",
+  "q": "پیچیدگی زمانی راه‌حل بازگشتی Fibonacci چقدر است و چطور می‌توان آن را بهبود داد؟",
+  "qa": "پیاده‌سازی **بازگشتی خام** دنباله‌ی Fibonacci پیچیدگی زمانی $O(2^n)$ دارد که می‌توان آن را با تکنیک‌هایی مثل **memoization** یا به‌کارگیری **رویکرد حلقه‌ای** بهینه کرد — هر دو پیچیدگی را به O(n) می‌رسانند."
+ },
+ {
+  "en": "Describe the _memoization_ technique as applied to the _Fibonacci sequence_ calculation.",
+  "q": "تکنیک memoization را در محاسبه‌ی دنباله‌ی Fibonacci توصیف کنید.",
+  "qa": "**Memoization** تکنیکی است که برنامه‌نویسی پویا را با ذخیره‌ی نتایج فراخوانی‌های پرهزینه و استفاده‌ی مجدد از آن‌ها سریع‌تر می‌کند. برای Fibonacci: جدولی از نتایج نگه می‌داریم و قبل از هر فراخوانی بازگشتی چک می‌کنیم که آیا F(n) قبلاً محاسبه شده — هر عدد فقط یک‌بار حساب می‌شود و پیچیدگی از O(2ⁿ) به O(n) می‌رسد."
+ },
+ {
+  "en": "Implement an _iterative solution_ to generate the _Fibonacci sequence_, discussing its _time_ and _space complexity_.",
+  "q": "راه‌حل حلقه‌ای برای تولید دنباله‌ی Fibonacci پیاده‌سازی کنید و پیچیدگی زمان و فضایش را تحلیل کنید.",
+  "qa": "هدف، **تولید دنباله‌ی Fibonacci** با رویکرد **حلقه‌ای** و سپس تحلیل **پیچیدگی زمان و فضا**ی آن است: دو متغیر a=0 و b=1 را در یک حلقه جلو می‌بریم (a, b = b, a+b). زمان O(n) و حافظه O(n) برای ذخیره‌ی کل دنباله — یا O(1) اگر فقط جمله‌ی nام خواسته شود."
+ },
+ {
+  "en": "Explain the concept of _dynamic programming_ as it relates to the _Fibonacci sequence_.",
+  "q": "مفهوم برنامه‌نویسی پویا را در ارتباط با دنباله‌ی Fibonacci توضیح دهید.",
+  "qa": "**برنامه‌نویسی پویا** تکنیک الگوریتمی قدرتمندی است که به‌طور گسترده برای بهینه‌سازی **مسائل بازگشتی** — مثل محاسبه‌ی دنباله‌ی Fibonacci — به کار می‌رود و از محاسبه‌های تکراری جلوگیری می‌کند: زیرمسئله‌ها را یک‌بار حل و ذخیره می‌کند. دو رویکرد دارد: top-down (memoization) و bottom-up (tabulation)."
+ },
+ {
+  "en": "Explain an algorithm to compute the _sum of the first n Fibonacci numbers_ without generating the entire sequence.",
+  "q": "الگوریتمی برای محاسبه‌ی جمع n عدد اول Fibonacci بدون تولید کل دنباله توضیح دهید.",
+  "qa": "**دنباله‌ی Fibonacci** سری ریاضی کلاسیکی است که با تعریف معروفش مشخص می‌شود. نکته‌ی کلیدی برای این مسئله: جمع n جمله‌ی اول برابر F(n+2) − 1 است — پس به‌جای تولید کل دنباله، فقط F(n+2) را محاسبه می‌کنیم (با روش سریعی مثل ضرب ماتریسی یا فرمول Binet در زمان O(log n))."
+ },
+ {
+  "en": "Define the _Lucas sequence_ and detail how a program can generate it.",
+  "q": "دنباله‌ی Lucas را تعریف کنید و بگویید برنامه چطور آن را تولید می‌کند.",
+  "qa": "**دنباله‌ی Lucas** — نسخه‌ای از دنباله‌ی Fibonacci — به‌جای 0 و 1 با 2 و 1 شروع می‌شود و همان ساختار بازگشتی دنباله‌ی کلاسیک را دنبال می‌کند: L(n) = L(n−1) + L(n−2). برنامه: همان حلقه‌ی iterative با مقادیر اولیه‌ی متفاوت — دنباله این‌گونه پیش می‌رود: 2، 1، 3، 4، 7، 11، …"
+ },
+ {
+  "en": "How to calculate large _Fibonacci numbers_ without encountering _integer overflow_ issues?",
+  "q": "چطور اعداد Fibonacci بزرگ را بدون مواجهه با سرریز عدد صحیح محاسبه می‌کنید؟",
+  "qa": "اعداد **Fibonacci** با سرعت زیاد رشد می‌کنند که می‌تواند به **integer overflow** منجر شود. راه‌های متعددی برای دور زدن این مسئله وجود دارد: استفاده از انواع اعداد بزرگ (BigInteger در Java، اعداد دلخواه در Python)، **حساب modular** (نتایج mod یک عدد مثل 10⁹+7) وقتی فقط باقیمانده لازم است، و ذخیره‌ی ارقام در آرایه/رشته با جمع ستونی برای نمایش کامل."
+ },
+ {
+  "en": "What is _Big-O Notation_?",
+  "q": "نماد Big-O چیست؟",
+  "qa": "**نماد Big O** به‌عنوان **معیاری استاندارد برای کارایی الگوریتمی** عمل می‌کند که بر پیچیدگی زمان و فضا تمرکز دارد: رفتار رشد را در ورودی‌های بزرگ توصیف و ضرایب ثابت را نادیده می‌گیرد. برای **مقایسه‌ی الگوریتم‌ها** و درک **مقیاس‌پذیری** آن‌ها حیاتی است."
+ },
+ {
+  "en": "Explain how _probabilistic algorithms_ can have a different Big-O Notation compared to deterministic ones.",
+  "q": "توضیح دهید الگوریتم‌های احتمالی چطور می‌توانند Big-O متفاوتی نسبت به الگوریتم‌های قطعی داشته باشند.",
+  "qa": "در این سناریو، بیایید مسائلی را بررسی کنیم که الگوریتم‌های احتمالی می‌توانند برایشان راه‌حل تقریبی در **زمان چندجمله‌ای مورد انتظار** بدهند، حتی اگر الگوریتم قطعی به زمان نمایی نیاز داشته باشد: مثل تست اولیت Miller-Rabin یا الگوریتم‌های Monte Carlo در شمارش. تفاوت اصلی: پیچیدگی برحسب «احتمال درستی پاسخ» تعریف می‌شود، نه پاسخ قطعی."
+ },
+ {
+  "en": "Determine the Big-O _time and space complexities_ of _hash table_ operations.",
+  "q": "پیچیدگی‌های زمان و فضای عملیات‌های hash table را تعیین کنید.",
+  "qa": "بیایید پیچیدگی‌های **زمان** و **فضا**ی مرتبط با عملیات‌های پایه‌ی **Hash Table** را بررسی کنیم: insert، search و delete در حالت متوسط O(1) و در بدترین حالت (برخورد کامل) O(n) هستند؛ حافظه O(n) به‌علاوه‌ی سربار ظرفیت جدول، و resize یک‌باره‌ی O(n) که به‌صورت amortized در O(1) پخش می‌شود."
+ },
+ {
+  "en": "Provide examples of _space-time tradeoffs_ in algorithm design.",
+  "q": "چند مثال از مبادلات حافظه-زمان (space-time tradeoffs) در طراحی الگوریتم بدهید.",
+  "qa": "**مبادله‌های زمان-فضا** الگوریتم‌هایی را توصیف می‌کنند که می‌توان برای زمان یا فضا بهینه‌شان کرد، اما معمولاً نه هر دو. مثال‌ها: memoization و جدول‌های DP (فضا در ازای زمان)، ایندکس‌گذاری در دیتابیس، hash table به‌جای جست‌وجوی خطی، و در مقابل، الگوریتم‌های in-place که حافظه را به حداقل می‌رسانند ولی زمان بیشتری می‌گیرند."
+ },
+ {
+  "en": "How do you find the _kth largest element_ in an unsorted _array_?",
+  "q": "چطور kامین عنصر بزرگ در آرایه‌ای نامرتب را پیدا می‌کنید؟",
+  "qa": "برای یافتن kامین عنصر بزرگ در آرایه‌ی نامرتب می‌توانید از **heap یا quicksort** بهره ببرید: (۱) min-heap با اندازه‌ی k — عبور از همه‌ی عناصر، زمان O(n log k)؛ (۲) QuickSelect با partition — میانگین O(n)؛ (۳) مرتب‌سازی کامل و انتخاب اندیس n−k — ساده ولی O(n log n)."
+ },
+ {
+  "en": "Explain the importance of _state definition_ in _Dynamic Programming_ solutions.",
+  "q": "اهمیت تعریف حالت (state definition) در راه‌حل‌های برنامه‌نویسی پویا را توضیح دهید.",
+  "qa": "**تعریف حالت** پایه‌ای حیاتی برای راه‌حل‌های برنامه‌نویسی پویا (DP) است: مسئله را به **زیرمسئله‌های همپوشان** تقسیم می‌کند و هم تکنیک‌های **top-down** (memoization) و هم **bottom-up** (tabulation) را برای کارایی ممکن می‌سازد. حالت خوب، کمینه‌ی اطلاعاتی است که برای پیش‌برد راه‌حل لازم است — تعریف بد یعنی جدول‌های بزرگ و کد پیچیده."
+ },
+ {
+  "en": "What are the trade-offs between _memoization_ and _tabulation_ in _Dynamic Programming_?",
+  "q": "مبادلات بین memoization و tabulation در برنامه‌نویسی پویا چیست؟",
+  "qa": "هرچند هر دو **memoization** و **tabulation** الگوریتم‌های برنامه‌نویسی پویا را برای کارایی بهینه می‌کنند، در رویکرد و کاربردشان متفاوت‌اند: **memoization** (top-down) بازگشتی است، فقط حالت‌های لازم را حساب می‌کند و سربار پشته دارد؛ **tabulation** (bottom-up) حلقه‌ای است، ترتیب محاسبه را خودش می‌چیند، سریع‌تر اجرا می‌شود و بهینه‌سازی فضایی (نگهداری فقط سطرهای لازم) راحت‌تر است."
+ },
+ {
+  "en": "What is _Hashing_?",
+  "q": "Hashing چیست؟",
+  "qa": "**Hashing** روشی است که داده را به مقادیر اندازه‌ثابت — معروف به **مقادیر هش** — نگاشت می‌کند تا ذخیره و بازیابی کارآمد باشد. **تابع هش** این مقادیر را می‌سازد و به‌عنوان شناسه یا کلید یکتای داده عمل می‌کند."
+ },
+ {
+  "en": "Explain the difference between _Hashing_ and _Hash Tables_.",
+  "q": "تفاوت Hashing و Hash Table را توضیح دهید.",
+  "qa": "هنگام بحث درباره‌ی **Hashing** و **Hash Tables**، شناخت این نکته حیاتی است که یکی **تکنیک** است و دیگری **ساختار داده**: Hashing فرایند نگاشت داده به مقدار ثابت با تابع هش است؛ hash table ساختاری است که از این تکنیک برای نگهداری جفت‌های کلید-مقدار و دسترسی سریع استفاده می‌کند. مقایسه‌ی کنارهم در ادامه آمده است."
+ },
+ {
+  "en": "Provide a simple example of a _Hash Function_.",
+  "q": "یک مثال ساده از Hash Function بدهید.",
+  "qa": "**تابع parity** می‌تواند مثالی ابتدایی از **تابع هش** باشد: یک ورودی (معمولاً عدد صحیح) می‌گیرد و بر اساس زوج یا فرد بودن عدد ورودی، `0` یا `1` برمی‌گرداند. در عمل، توابع واقعی مثل FNV-1a و MurmurHash پراکندگی بهتری دارند."
+ },
+ {
+  "en": "What are _Hash Collisions_?",
+  "q": "Hash Collision چیست؟",
+  "qa": "در توابع و جدول‌های هش، **برخورد هش** وقتی رخ می‌دهد که دو کلید متمایز مقدار هش یا اندیس یکسانی تولید کنند. رسیدگی کارآمد به این برخوردها (زنجیره‌سازی یا آدرس‌دهی باز) برای حفظ کارایی hash table حیاتی است."
+ },
+ {
+  "en": "Describe the characteristics of a good hash function.",
+  "q": "ویژگی‌های یک تابع هش خوب را توصیف کنید.",
+  "qa": "یک **تابع هش خوب** برای مدیریت کارآمد داده در **hash table**ها یا هنگام به‌کارگیری تکنیک‌هایی مثل **رمزنگاری مبتنی بر هش** بنیادین است. ویژگی‌های کیفیت: **قطعیت** (همان ورودی → همان خروجی)، **پراکندگی یکنواخت** (کمینه کردن برخوردها)، **سرعت محاسبه** و **اثر بهمنی** (تغییر کوچک ورودی، خروجی کاملاً متفاوت)."
+ },
+ {
+  "en": "How can the choice of a hash function impact the efficiency of a hash table?",
+  "q": "انتخاب تابع هش چطور بر کارایی hash table اثر می‌گذارد؟",
+  "qa": "کارایی **hash table** به‌طور قابل توجهی به تابع هش استفاده‌شده وابسته است: تابع نامناسب می‌تواند به **خوشه‌بندی (clustering)** منجر شود — چند کلید به یک bucket می‌روند — و **کارایی** را به **O(n)** تنزل دهد؛ عملاً hash table به فهرستی نامرتب تبدیل می‌شود."
+ },
+ {
+  "en": "What is a _Tree Data Structure_?",
+  "q": "ساختار داده‌ی درخت (Tree) چیست؟",
+  "qa": "**ساختار داده‌ی درخت** مجموعه‌ای سلسله‌مراتبی از گره‌هاست که معمولاً با ریشه در بالا تصور می‌شود. درخت‌ها به‌طور معمول برای نمایش روابط و سلسله‌مراتب‌ها و تسهیل عملیات کارآمد داده به کار می‌روند — مثل سیستم فایل‌ها و درخت DOM."
+ },
+ {
+  "en": "What is a _Binary Search Tree_?",
+  "q": "Binary Search Tree چیست؟",
+  "qa": "**درخت جست‌وجوی دودویی** (BST) درختی دودویی بهینه‌شده برای عملیات سریع lookup، insert و delete است. BST خاصیت متمایزی دارد: زیردرخت چپ هر گره مقادیر کوچک‌تر از آن گره و زیردرخت راست مقادیر بزرگ‌تر را نگه می‌دارد."
+ },
+ {
+  "en": "How is an _AVL Tree_ different from a _B-Tree_?",
+  "q": "AVL Tree چه تفاوتی با B-Tree دارد؟",
+  "qa": "درخت‌های جست‌وجوی متعادل — مثل **درخت‌های AVL** و **B-Tree** — عمدتاً برای عملیات **جست‌وجوی سریع** و بهینه طراحی شده‌اند؛ با این حال هرکدام خواص اصلی و کاربردهای خاص خودش را دارد: AVL درخت دودویی در حافظه است با تعادل سخت‌گیرانه (تفاوت ارتفاع ≤ ۱) و مناسب جست‌وجوی فراوان؛ **B-Tree** چندفرزندی و پرگرد است، برای دیسک و بلوک‌های page-size طراحی شده و در دیتابیس‌ها و سیستم فایل‌ها استاندارد است."
+ },
+ {
+  "en": "How can a _Fenwick Tree (Binary Indexed Tree)_ be beneficial in algorithm design?",
+  "q": "Fenwick Tree (Binary Indexed Tree) چطور در طراحی الگوریتم مفید است؟",
+  "qa": "**درخت فنویک** یا Binary Indexed Tree (BIT) ساختاری فوق‌کارآمد است که به‌طور خاص برای **کوئری‌های بازه‌ای و به‌روزرسانی نقطه‌ای** روی مجموعه داده‌های ترتیبی بزرگ — مثل آرایه‌ها — مناسب است: جمع پیشوندی را در O(log n) به‌روزرسانی و کوئری می‌کند. نقطه‌ی قوت اصلی‌اش **سرعت عملیات update و query** با پیاده‌سازی کوتاه و حافظه‌ی کم است."
+ },
+ {
+  "en": "What is a _Splay Tree_, and how does its _splay operation_ work?",
+  "q": "Splay Tree چیست و عملیات splay آن چطور کار می‌کند؟",
+  "qa": "**درخت Splay** نوعی درخت جست‌وجوی دودویی خودتنظیم است که بر اساس الگوهای دسترسی اخیر به داده، خود را بازآرایی می‌کند. این کار را با عملیات‌های «splaying» انجام می‌دهد: پس از هر دسترسی، گره‌ی دست‌رسیده با چرخش‌های زیگزاگ/زیگزاگ-زیگ به **ریشه** می‌آید — عناصر پرتکرار نزدیک ریشه می‌مانند و هزینه‌ی amortized هر عملیات O(log n) است."
+ },
+ {
+  "en": "How does a _Linked List_ manage memory allocation differently from an _Array_?",
+  "q": "Linked List حافظه را چه‌طور متفاوت از Array مدیریت می‌کند؟",
+  "qa": "بیایید بررسی کنیم **لیست‌های پیوندی و آرایه‌ها** از نظر مدیریت حافظه چه تفاوتی دارند و پیامدهایش بر مدیریت داده و پیچیدگی محاسباتی چیست: آرایه یک بلوک **پیوسته** می‌گیرد (locality عالی برای cache، ولی نیاز به اندازه/resize)؛ لیست پیوندی گره‌به‌گره از حافظه‌ی پراکنده تخصیص می‌گیرد (رشد بدون جابه‌جایی، ولی سربار اشاره‌گر و cache miss بیشتر)."
+ },
+ {
+  "en": "Compare _Array-based_ vs _Linked List_ stack implementations.",
+  "q": "پیاده‌سازی پشته بر پایه‌ی آرایه و لیست پیوندی را مقایسه کنید.",
+  "qa": "**پشته‌های آرایه‌ای** در کارایی زمانی و دسترسی مستقیم به عناصر عالی‌اند؛ در مقابل، **پشته‌های لیست پیوندی** برای اندازه‌گیری پویا و درج/حذف آسان ترجیح داده می‌شوند — بدون سرریز و بدون resize، ولی با سربار حافظه‌ی گره و cache miss بیشتر."
+ },
+ {
+  "en": "How do _Linked Lists_ perform in comparison with _Trees_ for various operations?",
+  "q": "عملکرد Linked List در مقایسه با Tree برای عملیات‌های مختلف چگونه است؟",
+  "qa": "بیایید **پیچیدگی زمان و فضا**ی عملیات‌های رایج در **لیست‌های پیوندی** و **درخت‌ها** را بررسی و مبادلات هر ساختار داده را روشن کنیم: لیست پیوندی پیمایش و جست‌وجوی O(n) دارد؛ درخت جست‌وجوی متعادل همان جست‌وجو را O(log n) می‌کند. در مقابل، لیست پیوندی ساده‌تر است و حافظه‌ی کمتری به ازای هر گره دارد."
+ },
+ {
+  "en": "How to apply _Binary Search_ in _O(log n)_ on a _Sorted Linked List_? (Skip Lists).",
+  "q": "چطور Binary Search را در O(log n) روی Sorted Linked List اعمال کنیم؟ (Skip Lists)",
+  "qa": "هرچند **Binary Search** پیچیدگی زمانی $O(\\log n)$ دارد، اعمال آن روی لیست پیوندی یک‌طرفه به‌سادگی ممکن نیست، به دلیل ماهیت خطی لیست و زمان دسترسی $O(n)$ آن. اما **Skip List** راه‌حل هوشمندانه‌ای برای رسیدن به زمان جست‌وجوی زیرخطی در لیست‌های پیوندی ارائه می‌دهد: چند سطح پیوند پرشی می‌سازد تا search/insert/delete در O(log n) (به‌طور احتمالاتی) انجام شود."
+ },
+ {
+  "en": "Compare _Adjacency Lists_ and _Adjacency Matrices_ for graph representation.",
+  "q": "Adjacency List و Adjacency Matrix را برای نمایش گراف مقایسه کنید.",
+  "qa": "گراف‌ها را می‌توان به روش‌های مختلفی نمایش داد، اما **ماتریس مجاورت** و **فهرست مجاورت** رایج‌ترین ساختارهای داده‌اند. هر روش مزایا و مبادلات متمایزی دارد: ماتریس O(V²) حافظه می‌خواهد ولی بررسی «یال هست؟» در O(1) است؛ فهرست O(V+E) حافظه می‌خواهد و برای گراف‌های خلوت بهینه است، ولی بررسی یال به اندازه‌ی درجه‌ی رأس طول می‌کشد."
+ },
+ {
+  "en": "_Insert_ an item into the _Heap_. Explain your actions.",
+  "q": "یک عنصر را در Heap درج کنید. اقداماتتان را توضیح دهید.",
+  "qa": "فرض کنید یک **heap دودویی** به شکل زیر داریم: عنصر جدید را در انتهای آرایه می‌گذاریم و با **sift-up** آن را بالا می‌بریم — در هر گام با والد مقایسه و در صورت نقض خاصیت heap جابه‌جا می‌کنیم. هزینه: O(log n)."
+ },
+ {
+  "en": "Compare _Heaps-Based_ vs. _Arrays-Based_ priority queue implementations.",
+  "q": "پیاده‌سازی صف اولویت‌دار بر پایه‌ی heap و آرایه را مقایسه کنید.",
+  "qa": "بیایید ساختارهای داده‌ی **آرایه** و **heap دودویی** را که برای **پیاده‌سازی صف اولویت‌دار** استفاده می‌شوند، از نظر الگوریتم‌ها و ویژگی‌های کارایی مقایسه کنیم: آرایه‌ی مرتب extract-min در O(1) ولی insert در O(n)؛ آرایه‌ی نامرتب برعکس؛ **heap** هر دو عملیات را در O(log n) و peek را در O(1) می‌دهد — انتخاب استاندارد."
+ },
+ {
+  "en": "Explain _Heapify_ and where it is used in heap operations.",
+  "q": "Heapify را توضیح دهید و بگویید در کدام عملیات‌های heap استفاده می‌شود.",
+  "qa": "**Heapify** روشی است که تضمین می‌کند **خاصیت heap** برای یک آرایه‌ی مشخص برقرار بماند و معمولاً در پس‌زمینه‌ی **عملیات‌های heap** اجرا می‌شود: در build-heap از پایین به بالا (O(n))، بعد از extract-max (sift-down) و بعد از افزایش مقدار کلید."
+ },
+ {
+  "en": "How does _Heap Sort_ compare to _Quick Sort_ in terms of speed and memory usage?",
+  "q": "Heap Sort از نظر سرعت و مصرف حافظه با Quick Sort چطور مقایسه می‌شود؟",
+  "qa": "بیایید یک الگوریتم مرتب‌سازی نو و یک الگوریتم سنتی را و ویژگی‌های کارایی‌شان را مقایسه کنیم: هر دو O(n log n) متوسط و in-place‌اند. **Quick Sort** در عمل به لطف locality و سازگاری با cache سریع‌تر است (ولی بدترین حالت O(n²) با pivot بد)؛ **Heap Sort** بدترین حالت تضمین‌شده‌ی O(n log n) و حافظه‌ی O(1) دارد، ولی پرش‌های مکرر در آرایه cache-unfriendly است."
+ },
+ {
+  "en": "Explain the _FIFO (First In, First Out)_ policy that characterizes a _Queue_.",
+  "q": "سیاست FIFO که صف را توصیف می‌کند را توضیح دهید.",
+  "qa": "سیاست **FIFO (اولین ورود، اولین خروج)** نحوه‌ی مدیریت عناصر در **صف‌ها** را تعیین می‌کند: عناصر به همان ترتیبی که اضافه شده‌اند پردازش و خارج می‌شوند. ساختارهای داده‌ای که این سیاست را رعایت می‌کنند دقیقاً برای بهینه‌سازی همین اصل طراحی شده‌اند و برای طیف گسترده‌ای از کاربردهای واقعی ایده‌آل‌اند."
+ },
+ {
+  "en": "Name some _Types of Queues_.",
+  "q": "چند نوع Queue نام ببرید.",
+  "qa": "**صف‌ها** ساختارهای داده‌ی انعطاف‌پذیر با انواع متنوع‌اند که هرکدام برای وظایف خاص بهینه شده‌اند: صف ساده (FIFO)، **صف دودویی (deque)** با افزودن/حذف از هر دو سر، **صف اولویت‌دار** بر اساس اولویت، صف حلقوی (circular) با اندکس‌های پیچان، و صف دوجانبه. انواع صف‌ها و عملکردشان را در ادامه بررسی می‌کنیم."
+ },
+ {
+  "en": "Can a queue be implemented as a static data structure and if so, what are the limitations?",
+  "q": "آیا صف می‌تواند ساختاری ایستا پیاده‌سازی شود؟ اگر بله، محدودیت‌هایش چیست؟",
+  "qa": "**صف‌های ایستا** با مقدار حافظه‌ی از پیش تعیین‌شده — معمولاً آرایه — برای مدیریت کارآمد داده‌ی FIFO کار می‌کنند. محدودیت‌ها: ظرفیت ثابت (سرریز وقتی پر شود)، اتلاف حافظه وقتی خالی بماند، و نیاز به طراحی حلقوی برای استفاده‌ی مجدد از فضای آزادشده."
+ },
+ {
+  "en": "Discuss a scenario where _dequeue_ must be prioritized over _enqueue_ in terms of complexity.",
+  "q": "سناریویی را بررسی کنید که dequeue باید از نظر پیچیدگی بر enqueue اولویت داشته باشد.",
+  "qa": "هرچند در صف ساده **enqueue** معمولاً O(1) و **dequeue** هم O(1) (یا در پیاده‌سازی‌های خاصی O(n)) است، مواردی وجود دارد — مثل ساختار صف‌سازی‌شده با دو پشته — که یکی از عملیات گران می‌شود؛ وقتی مصرف‌کننده‌ها حساسیت زمانی دارند (مثل پردازش real-time)، اولویت با dequeue است: باید همیشه سریع پاسخ بدهد حتی اگر enqueue گران‌تر شود."
+ },
+ {
+  "en": "Name some _Queue Implementations_. Compare their efficiency.",
+  "q": "چند پیاده‌سازی Queue نام ببرید و کارایی‌شان را مقایسه کنید.",
+  "qa": "**صف‌ها** را می‌توان با ساختارهای زیربنایی مختلفی ساخت که هرکدام مبادلات خودشان را در کارایی و پیچیدگی دارند: آرایه‌ی حلقوی (همه‌ی عملیات O(1)، حافظه‌ی کم، ظرفیت ثابت)، لیست پیوندی (O(1)، اندازه‌ی پویا، سربار گره)، دو پشته (amortized O(1))، و صف اولویت‌دار با heap (O(log n) برای عملیات‌های اولویتی)."
+ },
+ {
+  "en": "How do different _programming languages_ implement and manipulate _Strings_?",
+  "q": "زبان‌های برنامه‌نویسی مختلف رشته‌ها را چطور پیاده‌سازی و دستکاری می‌کنند؟",
+  "qa": "بیایید نگاهی به راه‌های کلیدی که زبان‌های برنامه‌نویسی مختلف رشته‌ها را مدیریت می‌کنند بیندازیم — از معناشناسی **mutable** در برابر **immutable** تا **رمزگذاری کاراکتر** و بیشتر: Java و Python و JS رشته‌ی immutable دارند (هر تغییر شیء جدید)، ++C رشته‌ی mutable با std::string، و رمزگذاری از UTF-8 تا UTF-16 داخلی متفاوت است — این تفاوت‌ها روی کارایی چسباندن، حافظه و امنیت اثر می‌گذارند."
+ },
+ {
+  "en": "Why are _Character arrays_ preferred over _Strings_ for passwords?",
+  "q": "چرا برای رمز عبور آرایه‌های کاراکتری به رشته‌ها ترجیح داده می‌شوند؟",
+  "qa": "هرچند **رشته‌ها** همه‌کاره‌اند، به دلیل تغییرناپذیری و ریسک‌های مرتبط با ماندگاری داده در حافظه، **ذخیره‌سازی ایده‌آل برای رمز عبور یا داده‌های حیاتی نیستند**: نمی‌توان محتوایشان را صریحاً پاک کرد و ممکن است تا زمان GC در حافظه بمانند. آرایه‌های کاراکتری را می‌توان بعد از استفاده با صفر بازنویسی کرد."
+ },
+ {
+  "en": "What is a _Rope_ data structure?",
+  "q": "ساختار داده‌ی Rope چیست؟",
+  "qa": "**Rope** — معروف به **String-Tree** — ساختاری درختی دودویی است که برای عملیات کارآمد دستکاری رشته مثل چسباندن، درج و حذف بهینه شده: رشته در برگ‌های درخت تکه‌تکه ذخیره می‌شود و هر عملیات فقط مسیرهای لازم را تغییر می‌دهد، نه کل رشته را."
+ },
+ {
+  "en": "Name key _Advantages_ and _Limitations_ of _Ropes_.",
+  "q": "مزایای کلیدی و محدودیت‌های Ropeها را نام ببرید.",
+  "qa": "**ساختار داده‌ی Rope** در بعضی سناریوها عالی عمل می‌کند اما بدون محدودیت هم نیست: مزایا — چسباندن/درج/حذف در O(log n) بدون کپی کل رشته؛ محدودیت‌ها — پیاده‌سازی پیچیده‌تر، دسترسی به کاراکتر تکی کندتر (O(log n)) و سربار حافظه‌ی گره‌ها که برای رشته‌های کوچک نمی‌ارزد."
+ },
+ {
+  "en": "What are some _Practical Applications_ of a _Ropes_?",
+  "q": "چند کاربرد عملی از Ropeها چیست؟",
+  "qa": "ساختار داده‌ی **rope** در سال ۱۹۹۵ توسط Hans-J. Boehm و Russ Atkinson توسعه یافت تا ناکارایی‌های رشته‌های متعارف را حل کند — به‌ویژه درباره‌ی مدیریت حافظه، تغییرپذیری و کارایی در عملیات ویرایش: ویرایشگرهای متن با فایل‌های بزرگ، سیستم‌های undo/redo، ویرایش تعاونی و پردازش اسناد عظیم."
+ },
+ {
+  "en": "Compare _Ropes_ vs. _StringBuilders_.",
+  "q": "Ropeها و StringBuilderها را مقایسه کنید.",
+  "qa": "**Ropeها** و **StringBuilderها** ابزارهایی هستند که برای سناریوهای خاص دستکاری رشته بهینه شده‌اند؛ هرکدام نقاط قوت و ضعف یکتایی دارند که آن‌ها را برای موارد استفاده‌ی متمایز مناسب می‌کند: **StringBuilder** برای ساخت رشته از قطعات متوالی عالی است (append سریع)؛ **Rope** برای ویرایش‌های میانی مکرر (درج/حذف وسط متن) و نسخه‌بندی بهتر است."
+ },
+ {
+  "en": "Compare the performance of _Strings_ vs. _Ropes_.",
+  "q": "کارایی رشته‌ها (Strings) و Ropeها را مقایسه کنید.",
+  "qa": "بیایید **رشته‌ها** و **ropeها** را از منظر کارایی مقایسه کنیم: برای رشته‌های کوچک و عملیات ساده، رشته‌ی معمولی سریع‌تر و ساده‌تر است؛ برای رشته‌های عظیم با ویرایش مکرر، **Rope** چسباندن و درج را در O(log n) انجام می‌دهد در حالی که رشته‌ی immutable هزینه‌ی کپی کامل O(n) می‌گذارد."
+ },
+ {
+  "en": "What is a _Binary Search Tree_ (BST)?",
+  "q": "Binary Search Tree (BST) چیست؟",
+  "qa": "**درخت جست‌وجوی دودویی** (BST) درختی دودویی بهینه‌شده برای عملیات سریع lookup، insert و delete است. BST خاصیت متمایزی دارد: زیردرخت چپ هر گره مقادیر کوچک‌تر از آن گره و زیردرخت راست مقادیر بزرگ‌تر را نگه می‌دارد."
+ },
+ {
+  "en": "What are _Advantages_ and _Disadvantages_ of a _Trie_?",
+  "q": "مزایا و معایب Trie چیست؟",
+  "qa": "**Trie** ساختاری درختی است که برای عملیات رشته‌ای بهینه شده؛ مزیت‌های متمایزی دارد اما عیب‌های مشخصی هم: مزایا — جست‌وجوی وابسته به طول کلمه (نه تعداد کلمات)، اشتراک پیشوندها، پشتیبانی طبیعی از autocomplete؛ معایب — حافظه‌ی قابل توجه برای الفباهای بزرگ، پیاده‌سازی پیچیده‌تر از hash table و عملکرد ضعیف روی رشته‌های بلند و کم‌اشتراک."
+ },
+ {
+  "en": "Explain the use of a _Trie_ in IP Routing to match IP prefixes.",
+  "q": "استفاده از Trie در مسیریابی IP برای تطبیق پیشوندهای IP را توضیح دهید.",
+  "qa": "**Trieها** ساختارهای داده‌ی پیشرفته‌ای هستند که به‌طور خاص برای تطبیق کارآمد پیشوند طراحی شده‌اند. همین کیفیت آن‌ها را نه‌تنها قدرتمند بلکه در **مسیریابی IP** غیرقابل‌جایگزین می‌کند: آدرس‌های مقصد به‌صورت بیتی در trie ذخیره می‌شوند و longest prefix match در O(طول آدرس) انجام می‌شود."
+ },
+ {
+  "en": "Name some _Trie Implementation_ strategies.",
+  "q": "چند استراتژی پیاده‌سازی Trie نام ببرید.",
+  "qa": "برای **پیاده‌سازی trie** استراتژی‌های مختلفی در دسترس است: آرایه‌ی ثابت فرزندان (سریع‌ترین lookup، حافظه‌ی زیاد برای الفباهای بزرگ)، map/hash فرزندان (انعطاف‌پذیر)، لیست پیوندی فرزندان (حافظه‌ی کم، جست‌وجوی کندتر)، و Ternary Search Tree (تعادل بین سرعت و حافظه)."
+ },
+ {
+  "en": "Compare _Trie_ vs. _Binary Search Tree_.",
+  "q": "Trie و Binary Search Tree را مقایسه کنید.",
+  "qa": "هرچند **Trieها** برای وظایف مرتبط با رشته‌ها تخصص دارند و به‌ویژه برای مجموعه داده‌های با پیشوند مشترک فوق‌العاده کارآمدند، **BSTها** درخت‌های همه‌کاره‌ای هستند که می‌توانند هر داده‌ی ترتیب‌پذیری را ذخیره کنند. Trie بر اساس طول کلمه جواب می‌دهد؛ BST بر اساس عمق درخت (O(log n) در حالت متعادل)."
+ },
+ {
+  "en": "How to choose between a _Hash Table_ and a _Trie_?",
+  "q": "چطور بین Hash Table و Trie انتخاب می‌کنید؟",
+  "qa": "هر دو **Hash Table** و **Trie** ساختارهای داده‌ای هستند که برای ذخیره و بازیابی کارآمد داده به کار می‌روند. قاعده‌ی انتخاب: اگر فقط lookup کلید-مقدار لازم است → hash table (ساده و سریع)؛ اگر عملیات‌های پیشوندی (autocomplete، پیشوندهای مشترک، مرتب‌سازی لغوی) لازم است → Trie."
+ },
+ {
+  "en": "What is a _Suffix Trie_, and how does it differ from a standard _Trie_?",
+  "q": "Suffix Trie چیست و چه تفاوتی با Trie استاندارد دارد؟",
+  "qa": "**Suffix Trie** عملکرد trie معمولی را گسترش می‌دهد تا **همه‌ی پسوندهای** یک رشته را ثبت کند. هر دو ساختار برای زیررشته‌ها و جست‌وجوی متن مناسب‌اند؛ suffix trie جست‌وجوی هر زیررشته‌ی دلخواه را ممکن می‌کند ولی حافظه‌ی بیشتری مصرف می‌کند."
+ },
+ {
+  "en": "What are _Sorting Algorithms_?",
+  "q": "الگوریتم‌های مرتب‌سازی چیستند؟",
+  "qa": "**الگوریتم‌های مرتب‌سازی** روش‌هایی برای چیدن مجموعه داده در ترتیبی خاص — مثل عددی یا الفبایی — هستند. نقش حیاتی در **سازمان‌دهی** و بهینه‌سازی داده برای **جست‌وجو** و **پردازش** کارآمد دارند."
+ },
+ {
+  "en": "Classify _Sorting Algorithms_.",
+  "q": "الگوریتم‌های مرتب‌سازی را دسته‌بندی کنید.",
+  "qa": "**الگوریتم‌های مرتب‌سازی** را می‌توان بر اساس ویژگی‌هایشان دسته‌بندی کرد: **مبتنی بر مقایسه** (quick، merge، heap) در برابر **غیرمقایسه‌ای** (counting، radix، bucket)، in-place در برابر out-of-place، **پایدار (stable)** در برابر ناپایدار، و **adaptive** در برابر غیرadaptive؛ همچنین از نظر پیچیدگی: O(n²) برای ساده‌ها در برابر O(n log n)."
+ },
+ {
+  "en": "Explain the _Divide and Conquer_ paradigm in the context of _Sorting Algorithms_.",
+  "q": "الگوی Divide and Conquer را در بستر الگوریتم‌های مرتب‌سازی توضیح دهید.",
+  "qa": "**تقسیم و غلبه** تکنیک بنیادین طراحی الگوریتم است که مسئله را به زیرمسئله‌های کوچک‌تر و قابل مدیریت‌تر می‌شکند، هر زیرمسئله را جداگانه حل می‌کند و سپس راه‌حل‌ها را برای رسیدن به راه‌حل مسئله‌ی اصلی ترکیب می‌کند. در مرتب‌سازی: **merge sort** در مرحله‌ی ترکیب مرتب می‌کند و **quick sort** در همان مرحله‌ی تقسیم (partition)."
+ },
+ {
+  "en": "How does _Comparison-Based_ sorting differ from _Non-Comparison-Based_ sorting algorithms?",
+  "q": "مرتب‌سازی مبتنی بر مقایسه چه تفاوتی با مرتب‌سازی غیرمقایسه‌ای دارد؟",
+  "qa": "بیایید تفاوت‌های بنیادین بین الگوریتم‌های مرتب‌سازی **مقایسه‌ای** و **غیرمقایسه‌ای** را ببینیم: مقایسه‌ای‌ها فقط «کوچک‌تر/بزرگ‌تر» را می‌دانند و کف O(n log n) دارند؛ **غیرمقایسه‌ای** (counting، radix، bucket) از ساختار مقادیر بهره می‌برند و می‌توانند در O(n) برسند — به شرط محدود بودن دامنه‌ی داده."
+ },
+ {
+  "en": "What is the difference between _External_ and _Internal_ sorting?",
+  "q": "تفاوت مرتب‌سازی External و Internal چیست؟",
+  "qa": "**مرتب‌سازی خارجی** برای مدیریت کارآمد مجموعه داده‌های بزرگ طراحی شده که به‌طور کامل در حافظه‌ی سیستم جا نمی‌شوند: با ترکیبی از ذخیره‌سازی دیسک و حافظه این کار را انجام می‌دهد (مثل external merge sort با قطعه‌ها/chunkها). مرتب‌سازی داخلی همه‌ی داده را در حافظه دارد."
+ },
+ {
+  "en": "Define _Adaptive Sorting_ and provide an example of an adaptive sort algorithm.",
+  "q": "مرتب‌سازی Adaptive را تعریف کنید و مثالی از یک الگوریتم adaptive بدهید.",
+  "qa": "الگوریتم‌های **مرتب‌سازی adaptive** برای بهره‌گیری از ترتیب موجود مجموعه داده تنظیم شده‌اند: وقتی داده **نیمه‌مرتب** است، الگوریتم‌های adaptive می‌توانند سریع‌تر از غیرadaptiveها باشند. مثال: Timsort — مرتب‌سازی استاندارد Python و Java — که نمونه‌های مرتب (runs) را شناسایی و ادغام می‌کند؛ Insertion Sort هم روی داده‌ی تقریباً مرتب O(n) می‌شود."
+ },
+ {
+  "en": "How does the _Time Complexity_ of sorting algorithms change with respect to _Different Types of Input Data_?",
+  "q": "پیچیدگی زمانی الگوریتم‌های مرتب‌سازی با توجه به انواع ورودی چطور تغییر می‌کند؟",
+  "qa": "شناخت نحوه‌ی تغییر **پیچیدگی زمانی** مرتب‌سازی بر اساس **داده‌ی ورودی** به شما توانایی انتخاب کارآمدترین الگوریتم را می‌دهد: داده‌ی تقریباً مرتب → insertion sort و Timsort عالی؛ داده‌ی معکوس → bubble/insertion در بدترین حالت O(n²)؛ داده‌ی تصادفی → quicksort در متوسط عالی؛ دامنه‌ی محدود → counting/radix در O(n)."
+ },
+ {
+  "en": "What is _Bubble Sort_?",
+  "q": "Bubble Sort چیست؟",
+  "qa": "**Bubble Sort** الگوریتم مرتب‌سازی پایه‌ای و اغلب ناکارآمد است: به‌طور پیوسته عناصر مجاور را مقایسه و در صورت نیاز جابه‌جا می‌کند تا لیست مرتب شود — «حباب» بزرگ‌ترین عنصر به‌تدریج به انتها می‌رسد. O(n²) در حالت متوسط و بدترین."
+ },
+ {
+  "en": "Name some _Optimization Techniques_ for _Bubble Sort_.",
+  "q": "چند تکنیک بهینه‌سازی برای Bubble Sort نام ببرید.",
+  "qa": "**Bubble Sort** هرچند کارآمدترین نیست، می‌تواند از چندین اصلاح بهبوددهنده‌ی کارایی سود ببرد: **پرچم تعویض (swap flag)** — اگر در یک گذر هیچ جابه‌جایی نشد، توقف (داده‌ی مرتب → O(n))؛ **کاهش دامنه** — پس از هر گذر، آخرین عناصر مرتب‌شده را دیگر چک نکن؛ **Cocktail sort** — پیمایش دوجهته که عناصر کند (لاک‌پشت‌ها) را سریع‌تر جلو می‌برد."
+ },
+ {
+  "en": "What is _Insertion Sort_?",
+  "q": "Insertion Sort چیست؟",
+  "qa": "**Insertion Sort** الگوریتم مرتب‌سازی ساده و شهودی است که آرایه‌ی نهایی مرتب را یکی‌یکی می‌سازد — شبیه روشی که **کارت‌های بازی را در دست مرتب می‌کنیم**: هر کارت جدید را در جای درستش بین کارت‌های قبلی می‌گذارید. روی داده‌ی تقریباً مرتب O(n) و در بدترین حالت O(n²) است."
+ },
+ {
+  "en": "What is _Merge Sort_?",
+  "q": "Merge Sort چیست؟",
+  "qa": "**Merge Sort** الگوریتم مرتب‌سازی تقسیم‌وغلبه‌ای مقاوم و کارآمد است: لیست را به زیرلیست‌های متعدد می‌شکند تا هر زیرلیست فقط از یک عنصر تشکیل شود و سپس این زیرلیست‌ها را به‌طور مرتب ادغام می‌کند. پیچیدگی تضمینی O(n log n)، پایدار، ولی نیازمند حافظه‌ی O(n)."
+ },
+ {
+  "en": "Explain what is _Binary Search_.",
+  "q": "Binary Search چیست؟ توضیح دهید.",
+  "qa": "**Binary Search** الگوریتم جست‌وجوی بسیار کارآمدی است که اغلب برای **لیست‌های از پیش مرتب** پیاده‌سازی می‌شود: در هر گام فضای جست‌وجو را ۵۰٪ کاهش می‌دهد. این روش به‌ویژه زمانی مفید است که لیست به‌ندرت تغییر کند."
+ },
+ {
+  "en": "What are the _Drawbacks_ of _Sentinel Search_?",
+  "q": "معایب Sentinel Search چیست؟",
+  "qa": "**جست‌وجوی خطی با نگهبان** با کاهش میانگین مقایسه‌ها از حدود 2n به n + 2 به کمک مقدار نگهبان، کمی کارایی را نسبت به روش استاندارد بهتر می‌کند؛ اما معایبی دارد: نیاز به تغییر آرایه (نوشتن نگهبان در انتهایش که ممکن است مجاز نباشد یا کپی هزینه‌بر ایجاد کند) و اینکه یافته‌ی اندیس باید جداگانه بررسی شود تا از واقعی بودن یافتن مطمئن شویم."
+ },
+ {
+  "en": "Compare _Recursive_ vs. _Iterative Binary Search_.",
+  "q": "Binary Search بازگشتی و حلقه‌ای را مقایسه کنید.",
+  "qa": "هر دو Binary Search **بازگشتی** و **حلقه‌ای** از استراتژی **تقسیم‌وغلبه** برای جست‌وجو در داده‌های مرتب بهره می‌برند؛ تفاوت‌های پیاده‌سازی: بازگشتی خواناتر است ولی سربار پشته‌ی فراخوانی دارد؛ حلقه‌ای با while، حافظه O(1) و بدون سربار فراخوانی — انتخاب متداول در عمل."
+ },
+ {
+  "en": "How would you apply _Binary Search_ to an array of objects sorted by a specific key?",
+  "q": "چطور Binary Search را روی آرایه‌ای از اشیاء مرتب‌شده بر اساس یک کلید مشخص اعمال می‌کنید؟",
+  "qa": "بیایید بررسی کنیم چگونه می‌توان **Binary Search** را برای آرایه‌های مرتب اشیاء بهینه کرد: به‌جای مقایسه‌ی مستقیم عناصر، **تابع کلید** (مثلاً obj.id) یا **تابع مقایسه‌ی سفارشی** را در مقایسه‌های mid به کار می‌بریم؛ منطق نصف‌کردن فضای جست‌وجو دقیقاً یکسان می‌ماند."
+ },
+ {
+  "en": "List some characteristics that are often present in problems that are solvable by _greedy algorithms_.",
+  "q": "چند ویژگی که معمولاً در مسائل قابل‌حل با الگوریتم‌های حریصانه وجود دارد فهرست کنید.",
+  "qa": "الگوریتم‌های **حریصانه** برای مسائل بهینه‌سازی تنظیم شده‌اند که گرفتن انتخاب بهینه‌ی محلی در هر گام معمولاً به بهینه‌ی سراسری می‌رسد. ویژگی‌های رایج چنین مسائلی: **خاصیت انتخاب حریصانه**، **زیرساختار بهینه**، ساخت **افزایشی** راه‌حل، و وجود **ترتیب طبیعی** بین کاندیدها که مرتب‌سازی را ممکن می‌کند."
+ },
+ {
+  "en": "Compare _Greedy_ vs _Divide & Conquer_ vs _Dynamic Programming_ algorithms.",
+  "q": "الگوریتم‌های Greedy و Divide & Conquer و Dynamic Programming را مقایسه کنید.",
+  "qa": "بیایید بررسی کنیم الگوریتم‌های **حریصانه**، **تقسیم‌وغلبه** و **برنامه‌نویسی پویا** در معیارهای کلیدی مثل بهینگی، پیچیدگی محاسباتی و مصرف حافظه چه تفاوتی دارند: حریصانه سریع‌ترین و ساده‌ترین است ولی بهینگی تضمین ندارد؛ تقسیم‌وغلبه زیرمسئله‌های **مستقل** حل می‌کند؛ DP زیرمسئله‌های **همپوشان** را ذخیره می‌کند تا بهینگی تضمین شود — به قیمت حافظه و کد پیچیده‌تر."
+ },
+ {
+  "en": "Explain the _Greedy Choice Property_ and its significance in _greedy algorithms_.",
+  "q": "خاصیت انتخاب حریصانه (Greedy Choice Property) و اهمیتش در الگوریتم‌های حریصانه را توضیح دهید.",
+  "qa": "**خاصیت انتخاب حریصانه** ویژگی اصلی **الگوریتم‌های حریصانه** است که تضمین می‌کند بهینه‌های محلی به بهینه‌های سراسری می‌رسند: چنین الگوریتم‌هایی **تصمیم‌ها را به‌صورت تکراری** روی بخش‌های کوچک‌تر از مسئله‌ی بزرگ می‌گیرند و هدفشان بهینه‌سازی به سمت یک راه‌حل کلی است."
+ },
+ {
+  "en": "What is the role of _sorting_ in many _greedy algorithms_, and why is it often necessary?",
+  "q": "نقش مرتب‌سازی در بسیاری از الگوریتم‌های حریصانه چیست و چرا اغلب لازم است؟",
+  "qa": "**مرتب‌سازی** عملی بنیادین در بسیاری از **الگوریتم‌های حریصانه** است: این الگوریتم‌ها در هر گام انتخاب‌های بهینه‌ی محلی می‌گیرند و در نهایت هدفشان راه‌حل سراسری بهینه است — برای اینکه انتخاب «بهترین بعدی» ممکن باشد، کاندیدها باید در ترتیبی منطقی (مثلاً زمان پایان یا نسبت ارزش/وزن) دیده شوند."
+ },
+ {
+  "en": "Can _greedy algorithms_ be used to solve _optimization problems_? Give an example.",
+  "q": "آیا الگوریتم‌های حریصانه می‌توانند مسائل بهینه‌سازی را حل کنند؟ مثال بدهید.",
+  "qa": "بله، **الگوریتم‌های حریصانه** برای حل **مسائل بهینه‌سازی** طراحی شده‌اند: با گرفتن بهترین انتخاب‌های محلی در امید به دست آوردن بهینه‌ی سراسری. مثال‌ها: کدگذاری هافمن (کمینه‌سازی طول رمز)، الگوریتم Kruskal برای درخت پوشای کمینه، و زمان‌بندی فعالیت‌ها."
+ },
+ {
+  "en": "Explain the difference between _Divide & Conquer_ and _Dynamic Programming_.",
+  "q": "تفاوت Divide & Conquer و Dynamic Programming را توضیح دهید.",
+  "qa": "**تقسیم و غلبه** و **برنامه‌نویسی پویا (DP)** هر دو الگوهای طراحی الگوریتم‌اند که مسائل را به زیرمسئله‌های کوچک‌تر و قابل مدیریت‌تر تجزیه می‌کنند؛ تکنیک‌ها به هم نزدیک‌اند و اغلب ویژگی‌های همپوشان دارند. اما در سطح ریز در سه نقطه تفاوت بنیادی دارند: **تجزیه‌ی مسئله** (DP: همپوشان؛ D&C: مستقل)، **راه‌حل زیرمسئله‌ها** و **سازوکار بازاستفاده‌ی زیرمسئله** (DP با جدول/memoization زیرمسئله‌ها را دوباره به کار می‌گیرد)."
+ },
+ {
+  "en": "Describe how you would use _Divide & Conquer_ to find the _maximum_ and _minimum_ of an _array_.",
+  "q": "توصیف کنید چطور با Divide & Conquer بیشینه و کمینه‌ی یک آرایه را پیدا می‌کنید.",
+  "qa": "**تقسیم و غلبه** تکنیکی کارآمد برای مسائل مختلف است، از جمله یافتن مقادیر **بیشینه** و **کمینه** در یک آرایه: آرایه را به دو نیم تقسیم می‌کنیم، min/max هر نیم را بازگشتی می‌یابیم و سپس دو به دو مقایسه می‌کنیم — تعداد مقایسه‌ها حدود 3n/2 می‌شود، بهتر از روش ساده‌ی 2(n−1)."
+ },
+ {
+  "en": "Illustrate how the _Merge Sort_ algorithm exemplifies the _Divide & Conquer_ technique.",
+  "q": "نشان دهید چگونه الگوریتم Merge Sort نمونه‌ای از تکنیک Divide & Conquer است.",
+  "qa": "**Merge Sort** الگوریتمی کلاسیک است که تکنیک **تقسیم و غلبه** را برای مرتب‌سازی کارآمد در حوزه‌های مختلف — مثل مدیریت داده و مرتب‌سازی خارجی — به کار می‌گیرد: فرایند شامل شکستن مسئله‌ی اولیه (آرایه‌ی داده برای مرتب‌سازی) به زیرمسئله‌های کوچک‌تر و قابل مدیریت‌تر است — Divide: نصف کردن؛ Conquer: مرتب‌سازی بازگشتی؛ Combine: ادغام دو لیست مرتب."
+ },
+ {
+  "en": "How does _backtracking_ differ from _brute force_ methods?",
+  "q": "backtracking چه تفاوتی با روش‌های brute force دارد؟",
+  "qa": "الگوریتم‌های **backtracking** و **brute force** هر دو **همه‌ی راه‌حل‌های بالقوه را بررسی می‌کنند** اما در متدولوژی، کارایی و محدودیت‌های خاص مسئله که به کار می‌گیرند تفاوت دارند: brute force هر ترکیب را کامل می‌سازد و می‌سنجد؛ backtracking به محض نقض محدودیت‌ها شاخه را **هرس** می‌کند و از بررسی زیرشاخه‌ها صرف‌نظر می‌کند."
+ },
+ {
+  "en": "Discuss common optimizations in _backtracking_ to _improve efficiency_.",
+  "q": "بهینه‌سازی‌های رایج در backtracking برای بهبود کارایی را بررسی کنید.",
+  "qa": "الگوریتم‌های **backtracking** را می‌توان با استراتژی‌های مختلفی بهبود داد: **هرس زودهنگام** (pruning) با بررسی محدودیت‌ها در میانه‌ی مسیر، **مرتب‌سازی کاندیدها** (گزینه‌های محتمل‌تر اول)، **ترتیب متغیرها** (MRV)، **memoization** برای حالت‌های تکراری، و انتشار محدودیت (constraint propagation) برای محدود کردن دامنه‌ی مقادیر."
+ },
+ {
+  "en": "How does _backtracking_ relate to other algorithmic paradigms like _divide and conquer_?",
+  "q": "backtracking با پارادایم‌های الگوریتمی دیگری مثل divide and conquer چه نسبتی دارد؟",
+  "qa": "**Backtracking** و **تقسیم‌وغلبه** هر دو استراتژی در طراحی الگوریتم‌اند اما به روش‌های متمایزی عمل می‌کنند: تقسیم‌وغلبه مسئله را به زیرمسئله‌های **مستقل** می‌شکند و راه‌حل‌ها را ترکیب می‌کند؛ backtracking کاندیدها را به‌صورت **جست‌وجوی عمق‌اول** می‌سازد و در بن‌بست عقب‌نشینی می‌کند — هدفش یافتن راه‌حل‌های قابل قبول است، نه تجزیه‌ی ساختاری مسئله."
+ },
+ {
+  "en": "Describe the role of _pruning_ in _backtracking algorithms_.",
+  "q": "نقش هرس (pruning) در الگوریتم‌های backtracking را توصیف کنید.",
+  "qa": "**هرس** در بستر backtracking به تکنیک‌هایی گفته می‌شود که با حذف هوشمندانه‌ی **کاندیداهای بی‌امید**، **فضای جست‌وجو را کم می‌کنند**: به‌محض اینکه مشخص شود حالت جزئی نمی‌تواند به راه‌حل معتبر برسد، کل شاخه رها می‌شود. همین است که backtracking را از جست‌وجوی کورکورانه جدا می‌کند."
+ },
+ {
+  "en": "Explain the importance of _backtracking_ in _recursive algorithm design_.",
+  "q": "اهمیت backtracking در طراحی الگوریتم‌های بازگشتی را توضیح دهید.",
+  "qa": "**Backtracking** در بسیاری از الگوریتم‌های بازگشتی محوری است چون با خاتمه دادن به جست‌وجوهایی که به راه‌حل منتهی نمی‌شوند، منابع را ذخیره می‌کند. این تکنیک هرس معمولاً شامل یک **جست‌وجوی عمق‌اول** است که در الگوریتم‌های گرافی و مسائل بهینه‌سازی رایج است."
+ },
+ {
+  "en": "Are there any safety considerations when determining the _Recursion Depth_? If yes, provide an example.",
+  "q": "آیا در تعیین عمق بازگشت ملاحظات امنیتی وجود دارد؟ اگر بله مثال بدهید.",
+  "qa": "بله — هنگام برخورد با بازگشت، **عمق بازگشت بیش از حد** می‌تواند به خطاهای stack overflow یا در موارد نادر به آسیب‌پذیری‌های امنیتی منجر شود: ورودی‌های مخرب که بازگشت عمیق القا می‌کنند (مثل JSON یا XML تودرتوی عمیق در parserها) می‌توانند crash یا DoS ایجاد کنند. راهکار: محدود کردن عمق، تبدیل به حلقه و اعتبارسنجی ورودی."
+ },
+ {
+  "en": "What is a _Bit_?",
+  "q": "Bit چیست؟",
+  "qa": "* **Bit**: یک واحد `2^0`. * **Nibble**: ۴ بیت (`2^4 = 16` مقدار ممکن، از `0` تا `15`) — اغلب با یک رقم **هگزادسیمال** (`0x0 … 0xF`) نمایش داده می‌شود. * **Byte (Octet)**: ۸ بیت (`2^8 = 256` مقدار ممکن، از `0` تا `255`). در سال ۲۰۲۶ بایت همچنان کوچک‌ترین واحد آدرس‌پذیر حافظه در معماری‌های استاندارد (`x86_64`, `ARMv9`) است."
+ },
+ {
+  "en": "What is a _Byte_?",
+  "q": "Byte چیست؟",
+  "qa": "**بایت** واحد استاندارد اطلاعات دیجیتال است که معمولاً از ۸ **بیت** تشکیل شده. در معماری مدرن به‌طور رسمی **octet** تعریف می‌شود: ۲⁸ = ۲۵۶ حالت یکتا را نمایش می‌دهد و می‌تواند مقادیر صحیح بدون علامت از ۰ تا ۲۵۵ را ذخیره کند."
+ },
+ {
+  "en": "Explain what is a _Bitwise Operation_.",
+  "q": "Bitwise Operation چیست؟ توضیح دهید.",
+  "qa": "**عملیات‌های بیتی** داده را در سطح بیت‌های تکی (۰ و ۱) دستکاری می‌کنند. در محاسبات مدرن این عملیات‌ها مستقیماً توسط **واحد محاسبات و منطق (ALU)** داخل CPU انجام می‌شوند — همین‌طور به‌طور چشمگیری از محاسبات حسابی سطح بالا سریع‌ترند."
+ },
+ {
+  "en": "What are some real-world applications of _Bitwise Operators_?",
+  "q": "چند کاربرد واقعی از عملگرهای بیتی (Bitwise Operators) چیست؟",
+  "qa": "**عملگرهای بیتی** ($AND, OR, XOR, NOT, \\ll, \\gg$) دستکاری مستقیم بیت‌های تکی در کلمه‌ی حافظه را ممکن می‌کنند. در ۲۰۲۶ این عملیات‌ها همچنان لایه‌ی بنیادین محاسبات پرکارایی‌اند جایی که پیچیدگی $O(1)$ و حافظه‌ی حداقلی لازم است: ماسک‌گذاری پرچم‌ها، مجموعه‌های بیتی، رمزنگاری، شمارش سریع و شبیه‌سازی stateها."
+ },
+ {
+  "en": "What is a _bitwise AND_ operation and how can it be used to check if a number is _odd_ or _even_?",
+  "q": "عملیات bitwise AND چیست و چطور می‌توان با آن زوج یا فرد بودن یک عدد را بررسی کرد؟",
+  "qa": "**bitwise AND** (`&`) عملیاتی دودویی بنیادین است که در سطح سخت‌افزار توسط **ALU** اجرا می‌شود: نمایش دودویی دو عدد صحیح را بیت‌به‌بیت مقایسه می‌کند. - بیت خروجی فقط وقتی `1` است که هر دو بیت ورودی متناظر `1` باشند. - در غیر این صورت بیت خروجی `0` است. برای زوج/فرد: `n & 1` — اگر نتیجه `1` بود عدد فرد و اگر `0` بود زوج است، چون فقط آخرین بیت نتیجه را تعیین می‌کند."
+ }
+]

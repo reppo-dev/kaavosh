@@ -1,0 +1,38 @@
+[
+ {
+  "file": "algorithms.json",
+  "includes": "such that _enqueue_ has _O(1)_",
+  "patch": {
+   "quickAnswer": {
+    "fa": "از یک آرایه پویا استفاده کن: افزودن به انتها O(1) و حذف از خانه صفر، همه‌ی عناصر را یک خانه جابه‌جا می‌کند — همان O(n) هدف.",
+    "en": "Use a dynamic array: appending is O(1) amortized, and removing index 0 shifts every remaining element — exactly the required O(n) dequeue."
+   },
+   "answerMd": "The cleanest construction is a **dynamic array**:\n\n- **enqueue** → append at the end: `arr.push(x)` — O(1) amortized.\n- **dequeue** → remove the element at index 0: `arr.shift()` — every remaining element moves one slot forward, which is exactly the required O(n).\n\nA singly linked list produces the same split if you **insert at the head** (O(1) enqueue) and **remove at the tail** — reaching the node *before* the tail forces a full traversal, so dequeue is O(n). (Enqueue at the tail and dequeue at the head would give O(1)/O(1) — that is the *fast* queue, not what this question asks for.)\n\n### Python example — array version\n\n```python\nclass SlowQueue:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, x):          # O(1) amortized\n        self.items.append(x)\n\n    def dequeue(self):             # O(n) — shifts every element left\n        return self.items.pop(0)\n```\n\nThis asymmetry is exactly why production runtimes ship a **deque** (double-ended queue): it makes both ends O(1)."
+  }
+ },
+ {
+  "file": "algorithms.json",
+  "includes": "What is _Sentinel Search_",
+  "patch": {
+   "answerMd": "A **Sentinel Search** is a linear-search optimization: you append the search key itself to the end of the list (the *sentinel*) before scanning. The loop is then guaranteed to find the key, so the per-iteration bounds check disappears — average comparisons drop from roughly 2n (loop test + increment) to about n + 2. After the scan, one final check confirms whether the hit was real data or just the sentinel.\n\n**Complexity:** time O(n), extra space O(1).\n\n**Common confusion:** Sentinel Search is *not* the same as **self-organizing list** techniques such as Move-to-Front or Transpose. Those reorder entries based on access frequency to speed up *future* searches; the sentinel only removes the bounds check for the *current* search. A reordering heuristic can be combined with a sentinel, but they are independent optimizations.\n\n### Python example\n\n```python\ndef sentinel_search(arr, key):\n    last = len(arr) - 1\n    if last < 0:\n        return -1\n    old = arr[last]\n    arr[last] = key              # plant the sentinel\n    i = 0\n    while arr[i] != key:         # no bounds check needed\n        i += 1\n    arr[last] = old              # restore\n    if i < last or old == key:   # real hit?\n        return i\n    return -1\n```"
+  }
+ },
+ {
+  "file": "backend.json",
+  "includes": "detect and handle WebSocket connection loss",
+  "patch": {
+   "answerMd": "### Connection Monitoring\n\n1. **Application-level heartbeats**: Browsers do **not** expose the WebSocket protocol's ping/pong control frames (RFC 6455 opcodes 0x9/0xA) to JavaScript — those are handled below the API surface. So implement an app-level heartbeat: send a small message (or a custom ping) on an interval (typically 30s) and treat the connection as dead when no response arrives within a shorter timeout T. Server-side frameworks (e.g. the `ws` library in Node.js) *do* expose native `ping()`/`pong()`.\n2. **Server-Side Monitoring**: Deploy **Prometheus** exporters to track `active_connections` via socket gauges, and **OpenTelemetry** trace spans to correlate socket lifecycle events with downstream microservice latency.\n3. **Client-Side Tracking**: Use the `onclose` and `onerror` event listeners, reconnect with exponential backoff + jitter, and — in React — wrap socket state in `useSyncExternalStore` or a custom hook so the component tree stays consistent."
+  }
+ },
+ {
+  "file": "backend.json",
+  "includes": "overload or override static methods",
+  "patch": {
+   "answerMd": "**Short answer:** static methods can be **overloaded** (same name, different parameter lists) but they cannot be truly **overridden**.\n\n- **Overloading works**: two static methods with the same name and different signatures coexist; the compiler picks one by the arguments.\n- **Overriding does not**: static methods are bound statically (at compile time) to the class that declares them — there is no runtime dispatch through instances. Declaring a static method with the same signature in a subclass only **hides** the parent version.\n- Practical rule: if you need polymorphic dispatch, make the method an instance method (or use class-level composition).",
+   "quickAnswer": {
+    "fa": "متدهای static را می‌توان overload کرد ولی override واقعی نه — چون binding در زمان کامپایل انجام می‌شود و در زیرکلاس فقط «پنهان» می‌شوند.",
+    "en": "Static methods can be overloaded but not truly overridden — they bind statically at compile time; a same-signature static method in a subclass only hides the parent version."
+   }
+  }
+ }
+]

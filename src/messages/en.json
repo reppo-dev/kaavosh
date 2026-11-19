@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "title": "Kaavosh — Programming learning paths, from zero to hired",
+    "description": "Bilingual learning paths, step-by-step interview questions and code-animated concept explainers for the 2026 programming job market.",
+    "keywords": "learning paths, interview questions, programming, frontend, backend, devops, AI, cybersecurity"
+  },
+  "nav": {
+    "home": "Home",
+    "paths": "Learning Paths",
+    "interview": "Interview Prep",
+    "glossary": "Glossary",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLocale": "فارسی",
+    "switchLocaleAria": "Switch language to Persian"
+  },
+  "common": {
+    "back": "Back",
+    "search": "Search",
+    "searchPlaceholder": "Search…",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "noResults": "Nothing matched your search.",
+    "retrySearch": "Try a different keyword.",
+    "duration": "Duration",
+    "stages": "Stages",
+    "questions": "Questions",
+    "terms": "Terms",
+    "topics": "Topics",
+    "skills": "After this you can",
+    "resources": "Hand-picked resources",
+    "roles": "Where it can take you",
+    "difficulty": "Difficulty",
+    "quickAnswer": "The 30-second answer",
+    "stepByStep": "Broken into small steps",
+    "followUps": "What they usually ask next",
+    "visualExplainer": "Visual explainer",
+    "analogy": "Everyday analogy",
+    "related": "Related terms",
+    "codeExample": "Code example",
+    "tip": "Tip"
+  },
+  "difficulty": {
+    "junior": "Junior",
+    "mid": "Mid-level",
+    "senior": "Senior"
+  },
+  "resourceType": {
+    "docs": "Docs",
+    "video": "Video",
+    "course": "Course",
+    "book": "Book",
+    "interactive": "Interactive",
+    "roadmap": "Roadmap"
+  },
+  "hero": {
+    "badge": "Built for the 2026 job market",
+    "titleLine1": "Learn to code",
+    "titleLine2": "the way your brain",
+    "titleLine3": "actually works.",
+    "subtitle": "Six career paths, every interview question broken into beginner-friendly steps, and concepts you can watch instead of reading — all in Persian and English.",
+    "ctaPaths": "Explore the paths",
+    "ctaInterview": "Practice interviews",
+    "scrollHint": "Scroll to explore",
+    "terminal": {
+      "caption": "Every concept, explained like a story",
+      "line1": "$ kaavosh start --path frontend",
+      "line2": "✓ 5 stages · 12 animated explainers",
+      "line3": "✓ Interview questions, broken into steps",
+      "line4": "→ Your journey begins at stage 01…"
+    }
+  },
+  "landing": {
+    "paths": {
+      "eyebrow": "Learning paths",
+      "title": "One clear road, from your first line of code to job-ready",
+      "subtitle": "Each path is a sequence of stages with real durations, hand-picked resources and an animated explainer for the hard ideas.",
+      "stageUnit": "stages"
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Four steps, zero guesswork",
+      "subtitle": "The whole site is built around one idea: big scary topics become small friendly steps.",
+      "step1": {
+        "title": "Pick your road",
+        "detail": "Six paths — frontend, backend, DevOps & cloud, mobile, AI/ML and cybersecurity. Each one shows total duration and the jobs it leads to."
+      },
+      "step2": {
+        "title": "Watch ideas move",
+        "detail": "Hard concepts come alive as code-drawn animations: an HTTP request travels, the event loop spins, containers multiply. No videos to download — it all runs in your browser."
+      },
+      "step3": {
+        "title": "Drill the questions",
+        "detail": "Real interview questions with the 30-second answer first, then the same answer broken into small steps a total beginner can follow."
+      },
+      "step4": {
+        "title": "Walk in confident",
+        "detail": "Track what you've covered, revisit the glossary, and walk into the interview already speaking the team's language."
+      }
+    },
+    "explainers": {
+      "eyebrow": "Concept animations",
+      "title": "See the idea, not just the words",
+      "subtitle": "When someone says “the browser sends a request”, most people see nothing in their head. These animations fix that — they're drawn with code, so they load instantly and stay crisp.",
+      "live": "Live — drawn in your browser"
+    },
+    "interview": {
+      "eyebrow": "Interview prep",
+      "title": "Answers built for real interviews",
+      "subtitle": "Each question gives you the short answer you say out loud, the step-by-step version that teaches it, typical follow-ups, and the code that proves it.",
+      "cta": "Browse all questions"
+    },
+    "stats": {
+      "eyebrow": "By the numbers",
+      "title": "Everything is real and complete",
+      "subtitle": "No “coming soon” placeholders — every number below is content that exists on this site right now.",
+      "statsPaths": "Career paths",
+      "statsStages": "Learning stages",
+      "statsQuestions": "Interview questions",
+      "statsAnimations": "Code-drawn animations"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions people actually ask",
+      "subtitle": "The short version of what this site is and how to use it."
+    },
+    "cta": {
+      "title": "Ready to start stage 01?",
+      "subtitle": "Pick a path and let the first animated concept load — that's the whole commitment.",
+      "button": "Choose my path"
+    }
+  },
+  "pathsPage": {
+    "eyebrow": "Learning paths",
+    "title": "Choose the road that fits you",
+    "subtitle": "Every path is written from absolute zero — no prior knowledge assumed — up to the level teams actually hire for.",
+    "backToPaths": "All paths",
+    "stageLabel": "Stage",
+    "ofLabel": "of",
+    "topicsLabel": "Topics you'll meet",
+    "roadmapTitle": "The roadmap",
+    "roadmapSubtitle": "Scroll slowly — the road draws itself as you go."
+  },
+  "interviewPage": {
+    "eyebrow": "Interview prep",
+    "title": "Real questions, step-by-step answers",
+    "subtitle": "Pick a field. Every question starts with the answer you'd say in the room, then teaches it in small steps.",
+    "backToFields": "All fields",
+    "filterAll": "All levels",
+    "questionsIn": "questions",
+    "updated": "Tuned for the 2026 hiring season",
+    "sourcesEyebrow": "Sources",
+    "sourcesTitle": "Interview sources",
+    "sourcesSubtitle": "The most-starred, actively-maintained GitHub repos for interview prep — stars and last-push dates verified via the GitHub API on November 18, 2026.",
+    "sourcesStars": "stars",
+    "sourcesUpdated": "last push",
+    "sourcesVisit": "View on GitHub",
+    "sourcesVerified": "Verified Nov 18, 2026"
+  },
+  "glossaryPage": {
+    "eyebrow": "Glossary",
+    "title": "Speak the team's language",
+    "subtitle": "383 terms across 11 categories, each with a plain definition and an everyday analogy — so jargon stops being a wall.",
+    "searchLabel": "Search terms",
+    "allCategories": "All"
+  },
+  "footer": {
+    "tagline": "Bilingual learning paths and interview prep for people starting from absolute zero.",
+    "sections": "Sections",
+    "paths": "Paths",
+    "interview": "Interview prep",
+    "glossary": "Glossary",
+    "disclaimer": "All content is original and educational. External links point to reputable references such as MDN, official documentation and roadmap.sh.",
+    "copyright": "Made with code, curiosity and a lot of animations."
+  },
+  "notFound": {
+    "title": "This page took a different path",
+    "subtitle": "The link you followed doesn't exist — but your learning path does.",
+    "cta": "Back to home"
+  }
+}

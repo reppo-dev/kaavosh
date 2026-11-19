@@ -68,6 +68,29 @@ export type VisualKind =
   | 'ci-cd-pipeline'
   | 'encryption'
   | 'mobile-lifecycle'
+  | 'binary-search'
+  | 'sorting'
+  | 'stack-queue'
+  | 'hash-table'
+  | 'linked-list'
+  | 'graph-traversal'
+  | 'memoization-dp'
+  | 'trie'
+  | 'star-method'
+  | 'jsx-flow'
+  | 'hooks-flow'
+  | 'redux-flow'
+  | 'promise-async'
+  | 'scope-closure'
+  | 'css-cascade'
+  | 'cache-flow'
+  | 'load-balance'
+  | 'k8s-cluster'
+  | 'llm-flow'
+  | 'widget-tree'
+  | 'sql-query'
+  | 'heap-sift'
+  | 'array-ops'
   | 'none';
 
 /* ───────────────────────────── Learning Paths ───────────────────────────── */
@@ -117,12 +140,28 @@ export interface LearningPath {
 
 export type Difficulty = 'junior' | 'mid' | 'senior';
 
+/**
+ * A click-to-open "deeper explanation" card attached to an answer.
+ * The marker appears next to the answer/step it explains.
+ */
+export interface DeepDive {
+  /** Stable kebab-case id, unique across the whole interview section. */
+  id: string;
+  title: Localized;
+  /** Thorough, verified explanation (this site may become a learning reference). */
+  detail: Localized;
+  /** Reputable source the explanation was checked against (optional). */
+  sourceUrl?: string;
+}
+
 export interface AnswerStep {
   title: Localized;
   /** Plain-language explanation, everyday analogy first, jargon second. */
   detail: Localized;
   /** Optional tiny snippet for this step. */
   code?: string;
+  /** Optional deep-dive card id shown as a clickable marker next to this step. */
+  deepDive?: string;
 }
 
 export interface InterviewQuestion {
@@ -139,6 +178,22 @@ export interface InterviewQuestion {
   /** What interviewers typically ask next. */
   followUps?: Localized[];
   visual?: VisualKind;
+  /** Glossary term keys attached as vocabulary cards (term strings from glossaryTerms). */
+  vocab?: string[];
+  /** Deep-dive cards: full objects for curated questions, ids resolved via deep-dives.ts for bank questions. */
+  deepDives?: (DeepDive | string)[];
+  /** Provenance: which source the question was imported/curated from. */
+  source?: string;
+  /** Imported questions: full original answer (English markdown, sanitized). */
+  answerMd?: string;
+  /** Imported code-output questions: the snippet the question refers to. */
+  questionCode?: string;
+  /** Imported questions are English originals — shown with an EN badge. */
+  lang?: 'en';
+  /** Persian title/quickAnswer override has been applied (bank question). */
+  hasFa?: boolean;
+  /** Reputable official sources to verify this answer against (MDN, official docs, …). */
+  sources?: string[];
 }
 
 export interface InterviewField {

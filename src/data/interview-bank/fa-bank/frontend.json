@@ -1,0 +1,302 @@
+[
+ {
+  "en": "Explain the difference between the _child combinator_ and the _descendant combinator_.",
+  "q": "تفاوت child combinator و descendant combinator را توضیح دهید.",
+  "qa": "**Child combinator** (>) و **descendant combinator** (فاصله) هر دو با CSS عنصرهای HTML را هدف می‌گیرند، اما به شکل‌های متفاوت عمل می‌کنند."
+ },
+ {
+  "en": "How would you select all direct _children elements_ of a particular type?",
+  "q": "چطور همه‌ی فرزندان مستقیم از یک نوع خاص را در CSS انتخاب می‌کنید؟",
+  "qa": "برای **انتخاب همه‌ی فرزندان مستقیم** یک نوع خاص، از **child selector** یعنی `>` ترکیب‌شده با عنصر موردنظر استفاده می‌شود."
+ },
+ {
+  "en": "What is the _CSS Box Model_?",
+  "q": "CSS Box Model چیست؟",
+  "qa": "**Box Model** مفهوم بنیادی CSS است که ساختار هر عنصر HTML را توصیف می‌کند: چهار جزء کلیدی **content**، **padding**، **border** و **margin**."
+ },
+ {
+  "en": "What are the different values for the _box-sizing_ property and what do they do?",
+  "q": "مقدارهای مختلف خاصیت box-sizing کدام‌اند و چه‌کار می‌کنند؟",
+  "qa": "خاصیت `box-sizing` سه مقدار ممکن دارد و رفتار محاسبه‌ی عرض/ارتفاع را تعیین می‌کند."
+ },
+ {
+  "en": "How do you center a _block element_ with _CSS_?",
+  "q": "چطور یک block element را با CSS وسط‌چین می‌کنید؟",
+  "qa": "برای وسط‌چین‌کردن عنصر **block-level** چند روش هست که تراز افقی یا عمودی را هندل می‌کنند."
+ },
+ {
+  "en": "What is the difference between _block_, _inline_, and _inline-block elements_?",
+  "q": "تفاوت عنصرهای block و inline و inline-block چیست؟",
+  "qa": "**عنصرهای block** به‌صورت پیش‌فرض عمودی روی هم می‌نشینند؛ **inline**ها کنار هم در یک خط قرار می‌گیرند."
+ },
+ {
+  "en": "Describe the basic structure of an _HTML document_.",
+  "q": "ساختار پایه‌ی یک سند HTML را توضیح دهید.",
+  "qa": "**HTML** ستون فقرات محتوای وب است و ساختار و معنا را تعریف می‌کند؛ عناصر بنیادی سند را مرور می‌کنیم."
+ },
+ {
+  "en": "What do _DOCTYPE_ and _html lang_ attributes do?",
+  "q": "DOCTYPE و ویژگی lang روی html چه‌کار می‌کنند؟",
+  "qa": "**DOCTYPE** و ویژگی `lang` نقش‌های حیاتی در صفحات وب ما دارند."
+ },
+ {
+  "en": "What is the difference between _head_ and _body_ tags?",
+  "q": "تفاوت تگ‌های head و body چیست؟",
+  "qa": "تگ‌های **head** و **body** هر دو بنیادی هر سند HTML هستند اما هدف متفاوت دارند و در بخش‌های جداکننده‌ی صفحه قرار می‌گیرند."
+ },
+ {
+  "en": "How do you link a _CSS file_ to an _HTML document_?",
+  "q": "چطور فایل CSS را به سند HTML وصل می‌کنید؟",
+  "qa": "**اتصال** فایل CSS به سند HTML گام بنیادی استایل‌دهی است؛ معمولاً با مسیر فایل CSS در بخش `head` انجام می‌شود."
+ },
+ {
+  "en": "What is the difference between _b_ and _strong_ tags?",
+  "q": "تفاوت تگ‌های b و strong چیست؟",
+  "qa": "تگ‌های `b` و `strong` هر دو برای **تأکید متنی** به‌کار می‌روند اما معنای semantic متفاوتی دارند."
+ },
+ {
+  "en": "When would you use _em_ over _i_, and vice versa?",
+  "q": "کِی em را به i ترجیح می‌دهید و برعکس؟",
+  "qa": "تفاوت تگ‌های em و i در HTML را ببینید."
+ },
+ {
+  "en": "What is the purpose of _small_, _s_, and _mark_ tags?",
+  "q": "هدف تگ‌های small و s و mark چیست؟",
+  "qa": "تگ‌های `small`، `s` و `mark` در HTML5 برای **تغییر ساختار و نمایش** محتوای متنی به‌کار می‌روند."
+ },
+ {
+  "en": "What are the _basic types_ available in _TypeScript_?",
+  "q": "انواع پایه‌ی موجود در TypeScript کدام‌اند؟",
+  "qa": "**TypeScript** مجموعه‌ای از انواع پایه برای داده‌های مختلف دارد: عدد، رشته، بولین، آرایه، tuple و بیشتر."
+ },
+ {
+  "en": "What are _Interfaces_ in _TypeScript_ and how do they work?",
+  "q": "Interface ها در TypeScript چیستند و چطور کار می‌کنند؟",
+  "qa": "در TypeScript، **interface** ساختار و نوع اعضا را تعریف می‌کند؛ قراردادی برای propertyها و متدهای لازم است تا پیاده‌سازی درست تضمین شود."
+ },
+ {
+  "en": "What is a _Vue instance_ and its purpose?",
+  "q": "Vue instance چیست و هدفش چیست؟",
+  "qa": "**Vue instance** نقطه‌ی ورود اپ‌های Vue و موتور مرکزی کنترل و هماهنگی کل اپلیکیشن است."
+ },
+ {
+  "en": "What are _directives_ in _Vue.js_? Can you give examples?",
+  "q": "directive ها در Vue.js چیستند؟ مثال بزنید.",
+  "qa": "**Directiveها** در Vue.js ویژگی‌های خاصی هستند که DOM را بر اساس مقادیر بایندشده دستکاری می‌کنند."
+ },
+ {
+  "en": "Discuss the _methods_ property in a _Vue component_.",
+  "q": "خاصیت methods در کامپوننت Vue را بررسی کنید.",
+  "qa": "خاصیت `methods` در Vue.js اجازه تعریف و استفاده از متدهای سفارشی داخل کامپوننت را می‌دهد؛ منطق را به تکه‌های قابل‌مدیریت می‌شکند و استفاده‌ی مجدد را بالا می‌برد."
+ },
+ {
+  "en": "Explain the difference between `v-bind` and `v-model`.",
+  "q": "تفاوت v-bind و v-model چیست؟",
+  "qa": "**Vue.js** در موتور **templating** خودش directiveهای متفاوتی با کارکردهای متمایز دارد؛ `v-bind` اتصال یک‌طرفه و `v-model` اتصال دوماهه است."
+ },
+ {
+  "en": "How do you include _CSS_ in your _HTML document_?",
+  "q": "چطور CSS را در سند HTML خود می‌گنجانید؟",
+  "qa": "**چهار روش اصلی** برای گنجاندن CSS در سند HTML هست؛ هرکدام مزیت‌ها و کاربردهای خاص خودش را دارد."
+ },
+ {
+  "en": "Can you explain the difference between _class_ and _ID selectors_?",
+  "q": "تفاوت class selector و ID selector را توضیح دهید.",
+  "qa": "**کلاس** و **ID** selectorها در CSS نقش‌های متمایزی دارند و محدودیت‌های کاربرد متفاوتی هم دارند."
+ },
+ {
+  "en": "What are _pseudo-classes_ in _CSS_?",
+  "q": "pseudo-class ها در CSS چیستند؟",
+  "qa": "**Pseudo-classها** کلیدواژه‌های خاص CSS هستند که استایل را نه فقط بر اساس state/جایگاه در درخت سند بلکه بر اساس تعامل کاربر هم اعمال می‌کنند."
+ },
+ {
+  "en": "How do you select elements by _attribute_ in _CSS_?",
+  "q": "در CSS چطور با attribute عنصرها را انتخاب می‌کنید؟",
+  "qa": "در CSS می‌توانید با **attribute selectorها** قواعد را بر اساس حضور یا مقدار attributeهای خاص HTML تعریف کنید."
+ },
+ {
+  "en": "What are the _universal selector_ and the _sibling combinator_, and when would you use them?",
+  "q": "universal selector و sibling combinator چیستند و کِی استفاده می‌شوند؟",
+  "qa": "**Universal Selector** (`*`) ابزار قدرتمندی برای هدف‌گرفتن همه‌ی عنصرهای داخل یک container مشخص است؛ **sibling combinator** هم عنصرهای هم‌سطح را هدف می‌گیرد."
+ },
+ {
+  "en": "What does _HTML_ stand for and what is its purpose?",
+  "q": "HTML مخفف چیست و هدفش چیست؟",
+  "qa": "**HTML** (HyperText Markup Language) زبان استاندارد ساخت صفحات و اپ‌های وب است؛ HTML5، آخرین نسخه، قابلیت‌های مدرن را اضافه کرده است."
+ },
+ {
+  "en": "How do you link a _JavaScript file_ to an _HTML document_?",
+  "q": "چطور فایل JavaScript را به سند HTML وصل می‌کنید؟",
+  "qa": "برای اتصال فایل JS به سند HTML از تگ `<script>` استفاده می‌شود؛ دو راه اصلی دارد:"
+ },
+ {
+  "en": "How do you add a _comment_ in HTML and why would you use them?",
+  "q": "در HTML کامنت چطور می‌نویسید و چرا؟",
+  "qa": "کامنت HTML بین علامت‌های کامنت قرار می‌گیرد؛ برای توضیح کد یا غیرفعال‌کردن موقت بخش‌ها به‌کار می‌رود."
+ },
+ {
+  "en": "What are _data-_* attributes and when should they be used?",
+  "q": "ویژگی‌های data-* چیستند و کِی استفاده می‌شوند؟",
+  "qa": "**ویژگی‌های data-*** در HTML5 داده‌ی سفارشی را داخل عنصرهای HTML جاسازی می‌کنند؛ ابزار قدرتمندی برای توسعه‌دهندگان وب است."
+ },
+ {
+  "en": "How do you create a _paragraph_ or a _line break_ in HTML?",
+  "q": "در HTML پاراگراف یا شکست خط چطور ساخته می‌شود؟",
+  "qa": "برای **پاراگراف** از تگ پاراگراف و برای **شکست خط** از تگ بر استفاده می‌شود."
+ },
+ {
+  "en": "What is _TypeScript_ and how does it differ from _JavaScript_?",
+  "q": "TypeScript چیست و چه تفاوتی با JavaScript دارد؟",
+  "qa": "**TypeScript** سوپرمجموعه‌ی statically-typed جاوااسکریپت است که مایکروسافت توسعه می‌دهد؛ نگهداری و پیش‌بینی‌پذیری کد را بالا می‌برد."
+ },
+ {
+  "en": "Can you explain what is meant by \"TypeScript is a superset of JavaScript\"?",
+  "q": "یعنی چه که «TypeScript سوپرمجموعه‌ی JavaScript است»؟",
+  "qa": "**TypeScript** را «سوپرمجموعه‌ی JavaScript» می‌نامند چون هر کد جاوااسکریپت معتبر، کد TypeScript معتبری هم هست."
+ },
+ {
+  "en": "How do you declare _variables_ in _TypeScript_?",
+  "q": "متغیرها در TypeScript چطور تعریف می‌شوند؟",
+  "qa": "در TypeScript، **تعریف متغیر** روش‌های متعددی برای اعلام متغیرها و نوع‌هایشان دارد."
+ },
+ {
+  "en": "Describe the _Enum_ type and when you might use it.",
+  "q": "نوع Enum را توضیح دهید و کِی استفاده می‌شود.",
+  "qa": "**Enum** نوعی داده برای نمایش و مدیریت ساده‌ی مقادیر نام‌دارِ مجزاست؛ ابزار بنیادی تضمین **type safety** در TypeScript است."
+ },
+ {
+  "en": "How do you define and use a _function_ in _TypeScript_?",
+  "q": "تابع در TypeScript چطور تعریف و استفاده می‌شود؟",
+  "qa": "در تعریف **تابع** در TypeScript این اجزای بنیادی را در نظر می‌گیرید:"
+ },
+ {
+  "en": "What does \"type inference\" mean in the context of TypeScript?",
+  "q": "type inference در بستر TypeScript یعنی چه؟",
+  "qa": "**type inference** قابلیت هسته‌ای TypeScript است که نوع متغیر را خودکار از مقدارش تشخیص می‌دهد؛ سودهای static typing بدون نوشتن صریح نوع می‌آید."
+ },
+ {
+  "en": "Explain the use of '_let_' and '_const_' in TypeScript.",
+  "q": "کاربرد let و const در TypeScript را توضیح دهید.",
+  "qa": "TypeScript از `const` و `let` برای تعریف متغیر استفاده می‌کند؛ صراحت، اسکوپ بلوکی و تغییرناپذیری برای نگهداری بهینه‌ی کد می‌آورند."
+ },
+ {
+  "en": "How do you compile TypeScript files into JavaScript?",
+  "q": "فایل‌های TypeScript را چطور به JavaScript کامپایل می‌کنید؟",
+  "qa": "کامپایل **TypeScript** به **JavaScript** با کامپایلر `tsc` انجام می‌شود؛ فرایند را با tsconfig.json سفارشی می‌کنید."
+ },
+ {
+  "en": "Explain classes in TypeScript. How are they different from ES6 classes?",
+  "q": "کلاس‌ها در TypeScript را توضیح دهید؛ چه تفاوتی با ES6 classes دارند؟",
+  "qa": "کلاس‌های TypeScript و **ES6** شباهت زیاد دارند ولی TypeScript نوع‌دهی قوی و قابلیت‌های اضافه دارد که کد را مقاوم‌تر می‌کند."
+ },
+ {
+  "en": "How do you implement Inheritance in TypeScript?",
+  "q": "وراثت در TypeScript چطور پیاده می‌شود؟",
+  "qa": "وراثت در TypeScript هم با **کلاس‌های ES6** (extends) و هم با **وراثت نمونه‌ای** قابل استفاده است."
+ },
+ {
+  "en": "What are access modifiers and how do they work in TypeScript?",
+  "q": "access modifier ها چیستند و در TypeScript چطور کار می‌کنند؟",
+  "qa": "**Access modifierها** راه TypeScript برای کنترل دیداری و تغییرپذیری اعضای کلاس‌اند؛ کپسوله‌سازی را تحمیل و در طراحی شیءگرا مفید هستند."
+ },
+ {
+  "en": "Discuss Abstract classes and their purposes in TypeScript.",
+  "q": "کلاس‌های Abstract و هدفشان در TypeScript را بررسی کنید.",
+  "qa": "**کلاس‌های abstract** در TypeScript نقشه‌هایی هستند که کلاس‌های فرزند را هدایت می‌کنند؛ ساختار را می‌چینند بدون لزوم پیاده‌سازی کامل."
+ },
+ {
+  "en": "Can you describe the use of Constructors within TypeScript classes?",
+  "q": "استفاده از Constructor در کلاس‌های TypeScript را توصیف کنید.",
+  "qa": "**TypeScript** راه راحتی برای تعریف **constructor** کلاس‌ها با کلمه‌ی کلیدی `constructor` دارد؛ اعضای کلاس را در ساخت مقدار‌دهی اولیه می‌کند."
+ },
+ {
+  "en": "Can you explain the _Vue.js lifecycle hooks_?",
+  "q": "lifecycle hook های Vue.js را توضیح می‌دهید؟",
+  "qa": "Vue.js **رویدادهای چرخه‌ی حیات** را به مرحله‌های متمایز تقسیم می‌کند که هرکدام به یک lifecycle hook خاص وصل است؛ توسعه‌دهنده در نقاط کلیدی، منطق سفارشی اجرا می‌کند."
+ },
+ {
+  "en": "How do you _bind data_ to the _view_ in _Vue.js_?",
+  "q": "در Vue.js داده را چطور به view بایند می‌کنید؟",
+  "qa": "در **Vue.js**، **Data Binding** اتصال مدل به view را می‌سازد و تغییرات یکی در دیگری منعکس می‌شود؛ سه نوع بایندینگ اصلی دارد."
+ },
+ {
+  "en": "How do you handle user _inputs_ and _form submissions_ in _Vue.js_?",
+  "q": "ورودی‌های کاربر و ارسال فرم را در Vue.js چطور هندل می‌کنید؟",
+  "qa": "**Vue.js** تعامل کاربر و فرم‌ها را با بایندینگ دوماهه‌ی reactive، directiveهای کمکی و کتابخانه‌های اعتبارسنجی ساده می‌کند."
+ },
+ {
+  "en": "What are _computed properties_ and how are they used?",
+  "q": "computed property ها چیستند و چطور استفاده می‌شوند؟",
+  "qa": "**Computed propertyها** در Vue.js داده‌های مشتق‌شده‌ای هستند که هر بار وابستگی‌های «پایش‌شده»شان تغییر کند خودکار به‌روز می‌شوند."
+ },
+ {
+  "en": "Can you discuss the difference between _computed properties_ and _methods_?",
+  "q": "تفاوت computed property ها و methods را بررسی کنید.",
+  "qa": "- **Computed propertyها**: داده‌هایی مشتق از داده‌های دیگر **بر اساس منطق مشخص** با گزینه‌ی `computed` تعریف می‌شوند — و کش می‌شوند."
+ },
+ {
+  "en": "How do you _bind inline styles_ in a _Vue template_?",
+  "q": "در قالب Vue استایل inline را چطور بایند می‌کنید؟",
+  "qa": "در Vue.js می‌توانید **استایل inline به عنصر** را با چند روش ببندید: قالب‌ها با `v-bind`، بایندینگ کلاس داینامیک و شیوه‌های آبجکت JS."
+ },
+ {
+  "en": "What does _CSS_ stand for and what is its primary use?",
+  "q": "CSS مخفف چیست و استفاده‌ی اصلی‌اش چیست؟",
+  "qa": "**CSS (Cascading Style Sheets)** برای جداکردن محتوای صفحه از نمایش بصری‌اش طراحی شده؛ طراحی سازگار و قابل‌انطباق در چند صفحه می‌دهد."
+ },
+ {
+  "en": "Describe how to implement a _CSS reset_ and why it is useful.",
+  "q": "پیاده‌سازی CSS reset را توضیح دهید و بگویید چرا مفید است.",
+  "qa": "**CSS reset** مجموعه استایل‌هایی برای کم‌کردن ناسازگاری مرورگرها در marginها، paddingها و پیش‌فرض‌های رایج استایل است."
+ },
+ {
+  "en": "What is a _pseudo-element_, and what are they used for?",
+  "q": "pseudo-element چیست و برای چه استفاده می‌شود؟",
+  "qa": "**Pseudo-elementها** عنصرهای مجازی‌اند که استایل‌دادن به بخش‌هایی از سند HTML را ممکن می‌کنند که عنصر واقعی ندارند — مثل خط اول پاراگراف یا ::before."
+ },
+ {
+  "en": "Explain _margin collapsing_.",
+  "q": "margin collapsing را توضیح دهید.",
+  "qa": "**Margin collapsing** وقتی رخ می‌دهد که marginهای عمودی مجاور کنار هم باشند؛ بزرگ‌ترین margin به‌عنوان «margin فروپاشیده» اعمال می‌شود."
+ },
+ {
+  "en": "Can you explain the purpose of _meta tags_ in HTML?",
+  "q": "هدف meta tag ها در HTML چیست؟",
+  "qa": "**Meta tagها** متادیتای صفحه را می‌دهند — اطلاعاتی که برای بازدیدکننده نامرئی ولی برای موتورهای جست‌وجو، شبکه‌های اجتماعی و فناوری‌های وب ضروری است."
+ },
+ {
+  "en": "How do you serve your page in multiple _languages_?",
+  "q": "صفحه را در چند زبان چطور ارائه می‌کنید؟",
+  "qa": "**بهترین روش‌ها** برای ارائه‌ی صفحات چندزبانه و تگ مربوطه‌ی HTML5 یعنی `<html lang=\"en\">` را بررسی می‌کنیم."
+ },
+ {
+  "en": "What are _semantic HTML tags_ and why are they important?",
+  "q": "تگ‌های semantic HTML چیستند و چرا مهم‌اند؟",
+  "qa": "**تگ‌های semantic HTML** هم ساختار می‌دهند هم معنا؛ خزنده‌ها، مرورگرها و فناوری‌های کمکی محتوا را بهتر می‌فهمند و بهتر ارائه می‌کنند."
+ },
+ {
+  "en": "What is _Vue.js_ and why would you use it?",
+  "q": "Vue.js چیست و چرا استفاده می‌کنید؟",
+  "qa": "**Vue.js** فریم‌ورک پیشرونده‌ی جاوااسکریپت برای ساخت **رابط‌های کاربری** و SPAهاست؛ به انعطاف، حجم کم و سادگی معروف است."
+ },
+ {
+  "en": "How do you set up a project with _Vue.js_?",
+  "q": "پروژه‌ی Vue.js را چطور راه‌اندازی می‌کنید؟",
+  "qa": "برای **راه‌اندازی** پروژه‌ی Vue.js از **مدیر پکیج** (npm یا yarn) و Vue CLI استفاده می‌شود؛ webpack و Babel را می‌آورد و **پذیرش تدریجی** را ساده می‌کند."
+ },
+ {
+  "en": "What are _Vue.js_ _components_ and how do you use them?",
+  "q": "کامپوننت‌های Vue.js چیستند و چطور استفاده می‌شوند؟",
+  "qa": "**کامپوننت‌های Vue.js** عنصرهای خودکفای قابل‌استفاده‌مجدد با سه بخش **template**، **script** و **style** هستند؛ بلوک‌های ساخت کپسوله‌شده."
+ },
+ {
+  "en": "Explain the virtual DOM in Vue.js.",
+  "q": "virtual DOM در Vue.js را توضیح دهید.",
+  "qa": "**Virtual DOM** در Vue.js لایه‌ای واسط بین DOM واقعی و نمایش درون‌حافظه‌ای کامپوننت است؛ Vue با **الگوریتم تفاضل** (diffing) تغییرات حداقلی را اعمال می‌کند."
+ },
+ {
+  "en": "What are _watchers_ in _Vue.js_?",
+  "q": "watcher ها در Vue.js چیستند؟",
+  "qa": "در Vue.js، **watcherها** قابلیت‌های کلیدی برای رصد تغییرات داده‌اند و اجرای منطق یا وظیفه‌ی خاص در واکنش به آن تغییرات را ممکن می‌کنند."
+ }
+]

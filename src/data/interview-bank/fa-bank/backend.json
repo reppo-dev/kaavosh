@@ -1,0 +1,1202 @@
+[
+ {
+  "en": "How do you update Node.js to the latest version?",
+  "q": "چطور Node.js را به آخرین نسخه به‌روزرسانی می‌کنید؟",
+  "qa": "به‌روزرسانی منظم باعث می‌شود نصب Node.js شما امن، کارآمد و دارای آخرین قابلیت‌ها بماند؛ برای به‌روز نگه‌داشتنش این مراحل را طی کنید."
+ },
+ {
+  "en": "How do you manage packages in a Node.js project?",
+  "q": "در یک پروژه‌ی Node.js پکیج‌ها را چطور مدیریت می‌کنید؟",
+  "qa": "Node.js از **npm** (مدیریت‌گر پکیج Node) یا yarn برای **مدیریت پکیج‌ها** استفاده می‌کند."
+ },
+ {
+  "en": "What are streams in Node.js and what types are available?",
+  "q": "استریم‌ها در Node.js چیستند و چه نوع‌هایی دارند؟",
+  "qa": "Node.js برای پردازش بهینه‌ی داده‌های ورودی/خروجی از **استریم‌ها** استفاده می‌کند؛ دو نوع اصلی دارد: خواندنی (Readable) و نوشتنی (Writable)."
+ },
+ {
+  "en": "What are _wrapper classes_ in _Java_?",
+  "q": "کلاس‌های Wrapper در Java چیستند؟",
+  "qa": "کلاس‌های Wrapper در Java اجازه می‌دهند انواع داده‌ی اولیه را به‌صورت آبجکت به‌کار ببرید؛ مخصوصاً در کالکشن‌های جنریک یا قابلیت‌هایی که آبجکت لازم دارند مثل Java Bean properties کاربردی‌اند."
+ },
+ {
+  "en": "What is the significance of _'this'_ keyword in _Java_?",
+  "q": "اهمیت کلیدواژه‌ی this در Java چیست؟",
+  "qa": "کلیدواژه‌ی `this` در Java اشاره‌گر به نمونه‌ی فعلی کلاس است و در برنامه‌نویسی شیءگرا چند کاربرد مهم دارد."
+ },
+ {
+  "en": "What is the _zero value_ of a variable in _Go_?",
+  "q": "مقدار صفر (zero value) یک متغیر در Go چیست؟",
+  "qa": "در Go متغیرها اگر صریحاً مقدار نگیرند، خودکار به «مقدار صفر» خود initialize می‌شوند؛ مخصوصاً برای متغیرهای پویا مثل pointerها پیش‌فرض منطقی می‌سازد."
+ },
+ {
+  "en": "Can you convert between different _data types_ in _Go_? How?",
+  "q": "در Go می‌شود بین انواع داده تبدیل انجام داد؟ چطور؟",
+  "qa": "Go مجموعه‌ای غنی از روش‌ها را برای مدیریت و تبدیل بهینه‌ی انواع داده فراهم می‌کند."
+ },
+ {
+  "en": "What is _inheritance_? Name some _types of inheritance_.",
+  "q": "وراثت (Inheritance) چیست؟ چند نوع آن را نام ببرید.",
+  "qa": "وراثت مفهوم بنیادی برنامه‌نویسی شیءگراست که ساخت **کلاس‌های جدید** بر پایه‌ی کلاس‌های موجود را ممکن می‌کند."
+ },
+ {
+  "en": "Name some ways to _overload_ a _method_.",
+  "q": "چند راه برای overload کردن یک متد نام ببرید.",
+  "qa": "سه تکنیک رایج برای **overload** کردن یک متد را ببینید."
+ },
+ {
+  "en": "What is a _constructor_ and how is it used?",
+  "q": "سازنده (constructor) چیست و چطور استفاده می‌شود؟",
+  "qa": "سازنده متدی ویژه در **برنامه‌نویسی شیءگرا** برای مقدار‌دهی اولیه‌ی آبجکت‌هاست؛ تضمین می‌کند آبجکت تازه با وضعیت اولیه‌ی درست و منابع لازم ساخته شود."
+ },
+ {
+  "en": "What are some common _response codes_ that an _API_ might return, and what do they signify?",
+  "q": "کدهای وضعیت رایجی که یک API برمی‌گرداند کدام‌اند و چه معنایی دارند؟",
+  "qa": "HTTP پایه‌ی ارتباط با API است و با کدهای وضعیت نتیجه‌ی درخواست کلاینت را اعلام می‌کند تا اپ کلاینت به‌درستی واکنش نشان دهد."
+ },
+ {
+  "en": "How would you write an _SQL query_ to fetch duplicate records from a table?",
+  "q": "چطور با یک کوئری SQL رکوردهای تکراری جدول را استخراج می‌کنید؟",
+  "qa": "دو روش رایج برای شناسایی و مدیریت رکوردهای تکراری در SQL را ببینید."
+ },
+ {
+  "en": "How would you set up a basic _Express.js_ application?",
+  "q": "چطور یک اپلیکیشن پایه‌ی Express.js راه‌اندازی می‌کنید؟",
+  "qa": "برای راه‌اندازی یک اپ پایه‌ی **Express.js** این مراحل را دنبال کنید."
+ },
+ {
+  "en": "What is the purpose of the `app.use()` function?",
+  "q": "هدف تابع app.use() چیست؟",
+  "qa": "در Express.js تابع `app.use()` ابزار قدرتمند **مدیریت middleware** است؛ درخواست و پاسخ HTTP را هندل و داده‌ها یا فرایندهای میانی را آماده می‌کند."
+ },
+ {
+  "en": "What is the role of the `express.Router` class?",
+  "q": "نقش کلاس express.Router چیست؟",
+  "qa": "کلاس `express.Router` ابزار قدرتمندی برای **مدیریت چند route controller** است؛ مسیرها و هندلرهایشان را در گروه‌های ماژولار و خودکفا سازمان می‌دهد."
+ },
+ {
+  "en": "What are the differences between `req.query` and `req.params`?",
+  "q": "تفاوت req.query و req.params چیست؟",
+  "qa": "در Express.js با `req.query` به پارامترهای درخواست **GET** و با `req.params` به پارامترهای تعریف‌شده در **مسیر URL** دسترسی دارید."
+ },
+ {
+  "en": "How do you create a _middleware_ that logs the _request method_ and _URL_ for every request?",
+  "q": "چطور یک middleware می‌سازید که متد و URL هر درخواست را لاگ کند؟",
+  "qa": "در Express.js با middlewareها درخواست‌های HTTP را هندل می‌کنید؛ اینجا یک **لاگر ساده** می‌سازیم که متد و URL هر درخواست را ثبت می‌کند."
+ },
+ {
+  "en": "What is the role of the _urls.py_ file in a _Django project_?",
+  "q": "نقش فایل urls.py در پروژه‌ی Django چیست؟",
+  "qa": "در Django فایل `urls.py` نقش کلیدی در **routing** و نگاشت URL به viewها دارد؛ هر اپ معمولاً urls.py خودش را برای مدیریت ماژولار URL دارد."
+ },
+ {
+  "en": "What is a _Django model_ and how is it defined?",
+  "q": "مدل Django چیست و چطور تعریف می‌شود؟",
+  "qa": "مدل‌های Django پایه‌ی معماری اپ‌های دیتابیسی‌اند؛ هر مدل یک ساختار داده است که فیلدها و رفتارهای ضروری را در خود دارد."
+ },
+ {
+  "en": "What is a _Django view_ and how is it created?",
+  "q": "view در Django چیست و چطور ساخته می‌شود؟",
+  "qa": "view در Django نقطه‌ی پاسخ‌گویی به درخواست‌های وب است؛ از دیتابیس داده می‌گیرد، پردازش می‌کند و پاسخ — صفحه‌ی HTML، ریدایرکت یا آبجکت JSON — برمی‌گرداند."
+ },
+ {
+  "en": "What is a _QuerySet_ in _Django_ and how is it used?",
+  "q": "QuerySet در Django چیست و چطور استفاده می‌شود؟",
+  "qa": "در Django، QuerySet مجموعه‌ای از **کوئری‌های دیتابیس** است که زنجیر می‌شود و به‌صورت lazy اجرا می‌شود؛ راهی شهودی برای خواندن و دستکاری داده با Python."
+ },
+ {
+  "en": "What is a _cache key_ and how is it used?",
+  "q": "کلید کش (cache key) چیست و چطور استفاده می‌شود؟",
+  "qa": "کلید کش شناسه‌ی داده یا منبع کش‌شده است و جست‌وجوی O(1) در ساختارهای نگاشت‌گر و استورهای **key-value** را ممکن می‌کند."
+ },
+ {
+  "en": "How does an _operating system_ ensure _mutual exclusion_ in _concurrent processes_?",
+  "q": "سیستم‌عامل چطور در فرایندهای هم‌زمان نفوذ متقابل (mutual exclusion) را تضمین می‌کند؟",
+  "qa": "سیستم‌عامل‌ها با مکانیزم‌هایی مثل **قفل‌گذاری**، زمان‌بندی و پشتیبانی سخت‌افزاری از race condition جلوگیری و **نفوذ متقابل** را تضمین می‌کنند."
+ },
+ {
+  "en": "What is a _livelock_ and how is it different from a _deadlock_?",
+  "q": "livelock چیست و چه تفاوتی با deadlock دارد؟",
+  "qa": "livelock و deadlock هر دو وضعیت‌های ناخواسته‌ی سیستم‌های هم‌زمان‌اند، اما در رفتار و راه‌حل با هم فرق دارند."
+ },
+ {
+  "en": "What is the default _port_ on which _MongoDB_ listens?",
+  "q": "پورت پیش‌فرض شنود MongoDB چیست؟",
+  "qa": "پورت پیش‌فرض MongoDB عدد **27017** است؛ چند instance روی یک ماشین ممکن است ولی هرکدام باید پورت یکتای خودش را داشته باشد."
+ },
+ {
+  "en": "What is the syntax to insert a _document_ into a _MongoDB collection_?",
+  "q": "سینتکس درج یک document در collection در MongoDB چیست؟",
+  "qa": "برای **درج یک سند** در **collection** از متد **`insertOne()`** استفاده می‌شود که سند را به‌عنوان آرگومان می‌پذیرد:"
+ },
+ {
+  "en": "Explain how to update _documents_ in _MongoDB_.",
+  "q": "به‌روزرسانی documentها در MongoDB را توضیح دهید.",
+  "qa": "**MongoDB** چند راه برای به‌روزرسانی سندها (معادل ردیف‌های SQL) دارد؛ رایج‌ترین روش‌ها را ببینید."
+ },
+ {
+  "en": "What are the _MongoDB commands_ for deleting _documents_?",
+  "q": "دستورات حذف documentها در MongoDB کدام‌اند؟",
+  "qa": "MongoDB چند متد برای حذف سندها فراهم می‌کند."
+ },
+ {
+  "en": "Give an example of a _middleware solution_ that provides _service orchestration_.",
+  "q": "مثالی از یک راهکار middleware که service orchestration فراهم می‌کند بزنید.",
+  "qa": "یک نمونه‌ی **راهکار middleware** که **service orchestration** را در خود دارد، فریم‌ورک **Express** همراه **Node.js** است."
+ },
+ {
+  "en": "How do you configure dependencies within a _DI container_ typically?",
+  "q": "وابستگی‌ها درون یک DI container معمولاً چطور پیکربندی می‌شوند؟",
+  "qa": "در حالت معمول وابستگی‌ها درون **Dependency Injection (DI) container** از سه راه پیکربندی می‌شوند: Annotation، XML یا Service Descriptor (مثل Angular و Spring)؛ درون container از **رفلکشن** استفاده می‌شود."
+ },
+ {
+  "en": "What is \"npm\" and what is it used for?",
+  "q": "npm چیست و برای چه کاری استفاده می‌شود؟",
+  "qa": "**npm (Node Package Manager)** مدیر پکیج قدرتمند و پرطرفدار مخصوص محیط Node.js است؛ هدفش ساده‌کردن نصب، مدیریت و اشتراکِ کتابخانه‌ها و ابزارهای نوشته‌شده برای Node.js است."
+ },
+ {
+  "en": "What is a package.json file?",
+  "q": "فایل package.json چیست؟",
+  "qa": "فایل **package.json** در پروژه‌های Node.js متادیتای پروژه، وابستگی‌ها و اسکریپت‌ها را نگه می‌دارد؛ برای مدیریت ماژول‌ها، اسکریپت‌ها و کنترل نسخه ضروری است و سازگاری را تضمین می‌کند."
+ },
+ {
+  "en": "Describe some of the core modules of Node.js.",
+  "q": "برخی از ماژول‌های هسته‌ی Node.js را توضیح دهید.",
+  "qa": "Node.js ماژول‌های داخلی زیادی دارد؛ از کار با فایل‌سیستم تا مدیریت HTTP server — توسعه را سریع و ساخت اپلیکیشن را روان‌تر می‌کنند."
+ },
+ {
+  "en": "How do you create a simple server in Node.js using the HTTP module?",
+  "q": "چطور با ماژول HTTP در Node.js یک سرور ساده می‌سازید؟",
+  "qa": "ببینید چطور با ماژول داخلی `http` در Node.js یک سرور ساده می‌سازیم."
+ },
+ {
+  "en": "What is the Buffer class in Node.js?",
+  "q": "کلاس Buffer در Node.js چیست؟",
+  "qa": "کلاس `Buffer` در Node.js یک ماژول هسته برای **خواندن**، **دستکاری** و **تخصیص** داده‌ی باینری است — عمدتاً دنباله‌ای از بایت‌ها (octet)."
+ },
+ {
+  "en": "What is the role of the _ClassLoader_?",
+  "q": "نقش ClassLoader چیست؟",
+  "qa": "**ClassLoader** جزء حیاتی زمان اجرای Java است که فایل‌های کلاس را در حافظه بارگذاری می‌کند."
+ },
+ {
+  "en": "Can you explain the difference between an _int_ and an _Integer_ in _Java_?",
+  "q": "تفاوت int و Integer در Java چیست؟",
+  "qa": "در Java دو نوع متمایز با ویژگی‌ها و کاربردهای متفاوت‌اند: **int** نوع اولیه و **Integer** آبجکت."
+ },
+ {
+  "en": "What does it mean that _Java_ is a _statically typed_ language?",
+  "q": "یعنی چه که Java یک زبان statically typed است؟",
+  "qa": "یعنی نوع هر متغیر در زمان **کامپایل** مشخص است؛ قبل از استفاده باید نوع متغیر صریحاً اعلام شود."
+ },
+ {
+  "en": "Is _Java_ a pure _object-oriented language_? Why or why not?",
+  "q": "آیا Java یک زبان کاملاً شیءگراست؟ چرا؟",
+  "qa": "Java **کاملاً شیءگرا نیست**؛ اگرچه اصول زیادی از OOP را دارد، عناصری از برنامه‌نویسی رویه‌ای را هم حفظ کرده است."
+ },
+ {
+  "en": "Explain the workspace architecture in _Go_.",
+  "q": "معماری workspace در Go را توضیح دهید.",
+  "qa": "زبان **Go** معماری workspace ساده‌شده‌ای دارد که آن را از خیلی زبان‌های دیگر متمایز می‌کند."
+ },
+ {
+  "en": "Describe how _packages_ are structured in a _Go program_.",
+  "q": "پکیج‌ها در یک برنامه‌ی Go چطور ساختار می‌گیرند؟",
+  "qa": "در Go همه‌ی کدها داخل **Package**ها هستند؛ هر پکیج نقش مشخص خودش را دارد با قواعد شفاف دیداری، دسترسی و جایگاهش در کل برنامه."
+ },
+ {
+  "en": "What are _slices_ in _Go_, and how do they differ from _arrays_?",
+  "q": "اسلایس‌ها در Go چیستند و چه تفاوتی با آرایه‌ها دارند؟",
+  "qa": "**اسلایس‌ها** در Go ساختارهایی پویا، انعطاف‌پذیر و مرجع‌محور برای مدیریت کارآمد لیست‌ها هستند؛ روی آرایه‌ها ساخته شده‌اند و تغییر اندازه‌ی خودکار و سهولت استفاده دارند."
+ },
+ {
+  "en": "Could you explain what a _goroutine_ is?",
+  "q": "goroutine را توضیح می‌دهید؟",
+  "qa": "**Goroutine**ها نخ‌های سبک — دقیق‌تر: **توابع هم‌زمان تعاونی** در Golang — هستند که اجرایشان را خودشان مدیریت می‌کنند و اجازه می‌دهند **قطعه‌کدهای مستقل** به‌طور هم‌زمان اجرا شوند."
+ },
+ {
+  "en": "Can you list and explain the basic _data types_ in _Go_?",
+  "q": "انواع داده‌ی پایه در Go را نام برده و توضیح دهید.",
+  "qa": "**Go** مجموعه‌ی محکمی از انواع داده برای پوشش بهینه‌ی نیازهای متنوع فراهم می‌کند."
+ },
+ {
+  "en": "What does the `range` keyword do?",
+  "q": "کلیدواژه‌ی range چه‌کار می‌کند؟",
+  "qa": "در Go، **`range`** حلقه‌ای همه‌کاره برای پیمایش آرایه، اسلایس، map، رشته و channel است؛ انواع داده را به‌طور کارآمد هندل می‌کند و جزئیات اندیس‌گذاری یا پیمایش را انتزاعی می‌کند."
+ },
+ {
+  "en": "What is _Object-Oriented Programming (OOP)_?",
+  "q": "برنامه‌نویسی شیءگرا (OOP) چیست؟",
+  "qa": "**برنامه‌نویسی شیءگرا** پارادایمی است که کد را به **آبجکت‌های خودکفا** سازمان می‌دهد."
+ },
+ {
+  "en": "What is the difference between _procedural_ and _Object-Oriented_ programming?",
+  "q": "تفاوت برنامه‌نویسی رویه‌ای و شیءگرا چیست؟",
+  "qa": "**رویه‌ای** خطی و وظیفه‌محور است؛ **OOP** مدل ارگانیکی دارد که در آن داده داخل آبجکت‌ها کپسوله می‌شود."
+ },
+ {
+  "en": "What is _polymorphism_? Explain _overriding_ and _overloading_.",
+  "q": "چندریختی (polymorphism) چیست؟ overriding و overloading را توضیح دهید.",
+  "qa": "**چندریختی** در OOP اجازه می‌دهد آبجکت‌های انواع مختلف از طریق یک **رابط مشترک** هم‌نوع دیده شوند؛ جزئیات متد را انتزاعی می‌کند و انعطاف کد را بالا می‌برد."
+ },
+ {
+  "en": "What is an _abstraction_? Name some _abstraction techniques_.",
+  "q": "انتزاع (abstraction) چیست؟ چند تکنیک انتزاع نام ببرید.",
+  "qa": "**انتزاع** در OOP یعنی تمرکز بر ویژگی‌های اساسی و پنهان‌کردن جزئیات غیرضروری."
+ },
+ {
+  "en": "What is a _class_ in OOP?",
+  "q": "کلاس (class) در OOP چیست؟",
+  "qa": "**کلاس** در برنامه‌نویسی شیءگرا نقشه‌ی ساخت آبجکت‌ها (نمونه‌ها) را نشان می‌دهد؛ ویژگی‌ها (داده) و رفتارها (متدها) را زیر یک ساختار واحد کپسوله می‌کند."
+ },
+ {
+  "en": "What is an _object_ in OOP?",
+  "q": "آبجکت (object) در OOP چیست؟",
+  "qa": "**آبجکت** نمونه‌ی مشخصی از یک **کلاس** است که **داده** (ویژگی‌ها) و **رفتار** (متدها) را در یک واحد نگه می‌دارد."
+ },
+ {
+  "en": "How do _access specifiers_ work and what are they typically?",
+  "q": "access specifier ها چطور کار می‌کنند و معمولاً کدام‌اند؟",
+  "qa": "در OOP، **access specifier**ها سطح دیداری و دسترسی اعضای کلاس را تعیین می‌کنند."
+ },
+ {
+  "en": "What is _cohesion_ in OOP?",
+  "q": "انسجام (cohesion) در OOP چیست؟",
+  "qa": "**انسجام** یعنی متدها و داده‌های داخل یک کلاس چقدر به هم مرتبط‌اند؛ کلاس پرانسجام روی یک وظیفه‌ی مشخص متمرکز است و نگهداریش آسان‌تر است."
+ },
+ {
+  "en": "What is _coupling_ in OOP?",
+  "q": "جفت‌شدگی (coupling) در OOP چیست؟",
+  "qa": "**جفت‌شدگی** درجه‌ی وابستگی متقابل کلاس‌ها یا ماژول‌ها را توصیف می‌کند و بر انعطاف، نگهداری‌پذیری سیستم اثر می‌گذارد."
+ },
+ {
+  "en": "How do you version an _API_?",
+  "q": "نسخه‌گذاری یک API را چطور انجام می‌دهید؟",
+  "qa": "نسخه‌گذاری API برای تضمین **سازگاری به عقب** همراه با **پیشرفت** و تطبیق حیاتی است."
+ },
+ {
+  "en": "Can you explain what _API rate limiting_ is and give an example of why it might be used?",
+  "q": "محدودسازی نرخ API چیست و مثالی از دلیل استفاده‌اش بزنید.",
+  "qa": "**محدودسازی نرخ API** سقف تعداد درخواست کلاینت را در بازه‌های زمانی مشخص تعیین می‌کند تا سرورها غرق نشوند و منابع منصفانه تقسیم شوند."
+ },
+ {
+  "en": "Describe the concept of _OAuth_ in relation to _API security_.",
+  "q": "مفهوم OAuth را در ارتباط با امنیت API توضیح دهید.",
+  "qa": "**OAuth** استاندارد بازِ مجوزدهی است که **دسترسی امن و محدود** به داده‌ی کاربر در یک سایت را به سایت یا اپ دیگر می‌دهد — بدون اشتراک اطلاعات ورود."
+ },
+ {
+  "en": "What strategies would you use to ensure the _backward compatibility_ of an _API_?",
+  "q": "برای تضمین سازگاری به عقب یک API چه استراتژی‌هایی به‌کار می‌برید؟",
+  "qa": "سازگاری به عقب برای پایداری API حیاتی است؛ API خوب باید **هم کلاینت‌های فعلی و هم قدیمی** را پوشش دهد و هم‌زمان به‌روزرسانی و بهبود بپذیرد."
+ },
+ {
+  "en": "When designing an _API_, how would you document it for _end-users_?",
+  "q": "موقع طراحی یک API، مستنداتش را برای کاربران نهایی چطور می‌نویسید؟",
+  "qa": "**مستندات API** برای سهولت استفاده حیاتی است و مثل یک **راهنمای جامع** به توسعه‌دهندگان می‌گوید API چطور کار می‌کند و چطور با آن تعامل کنند."
+ },
+ {
+  "en": "Explain the _ACID properties_ in the context of databases.",
+  "q": "ویژگی‌های ACID را در بستر پایگاه داده توضیح دهید.",
+  "qa": "در مدیریت پایگاه داده، **ACID** تضمین می‌کند تراکنش‌ها به‌صورت قابل‌اعتماد و استاندارد پردازش شوند."
+ },
+ {
+  "en": "What is a _primary key_, and why is it important?",
+  "q": "کلید اصلی چیست و چرا مهم است؟",
+  "qa": "**کلید اصلی** شناسه‌ی یکتای جدول است؛ تضمین می‌کند هر رکورد متمایز باشد و به‌طور بهینه ارجاع‌پذیر باشد."
+ },
+ {
+  "en": "Can you explain what a _foreign key_ is and its role in the database?",
+  "q": "کلید خارجی چیست و نقشش در پایگاه داده چیست؟",
+  "qa": "**کلید خارجی (FK)** رابطه‌ی بین دو جدول را در پایگاه داده‌ی رابطه‌ای برقرار می‌کند."
+ },
+ {
+  "en": "What is _database normalization_, and why do we use it?",
+  "q": "نرمال‌سازی پایگاه داده چیست و چرا استفاده می‌کنیم؟",
+  "qa": "**نرمال‌سازی** مجموعه‌ای از روش‌هاست که با کم‌کردن افزونگی و وابستگی در پایگاه رابطه‌ای، **یکپارچگی داده** را تضمین می‌کند."
+ },
+ {
+  "en": "What is the difference between a _full join_ and an _inner join_?",
+  "q": "تفاوت full join و inner join چیست؟",
+  "qa": "**Full join** و **inner join** در سیستم‌های مدیریت پایگاه داده اهداف متفاوتی دارند و رفتار متمایزی نشان می‌دهند."
+ },
+ {
+  "en": "What is the _N+1 query problem_ and how can you solve it?",
+  "q": "مشکل کوئری N+1 چیست و چطور حلش می‌کنید؟",
+  "qa": "**مشکل N+1** وقتی پیش می‌آید که واکشی یک گراف آبجکتی به ضربه‌های غیرضروری به دیتابیس منجر شود."
+ },
+ {
+  "en": "What is _Express.js_, and how does it relate to _Node.js_?",
+  "q": "Express.js چیست و چه نسبتایی با Node.js دارد؟",
+  "qa": "**Express.js** یک فریم‌ورک وب است که روی **Node.js** اجرا می‌شود؛ با routing قدرتمند، middlewareها و امکانات دیگر، ساخت اپ و API را ساده می‌کند."
+ },
+ {
+  "en": "Explain the concept of _middleware_ in _Express.js_.",
+  "q": "مفهوم middleware در Express.js را توضیح دهید.",
+  "qa": "**Middleware** پل بین درخواست‌های ورودی HTTP و اپ Express.js شماست؛ عملیاتی مثل parse‌کردن بدنه‌ی درخواست، احراز هویت و حتی سرو فایل استاتیک را ممکن می‌کند."
+ },
+ {
+  "en": "How do you serve _static files_ using _Express.js_?",
+  "q": "چطور با Express.js فایل‌های استاتیک را سرو می‌کنید؟",
+  "qa": "در اپ‌های وب Express.js معمولاً باید **فایل‌های استاتیک** مثل استایل‌شیت‌ها، جاوااسکریپت کلاینت و تصاویر را سرو کنید؛ با middleware `express.static` انجام می‌شود."
+ },
+ {
+  "en": "Discuss the difference between `app.get()` and `app.post()` in _Express.js_.",
+  "q": "تفاوت app.get() و app.post() در Express.js را بررسی کنید.",
+  "qa": "در **Express.js** این دو از پرکاربردترین middlewareهای متد HTTP هستند؛ انتخاب بین‌شان معمولاً بستگی به **خواندن** یا **ارسال** داده دارد."
+ },
+ {
+  "en": "How do you retrieve the _URL parameters_ from a _GET request_ in _Express.js_?",
+  "q": "چطور پارامترهای URL یک درخواست GET را در Express.js می‌گیرید؟",
+  "qa": "در **Express.js** پارامترهای URL درخواست GET را با آبجکت `req.params` استخراج می‌کنید؛ مراحل و نمونه‌ی کد:"
+ },
+ {
+  "en": "What are _route handlers_, and how would you implement them?",
+  "q": "route handler ها چیستند و چطور پیاده‌سازی می‌شوند؟",
+  "qa": "**Route handler**ها در Express.js توابع middleware مخصوص مدیریت مسیرهای مشخص اپ هستند."
+ },
+ {
+  "en": "How do you enable _CORS_ in an _Express.js_ application?",
+  "q": "چطور CORS را در اپ Express.js فعال می‌کنید؟",
+  "qa": "**CORS (Cross-Origin Resource Sharing)** مکانیزمی است که به صفحات وب اجازه درخواست به دامنه‌ی دیگر می‌دهد؛ در Express.js با پکیج `cors` یا ست‌کردن دستی هدرها فعال می‌شود."
+ },
+ {
+  "en": "Explain the use of `next()` in _Express.js middleware_.",
+  "q": "کاربرد next() در middleware های Express.js را توضیح دهید.",
+  "qa": "در Express.js توابع **middleware** برای هندل درخواست‌های HTTP حیاتی‌اند؛ یک درخواست می‌تواند قبل از رسیدن به endpoint از چند middleware بگذرد — جایی برای لاگ‌زدن و…"
+ },
+ {
+  "en": "How do you handle _404 errors_ in _Express.js_?",
+  "q": "خطاهای 404 را در Express.js چطور هندل می‌کنید؟",
+  "qa": "**مدیریت خطای 404** برای پاسخ به درخواست‌های منابع ناموجود ضروری است؛ معمولاً ترکیبی از **middleware** و مکانیزم پاسخ HTTP استفاده می‌شود."
+ },
+ {
+  "en": "Describe the purpose of `req.body` and how you would access it.",
+  "q": "هدف req.body چیست و چطور به آن دسترسی دارید؟",
+  "qa": "در اپ Express.js، `req.body` ویژگی‌ای از **آبجکت درخواست HTTP** است که داده‌ی ارسالی با POST را در خود دارد."
+ },
+ {
+  "en": "Explain the _MTV (Model-Template-View)_ architecture pattern in _Django_.",
+  "q": "الگوی معماری MTV در Django را توضیح دهید.",
+  "qa": "**Django** حول MVT (Model-View-Template) ساخته شده که تقریباً همان **MVC** رایج است؛ اجزای اصلی این معماری را بشکنید."
+ },
+ {
+  "en": "What is a _Django project_ and how is it different from a _Django app_?",
+  "q": "پروژه‌ی Django چیست و چه تفاوتی با اپ Django دارد؟",
+  "qa": "**پروژه‌ی Django** چتر سطح بالایی است که اپ وب زیرش ساخته می‌شود؛ شامل تنظیمات، URLها و می‌تواند چند اپ میزبانی کند."
+ },
+ {
+  "en": "Explain the concept of _Django's ORM (Object-Relational Mapping)_.",
+  "q": "مفهوم ORM در Django را توضیح دهید.",
+  "qa": "**ORM جنگو** پل بین پایگاه داده‌ی رابطه‌ای و آبجکت‌های Python است؛ عملیات دیتابیس با متدهای سطح بالا و پایتونیک، بدون کوئری SQL مستقیم."
+ },
+ {
+  "en": "Describe the purpose of _Django's admin interface_.",
+  "q": "هدف رابط admin در Django چیست؟",
+  "qa": "رابط admin جنگو ابزار قدرتمندی است که خودکار یک رابط کاربردی برای عملیات CRUD (ساخت، خواندن، به‌روزرسانی، حذف) می‌سازد."
+ },
+ {
+  "en": "What is a _database migration_ in _Django_ and why is it important?",
+  "q": "migration در Django چیست و چرا مهم است؟",
+  "qa": "**migrationها** در Django تغییرات اسکیمای دیتابیس‌اند تا با مدل‌های در حال تحول هم‌گام بمانند؛ هر migration یک **فایل Python** است و با دستورات جنگو اعمال می‌شود."
+ },
+ {
+  "en": "Explain the difference between a _ForeignKey_ and a _ManyToManyField_ in _Django models_.",
+  "q": "تفاوت ForeignKey و ManyToManyField در مدل‌های Django چیست؟",
+  "qa": "در مدل‌های Django رابطه‌ها با **ForeignKey** یا **ManyToManyField** برقرار می‌شوند و هرکدام هدف مخصوص خودش را دارند."
+ },
+ {
+  "en": "How do you define a custom _model field_ in _Django_?",
+  "q": "چطور یک model field سفارشی در Django تعریف می‌کنید؟",
+  "qa": "در Django می‌توانید فیلد سفارشی تعریف کنید تا نوع داده‌ی پیچیده را کپسوله، رفتار خاص را تحمیل یا با منبع داده‌ی بیرونی یکپارچه شوید."
+ },
+ {
+  "en": "Describe the concept of _model inheritance_ in _Django_.",
+  "q": "مفهوم وراثت مدل در Django را توضیح دهید.",
+  "qa": "**وراثت مدل** در Django یعنی ساخت مدل‌های جدید بر پایه‌ی موجودها — استفاده‌ی مجدد کارآمد از کد و مدیریت ساختاریافته‌ی داده."
+ },
+ {
+  "en": "What are the main purposes of using a _cache_ in a software application?",
+  "q": "اهداف اصلی استفاده از کش در یک اپلیکیشن نرم‌افزاری چیست؟",
+  "qa": "- **افزایش عملکرد**: کش دسترسی به داده را فوق‌العاده سریع می‌کند، مخصوصاً وقتی همان داده مدام خوانده می‌شود؛ برای کارهای سنگین مثل عملیات دیتابیس و I/O فایل بی‌نهایت ارزشمند است."
+ },
+ {
+  "en": "Can you explain the concept of _cache hit_ and _cache miss_?",
+  "q": "مفهوم cache hit و cache miss را توضیح دهید.",
+  "qa": "مفاهیم **cache hit** و **cache miss** برای فهم کارکرد مکانیزم‌های کش بنیادی‌اند."
+ },
+ {
+  "en": "Explain the concept of _cache eviction_ and mention common strategies.",
+  "q": "مفهوم cache eviction را توضیح دهید و استراتژی‌های رایج را نام ببرید.",
+  "qa": "استراتژی‌های کش مثل **LRU** (کم‌استفاده‌ترین در اخیرترین زمان) و **LFU** (کم‌استفاده‌ترین در کل) تضمین می‌کنند کش — داده‌های پرمصرف — همیشه بهینه بماند."
+ },
+ {
+  "en": "How would you handle _cache synchronization_ in a distributed environment?",
+  "q": "همگام‌سازی کش در محیط توزیع‌شده را چطور مدیریت می‌کنید؟",
+  "qa": "این رویکرد کلی برای همگام‌سازی کش در محیط‌های توزیع‌شده است."
+ },
+ {
+  "en": "Explain the use of _hash maps_ in cache implementation.",
+  "q": "کاربرد hash map در پیاده‌سازی کش را توضیح دهید.",
+  "qa": "**Hash map**ها در بسیاری از سیستم‌های ذخیره و دسترسی داده، از جمله **کش**، نقش محوری دارند."
+ },
+ {
+  "en": "Can you explain _race conditions_ and provide an example where one might occur?",
+  "q": "race condition را توضیح دهید و مثالی بزنید که رخ دهد.",
+  "qa": "**Race condition**ها در سیستم‌های چندنخی یا توزیع‌شده وقتی رخ می‌دهند که نتیجه‌ی نهایی به ترتیب یا زمان‌بندی اجرای نخ‌ها بستگی داشته باشد — و ممکن است نتیجه‌ی ناسازگار یا غیرمنتظره بدهد."
+ },
+ {
+  "en": "How does a _deadlock_ occur and what are _common strategies_ to prevent it?",
+  "q": "deadlock چطور رخ می‌دهد و استراتژی‌های رایج پیشگیری از آن چیست؟",
+  "qa": "**Deadlock**ها در سیستم‌های هم‌زمان وقتی رخ می‌دهند که دو یا چند نخ برای همیشه منتظر هم بمانند."
+ },
+ {
+  "en": "What is the difference between a _process_ and a _thread_?",
+  "q": "تفاوت process و thread چیست؟",
+  "qa": "**Process**ها و **thread**ها پایه‌ی چندوظیفه‌گی و هم‌زمانی‌اند؛ process در سطح **سیستم‌عامل** و thread در سطح **اپلیکیشن** کار می‌کنند."
+ },
+ {
+  "en": "How are _threads_ typically created and managed in _modern operating systems_?",
+  "q": "نخ‌ها در سیستم‌عامل‌های مدرن معمولاً چطور ساخته و مدیریت می‌شوند؟",
+  "qa": "**نخ‌ها** واحدهای اجرا درون یک **process** هستند؛ وظایف هم‌زمان را ممکن می‌کنند و منابع مثل حافظه و هندل فایل را به اشتراک می‌گذارند. سیستم‌عامل‌های امروزی مدل‌های متنوع مدیریت نخ دارند."
+ },
+ {
+  "en": "What is a _thread pool_ and why might you use one?",
+  "q": "thread pool چیست و چرا استفاده می‌کنید؟",
+  "qa": "**Thread pool** مکانیزمی برای مدیریت و محدودکردن تعداد نخ‌های فعالِ اجراکننده‌ی وظایف در اپلیکیشن است."
+ },
+ {
+  "en": "Can you explain the concept of a _context switch_ and how it affects _concurrency_?",
+  "q": "مفهوم context switch را توضیح دهید و اثرش بر هم‌زمانی چیست.",
+  "qa": "**Context switch** یعنی ذخیره‌ی وضعیت یک نخ/فرایند و بازیابی وضعیت دیگری توسط سیستم‌عامل تا پردازنده بین وظایف جابه‌جا شود."
+ },
+ {
+  "en": "What are the benefits and disadvantages of using many _small threads_ vs. a few _large threads_?",
+  "q": "مزایا و معایب نخ‌های کوچکِ زیاد در برابر نخ‌های بزرگِ کم چیست؟",
+  "qa": "**اندازه‌ی نخ** می‌تواند به شکل‌های مختلفی بر عملکرد سیستم اثر بگذارد؛ مزایا و معایب هر دو را ببینید."
+ },
+ {
+  "en": "What are _semaphores_ and how do they differ from _mutexes_?",
+  "q": "سمافورها چیستند و چه تفاوتی با mutexها دارند؟",
+  "qa": "**Mutex** و **semaphore** مکانیزم‌های همگام‌سازی بنیادی چندنخی‌اند؛ مقایسه‌ی دقیق اینجا آمده است:"
+ },
+ {
+  "en": "What is _MongoDB_ and what are its main features?",
+  "q": "MongoDB چیست و ویژگی‌های اصلی‌اش کدام‌اند؟",
+  "qa": "**MongoDB** پایگاه داده‌ی NoSQL سند‌محور و مقاومی است که برای عملکرد بالا، مقیاس‌پذیری و چابکی توسعه‌دهنده طراحی شده."
+ },
+ {
+  "en": "How does _MongoDB_ differ from relational databases?",
+  "q": "MongoDB چه تفاوتی با پایگاه‌های داده‌ی رابطه‌ای دارد؟",
+  "qa": "هر دو **MongoDB** و پایگاه‌های رابطه‌ای داده هندل می‌کنند ولی به‌شکل بنیادی متفاوت؛ تفاوت‌های کلیدی را ببینید."
+ },
+ {
+  "en": "Can you describe the structure of data in _MongoDB_?",
+  "q": "ساختار داده در MongoDB را توصیف کنید.",
+  "qa": "در **MongoDB** واحدهای داده در **collection**ها سازمان می‌یابند که سندهای مرتبط را گروه می‌کنند؛ هر **سند** معادل یک **رکورد** است و به فیلدها یا جفت‌های key-value نگاشت می‌شود."
+ },
+ {
+  "en": "How is data stored in _collections_ in _MongoDB_?",
+  "q": "داده در collection های MongoDB چطور ذخیره می‌شود؟",
+  "qa": "در **MongoDB** داده در **انواع collection**ها ذخیره می‌شود؛ انعطاف و بهره‌وری در مدل‌سازی داده تضمین می‌شود."
+ },
+ {
+  "en": "Describe what a _MongoDB database_ is.",
+  "q": "پایگاه داده‌ی MongoDB را توصیف کنید.",
+  "qa": "**پایگاه داده‌ی MongoDB** پایگاهی سند‌محور از جنس NoSQL است؛ شامل collectionهایی که هرکدام سندها را در خود دارند."
+ },
+ {
+  "en": "How does _MongoDB_ provide high availability and disaster recovery?",
+  "q": "MongoDB چطور دسترس‌پذیری بالا و بازیابی پس از فاجعه را فراهم می‌کند؟",
+  "qa": "**MongoDB** با معماری داده‌ی مقاوم و مدل سیستم توزیع‌شده، دسترس‌پذیری بالا و بازیابی پس از فاجعه را تضمین می‌کند؛ مکانیزم‌های متعددی برای یکپارچگی داده دارد."
+ },
+ {
+  "en": "What are _indexes_ in _MongoDB_, and why are they used?",
+  "q": "ایندکس‌ها در MongoDB چیستند و چرا استفاده می‌شوند؟",
+  "qa": "**ایندکس‌ها** در **MongoDB** برای بهینه‌سازی کوئری‌ها به‌کار می‌روند و دسترسی سریع‌تر به داده می‌دهند؛ بدون ایندکس MongoDB کل collection را اسکن می‌کند."
+ },
+ {
+  "en": "What is the role of the _id field_ in _MongoDB documents_?",
+  "q": "نقش فیلد _id در سندهای MongoDB چیست؟",
+  "qa": "فیلد `_id` در MongoDB نقش **کلید اصلی** را دارد و چند کارکرد کلیدی فراهم می‌کند:"
+ },
+ {
+  "en": "What is _Redis_ and what do you use it for?",
+  "q": "Redis چیست و برای چه استفاده می‌کنید؟",
+  "qa": "**Redis** (Remote Dictionary Server) یک **استور key-value درون‌حافظه‌ای** است که به **عملکرد** و **تنوع کاربرد** معروف است؛ در ۲۰۰۹ توسط Salvatore Sanfilippo ساخته شد."
+ },
+ {
+  "en": "What data types can you store in _Redis_?",
+  "q": "چه انواع داده‌ای را در Redis می‌توان ذخیره کرد؟",
+  "qa": "**Redis** به‌عنوان یک data structure server برای انواع داده بهینه شده و گزینه‌های ذخیره‌ی متنوعی ارائه می‌دهد."
+ },
+ {
+  "en": "What is a _Redis key_ and how should you structure it for best performance?",
+  "q": "کلید Redis چیست و برای بهترین عملکرد چطور ساختارش را طراحی می‌کنید؟",
+  "qa": "در Redis، **کلید** شناسه‌ی اصلی ذخیره‌ی داده است؛ طراحی بهینه‌ی کلید برای عملکرد پیشرفته حیاتی است."
+ },
+ {
+  "en": "What do the commands `SET` and `GET` do in _Redis_?",
+  "q": "دستورات SET و GET در Redis چه‌کار می‌کنند؟",
+  "qa": "`SET` و `GET` در **Redis** دستورات بنیادی key-value با کارکردهای متمایز و مکمل‌اند."
+ },
+ {
+  "en": "Explain the difference between _RDB_ and _AOF persistence strategies_ in _Redis_.",
+  "q": "تفاوت استراتژی‌های پایداری RDB و AOF در Redis چیست؟",
+  "qa": "در Redis، **RDB** و **AOF** دو استراتژی پایداری برای تضمین ماندگاری داده‌اند: **RDB** بکاپ‌های نقطه‌زمانی می‌دهد، **AOF** روی ثبت لاگ دستورها تمرکز دارد."
+ },
+ {
+  "en": "What are lists in _Redis_ and what are some common operations you can perform on them?",
+  "q": "لیست‌ها در Redis چیستند و عملیات رایج روی‌شان چیست؟",
+  "qa": "**Redis** ساختار **لیست** مستقلی به نام **Redis List** دارد که برای کار با کالکشن‌های مرتب به‌صورت بهینه کار می‌کند."
+ },
+ {
+  "en": "What is pipelining in _Redis_ and when would you use it?",
+  "q": "pipelining در Redis چیست و کِی استفاده می‌کنید؟",
+  "qa": "**Pipelining** در **Redis** یعنی ارسال **چند دستور در یک درخواست شبکه‌ای** — عملکرد را بالا می‌برد."
+ },
+ {
+  "en": "What are the different types of _Redis databases_?",
+  "q": "انواع مختلف پایگاه داده در Redis کدام‌اند؟",
+  "qa": "**Redis** طیفی از **انواع داده** ارائه می‌دهد که هرکدام برای وظیفه‌ای خاص بهینه‌اند."
+ },
+ {
+  "en": "What is _SQL_ and what is it used for?",
+  "q": "SQL چیست و برای چه استفاده می‌شود؟",
+  "qa": "**SQL** زبان اعلامیِ دامنه‌محورِ استاندارد برای مدیریت و پرس‌وجوی **سیستم‌های مدیریت پایگاه داده رابطه‌ای (RDBMS)** است؛ فراتر از مدل‌های کلاسیک رابطه‌ای، پایگاه‌های مدرن را هم پوشش می‌دهد."
+ },
+ {
+  "en": "Describe the difference between _SQL_ and _NoSQL_ databases.",
+  "q": "تفاوت پایگاه‌های داده‌ی SQL و NoSQL را توضیح دهید.",
+  "qa": "دوگانه‌ی RDBMS/SQL در برابر NoSQL به چشم‌انداز ترکیبی رسیده است؛ محدودیت‌های بنیادی هر طرف…"
+ },
+ {
+  "en": "Explain the purpose of the _SELECT_ statement.",
+  "q": "هدف دستور SELECT را توضیح دهید.",
+  "qa": "**SELECT** سازنده‌ی اصلی DQL در SQL است برای واکشی، تصویر و تبدیل داده از ساختارهای رابطه‌ای؛ در نسخه‌های مدرن خیلی بیشتر از خواندن ساده کار می‌کند."
+ },
+ {
+  "en": "What is the difference between _WHERE_ and _HAVING_ clauses?",
+  "q": "تفاوت WHERE و HAVING چیست؟",
+  "qa": "تفاوت بنیادی در **ترتیب منطقی عملیات** در خط لوله‌ی اجرای SQL است؛ هر دو فیلتر می‌کنند ولی در مرحله‌های متفاوت پایپلاین کار می‌کنند."
+ },
+ {
+  "en": "Define what a _JOIN_ is in SQL and list its types.",
+  "q": "JOIN در SQL را تعریف کنید و انواعش را نام ببرید.",
+  "qa": "**JOIN** عملگر رابطه‌ای SQL برای ترکیب ردیف‌های دو جدول یا بیشتر بر اساس یک شرط پیوند است؛ از نظر مفهومی، عملگر Join جبر رابطه‌ای را پیاده می‌کند."
+ },
+ {
+  "en": "What is a _primary key_ in a database?",
+  "q": "کلید اصلی در پایگاه داده چیست؟",
+  "qa": "**کلید اصلی** قیدی است که هر رکورد جدول را یکتا شناسایی می‌کند و لنگرِ تغییرناپذیر **یکپارچگی موجودیت** است."
+ },
+ {
+  "en": "Explain what a _foreign key_ is and how it is used.",
+  "q": "کلید خارجی چیست و چطور استفاده می‌شود؟",
+  "qa": "جدول فرزند با نام‌گذاری صریح قید برای مدیریت بهتر خطا: CREATE TABLE employees (…، CONSTRAINT …) — کلید خارجی رابطه به جدول والد می‌سازد."
+ },
+ {
+  "en": "What is _normalization_? Explain with examples.",
+  "q": "نرمال‌سازی چیست؟ با مثال توضیح دهید.",
+  "qa": "**نرمال‌سازی** فرایندی طراحی است که با سازمان‌دهی ستون‌ها و جدول‌ها، افزونگی داده و ناهنجاری‌های درج/به‌روزرسانی/حذف را کم می‌کند."
+ },
+ {
+  "en": "Describe the concept of _denormalization_ and when you would use it.",
+  "q": "مفهوم denormalization را توضیح دهید و کِی استفاده می‌کنید.",
+  "qa": "**Denormalization** یعنی عمداً افزونگی به اسکیما اضافه‌کردن برای بهینه‌کردن **تاخیر خواندن** و کم‌کردن هزینه‌ی joinهای پیچیده؛ در ۲۰۲۶ برای گزارش‌گیری و مسیرهای خواندنِ سنگین رایج است."
+ },
+ {
+  "en": "What are _indexes_ and how can they improve query performance?",
+  "q": "ایندکس‌ها چیستند و چطور عملکرد کوئری را بهتر می‌کنند؟",
+  "qa": "**ایندکس‌ها** ساختارهای کمکی هستند که ذخیره‌ی فیزیکی را از الگوی منطقی واکشی جدا می‌کنند؛ با نگه‌داشتن سیستم اشاره‌گری، هزینه‌ی جست‌وجو را می‌کاهند."
+ },
+ {
+  "en": "Explain the purpose of the _GROUP BY_ clause.",
+  "q": "هدف GROUP BY را توضیح دهید.",
+  "qa": "**GROUP BY** عمل رابطه‌ای بنیادی SQL برای تقسیم نتایج به ردیف‌های خلاصه بر اساس مقادیر یک یا چند ستون است؛ برای هر تابع تجمعی اجباری است."
+ },
+ {
+  "en": "What is a _subquery_, and when would you use one?",
+  "q": "subquery چیست و کِی استفاده می‌کنید؟",
+  "qa": "- **CTEها (WITH):** برای منطق پیچیده به subquery ترجیح دارند — نگهداری بهتر و پیمایش بازگشتی ممکن می‌شود. - **Window Functionها:** باید جای…"
+ },
+ {
+  "en": "Describe the functions of the _ORDER BY_ clause.",
+  "q": "کارکرد ORDER BY را توضیح دهید.",
+  "qa": "**ORDER BY** ترتیب مرتب‌سازی نتایج کوئری را مشخص می‌کند؛ در نظریه‌ی رابطه‌ای ردیف‌ها ذاتاً بی‌ترتیب‌اند و ORDER BY ترتیب قطعی می‌دهد."
+ },
+ {
+  "en": "Can you explain what is meant by _layering_ in the context of software architecture and its benefits?",
+  "q": "لایه‌بندی در معماری نرم‌افزار یعنی چه و چه سودی دارد؟",
+  "qa": "**لایه‌بندی** یعنی سازمان‌دادن سیستم به چند سطح که هرکدام مسئولیت مشخصی دارد؛ این جداسازی نگهداری را آسان می‌کند."
+ },
+ {
+  "en": "Describe the three typical _layers_ you might find in a _three-tiered application architecture_ and their responsibilities.",
+  "q": "سه لایه‌ی معمول معماری سه‌لایه‌ای و مسئولیت‌هایشان را توضیح دهید.",
+  "qa": "لایه‌های معمول: **tier ارائه**، **tier منطق (کسب‌وکار)** و **tier داده** با مسئولیت‌های اصلی هرکدام."
+ },
+ {
+  "en": "How does _middleware_ facilitate _decoupling_ of components in a system?",
+  "q": "middleware چطور جداسازی اجزا در سیستم را ممکن می‌کند؟",
+  "qa": "**Middleware** واسطی بین اجزای مختلف سیستم است که تعامل‌هایشان را مدیریت و جداسازی مؤثر را ممکن می‌کند."
+ },
+ {
+  "en": "What are some common functionalities provided by _middleware_ in a _layered architecture_?",
+  "q": "کارکردهای رایج middleware در معماری لایه‌ای کدام‌اند؟",
+  "qa": "در **معماری لایه‌ای** هر لایه کارکردهای مرتبط متعددی دارد که از لایه‌های دیگر انتزاعی می‌شوند؛ **middleware** راهی برای گسترش و غنی‌کردن این تعامل‌هاست."
+ },
+ {
+  "en": "Explain the concept of a _service layer_ and its purpose in a _layered architecture_.",
+  "q": "مفهوم service layer و هدفش در معماری لایه‌ای را توضیح دهید.",
+  "qa": "**Service Layer** پل بین اجزای سیستم است و سرویس‌های کسب‌وکاری ماژولار، سازگار و ریزدانه ارائه می‌دهد."
+ },
+ {
+  "en": "Describe how _middleware_ can support both _synchronous_ and _asynchronous_ communication patterns.",
+  "q": "middleware چطور هم ارتباط هم‌زمان و هم ناهم‌زمان را پشتیبانی می‌کند؟",
+  "qa": "**Middleware** را می‌توان برای هر دو الگوی **هم‌زمان** و **ناهم‌زمان** تنظیم کرد."
+ },
+ {
+  "en": "How do _Object Request Brokers (ORBs)_ differ from _Message Oriented Middleware (MOM)_?",
+  "q": "ORB ها چه تفاوتی با Message Oriented Middleware دارند؟",
+  "qa": "**ORB** و **MOM** هر دو سیستم ارتباطی برای پیام‌رسانی بلادرنگ‌اند اما در معماری و مدل پیام متفاوت‌اند."
+ },
+ {
+  "en": "In what scenario would you choose an _Enterprise Service Bus (ESB)_?",
+  "q": "در چه سناریویی ESB انتخاب می‌کنید؟",
+  "qa": "**Enterprise Service Bus (ESB)** در سیستم‌های پیچیده‌ی سازمانی برای ارتباط بین‌ماژول‌ها می‌درخشد؛ هاب مرکزی routing و تبدیل پیام است."
+ },
+ {
+  "en": "When would you use _Remote Procedure Call (RPC)_ middleware, and what advantages does it offer?",
+  "q": "کِی RPC middleware استفاده می‌کنید و چه مزایایی دارد؟",
+  "qa": "**RPC middleware** در سیستم‌های توزیع‌شده سودمند است؛ **ارتباط** و **تعامل سرویس** را ساده و **یکپارچه‌سازی بی‌درز** بین نودهای مختلف را ممکن می‌کند."
+ },
+ {
+  "en": "Can you discuss strategies for _scaling middleware solutions_ in response to increasing load?",
+  "q": "استراتژی‌های مقیاس‌دادن به middleware در برابر افزایش بار را بررسی کنید.",
+  "qa": "برای مقیاس‌دادن به **راهکارهای middleware** در برابر بار افزایشی، طراحی باید ماژولار، تدریجی و تطبیق‌پذیر باشد."
+ },
+ {
+  "en": "Explain how _middleware caching_ can improve the performance of a _multi-layered application_.",
+  "q": "کشِ middleware چطور عملکرد اپ چندلایه را بهتر می‌کند؟",
+  "qa": "**کشِ middleware** عملکرد اپ‌های چندلایه را با کم‌کردن محاسبات و دسترسی‌های تکراری بین لایه‌ها به‌طور چشمگیر بالا می‌برد."
+ },
+ {
+  "en": "What is _Dependency Injection_ and why is it used in modern software development?",
+  "q": "Dependency Injection چیست و چرا در توسعه‌ی مدرن استفاده می‌شود؟",
+  "qa": "**Dependency Injection (DI)** الگویی طراحی است که همکاری اجزا را با بیرون‌کشیدن وابستگی‌هایشان ساده می‌کند؛ چند سود مهم دارد."
+ },
+ {
+  "en": "What are the main advantages of using _Dependency Injection_ in a software project?",
+  "q": "مزایای اصلی استفاده از DI در یک پروژه‌ی نرم‌افزاری چیست؟",
+  "qa": "**DI** طیفی از سودها دارد که توسعه را ساده و کد را ماژولارتر، مقیاس‌پذیرتر و انعطاف‌پذیرتر می‌کند."
+ },
+ {
+  "en": "What is a _mutex_ and how does it work?",
+  "q": "Mutex چیست و چطور کار می‌کند؟",
+  "qa": "در علوم کامپیوتر **mutex** (خلاصه‌ی mutual exclusion) مکانیزم همگام‌سازی است که تضمین می‌کند در هر لحظه فقط یک نخ به منبع مشترک دسترسی داشته باشد."
+ },
+ {
+  "en": "What is a _Document_ in _MongoDB_?",
+  "q": "Document در MongoDB چیست؟",
+  "qa": "در MongoDB، **سند** واحد پایه‌ی ذخیره است؛ ساختاری شبیه JSON که داده را در جفت‌های key-value به نام فیلد نگه می‌دارد."
+ },
+ {
+  "en": "How do you create a new _MongoDB collection_?",
+  "q": "چطور یک collection جدید در MongoDB می‌سازید؟",
+  "qa": "فرایند ساخت collection جدید در MongoDB ساده و آنی است."
+ },
+ {
+  "en": "Describe how to read data from a _MongoDB collection_.",
+  "q": "خواندن داده از یک collection در MongoDB را توضیح دهید.",
+  "qa": "برای **خواندن** داده از collection از متد `find` با گزینه‌های متنوع کوئری و دستکاری داده استفاده می‌شود."
+ },
+ {
+  "en": "How does _Redis_ store data?",
+  "q": "Redis داده را چطور ذخیره می‌کند؟",
+  "qa": "**Redis** استور درون‌حافظه‌ای است که با ساختاربندی داده در typeها، خواندن و نوشتن برق‌آسا تضمین می‌کند؛ هر نوع قابلیت‌های خاص خودش را دارد."
+ },
+ {
+  "en": "How do you set an expiration on _Redis keys_?",
+  "q": "انقضا روی کلیدهای Redis چطور ست می‌شود؟",
+  "qa": "ست‌کردن انقضا روی کلیدهای Redis قابلیت قدرتمندی برای مدیریت کلیدهاست؛ چند مکانیزم متناسب با انواع کلید وجود دارد که بررسی می‌کنیم."
+ },
+ {
+  "en": "How does _Redis_ handle data persistence?",
+  "q": "Redis پایداری داده را چطور هندل می‌کند؟",
+  "qa": "**Redis** با داده‌ی **درون‌حافظه‌ای** سرعت را اولویت می‌دهد و برای اطمینان و بازیابی بهتر از روش‌های پایداری بهره می‌گیرد."
+ },
+ {
+  "en": "How would you implement a simple counter in _Redis_?",
+  "q": "شمارنده‌ی ساده در Redis چطور پیاده می‌شود؟",
+  "qa": "با **`INCR`** یا **`HINCRBY`** — بسته به اینکه شمارنده‌ی مستقل باشد یا مبتنی بر hashmap."
+ },
+ {
+  "en": "What are hashes in _Redis_ and how do you use them?",
+  "q": "hash ها در Redis چیستند و چطور استفاده می‌شوند؟",
+  "qa": "Redis ساختار داده‌ی قدرتمندی به نام **hash** دارد — در اصل نگاشتی بین رشته‌ها و مقادیر رشته‌ای."
+ },
+ {
+  "en": "How do you handle atomic operations in _Redis_?",
+  "q": "عملیات اتمی در Redis چطور هندل می‌شود؟",
+  "qa": "Redis عمدتاً در سطح دستورها و اسکریپت‌ها **اتمی بودن تک‌عملیاتی** دارد؛ race condition را کم و مدیریت داده را امن‌تر می‌کند."
+ },
+ {
+  "en": "Can you describe the _Pub/Sub model_ and how it's implemented in _Redis_?",
+  "q": "مدل Pub/Sub و پیاده‌سازی آن در Redis را توضیح دهید.",
+  "qa": "Redis علاوه بر استور key-value، قابلیت چندمنظوره‌ی **Publish-Subscribe** را هم ارائه می‌دهد."
+ },
+ {
+  "en": "What are the different types of _SQL commands_?",
+  "q": "انواع مختلف دستورات SQL کدام‌اند؟",
+  "qa": "طبقه‌بندی مدرن SQL دسته‌ی پنجم مهمی دارد: **TCL** برای گذارهای اتمی وضعیت؛ **DQL** هم امروز زیرمجموعه‌ی استاندارد **DML** شناخته می‌شود."
+ },
+ {
+  "en": "How can you prevent _SQL injections_?",
+  "q": "چطور از SQL injection جلوگیری می‌کنید؟",
+  "qa": "**SQLi** وقتی رخ می‌دهد که اپ ورودی کاربر را به‌درستی بی‌اثر نکند و مهاجم بتواند در منطق کوئری دخالت کند؛ دفاع بر اصل **جداسازی داده از دستور** تکیه دارد."
+ },
+ {
+  "en": "Explain how _middleware systems_ support _data format transformations_ between disparate technologies.",
+  "q": "سیستم‌های middleware تبدیل فرمت داده بین تکنولوژی‌های متفاوت را چطور پشتیبانی می‌کنند؟",
+  "qa": "**سیستم‌های middleware** پل بین اجزای مختلف اپلیکیشن‌اند و ارتباط بی‌درز آن‌ها را ممکن می‌کنند."
+ },
+ {
+  "en": "Describe how _middleware_ handles _load balancing_ among multiple _server instances_.",
+  "q": "middleware توزیع بار بین چند instance سرور را چطور انجام می‌دهد؟",
+  "qa": "**Middleware** کلید توزیع بهینه‌ی درخواست‌های ورودی بین چند instance سرور از طریق **load balancing** است."
+ },
+ {
+  "en": "How can you configure _middleware_ to ensure _secure data transmission_?",
+  "q": "middleware را چطور برای تضمین انتقال امن داده پیکربندی می‌کنید؟",
+  "qa": "**انتقال امن داده** برای محافظت از اطلاعات حساس حیاتی است؛ middleware به‌عنوان واسط کلاینت-سرور نقش کلیدی در اجرای تمهیدات امنیتی دارد."
+ },
+ {
+  "en": "Explain the concept of inversion of control ioc and how it relates to dependency injection.",
+  "q": "مفهوم Inversion of Control (IoC) و رابطه‌اش با Dependency Injection را توضیح دهید.",
+  "qa": "**IoC** و **DI** مفاهیم کلیدی ساخت نرم‌افزار ماژولار، مقیاس‌پذیر و قابل‌تست‌اند."
+ },
+ {
+  "en": "Can you explain the dependency inversion principle and how it differs from dependency injection?",
+  "q": "Dependency Inversion Principle چه تفاوتی با Dependency Injection دارد؟",
+  "qa": "**DIP** و **DI** دو اصل طراحی با نقش محوری در طراحی شیءگرا هستند؛ مفاهیم اصلی و هم‌راستایی‌شان را بررسی می‌کنیم."
+ },
+ {
+  "en": "When would you use method injection instead of constructor injection?",
+  "q": "کِی method injection را به‌جای constructor injection استفاده می‌کنید؟",
+  "qa": "هر دو **constructor و method injection** در ساختاردهی اپ‌های مدرن نقش حیاتی دارند."
+ },
+ {
+  "en": "Can mixing different types of injection in the same class lead to issues if so what kind?",
+  "q": "ترکیب انواع مختلف injection در یک کلاس مشکل‌ساز می‌شود؟ اگر بله، چه نوع؟",
+  "qa": "استفاده از **چند نوع DI در یک کلاس** ممکن است ولی باید آگاهانه انجام شود تا عوارض احتمالی پیش نیاید."
+ },
+ {
+  "en": "Is there a preferred type of dependency injection when working with immutable objects please explain.",
+  "q": "برای کار با آبجکت‌های immutable کدام نوع DI ترجیح دارد؟ توضیح دهید.",
+  "qa": "**Constructor Injection** مناسب‌ترین رویکرد برای **آبجکت‌های immutable** است؛ مقدار‌دهی حین ساخت را بی‌دردسر انجام می‌دهد."
+ },
+ {
+  "en": "How does each type of dependency injection affect the ease of unit testing?",
+  "q": "هر نوع DI بر سهولت unit testing چه اثری دارد؟",
+  "qa": "سه شکل DI — **constructor injection**، **setter injection** و **interface-based injection** — و اثرشان بر **سهولت تست** را ببینید."
+ },
+ {
+  "en": "What is the difference between a dependency injection container and a service locator?",
+  "q": "تفاوت DI container و Service Locator چیست؟",
+  "qa": "تفاوت‌های **DI container** و **Service Locator** را بررسی می‌کنیم."
+ },
+ {
+  "en": "Describe a situation where you should opt for a lightweight di container over a full-fledged framework.",
+  "q": "در چه موقعیتی lightweight DI container را به فریم‌ورک کامل ترجیح می‌دهید؟",
+  "qa": "فریم‌ورک‌های کامل DI جامع و پرقابلیت‌اند ولی برای پروژه‌های ساده overkill می‌شوند؛ **lightweight DI container** جایگزین منعطف و کارآمدی است."
+ },
+ {
+  "en": "How would you detect and handle WebSocket connection loss?",
+  "q": "قطع اتصال WebSocket را چطور تشخیص و هندل می‌کنید؟",
+  "qa": "۱. **هارت‌بیت سطح اپلیکیشن**: مرورگرها فریم‌های کنترلی ping/pong پروتکل WebSocket (RFC 6455، opcodes 0x9/0xA) را به جاوااسکریپت نشان نمی‌دهند؛ پس یک پیام کوچک را هر ~۳۰ ثانیه بفرستید و بی‌پاسخی در مهلت کوتاه‌تر T را مرگ اتصال بدانید. کتابخانه‌های سمت سرور (مثل ws در Node.js) ping()/pong() نیتیو دارند. ۲. مانیتورینگ سمت سرور با Prometheus و OpenTelemetry. ۳. ردیابی کلاینت با onclose/onerror و reconnect با backoff."
+ },
+ {
+  "en": "What is the difference between websockets and server sent events sse?",
+  "q": "تفاوت WebSocket ها و Server-Sent Events چیست؟",
+  "qa": "**WebSocket** و **SSE** دو الگوی معماری متفاوت برای استریم داده‌اند؛ در ۲۰۲۶ SSE در همه‌ی مرورگرهای مدرن پشتیبانی کامل دارد."
+ },
+ {
+  "en": "Explain how a websocket connection is closed.",
+  "q": "بسته‌شدن اتصال WebSocket را توضیح دهید.",
+  "qa": "اتصال **WebSocket** (RFC 6455) کانال ماندگار full-duplex است؛ پایان‌دادن آن طبق رویه‌ی مشخص **Close Handshake** برای یکپارچگی داده انجام می‌شود."
+ },
+ {
+  "en": "What is Node.js and why is it used?",
+  "q": "Node.js چیست و چرا استفاده می‌شود؟",
+  "qa": "**Node.js** محیط اجرای متن‌باز و چندسکویی جاوااسکریپت بیرون از مرورگر است؛ روی V8 (همان موتور کروم) ساخته و برای عملکرد بالا بهینه شده است."
+ },
+ {
+  "en": "How does Node.js handle child threads?",
+  "q": "Node.js با نخ‌های فرزند چطور رفتار می‌کند؟",
+  "qa": "Node.js برای بهره‌وری از معماری **event-driven** و **I/O غیرمسدودکننده** استفاده می‌کند."
+ },
+ {
+  "en": "Describe the event-driven programming in Node.js.",
+  "q": "برنامه‌نویسی event-driven در Node.js را توضیح دهید.",
+  "qa": "**برنامه‌نویسی event-driven** نشانه‌ی بارز Node.js است؛ معماری **رویداد، listener و emitter** برای کارهای ناهم‌زمان که حول رویدادها و فعال‌سازیشان می‌چرخد."
+ },
+ {
+  "en": "What is the event loop in Node.js?",
+  "q": "event loop در Node.js چیست؟",
+  "qa": "**Event loop** مفهوم بنیادی مدیریت عملیات ناهم‌زمان در Node.js است؛ بهره‌وری‌اش دلیل اصلی عملکرد بالای Node.js."
+ },
+ {
+  "en": "What is the difference between Node.js and traditional web server technologies?",
+  "q": "تفاوت Node.js با تکنولوژی‌های سنتی وب‌سرور چیست؟",
+  "qa": "Node.js توسعه‌ی سمت سرور را با معماری **غیرمسدودکننده و event-driven** متحول کرد؛ تفاوت‌ها و بهره‌گیری از **Single Input-Output** را ببینید."
+ },
+ {
+  "en": "Explain what non-blocking means in Node.js.",
+  "q": "معنای non-blocking در Node.js را توضیح دهید.",
+  "qa": "Node.js از **I/O غیرمسدودکننده** استفاده می‌کند تا چند عملیات بدون انتظار جداگانه برای تک‌تک، هندل شوند."
+ },
+ {
+  "en": "Explain the purpose of the File System fs module.",
+  "q": "هدف ماژول File System (fs) را توضیح دهید.",
+  "qa": "ماژول **fs** در Node.js عملیات فایل مثل خواندن، نوشتن و دستکاری را ممکن می‌کند؛ ماژول هسته است و نصب third-party لازم ندارد."
+ },
+ {
+  "en": "Explain the main idea behind Java and the concept of write once run anywhere.",
+  "q": "ایده‌ی اصلی Java و مفهوم Write Once, Run Anywhere را توضیح دهید.",
+  "qa": "**Java** زبان سطح بالا و شیءگرایی است که **مستقل از پلتفرم** طراحی شده؛ فلسفه‌اش در **WORA (یک‌بار بنویس، همه‌جا اجرا کن)** خلاصه می‌شود."
+ },
+ {
+  "en": "What are the main features of Java?",
+  "q": "ویژگی‌های اصلی Java کدام‌اند؟",
+  "qa": "مقاوم‌بودن Java با ویژگی‌های قدرتمندش برجسته می‌شود."
+ },
+ {
+  "en": "Can you list some non-object-oriented features of Java?",
+  "q": "برخی ویژگی‌های غیرشیءگرای Java را نام ببرید.",
+  "qa": "اگرچه Java عمدتاً زبان **شیءگرا**ست، ویژگی‌های غیرشیءگرایی هم دارد که توسعه‌ی چندپارادایمی را ممکن می‌کند:"
+ },
+ {
+  "en": "Describe the difference between jdk jre and jvm.",
+  "q": "تفاوت JDK و JRE و JVM را توضیح دهید.",
+  "qa": "**JVM** سنگ‌بنای فلسفه‌ی WORA در Java است؛ ماشین محاسباتی انتزاعی که محیط اجرای بایت‌کد Java را فراهم می‌کند."
+ },
+ {
+  "en": "What is the difference between a path and a classpath in Java?",
+  "q": "تفاوت path و classpath در Java چیست؟",
+  "qa": "در Java، **classpath** و **path** کاربردهای متفاوتی دارند:"
+ },
+ {
+  "en": "What is bytecode in the context of Java?",
+  "q": "bytecode در بستر Java چیست؟",
+  "qa": "**Bytecode** دستورالعمل‌های فشرده و مستقل از پلتفرمی است که کامپایلر Java تولید می‌کند؛ واسطی بین سورس‌کد Java و ماشین مجازی است."
+ },
+ {
+  "en": "How does garbage collection work in Java?",
+  "q": "garbage collection در Java چطور کار می‌کند؟",
+  "qa": "در **Java**، ماشین مجازی حافظه را با **garbage collection خودکار** مدیریت می‌کند؛ آبجکت‌های بی‌استفاده شناسایی و بازیابی می‌شوند."
+ },
+ {
+  "en": "What is Go and why was it created?",
+  "q": "Go چیست و چرا ساخته شد؟",
+  "qa": "**Go** (Golang) زبان برنامه‌نویسی متن‌بازی است که تیمی در گوگل ساخت و در ۲۰۰۹ عمومی شد؛ طراحی‌اش متأثر از نیازهای واقعی گوگل است."
+ },
+ {
+  "en": "How is the GOPATH environment variable used?",
+  "q": "متغیر محیطی GOPATH چطور استفاده می‌شود؟",
+  "qa": "در **Go** متغیر `GOPATH` حیاتی است: ریشه‌ی مدیریت پکیج و مخزن کد شماست و فضای توسعه را از نصب‌شده‌ها جدا می‌کند."
+ },
+ {
+  "en": "What are Go's key features compared to other programming languages?",
+  "q": "ویژگی‌های کلیدی Go در مقایسه با زبان‌های دیگر چیست؟",
+  "qa": "**Go** (Golang) چند ویژگی متمایزکننده نسبت به زبان‌های دیگر دارد:"
+ },
+ {
+  "en": "How does Go handle memory management?",
+  "q": "Go مدیریت حافظه را چطور انجام می‌دهد؟",
+  "qa": "**Go** با **garbage collector** حافظه‌ی خودکار دارد؛ توسعه‌دهنده نیازی به تخصیص یا آزادسازی صریح حافظه ندارد."
+ },
+ {
+  "en": "How do you manage error handling in Go?",
+  "q": "مدیریت خطا در Go چطور انجام می‌شود؟",
+  "qa": "Go رویکردی منحصربه‌فرد برای **مدیریت خطا** دارد: نوع بازگشتی صریح `error`. این انتخاب ابهام توابعی که ممکن است خطا بدهند را کم می‌کند."
+ },
+ {
+  "en": "What is a channel in Go and when would you use one?",
+  "q": "channel در Go چیست و کِی استفاده می‌کنید؟",
+  "qa": "در Go، **channel** راهی امن و بهینه برای اشتراک داده بین Goroutineهاست؛ هدف اصلی‌اش روان‌کردن ارتباط و انتقال داده در هم‌زمانی است."
+ },
+ {
+  "en": "Explain concurrency in Go and how it compares to parallelism.",
+  "q": "هم‌زمانی در Go و مقایسه‌اش با parallelism را توضیح دهید.",
+  "qa": "**Goroutine**ها اجرای **هم‌زمان** را با اجرای مستقل توابع ممکن می‌کنند؛ وظایف از طریق مدل ارتباطی مدیریت می‌شوند."
+ },
+ {
+  "en": "What is encapsulation?",
+  "q": "کپسوله‌سازی (encapsulation) چیست؟",
+  "qa": "**کپسوله‌سازی** اصل OOP است که داده و متدهای عمل‌کننده بر آن را در یک واحد — **آبجکت** — جمع می‌کند."
+ },
+ {
+  "en": "Describe the concept of destructor or finalizer in oop.",
+  "q": "مفهوم destructor یا finalizer در OOP را توضیح دهید.",
+  "qa": "**Destructor**ها یا **finalizer**های کلاس در OOP برای پاک‌سازی پیش از نابودی آبجکت به‌کار می‌روند."
+ },
+ {
+  "en": "Compare inheritance vs mixin vs composition.",
+  "q": "وراثت، mixin و composition را مقایسه کنید.",
+  "qa": "**وراثت**، **mixin** و **composition** هر سه تکنیک OOP برای استفاده‌ی مجدد کد و روابط بین آبجکت‌ها یا کلاس‌ها هستند."
+ },
+ {
+  "en": "What is an API and what are its main purposes?",
+  "q": "API چیست و اهداف اصلی‌اش کدام‌اند؟",
+  "qa": "**API (Application Programming Interface)** مجموعه‌ای از تعاریف و پروتکل‌هاست که ارتباط بین نرم‌افزارها را ممکن می‌کند؛ واسطی بین آن‌هاست."
+ },
+ {
+  "en": "Can you explain the difference between an api and a web service?",
+  "q": "تفاوت API و Web service چیست؟",
+  "qa": "هر دو **API** و **وب‌سرویس** ارتباط دو سیستم متمایز را ممکن می‌کنند ولی به شیوه‌های متفاوتی انجام می‌شود."
+ },
+ {
+  "en": "Can we overload or override static methods in Java?",
+  "q": "آیا می‌توان متدهای static را در Java overload یا override کرد؟",
+  "qa": "متدهای static را می‌توان **overload** کرد (هم‌نام با پارامترهای متفاوت) اما **override** نه — چون binding آن‌ها در زمان کامپایل و بر اساس کلاس انجام می‌شود، نه رانتایم؛ یعنی چیزی که به‌نظر می‌رسد override در واقع «پنهان‌سازی» (hiding) است."
+ },
+ {
+  "en": "What is the purpose of the _'final'_ keyword?",
+  "q": "هدف کلیدواژه‌ی final در Java چیست؟",
+  "qa": "در Java کلیدواژه‌ی `final` **محدودیت و سود** ارائه می‌دهد؛ عمدتاً تغییرناپذیری موجودیت‌های مختلف را حفظ می‌کند."
+ },
+ {
+  "en": "What are the principles of a _RESTful API_?",
+  "q": "اصول RESTful API چیست؟",
+  "qa": "**APIهای RESTful** مجموعه‌ای از اصول معماری را رعایت می‌کنند که گشادگی **وب** را با قدرت APIهای مدرن ترکیب می‌کند؛ **stateless** طراحی شده‌اند تا منطق به‌راحتی مقیاس بگیرد."
+ },
+ {
+  "en": "How does a _SOAP API_ differ from a _REST API_?",
+  "q": "SOAP API چه تفاوتی با REST API دارد؟",
+  "qa": "قبل از تفاوت‌های SOAP و REST، جوهر هرکدام را بفهمید."
+ },
+ {
+  "en": "What is an _API endpoint_?",
+  "q": "API endpoint چیست؟",
+  "qa": "**API endpoint** یک URI است که به‌عنوان لینک ارتباطی بین نرم‌افزارهای مختلف عمل می‌کند؛ رابطی برای تعامل و تبادل ساختاریافته‌ی داده."
+ },
+ {
+  "en": "What are the common methods (_HTTP verbs_) used in a _REST API_, and what does each method do?",
+  "q": "متدهای رایج (HTTP verb ها) در REST API کدام‌اند و هرکدام چه‌کار می‌کنند؟",
+  "qa": "**REST** (Representational State Transfer) مجموعه‌ای از **HTTP verb**ها برای عملیات مشخص روی منابع به‌کار می‌برد؛ هر متد برای هدفی خاص طراحی شده است."
+ },
+ {
+  "en": "What is _idempotence_ in the context of _API design_, and why is it important?",
+  "q": "idempotence در طراحی API چیست و چرا مهم است؟",
+  "qa": "**Idempotence** اصل بنیادی طراحی API است: نتیجه‌ی عملیات حتی پس از فراخوانی‌های مکرر یکسان می‌ماند؛ ایمنی retry را تضمین می‌کند."
+ },
+ {
+  "en": "How can you design an _API_ to be easily consumable by _clients_?",
+  "q": "چطور API را برای مصرف آسانِ کلاینت‌ها طراحی می‌کنید؟",
+  "qa": "طراحی API باید **سادگی**، **سازگاری** و **کاربرپسندیِ** بالا داشته باشد تا پذیرش آسان و منحنی یادگیری کم شود."
+ },
+ {
+  "en": "What considerations might influence how you paginate _API responses_?",
+  "q": "چه ملاحظاتی بر صفحه‌بندی پاسخ‌های API اثر می‌گذارد؟",
+  "qa": "ببینید موقع صفحه‌بندی پاسخ‌های API چه جنبه‌هایی را باید در نظر گرفت."
+ },
+ {
+  "en": "What is a _database management system (DBMS)_, and can you name some examples?",
+  "q": "DBMS چیست و چند مثال نام ببرید.",
+  "qa": "**DBMS** واسطی بین کاربران و پایگاه داده است؛ نگهداری، واکشی و مدیریت مداوم داده را با مکانیزم ساختاریافته انجام می‌دهد."
+ },
+ {
+  "en": "What are the differences between _SQL_ and _NoSQL_ databases?",
+  "q": "تفاوت‌های پایگاه داده‌ی SQL و NoSQL چیست؟",
+  "qa": "**SQL** و **NoSQL** در چند جنبه‌ی کلیدی فرق دارند؛ پنج مورد مهم را توضیح می‌دهم."
+ },
+ {
+  "en": "Describe a _relational database schema_.",
+  "q": "اسکیمای پایگاه داده‌ی رابطه‌ای را توصیف کنید.",
+  "qa": "**اسکیمای رابطه‌ای** مجموعه قواعدی است که ساختار، قیود و روابط جداول داده در **RDBMS** را تعریف می‌کند."
+ },
+ {
+  "en": "What is _denormalization_ and when would you consider it?",
+  "q": "denormalization چیست و کِی در نظر می‌گیرید؟",
+  "qa": "**Denormalization** یعنی **کاهش نرمال‌سازی** (معمولاً برای عملکرد) با افزودن **داده‌ی افزونه** به یک یا چند جدول؛ نرمال‌سازی یکپارچگی می‌دهد و denormalization سرعت خواندن."
+ },
+ {
+  "en": "Compare and contrast the _DROP_, _DELETE_, and _TRUNCATE_ commands.",
+  "q": "دستورات DROP و DELETE و TRUNCATE را مقایسه کنید.",
+  "qa": "این سه دستور را از نظر **کارکرد، عملیات، سرعت و بازیابی** مقایسه می‌کنیم."
+ },
+ {
+  "en": "What is a _prepared statement_, and why would you use one?",
+  "q": "prepared statement چیست و چرا استفاده می‌کنید؟",
+  "qa": "**Prepared Statementها** با جداکردن داده از دستور SQL، ریسک SQL injection را کم می‌کنند و اجرا را با **bind پارامترهای تکراری** بهینه می‌کنند."
+ },
+ {
+  "en": "Explain the function of _GROUP BY_ and _HAVING_ clauses in SQL.",
+  "q": "کارکرد GROUP BY و HAVING در SQL را توضیح دهید.",
+  "qa": "**GROUP BY** و **HAVING** با توابع تجمعی هم‌افزا می‌شوند تا نتایج پیچیده‌تر و دقیق‌تری بسازند."
+ },
+ {
+  "en": "What are _indexes_ and how do they work in databases?",
+  "q": "ایندکس‌ها چیستند و در پایگاه داده چطور کار می‌کنند؟",
+  "qa": "**ایندکس** ساختاری داده‌ای در پایگاه داده است که با مرتب‌سازی منطقی داده‌های ایندکس‌شده، سرعت و کارایی جست‌وجو را بالا می‌برد."
+ },
+ {
+  "en": "What is _Django_ and what are its key features?",
+  "q": "Django چیست و ویژگی‌های کلیدی‌اش کدام‌اند؟",
+  "qa": "**Django** فریم‌ورک سطح بالای وب پایتون است؛ معروف به ساده‌سازی کارهای پیچیده و رعایت اصول **DRY** و الگوی **MTV**."
+ },
+ {
+  "en": "Describe the purpose of the _settings.py_ file in a _Django project_.",
+  "q": "هدف فایل settings.py در پروژه‌ی Django چیست؟",
+  "qa": "فایل `settings.py` در پروژه‌ی Django برای پیکربندی پروژه حیاتی است: اپ‌ها و منابع بیرونی را تنظیم و **شخصی‌سازی** و **کنترل** گزینه‌های متنوع را ممکن می‌کند."
+ },
+ {
+  "en": "Explain the concept of _URL patterns_ in _Django_.",
+  "q": "مفهوم URL patterns در Django را توضیح دهید.",
+  "qa": "در Django **URL patternها** درخواست‌های وب را به view مناسب هدایت می‌کنند؛ در urls.py هر اپ تعریف می‌شوند و می‌توانند رشته‌ای ساده یا عبارت باقاعده باشند."
+ },
+ {
+  "en": "Define _caching_ in the context of computer programming.",
+  "q": "کش را در بستر برنامه‌نویسی تعریف کنید.",
+  "qa": "**کش** یعنی ذخیره‌ی داده‌های پرمصرف یا محاسبه‌شده در حافظه‌ای سریع‌تر ولی کوچک‌تر، برای سرعت‌بخشیدن به دسترسی‌های بعدی."
+ },
+ {
+  "en": "Describe the impact of _cache size_ on performance.",
+  "q": "اثر اندازه‌ی کش بر عملکرد را توضیح دهید.",
+  "qa": "**اندازه‌ی کش** اثر عمیقی بر عملکرد سیستم و اپ دارد؛ کش در سطوح مختلفی هست: از رجیسترهای CPU تا دیسک و اینترنت."
+ },
+ {
+  "en": "How does a _cache_ improve _data retrieval times_?",
+  "q": "کش چطور زمان واکشی داده را بهتر می‌کند؟",
+  "qa": "**کش** با **کم‌کردن نیاز به مراجعه به منبع اصلی داده** زمان واکشی را به‌طور چشمگیر کم می‌کند — مخصوصاً وقتی اختلاف سرعت دسترسی زیاد است."
+ },
+ {
+  "en": "What is the difference between _local caching_ and _distributed caching_?",
+  "q": "تفاوت کش محلی و کش توزیع‌شده چیست؟",
+  "qa": "ویژگی‌ها و کاربردهای متمایز **کش محلی** در برابر **کش توزیع‌شده** را بررسی می‌کنیم."
+ },
+ {
+  "en": "Explain the importance of _cache expiration_ and how it is managed.",
+  "q": "اهمیت انقضای کش و مدیریتش را توضیح دهید.",
+  "qa": "**انقضای کش** برای یکپارچگی داده حیاتی است؛ مخصوصاً وقتی داده‌ی کش‌شده ممکن است با گذر زمان کهنه یا بی‌ربط شود."
+ },
+ {
+  "en": "How does _cache invalidation_ work and why is it necessary?",
+  "q": "cache invalidation چطور کار می‌کند و چرا لازم است؟",
+  "qa": "**Cache invalidation** تضمین می‌کند داده‌ی کش با منبع اصلی سازگار بماند؛ برای یکپارچگی و دقت — مخصوصاً در سناریوهای تغییر مداوم داده — حیاتی است."
+ },
+ {
+  "en": "Describe the steps involved in implementing a basic _cache system_.",
+  "q": "مراحل پیاده‌سازی یک سیستم کش پایه را توضیح دهید.",
+  "qa": "مراحل **پیاده‌سازی سیستم کش پایه** را می‌شکنیم و بعد استراتژی‌های cache eviction را می‌بینیم."
+ },
+ {
+  "en": "What are some common _caching algorithms_, and how do they differ?",
+  "q": "الگوریتم‌های رایج کش کدام‌اند و چه تفاوتی دارند؟",
+  "qa": "**الگوریتم‌های کش** برای بهینه‌سازی واکشی داده حیاتی‌اند؛ هرکدام استراتژی انتخاب و جایگزینی خاص خودش را دارد."
+ },
+ {
+  "en": "Explain the design considerations for a cache that supports _high concurrency_.",
+  "q": "ملاحظات طراحی کش با هم‌زمانی بالا چیست؟",
+  "qa": "برای کش با **هم‌زمانی بالا** باید نوع کش، استراتژی همگام‌سازی و سیاست eviction درست انتخاب شود."
+ },
+ {
+  "en": "What is _concurrency_ in programming and how does it differ from _parallelism_?",
+  "q": "هم‌زمانی در برنامه‌نویسی چیست و چه تفاوتی با parallelism دارد؟",
+  "qa": "**هم‌زمانی** یعنی توان سیستم در مدیریت تعداد زیادی وظیفه که ممکن است **مستقل از هم شروع، اجرا و تمام شوند** — نشانه‌ی بارز معماری‌های مدرن."
+ },
+ {
+  "en": "What is a _critical section_ in the context of _concurrent programming_?",
+  "q": "critical section در برنامه‌نویسی هم‌زمان چیست؟",
+  "qa": "**Critical section** بخشی از کد است که **منابع مشترک** توسط چند نخ در آن دستکاری می‌شود؛ مدیریت دسترسی به آن ضروری است."
+ },
+ {
+  "en": "Can you describe the concept of _atomicity_ in relation to _concurrency_?",
+  "q": "مفهوم atomicity در هم‌زمانی را توضیح دهید.",
+  "qa": "**اتمی بودن** یعنی عملیات **تجزیه‌ناپذیر** به‌نظر برسد: یا کامل اجرا می‌شود یا اصلاً — عملیات هم‌زمان اثر نیمه‌کاره روی هم نمی‌گذارند."
+ },
+ {
+  "en": "Can you explain the _producer-consumer problem_ and how can it be addressed using _concurrency mechanisms_?",
+  "q": "مسئله‌ی producer-consumer و راه‌حلش با مکانیزم‌های هم‌زمانی را توضیح دهید.",
+  "qa": "**مسئله‌ی تولیدکننده-مصرف‌کننده** چالش کلاسیک همگام‌سازی است: تولیدکننده و مصرف‌کننده‌ای که به منبع مشترک دسترسی دارند."
+ },
+ {
+  "en": "Describe the impact of _Dependency Injection_ on the maintainability of code.",
+  "q": "اثر Dependency Injection بر نگهداری‌پذیری کد را توضیح دهید.",
+  "qa": "**DI** ساخت و نگهداری سیستم‌های شیءگرا را بسیار روان می‌کند؛ کد ماژولار، قابل‌تست و قابل‌حمل می‌شود."
+ },
+ {
+  "en": "Compare and contrast _constructor injection_ versus _setter injection_.",
+  "q": "constructor injection و setter injection را مقایسه کنید.",
+  "qa": "ویژگی‌ها و تفاوت‌های کلیدی این دو را بررسی می‌کنیم."
+ },
+ {
+  "en": "What is a _Dependency Injection container_ and what are its responsibilities?",
+  "q": "DI Container چیست و مسئولیت‌هایش کدام‌اند؟",
+  "qa": "**DI Container** تزریق وابستگی‌ها به آبجکت‌ها را خودکار می‌کند؛ طراحی را روان و ارجاع مستقیم بین آبجکت‌ها را حذف می‌کند. معمولاً مسئولیت‌هایش…"
+ },
+ {
+  "en": "Can you list some popular _Dependency Injection frameworks_ and their distinctive features?",
+  "q": "فریم‌ورک‌های رایج DI و ویژگی‌های متمایزشان را نام ببرید.",
+  "qa": "**فریم‌ورک‌های DI** مدیریت وابستگی‌ها را روان و پیچیدگی را کم و ماژولاریتی را بالا می‌برند؛ سرشناس‌ها را می‌بینیم."
+ },
+ {
+  "en": "What is WebSocket protocol and how does it differ from HTTP?",
+  "q": "پروتکل WebSocket چیست و چه تفاوتی با HTTP دارد؟",
+  "qa": "**WebSocket** (RFC 6455) و **HTTP/3** (RFC 9114) دو پارادایم متفاوت در ارتباط لایه‌ی انتقال/کاربردند؛ HTTP/3 روی QUIC فاصله را کم کرده است."
+ },
+ {
+  "en": "Explain how the WebSocket handshake works.",
+  "q": "handshake در WebSocket چطور کار می‌کند؟",
+  "qa": "**handshake WebSocket** یک درخواست استاندارد HTTP/1.1 را به پروتکل فریم‌بندی باینری **full-duplex** ماندگار (RFC 6455) تبدیل می‌کند؛ همین مکانیزم ارتباط کم-تاخیر را ممکن می‌کند."
+ },
+ {
+  "en": "What are some common use cases for WebSockets?",
+  "q": "کاربردهای رایج WebSocket ها کدام‌اند؟",
+  "qa": "**WebSocketها** کانال ماندگار full-duplex روی یک اتصال TCP می‌دهند؛ در ۲۰۲۶ همچنان استاندارد ارتباط stateful کم-تاخیر هستند."
+ },
+ {
+  "en": "What are the limitations of WebSockets?",
+  "q": "محدودیت‌های WebSocket ها کدام‌اند؟",
+  "qa": "**WebSocketها (RFC 6455)** استاندارد صنعت برای full-duplex هستند؛ اما چرخش به سمت **HTTP/3 (QUIC)** و پارادایم serverless نیازمند ملاحظات است."
+ },
+ {
+  "en": "Can you describe the WebSocket API provided by HTML5?",
+  "q": "WebSocket API که HTML5 فراهم می‌کند را توصیف کنید.",
+  "qa": "**WebSocket** پروتکلی stateful و **full-duplex** استاندارد در **RFC 6455** است؛ روی یک اتصال TCP ماندگار کار می‌کند و سربار HTTP معمولی را دور می‌زند."
+ },
+ {
+  "en": "Explain the WebSocket frame format.",
+  "q": "فرمت فریم WebSocket را توضیح دهید.",
+  "qa": "پروتکل **فریم WebSocket** ارتباط full-duplex روی یک TCP می‌دهد؛ پیاده‌سازی‌های مدرن (۲۰۲۶+) بر فریم‌بندی پربازده تمرکز دارند."
+ },
+ {
+  "en": "How do WebSockets handle communication through proxies and firewalls?",
+  "q": "WebSocket ها از طریق proxy و فایروال چطور ارتباط را هندل می‌کنند؟",
+  "qa": "**WebSocketها** (RFC 6455) کانال‌های ماندگار full-duplex روی TCP می‌دهند؛ طراحی‌های ۲۰۲۶ باید ملاحظات پراکسی و فایروال را در نظر بگیرند."
+ },
+ {
+  "en": "What are the security considerations when using WebSockets?",
+  "q": "ملاحظات امنیتی استفاده از WebSocket ها چیست؟",
+  "qa": "اتصال ماندگار مرز امنیتی را از اعتبارسنجی درخواست‌محور به اعتبارسنجی وضعیت نشست می‌برد؛ پیاده‌سازی مدرن باید ملاحظات ترنسپورت طولانی‌عمر را داشته باشد."
+ },
+ {
+  "en": "Explain the role of ping/pong frames in WebSockets.",
+  "q": "نقش فریم‌های ping/pong در WebSocket ها چیست؟",
+  "qa": "**Ping** (Opcode `0x9`) و **Pong** (Opcode `0xA`) **فریم‌های کنترلی** پروتکل برای **پایش زنده‌بودن** و **نگهداری مسیر** هستند."
+ },
+ {
+  "en": "How does WebSocket ensure ordered delivery of messages?",
+  "q": "WebSocket تحویل مرتب پیام‌ها را چطور تضمین می‌کند؟",
+  "qa": "**WebSocket** با تکیه بر تضمین‌های جریان‌محور **TCP** و **پروتکل فریم‌بندی** خود، تحویل مرتب پیام‌ها را تضمین می‌کند."
+ },
+ {
+  "en": "Can WebSockets be used for broadcasting messages to multiple clients? If so, how?",
+  "q": "آیا WebSocket ها برای broadcast پیام به چند کلاینت استفاده می‌شوند؟ چطور؟",
+  "qa": "**WebSocketها** ارتباط **full-duplex دوجهته‌ی واقعی** دارند؛ پروتکل point-to-point است و broadcast با نگهداری لیست اتصال‌ها و حلقه‌ی ارسال انجام می‌شود."
+ },
+ {
+  "en": "What fallback mechanisms can be used if WebSockets are not supported by a browser or server?",
+  "q": "اگر مرورگر یا سرور WebSocket را پشتیبانی نکنند چه fallback هایی هست؟",
+  "qa": "در ۲۰۲۶ استاندارد ارتباط بلادرنگ: **WebSocket API (RFC 6455)**، **WebTransport** و **Server-Sent Events (SSE)**. راهکارهای قدیمی‌تر هم به‌عنوان جایگزین…"
+ }
+]

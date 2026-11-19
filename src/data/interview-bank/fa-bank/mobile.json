@@ -1,0 +1,377 @@
+[
+ {
+  "en": "What is the difference between a `StatefulWidget` and a `StatelessWidget`?",
+  "q": "تفاوت StatefulWidget و StatelessWidget چیست؟",
+  "qa": "در سطح کلی، **StatelessWidget** برای **محتوای ثابت** و **StatefulWidget** برای کامپوننت‌هایی است که باید UIشان در طول زمان به‌روز شود."
+ },
+ {
+  "en": "What is an _Activity_ in Android, and what is its lifecycle?",
+  "q": "Activity در Android چیست و چرخه‌ی حیاتش چیست؟",
+  "qa": "**Activity** در دنیای Android نماینده‌ی یک وظیفه‌ی متمرکز مشخص است؛ مثل صفحات کتاب که کاربر برای کارهای مشخص بین‌شان جابه‌جا می‌شود."
+ },
+ {
+  "en": "What are _Intents_ and how are they used in Android?",
+  "q": "Intent ها چیستند و در Android چطور استفاده می‌شوند؟",
+  "qa": "**Intent** در Android آبجکت پیام‌رسانی است که معمولاً چسب بین اجزای مختلف اپ توصیف می‌شود."
+ },
+ {
+  "en": "What file holds the application's AndroidManifest.xml in an Android project?",
+  "q": "فایل AndroidManifest.xml اپ در کجای پروژه‌ی Android قرار دارد؟",
+  "qa": "فایل `AndroidManifest.xml` — از حیاتی‌ترین اجزای اپ Android — در **ریشه‌ی پروژه** قرار دارد."
+ },
+ {
+  "en": "What are the basic types in Kotlin?",
+  "q": "انواع پایه در Kotlin کدام‌اند؟",
+  "qa": "**Kotlin** مجموعه‌ی غنی از انواع داده‌ی داخلی برای کاربردهای مختلف دارد؛ عمدتاً دو دسته: **Primitive** و **Object**."
+ },
+ {
+  "en": "What are the Kotlin type inference rules?",
+  "q": "قواعد type inference در Kotlin چیست؟",
+  "qa": "**type inference** در Kotlin قابلیت قدرتمندی است که نوع متغیر را خودکار تعیین می‌کند؛ ولی در چارچوب قواعد **Kotlin** انجام می‌شود."
+ },
+ {
+  "en": "Can Kotlin code be executed without a main function?",
+  "q": "آیا کد Kotlin بدون main function اجرا می‌شود؟",
+  "qa": "اگرچه در بیشتر زبان‌ها `main` برای شروع اپ ضروری است، **Kotlin** انعطاف اجرای مستقیم را هم دارد."
+ },
+ {
+  "en": "What are extension functions in Kotlin?",
+  "q": "extension function ها در Kotlin چیستند؟",
+  "qa": "**Extension functionها** در Kotlin راه راحتی افزودن متد به کلاس‌های موجود بدون تغییر سورس‌شان است؛ مخصوصاً برای کتابخانه‌ها کاربردی است."
+ },
+ {
+  "en": "What is a smart cast in Kotlin?",
+  "q": "smart cast در Kotlin چیست؟",
+  "qa": "**smart cast** در Kotlin یعنی توانایی کامپایلر در تبدیل خودکار نوع متغیر زیر شرایط مشخص؛ کد را به‌طور چشمگیری تمیز می‌کند."
+ },
+ {
+  "en": "How do you implement a custom getter and setter in Kotlin?",
+  "q": "getter و setter سفارشی در Kotlin چطور پیاده می‌شود؟",
+  "qa": "در Kotlin می‌توانید **رفتار propertyها را سفارشی** کنید، از جمله تعریف **getter و setter** خودتان."
+ },
+ {
+  "en": "What is JSX and how is it used in React Native?",
+  "q": "JSX چیست و در React Native چطور استفاده می‌شود؟",
+  "qa": "**JSX** توسعه‌ی سینتکس جاوااسکریپت است — محبوب در React و React Native — برای بیان مختصر کامپوننت‌های UI."
+ },
+ {
+  "en": "Explain the concept of hot reloading in React Native.",
+  "q": "مفهوم hot reloading در React Native را توضیح دهید.",
+  "qa": "**Hot Reloading** فرایند توسعه را با رندر بلادرنگ تغییرات روی اپ در حال اجرا سرعت می‌بخشد؛ state فعلی اپ هم حفظ می‌شود."
+ },
+ {
+  "en": "What is the difference between let and var in Swift?",
+  "q": "تفاوت let و var در Swift چیست؟",
+  "qa": "در Swift، `let` و `var` برای **تعریف ثابت** و **متغیر** به‌کار می‌روند."
+ },
+ {
+  "en": "How do you define a constant that is computed at runtime in Swift?",
+  "q": "در Swift ثابتی که موقع اجرا محاسبه می‌شود چطور تعریف می‌کنید؟",
+  "qa": "در Swift از **lazy properties** و **عبارات closure فوراً فراخوانی‌شده (IICE)** برای محاسبه در runtime استفاده می‌شود؛ فقط یک‌بار محاسبه می‌شود."
+ },
+ {
+  "en": "What are tuples and how are they useful in Swift?",
+  "q": "tuple ها در Swift چیستند و چه سودی دارند؟",
+  "qa": "در **Swift**، **tuple** نوع داده‌ی مرکب است که چند مقدار را یک‌جا بسته‌بندی می‌کند؛ برخلاف آرایه و دیکشنری، سبک و منعطف است."
+ },
+ {
+  "en": "How do you handle flow control in Swift with loops and conditions?",
+  "q": "کنترل جریان در Swift با حلقه‌ها و شرط‌ها چطور انجام می‌شود؟",
+  "qa": "در Swift **جریان برنامه** را با دستورات رایج مثل شرط‌ها و حلقه‌ها کنترل می‌کنید."
+ },
+ {
+  "en": "What are enumerations in Swift and how do they support associated values?",
+  "q": "enumeration ها در Swift چیستند و associated value ها چطور پشتیبانی می‌شوند؟",
+  "qa": "**Enumerationها** (enum) قابلیت قدرتمند Swift برای تعریف نوع مشترک برای گروهی از مقادیر مرتبط‌اند؛ **associated value**ها هم پشتیبانی می‌شوند."
+ },
+ {
+  "en": "What is type casting in Swift and how is it implemented?",
+  "q": "type casting در Swift چیست و چطور پیاده می‌شود؟",
+  "qa": "**type casting** در Swift یعنی چک‌کردن نوع متغیر و تبدیل شرطی آن به نوع دیگر (upcast یا downcast)."
+ },
+ {
+  "en": "What are the key principles of inheritance in Swift?",
+  "q": "اصول کلیدی وراثت در Swift چیست؟",
+  "qa": "**وراثت** مفهوم محوری OOP است: کلاس‌ها ویژگی‌ها را از کلاس‌های دیگر به ارث می‌برند؛ Swift **تک‌ورث** است."
+ },
+ {
+  "en": "Can you explain what a widget is in Flutter?",
+  "q": "widget در Flutter چیست؟ توضیح می‌دهید؟",
+  "qa": "در Flutter همه‌چیز روی صفحه یک **widget** است؛ از یک دکمه‌ی تکی تا layout تمام‌صفحه. widgetها ساختار درختی دارند."
+ },
+ {
+  "en": "How do you create a scrollable list in Flutter?",
+  "q": "در Flutter لیست قابل‌اسکرول چطور ساخته می‌شود؟",
+  "qa": "برای ساخت **لیست قابل‌اسکرول** در Flutter دو انتخاب اصلی دارید: `ListView` و `GridView`."
+ },
+ {
+  "en": "Explain the Flutter app lifecycle.",
+  "q": "چرخه‌ی حیات اپ Flutter را توضیح دهید.",
+  "qa": "در اپ Flutter، **چرخه‌ی حیات** یعنی حالت‌های مختلف اپ از اجرا تا پایان یا تعلیق."
+ },
+ {
+  "en": "Discuss how layout is structured in Flutter.",
+  "q": "ساختار layout در Flutter را بررسی کنید.",
+  "qa": "در **Flutter** اجزای UI با ساختار **منعطف و بهینه‌ی** شبیه وب چیده می‌شوند؛ رویکرد **declarative** است و تمرکز بر *چه چیزی باید نمایش داده شود*."
+ },
+ {
+  "en": "What is a pubspec.yaml file and what is its purpose?",
+  "q": "فایل pubspec.yaml چیست و هدفش چیست؟",
+  "qa": "فایل **pubspec.yaml** فایل پیکربندی پروژه‌های Flutter است؛ متادیتا و وابستگی‌های پروژه را تعریف می‌کند."
+ },
+ {
+  "en": "Explain the purpose of the main.dart file.",
+  "q": "هدف فایل main.dart را توضیح دهید.",
+  "qa": "در پروژه‌ی Flutter، **`main.dart`** **نقطه‌ی ورود** اپلیکیشن است؛ موقع اجرای اپ Flutter اولین فایلی است که صدا زده می‌شود."
+ },
+ {
+  "en": "How do you apply theming to a Flutter application?",
+  "q": "تم‌دهی به اپ Flutter چطور انجام می‌شود؟",
+  "qa": "در Flutter **theming** برای حفظ ظاهر یکدست در کل اپ محوری است؛ با `ThemeData` و widgetهای `Theme` انجام می‌شود."
+ },
+ {
+  "en": "What is the use of the Scaffold widget in Flutter?",
+  "q": "کاربرد widget Scaffold در Flutter چیست؟",
+  "qa": "widget **Scaffold** بنیادی اپ‌های Flutter است و دور بسیاری از اجزای داخلی می‌پیچد؛ با **Material Design** هم‌راستاست."
+ },
+ {
+  "en": "Describe the Android application lifecycle.",
+  "q": "چرخه‌ی حیات اپلیکیشن Android را توضیح دهید.",
+  "qa": "**چرخه‌ی حیات اپ Android** رفتار اپ در حالت‌های مختلف را تعریف می‌کند؛ فهم آن برای توسعه‌ی بهینه حیاتی است."
+ },
+ {
+  "en": "Define a Broadcast Receiver and its use in Android apps.",
+  "q": "Broadcast Receiver را تعریف کنید و کاربردش در اپ‌های Android را بگویید.",
+  "qa": "**Broadcast Receiver** در سیستم‌عامل Android جزء اساسی مدل event-driven است؛ نقطه‌ی دریافت رویدادهای broadcast اولیه‌شده است."
+ },
+ {
+  "en": "What is the Dalvik Virtual Machine?",
+  "q": "Dalvik Virtual Machine چیست؟",
+  "qa": "**Dalvik Virtual Machine (DVM)** عنصر حیاتی Android در نسخه‌های قبل از ۵.۰ بود؛ بعد از آن جایگزین Android Runtime (ART) شد."
+ },
+ {
+  "en": "What is an APK file in Android?",
+  "q": "فایل APK در Android چیست؟",
+  "qa": "**APK (Android Package Kit)** مثل فایل zip یا JAR است؛ فرمت نهایی بسته‌بندی که همه‌ی لازم‌های یک اپ Android را در خود دارد."
+ },
+ {
+  "en": "How does Kotlin improve upon Java for Android development?",
+  "q": "Kotlin برای توسعه‌ی Android چه بهبودی نسبت به Java دارد؟",
+  "qa": "**Kotlin** زبان statically-typed با چند سود نسبت به Java در بستر توسعه‌ی Android است."
+ },
+ {
+  "en": "Explain the difference between val and var in Kotlin.",
+  "q": "تفاوت val و var در Kotlin چیست؟",
+  "qa": "در Kotlin، `val` و `var` برای **تعریف متغیر** به‌کار می‌روند با ویژگی‌های تغییرپذیری متفاوت: `val` فقط‌خواندنی و `var` قابل‌تغییر."
+ },
+ {
+  "en": "How do you perform string interpolation in Kotlin?",
+  "q": "string interpolation در Kotlin چطور انجام می‌شود؟",
+  "qa": "در Kotlin با علامت `$` رشته‌ها را **درون‌یابی** می‌کنید؛ متغیرها، عبارت‌ها و محاسبات را مستقیم داخل رشته جا می‌دهد."
+ },
+ {
+  "en": "How are if expressions used in Kotlin as compared to Java?",
+  "q": "عبارت if در Kotlin در مقایسه با Java چطور استفاده می‌شود؟",
+  "qa": "هر دو زبان از `if` برای اجرای شرطی استفاده می‌کنند اما Kotlin با عبارت `if` قدرت و انعطاف بیشتری می‌دهد — مثلاً مقدار برمی‌گرداند."
+ },
+ {
+  "en": "Explain when expressions in Kotlin.",
+  "q": "عبارت when در Kotlin را توضیح دهید.",
+  "qa": "در **Kotlin**، عبارت `when` سازنده‌ی کنترل جریان قدرتمندی است که خیلی از عملیات را ساده و بهتر می‌کند — جایگزین مدرن switch."
+ },
+ {
+  "en": "How does Kotlin handle null safety and what is the Elvis operator?",
+  "q": "Kotlin با null safety چطور رفتار می‌کند و Elvis operator چیست؟",
+  "qa": "در Kotlin، **null safety** ویژگی هسته‌ای برای حل مسائل ارجاع null است؛ هدف کاهش خطاهای `NullPointerException` که رایج‌ترین کرش‌ها هستند."
+ },
+ {
+  "en": "What is React Native and how does it differ from React?",
+  "q": "React Native چیست و چه تفاوتی با React دارد؟",
+  "qa": "**React Native** ادامه‌ی کتابخانه‌ی محبوب React است و ساخت **اپ‌های موبایل نیتیو** را با فناوری‌های آشنای وب ممکن می‌کند."
+ },
+ {
+  "en": "Can you explain the concept of \"Learn once, write anywhere\" in the context of React Native?",
+  "q": "مفهوم «Learn once, write anywhere» در React Native را توضیح می‌دهید؟",
+  "qa": "ایده‌ی اصلی در **React Native** یعنی **استفاده‌ی مجدد از کد**؛ کتابخانه‌ها و کامپوننت‌های نوشته‌شده در **React** قابل استفاده‌اند."
+ },
+ {
+  "en": "How do you create a basic React Native application?",
+  "q": "اپ پایه‌ی React Native چطور ساخته می‌شود؟",
+  "qa": "ساخت اپ پایه‌ی **React Native** چند مرحله دارد: آماده‌سازی محیط توسعه، نصب نرم‌افزارهای لازم و اجرای پروژه."
+ },
+ {
+  "en": "How do you handle state management in React Native?",
+  "q": "مدیریت state در React Native چطور انجام می‌شود؟",
+  "qa": "**مدیریت state** در **React Native** یعنی ردیابی و به‌روزرسانی وضعیت کامپوننت‌ها."
+ },
+ {
+  "en": "What are props in React Native and how are they used?",
+  "q": "props در React Native چیستند و چطور استفاده می‌شوند؟",
+  "qa": "**Props** (خلاصه‌ی properties) جریان داده‌ی یک‌طرفه در React را ممکن می‌کنند و برای ساخت **کامپوننت‌های React Native قابل‌استفاده‌مجدد** ضروری‌اند."
+ },
+ {
+  "en": "How do you handle user input in React Native?",
+  "q": "ورودی کاربر در React Native چطور هندل می‌شود؟",
+  "qa": "**React Native** چند کامپوننت مخصوص تعامل کاربر و پردازش ورودی برای هر دو پلتفرم iOS و Android دارد."
+ },
+ {
+  "en": "What is a TouchableHighlight in React Native?",
+  "q": "TouchableHighlight در React Native چیست؟",
+  "qa": "`TouchableHighlight` کامپوننت **React Native** بهینه‌شده برای تعامل لمسی است؛ هنگام لمس، بازخورد نیتیو پلتفرم را می‌دهد — برای دکمه‌ها ایده‌آل است."
+ },
+ {
+  "en": "Can you explain the purpose of optionals in Swift?",
+  "q": "هدف optionals در Swift چیست؟",
+  "qa": "در Swift، **optionalها نوع ویژه‌ای هستند که یا مقدار معتبر دارند یا هیچ**. ترکیب بهترین‌های ارجاع nullable در Objective-C و…"
+ },
+ {
+  "en": "Describe the concept of type inference in Swift.",
+  "q": "مفهوم type inference در Swift را توضیح دهید.",
+  "qa": "**Type inference** در Swift به کامپایلر اجازه می‌دهد **نوع متغیرها را از مقدارشان تشخیص دهد** و نیاز به annotation صریح را کم می‌کند."
+ },
+ {
+  "en": "How do you define a class in Swift?",
+  "q": "کلاس در Swift چطور تعریف می‌شود؟",
+  "qa": "در Swift، **کلاس** نقشه‌ی ساخت آبجکت‌هاست. **کلاس‌ها** هم نوع مرجع و هم معنای مقداری را پشتیبانی می‌کنند."
+ },
+ {
+  "en": "How does Swift enable encapsulation within classes and structs?",
+  "q": "Swift کپسوله‌سازی در کلاس‌ها و struct ها را چطور ممکن می‌کند؟",
+  "qa": "هر **کلاس** و **struct** در Swift با modifierهای کنترل دسترسی کپسوله‌سازی را فراهم می‌کنند؛ سطوحی مثل **open**، **public** و…"
+ },
+ {
+  "en": "Can Swift classes have multiple inheritance?",
+  "q": "آیا کلاس‌های Swift وراثت چندگانه دارند؟",
+  "qa": "**Swift** برای کلاس‌ها **وراثت چندگانه** ندارد اما با **protocol**ها و **extensionها** کارکرد مشابه را ممکن می‌کند؛ این رویکرد…"
+ },
+ {
+  "en": "What is Flutter?",
+  "q": "Flutter چیست؟",
+  "qa": "**Flutter** ابزارک UI متن‌باز گوگل برای ساخت اپ‌های کامپایل‌شده‌ی نیتیو برای موبایل، وب و دسکتاپ از یک کدبیس واحد است."
+ },
+ {
+  "en": "What language does Flutter use for app development?",
+  "q": "Flutter برای توسعه‌ی اپ از چه زبانی استفاده می‌کند؟",
+  "qa": "قدرت **Flutter** از زبان برنامه‌نویسی **Dart** می‌آید. Dart که گوگل طراحی کرده، انتخابی پویا و منسجم برای همه‌ی پروژه‌های Flutter است."
+ },
+ {
+  "en": "Describe the Flutter architecture.",
+  "q": "معماری Flutter را توضیح دهید.",
+  "qa": "- **رندر UI**: کنترل از اپ به Flutter Engine می‌رسد که از **کتابخانه‌ی گرافیکی Skia** برای رندر مستقل از پلتفرم استفاده می‌کند. - …"
+ },
+ {
+  "en": "What is the significance of the BuildContext class?",
+  "q": "اهمیت کلاس BuildContext چیست؟",
+  "qa": "کلاس `BuildContext` در Flutter برای عملکرد، رندر و مدیریت state فریم‌ورک محوری است."
+ },
+ {
+  "en": "How do you debug a Flutter application?",
+  "q": "اپ Flutter را چطور دیباگ می‌کنید؟",
+  "qa": "دیباگ در **Flutter** فراتر از پیدا‌کردن خطاست؛ سازوکار کارکرد اپ را آشکار می‌کند. نکات و بهترین روش‌ها:"
+ },
+ {
+  "en": "How do you handle user input in Flutter?",
+  "q": "ورودی کاربر در Flutter چطور هندل می‌شود؟",
+  "qa": "**Flutter** widgetهای متنوعی برای ورودی کاربر دارد: متنی، انتخابی و مخصوص پلتفرم."
+ },
+ {
+  "en": "What is Android and how is it different from other mobile operating systems?",
+  "q": "Android چیست و چه تفاوتی با دیگر سیستم‌عامل‌های موبایل دارد؟",
+  "qa": "**Android** پرکاربردترین سیستم‌عامل موبایل دنیاست؛ معروف به متن‌باز بودن، ساختار محکم و رابط کاربری **قابل‌شخصی‌سازی**."
+ },
+ {
+  "en": "What programming languages can you use to develop Android applications?",
+  "q": "برای توسعه‌ی اپ‌های Android چه زبان‌هایی استفاده می‌شود؟",
+  "qa": "**Android** اکوسیستم قدرتمند و منعطفی دارد و چند زبان برای توسعه‌ی اپ ارائه می‌دهد."
+ },
+ {
+  "en": "Explain the Android application architecture.",
+  "q": "معماری اپلیکیشن Android را توضیح دهید.",
+  "qa": "اپ‌های **Android** الگوی لایه‌ای را دنبال می‌کنند که معمولاً **MVC** یا واریانت‌هایی مثل **MVP** (Model-View-P…"
+ },
+ {
+  "en": "Explain the concept of Services in Android.",
+  "q": "مفهوم Services در Android را توضیح دهید.",
+  "qa": "**Serviceها** در Android اجزایی هستند که وظایف را در پس‌زمینه — مستقل از رابط کاربری — اجرا می‌کنند."
+ },
+ {
+  "en": "What are Content Providers and when should you use them?",
+  "q": "Content Provider ها چیستند و کِی استفاده می‌شوند؟",
+  "qa": "**Content Providerها** رابط استاندارد دسترسی به داده در بین اپ‌های Android هستند؛ نقش اصلی‌شان **مدیریت ذخیره‌ی داده‌ی ساختارمند** و انتزاع…"
+ },
+ {
+  "en": "How does the view system work in Android?",
+  "q": "سیستم view در Android چطور کار می‌کند؟",
+  "qa": "در Android، آبجکت‌های **View** بلوک‌های پایه‌ی اجزای رابط کاربری هستند؛ نمایش داده یا پاسخ به ورودی کاربر."
+ },
+ {
+  "en": "What is the difference between a File, a Class and an Activity in Android?",
+  "q": "تفاوت File و Class و Activity در Android چیست؟",
+  "qa": "- **File**: داده‌ی خام یا ساختارمند؛ در **Internal Storage**، **External Storage** یا سرویس ابری ذخیره می‌شود. - **Class**: بلوک کد…"
+ },
+ {
+  "en": "How do you manage memory in Android applications?",
+  "q": "حافظه در اپ‌های Android چطور مدیریت می‌شود؟",
+  "qa": "**مدیریت حافظه در Android** جنبه‌ی حیاتی است و سیستم مکانیزم‌های متعددی برای استفاده‌ی بهینه از منابع دارد."
+ },
+ {
+  "en": "What is Kotlin and how does it interoperate with Java?",
+  "q": "Kotlin چیست و با Java چطور interoperate می‌کند؟",
+  "qa": "**Kotlin** زبانی مدرن و statically typed است؛ توسط JetBrains توسعه یافته و هدفش JVM و پلتفرم‌های دیگر است."
+ },
+ {
+  "en": "How do you create a singleton in Kotlin?",
+  "q": "singleton در Kotlin چطور ساخته می‌شود؟",
+  "qa": "در Kotlin تعریف **singleton** ساده است؛ زبان کلیدواژه‌ی اختصاصی `object` را دارد."
+ },
+ {
+  "en": "What is the purpose of the Unit type in Kotlin?",
+  "q": "هدف نوع Unit در Kotlin چیست؟",
+  "qa": "بعضی زبان‌ها از \"void\" برای توابع بدون مقدار بازگشتی مفید استفاده می‌کنند؛ **Kotlin** از نوع Unit بهره می‌گیرد."
+ },
+ {
+  "en": "What are components in React Native?",
+  "q": "کامپوننت‌ها در React Native چیستند؟",
+  "qa": "در React Native، **کامپوننت‌ها** بلوک‌های ساخت UI و منطق‌اند؛ توسعه را ماژولار و بهینه می‌کنند. دو نوع کامپوننت داریم: *"
+ },
+ {
+  "en": "Explain the purpose of the render() function in a React Native component.",
+  "q": "هدف تابع render() در کامپوننت React Native چیست؟",
+  "qa": "تابع `render()` که برای همه‌ی کامپوننت‌های **React** و **React Native** **اجباری** است، دروازه‌ی JSX است: JSX را می‌گیرد، پردازش و برمی‌گرداند."
+ },
+ {
+  "en": "Can you list some of the core components in React Native?",
+  "q": "چند کامپوننت هسته‌ی React Native را نام ببرید.",
+  "qa": "**React Native** چند کامپوننت بنیادی دارد."
+ },
+ {
+  "en": "What is the significance of the Flexbox layout in React Native?",
+  "q": "اهمیت Flexbox layout در React Native چیست؟",
+  "qa": "پیاده‌سازی و مزایای خاص **Flexbox** در **React Native** را می‌بینیم."
+ },
+ {
+  "en": "How do you debug a React Native application?",
+  "q": "اپ React Native را چطور دیباگ می‌کنید؟",
+  "qa": "دیباگ در React Native ترکیبی از روش‌های سنتی و مخصوص پلتفرم است؛ استراتژی‌ها و ابزارهای روان‌سازی دیباگ:"
+ },
+ {
+  "en": "Describe the View component and its purpose in React Native.",
+  "q": "کامپوننت View و هدفش در React Native را توضیح دهید.",
+  "qa": "**View** در React Native مثل `div` در توسعه‌ی وب عمل می‌کند و **تعریف استایل** را ممکن می‌کند."
+ },
+ {
+  "en": "Describe the different collection types available in Swift.",
+  "q": "انواع مختلف کالکشن در Swift را توضیح دهید.",
+  "qa": "Swift کالکشن‌های متنوعی دارد که هرکدام برای کاربردی خاص بهینه شده‌اند."
+ },
+ {
+  "en": "In Swift, how are switch statements more powerful compared to other languages?",
+  "q": "دستور switch در Swift نسبت به زبان‌های دیگر چه قدرتی دارد؟",
+  "qa": "Swift دستور switch معمولی را به سطح جدید می‌برد: **pattern-matching غنی** و بررسی شرایط پیچیده در هر `case`."
+ },
+ {
+  "en": "Explain the difference between classes and structures in Swift.",
+  "q": "تفاوت کلاس‌ها و structure ها در Swift چیست؟",
+  "qa": "در Swift، **کلاس‌ها** و **structureها** هر دو برای تعریف نوع داده‌ی سفارشی‌اند مثل اکثر زبان‌های شیءگرا؛ زبان همچنین **e…"
+ }
+]

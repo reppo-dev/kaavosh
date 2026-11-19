@@ -1,0 +1,242 @@
+[
+ {
+  "en": "Tell me about yourself",
+  "q": "خودت را معرفی کن",
+  "qa": "پاسخ را در ۶۰ تا ۹۰ ثانیه نگه دارید: وضعیت (Situation)، وظیفه (Task)، اقدام (Action) و نتیجه (Result)."
+ },
+ {
+  "en": "Tell me about a time you received harsh feedback",
+  "q": "درباره‌ی زمانی که بازخورد تلخ گرفتی تعریف کن",
+  "qa": "دفاعی برخورد نکردم؛ از او تشکر کردم و نمونه‌های مشخص خواستم تا دقیقاً بفهمم کجا باید اصلاح شوم."
+ },
+ {
+  "en": "Describe a time you helped a struggling teammate",
+  "q": "زمانی که به هم‌تیمیِ گیرکرده کمک کردی را تعریف کن",
+  "qa": "علت واقعی را تشخیص دادم — آیا مشکل دانش بود، ابزار یا انگیزه — و بر اساس همان، کمک متمرکز ارائه دادم."
+ },
+ {
+  "en": "Why this company? Why this role?",
+  "q": "چرا این شرکت؟ چرا این نقش؟",
+  "qa": "یک محصول/نوشته/تلاش مهندسی واقعی از آن شرکت را نام ببرید و بگویید از آن چه یاد گرفتید — این نشان می‌دهد تحقیق کرده‌اید."
+ },
+ {
+  "en": "Describe a time you had a serious disagreement with a teammate",
+  "q": "زمانی که با هم‌تیمی اختلاف نظر جدی داشتی را تعریف کن",
+  "qa": "یک موقعیت مشخص و اختلاف نظر فنی/اولویتی را تعریف کنید — بدون بدگویی درباره‌ی کسی؛ تمرکز روی نحوه‌ی رسیدن به توافق."
+ },
+ {
+  "en": "What was your biggest professional failure and how did you recover?",
+  "q": "بزرگ‌ترین شکست حرفه‌ای‌ات چه بود و چطور جبران کردی؟",
+  "qa": "یک شکست واقعی با پیامد مشخص انتخاب کنید — نه یک «نقطه‌قوت پنهان‌شده»؛ بعد نشان دهید چه یاد گرفتید و چطور جبران کردید."
+ },
+ {
+  "en": "Tell me about a time you had an impossible deadline",
+  "q": "از زمانی تعریف کن که ددلاین غیرممکن داشتی",
+  "qa": "اول دامنه را با ذی‌نفعان واقعی کردم: چه چیزی حالا منتشر می‌شود و چه چیزی صبر می‌کند — به‌جای قول دادن غیرممکن."
+ },
+ {
+  "en": "Describe a time you had to learn a new programming language or framework quickly to complete a project.",
+  "q": "از زمانی تعریف کن که برای اتمام پروژه مجبور شدی سریع یک زبان یا فریم‌ورک جدید یاد بگیری.",
+  "qa": "در کارآموزی اولم، تیم تصمیم گرفت frontend ابزار مدیریت انبار را با **React و TypeScript** بسازد؛ من تا آن موقع فقط با JavaScript خام و Python کار کرده بودم و دقیقاً **سه هفته** وقت داشتم تا فیچرهای production-ready بدهم — با برنامه‌ی یادگیری روزانه و ساخت تدریجی، به موقع نتیجه دادم."
+ },
+ {
+  "en": "Give an example of a technical concept you struggled to understand and the steps you took to master it.",
+  "q": "مثالی از یک مفهوم فنی که فهمیدنش سخت بود و قدم‌هایی که برای تسلط برداشتی بزن.",
+  "qa": "در کارآموزی اولم، تیم مهاجرت به Docker را شروع کرد؛ من تفاوت container و ماشین مجازی را نمی‌فهمم و مدام خطای محیط می‌گرفتم — با ساخت یک مدل ذهنی و آزمایش‌های عملی کوچک، مفهوم را کامل مسلط شدم."
+ },
+ {
+  "en": "How do you stay updated with new technologies while balancing your primary responsibilities?",
+  "q": "چطور با حفظ مسئولیت‌های اصلی‌ات، خودت را با فناوری‌های جدید به‌روز نگه می‌داری؟",
+  "qa": "در نقش قبلی‌ام وظیفه‌ی اصلی‌ام بستن تیکت‌های فیچر UI بود، اما برای بهبود فرایند QA خواستم فریم‌ورک‌های مدرن تست end-to-end را یاد بگیرم — یادگیری را به وظایف اصلی گره زدم تا هر دو پیش بروند."
+ },
+ {
+  "en": "Tell me about a small feature or task you owned from start to finish; what was your process for ensuring success?",
+  "q": "از یک فیچر یا تسک کوچک که از اول تا آخر مالکش بودی تعریف کن؛ فرایند تضمین موفقیتت چه بود؟",
+  "qa": "در سال اولم، تیم پشتیبانی مشتری برای یافتن کاربرانی که از ایمیل‌های بازاریابی خارج شده بودند دستی دیتابیس کوئری می‌زد، چون داشبورد ادمین سوییچ فیلتر نداشت — این فیچر کوچک را از تحلیل تا تحویل مالیت شدم."
+ },
+ {
+  "en": "Describe a time you identified a bug or issue that wasn't assigned to you; what did you do?",
+  "q": "زمانی که باگ یا مشکل‌ای خارج از مأموریتت پیدا کردی را تعریف کن؛ چه کردی؟",
+  "qa": "در آخرین کارآموزی‌ام برای به‌روزرسانی استایل داشبورد کاربر تست می‌کردم که متوجه شدم تصویر پروفایل گاهی لود نمی‌شود و خطای خاموش CORS در کنسول می‌دهد — با اینکه وظیفه‌ام نبود، گزارش و پیگیری کردم تا حل شود."
+ },
+ {
+  "en": "Give an example of a time you were given a vague requirement; how did you clarify the scope to move forward?",
+  "q": "مثالی از زمانی که نیازمند مبهمی به تو داده شد بزن؛ دامنه را چطور شفاف کردی؟",
+  "qa": "در سال اول کار backend، مدیر محصول تیکتی با یک خط ثبت کرد: «قابلیت export برای داشبورد فعالیت کاربر» — بدون جزئیات فرمت، حجم داده و فیلدهای لازم؛ با سؤالات مشخص از ذی‌نفعان دامنه را شفاف کردم و بعد شروع کردم."
+ },
+ {
+  "en": "Describe a time you had to manage your own time to meet a tight deadline on a school or internship project.",
+  "q": "زمانی که برای رسیدن به ددلاین فشرده در پروژه‌ی تحصیلی یا کارآموزی باید زمان‌ات را خودت مدیریت می‌کردی را تعریف کن.",
+  "qa": "در دو هفته‌ی آخر کارآموزی تابستانی، از من خواستند ویجت داشبورد تحلیلی با متریک‌های لحظه‌ای کاربر بسازم — همزمان با وظایف اسپرینت معمولی و قبل از ارائه‌ی پایان کارآموزی؛ با اولویت‌بندی و بلاک‌کردن وقت تمرکز، به موقع تحویل دادم."
+ },
+ {
+  "en": "How do you decide when to keep troubleshooting a problem on your own versus asking for help?",
+  "q": "چطور تصمیم می‌گیری که ادامه‌ی دیباگ را تنها ادامه بدهی یا کمک بخواهی؟",
+  "qa": "قاعده‌ی من: یک بازه‌ی مشخص (مثلاً ۳۰ تا ۶۰ دقیقه) تلاش مستقل با رویکردهای متفاوت؛ اگر پیشرفتی نبود، با خلاصه‌ی تلاش‌هایم کمک می‌خواهم. در نقش قبلی، محیط توسعه‌ی محلی‌ام مدام هنگام اتصال به دیتابیس staging کرش می‌کرد — بعد از تلاش مستقل، با مستندات دقیق کمک خواستم."
+ },
+ {
+  "en": "Describe a time you successfully influenced a team's technical roadmap without having any formal authority over the engineers involved.",
+  "q": "زمانی که بدون اختیار رسمی بر مهندسان، موفق شدی بر نقشه‌ی راه فنی تیم اثر بگذاری را تعریف کن.",
+  "qa": "تیم من سرویس متمرکز تشخیص تقلب را داشت و تیم checkout با فراخوانی‌های همگام به ما وابسته بود که در پیک ترافیک تأخیر آبشاری ایجاد می‌کرد؛ بدون اختیار رسمی، با داده و معماری پیشنهادی، نقشه‌راه آن تیم را تغییر دادم."
+ },
+ {
+  "en": "Describe a situation where a dependency from another team was blocking your team's critical path and how you resolved the bottleneck.",
+  "q": "موقعیتی را تعریف کن که وابستگی به تیم دیگر، مسیر بحرانی تیم تو را بلاک کرده بود و گلوگاه را چطور رفع کردی.",
+  "qa": "تیم من pipeline بلادرنگ تشخیص تقلب را برای لانچ قطعی Q3 می‌ساخت و مسیر بحرانی منتظر endpoint گروهی احراز هویت تیم Identity بود — با رویکرد inner-sourcing و کمک عملی به آن تیم، گلوگاه را باز کردم."
+ },
+ {
+  "en": "Tell me about a time you discovered a systemic communication issue between engineering pods and what you did to fix it.",
+  "q": "از زمانی تعریف کن که مشکل ساختاری ارتباط بین تیم‌های مهندسی را پیدا کردی و برای رفعش چه کردی.",
+  "qa": "در شرکت قبلی الگوی تکراری خرابی‌های integration بین پاد Core Platform و پاد Frontend Client را دیدم: تغییرات خاموش قرارداد API سرویس‌های پایین‌دست را می‌شکست — با فرایند اعلام تغییر قرارداد و syncهای ساختاریافته حلش کردم."
+ },
+ {
+  "en": "Describe a time you advocated for equitable compensation or promotion practices during a team restructuring or acquisition.",
+  "q": "زمانی را تعریف کن که در بازسازی یا خرید تیم، از عدالت در جبران خدمت یا ارتقا دفاع کردی.",
+  "qa": "پس از خرید یک استارتاپ ۲۰ نفره، مأمور ادغام تیم مهندسی‌شان شدم و در کشف اولیه شکاف‌های شدید حقوق و سطح‌بندی را شناسایی کردم — با داده‌ی بازار و پروسه‌ی شفاف سطح‌بندی، اصلاح منصفانه را پیگیری کردم."
+ },
+ {
+  "en": "Describe a situation where you successfully coached a struggling engineering manager back to high performance.",
+  "q": "موقعیتی را تعریف کن که با مربی‌گری، مدیر مهندسیِ درگیرِ مشکل را به عملکرد بالا برگرداندی.",
+  "qa": "یک مدیر مهندسی تازه‌ترقی‌یافته را مدیریت می‌کردم که به‌عنوان IC بسیار محترم بود اما در نقش جدیدش شکست می‌خورد — با انتقال مالکیت تصمیم، coaching منظم و تعریف مجدد معیارهای موفقیت، او را به عملکرد بالا برگرداندم."
+ },
+ {
+  "en": "Walk me through your approach to delivering a performance review for an engineer who failed to meet expectations but put in massive amounts of effort.",
+  "q": "رویکردت برای ارائه‌ی ارزیابی عملکرد به مهندسی که انتظارات را برآورده نکرد ولی تلاش زیادی داشت را قدم‌به‌قدم توضیح بده.",
+  "qa": "فلسفه‌ی اصلی: **تلاش را از اثر جدا کن.** زحمت را به رسمیت می‌شناسم تا امنیت روانی و اعتماد حفظ شود، اما در نتایج کسب‌وکاریِ لازم برای نقش سازش نمی‌کنم؛ تلاش زیاد با اثر کم معمولاً نشانه‌ی مشکل هم‌راستایی، ابزار یا coaching است، نه مشکل رفتاری."
+ },
+ {
+  "en": "What did you do when you disagreed with your manager's decision?",
+  "q": "وقتی با تصمیم مدیرت مخالف بودی چه کردی؟",
+  "qa": "خصوصی و با داده و گزینه‌ها مطرح کردم — نه احساسی وسط جلسه؛ بعد از تصمیم نهایی هم متعهدانه اجرایش کردم."
+ },
+ {
+  "en": "Tell me about a time you received constructive feedback that was difficult to hear; how did you change your approach?",
+  "q": "از زمانی که بازخورد سازنده‌ای شنیدی که شنیدنش سخت بود تعریف کن؛ رویکردت را چطور عوض کردی؟",
+  "qa": "در ماه‌های اول کار قبلی، ماژول parse داده را روزها بهینه کردم و منطق را به زنجیره‌ای از عملیات پیچیده فشرده کردم؛ بازخورد این بود که کد غیرقابل‌نگهداری است — پذیرفتم، ساده بازنویسی کردم و اصل «خوانایی اول» را یاد گرفتم."
+ },
+ {
+  "en": "Describe a situation where you had to pivot your strategy midway through a project because your initial approach wasn't working.",
+  "q": "موقعیتی را تعریف کن که وسط پروژه مجبور شدی استراتژی را عوض کنی چون رویکرد اولیه جواب نمی‌داد.",
+  "qa": "وقتی دیدم استراتژی سنگین‌روی-frontend من قابل قبول نیست، فوراً مسیر را عوض کردم: پردازش را به backend منتقل کردم (صفحه‌بندی سمت سرور و کوئری بازه‌ی تاریخ) و یک لایه‌ی کش سبک با Redis اضافه کردم تا بازه‌های پرتکرار به دیتابیس اصلی نزنند."
+ },
+ {
+  "en": "Tell me about a time you identified a skills gap within your team and took the initiative to upskill your peers.",
+  "q": "از زمانی تعریف کن که شکاف مهارتی در تیم تشخیص دادی و پیش‌قدم شدی تا همکارانت را ارتقا بدهی.",
+  "qa": "در مهاجرت از مونولیت به معماری microservice، MTTR حوادث به‌شدت بالا رفت؛ در post-mortemها دیدم مهندسان در ردیابی درخواست‌ها مرز بین سرویس‌ها گیر می‌کنند — با جلسات آموزشی و راهنمای distributed tracing، هم‌تیمی‌ها را ارتقا دادم."
+ },
+ {
+  "en": "Describe a situation where you had to guide a junior or mid-level engineer through a highly complex technical challenge without just doing the work for them.",
+  "q": "موقعیتی را تعریف کن که باید مهندس جونیور یا میان‌رده را بدون انجام‌دادن کارش، از چالش فنی بسیار پیچیده عبور می‌دادی.",
+  "qa": "تیم باید pipeline صورت‌حساب همگام قدیمی را به معماری رویدادمحور مهاجرت می‌داد؛ یک مهندس mid-level هدایتش را داشت اما در موارد لبه‌ی idempotency داده و ترتیب پیام‌ها غرق شد (ریسک double-billing بالا بود) — به‌جای انجام کار، با سؤالات راهنما و مرور طراحی، خودش به راه‌حل رسید."
+ },
+ {
+  "en": "Share an example of a time you advocated for a significant engineering standard or best practice that was initially met with resistance by your team.",
+  "q": "مثالی از زمانی بزن که از یک استاندارد مهندسی مهم یا best practice دفاع کردی و تیم اولیه مقاومت می‌کرد.",
+  "qa": "سازمان مهندسی ما در یک سال دو برابر شد و بازنویسی‌های معماری پرهزینه و خرابی‌های integration چندتیمی بالا رفت — مهندسان بدون هم‌راستایی اولیه مستقیم کد می‌زدند؛ فرایند RFC را پیشنهاد دادم که ابتدا مقاومت داشت اما با یک پایلوت موفق پذیرفته شد."
+ },
+ {
+  "en": "Tell me about a time you had to step in and rescue a critical project that was going off track due to technical misdirection.",
+  "q": "از زمانی تعریف کن که باید وارد پروژه‌ی حیاتیِ منحرف‌شده به‌خاطر مسیر فنی غلط می‌شدی و نجاتش می‌دادی.",
+  "qa": "مهاجرت درگاه پرداخت جهانی ما شش هفته عقب بود و ضرب‌الاجل انطباق نظارتی را تهدید می‌کرد؛ تیم معماری پیچیده‌ی CQRS و event sourcing را انتخاب کرده بود — با ساده‌سازی هدفمند و بازاولویت‌بندی، پروژه را به مسیر برگرداندم."
+ },
+ {
+  "en": "Tell me about a time you led the technical delivery of a project that required tightly coupled integration with at least two other engineering teams.",
+  "q": "از زمانی تعریف کن که رهبری تحویل فنی پروژه‌ای را داشتید که به یکپارچه‌سازی نزدیک با حداقل دو تیم مهندسی دیگر نیاز داشت.",
+  "qa": "استراتژی کلان: تمرکز بر **سازوکارهای هم‌راستایی چندتیمی** (قراردادهای API، محیط‌های integration) و **معماری توزیع‌شده‌ی مقاوم** (idempotency و fallback). به‌عنوان Senior IC، ارزش شما پیش‌بینی موارد لبه در مرز سیستم‌ها و ایجاد اجماع بدون اختیار رسمی است."
+ },
+ {
+  "en": "Share an example of a time you had to align competing technical priorities between your team and a partner team to deliver a shared goal.",
+  "q": "مثالی از زمانی بزن که باید اولویت‌های فنی رقیب بین تیم تو و تیم همکار را برای هدف مشترک هم‌راستا می‌کردی.",
+  "qa": "تیم پلتفرم من مأمور مهاجرت سرویس صورتحساب مونولیتی به معماری رویدادمحور بود و همزمان تیم محصول شریک، لانچ سطح اشتراک درآمدزا وابسته به همان سرویس را در دست داشت — با نقشه‌ی راه مشترک و قرارداد سازگاری موقت، هر دو هدف را نجات دادیم."
+ },
+ {
+  "en": "Describe a scenario where you had to negotiate a technical contract or API design with an external or cross-functional team that had entirely different business constraints.",
+  "q": "سناریویی را تعریف کن که باید با تیم بیرونی یا میان‌وظیفه‌ایِ با قیود کسب‌وکاری کاملاً متفاوت، قرارداد فنی یا طراحی API را مذاکره می‌کردی.",
+  "qa": "تیم من سرویس checkout را داشت که به تأخیر سختِ زیر ۲۰۰ میلی‌ثانیه نیاز داشت؛ اما شریک لجستیکی enterprise زیرساخت batchی داشت با پاسخ‌های ۳ تا ۵ دقیقه‌ای — با طراحی لایه‌ی واسط و صف async، این شکاف را مدیریت کردم."
+ },
+ {
+  "en": "Tell me about a time you identified a fundamental architectural flaw that spanned multiple teams and how you drove the multi-year strategy to resolve it.",
+  "q": "از زمانی تعریف کن که نقص معماری بنیادیِ فراتیم را شناسایی کردی و استراتژی چندساله‌ی حل آن را رهبری کردی.",
+  "qa": "در سطح Staff/Principal این سؤال توان تعادل **چشم‌انداز فنی بلندمدت** با **واقعیت‌های فوری کسب‌وکار** را می‌سنجد: پاسخ باید نشان دهد فقط طراحی فنی ننوشته‌اید، بلکه اصطکاک سازمانی را مدیریت کرده، حمایت مدیران ارشد را جلب کرده و مهاجرت مرحله‌ای را بدون توقف توسعه‌ی فیچر اجرا کرده‌اید."
+ },
+ {
+  "en": "Describe a situation where you had to champion a technical initiative that had a horizon of over a year before showing ROI; how did you maintain organizational momentum?",
+  "q": "موقعیتی را تعریف کن که باید از ابتکار فنی با افقی بیش از یک‌سال تا رسیدن به ROI دفاع می‌کردی؛ تکاپوی سازمانی را چطور حفظ کردی؟",
+  "qa": "در سطح Staff/Principal، ابتکارهای بلندمدت از فرسودگی ذی‌نفعان شکست می‌خورند نه از پیچیدگی فنی: باید نشان دهید چطور **بردهای روانی افزایشی** کنار معماری فنی ساختید — نقشه‌ی راه کم‌ریسک، هم‌راستایی با متریک‌های کسب‌وکار و سپردن زیرمجموعه‌ها به مهندسان دیگر برای حفظ انگیزه."
+ },
+ {
+  "en": "Tell me about a time you had to pivot an organization's technical strategy midway through a major initiative due to shifting market or business realities.",
+  "q": "از زمانی تعریف کن که به‌خاطر تغییر واقعیت‌های بازار یا کسب‌وکار مجبور شدی استراتژی فنی سازمان را وسط ابتکار بزرگ عوض کنی.",
+  "qa": "من Principal Engineer استراتژی فنی ابتکار میان‌سازمانی (۱۵۰+ مهندس) برای ساخت pipeline اختصاصی NLP بودم؛ شش ماه و ۳ میلیون دلار بعد، LLMهای بنیادی به‌سرعت رایج شدند و نقشه‌راه چندساله‌ی ML ما را منسوخ کردند — با توقف به‌موقع و تغییر استراتژی به زیرساخت مبتنی بر مدل‌های آماده، سرمایه را نجات دادم."
+ },
+ {
+  "en": "Walk me through a time you deprecated a legacy system that multiple independent organizations relied on; how did you ensure a seamless migration at scale?",
+  "q": "از زمانی تعریف کن که سیستم قدیمیِ مورد اتکای چند سازمان مستقل را منسوخ کردی؛ مهاجرت بی‌درز در مقیاس را چطور تضمین کردی؟",
+  "qa": "گذرگاه رویداد قدیمی ما گلوگاه بود: قطعی هفتگی زیر بار و مانع استراتژی چندناحیه‌ای؛ **بیش از ۵۰ تیم در سه سازمان مستقل** (تجارت، لجستیک و هویت) به آن وابسته بودند — با قرارداد سازگاری، مهاجرت مرحله‌ای و پایش مصرف، بازنشستگی بدون دردسر انجام شد."
+ },
+ {
+  "en": "Describe a time you had to balance a critical short-term business deliverable with a vital long-term architectural investment.",
+  "q": "زمانی را تعریف کن که باید تحویل کوتاه‌مدت حیاتی کسب‌وکار را با سرمایه‌گذاری معماری بلندمدت حیاتی بالانس می‌کردی.",
+  "qa": "کسب‌وکار بزرگ‌ترین مشتری enterprise تاریخش را گرفته بود که باید قبل از فریز Q3 آنبورد می‌شد؛ همزمان ابتکار یک‌ساله‌ی شکستن مونولیت به معماری shard شده تازه تأیید شده بود (دیتابیس اصلی به سقف IOPS رسیده بود) — با تفکیک تیم‌ها و مرزبندی منابع، هر دو را پیش بردیم."
+ },
+ {
+  "en": "Tell me about a time you foresaw a scaling bottleneck that no one else was paying attention to and the steps you took to preemptively address it.",
+  "q": "از زمانی تعریف کن که گلوگاه مقیاس‌شدنی‌ای را پیش‌بینی کردی که کسی توجهش نبود و اقدامات پیشگیرانه‌ات چی بود.",
+  "qa": "در یک پلتفرم تجارت الکترونیک متوسط، سازمان به‌سرعت مونولیت را به microserviceها می‌شکافت و تیم‌های محصول همه‌ی تمرکزشان روی فیچر بود — من گلوگاه مقیاس‌پذیری آینده را پیش‌بینی و با اقدام پیشگیرانه حل کردم."
+ },
+ {
+  "en": "Tell me about a time you had to align three or more distinct engineering teams with conflicting priorities around a single technical standard.",
+  "q": "از زمانی تعریف کن که باید سه تیم مهندسی یا بیشتر با اولویت‌های متناقض را حول یک استاندارد فنی واحد هم‌راستا می‌کردی.",
+  "qa": "تضادها: **پلتفرم** اعتبارسنجی سخت‌گیرانه‌ی schema را برای حاکمیت داده می‌خواست؛ **تجارت الکترونیک** به دلیل ترافیک پیک، سربار اعتبارسنجی را نمی‌خواست؛ **لجستیک** امکان بازنویسی سیستم ۱۵ساله‌ی انبار را نداشت — با نسخه‌ی تدریجی استاندارد و ابزار خودکار، اجماع ساختم."
+ },
+ {
+  "en": "Describe a situation where you strongly disagreed with an engineering director or VP regarding a technical direction; how did you influence their decision?",
+  "q": "موقعیتی را تعریف کن که با مدیر مهندسی یا VP درباره‌ی جهت فنی مخالفت شدیدی داشتی؛ تصمیم‌شان را چطور تحت تأثیر گذاشتی؟",
+  "qa": "مدیر ارشد مهندسی می‌خواست بازنویسی «یک‌جای» سیستم صورتحساب مونولیتی به معماری رویدادمحور در ۹ ماه انجام شود؛ من مخالف بودم — با داده‌ی ریسک و پیشنهاد مهاجرت تدریجی (الگوی strangler)، تصمیم را تغییر دادم."
+ },
+ {
+  "en": "Walk me through a time you had to drive a critical architectural change across teams that did not report to you and were actively resistant to the change.",
+  "q": "از زمانی قدم‌به‌قدم تعریف کن که باید تغییر معماری حیاتی را در تیم‌هایی رهبری می‌کردی که به تو گزارش نمی‌دادند و فعالانه مقاومت می‌کردند.",
+  "qa": "پردازنده‌ی تراکنش مونولیتی ما گلوگاه شده بود: حوادث Sev-1 هفتگی و مسدود شدن پنج تیم محصول؛ مهاجرت به **معماری رویدادمحور غیرمتمرکز** لازم بود — با اجرای پایلوت در یک تیم داوطلب و اثبات نتایج، مقاومت بقیه را به همراهی تبدیل کردم."
+ },
+ {
+  "en": "Tell me about a time you inherited a deeply fragmented technical landscape across siloed teams and how you forged a unified technical culture.",
+  "q": "از زمانی تعریف کن که چشم‌انداز فنی به‌شدت تکه‌تکه‌شده در تیم‌های جدا را تحویل گرفتی و فرهنگ فنی واحدی ساختی.",
+  "qa": "در سطح Staff/Principal، یکپارچه‌سازی فنی نمی‌تواند فرمان از بالا به پایین باشد: هم‌راستایی مشوق‌ها، اجماع میان ICهای ارشد مستقل و تحویل ارزش فوری به تیم‌های منزوی لازم است — پاسخ باید دیپلماسی، استانداردگذاری استراتژیک و حاکمیت معماری را نشان دهد."
+ },
+ {
+  "en": "Tell me about a time you had to redesign your engineering organization to scale with sudden business growth or a major strategic pivot.",
+  "q": "از زمانی تعریف کن که مجبور شدی سازمان مهندسی را برای هم‌نوردی با رشد ناگهانی کسب‌وکار یا چرخش استراتژیک بزرگ بازطراحی کنی.",
+  "qa": "پس از موفقیت Series B، مشتریان ما در شش ماه سه برابر شد و سازمان ۲۵ نفره‌ی تک‌تیمی گلوگاه شد: چرخه‌ی انتشار از یک هفته به سه هفته رسید — سازمان را به **پادهای دامنه‌محور** بازطراحی کردم تا مقیاس‌پذیر شود."
+ },
+ {
+  "en": "Describe a situation where you successfully audited and changed your hiring processes to build a more diverse and inclusive engineering team.",
+  "q": "موقعیتی را تعریف کن که فرایندهای استخدام را ممیزی و تغییر دادی تا تیم مهندسی متنوع‌تر و فراگیرتر بسازی.",
+  "qa": "هنگام دو برابر کردن سازمان، مرور متریک‌های استخدام نشان داد تیم بسیار همگن است: کاندیداهای کمترنماینده در دو مرحله حذف می‌شدند — غربال اولیه رزومه و مصاحبه‌ی «سازگاری فرهنگی» — با بازطراحی این مراحل، تنوع واقعی ساختیم."
+ },
+ {
+  "en": "Walk me through a time you made a poor hiring decision at the leadership or senior engineer level and how you managed the fallout.",
+  "q": "از زمانی قدم‌به‌قدم تعریف کن که تصمیم استخدام بدی در سطح رهبری یا مهندس ارشد گرفتی و پیامدهایش را چطور مدیریت کردی.",
+  "qa": "یک Staff Engineer برای رهبری مهاجرت مونولیت به microservice استخدام کردم که مصاحبه‌های system design‌اش عالی بود اما عملاً «نابغه‌ی سخت‌گیر با رفتار سمی» از کار درآمد — با مستندسازی رفتار، بازخورد شفاف و جداسازی حرفه‌ای، آسیب تیم را مدیریت کردم."
+ },
+ {
+  "en": "Tell me about a time you had to balance the urgent need to fill open headcount with the necessity of maintaining your organization's technical bar.",
+  "q": "از زمانی تعریف کن که باید نیاز فوری به پر‌کردن ظرفیت‌های خالی را با حفظ استاندارد فنی سازمان بالانس می‌کردی.",
+  "qa": "برای پلتفرم انطباق بحرانی Q3 باید تیم را در ۹۰ روز از ۱۲ به ۲۴ نفر می‌رساندم و رهبری محصول برای پر کردن سریع صندلی‌ها فشار می‌آورد — استاندارد فنی را حفظ کردم: مصاحبه‌های موازی، پنل‌های آماده و حداقل‌های غیرقابل‌مذاکره."
+ },
+ {
+  "en": "Tell me about a time you had to manage out an underperforming senior engineer who possessed critical legacy knowledge.",
+  "q": "از زمانی تعریف کن که مجبور شدی مهندس ارشدِ ضعیف‌عمل‌کردی را که دانش legacy حیاتی داشت را از سازمان خارج کنی.",
+  "qa": "یک مهندس ارشد باسابقه به‌شدت کم‌بازده بود (کمتر از نیمی از خروجی مهندسان mid و مسدودکننده‌ی PRها) اما **تنها متخصص درگاه پرداخت قدیمی** بود — با مستندسازی انتقال دانش، جانشین‌پروری و جدایی محترمانه، ریسک را مدیریت کردم."
+ },
+ {
+  "en": "Tell me about a time you had to heavily advocate and push back against upper management to secure a promotion for one of your direct reports.",
+  "q": "از زمانی تعریف کن که باید برای ارتقای یکی از زیرمجموعه‌هایت به‌شدت با مدیریت ارشد مذاکره و مقاومت می‌کردی.",
+  "qa": "در چرخه‌ی calibration، یک مهندس ارشد برتر را برای ترقی به Staff نامزد کردم؛ کمیته و VP مخالفت کردند که «visibility بین‌وظیفه‌ای» لازم را ندارد — با جمع‌آوری شواهد عینی اثر او و معرفی‌اش به پروژه‌های مرئی، ترقی را تضمین کردم."
+ },
+ {
+  "en": "Describe a time you guided an exceptional individual contributor through the transition into an engineering management role.",
+  "q": "زمانی را تعریف کن که یک مهندس فنیِ استثنایی را در گذار به نقش مدیریت مهندسی هدایت کردی.",
+  "qa": "یک Staff Engineer را مدیریت می‌کردم که مسئول پیچیده‌ترین معماری backend ما بود (نقطه‌ی شکست تکی بزرگ) و تمایل جدی به مدیریت داشت — با واگذاری تدریجی مسئولیت، mentoring منظم و حفظ مسیر بازگشت فنی، گذار را موفق کردم."
+ }
+]

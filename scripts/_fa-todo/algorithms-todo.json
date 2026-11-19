@@ -1,0 +1,862 @@
+[
+ {
+  "en": "Give an example of a _recurrence relation_ that can describe the _time complexity_ of a _Divide & Conquer_ algorithm.",
+  "qa": "The **merge sort** algorithm, which follows a **Divide & Conquer** strategy, can be characterized by the following **recurrence relation**:"
+ },
+ {
+  "en": "Can the _nth Fibonacci number_ be found using the _golden ratio_, and if so, how would you implement this method?",
+  "qa": "The $n$-th term of the **Fibonacci sequence** can be approximated using the **Golden Ratio** $(\\phi \\approx 1.61803)$ through Binet's formula:"
+ },
+ {
+  "en": "Present an approach to precomputing _Fibonacci numbers_ to answer multiple _nth Fibonacci queries_ efficiently.",
+  "qa": "The objective is to compute $\\text{Fib}(n)$, the $n$th Fibonacci number, efficiently for **multiple queries**."
+ },
+ {
+  "en": "How might the _Fibonacci sequence_ be altered to start with two arbitrary initial values? Provide an algorithm for such a sequence.",
+  "qa": "Modifying the **Fibonacci sequence** to start with arbitrary initial values still leads to a unique sequence."
+ },
+ {
+  "en": "Discuss different ways to _resize a hash table_. What is the complexity involved?",
+  "qa": "Resizing a hash table is essential to **maintain efficiency** as the number of elements in the table grows. Let's look at different strategies for resizing and understand their time complexities."
+ },
+ {
+  "en": "What is a _Binary Tree_?",
+  "qa": "A **Binary Tree** is a hierarchical structure where each node has up to two children, termed as **left child** and **right child**. Each node holds a data element and pointers to its left and right children."
+ },
+ {
+  "en": "What is _AVL Tree_? How to _Balance_ it?",
+  "qa": "**AVL Trees**, named after their inventors Adelson-Velsky and Landis, are a special type of binary search tree (BST) that **self-balance**. This balancing optimizes time complexity for operations like search, insert, and delete to $O(\\log n)$."
+ },
+ {
+  "en": "What is a _Red-Black Tree_?",
+  "qa": "A **Red-Black Tree** is a self-balancing binary search tree that optimizes both search and insertion/deletion operations. It accomplishes this via a set of rules known as **red-black balance**, making it well-suited for practical applications."
+ },
+ {
+  "en": "What is a _Segment Tree_, and how does it differ from a traditional binary tree in usage and efficiency?",
+  "qa": "**Segment Trees** are variant binary search trees optimized for fast **range queries** on an interval of a known array."
+ },
+ {
+  "en": "Explain the concept and structure of a _Ternary Tree_.",
+  "qa": "**Ternary Trees**, a type of multiway tree, were traditionally used for disk storage. They can be visualized as full or complete. Modern applications are more algorithmic than storage based. While not as common as binary trees, they are rich in learning opportunities."
+ },
+ {
+  "en": "Describe a _Lazy Segment Tree_ and when it is used over a regular Segment Tree.",
+  "qa": "The **Lazy Segment Tree** supplements the standard Segment Tree by allowing delayed updates, making it best suited for the Range Update and Point Query type tasks. It is **more efficient** in such scenarios, especially when dealing with a large number of updates."
+ },
+ {
+  "en": "What is a _Linked List_?",
+  "qa": "A **Linked List** is a dynamic data structure ideal for fast insertions and deletions. Unlike arrays, its elements aren't stored contiguously but are linked via pointers."
+ },
+ {
+  "en": "What are some pros and cons of _Linked List_ compared to _Arrays_?",
+  "qa": "Let's look at the pros and cons of using **linked lists** compared to **arrays**."
+ },
+ {
+  "en": "Explain the difference between _Singly Linked Lists_ and _Doubly Linked Lists_.",
+  "qa": "**Linked List** variants, including **Singly Linked Lists (SLL)** and **Doubly Linked Lists (DLL)**, each have unique characteristics when it comes to memory efficiency and traversal capabilities."
+ },
+ {
+  "en": "What are the basic operations that can be performed on a _Linked List_?",
+  "qa": "**Linked Lists** are dynamic data structures optimized for insertion and deletion. Their key operations include:"
+ },
+ {
+  "en": "What are some real-life _Use Cases_ of _Linked Lists_?",
+  "qa": "**Linked lists** are widely used in real-world applications for their advantages in dynamic memory management and data manipulation."
+ },
+ {
+  "en": "Describe a scenario where the use of a _Linked List_ is more suitable than a _Dynamic Array_.",
+  "qa": "**Linked Lists** and **Dynamic Arrays** are distinct data structures, each with its own advantages. Linked Lists, for instance, often outperform Dynamic Arrays in situations that involve **frequent insertions and deletions**."
+ },
+ {
+  "en": "When would you use a _Linked List_ over a _Hash Table_?",
+  "qa": "**Performance considerations** and the nature of operations you plan to perform significantly influence whether a Linked List or a Hash Table best suits your needs."
+ },
+ {
+  "en": "Is it possible to _Traverse a Linked List_ in _O(n1/2)_? (Jump Pointers).",
+  "qa": "While it may not be possible to **traverse a linked list** in better than $O(n)$ time complexity in the strictest sense, there are techniques that can make the traversal process more efficient in certain contexts."
+ },
+ {
+  "en": "Is it possible to do _Binary Search_ on a _Doubly Linked List_ in _O(n)_ time?",
+  "qa": "Applying **Binary search** to **doubly-linked lists** presents challenges because these lists lack the **random access** feature essential for binary search's efficiency."
+ },
+ {
+  "en": "What is an _Incidence Matrix_, and when would you use it?",
+  "qa": "An **incidence matrix** is a binary graph representation that maps vertices to edges. It's especially useful for **directed** and **multigraphs**. The matrix contains $0$s and $1$s, with positions corresponding to \"vertex connected to edge\" relationships."
+ },
+ {
+  "en": "Discuss _Edge List_ as a graph representation and its use cases.",
+  "qa": "**Edge list** is a straightforward way to represent graphs. It's apt for dense graphs and offers a quick way to query edge information."
+ },
+ {
+  "en": "Explain the _Breadth-First Search_ (BFS) traversing method.",
+  "qa": "**Breadth-First Search** (BFS) is a graph traversal technique that systematically explores a graph level by level. It uses a **queue** to keep track of nodes to visit next and a list to record visited nodes, avoiding redundancy."
+ },
+ {
+  "en": "What are the key differences between _BFS_ and _DFS_?",
+  "qa": "**BFS** and **DFS** are both essential graph traversal algorithms with distinct characteristics in strategy, memory requirements, and use-cases."
+ },
+ {
+  "en": "Implement a method to check if there is a _Path between two vertices_ in a graph.",
+  "qa": "Given an **undirected** graph, the task is to determine whether or not there is a **path** between two specified vertices."
+ },
+ {
+  "en": "Solve the problem of printing all _Paths from a source to destination_ in a Directed Graph with BFS or DFS.",
+  "qa": "Given a **directed graph** and two vertices $src$ and $dest$, the objective is to **print all paths** from $src$ to $dest$."
+ },
+ {
+  "en": "What are _Dynamic Arrays_?",
+  "qa": "**Dynamic arrays** start with a preset capacity and **automatically resize** as needed. When full, they allocate a larger memory block—often doubling in size—and copy existing elements."
+ },
+ {
+  "en": "What is an _Associative Array_ (Dictionary)?",
+  "qa": "An **Associative Array**, often referred to as **Map**, **Hash**, or **Dictionary** is an abstract data type that enables **key-based access** to its elements and offers **dynamic resizing** and fast retrieval."
+ },
+ {
+  "en": "Explain _Sparse_ and _Dense_ arrays.",
+  "qa": "**Sparse arrays** are data structures optimized for arrays where most values are default (e.g., zero or null). They save memory by storing only non-default values and their indices. In contrast, **dense arrays** allocate memory for every element, irrespective of it being a default value."
+ },
+ {
+  "en": "What are advantages and disadvantages of _Sorted Arrays_?",
+  "qa": "A **sorted array** is a data structure where elements are stored in a specific, **predetermined sequence**, usually in ascending or descending order."
+ },
+ {
+  "en": "_Merge_ two _Sorted Arrays_ into one _Sorted Array_.",
+  "qa": "The task is to **merge two sorted arrays** into one combined, sorted array."
+ },
+ {
+  "en": "Implement three _Stacks_ with one _Array_.",
+  "qa": "The task is to implement **three stacks** using a **single dynamic array**."
+ },
+ {
+  "en": "How do you perform _Array Rotation_ and what are its applications?",
+  "qa": "**Array rotation** involves moving elements within an array to shift its position. This operation can be beneficial in various scenarios, from data obfuscation to algorithmic optimizations."
+ },
+ {
+  "en": "Implement a _Queue_ using an array.",
+  "qa": "Implement a **Queue** data structure using a fixed-size array."
+ },
+ {
+  "en": "What is a _Priority Queue_?",
+  "qa": "A **Priority Queue** is a specialized data structure that manages elements based on their assigned priorities. In this queue, **higher-priority** elements are processed before lower-priority ones."
+ },
+ {
+  "en": "Can you explain heap property maintenance after an _Insert_ operation and a _Delete_ operation?",
+  "qa": "**Heap Property**, which distinguishes the heap from an ordinary tree, can be maintained in both **Insert** and **Delete** operations."
+ },
+ {
+  "en": "How can you implement a heap efficiently using _Dynamic Arrays_?",
+  "qa": "**Dynamic arrays**, or vectors, provide a more memory-efficient representation of **heaps** compared to static arrays."
+ },
+ {
+  "en": "How does the _Lazy deletion_ technique work in a heap and what is its purpose?",
+  "qa": "**Lazy deletion** keeps the deletion process simple, optimizing for both time and space efficiency. The primary goal is to reduce the number of **\"holes\" in the heap** to minimize reordering operations."
+ },
+ {
+  "en": "What is _Heap Sort_?",
+  "qa": "**Heap Sort** is a robust comparison-based sorting algorithm that uses a **binary heap** data structure to build a \"heap tree\" and then sorts the elements."
+ },
+ {
+  "en": "Describe the _algorithm_ for _Merging k Sorted Arrays_ using a heap.",
+  "qa": "To **merge** $k$ sorted arrays efficiently, you can **utilize** a **min-heap** to keep track of the **smallest** element remaining in each array. Here, $n$ represents the average length of the arrays."
+ },
+ {
+  "en": "Implement a heap that efficiently supports _Find-Max and Find-Min_ operations.",
+  "qa": "The goal is to build a **data structure**, representing either a **min or max heap**, that supports efficient `find` operations for both the minimum and maximum elements within the heap."
+ },
+ {
+  "en": "Why _Stack_ is considered a _Recursive_ data structure?",
+  "qa": "A **stack** is considered a **recursive data structure** because its definition is self-referential. At any given point, a stack can be defined as a top element combined with another stack (the remainder)."
+ },
+ {
+  "en": "Explain how _Stacks_ are used in _Function Call management_ in programming languages.",
+  "qa": "When **functions** are called in programming languages, the system typically uses a **call stack** to manage the call sequence and memory allocation. Let's take a look at how this process works."
+ },
+ {
+  "en": "Implement a _Dynamic Stack_ that automatically resizes itself.",
+  "qa": "Implement a **Dynamic Stack** that automatically resizes itself when it reaches its capacity."
+ },
+ {
+  "en": "What are the performance implications of a _Fixed-size Array Stack Implementation_?",
+  "qa": "While **fixed-size array stacks** offer simplicity and often better performance for certain operations, such as data caching and real-time processing, several limitation are to be considered."
+ },
+ {
+  "en": "Design a _Stack_ that supports _Retrieving_ the min element in _O(1)_.",
+  "qa": "The goal is to design a **stack** data structure that can efficiently retrieve both the minimum element and the top element in $O(1)$ time complexity."
+ },
+ {
+  "en": "How can you design a _Stack_ to be thread-safe?",
+  "qa": "Ensuring **thread safety** in a traditional stack, where operations are based on a last-in, first-out (LIFO) approach, can be achieved through a variety of techniques. I will give examples of three different approaches here:"
+ },
+ {
+  "en": "Implement a _Stack_ with a _Find-Middle_ operation in _O(1)_ time.",
+  "qa": "The task is to design a **_stack_** data structure that supports **`push`**, **`pop`**, **`findMiddle`**, and **`deleteMiddle`** operations, all in constant $O(1)$ time complexity."
+ },
+ {
+  "en": "Implement a _Linked List_ using _Stack_.",
+  "qa": "The task is to implement **linked list** using a **stack**."
+ },
+ {
+  "en": "Implement Doubly Linked List using Stacks with min complexity.",
+  "qa": "The task is to implement a **Doubly LinkedList** using **Stacks**."
+ },
+ {
+  "en": "What is a _Queue_?",
+  "qa": "A **queue** is a data structure that adheres to the **First-In-First-Out (FIFO)** principle and is designed to hold a collection of elements."
+ },
+ {
+  "en": "What is a _Priority Queue_ and how does it differ from a standard _Queue_?",
+  "qa": "**Queues** are data structures that follow a **FIFO** (First-In, First-Out) order, where elements are removed in the same sequence they were added."
+ },
+ {
+  "en": "How do you reverse a _Queue_?",
+  "qa": "Reversing a queue can be accomplished **using a single stack** or **recursively**. Both methods ensure the first element in the input queue becomes the last in the resultant queue."
+ },
+ {
+  "en": "How to implement a _Queue_ such that _enqueue_ has _O(1)_ and _dequeue_ has _O(n)_ complexity?",
+  "qa": "Use a dynamic array: appending is O(1) amortized, and removing index 0 shifts every remaining element — exactly the required O(n) dequeue."
+ },
+ {
+  "en": "Explain how you can efficiently track the _Minimum_ or _Maximum_ element in a _Queue_.",
+  "qa": "Using a **singly linked list as a queue** provides $O(1)$ time complexity for standard queue operations, but finding exact minimum and maximum can be $O(n)$. However, there are optimized methods for improving efficiency."
+ },
+ {
+  "en": "Discuss an algorithm to merge two or more _Queues_ into one with efficient _Dequeuing_.",
+  "qa": "**Merging multiple queues** is conceptually similar to merging two lists. However, direct merging challenges efficiency as it enforces a $\\mathcal{O}(n)$ operation for each item in the queues. Utilizing a secondary queue $\\text{auxQueue}$ can provide a more efficient $\\mathcal{O}(n + m)$ sequence."
+ },
+ {
+  "en": "Describe an array-based implementation of a _Queue_ and its disadvantages.",
+  "qa": "While **array-based Queues** are simple, they have inherent limitations."
+ },
+ {
+  "en": "What are the benefits of implementing a _Queue_ with a _Doubly Linked List_ versus a _Singly Linked List_?",
+  "qa": "Let's compare the benefits of implementing a **Queue** using both a **Doubly Linked List** and **Singly Linked List**."
+ },
+ {
+  "en": "Compare _Strings_ and _Character Arrays_.",
+  "qa": "**Strings** and **Character Arrays** have many similarities but also key differences in their usage and behavior."
+ },
+ {
+  "en": "Explain _Mutability_ and _Immutability_ in the context of _Strings_.",
+  "qa": "In the context of strings, **mutability** refers to the ability to change or modify an existing string object, whereas **immutability** implies that a string, once created, cannot be altered."
+ },
+ {
+  "en": "Discuss how indexing works in _Strings_ and how it affects various operations.",
+  "qa": "**String indexing** is the system of assigning a unique numerical label to each character in a string, essentially placing them in an ordered list or \"**sequence**\"."
+ },
+ {
+  "en": "Explain how _String Concatenation_ works and the time complexity associated with it.",
+  "qa": "**String concatenation** involves merging two or more strings to create a single string. This process can be **memory-intensive**, especially for multiple concatenation operations with longer strings."
+ },
+ {
+  "en": "Describe the _Time Complexity_ of substring search in _Strings_.",
+  "qa": "**Substring search**, commonly known as pattern matching, plays a crucial role in text processing tasks. Its efficiency is often analyzed in terms of time complexity."
+ },
+ {
+  "en": "Explain _Height_ and _Depths_ in the context of a _Tree_.",
+  "qa": "In tree data structures, the terms **height** and **depth** refer to different attributes of nodes."
+ },
+ {
+  "en": "What is a _Rooted Tree_, and how does it differ from an _Unrooted Tree_?",
+  "qa": "In computer science, a **rooted tree** — often referred to as just a \"tree\" — is a data structure that consists of nodes connected by edges, typically in a top-down orientation."
+ },
+ {
+  "en": "What is a _N-ary Tree_, and how does it generalize a binary tree?",
+  "qa": "An **N-ary Tree** is a data structure with nodes that can have up to $N$ children, allowing for more than two child nodes. This property provides the tree with a more flexible hierarchical structure compared to the strict two-child policy observed in **binary trees**, permitting either a **binary** or **non-binary** organization of nodes, as per the figure below."
+ },
+ {
+  "en": "Discuss the properties of a _Full Binary Tree_.",
+  "qa": "A **Full Binary Tree**, often referred to as a \"strictly binary tree,\" is a rich mathematical structure that presents a distinctive set of characteristics."
+ },
+ {
+  "en": "Explain the concept of a _Path_ in a tree.",
+  "qa": "A **path** in a tree is a sequence of connected nodes representing a traversal from one node to another. The path can be directed – from the root to a specific node – or undirected. It can also be the shortest distance between two nodes, often called a **geodesic path**. Several types of paths exist in trees, such as a **Downward Path**, a **Rooted Tree Path**, and an **Unrooted Tree Path**."
+ },
+ {
+  "en": "Explain the difference between a _Binary Tree_ and a _Binary Search Tree_ (BST).",
+  "qa": "While **Binary Trees** and **Binary Search Trees** (BSTs) share a tree-like structure, they are differentiated by key features such as node ordering and operational efficiency."
+ },
+ {
+  "en": "What is a _Complete Binary Tree_?",
+  "qa": "The **Complete Binary Tree** (CBT) strikes a balance between the stringent hierarchy of full binary trees and the relaxed constraints of general trees. In a CBT, all levels, except possibly the last, are completely filled with nodes, which are as far left as possible."
+ },
+ {
+  "en": "Explain what a _Degenerate (or Pathological) Tree_ is and its impact on operations.",
+  "qa": "A **Degenerate Tree** refers to a tree structure where each parent node has only one associated child node. Consequently, the tree effectively becomes a linked list."
+ },
+ {
+  "en": "What is a _Trie_?",
+  "qa": "**Trie**, often called a **prefix tree** and named after the term **reTRIEval**, is a tree-like data structure tailored for string operations. Instead of housing data within its nodes, a Trie utilizes its edges to encode information."
+ },
+ {
+  "en": "What are the advantages of _Tries_ over _Hash Tables_?",
+  "qa": "In certain scenarios, **Tries** can outperform **Hash Tables** due to their unique characteristics."
+ },
+ {
+  "en": "How do you handle the case sensitivity problem in _Tries_?",
+  "qa": "**Tries** are commonly used in natural language processing to store and look up words efficiently. They are **well-suited** for English, which is a **case-sensitive** language."
+ },
+ {
+  "en": "Describe how a _Trie_ can be used for implementing autocomplete functionality.",
+  "qa": "**Trie**, a tree-like data structure, is an optimal choice for building **autocomplete systems**. With each node representing a single character, **Tries** are especially efficient in dealing with text data."
+ },
+ {
+  "en": "How is a _Trie_ used in text _spell-checking_ and correction systems?",
+  "qa": "A **Trie** is a powerful **tree-like data structure**, especially suited for text operations such as **spelling correction**."
+ },
+ {
+  "en": "Write the code to insert a word into a _Trie_.",
+  "qa": "The task is to create the code for **inserting** a word into a **Trie data structure**."
+ },
+ {
+  "en": "Implement a _Search_ function to determine if a word is included in a _Trie_.",
+  "qa": "The goal is to implement a **search function** that can determine whether a particular word is included in a **Trie** data structure."
+ },
+ {
+  "en": "Write a script to _Delete_ a word from a _Trie_.",
+  "qa": "Deleting a word in a **Trie** usually involves setting the `is_end_of_word` attribute of the last node of the word to `False`. This is necessary, even though the word may not be explicitly present. Consider, for instance, the words \"a\" and \"and\" — if \"and\" is deleted, \"a\" should remain a word."
+ },
+ {
+  "en": "What would be an _Ideal Sorting Algorithm_?",
+  "qa": "An **ideal sorting algorithm** would have these key characteristics:"
+ },
+ {
+  "en": "What does _Sort in Place_ mean?",
+  "qa": "**In-Place sorting** refers to algorithms that rearrange data within its existing storage, without needing extra memory for the sorted result."
+ },
+ {
+  "en": "What is _QuickSort_?",
+  "qa": "**QuickSort** is a highly efficient divide-and-conquer sorting algorithm that partitions an array into subarrays using a **pivot element**, separating elements less than and greater than the pivot."
+ },
+ {
+  "en": "What is _Linear Search_ (Sequential Search)?",
+  "qa": "**Linear Search**, also known as **Sequential Search**, is a straightforward and easy-to-understand search algorithm that works well for **small** and **unordered** datasets. However it might be inefficient for larger datasets."
+ },
+ {
+  "en": "Compare _Binary Search_ vs. _Linear Search_.",
+  "qa": "**Binary Search** and **Linear Search** are two fundamental algorithms for locating data in an array. Let's look at their differences."
+ },
+ {
+  "en": "What characteristics of the data determine the choice of a _searching algorithm_?",
+  "qa": "The ideal searching algorithm varies based on a number of data-specific factors. Let's take a look at those factors:"
+ },
+ {
+  "en": "Name some _Optimization Techniques_ for _Linear Search_.",
+  "qa": "**Linear Search** is a simple searching technique. However, its efficiency can decrease with larger datasets. Let's explore techniques to enhance its performance."
+ },
+ {
+  "en": "What is _Sentinel Search_?",
+  "qa": "**Sentinel Search**, sometimes referred to as **Move-to-Front Search** or **Self-Organizing Search**, is a variation of the linear search that optimizes search performance for frequently accessed elements."
+ },
+ {
+  "en": "Implement an _Order-Agnostic Linear Search_ that works on _sorted_ and _unsorted arrays_.",
+  "qa": "The **Order-Agnostic Linear Search** algorithm searches arrays that can either be **in ascending or descending order**. The goal is to find a specific target value."
+ },
+ {
+  "en": "Modify _Linear Search_ to perform on a _multi-dimensional array_.",
+  "qa": "The task is to **adapt** the **Linear Search** algorithm so it can perform on a **multi-dimensional** array."
+ },
+ {
+  "en": "Explain why complexity of _Binary Search_ is _O(log n)_.",
+  "qa": "The **Binary Search** algorithm is known for its efficiency, often completing in $O(\\log n)$—also known as **logarithmic**—time."
+ },
+ {
+  "en": "In _Binary Search_, why _Round Down_ the midpoint instead of _Rounding Up_?",
+  "qa": "Both **rounding up** and **rounding down** are acceptable in binary search. The essence of the method lies in the distribution of elements in relation to our guess:"
+ },
+ {
+  "en": "Write a _Binary Search_ algorithm that finds the first occurrence of a given value.",
+  "qa": "The goal is to use the **Binary Search** algorithm to find the **first occurrence** of a given value."
+ },
+ {
+  "en": "What is a _Greedy Algorithm_?",
+  "qa": "A **greedy algorithm** aims to solve optimization problems by making the **best local choice** at each step. While this often leads to an **optimal global solution**, it's not guaranteed in all cases. These algorithms are generally easier to implement and faster than other methods like Dynamic Programming but may not always yield the most accurate solution."
+ },
+ {
+  "en": "What are _Greedy Algorithms_ used for?",
+  "qa": "**Greedy algorithms** are often the algorithm of choice for problems where the optimal solution can be built incrementally and **local decisions** lead to a **globally optimal solution**."
+ },
+ {
+  "en": "Is _Dijkstra's algorithm_ a _Greedy_ or _Dynamic Programming_ algorithm?",
+  "qa": "**Dijkstra's algorithm** utilizes a combination of greedy and dynamic programming techniques."
+ },
+ {
+  "en": "Is there a way to _Mathematically Prove_ that a _Greedy Algorithm_ will yield the _Optimal Solution_?",
+  "qa": "While the answer, **whether a greedy algorithm always yields an optimal solution**, may vary depending on the specific problem, two primary properties often need to be met for a greedy algorithm to be effective:"
+ },
+ {
+  "en": "Design a _greedy algorithm_ for making change using the fewest coins possible.",
+  "qa": "Given a specific set of coins and a target amount of change, the objective is to determine the smallest number of coins needed to make the change."
+ },
+ {
+  "en": "Describe a greedy strategy for scheduling events that use the fewest number of resources.",
+  "qa": "When scheduling events to **minimize resource use**, a **greedy strategy** works by selecting the **earliest-starting** tasks that don't conflict."
+ },
+ {
+  "en": "Explain how to apply a greedy approach to minimize the total waiting time for a given set of queries.",
+  "qa": "To **minimize waiting time** for a set of $n$ queries, you should prioritize shorter tasks before longer ones. This sequential approach is best optimized by **using a greedy method**."
+ },
+ {
+  "en": "Develop a _greedy algorithm_ for the _activity selection problem_ to maximize the number of activities.",
+  "qa": "Given the **start** and **finish** times of $n$ activities, the objective of the **Activity Selection Problem (ASP)** is to select a maximum-size set of mutually compatible activities. Two activities are compatible if they don't overlap."
+ },
+ {
+  "en": "How can you establish the correctness of a _greedy algorithm_?",
+  "qa": "**Greedy algorithms** make locally optimal choices with the hope that they lead to a globally optimal solution. The **key challenge** is that a locally optimal choice may not always be part of the global optimum."
+ },
+ {
+  "en": "Define _Divide & Conquer_ algorithms and their main characteristics.",
+  "qa": "**Divide & Conquer** is a problem-solving approach that involves breaking a problem into smaller, more easily solvable **subproblems**, solving each subproblem independently, and then combining their solutions to solve the original problem."
+ },
+ {
+  "en": "Explain the _Master Theorem_ and its importance in analyzing _Divide & Conquer_ algorithms.",
+  "qa": "The **Master Theorem** provides a powerful tool to analyze the time complexity of algorithms that follow a **Divide and Conquer** paradigm."
+ },
+ {
+  "en": "How can the _Master Theorem_ be applied to find the _time complexity_ of a _binary search algorithm_?",
+  "qa": "The Master Theorem provides a way to determine the time complexity of algorithms that follow a specific **divide-and-conquer** pattern."
+ },
+ {
+  "en": "Explain how _Quicksort_ works and how it adopts the _Divide & Conquer_ strategy.",
+  "qa": "**Quicksort** is a highly efficient sorting algorithm that uses the **Divide and Conquer** strategy to quickly sort data. It does so by partitioning an array into two smaller arrays - one with elements that are less than a chosen pivot and another with elements that are greater."
+ },
+ {
+  "en": "How does the _Karatsuba algorithm_ for _multiplying_ large numbers employ _Divide & Conquer_?",
+  "qa": "**Karatsuba algorithm** makes use of the **Divide & Conquer strategy** to significantly reduce the number of math operations needed for large number multiplication."
+ },
+ {
+  "en": "Describe the _Strassen's algorithm_ for _matrix multiplication using_ _Divide & Conquer_.",
+  "qa": "**Strassen's Algorithm** is a divide-and-conquer method that reduces the number of required operations for matrix multiplication."
+ },
+ {
+  "en": "Solve the _Tower of Hanoi_ problem using _Divide & Conquer_ techniques.",
+  "qa": "The Tower of Hanoi is a classic problem that consists of three rods and a number of disks of different sizes which can slide onto any rod. The **objective** is to move the entire stack to another rod, following these rules:"
+ },
+ {
+  "en": "Solve the _Closest Pair of Points_ problem using _Divide & Conquer_.",
+  "qa": "Given a set of $n$ points in the $2D$ plane, find the closest pair of points."
+ },
+ {
+  "en": "What is _Backtracking_?",
+  "qa": "**Backtracking** is an algorithmic technique that uses a **depth-first search** approach to systematically build candidates for solutions. Each potential solution is represented as **nodes** in a **tree structure**."
+ },
+ {
+  "en": "Explain the concept of a _decision tree_ in _backtracking_ algorithms.",
+  "qa": "**Decision trees** are a fundamental component of **backtracking algorithms**. These trees visually represent the sequences of decisions and steps taken during backtracking to achieve a solution."
+ },
+ {
+  "en": "Describe the role of _state space tree_ in understanding backtracking algorithms.",
+  "qa": "**State-space trees** provide a visual representation of the problem-solving process in **backtracking algorithms**. These trees help in both explaining and implementing the backtracking approach."
+ },
+ {
+  "en": "Explain the concept of _constraint satisfaction_ in backtracking.",
+  "qa": "**Constraint satisfaction** is a fundamental aspect of **backtracking algorithms** which play a critical role in various problem-solving tasks, especially in combinatorial optimization."
+ },
+ {
+  "en": "Outline a method to implement _backtracking iteratively_.",
+  "qa": "Although \"iterative backtracking\" **might** seem like an oxymoron given that backtracking itself is a recurring process, it is possible to manage the backtracking implementation through a **purposeful stack management** framework."
+ },
+ {
+  "en": "How can _memoization_ be integrated with _backtracking_?",
+  "qa": "**Backtracking** often involves exploring all possible solutions to a problem. The process is guided by a set of rules and uses **recursion** to handle different states. This approach is exhaustive but can be slow."
+ },
+ {
+  "en": "Explain the impact of _variable ordering_ on the performance of backtracking algorithms.",
+  "qa": "**Variable ordering** techniques play a crucial role in the efficiency of **backtracking algorithms**. They manage the selection order of variables from the decision space, influencing the search strategy and the algorithm's performance."
+ },
+ {
+  "en": "Explain the _time_ and _space complexity_ of a typical _backtracking algorithm_.",
+  "qa": "**Backtracking algorithms** aim to find a solution incrementally; if the current path doesn't lead to a solution, the algorithm **backtracks**."
+ },
+ {
+  "en": "How do _worst-case scenarios_ in _backtracking_ compare to other algorithms?",
+  "qa": "While **backtracking** is a powerful algorithmic tool, its nature entails some worst-case scenario limitations. Let's explore these, and look at **how they compare to other algorithms.**"
+ },
+ {
+  "en": "How _Dynamic Programming_ is different from _Recursion_ and _Memoization_?",
+  "qa": "**Dynamic Programming** (DP), **Recursion**, and **Memoization** are techniques for solving problems that can be divided into smaller, overlapping sub-problems. While they share this commonality, they each offer unique advantages and limitations."
+ },
+ {
+  "en": "What are some _Common Examples of Recursion_ in computer science?",
+  "qa": "Let's look into some examples and see how they utilize the core concepts of **recursion**."
+ },
+ {
+  "en": "Explain the concept of _Recursion Depth_ and its implications on algorithm complexity.",
+  "qa": "**Recursion depth** refers to the number of times a function calls itself, typically visualized as a call stack."
+ },
+ {
+  "en": "How does the _Call Stack_ operate in recursive function calls?",
+  "qa": "**Call Stacks** provide a strategy for tracking active **function calls** and managing **local variables**."
+ },
+ {
+  "en": "Solve the _Tower of Hanoi_ problem recursively.",
+  "qa": "The Tower of Hanoi puzzle consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with all disks stacked in _increasing_ sizes on the first rod in ascending order, with the smallest on top. The objective is to move the entire stack to the last rod following these rules:"
+ },
+ {
+  "en": "Recursively _Check for Palindromes_ in a string.",
+  "qa": "The task is to **determine** whether a given string, $s$, is a **palindrome**."
+ },
+ {
+  "en": "Calculate _N-th Fibonacci Number_ using _Tail Recursion_.",
+  "qa": "The task is to **compute** the $n$-th Fibonacci number using the **tail recursive** method."
+ },
+ {
+  "en": "Discuss how _Tail Recursion_ can be optimized by compilers and its benefits.",
+  "qa": "**Tail call optimization** (TCO) is a compiler feature that promotes **efficient memory usage** in languages like Erlang, Haskell, and Scheme. It does so by converting certain types of recursive functions, known as \"tail-recursive calls,\" into a looping structure, rather than employing a traditional call stack."
+ },
+ {
+  "en": "Write a function to calculate the _nth Fibonacci number_ using a _recursive_ approach.",
+  "qa": "The task is to write a function that **returns the $n$th Fibonacci number** using a **recursive approach**."
+ },
+ {
+  "en": "Provide a non-recursive implementation for generating the _Fibonacci sequence_ to the _nth number_.",
+  "qa": "The task is to **generate** the Fibonacci sequence to the $n$th number using a **non-recursive approach**."
+ },
+ {
+  "en": "What is the _time complexity_ of the recursive Fibonacci solution, and how can this be improved?",
+  "qa": "The **naive recursive** implementation of the Fibonacci sequence has a time complexity of $O(2^n)$, which can be optimized using techniques such as **memoization** or employing an **iterative approach**."
+ },
+ {
+  "en": "Describe the _memoization_ technique as applied to the _Fibonacci sequence_ calculation.",
+  "qa": "**Memoization** is a technique that makes dynamic programming faster by storing the results of expensive function calls and reusing them."
+ },
+ {
+  "en": "Implement an _iterative solution_ to generate the _Fibonacci sequence_, discussing its _time_ and _space complexity_.",
+  "qa": "The task is to **generate the Fibonacci sequence** using an **iterative** approach, and then analyzing its **time and space complexity**."
+ },
+ {
+  "en": "Explain the concept of _dynamic programming_ as it relates to the _Fibonacci sequence_.",
+  "qa": "**Dynamic Programming** is a powerful algorithmic technique that is widely used to optimize **recursive problems**, like computing the Fibonacci sequence, by avoiding redundant computations."
+ },
+ {
+  "en": "Explain an algorithm to compute the _sum of the first n Fibonacci numbers_ without generating the entire sequence.",
+  "qa": "The **Fibonacci sequence** is a classic mathematical series defined by the following:"
+ },
+ {
+  "en": "Define the _Lucas sequence_ and detail how a program can generate it.",
+  "qa": "The **Lucas Sequence**, a variant of the Fibonacci sequence, starts with 2 and 1, rather than 0 and 1, and follows the same recursive structure as the classic sequence:"
+ },
+ {
+  "en": "How to calculate large _Fibonacci numbers_ without encountering _integer overflow_ issues?",
+  "qa": "**Fibonacci numbers** grow at a rapid rate, which can lead to **integer overflow**. Numerous strategies exist to circumvent this issue."
+ },
+ {
+  "en": "What is _Big-O Notation_?",
+  "qa": "**Big O notation** serves as a standardized **measure for algorithmic performance**, focusing on time and space complexity. It's crucial for **comparing algorithms** and understanding their **scalability**."
+ },
+ {
+  "en": "Explain how _probabilistic algorithms_ can have a different Big-O Notation compared to deterministic ones.",
+  "qa": "In this scenario, let's discuss the problems for which probabilistic algorithms can provide approximate solutions in **expected polynomial time**, even though a deterministic algorithm might require exponential time."
+ },
+ {
+  "en": "Determine the Big-O _time and space complexities_ of _hash table_ operations.",
+  "qa": "Let's discuss the **time** and **space** complexities associated with basic **Hash Table** operations."
+ },
+ {
+  "en": "Provide examples of _space-time tradeoffs_ in algorithm design.",
+  "qa": "**Time-space tradeoffs** characterize algorithms that can be optimized for either time or space, but generally not both."
+ },
+ {
+  "en": "How do you find the _kth largest element_ in an unsorted _array_?",
+  "qa": "To find the $k^{\\text{th}}$ largest element in an unsorted array, you can **leverage heaps or quicksort**."
+ },
+ {
+  "en": "Explain the importance of _state definition_ in _Dynamic Programming_ solutions.",
+  "qa": "**State definition** serves as a crucial foundation for Dynamic Programming (DP) solutions. It partitions the problem into **overlapping subproblems** and enables both **top-down** (memoization) and **bottom-up** (tabulation) techniques for efficiency."
+ },
+ {
+  "en": "What are the trade-offs between _memoization_ and _tabulation_ in _Dynamic Programming_?",
+  "qa": "While both **memoization** and **tabulation** optimize dynamic programming algorithms for efficiency, they differ in their approaches and application."
+ },
+ {
+  "en": "What is _Hashing_?",
+  "qa": "**Hashing** is a method that maps data to fixed-size values, known as **hash values**, for efficient storage and retrieval. A **hash function** generates these values, serving as the data's unique identifier or key."
+ },
+ {
+  "en": "Explain the difference between _Hashing_ and _Hash Tables_.",
+  "qa": "When discussing **Hashing** and **Hash Tables**, it's crucial to recognize that one is a **technique** while the other is a **data structure**. Here's a side-by-side comparison:"
+ },
+ {
+  "en": "Provide a simple example of a _Hash Function_.",
+  "qa": "The **parity function** can serve as a rudimentary example of a **hash function**. It takes a single input, usually an integer, and returns either `0` or `1` based on whether the input number is even or odd."
+ },
+ {
+  "en": "What are _Hash Collisions_?",
+  "qa": "In hash functions and tables, a **hash collision** occurs when two distinct keys generate the same hash value or index. Efficiently addressing these collisions is crucial for maintaining the hash table's performance."
+ },
+ {
+  "en": "Describe the characteristics of a good hash function.",
+  "qa": "A **good hash function** is fundamental for efficient data management in **hash tables** or when employing techniques such as **hash-based encryption**. Here, let's go through what it means for a hash function to be **high-quality**."
+ },
+ {
+  "en": "How can the choice of a hash function impact the efficiency of a hash table?",
+  "qa": "The efficiency of a **hash table** relies significantly on the hash function used. An inadequate hash function can lead to **clustering**, where multiple keys map to the same bucket, degrading **performance** to **O(n)**, essentially turning the hash table into an unordered list."
+ },
+ {
+  "en": "What is a _Tree Data Structure_?",
+  "qa": "A **tree data structure** is a hierarchical collection of nodes, typically visualized with a root at the top. Trees are typically used for representing relationships, hierarchies, and facilitating efficient data operations."
+ },
+ {
+  "en": "What is a _Binary Search Tree_?",
+  "qa": "A **Binary Search Tree** (BST) is a binary tree optimized for quick lookup, insertion, and deletion operations. A BST has the distinct property that each node's left subtree contains values smaller than the node, and its right subtree contains values larger."
+ },
+ {
+  "en": "How is an _AVL Tree_ different from a _B-Tree_?",
+  "qa": "Balanced search trees, such as **AVL Trees** and **B-Trees** - are designed primarily for optimized and **fast search operations**. However, each tree has distinct core properties and specific applications."
+ },
+ {
+  "en": "How can a _Fenwick Tree (Binary Indexed Tree)_ be beneficial in algorithm design?",
+  "qa": "The **Fenwick Tree**, or Binary Indexed Tree $(BIT)$, is an extremely efficient data structure particularly suited for **range queries and point updates** in large sequential datasets, like arrays. Its primary strength lies in its **fast update and query operations**, presenting unique advantages in specific algorithmic scenarios."
+ },
+ {
+  "en": "What is a _Splay Tree_, and how does its _splay operation_ work?",
+  "qa": "The **Splay Tree**, a form of self-adjusting binary search tree, reshapes itself to optimize performance based on recent data access patterns. It achieves this through \"splaying\" operations."
+ },
+ {
+  "en": "How does a _Linked List_ manage memory allocation differently from an _Array_?",
+  "qa": "Let's explore **how linked lists and arrays** differ in terms of memory management and their implications on data handling and computational complexity."
+ },
+ {
+  "en": "Compare _Array-based_ vs _Linked List_ stack implementations.",
+  "qa": "**Array-based stacks** excel in time efficiency and direct element access. In contrast, **linked list stacks** are preferable for dynamic sizing and easy insertions or deletions."
+ },
+ {
+  "en": "How do _Linked Lists_ perform in comparison with _Trees_ for various operations?",
+  "qa": "Let's examine the **time and space complexity** of common operations in **linked lists** and **trees**, highlighting trade-offs of each data structure."
+ },
+ {
+  "en": "How to apply _Binary Search_ in _O(log n)_ on a _Sorted Linked List_? (Skip Lists).",
+  "qa": "While **Binary Search** boasts a time complexity of $O(\\log n)$, applying it to a singly linked list is less straightforward due to the list's linear nature and $O(n)$ access time. However, **Skip Lists** offer a clever workaround to achieve sub-linear search times in linked lists."
+ },
+ {
+  "en": "Compare _Adjacency Lists_ and _Adjacency Matrices_ for graph representation.",
+  "qa": "Graphs can be represented in various ways, but **Adjacency Matrix** and **Adjacency List** are the most commonly used data structures. Each method offers distinct advantages and trade-offs, which we'll explore below."
+ },
+ {
+  "en": "_Insert_ an item into the _Heap_. Explain your actions.",
+  "qa": "Suppose we have a **binary heap** represented as follows:"
+ },
+ {
+  "en": "Compare _Heaps-Based_ vs. _Arrays-Based_ priority queue implementations.",
+  "qa": "Let's compare **arrays** and **binary heap** data structures used for **implementing a priority queue** in terms of their algorithms and performance characteristics."
+ },
+ {
+  "en": "Explain _Heapify_ and where it is used in heap operations.",
+  "qa": "**Heapify** is a method that ensures the **heap property** is maintained for a given array, typically performed in the background during **heap operations**."
+ },
+ {
+  "en": "How does _Heap Sort_ compare to _Quick Sort_ in terms of speed and memory usage?",
+  "qa": "Let's discuss a novel and a traditional sorting algorithm and their respective performance characteristics."
+ },
+ {
+  "en": "Explain the _FIFO (First In, First Out)_ policy that characterizes a _Queue_.",
+  "qa": "The **FIFO (First-In-First-Out)** policy governs the way **Queues** handle their elements. Elements are processed and removed from the queue in the same order in which they were added. The data structures responsible for adhering to this policy are specifically designed to optimize for this principle, making them ideal for a host of real-world applications."
+ },
+ {
+  "en": "Name some _Types of Queues_.",
+  "qa": "**Queues** are adaptable data structures with diverse types, each optimized for specific tasks. Let's explore the different forms of queues and their functionalities."
+ },
+ {
+  "en": "Can a queue be implemented as a static data structure and if so, what are the limitations?",
+  "qa": "**Static queues** use a pre-defined amount of memory, typically an array, for efficient FIFO data handling."
+ },
+ {
+  "en": "Discuss a scenario where _dequeue_ must be prioritized over _enqueue_ in terms of complexity.",
+  "qa": "While **enqueue** typically takes $O(1)$ time and **dequeue** $O(1)$ or $O(n)$ time in a simple Queue, there are cases, like in **stacks**, where we prioritize one operation over the other."
+ },
+ {
+  "en": "Name some _Queue Implementations_. Compare their efficiency.",
+  "qa": "**Queues** can be built using various underlying structures, each with its trade-offs in efficiency and complexity."
+ },
+ {
+  "en": "How do different _programming languages_ implement and manipulate _Strings_?",
+  "qa": "Let's look at the key ways in which different programming languages handle strings, ranging from **mutable** vs. **immutable** semantics to **character encoding** and more."
+ },
+ {
+  "en": "Why are _Character arrays_ preferred over _Strings_ for passwords?",
+  "qa": "While **Strings** are versatile, they are **not the ideal storage** for passwords or critical data due to their immutability and the associated risks of data remanence."
+ },
+ {
+  "en": "What is a _Rope_ data structure?",
+  "qa": "**Rope**, also known as **String-Tree**, is a binary tree structure optimized for efficient string manipulation operations such as concatenation, insertion, and deletion."
+ },
+ {
+  "en": "Name key _Advantages_ and _Limitations_ of _Ropes_.",
+  "qa": "The **Rope data structure** excels in certain scenarios but is not without its constraints."
+ },
+ {
+  "en": "What are some _Practical Applications_ of a _Ropes_?",
+  "qa": "Developed in 1995 by Hans-J. Boehm and Russ Atkinson, the **rope data structure** was designed to address the inefficiencies associated with conventional strings, especially regarding memory management, mutability, and performance in editing operations."
+ },
+ {
+  "en": "Compare _Ropes_ vs. _StringBuilders_.",
+  "qa": "**Ropes** and **StringBuilders** are tools optimized for specific string manipulation scenarios. They each have unique strengths and weaknesses, making them suited for distinct use cases."
+ },
+ {
+  "en": "Compare the performance of _Strings_ vs. _Ropes_.",
+  "qa": "Let's compare **strings** and **ropes** from the performance perspective."
+ },
+ {
+  "en": "What is a _Binary Search Tree_ (BST)?",
+  "qa": "A **Binary Search Tree** (BST) is a binary tree optimized for quick lookup, insertion, and deletion operations. A BST has the distinct property that each node's left subtree contains values smaller than the node, and its right subtree contains values larger."
+ },
+ {
+  "en": "What are _Advantages_ and _Disadvantages_ of a _Trie_?",
+  "qa": "The **trie** is a tree-like data structure optimized for string operations. While it presents distinct advantages, it also comes with specific drawbacks."
+ },
+ {
+  "en": "Explain the use of a _Trie_ in IP Routing to match IP prefixes.",
+  "qa": "**Tries** are advanced data structures, specifically designed for efficient prefix matching. This quality makes them not only powerful but also indispensable in IP routing."
+ },
+ {
+  "en": "Name some _Trie Implementation_ strategies.",
+  "qa": "To **implement a trie**, various strategies are available:"
+ },
+ {
+  "en": "Compare _Trie_ vs. _Binary Search Tree_.",
+  "qa": "While **Tries** are specialized for tasks involving strings and are especially efficient for datasets with shared prefixes, **BSTs** are versatile, general-purpose trees that can store any ordered data."
+ },
+ {
+  "en": "How to choose between a _Hash Table_ and a _Trie_?",
+  "qa": "Both **Hash Tables** and **Tries** are data structures used for efficient data storage and retrieval."
+ },
+ {
+  "en": "What is a _Suffix Trie_, and how does it differ from a standard _Trie_?",
+  "qa": "A **Suffix Trie** extends the functionality of a regular trie to capture all **suffices** of a string. Both Tries are structures well-suited for substrings and searching in text."
+ },
+ {
+  "en": "What are _Sorting Algorithms_?",
+  "qa": "**Sorting algorithms** are methods for arranging a dataset in a specific order, such as numerically or alphabetically. They play a critical role in **organizing** and optimizing data for efficient **searching** and **processing**."
+ },
+ {
+  "en": "Classify _Sorting Algorithms_.",
+  "qa": "**Sorting algorithms** can be categorized based on their characteristics."
+ },
+ {
+  "en": "Explain the _Divide and Conquer_ paradigm in the context of _Sorting Algorithms_.",
+  "qa": "**Divide and Conquer** is a fundamental algorithm design technique that breaks a problem into smaller, more manageable sub-problems, solves each sub-problem separately, and then combines the solutions to the sub-problems to form the solution to the original problem."
+ },
+ {
+  "en": "How does _Comparison-Based_ sorting differ from _Non-Comparison-Based_ sorting algorithms?",
+  "qa": "Let's look at the fundamental differences between **comparison-based** and **non-comparison-based** sorting algorithms."
+ },
+ {
+  "en": "What is the difference between _External_ and _Internal_ sorting?",
+  "qa": "**External sorting** is designed to efficiently handle large datasets that can't fit entirely in system memory. It accomplishes this by using a combination of disk storage and memory."
+ },
+ {
+  "en": "Define _Adaptive Sorting_ and provide an example of an adaptive sort algorithm.",
+  "qa": "**Adaptive sorting algorithms** are tailored to take advantage of a dataset's existing order. When data is partially sorted, adaptive algorithms can be faster than non-adaptive ones."
+ },
+ {
+  "en": "How does the _Time Complexity_ of sorting algorithms change with respect to _Different Types of Input Data_?",
+  "qa": "Knowing how sorting **time complexity** changes based on **input data** empowers you to choose the most effective algorithm."
+ },
+ {
+  "en": "What is _Bubble Sort_?",
+  "qa": "**Bubble Sort** is a basic and often inefficient sorting algorithm. It continually compares adjacent elements and swaps them until the list is sorted."
+ },
+ {
+  "en": "Name some _Optimization Techniques_ for _Bubble Sort_.",
+  "qa": "**Bubble Sort**, while not the most efficient, can benefit from several performance-enhancing modifications."
+ },
+ {
+  "en": "What is _Insertion Sort_?",
+  "qa": "**Insertion Sort** is a straightforward and intuitive sorting algorithm that builds the final sorted array one element at a time. It's similar to how one might **sort a hand of playing cards**."
+ },
+ {
+  "en": "What is _Merge Sort_?",
+  "qa": "**Merge Sort** is a robust and efficient divide-and-conquer sorting algorithm. It breaks down a list into numerous sublists until each sublist consists of a single element and then merges these sublists in a sorted manner."
+ },
+ {
+  "en": "Explain what is _Binary Search_.",
+  "qa": "**Binary Search** is a highly efficient searching algorithm often implemented for **already-sorted lists**, reducing the search space by 50% at every step. This method is especially useful when the list won't be modified frequently."
+ },
+ {
+  "en": "What are the _Drawbacks_ of _Sentinel Search_?",
+  "qa": "The **Sentinel Linear Search** slightly improves efficiency over the standard method by reducing average comparisons from roughly $2n$ to $n + 2$ using a sentinel value."
+ },
+ {
+  "en": "Compare _Recursive_ vs. _Iterative Binary Search_.",
+  "qa": "Both **Recursive** and **Iterative** Binary Search leverage the **divide-and-conquer** strategy to search through sorted data. Let's look at their differences in implementation."
+ },
+ {
+  "en": "How would you apply _Binary Search_ to an array of objects sorted by a specific key?",
+  "qa": "Let's explore how **Binary Search** can be optimized for sorted arrays of objects."
+ },
+ {
+  "en": "List some characteristics that are often present in problems that are solvable by _greedy algorithms_.",
+  "qa": "**Greedy algorithms** are tailored for optimization problems where making the locally optimal choice at each step typically leads to a global optimum."
+ },
+ {
+  "en": "Compare _Greedy_ vs _Divide & Conquer_ vs _Dynamic Programming_ algorithms.",
+  "qa": "Let's explore how **Greedy**, **Divide & Conquer**, and **Dynamic Programming** algorithms differ across key metrics such as optimality, computational complexity, and memory usage."
+ },
+ {
+  "en": "Explain the _Greedy Choice Property_ and its significance in _greedy algorithms_.",
+  "qa": "The **greedy choice property** is a core feature of **greedy algorithms**, ensuring that local optima lead to global optima. Such algorithms make **decisions iteratively** on smaller parts of a larger problem, aiming to optimize towards an overall solution."
+ },
+ {
+  "en": "What is the role of _sorting_ in many _greedy algorithms_, and why is it often necessary?",
+  "qa": "**Sorting** is a foundational operation in many **greedy algorithms**. These algorithms make locally optimized choices at each step, ultimately aiming for a global or optimal solution."
+ },
+ {
+  "en": "Can _greedy algorithms_ be used to solve _optimization problems_? Give an example.",
+  "qa": "Yes, **greedy algorithms** are designed to solve **optimization problems** by making locally best choices in the hope of obtaining a global optimum."
+ },
+ {
+  "en": "Explain the difference between _Divide & Conquer_ and _Dynamic Programming_.",
+  "qa": "**Divide and Conquer** and **Dynamic Programming** (DP) are both algorithmic design paradigms that decompose problems into smaller, more manageable subproblems. The techniques are closely related, often characterized by overlapping features. However, they differ fundamentally at a granular level of problem decomposition, **solutions to subproblems**, and the **mechanism of subproblem reuse**."
+ },
+ {
+  "en": "Describe how you would use _Divide & Conquer_ to find the _maximum_ and _minimum_ of an _array_.",
+  "qa": "**Divide & Conquer** is an efficient technique for various problems, including finding the **maximum** and **minimum** values in an array."
+ },
+ {
+  "en": "Illustrate how the _Merge Sort_ algorithm exemplifies the _Divide & Conquer_ technique.",
+  "qa": "**Merge Sort** is a classic algorithm that leverages the **Divide & Conquer** technique for effective sorting across different domains such as data management and external sorting. The process entails breaking down the initial problem (array of data to sort) into smaller, more manageable sub-problems."
+ },
+ {
+  "en": "How does _backtracking_ differ from _brute force_ methods?",
+  "qa": "**Backtracking** and **brute force** algorithms **both explore all potential solutions** but differ in their methodology, efficiency, and the application-specific constraints they leverage."
+ },
+ {
+  "en": "Discuss common optimizations in _backtracking_ to _improve efficiency_.",
+  "qa": "**Backtracking** algorithms can be improved through various strategies."
+ },
+ {
+  "en": "How does _backtracking_ relate to other algorithmic paradigms like _divide and conquer_?",
+  "qa": "**Backtracking** and **Divide-and-Conquer** are both strategies in algorithm design, but they operate in distinct ways."
+ },
+ {
+  "en": "Describe the role of _pruning_ in _backtracking algorithms_.",
+  "qa": "**Pruning** in the context of backtracking refers to techniques that **reduce the search space** by intelligently eliminating **unpromising candidates**."
+ },
+ {
+  "en": "Explain the importance of _backtracking_ in _recursive algorithm design_.",
+  "qa": "**Backtracking** is pivotal in many recursive algorithms as it saves resources by terminating searches that won't lead to a solution. This pruning technique typically involves a **depth-first search**, prevalent in graph algorithms and optimization problems."
+ },
+ {
+  "en": "Are there any safety considerations when determining the _Recursion Depth_? If yes, provide an example.",
+  "qa": "When dealing with recursion, **excessive recursion depth** can lead to stack overflow errors or, in rare cases, security vulnerabilities."
+ },
+ {
+  "en": "What is a _Bit_?",
+  "qa": "* **Bit**: A single `2^0` unit. * **Nibble**: 4 bits (`2^4 = 16` possible values, `0` to `15`). Often represented as a single **Hexadecimal** digit (`0x0 ... 0xF`). * **Byte (Octet)**: 8 bits (`2^8 = 256` possible values, `0` to `255`). In 2026, the byte remains the smallest addressable unit of memory in standard architectures (`x86_64`, `ARMv9`)."
+ },
+ {
+  "en": "What is a _Byte_?",
+  "qa": "A **byte** is the standard unit of digital information, typically consisting of 8 **bits**. In modern architecture, it is formally defined as an **octet**. It represents $2^8 = 256$ unique states, allowing it to store unsigned integer values ranging from $0$ to $255$."
+ },
+ {
+  "en": "Explain what is a _Bitwise Operation_.",
+  "qa": "**Bitwise operations** manipulate data at the level of individual bits (0 and 1). In modern computing, these operations are performed directly by the **Arithmetic Logic Unit (ALU)** within the CPU, making them significantly faster than high-level arithmetic."
+ },
+ {
+  "en": "What are some real-world applications of _Bitwise Operators_?",
+  "qa": "**Bitwise operators** ($AND, OR, XOR, NOT, \\ll, \\gg$) enable direct manipulation of individual bits within a memory word. In 2026, these operations remain the fundamental layer for high-performance computing, where $O(1)$ complexity and minimal memory footprint are required."
+ },
+ {
+  "en": "What is a _bitwise AND_ operation and how can it be used to check if a number is _odd_ or _even_?",
+  "qa": "The **bitwise AND** (`&`) is a fundamental binary operation executed at the hardware level by the **Arithmetic Logic Unit (ALU)**. It compares the binary representation of two integers bit by bit. - The resulting bit is `1` only if both corresponding input bits are `1`. - Otherwise, the resulting bit is `0`."
+ }
+]

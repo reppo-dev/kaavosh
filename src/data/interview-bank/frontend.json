@@ -1,0 +1,1739 @@
+{
+ "meta": {
+  "title": {
+   "fa": "مصاحبه فرانت‌اند",
+   "en": "Frontend interviews"
+  },
+  "description": {
+   "fa": "از حلقه رویداد تا رندر ری‌اکت و Core Web Vitals — + بانک سوال‌های HTML، CSS، TypeScript و Vue از Devinterview-io.",
+   "en": "From the JS event loop to React rendering and Core Web Vitals — plus the Devinterview-io HTML, CSS, TypeScript & Vue bank."
+  },
+  "icon": "layout-template",
+  "accent": "cyan"
+ },
+ "questions": [
+  {
+   "id": "explain the difference between the child combinator and-css-7",
+   "question": {
+    "fa": "Explain the difference between the _child combinator_ and the _descendant combinator_.",
+    "en": "Explain the difference between the _child combinator_ and the _descendant combinator_."
+   },
+   "difficulty": "junior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "The **child combinator** (>) and the **descendant combinator** (~) both serve to target HTML elements with CSS. However, they **operate in different ways**.",
+    "en": "The **child combinator** (>) and the **descendant combinator** (~) both serve to target HTML elements with CSS. However, they **operate in different ways**."
+   },
+   "steps": [],
+   "answerMd": "The **child combinator** (>) and the **descendant combinator** (~) both serve to target HTML elements with CSS. However, they **operate in different ways**.\n\n### Distinct Characteristics\n\n- Child Combinator **>**: Selects an HTML element that is a **direct child** of another element.\n- Descendant Combinator **~**: Matches an HTML element that is a **descendant** (direct or indirect child) of another specified element.\n\n### Code Example\n\nHere is the CSS:\n\n```css\n/* target direct children of the parent element */\nnav > ul > li {\n  color: red;\n}\n\n/* target any descendant list items under nav */\nnav li {\n  color: blue;\n}\n```\n\nHere is the HTML:\n\n```html\n<nav>\n  \n    Direct Child \n    \n      Nested Child \n      \n        Nested List Item \n      \n    \n  \n</nav>\n```\n\n### Best Practices for Combinator Use\n\n1. **Specificity of Selection**: Implement the **child combinator** $>$ when you want to target a specific, direct child of an element.\n2. **Minimize Global Targeting**: Utilize the **descendant combinator** cautiously as it has the potential for global targeting. It's often a good habit to opt for more specific selectors.\n3. **Balance Styling and Performance**: As a rule of thumb, more specific selectors could improve rendering speed. Use combinators with a balanced approach keeping in mind both specificity and performance needs.",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "how would you select all direct children elements of a -css-8",
+   "question": {
+    "fa": "How would you select all direct _children elements_ of a particular type?",
+    "en": "How would you select all direct _children elements_ of a particular type?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "To **select all direct children** of a specific type in CSS, you can use the `>` **child selector** combined with the desired element to build the selector.",
+    "en": "To **select all direct children** of a specific type in CSS, you can use the `>` **child selector** combined with the desired element to build the selector."
+   },
+   "steps": [],
+   "answerMd": "To **select all direct children** of a specific type in CSS, you can use the `>` **child selector** combined with the desired element to build the selector.\n\nFor example, to select all the direct children that are `` elements within an `` element, you would use the following CSS:\n\n```css\nul > li {\n  /* Styles here */\n}\n```",
+   "lang": "en",
+   "vocab": [
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what is the css box model-css-10",
+   "question": {
+    "fa": "What is the _CSS Box Model_?",
+    "en": "What is the _CSS Box Model_?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "The **Box Model** is the foundational concept in CSS that describes the structure of an HTML element. It encompasses four key components: **content**, **padding**, **border**, and **margin**.",
+    "en": "The **Box Model** is the foundational concept in CSS that describes the structure of an HTML element. It encompasses four key components: **content**, **padding**, **border**, and **margin**."
+   },
+   "steps": [],
+   "answerMd": "The **Box Model** is the foundational concept in CSS that describes the structure of an HTML element. It encompasses four key components: **content**, **padding**, **border**, and **margin**.\n\n### Box Model Components\n\n- **Content**: The actual element content, such as text, images, or other visual or interactive elements.\n- **Padding**: Clears an area around the element's content, inside the border. The padding is transparent and doesn't have a background color or border.\n- **Border**: A solid line that defines the boundary of the padding area.\n- **Margin**: Clears an area around the element's border, outside any defined background or border.\n\n### Visual Representation\n\n### Key Attributes\n\n- **Height** & **Width**: Element dimensions are determined by the sum of content width/height, and any padding, border, or margin added to it.\n- **Border**: Specifies the size, style, and color of the border surrounding the content and padding.\n- **Margin**: Defines the **clearance** between adjacent elements.\n\n### Code Example: Box Model\n\nHere is the HTML code:\n```html\nThis is an example of text within the Box Model.\n```\n\nHere is the CSS code:\n``` CSS\n#boxModelExample {\n    border: 5px solid red;\n    padding: 20px;\n    margin: 20px;\n}\n```\n\n### Margins\n\n#### Auto Margins\nWhen the surrounding container has a defined width, horizontal margins set to \"auto\" equally distribute the remaining horizontal space on both sides of the element, centering it within the container.\n\n``` CSS\n#autoMarginExample {\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n}\n```\n\n### Parent and Child Element Interplay\n\n#### Box Sizing\n\nBy default, the width of an element does not include padding or border. CSS can alter this behavior using the `box-sizing` property:\n\n- **Content-Box** (default): The element's specified width and height are calculated excluding padding and border. When you change the width or height of an element using CSS, this is the model being used.\n- **Border-Box**: The width and height comprise the content, padding, and border, avoiding the expansion of the box when adding padding or border to an element.\n\nThis distinction aids in layout control and ensures uniformity.\n\n``` CSS\n#borderBoxExample {\n    box-sizing: border-box;\n}\n```",
+   "lang": "en",
+   "vocab": [
+    "Container",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what are the different values for the box sizing proper-css-12",
+   "question": {
+    "fa": "What are the different values for the _box-sizing_ property and what do they do?",
+    "en": "What are the different values for the _box-sizing_ property and what do they do?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "The `box-sizing` property has three possible values:",
+    "en": "The `box-sizing` property has three possible values:"
+   },
+   "steps": [],
+   "answerMd": "The `box-sizing` property has three possible values:\n\n1. **Content-Box**: Box dimensions are calculated by adding the `width` and `height` to the content only. This is the default behavior. Mathematically, this is represented as: $$ \\text{Content Width/Height} = \\text{Specified Width/Height} $$\n\n2. **Border-Box**: The `width` and `height` of the box are calculated by including both the content and padding within the specified values. Essentially, the browser will adjust the **content width and height measurements to include the padding and border** thickness. Mathematically, this is represented as: $$ \\text{Content Width/Height} = \\text{Specified Width/Height} - \\text{Padding} - \\text{Border} $$\n\n3. **Initial**: This value sets the `box-sizing` property to its default value, which is typically `content-box`.\n\n### Visual Representation",
+   "lang": "en",
+   "vocab": [],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "how do you center a block element with css-css-13",
+   "question": {
+    "fa": "How do you center a _block element_ with _CSS_?",
+    "en": "How do you center a _block element_ with _CSS_?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "To center a **block-level** element using CSS, there are several methods, which handle either horizontal or vertical alignment.",
+    "en": "To center a **block-level** element using CSS, there are several methods, which handle either horizontal or vertical alignment."
+   },
+   "steps": [],
+   "answerMd": "To center a **block-level** element using CSS, there are several methods, which handle either horizontal or vertical alignment.\n\n### Horizontal Centering\n\nThere are three common options to horizontally center a block:\n\n1. **Auto margins**: by setting both left and right margins to `auto`.\n2. **Flexbox**: placing the block in a flex container and setting `justify-content: center`.\n3. **Grid**: applying the `place-items` property on the container set to grid layout.\n\n#### Code Example: Auto Margins\n```css\n.container {\n  width: 50%;\n  margin: 0 auto; /* Center horizontally */\n}\n```\n\n#### Code Example: Flexbox\n```css\n.container {\n  display: flex;\n  justify-content: center; /* Horizontally center child elements */\n}\n```\n\n### Vertical Centering\n\nTo vertically center a block, modern techniques such as Flexbox and Grid layout can be used.\n\n#### Code Example: Flexbox\n```css\n.container {\n  display: flex;\n  align-items: center; /* Vertically center child elements */\n}\n```\n\n#### Code Example: CSS Grid\n```css\n.container {\n  display: grid;\n  align-items: center; /* Vertically center child elements */\n}\n```",
+   "lang": "en",
+   "vocab": [
+    "Container",
+    "Flexbox",
+    "CSS Grid",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what is the difference between block inline and inline -css-14",
+   "question": {
+    "fa": "What is the difference between _block_, _inline_, and _inline-block elements_?",
+    "en": "What is the difference between _block_, _inline_, and _inline-block elements_?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "**Block elements**, by default, stack vertically, while **inline elements** sit next to each other on the same line.",
+    "en": "**Block elements**, by default, stack vertically, while **inline elements** sit next to each other on the same line."
+   },
+   "steps": [],
+   "answerMd": "**Block elements**, by default, stack vertically, while **inline elements** sit next to each other on the same line.\n\n**Inline-block elements** combine characteristics of both, stacking vertically and allowing for adjustments in height, margin, and padding.\n\n### Code Example: Key Differences\n\nHere is the HTML:\n\n```html\nBlock\nInline\nInline-Block\n```\n\nHere is the CSS:\n\n```css\ndiv, span {\n  display: block;\n  margin-bottom: 10px;\n}\n\n.inline-block {\n  display: inline-block;\n  background: lightblue;\n  padding: 10px;\n}\n```\n\nIn `div` and `span` due to default display type (block): text is separated by\na gap.\n\nIn `span.inline-block`: with `display: inline-block`, text shares a line but is visually separated by its background.\n\n#### Explore all 100 answers here 👉 [Devinterview.io - CSS](https://devinterview.io/questions/web-and-mobile-development/css-interview-questions)",
+   "lang": "en",
+   "vocab": [
+    "Stack",
+    "HTML",
+    "CSS",
+    "HTTPS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "describe the basic structure of an html document-html5-1",
+   "question": {
+    "fa": "Describe the basic structure of an _HTML document_.",
+    "en": "Describe the basic structure of an _HTML document_."
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**HyperText Markup Language** (HTML) serves as the backbone of web content, defining its structure and semantics. We will now walk you through the fundamental elements of an HTML document.",
+    "en": "**HyperText Markup Language** (HTML) serves as the backbone of web content, defining its structure and semantics. We will now walk you through the fundamental elements of an HTML document."
+   },
+   "steps": [],
+   "answerMd": "**HyperText Markup Language** (HTML) serves as the backbone of web content, defining its structure and semantics. We will now walk you through the fundamental elements of an HTML document.\n\n### Basic Structure of an HTML Document\n\nAn HTML document consists of two primary sections: the `head` and the `body`.\n\n#### Document Type Declaration (DOCTYPE)\n\nThe **Document Type Declaration** (DOCTYPE) is not an HTML tag; it's an instruction to the web browser about what version of HTML the page is written in.\n\n```html\n<!DOCTYPE html>\n```\n\nThis declaration shows that the document is an HTML5 document.\n\n#### HTML Element\n\nThe `html` element is the root element of an HTML page. It encompasses the entire content, both head and body.\n\n```html\n<html>\n    \n</html>\n```\n\n#### Head Section\n\nThe `head` section provides meta-information about the document. It isn't displayed in the web browser itself but serves various other purposes, from providing a title to linking external resources.\n\n```html\n<head>\n    \n</head>\n```\n\n##### Title Element\n\nThe `title` element specifies the document's title, which is displayed in the browser's title bar or tab.\n\n```html\n<title>Your Page Title</title>\n```\n\n#### Body Section\n\nThe `body` section encapsulates the document's visible content—what users see and interact with.\n\n```html\n\n    \n\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what do doctype and html lang attributes do-html5-2",
+   "question": {
+    "fa": "What do _DOCTYPE_ and _html lang_ attributes do?",
+    "en": "What do _DOCTYPE_ and _html lang_ attributes do?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**Document Type** (DOCTYPE) and the `lang` attribute play crucial roles in our webpages.",
+    "en": "**Document Type** (DOCTYPE) and the `lang` attribute play crucial roles in our webpages."
+   },
+   "steps": [],
+   "answerMd": "**Document Type** (DOCTYPE) and the `lang` attribute play crucial roles in our webpages.\n\n### DOCTYPE: Defining Document Type and Validation Mode\n\n#### Purpose\n- Specifies the HTML or XHTML version used in the document.\n- Identifies parsing method and algorithm for the web browser, affecting consistency.\n\n#### Code Example\n\nThe `<!DOCTYPE>` declaration is placed at the very top of the HTML file, even before the `<html>` tag begins.\n\n```html\n<!DOCTYPE html>\n<html>\n  <head>\n    <title>Page Title</title>\n  </head>\n  \n    \n  \n</html>\n```\n\n### Lang Attribute: Language Specification\n\nThe `lang` attribute, present in the HTML tag, specifies the primary language used in the document. Its value is a primary language subtag as defined in RFC 5646 (BCP 47) and it can include a valid language code, a valid language code followed by a valid region code, or simply \"und\" for unspecified language.\n\n#### Code Example\n\n```html\n<!DOCTYPE html>\n<html lang=\"en-US\">\n  <head>\n    <title>Page Title</title>\n  </head>\n  \n    Welcome\n    This is a demo page.\n  \n</html>\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "Validation"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what is the difference between head and body tags-html5-3",
+   "question": {
+    "fa": "What is the difference between _head_ and _body_ tags?",
+    "en": "What is the difference between _head_ and _body_ tags?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "While the **\\<head>** and **\\** tags are fundamental to every HTML document, they serve distinct purposes and are located in separate areas of the web page.",
+    "en": "While the **\\<head>** and **\\** tags are fundamental to every HTML document, they serve distinct purposes and are located in separate areas of the web page."
+   },
+   "steps": [],
+   "answerMd": "While the **\\<head>** and **\\** tags are fundamental to every HTML document, they serve distinct purposes and are located in separate areas of the web page.\n\n### Key Distinctions\n\n#### 1. Role and Content\n\n- **Head**: Houses meta-information, such as document title, character encoding, and stylesheets, all of which are essential for page setup but not visible to the user.\n- **Body**: Contains the bulk of visible content, including text, images, videos, links, and more.\n\n#### 2. Placement in the HTML File\n\n- **Head**: Precedes the body and provides setup before actual content is rendered.\n- **Body**: Follows the head section and encompasses all visible content.\n\n#### 3. Common Elements in Each Section\n\n- **Head**: Typically links to CSS files or may have inline CSS, contains the document title, any JavaScript reference, character set declaration, and meta tags.\n- **Body**: Holds structural components like headers, navbars, articles, sections, and the footer, along with visual content like images and visible text.\n\n### Visual Representation in the HTML File\n\n- **\\<head> Section**:\n\n  ```html\n  <!DOCTYPE html>\n  <html>\n    <head>\n      <meta charset=\"UTF-8\">\n      \n    </head>\n    \n      \n    \n  </html>\n  ```\n\n- **\\ Section**:\n\n  ```html\n  <!DOCTYPE html>\n  <html>\n    <head>\n      <meta charset=\"UTF-8\">\n      \n    </head>\n    \n      <header>\n        Welcome!\n        <nav>\n          \n            Home\n            About\n            Contact\n          \n        </nav>\n      </header>\n\n      <section>\n        Recent Posts\n        \n          Post Title\n          Post content goes here.\n        \n      </section>\n\n      <footer>\n        &copy; 2023 MySite\n      </footer>\n\n    \n  </html>\n  ```",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS",
+    "Character Encoding"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "how do you link a css file to an html document-html5-5",
+   "question": {
+    "fa": "How do you link a _CSS file_ to an _HTML document_?",
+    "en": "How do you link a _CSS file_ to an _HTML document_?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**Linking** a CSS file to an HTML document is a fundamental step for styling. This is generally done by indicating the CSS file's path in the `head` section of the HTML file using `` tags.",
+    "en": "**Linking** a CSS file to an HTML document is a fundamental step for styling. This is generally done by indicating the CSS file's path in the `head` section of the HTML file using `` tags."
+   },
+   "steps": [],
+   "answerMd": "**Linking** a CSS file to an HTML document is a fundamental step for styling. This is generally done by indicating the CSS file's path in the `head` section of the HTML file using `` tags.\n\n### HTML Link Tag: ``\n\nHTML uses the `` tag to **integrate external resources** such as CSS files.\n\n#### Syntax\n\n```html\n\n```\n\n- **rel**: Specifies the type of relationship between the current document and the linked file. For CSS, it should be set to \"stylesheet\".\n\n- **href**: Points to the location of the external CSS file. This can be via an **absolute URL** (i.e., `http://...`) or a **relative path** to the HTML file.\n\n- **type**: Supplied for legacy purposes but is not required given the file is a CSS file.\n\n#### Code Example: Using the Link Tag\n\nHere is the HTML code:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    \n</head>\n\n    \n\n</html>\n```",
+   "lang": "en",
+   "vocab": [
+    "HTTP",
+    "HTML",
+    "CSS",
+    "URL"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what is the difference between b and strong tags-html5-10",
+   "question": {
+    "fa": "What is the difference between _b_ and _strong_ tags?",
+    "en": "What is the difference between _b_ and _strong_ tags?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "The `` and `` tags are **both used for text emphasis** in HTML, but they have different semantic meanings.",
+    "en": "The `` and `` tags are **both used for text emphasis** in HTML, but they have different semantic meanings."
+   },
+   "steps": [],
+   "answerMd": "The `` and `` tags are **both used for text emphasis** in HTML, but they have different semantic meanings.\n\n### Bold vs. Strong\n\n- The purpose of the `` tag is to make the text **bold**, mainly for visual styling.\n- The `` tag, on the other hand, **semantically emphasizes** the text, indicating its importance.\n\n### Semantic Importance\n\nThe use of semantic tags like `` is beneficial for components like screen readers, browsers, and search engines, which can provide better user experience or understanding of content with proper emphasis.\n\n### Code Example: B vs. Strong\n\nIn the HTML, the content \"Caution\" is visually bold and the content \"Urgent Notice!\" is both visually bold and semantically strong.\n\n```html\n\n  Caution: This action cannot be undone.\n  \n\n  Urgent Notice! Please save your work before proceeding.\n\n```\n\n### General Best Practice\n\n- **Visual Styling** is usually left to CSS. `` should be used with caution, if at all, as it becomes redundant in many scenarios due to CSS's wide adoption.\n- **Semantic Tags** like `` provide context, clarity, and accessibility to the content.",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS",
+    "Accessibility"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "when would you use em over i and vice versa-html5-11",
+   "question": {
+    "fa": "When would you use _em_ over _i_, and vice versa?",
+    "en": "When would you use _em_ over _i_, and vice versa?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "Let's see the difference between 'em' and 'i' HTML tags.",
+    "en": "Let's see the difference between 'em' and 'i' HTML tags."
+   },
+   "steps": [],
+   "answerMd": "Let's see the difference between 'em' and 'i' HTML tags.\n\n### When to Use 'em'\n\nThe 'em' tag italicizes the text by default and should be reserved for occasions when emphasis is needed.\n\nOne potential usage could be for interactive instructions:\n\n```html\nPress Enter to submit.\n```\n\n### When to Use 'i'\n\nThe 'i' tag, or **italics** tag, is often avoided for text styling. Instead, consider semantic HTML, CSS, or more explicit HTML options like `` for emphasis, when possible.\n\nHere's an example of `` combined with CSS for an additional bit of fluorescence. \n\n```html\nHis anger was palpable.\n```",
+   "lang": "en",
+   "vocab": [
+    "Semantic HTML",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what is the purpose of small s and mark tags-html5-12",
+   "question": {
+    "fa": "What is the purpose of _small_, _s_, and _mark_ tags?",
+    "en": "What is the purpose of _small_, _s_, and _mark_ tags?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "The `small`, `s`, and `mark` HTML5 tags are used to **alter the structure and presentation** of text content.",
+    "en": "The `small`, `s`, and `mark` HTML5 tags are used to **alter the structure and presentation** of text content."
+   },
+   "steps": [],
+   "answerMd": "The `small`, `s`, and `mark` HTML5 tags are used to **alter the structure and presentation** of text content.\n\n### `<small>`\n\nThe `<small>` tag indicates that the enclosed text is of lesser importance, typically used for **fine print**, legal disclaimers, copyright notices, etc.\n\nHere are examples:\n\n#### Use Case\n\n```html\n<footer>\n  <small>&copy; 2022 Company Name</small>\n</footer>\n```\n\n### `<s>`\n\nThe `<s>` tag, which stands for \"strike,\" is a non-semantic, obscure tag that is often replaced with a more meaningful tag, such as `<del>` for \"deleted\" content. However, it still visually **strikes out** its content.\n\n#### Use Case\n\n```html\nYour discount code is: <s>EXPIRED123</s>\n```\n\n#### Visual Representation\n\nYour discount code is: ~~EXPIRED123~~\n\n### `<mark>`\n\nThe `<mark>` tag is used to **highlight** or **set apart** text without specifying any additional semantic information.\n\n#### Use Case\n\n```html\nImportant: Please <mark>schedule your appointment</mark> at least 48 hours in advance.\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what are the basic types available in typescript-typescript-2",
+   "question": {
+    "fa": "What are the _basic types_ available in _TypeScript_?",
+    "en": "What are the _basic types_ available in _TypeScript_?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "**TypeScript** provides an assortment of basic types for different kinds of data, such as numbers, strings, boolean values, arrays, tuples and more.",
+    "en": "**TypeScript** provides an assortment of basic types for different kinds of data, such as numbers, strings, boolean values, arrays, tuples and more."
+   },
+   "steps": [],
+   "answerMd": "**TypeScript** provides an assortment of basic types for different kinds of data, such as numbers, strings, boolean values, arrays, tuples and more.\n\n### Common Basic Types in TypeScript\n\n- **Boolean**: Represents true/false values.\n\n- **Number**: Applies to both integer and floating-point numbers.\n\n- **String**: Refers to textual data.\n\n- **Array**: Offers a flexible way to work with structured data.\n\n- **Tuple**: Enables the definition of arrays with a fixed number of elements, each potentially of a different data type.\n\n- **Enum**: Provides a set of named constants such as days or colors.\n\n- **Any**: Offers a dynamic type, which can be used to bypass type-checking. It's typically best to be avoided, as it defeats the purpose of using TypeScript, which is primarily focused on static typing. However, there are certain use cases where it becomes necessary.\n\n- **Void**: Typically used as the return type for functions that don't return a value.\n\n- **Null** and **Undefined**: Allow for the assignment of null and undefined values, respectively. However, this isn’t enabled by default, and these are probably better handled using the `strict` mode settings in TypeScript.\n\n- **Never**: Represents the type of values that never occur. For instance, the return type of a function that doesn't reach its end or always throws an error.\n\n- **Object**: Any JavaScript object.\n\n- **Function**: Denotes a function type.\n\n### Code Example: Basic TypeScript Types\n\nHere is the TypeScript code:\n\n```typescript\n// Boolean\nlet isActive: boolean = true;\n\n// Number\nlet age: number = 30;\n\n// String\nlet title: string = \"Manager\";\n\n// Array\nlet scores: number[] = [85, 90, 78];\n// or use a compact form: let scores: Array<number> = [85, 90, 78];\n\n// Tuple\nlet employee: [string, number, boolean] = ['John', 35, true];\n\n// Enum\nenum WeekDays { Monday, Tuesday, Wednesday, Thursday, Friday }\nlet today: WeekDays = WeekDays.Wednesday;\n\n// Any\nlet dynamicData: any = 20;\n\n// Void\nfunction greet(): void {\n  console.log(\"Hello!\");\n}\n\n// Null and Undefined\nlet data: null = null;\nlet user: undefined = undefined;\n\n// Never\nfunction errorMessage(message: string): never {\n  throw new Error(message);\n}\n\n// Object\nlet person: object = {\n  name: 'John',\n  age: 30\n};\n\n// Function\nlet calculate: Function;\ncalculate = function (x: number, y: number): number {\n  return x + y;\n};\n```",
+   "lang": "en",
+   "vocab": [
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "array-ops",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "what are interfaces in typescript and how do they work-typescript-4",
+   "question": {
+    "fa": "What are _Interfaces_ in _TypeScript_ and how do they work?",
+    "en": "What are _Interfaces_ in _TypeScript_ and how do they work?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "In TypeScript, an **interface** defines the structure and types of its members. It acts as a contract for the required properties and methods, ensuring that implementing classes or objects match this structure.",
+    "en": "In TypeScript, an **interface** defines the structure and types of its members. It acts as a contract for the required properties and methods, ensuring that implementing classes or objects match this structure."
+   },
+   "steps": [],
+   "answerMd": "In TypeScript, an **interface** defines the structure and types of its members. It acts as a contract for the required properties and methods, ensuring that implementing classes or objects match this structure.\n\n### Key Features of Interfaces\n\n- **Type Consistency**: Objects that adhere to an interface's structure are considered compatible with it.\n- **Optional and Readonly Members**: Interfaces allow for optional attributes and readonly members with the `?` and `readonly` keywords respectively.\n- **Call Signatures**: Interfaces can define method types, specifying function parameter and return types.\n- **Index Signatures**: Useful for specifying that an object can have any number of properties, all of a certain type.\n\n### Core Use-Cases\n\n- **Standardizing Objects**: Ensuring that disparate objects share a common structure for increased cohesiveness and ease of use.\n- **Contract Enforcement**: Enforcing property and method requirements on classes to reduce errors and improve maintainability.\n\n### Code Example: Basic Interface\n\nHere is the TypeScript code:\n\n```typescript\ninterface Point {\n    x: number;\n    y: number;\n}\n  \nfunction printPoint(p: Point) {\n    console.log(`Point coordinates: (${p.x}, ${p.y})`);\n}\n\nlet pointA = { x: 3, y: 7 }; // This object matches Point's structure\nlet pointB = { x: 8 }; // This object is missing the 'y' property\n\nprintPoint(pointA); // Output: Point coordinates: (3, 7)\nprintPoint(pointB); // Compile-time error due to incorrect structure\n```",
+   "lang": "en",
+   "vocab": [
+    "Index",
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "sql-query",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "what is a vue instance and its purpose-vue-5",
+   "question": {
+    "fa": "What is a _Vue instance_ and its purpose?",
+    "en": "What is a _Vue instance_ and its purpose?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "The **Vue Instance** serves as the entry point for Vue applications, acting as the core engine that controls and coordinates the entire application.",
+    "en": "The **Vue Instance** serves as the entry point for Vue applications, acting as the core engine that controls and coordinates the entire application."
+   },
+   "steps": [],
+   "answerMd": "The **Vue Instance** serves as the entry point for Vue applications, acting as the core engine that controls and coordinates the entire application.\n\n### Core Functions\n\nThe Vue Instance offers key functions, including:\n\n#### Data Management\n\n- **Data**: Houses the application's state, organized as key-value pairs. Changes to data are automatically reflected across the application.\n- **Computed Properties**: Derive new data from existing app state, ensuring reactivity and performance gains.\n- **Watchers**: Track specific data points (or computed properties) for changes, enabling additional actions or logic.\n\n#### Lifecycle Management\n\n- **Lifecycle Hooks**: Provides customized behaviors at key application stages, such as when a component is created, mounted, updated, or destroyed.\n\n#### DOM Interaction\n\n- **Directives**: Special attributes that modify the DOM when linked by Vue through its templating engine.\n- **Methods**: Functions that can alter app state or execute actions in response to user or system events.\n\n#### Component Composition\n\n- **Components**: Encapsulate sections of the UI and logic, enabling modularity and reusability within applications. The Vue Instance serves as the orchestrator that brings these components together.",
+   "lang": "en",
+   "vocab": [
+    "DOM",
+    "Hooks"
+   ],
+   "deepDives": [],
+   "visual": "hooks-flow",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "what are directives in vue js can you give examples-vue-7",
+   "question": {
+    "fa": "What are _directives_ in _Vue.js_? Can you give examples?",
+    "en": "What are _directives_ in _Vue.js_? Can you give examples?"
+   },
+   "difficulty": "junior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**Vue.js** directives are special attributes that manipulate the Document Object Model (DOM) based on the bound values.",
+    "en": "**Vue.js** directives are special attributes that manipulate the Document Object Model (DOM) based on the bound values."
+   },
+   "steps": [],
+   "answerMd": "**Vue.js** directives are special attributes that manipulate the Document Object Model (DOM) based on the bound values.\n\nDespite closely resembling HTML attributes, **directives** are distinct and recognized by the **v-** prefix, e.g., v-bind. They are fundamental for data-driven applications and ensure the View remains synced with the ViewModel.\n\n### Core Directives\n\n#### v-bind: Dynamically Setting Attributes\n\nThe `v-bind` directive syncs an HTML attribute with a Vue.js expression. This is especially useful for setting dynamic classes, styles, and attributes, including **inputs**.\n\n**Reactive Class Example:**\n\n```vue\n<template>\n  \n</template>\n```\n\n#### v-if and v-show: Conditionally Rendering Elements\n\nBoth of these directives control an element's visibility based on a Boolean.\n\n- `v-if` completely removes the element from the DOM when its attached value is `false`.\n- `v-show` toggles the element's CSS `display` property.\n\n**Use Case Distinction**: Employ `v-if` for conditional rendering where visibility alterations are infrequent, while `v-show` is suitable for toggling visibility in response to user actions.\n\n```vue\n<template>\n  Displayed on True\n  Always Shown\n</template>\n```\n\n#### v-for: Generating Repetitive Elements\n\nThe `v-for` directive iterates over a dataset and replicates the current DOM element for every item in the collection or array.\n\n**Dynamic List Example:**\n\n```vue\n<template>\n  \n    {{ item.name }}\n  \n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      items: [\n        { id: 1, name: 'First Item' },\n        { id: 2, name: 'Second Item' }\n      ]\n    };\n  }\n};\n</script>\n```\n\n#### v-on: Event Handling\n\nThe `v-on` directive reacts to DOM events and triggers methods or updates data accordingly.\n\n**Event Handling Example:**\n\n```vue\n<template>\n  Toggle State\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      isActive: true\n    };\n  },\n  methods: {\n    toggleState() {\n      this.isActive = !this.isActive;\n    }\n  }\n};\n</script>\n```\n\n#### v-model: Two-Way Data Binding\n\nThis directive links form input elements to Vue.js data, ensuring that any changes in the View update the underlying data and vice versa.\n\n**Two-Way Binding Example:**\n\n```vue\n<template>\n  \n  {{ inputValue }}\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      inputValue: ''\n    };\n  }\n};\n</script>\n```",
+   "lang": "en",
+   "vocab": [
+    "DOM",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "dom-render",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "discuss the methods property in a vue component-vue-9",
+   "question": {
+    "fa": "Discuss the _methods_ property in a _Vue component_.",
+    "en": "Discuss the _methods_ property in a _Vue component_."
+   },
+   "difficulty": "junior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**The `methods` Property** in Vue.js lets you define and use custom methods within a component. This separates component logic into manageable pieces for improved reusability and maintainability.",
+    "en": "**The `methods` Property** in Vue.js lets you define and use custom methods within a component. This separates component logic into manageable pieces for improved reusability and maintainability."
+   },
+   "steps": [],
+   "answerMd": "**The `methods` Property** in Vue.js lets you define and use custom methods within a component. This separates component logic into manageable pieces for improved reusability and maintainability.\n\n### Key Features\n\n1. **Method Definition**: Declare named methods within the `methods` object.\n\n2. **Access to Data and Lifecycle**: Methods can directly interact with local data and are aware of the component's lifecycle.\n\n3. **Event Handling**: Commonly used for event callbacks, serving as an alternative to inline event-handling functions.\n\n4. **Code Reusability**: Methods support modularity and code reusability within the component.\n\n5. **Performance Considerations**: If you need to rerender only portions of the UI, you can use **Vue's reactivity system**. The methods referred to within the template are reactive.\n\n6. **Scope**: Methods are accessible within the component's context, keeping them separate from global or parent component methods.\n\n### Code Example: Using `methods`\n\nHere is the Vue JS code:\n\n```vue\n<template>\n  \n    Increment\n    Counter value: {{ counter }}\n  \n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      counter: 0\n    };\n  },\n  methods: {\n    incrementCounter() {\n      this.counter++;\n    }\n  }\n};\n</script>\n```",
+   "lang": "en",
+   "vocab": [],
+   "deepDives": [],
+   "visual": "scope-closure",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "explain the difference between v bind and v model-vue-10",
+   "question": {
+    "fa": "Explain the difference between `v-bind` and `v-model`.",
+    "en": "Explain the difference between `v-bind` and `v-model`."
+   },
+   "difficulty": "junior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**Vue.js**, while it has concise syntax, uses varied directives in its **templating** engines for distinct functions.",
+    "en": "**Vue.js**, while it has concise syntax, uses varied directives in its **templating** engines for distinct functions."
+   },
+   "steps": [],
+   "answerMd": "**Vue.js**, while it has concise syntax, uses varied directives in its **templating** engines for distinct functions.\n\n### The Essentials\n\n- **v-bind**: Links variables from the model to views.\n- **v-model**: Directs two-way binding, enabling real-time updates between inputs and the application's data model.\n\n### Supporting Aspects\n\n- **Scope**: V-bind is ideally used for one-way data flow, from the model to the view. V-Model incorporates both one-way and two-way data flow, **updating both model and view** as data changes.\n\n- **Compatible Elements:** V-Model primarily targets form elements, allowing for user input tracking.\n\n  ```html\n  \n  \n  ```\n\n  In contrast, V-Bind is versatile and is compatible with a wide array of HTML attributes.\n\n  ```html\n  \n  Vue.js Website\n  ```\n\n### Best Use-Cases\n\n- **V-Bind**:  Ideal for unidirectional data flow and non-form elements.\n\n  ```html\n  \n  \n    \n      {{ item.name }}\n    \n  \n  ```\n\n- **V-Model**: Suitable for effortlessly managing data in forms.\n\n  ```html\n  \n  \n  ```\n\n### Code Example: V-Bind and V-Model\n\nHere is the HTML:\n\n```html\n\n  {{ message }}\n  \n  {{ linkText }}\n\n```\n\nHere is the Vue.js code:\n\n```javascript\nnew Vue({\n  el: '#app',\n  data: {\n    message: 'Hello, Vue!',\n    url: 'https://vuejs.org/',\n    linkText: 'Vue.js Official Website'\n  }\n});\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "URL",
+    "HTTPS"
+   ],
+   "deepDives": [],
+   "visual": "redux-flow",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "how do you include css in your html document-css-1",
+   "question": {
+    "fa": "How do you include _CSS_ in your _HTML document_?",
+    "en": "How do you include _CSS_ in your _HTML document_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "There are **four primary methods** to incorporate CSS in an HTML document, each presenting unique advantages and use cases.",
+    "en": "There are **four primary methods** to incorporate CSS in an HTML document, each presenting unique advantages and use cases."
+   },
+   "steps": [],
+   "answerMd": "There are **four primary methods** to incorporate CSS in an HTML document, each presenting unique advantages and use cases.\n\n### Methods of CSS Integration\n\n1. **Inline Style**: Directly insert CSS rules within HTML tags.\n2. **Embedded Style**: Encompass CSS within the HTML document's `<head>` section.\n3. **External Style Sheet**: Create a standalone `.css` file to be referenced in the HTML.\n4. **Imported Style Sheet**: Employ `@import` within a `<style>` tag or a CSS file to bring in other CSS files.\n\n### Key Considerations\n\n- **Specificity**: The degree of influence a selector has over others.\n- **Reuse**: The potential to apply the same CSS rules across multiple elements.\n- **Maintainability**: The ease with which one can update and manage the CSS.\n\n### Best Practices\n\n- **Ideally, Choose a Single Method**: Mixing techniques can complicate maintenance and understanding.\n- **Inline Styles for Quick Changes**: Useful when rapid style modifications are necessary.\n\n### HTML Code Example: Methods Northwind.CSS\n\nHere is the HTML code:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <title>Document</title>\n</head>\n    <style>\n        h1, h2, p {\n            color: green;\n        }\n        \n        div {\n            border: 1px solid black;\n        }\n    </style>\n\n    My Header\n    Hello, World!\n\n</html>\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "can you explain the difference between class and id sel-css-2",
+   "question": {
+    "fa": "Can you explain the difference between _class_ and _ID selectors_?",
+    "en": "Can you explain the difference between _class_ and _ID selectors_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "**Class** and **ID** selectors in CSS serve distinct roles and have limitations in their applicability.",
+    "en": "**Class** and **ID** selectors in CSS serve distinct roles and have limitations in their applicability."
+   },
+   "steps": [],
+   "answerMd": "**Class** and **ID** selectors in CSS serve distinct roles and have limitations in their applicability.\n\n### Selectivity and Applicability\n\n- **Class Selector** (\\`.classname{...}\\`): Matches **multiple elements** that share the same class attribute. These elements can belong to various HTML tags (e.g., ``, ``).\n\n- **ID Selector** (`#idName{...}`): Identifies a **single unique element** based on its unique ID attribute. While it's still possible to style multiple elements with the same ID, best practices mandate unique IDs for effective CSS usage.\n\n### Efficiency and Performance\n\n- **Class Selector**: Generally faster to compute than ID selectors in modern browsers, particularly when applied to a large number of elements.\n\n- **ID Selector**: Formerly superior in terms of speed, contemporary browsers mitigate this difference.\n\n### Common Use Cases\n\n- **Class Selector**: Ideal for styling groups of elements based on shared attributes or type.\n\n- **ID Selector**: Typically reserved for unique elements that require highly specific styling or JavaScript manipulation. While it's valid to use an ID for styling, as stated in the HTML5 specification, it's generally more maintainable to reserve the use of IDs for uniquely identifiable elements and use classes for styling.\n\n### Code Example: Class and ID Selectors\n\nHere is the HTML code:\n\n```html\n<html>\n  <head>\n    \n  </head>\n  \n    Content 1\n    Content 2\n    Special Content\n  \n</html>\n```\n\nHere is the CSS code:\n\n```css\n/* Styles applied using class selectors */\n.content { color: blue; }\n\n/* Styles applied using ID selector */\n#uniqueContent { color: red; }\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what are pseudo classes in css-css-3",
+   "question": {
+    "fa": "What are _pseudo-classes_ in _CSS_?",
+    "en": "What are _pseudo-classes_ in _CSS_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "**Pseudo-classes** are special keywords in CSS that allow you to apply styles to elements based not only on their state or position in the document tree but also on user interaction.",
+    "en": "**Pseudo-classes** are special keywords in CSS that allow you to apply styles to elements based not only on their state or position in the document tree but also on user interaction."
+   },
+   "steps": [],
+   "answerMd": "**Pseudo-classes** are special keywords in CSS that allow you to apply styles to elements based not only on their state or position in the document tree but also on user interaction.\n\n### Categories of Pseudo-Classes\n\n- **Dynamic Pseudo-classes**: These appear as the user interacts with an element. For instance, `:hover` is activated when the user hovers the cursor over an element.\n\n- **User-action Pseudo-classes**: These capture actions taken by the user, such as `:checked` for input elements that are selected.\n\n- **Relationship Pseudo-classes**: These pertain to the document tree's hierarchical structure, like `:first-child` for an element that's the first child within its parent.\n\n- **Language Pseudo-Classes**: These cater to elements displayed in specific languages, for example `:dir()`.\n\n- **Input Control Pseudo-Classes**: Designed specifically for interactive elements, these pseudo-classes style form controls like buttons, inputs, and text areas. Some examples are `:default`, `:valid`, `:invalid`, and `:optional`.\n\n- **Enabled and Disabled Pseudo-classes**: These are self-explanatory; they alter the style of elements based on whether they're enabled or disabled. Examples include `:enabled` and `:disabled`.",
+   "lang": "en",
+   "vocab": [
+    "Tree",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "how do you select elements by attribute in css-css-5",
+   "question": {
+    "fa": "How do you select elements by _attribute_ in _CSS_?",
+    "en": "How do you select elements by _attribute_ in _CSS_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "While programming in CSS, you can leverage **attribute selectors** to define rules based on the presence or value of specific HTML attributes.",
+    "en": "While programming in CSS, you can leverage **attribute selectors** to define rules based on the presence or value of specific HTML attributes."
+   },
+   "steps": [],
+   "answerMd": "While programming in CSS, you can leverage **attribute selectors** to define rules based on the presence or value of specific HTML attributes.\n\n### Benefits\n\nUsing attribute selectors has multiple advantages, such as:\n\n- **Versatility**: They cater to a wide range of scenarios.\n- **Simplicity**: They are easy to use.\n- **Consistency**: They're a part of a standard set of CSS selectors.\n\n### Variations\n\nYou can utilize attribute selectors in three distinct ways:\n\n- **Exact Match**: `[]` selects an exact attribute value.\n- **Value Starts With**: `[^]` targets attributes with specified starting values.\n- **Case Insensitive**: Selectors are usually case-sensitive, but by using `i`, you can make them case-insensitive.\n\nHere is the CSS code snippet:\n\n```css\n/* Exact Match */\n[class=\"important\"] {\n  color: red;\n}\n\n/* Value Starts With */\n[href^=\"https\"] {\n  color: green;\n}\n\n/* Case Insensitive */\n[alt=\"home\" i] {\n  background: url('home-icon.png');\n}\n```\n\nIn the example above,\n\n- `[class=\"important\"]` selects all elements with the exact `class` attribute set to \"important\".\n- `[href^=\"https\"]` will style all anchor links with an `href` attribute that starts with \"https\".\n- `[alt=\"home\" i]` targets the `alt` attribute with a value of \"home\" in a case-insensitive manner.",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS",
+    "URL",
+    "HTTPS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what are the universal selector and the sibling combina-css-9",
+   "question": {
+    "fa": "What are the _universal selector_ and the _sibling combinator_, and when would you use them?",
+    "en": "What are the _universal selector_ and the _sibling combinator_, and when would you use them?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "The **Universal Selector** (the asterisk, `*`) is a powerful tool that enables you to target every element within a specified container. While it's a straightforward selector, its implications can be broad.",
+    "en": "The **Universal Selector** (the asterisk, `*`) is a powerful tool that enables you to target every element within a specified container. While it's a straightforward selector, its implications can be broad."
+   },
+   "steps": [],
+   "answerMd": "The **Universal Selector** (the asterisk, `*`) is a powerful tool that enables you to target every element within a specified container. While it's a straightforward selector, its implications can be broad.\n\n- **When to Use**: You might want to normalize or reset specific CSS properties (resetting padding, margin, etc.) across all elements within a container or the entire document. The **Universal Selector** effectively achieves this.\n\n- **Best Practices**: Overuse of the **Universal Selector** can lead to performance issues and unexpected style side effects. Keep its use concise and well-defined.\n\n### When To Use Sibling Combinator\n\nThe **Sibling Combinator** (`+`) in CSS targets elements that are immediately preceded by a specified element. Unlike child (`>`) or descendant (whitespace) selectors, the **sibling combinator** allows direct sibling targeting.\n\n- **When to Use**: For DOM structures where direct sibling relationships are key, such as tabbed content or multi-step forms.\n\n- **Best Practices**: While direct sibling targeting is useful, ensure it's the most efficient method for your objective. Overreliance can lead to inflexible CSS and HTML structures.\n\n#### Code Example: Universal Selector\n\nHere is the CSS:\n\n```css\n/* Remove margins, paddings on all elements within the container */\n.containers > * {\n    margin: 0;\n    padding: 0;\n}\n```\n\nThe HTML:\n\n```html\n\n    Paragraph 1\n    \n        Item 1\n        Item 2\n    \n\n```\n\n#### Code Example: Sibling Combinator\n\nHere is the CSS:\n\n```css\n/* Style the direct sibling anchor tag when a list item is hovered */\nul li:hover + a {\n    color: red;\n}\n```\n\nThe HTML:\n\n```html\n\n    Item 1\n    Item 2\n    Link\n\n```\n\n### Case Study: Practical Applications\n\nLet us take a real-world example.\n\n#### Resetting Margins and Paddings\n\nIn this scenario, you have a parent container and you want to remove the default margins and paddings from all its child elements.\n\nThe **Universal Selector** can accomplish this:\n\nHere is the CSS:\n\n```css\n.container > * {\n    margin: 0;\n    padding: 0;\n}\n```\n\nThe HTML:\n\n```html\n\n    Paragraph 1\n    Paragraph 2\n\n```",
+   "lang": "en",
+   "vocab": [
+    "DOM",
+    "Container",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what does html stand for and what is its purpose-html5-0",
+   "question": {
+    "fa": "What does _HTML_ stand for and what is its purpose?",
+    "en": "What does _HTML_ stand for and what is its purpose?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**HTML** or **H**yper **T**ext **M**arkup **L**anguage is the standard language for creating web pages and applications. HTML5, the latest version as of 2022, introduces several new elements and attributes, elevating user experience and software application standards.",
+    "en": "**HTML** or **H**yper **T**ext **M**arkup **L**anguage is the standard language for creating web pages and applications. HTML5, the latest version as of 2022, introduces several new elements and attributes, elevating user experience and software application standards."
+   },
+   "steps": [],
+   "answerMd": "**HTML** or **H**yper **T**ext **M**arkup **L**anguage is the standard language for creating web pages and applications. HTML5, the latest version as of 2022, introduces several new elements and attributes, elevating user experience and software application standards.\n\nHTML is responsible for structuring web content, ensuring accessibility, and guiding how web pages are visually presented. It remains the foundational structure for running nearly all web content.\n\n### Core Functionalities\n\n- **Structuring Content**: Tags like `<header>`, `<footer>`, and `<section>` divide content, streamlining its organization.\n- **Embedding Media**: HTML provides tags to incorporate multimedia such as images, audio, and video.\n- **Form Handling**: Interactive sections such as user input forms are defined with input and label tags.\n- **Hyperlinks**: Essential for navigation, hypertext links like `` anchor content within or outside the webpage.\n- **Accessibility Features**: Semantic tags like `<nav>` and `` not only structure data but also improve accessibility for users relying on screen readers.\n- **Integration of Other Technologies**: Can integrate with scripting languages like JavaScript and libraries and frameworks like Bootstrap for enhanced visual appeal.\n\n### Compatibility and Development\n\nThe primary objective of HTML5 is to improve the language's support for the latest multimedia, while keeping it easily readable by humans. It was designed to be backward and forward compatible, so that content written in previous versions can be seamlessly integrated and interact with content authored in subsequent versions.\n\n### Visual Presentation and User Interface Adaptations\n\nHTML5 is engineered to provide more flexibility, control, and aesthetic maturity for web pages and web-based software applications. Web developers can use it to craft modern web interfaces with rich visual and multimedia experiences. It also allows for more responsive and adaptive design, ensuring optimal viewing on a variety of devices and screen sizes. This reflects a broader shift in technology toward a more device-agnostic user experience. \n\n### The Role of CSS and JavaScript\n\nWhile HTML offers static content, **CSS** and **JavaScript** enable additional layers of styling, interactivity, and dynamic content updates. The integration of these three technologies (referred to as **HTML-CSS-JS**) stands as the trio that forms the backbone of almost all web-based content. They're often presented as **HTML5-CSS3-JS** to signify unified modern best practices. Online, there's even tools that combine these technologies into a  single framework or language such as WebAssembly or Dart. The trio represents a more modular approach, allowing distinct teams to focus on individual layers, streamlining development in larger projects. Mastering their intersection helps in designing a robust and cohesive user experience. This concept is captured by the acronym \"PEA\", which stands for the Platform (HTML), the Engine (JavaScript), and the Appearance (CSS). Each category focuses on a distinct aspect of user experience.\n\n### Practical Uses\n\n- **Website Development**: All traditional web resources, from simple blogs to expansive e-commerce sites, remain based primarily on HTML.\n- **Web Applications**: Web technologies have evolved significantly, allowing for sophisticated applications like Google Docs, Trello, and Slack to run entirely in a web browser. HTML5 has played a pivotal role in this development.\n- **Advertising & Media**: HTML5's advanced media handling tools have made it the standard for online ads and multimedia content.",
+   "lang": "en",
+   "vocab": [
+    "Embedding",
+    "HTML",
+    "CSS",
+    "Accessibility",
+    "Framework"
+   ],
+   "deepDives": [],
+   "visual": "llm-flow",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "how do you link a javascript file to an html document-html5-6",
+   "question": {
+    "fa": "How do you link a _JavaScript file_ to an _HTML document_?",
+    "en": "How do you link a _JavaScript file_ to an _HTML document_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "To link a JavaScript file to an HTML document, you need to use the `<script>` HTML tag. There are two primary ways to do this:",
+    "en": "To link a JavaScript file to an HTML document, you need to use the `<script>` HTML tag. There are two primary ways to do this:"
+   },
+   "steps": [],
+   "answerMd": "To link a JavaScript file to an HTML document, you need to use the `<script>` HTML tag. There are two primary ways to do this:\n\n1. **External Script File**: Link a separate JavaScript file to your HTML document.\n2. **Inline Script**: Embed JavaScript code directly within your HTML file.\n\n### External Script File\n\nTo use an external JavaScript file, follow these steps:\n\n1. **Create the JavaScript File**: Save your JavaScript code in a separate file with a `.js` extension. For example, `script.js`.\n\n2. **Link the JavaScript File to your HTML Document**: Add the following code within the `<head>` or at the end of the `` section of your HTML file.\n\n    ```html\n    <script src=\"path-to-your-js-file.js\"></script>\n    ```\n\n    Replace `path-to-your-js-file.js` with the actual path to your JavaScript file.\n\n#### Best Practices\n\n- **Placement**: It's good practice to place your `<script>` tags at the end of the `` section, just before the closing `` tag. This ensures that the HTML content loads first, which can improve the website's initial rendering speed.\n\n- **Syntax**: The HTML5 specification does not require a closing tag for the `<script>` element.\n\n### Inline Script\n\nYou can also include JavaScript directly within your HTML file. This is called an \"inline script.\" To do this, encase your JavaScript code within `<script>` tags, like this:\n\n  ```html\n  <script>\n      // Your JavaScript code goes here\n  </script>\n  ```\n\n#### Best Practices\n\n- **Content Separation**: For better code organization, it's often better to keep your JavaScript in a separate file, especially for larger applications.\n  \n- **Caching**: When using an external JavaScript file, the browser caches the script, which can speed up your site on subsequent visits. However, if the script changes often, this caching can be a problem.\n\n- **Maintainability and Reusability**: Utilizing an external JavaScript file allows for better code management, reusability, and ease of making updates or fixes across multiple HTML files.\n\n### Example HTML File\n\nHere is the code:\n\n### Implementation: HTML File\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n    <script src=\"path-to-your-js-file.js\"></script>\n</head>\n\n    \n    <script>\n        // Inline JavaScript code here.\n    </script>\n\n</html>\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML"
+   ],
+   "deepDives": [
+    "js-async-defer"
+   ],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "how do you add a comment in html and why would you use -html5-7",
+   "question": {
+    "fa": "How do you add a _comment_ in HTML and why would you use them?",
+    "en": "How do you add a _comment_ in HTML and why would you use them?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "To add a **comment** in HTML, wrap it between ``.",
+    "en": "To add a **comment** in HTML, wrap it between ``."
+   },
+   "steps": [],
+   "answerMd": "To add a **comment** in HTML, wrap it between ``.\n\nFor example:\n\n```html\n\nHello, World!\n```\n\n### Role of Comments in Development\n\nComments ensure clear code comprehension and can be used for:\n\n- **Instructions**: Guiding developers on next steps.\n- **Documentation**: Articulating intricate code segments.\n- **Debugging**: Temporarily removing portions for bug testing.\n- **Reminders**: Highlighting sections for later revision.\n\n### Best Practices for Using Comments\n\n- **Purposeful Clarity**: Comments must explain what the code does, not how. Code and inline comments should clarify how the code works.\n- **Relevance**: Avoid stating the obvious and focus on unique or complex components.\n- **Conciseness**: Keep comments brief to reduce visual clutter.\n- **Regular Maintenance**: Update or remove outdated comments to maintain accuracy.\n\n### When are Comments Unnecessary?\n\n- **Trivial Cases**: Comments like \" wrapper\" or \" tag\" denote the obvious.\n- **Self-Explanatory Code**: Writing **self-descriptive** code eliminates the need for specific comments.",
+   "lang": "en",
+   "vocab": [
+    "HTML"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what are data attributes and when should they be used-html5-9",
+   "question": {
+    "fa": "What are _data-_* attributes and when should they be used?",
+    "en": "What are _data-_* attributes and when should they be used?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**Data attributes** in HTML5, often referred to as **`data-*` attributes**, help embed custom data within HTML elements. This presents a powerful tool for web developers, facilitating streamlined **JavaScript** and **CSS** operations.",
+    "en": "**Data attributes** in HTML5, often referred to as **`data-*` attributes**, help embed custom data within HTML elements. This presents a powerful tool for web developers, facilitating streamlined **JavaScript** and **CSS** operations."
+   },
+   "steps": [],
+   "answerMd": "**Data attributes** in HTML5, often referred to as **`data-*` attributes**, help embed custom data within HTML elements. This presents a powerful tool for web developers, facilitating streamlined **JavaScript** and **CSS** operations.\n\n### Core Benefits\n\n- **Accessibility**: Data attributes are easily accessible through the `dataset` API in JavaScript.\n\n- **Ignoring formatting tactics**: In places where content served by backend, cannot assume the content to always be JSON encoded, shortened, or have odd formatting.\n\n- **Data Isolation**: For better maintenance of web documents. Data attributes have clear, defined roles within HTML.\n\n### Code Example: Using Data Attributes\n\nHere is the HTML & JavaScript:\n\n```html\n\n<script>\n  const userDiv = document.getElementById('user');\n  console.log(userDiv.dataset.name);  // Output: \"John Doe\"\n  console.log(userDiv.dataset.age);   // Output: \"25\"\n</script>\n```\n\n### Appropriate Use-Cases\n\n- **Custom Content for DOM Elements**: For attaching extra information or configuration settings exclusively relevant to an HTML element.\n  \n  Example: A `div` may have a `data-show-tooltip` attribute set to `true` to indicate it should display a tooltip.\n\n- **Interactivity Configuration**: When working with user-made widgets, data attributes can specify how they behave in a more structured, intended manner. Useful in contexts where individual DIV or section blocks have interactivity toggles, or categories.\n\n- **E-Commerce & Web Products**: To store product-specific IDs or additional details as they pertain to the DOM representation of a product in a catalog.\n\n- **Styling Signifiers**: You can leverage data attributes in CSS for different types of styling like category colors, hover effects, or even in JavaScript-based CSS declarations.",
+   "lang": "en",
+   "vocab": [
+    "API",
+    "DOM",
+    "HTML",
+    "CSS",
+    "Accessibility",
+    "JSON"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "how do you create a paragraph or a line break in html-html5-14",
+   "question": {
+    "fa": "How do you create a _paragraph_ or a _line break_ in HTML?",
+    "en": "How do you create a _paragraph_ or a _line break_ in HTML?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "In HTML, to create a **paragraph**, use `...` tags, and to insert a **line break**, use ` ` tag.",
+    "en": "In HTML, to create a **paragraph**, use `...` tags, and to insert a **line break**, use ` ` tag."
+   },
+   "steps": [],
+   "answerMd": "In HTML, to create a **paragraph**, use `...` tags, and to insert a **line break**, use `\n` tag.\n\n### Paragraphs in HTML\n\nTraditional paragraph formatting in HTML is achieved using the `` tag. The browser's default styling generally adds **spacing** to the top and bottom of each `` element, creating distinct paragraphs.\n\n#### Syntax\n\n```html\n\n    This is an example of a paragraph. The text enclosed within the &lt;p&gt; tags represents a single paragraph.\n\n```\n\n#### Visual Representation\n\n    This is an example of a paragraph. The text enclosed within the &lt;p&gt; tags represents a single paragraph.\n\n### Line Breaks in HTML\n\nTo insert a simple line break in an HTML document, use the `\n` tag. This tag doesn't require a closing equivalent.\n\n#### Syntax\n\n```html\nFirst Line\nSecond Line\n```\n\n#### Visual Representation\n\nFirst Line\n Second Line (This text doesn't render the line break; it's just to show the raw HTML.)\n\n### Multi-line Text Elements\n\nIn HTML, the `<textarea>` tag allows the input of several lines of text. Nonetheless, it does not auto-format for paragraphs. It **wraps text** instead, and vertical scroll bars might be enabled, based on the template and content.\n\n#### Syntax\n\n```html\n<textarea rows=\"4\" cols=\"50\">\nThis is a multi-line text area.\nIt doesn't automatically create separate paragraphs.\nText wraps based on dimensions supplied.\n</textarea>\n```\n\n#### Visual Representation\n\n```html\n<textarea rows=\"4\" cols=\"50\">\nThis is a multi-line text area.\nIt doesn't automatically create separate paragraphs.\nText wraps based on dimensions supplied.\n</textarea>\n```\n\n#### Explore all 100 answers here 👉 [Devinterview.io - HTML5](https://devinterview.io/questions/web-and-mobile-development/html5-interview-questions)",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "HTTPS"
+   ],
+   "deepDives": [],
+   "visual": "llm-flow",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what is typescript and how does it differ from javascri-typescript-0",
+   "question": {
+    "fa": "What is _TypeScript_ and how does it differ from _JavaScript_?",
+    "en": "What is _TypeScript_ and how does it differ from _JavaScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "**TypeScript** is a statically-typed superset of **JavaScript**, developed and maintained by Microsoft. It enables enhanced code maintainability and predictability. After compiling, TypeScript code is transpiled into standard, browser-compatible JavaScript.",
+    "en": "**TypeScript** is a statically-typed superset of **JavaScript**, developed and maintained by Microsoft. It enables enhanced code maintainability and predictability. After compiling, TypeScript code is transpiled into standard, browser-compatible JavaScript."
+   },
+   "steps": [],
+   "answerMd": "**TypeScript** is a statically-typed superset of **JavaScript**, developed and maintained by Microsoft. It enables enhanced code maintainability and predictability. After compiling, TypeScript code is transpiled into standard, browser-compatible JavaScript.\n\nKey distinctions between TypeScript and JavaScript include the use of type annotations, the ability to work with existing JavaScript code, and more.\n\n### TypeScript Features & Benefits\n\n- **Type System**: Offers static typing, allowing developers to define the type of variables, parameters, and return values. This helps catch errors during development, reducing runtime issues.\n\n- **Advanced Language Features**: Incorporates modern ECMAScript syntax and features, often before they are rolled out in JavaScript. Additionally, TypeScript brings functional programming patterns, classes, and access modifiers (such as `public` and `private`)\n\n- **Compatibility with JavaScript**: TypeScript can interpret existing JavaScript code with minor or no modifications.\n\n- **Tooling and Extra Safety**: Provides enhanced autocompletion, refactoring, and documentation via TypeScript-aware tools. TypeScript helps catch and rectify common programming errors without needing to run the code.\n\n- **ECMAScript Compatibility**: TypeScript allows developers to target different **ECMAScript versions**, ensuring the generated JavaScript is compatible with the targeted browsers.\n\n- **Code Structure & Readability**: Promotes maintainability by enforcing a defined coding structure and fostering code clarity.\n\n### TypeScript's Role in Modern Development\n\n- **Workplace Adaptability**: TypeScript is used in an extensive range of projects, from small utilities to large-scale applications.\n\n- **Community Support**: Supported by a vibrant developer community, TypeScript benefits from frequent updates, bug fixes, and useful extensions.\n\n- **On-Going Development**: A robust language server furnishes accurate tooling feedback, such as linting and error suggestions in real time.\n\n- **Rapid Enhancement**: The TypeScript team consistently introduces new features and reinforces existing ones.",
+   "lang": "en",
+   "vocab": [
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "can you explain what is meant by typescript is a supers-typescript-1",
+   "question": {
+    "fa": "Can you explain what is meant by \"_TypeScript_ is a _superset_ of _JavaScript_\"?",
+    "en": "Can you explain what is meant by \"_TypeScript_ is a _superset_ of _JavaScript_\"?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "**TypeScript** is often described as a **\"superset of JavaScript\"** because every valid JavaScript code is also a valid TypeScript code.",
+    "en": "**TypeScript** is often described as a **\"superset of JavaScript\"** because every valid JavaScript code is also a valid TypeScript code."
+   },
+   "steps": [],
+   "answerMd": "**TypeScript** is often described as a **\"superset of JavaScript\"** because every valid JavaScript code is also a valid TypeScript code.\n\nTypeScript is designed in a way that it fully embraces existing **JavaScript syntax** and functionality. This ensures a smooth transition for developers wishing to adopt or migrate to TypeScript.\n\n### Key TypeScript Features On Top of JavaScript\n\n- **Type Definitions**: TypeScript introduces static typing through type annotations. These are optional, enabling gradual adoption for existing codebases that might not need them.\n\n- **Newer JavaScript Features**: TypeScript extends JavaScript syntax, providing support for the latest ECMAScript standards more effectively through its compiler, even when the underlying JavaScript engine might not support them yet.\n\n- **Tooling and Error Detection**: TypeScript offers robust type-checking, increased code readability, and stronger compile-time error detection.\n\n### Code Demonstration\n\nHere is the TypeScript code:\n\n```typescript\nlet num: number = 5;\nnum = \"this will raise a type error\";\n```",
+   "lang": "en",
+   "vocab": [
+    "TypeScript",
+    "Compiler"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "how do you declare variables in typescript-typescript-3",
+   "question": {
+    "fa": "How do you declare _variables_ in _TypeScript_?",
+    "en": "How do you declare _variables_ in _TypeScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "In TypeScript, **variable** **declarations** support different methodologies for declaring variables and their associated types.",
+    "en": "In TypeScript, **variable** **declarations** support different methodologies for declaring variables and their associated types."
+   },
+   "steps": [],
+   "answerMd": "In TypeScript, **variable** **declarations** support different methodologies for declaring variables and their associated types.\n\n### Variable and Type Declaration Methods\n\n#### 1. var\n\n```typescript\nvar score: number = 100;\n```\n\nThis declaration can lead to **variable hoisting** and has global scope or function-level scope.\n\n#### 2. let\n\nUse `let` when you want to define variables within a **block scope**. This is the recommended default choice:\n\n```typescript\nlet playerName: string = \"John\";\n```\n\n#### 3. const\n\n`const` allows you to declare **constants** and is especially useful for maintaining data integrity:\n\n```typescript\nconst apiKey: string = \"your-api-key-here\";\n```\n\n#### 4. Function Scope\n\nAll three methods (`var`, `let`, and `const`) are confined to their immediate function scope:\n\n```typescript\nfunction doSomething() {\n  let tempValue: number = 42;\n  var result: boolean = true;\n}\n```\n\n### Rules for Variable Declaration and Initialization\n\n- **Order Matters**: In TypeScript, a variable must be declared before being used. This is not a requirement in JavaScript, but good JavaScript practice is to declare a variable before using it.\n\n  If you're dealing with complex or interconnected codes, it's a good practice to use the `let` and `const` declarations that ensure the block-level scoping, thus helping with potential hoisting issues.\n\n- **Static Types**: TypeScript requires that you declare the data type of a variable (or let the system infer it) and then initialize it with a value of exactly the same type:\n\n  ```typescript\n  let count: number;  // Declaration\n  count = 42;  // Allowed\n  count = \"42\";  // Error! Type 'string' is not assignable to type 'number'.\n  ```\n\n- **Type Inference**: TypeScript can often infer the variable's type based on its initialization value. This reduces the need to specify a type explicitly.\n\n  ```typescript\n  let word = \"hello!\";  // TypeScript infers the type as 'string' because of the initialization.\n  ```\n\n### Best Practices for Variable Declarations\n\n- **Use `const` Where You Can**: This approach isn't always possible, especially when dealing with object properties. However, favor `const` for better code readability and to prevent accidental data mutations.\n\n- **Prefer `let` over `var`**: `let` adheres better to **block-level scoping** and offers more predictability in the code.\n\n- **Initialize at Declaration**: Although TypeScript allows initializations after declarations, it's best to declare and initialize variables simultaneously to improve code clarity and type safety.\n\n- **Prefer Type Annotations**: Explicitly specifying variable types can improve code readability. However, when the variable type is obvious from the initialization, type inference should suffice.",
+   "lang": "en",
+   "vocab": [
+    "API",
+    "Inference",
+    "Hoisting",
+    "TypeScript"
+   ],
+   "deepDives": [
+    "js-hoisting-tdz"
+   ],
+   "visual": "scope-closure",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "describe the enum type and when you might use it-typescript-5",
+   "question": {
+    "fa": "Describe the _Enum_ type and when you might use it.",
+    "en": "Describe the _Enum_ type and when you might use it."
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "The **Enum** is a data type that simplifies the representation and management of discrete, named values. It's a foundational tool to ensure **type safety** in TypeScript and a number of vital use-cases:",
+    "en": "The **Enum** is a data type that simplifies the representation and management of discrete, named values. It's a foundational tool to ensure **type safety** in TypeScript and a number of vital use-cases:"
+   },
+   "steps": [],
+   "answerMd": "The **Enum** is a data type that simplifies the representation and management of discrete, named values. It's a foundational tool to ensure **type safety** in TypeScript and a number of vital use-cases:\n\n- **Reducing 'Magic Values'**: When ensuring readability and preventing repetitive literal values, such as `1`, `2`, or `'red'`.\n- **Configuring Behaviour**: influencing functionalities sets of associated values, such as HTTP methods, ordering or customer types.\n- **Ensuring Type Safety and Efficiency**: The predefined set of valid members and a clear data type ensures that value assignments and operations are unequivocal and consistent.\n\n### Core Components\n\n- **Key**: a unique identifier, typically a number or string.\n- **Value**: Data associated with the key. If not provided, the key is used as the value.\n\n### Standard, String, and Heterogeneous Enums\n\n- **Standard Enum**: Every key and value are of the same data type, typically numbers.\n- **String Enum**: All keys and values must be strings, ensuring consistent data representation.\n- **Heterogeneous Enum**: Defines keys with both number or string values. However, due to the mixed-type nature of these enums, it's best to steer clear of them in most cases.\n\n### Code Example: Standard Enum\n\nHere is the TypeScript code:\n\n```typescript\nenum HttpMethods {\n  GET,\n  POST,\n  PUT,\n  DELETE\n}\n\nconst requestType: HttpMethods = HttpMethods.GET;\n\n// ❌ This is not allowed due to type safety\n// const requestType2: HttpMethods = 'GET';\n```\n\nIn the example, the key `GET` is implicitly assigned the value `0`.\n\n### Code Example: String Enum\n\nHere is the TypeScript code:\n\n```typescript\nenum MediaTypes {\n  Image = 'image',\n  Video = 'video',\n  Audio = 'audio'\n}\n\nconst selectedType: MediaTypes = MediaTypes.Image;\n\n// ✅ Accessing the value\nconst associatedText: string = MediaTypes.Image;\n\n// ❌ This is not allowed due to type safety\n// const invalidType: MediaTypes = 'image';\n```\n\n the Enum helps ensure the proper data type and its values.\n\n### Pragmatic Use of Enums\n\nWhile Enums are a powerful tool for maintaining type safety, simplify associating related sets of values.\n\nHowever, a consideration is that an Enum value can be inferred or forced to be of any key and underlying value type.\n\n### Potential Downsides of Enums\n\n- **Compilation Impact**: When used in a broader context, or in data structures like arrays or maps, TypeScript generates additional code to convert Enum keys to their associated values.\n- **Memory Usage**: Every usage of an Enum requires memory allocation for its value.\n\nWhen a simple constant would suffice or if there's a need for a more dynamic relationship between keys and values, detailed types would be a better alternative.",
+   "lang": "en",
+   "vocab": [
+    "HTTP",
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "http-request",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "how do you define and use a function in typescript-typescript-6",
+   "question": {
+    "fa": "How do you define and use a _function_ in _TypeScript_?",
+    "en": "How do you define and use a _function_ in _TypeScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "When defining a **function** in TypeScript, you have the following fundamental components to consider:",
+    "en": "When defining a **function** in TypeScript, you have the following fundamental components to consider:"
+   },
+   "steps": [],
+   "answerMd": "When defining a **function** in TypeScript, you have the following fundamental components to consider:\n\n- **Function Signature**: Comprising the function's purpose, parameters, type, and return value.\n- **Function Body**: Containing the actual operation or series of steps the function will execute.\n\n### Key Concepts\n\n#### 1) Function Declaration\n\nTo declare a function, you specify its name, its parameter list, and its return type. If the function doesn't return a value, you set the return type to `void`.\n\nHere is a code example:\n\n```typescript\nfunction greet(name: string): void {\n    console.log(`Hello, ${name}!`);\n}\n```\n\n#### 2) Function Expression\n\nYou can also declare functions using expressions, which involve assigning functions to variables as values. This approach allows you to be more flexible, such as when you're using **callbacks**.\n\nHere is an example:\n\n```typescript\nlet greet: (name: string) => void;\ngreet = function(name: string): void {\n    console.log(`Hello, ${name}!`);\n};\n```\n\n#### 3) Optional and Default Parameters\n\nTypeScript supports both **optional** and **default** function parameters, enhancing the flexibility of your functions.\n\n**Optional Parameters** are denoted by a `?` symbol after the parameter name.\n\nHere is the code example:\n\n```typescript\nfunction greet(name: string, title?: string) {\n    if (title) {\n        console.log(`Hello, ${title} ${name}!`);\n    } else {\n        console.log(`Hello, ${name}!`);\n    }\n}\n```\n\n**Default Parameters** are when you assign a default value to a parameter:\n\nHere is the code example:\n\n```typescript\nfunction greet(name = \"Stranger\") {\n    console.log(`Hello, ${name}!`);\n}\n```\n\n#### 4) Use Rest Parameters\n\nYou can define a parameter as a \"rest\" parameter, which means the function can accept any number of arguments for that parameter.\n\nHere is the code example:\n\n```typescript\nfunction introduce(greeting: string, ...names: string[]) {\n    console.log(`${greeting}, ${names.join(\", \")}!`);\n}\n\nintroduce(\"Hello\", \"Alice\", \"Bob\", \"Carol\");\n```\n\n#### 5) Function Overloads\n\nYou can declare multiple function **overloads** to define a set of parameters and their return types for a single function. This feature is especially beneficial when the function's behavior logically varies based on different input types.\n\nHere is the code example:\n\n```typescript\nfunction specialGreet(name: string): void;\nfunction specialGreet(title: string, name: string): void;\n\nfunction specialGreet(a: any, b?: any): void {\n    if (b) {\n        console.log(`Hello, ${a}, ${b}`);\n    } else {\n        console.log(`Hello, ${a}`);\n    }\n}\n```\n\n#### 6) Call Signature\n\nWhen using objects in TypeScript, you have the **call signature** to define the expected function structure for a specific method within the object.\n\nHere is a code example:\n\n```typescript\ntype Greeter = {\n    (name: string): void\n};\n\nlet welcome: Greeter;\nwelcome = function(name: string): void {\n    console.log(`Welcome, ${name}!`);\n};\n```",
+   "lang": "en",
+   "vocab": [
+    "Join",
+    "REST",
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "what does type inference mean in the context of typescr-typescript-7",
+   "question": {
+    "fa": "What does \"_type inference_\" mean in the context of _TypeScript_?",
+    "en": "What does \"_type inference_\" mean in the context of _TypeScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "In TypeScript, **type inference** is a core feature that allows the type of a variable to be automatically determined from its value. This provides the benefits of static typing without the need for explicit type annotations.",
+    "en": "In TypeScript, **type inference** is a core feature that allows the type of a variable to be automatically determined from its value. This provides the benefits of static typing without the need for explicit type annotations."
+   },
+   "steps": [],
+   "answerMd": "In TypeScript, **type inference** is a core feature that allows the type of a variable to be automatically determined from its value. This provides the benefits of static typing without the need for explicit type annotations.\n\n### How It Works\n\nTypeScript employs a **best common type** algorithm to infer a variable's type. When TypeScript encounters multiple types for a variable during assignment or an array literal, it computes the **union** of these types and selects the best common type for the variable.\n\n### Code Example: Type Inference\n\nConsider the following code:\n\n```typescript\nlet value = 10; // Type 'number' inferred\nlet message = \"Hello, TypeScript!\"; // Type 'string' inferred\n\nfunction add(a: number, b: number) {\n    return a + b;\n}\n\nlet sum = add(5, 7); // Type 'number' inferred\n```\n\nTypeScript can infer the most likely type from the context, such as:\n\n- When a value is assigned immediately, TypeScript assigns the value's type to the variable.\n- Type information from adjacent types is used to determine the best common type. If all values are of a compatible type, that type is used.\n\n### Benefits of Type Inference\n\n- **Conciseness**: Eliminates the need for explicit type declarations, leading to more compact and readable code.\n- **Adaptability**: Codebase types align naturally with values, enhancing maintainability when values change.\n- **Error Reduction**: Reduces the risk of inconsistencies between the declared type and the actual value.",
+   "lang": "en",
+   "vocab": [
+    "Inference",
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "array-ops",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "explain the use of let and const in typescript-typescript-8",
+   "question": {
+    "fa": "Explain the use of '_let_' and '_const_' in _TypeScript_.",
+    "en": "Explain the use of '_let_' and '_const_' in _TypeScript_."
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "**TypeScript** makes use of `const` and `let` for variable declaration. These two keywords offer explicitness, scoping, and immutability for efficient code maintenance.",
+    "en": "**TypeScript** makes use of `const` and `let` for variable declaration. These two keywords offer explicitness, scoping, and immutability for efficient code maintenance."
+   },
+   "steps": [],
+   "answerMd": "**TypeScript** makes use of `const` and `let` for variable declaration. These two keywords offer explicitness, scoping, and immutability for efficient code maintenance.\n\n### Core Distinctions\n\n- **const**: Designates constants that remain unchanged once declared. It's important to note that this makes the reference immutable but doesn't actively prevent alteration of the internal state for complex objects like arrays. \n\n- **let**: Initiates variables with standard mutable behavior.\n\n### Code Example: `const`\n\nHere is the TypeScript code:\n\n```typescript\nconst productId: number = 5;\nlet productName: string = 'Tesla';\n\nconst getProductDetails = (id: number): string => {\n  return `Product ID: ${id}`;\n};\n\n// Attempting to modify will result in a compilation error\n// productId = 6;\n\n// Reference is still immutable\nconst anotherProductId: number = 10;\n// This will throw a compilation error since it's a constant\n// anotherProductId = 12;\n\n// Modifying internal state of an object is allowed for a const\nconst myArray: number[] = [1, 2, 3];\nmyArray.push(4);\n```\n\n### Code Example: `let`\n\nHere is the TypeScript code:\n\n```typescript\nlet vehicleType: string = 'Car';\n\nif (true) {\n  let vehicleType: string = 'Motorcycle';\n  console.log(vehicleType);  // Output: Motorcycle\n}\n\nconsole.log(vehicleType);  // Output: Car\n```",
+   "lang": "en",
+   "vocab": [
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "array-ops",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "how do you compile typescript files into javascript-typescript-9",
+   "question": {
+    "fa": "How do you compile _TypeScript_ files into _JavaScript_?",
+    "en": "How do you compile _TypeScript_ files into _JavaScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "Compiling **TypeScript** (.ts) into **JavaScript** (.js) involves integrating a TypeScript compiler (`tsc`). You can customize the compilation process using `tsconfig.json` and even adopt more advanced methods to suit project needs:",
+    "en": "Compiling **TypeScript** (.ts) into **JavaScript** (.js) involves integrating a TypeScript compiler (`tsc`). You can customize the compilation process using `tsconfig.json` and even adopt more advanced methods to suit project needs:"
+   },
+   "steps": [],
+   "answerMd": "Compiling **TypeScript** (.ts) into **JavaScript** (.js) involves integrating a TypeScript compiler (`tsc`). You can customize the compilation process using `tsconfig.json` and even adopt more advanced methods to suit project needs:\n\n### Workflow Steps\n\n1. **File Creation**: Write TypeScript files (.ts).\n \n2. **Compiler Config**: Set up a `tsconfig.json` file with compilation options.\n\n3. **Compile**: Execute the `tsc` command to initiate the compilation process.\n\n4. **Output Verification**: Review the generated JavaScript files.\n\n#### TypeScript Configuration (`tsconfig.json`)\n\nHere is the `tsconfig.json` file. The full configuration guide is available [here](https://www.typescriptlang.org/tsconfig).\n\n```json\n{\n  \"compilerOptions\": {\n    \"target\": \"ES5\",\n    \"module\": \"commonjs\",\n    \"strict\": true,    \n    \"outDir\": \"dist\",\n    \"rootDir\": \"src\"  \n  },\n  \"include\": [\n    \"src/**/*.ts\"    \n  ],\n  \"exclude\": [      \n    \"node_modules\",   \n    \"**/*.spec.ts\"    \n  ]\n}\n```\n\n### Practical Example: Vineyard Residential Task Management App\n\nHere is a practical and comprehensive `tsconfig.json` file.\n\n```json\n{\n  \"compilerOptions\": {\n    \"target\": \"es5\",\n    \"module\": \"commonjs\",\n    \"lib\": [\"dom\", \"es2015\", \"es5\", \"es6\", \"es7\", \"es2015.collection\"],\n    \"allowJs\": true,\n    \"checkJs\": false,\n    \"jsx\": \"react\",\n    \"declaration\": false,\n    \"sourceMap\": true,\n    \"outDir\": \"dist\",  \n    \"rootDir\": \"src\",\n    \"strict\": true,\n    \"noImplicitAny\": true,\n    \"noImplicitThis\": true,\n    \"moduleResolution\": \"node\",\n    \"esModuleInterop\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"removeComments\": true,\n    \"suppressImplicitAnyIndexErrors\": true,\n    \"typeRoots\": [\"node_modules/@types\", \"custom-typings\"],\n    \"baseUrl\": \".\",\n    \"paths\": {\n      \"components/*\": [\"src/components/*\"],\n      \"utils/*\": [\"src/utils/*\"],\n    },\n    \"experimentalDecorators\": true,\n    \"emitDecoratorMetadata\": true,\n    \"incremental\": true,\n    \"diagnostics\": true,\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"newLine\": \"LF\",\n    \"watchOptions\": {\n      \"watchFile\": \"useFsEvents\",  \n      \"fallbackPolling\": \"dynamicPriority\",   \n      \"polling\": true,\n      \"esModuleInterop\": true,\n            \"pollingInterval\": 2500,\n      \n      \"followSymlinks\": true\n    }\n  },\n  \"include\": [\n    \"src/**/*.ts\",\n    \"src/**/*.tsx\",\n    \"@types\"\n  ],\n  \"exclude\": [\n    \"node_modules\",\n    \"dist\"\n  ]\n}\n```\n\n### Advanced Configuration\n\n- **Project Reference**: Useful for code splitting in large projects.\n- **Custom Transformers**: Employ custom logic during the compilation process.\n- **Programmatic API**: Provides flexibility in managing compiler settings and execution.",
+   "lang": "en",
+   "vocab": [
+    "API",
+    "DOM",
+    "JSX",
+    "TypeScript",
+    "JSON",
+    "Compiler",
+    "HTTPS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "explain classes in typescript how are they different fr-typescript-10",
+   "question": {
+    "fa": "Explain _classes_ in _TypeScript_. How are they different from _ES6 classes_?",
+    "en": "Explain _classes_ in _TypeScript_. How are they different from _ES6 classes_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "While TypeScript and **ES6** classes share many similarities, TypeScript's classes offer additional features and strong typing to make your code more robust.",
+    "en": "While TypeScript and **ES6** classes share many similarities, TypeScript's classes offer additional features and strong typing to make your code more robust."
+   },
+   "steps": [],
+   "answerMd": "While TypeScript and **ES6** classes share many similarities, TypeScript's classes offer additional features and strong typing to make your code more robust.\n\n### Key Shared Class Features\n\n- **Inheritance**: Subclasses (children) can extend parent classes, inheriting their methods and properties.\n- **Polymorphism**: Derived classes can define methods with the same name as their parent.\n- **Encapsulation**: Data hiding is supported through access modifiers, such as `public`, `private`, and `protected`.\n- **Constructor**: Instantiation starts with a constructor method, if defined.\n\n### Unique TypeScript Class Features\n\n#### Field Declaration\n\nIn TypeScript, you can specify fields directly in the class without initializing them. Automatic initialization to `undefined` occurs during object creation. ES6 requires initializing fields in the constructor or within their declaration.\n\n```typescript\nclass Example {\n    // Field is automatically initialized to undefined upon object creation\n    someField: string;\n}\n```\n\n#### Abstract Classes\n\nTypeScript supports abstract classes to serve as a blueprint for other classes. They cannot be instantiated on their own but can provide some implementation that derived classes can override.\n\n```typescript\nabstract class AbstractExample {\n    abstract someMethod(): void;  // Method has no implementation (abstract)\n}\n```\n\n#### Readonly Properties\n\nYou can mark class properties as `readonly`, ensuring they are only set upon declaration or within the class constructor.\n\n```typescript\nclass Example {\n    readonly id: number;\n    constructor(id: number) {\n        this.id = id;  // Readonly can only be assigned in the constructor or declaration\n    }\n}\n```\n\n#### Static Members\n\nClasses in TypeScript support static members, such as properties and methods that belong to the class itself, rather than to instances of the class.\n\n```typescript\nclass Example {\n    static count = 0;  // Static property\n    static incrementCount() {\n        Example.count++;\n    }\n}\n```\n\n#### Accessor Functions\n\nYou can define `get` and `set` functions in TypeScript, known as accessor functions, to control how class properties are accessed and modified.\n\n```typescript\nclass Example {\n    private _name: string;\n\n    get name(): string {\n        return this._name;\n    }\n\n    set name(newName: string) {\n        this._name = newName.trim();\n    }\n}\n```\n\n#### Parameter Properties\n\nTypeScript provides a shortcut to declare a property and initialize it from the constructor parameter. This method can make code more concise, especially when a constructor parameter corresponds directly to a class property.\n\n```typescript\nclass Example {\n    constructor(private _name: string, public age: number) {\n        // Private _name property created and initialized from constructor parameter\n        // Public age property created and initialized from constructor parameter\n    }\n}\n```\n\n#### Intersection Types for Classes\n\nIn TypeScript, when you define a base class and then later extend it, you are creating an intersection type. This means the child class will inherit all the properties and methods from both its parent(s) and itself.\n\n### ES6 Additional Features not Present in TypeScript\n\n#### Class Expressions\n\nBoth ES6 and TypeScript support class expressions, which allows you to define a class without a class name.\n\nIn ES6:\n\n```javascript\nconst Animal = class {\n    // Class methods and properties defined here\n};\n```\n\n#### Iterator Protocol\n\nES6 classes support the Iterator protocol, making it easier to iterate over objects.\n\n```typescript\nclass IterableExample implements Iterable<string> {\n    // Implement iterator function for strings\n    [Symbol.iterator]() {\n        let index = 0;\n        const data = ['one', 'two', 'three'];\n        return {\n            next: () => {\n                if (index < data.length) {\n                    return { value: data[index++], done: false };\n                }\n                return { value: undefined, done: true };\n            }\n        };\n    }\n}\n```",
+   "lang": "en",
+   "vocab": [
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "how do you implement inheritance in typescript-typescript-11",
+   "question": {
+    "fa": "How do you implement _Inheritance_ in _TypeScript_?",
+    "en": "How do you implement _Inheritance_ in _TypeScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "Let's look at how you can use **inheritance** in TypeScript using both **ES6 classes** and **prototypal inheritance**.",
+    "en": "Let's look at how you can use **inheritance** in TypeScript using both **ES6 classes** and **prototypal inheritance**."
+   },
+   "steps": [],
+   "answerMd": "Let's look at how you can use **inheritance** in TypeScript using both **ES6 classes** and **prototypal inheritance**.\n\n### 1. Inheritance with ES6 Class Syntax\n\nWith the advent of ES6, a more familiar class-based inheritance method was introduced. This method is usually easier to read and understand.\n\n#### Code Example: Inheritance using ES6 Classes\n\nHere is the TypeScript code:\n\n```typescript\nclass Animal {\n  private name: string;\n\n  constructor(theName: string) {\n    this.name = theName;\n  }\n\n  move(distanceInMeters: number = 0) {\n    console.log(`${this.name} moved ${distanceInMeters}m.`);\n  }\n}\n\nclass Snake extends Animal {\n  constructor(name: string) {\n    super(name);\n  }\n\n  move(distanceInMeters = 5) {\n    console.log(\"Slithering...\");\n    super.move(distanceInMeters);\n  }\n}\n\nconst mySnake = new Snake(\"Cobra\");\nmySnake.move();  // Output: Slithering... Cobra moved 5m.\n```\n\n### 2. Inheritance with Prototypal Methodology\n\nPrior to ES6, TypeScript, like JavaScript, used a **prototypal** inheritance approach.\n\nThe prototypal mechanism can be useful when developing complex object structures, but it is important to be aware of the nuances in order to avoid unexpected behavior.\n\n#### Code Example: Prototypal Inheritance in TypeScript\n\nHere is the TypeScript code:\n\n```typescript\n// Define the Parent Class\nfunction Animal(this: Animal, name: string) {\n  this.name = name;\n}\n\nAnimal.prototype.move = function(distanceInMeters: number = 0) {\n  console.log(`${this.name} moved ${distanceInMeters}m.`);\n};\n\n// Define the Child Class\nfunction Snake(name: string) {\n  Animal.call(this, name);\n}\n\n// Set up the Inheritance\nSnake.prototype = Object.create(Animal.prototype);\nSnake.prototype.constructor = Snake;\n\n// Override the Base Type's Method\nSnake.prototype.move = function(distanceInMeters = 5) {\n  console.log(\"Slithering...\");\n  Animal.prototype.move.call(this, distanceInMeters);\n};\n\nconst mySnake = new Snake(\"Cobra\");\nmySnake.move();  // Output: Slithering... Cobra moved 5m.\n```\n\n#### Simplified Methods\n\nUsing the prototypal construct can be perplexing at first, but its strength lies in its flexibility.\n\n  You can avoid the complexities of direct prototype assignments using ES5 derived constructions, as seen next:\n\n```typescript\nfunction Animal(name: string) {\n  this.name = name;\n}\n\nAnimal.prototype.move = function(distanceInMeters: number = 0) {\n  console.log(`${this.name} moved ${distanceInMeters}m.`);\n};\n\nfunction Snake(name: string) {\n  Animal.call(this, name);\n}\n\n// Utilize `Object.create` for simplified prototype delegation\nSnake.prototype = Object.create(Animal.prototype);\nSnake.prototype.constructor = Snake;\n\nSnake.prototype.move = function(distanceInMeters = 5) {\n  console.log(\"Slithering...\");\n  Animal.prototype.move.call(this, distanceInMeters);\n};\n```",
+   "lang": "en",
+   "vocab": [
+    "Prototypal Inheritance",
+    "TypeScript"
+   ],
+   "deepDives": [
+    "js-prototype-chain"
+   ],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "what are access modifiers and how do they work in types-typescript-12",
+   "question": {
+    "fa": "What are _access modifiers_ and how do they work in _TypeScript_?",
+    "en": "What are _access modifiers_ and how do they work in _TypeScript_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "**Access modifiers** are TypeScript's way of controlling class member visibility and mutability. They enforce encapsulation and are especially useful for object-oriented design.",
+    "en": "**Access modifiers** are TypeScript's way of controlling class member visibility and mutability. They enforce encapsulation and are especially useful for object-oriented design."
+   },
+   "steps": [],
+   "answerMd": "**Access modifiers** are TypeScript's way of controlling class member visibility and mutability. They enforce encapsulation and are especially useful for object-oriented design.\n\n### Key Modifiers\n\n- **Public**: Default for class members. They are accessible from both inside and outside the class.\n\n- **Protected**: Members can be accessed within the class and its subclasses. They help establish the \"is-a\" relationship.\n\n- **Private**: Marks members as accessible only within the declaring class. This ensures they're not modified or accessed externally.\n\n#### Code Example: Access Modifiers in Action\n\nHere is the TypeScript code:\n\n```typescript\nclass Person {\n    public name: string;\n    private age: number;\n    protected contact: string;\n\n    constructor(name: string, age: number, contact: string) {\n        this.name = name;\n        this.age = age;\n        this.contact = contact;\n    }\n}\n\nclass Employee extends Person {\n    private employeeId: string;\n\n    constructor(name: string, age: number, contact: string, employeeId: string) {\n        super(name, age, contact);\n        this.employeeId = employeeId;\n    }\n\n    public displayDetails(): void {\n        console.log(`${this.name} - ${this.age} - ${this.contact} - ${this.employeeId}`);\n    }\n}\n\n// Somewhere in your code\nconst person = new Person(\"John Doe\", 30, \"1234567\");\nconsole.log(person.name);  // Accessible\nconsole.log(person.age);   // ERROR: 'age' is private\n\nconst employee = new Employee(\"Jane Doe\", 25, \"2345678\", \"E123\");\nconsole.log(employee.contact);  // ERROR: 'contact' is protected\nemployee.displayDetails();     // Correctly displays details\n\nemployee.age = 35;    // ERROR: 'age' is private\nemployee.contact = \"3456789\";  // ERROR: 'contact' is protected\n```",
+   "lang": "en",
+   "vocab": [
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "discuss abstract classes and their purposes in typescri-typescript-13",
+   "question": {
+    "fa": "Discuss _Abstract classes_ and their purposes in _TypeScript_.",
+    "en": "Discuss _Abstract classes_ and their purposes in _TypeScript_."
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "In TypeScript, **abstract classes serve as blueprints** that guide derived classes, essentially laying out the structure without necessarily providing complete implementations of methods.",
+    "en": "In TypeScript, **abstract classes serve as blueprints** that guide derived classes, essentially laying out the structure without necessarily providing complete implementations of methods."
+   },
+   "steps": [],
+   "answerMd": "In TypeScript, **abstract classes serve as blueprints** that guide derived classes, essentially laying out the structure without necessarily providing complete implementations of methods. \n\n### Core Features of Abstract Classes\n\n#### Method Signatures\n\n**Abstract classes define method signatures** without specifying their functionality. This feature provides a comprehensive form for derived classes to work from.\n\n#### Specific Method Definitions\n\nIn addition to method signatures, abstract classes can contain completely implemented methods. These methods either support the abstract methods or serve as independent functionalities.\n\n#### Abstract and Non-Abstract Members Separation\n\nAbstract classes clearly demarcate between methods that require implementation by derived classes and those that are either fully implemented or optional.\n\n### Common Use-Cases for Abstract Classes\n\n- Facilitate Reusability: Abstract classes help in consolidating common or shared functionalities among several derived classes.\n\n- Contract Enforcement: They ensure that derived classes conform to a shared structure, guaranteeing a defined set of methods that must be implemented.\n\n- Partial Implementations: Abstract classes allow for a mix of fully implemented methods alongside those requiring concrete implementations in derived classes.\n\n### TypeScript Utility: Static Properties\n\nAbstract classes in TypeScript can have **static members**, which belong to the class itself and not to any specific instance. This feature provides a convenient way to define properties or methods that are accessible without the need for class instantiation.\n\n### Code Example: Abstract Class\n\nHere is the TypeScript code:\n\n```typescript\nabstract class Shape {\n    abstract getArea(): number;\n    abstract getPerimeter(): number;\n    color: string;\n\n    constructor(color: string) {\n        this.color = color;\n    }\n\n    static defaultColor: string = 'red';\n\n    describe() {\n        return `This shape is ${this.color}.`;\n    }\n}\n\n// This will throw an error because the derived class does not provide concrete implementations for abstract methods.\nclass Circle extends Shape { \n    constructor(public radius: number, color: string) {\n        super(color);\n    }\n\n    // The 'Circle' class inherited the following properties from 'Shape', but neither implements nor specifies them in the derived class: 'getArea' and 'getPerimeter'.\n    getArea(): number {\n        return Math.PI * this.radius ** 2;\n    }\n\n    getPerimeter(): number {\n        return 2 * Math.PI * this.radius;\n    }\n}\n\nconst myCircle = new Circle(5, 'blue');\nconsole.log(myCircle.getArea()); // Outputs: 78.54\nconsole.log(myCircle.describe()); // Outputs: This shape is blue.\nconsole.log(Shape.defaultColor); // Outputs: red\n```",
+   "lang": "en",
+   "vocab": [
+    "TypeScript"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "can you describe the use of constructors within typescr-typescript-14",
+   "question": {
+    "fa": "Can you describe the use of _Constructors_ within _TypeScript classes_?",
+    "en": "Can you describe the use of _Constructors_ within _TypeScript classes_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "typescript"
+   ],
+   "quickAnswer": {
+    "fa": "**TypeScript** provides a convenient way to define **constructors** for classes using the `constructor` keyword. A constructor method allows you to initialize class members and can have access specifiers. They are useful for setting up an object's initial state.",
+    "en": "**TypeScript** provides a convenient way to define **constructors** for classes using the `constructor` keyword. A constructor method allows you to initialize class members and can have access specifiers. They are useful for setting up an object's initial state."
+   },
+   "steps": [],
+   "answerMd": "**TypeScript** provides a convenient way to define **constructors** for classes using the `constructor` keyword. A constructor method allows you to initialize class members and can have access specifiers. They are useful for setting up an object's initial state.\n\n### Key Features\n\n- **Automatic Invocation**: The constructor is automatically called when an object of the class is instantiated.\n- **Single Unique Constructor**: A class can only have one constructor, providing a centralized place for initialization.\n- **Overload Capabilities**: You can overload a constructor to define multiple ways of object initialization.\n\n### Example: Constructor in TypeScript\n\nWe use the `this` keyword to refer to the current instance, ensuring proper data assignment.\n\n```typescript\nclass Person {\n  // Member variables\n  name: string;\n  age: number;\n  \n  // Constructor\n  constructor(name: string, age: number) {\n    this.name = name;\n    this.age = age;\n  }\n}\n```\n\n### Constructor Access Modifiers\n\nTypeScript supports **access modifiers** on constructor parameters, enabling concise and safe class initialization.\n\n- **Public**: Parameters without a modifier are public by default.\n- **Private**: Adding the `private` keyword makes them accessible within the class only.\n- **Read-Only**: Combining `readonly` with parameter and the private or public access modifier ensures the parameter is assigned a value just once, in the constructor.\n\n#### Explore all 100 answers here 👉 [Devinterview.io - Typescript](https://devinterview.io/questions/web-and-mobile-development/typescript-interview-questions)",
+   "lang": "en",
+   "vocab": [
+    "TypeScript",
+    "HTTPS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/typescript-interview-questions",
+   "sources": [
+    "https://www.typescriptlang.org/docs/"
+   ]
+  },
+  {
+   "id": "can you explain the vue js lifecycle hooks-vue-2",
+   "question": {
+    "fa": "Can you explain the _Vue.js lifecycle hooks_?",
+    "en": "Can you explain the _Vue.js lifecycle hooks_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "Vue.js organizes **lifecycle events** into distinct stages, each linked to a specific lifecycle hook. These hooks enable developers to execute custom logic at crucial points during a component's life cycle.",
+    "en": "Vue.js organizes **lifecycle events** into distinct stages, each linked to a specific lifecycle hook. These hooks enable developers to execute custom logic at crucial points during a component's life cycle."
+   },
+   "steps": [],
+   "answerMd": "Vue.js organizes **lifecycle events** into distinct stages, each linked to a specific lifecycle hook. These hooks enable developers to execute custom logic at crucial points during a component's life cycle.\n\n### Vue.js Lifecycle Stages\n\n1. **Initialization**: The component is being set up.\n2. **Mounting**: The component is being added to the DOM.\n3. **Update**: Data in the component undergoes changes.\n4. **Destruction**: The component is being removed from the DOM.\n\n### Lifecycle Hooks\n\n1. **beforeCreate**: Occurs at the earliest step in initialization, before data observations and initializations are in place.\n2. **created**: After the component's data and events are set up, this hook permits you to work with the component synchronously.\n3. **beforeMount**: Just before the component is added to the DOM, execute logic.\n4. **mounted**: The component is now in the DOM and is accessible for UI-related interactions.\n5. **beforeUpdate**: Before the component re-renders, you can perform certain tasks here.\n6. **updated**: The component has re-rendered and the DOM now reflects the most recent data.\n7. **beforeDestroy**: Just before the component is destroyed, carry out cleanup tasks, such as uncoupling event listeners.\n8. **destroyed**: Once the component is destroyed, perform any final teardown work like stopping intervals or closing connections.\n\n### Code Example: Lifecycle Hooks\n\nHere is the **JavaScript** code:\n\n```javascript\nnew Vue({\n  el: '#app',\n  data: {\n    message: 'Hello Vue!'\n  },\n  beforeCreate: function() {\n    console.log('Before creation - The message is: ' + this.message);\n  },\n  created: function() {\n    console.log('Component created');\n  },\n  beforeMount: function() {\n    console.log('Before mounting');\n  },\n  mounted: function() {\n    console.log('Component mounted');\n  },\n  beforeUpdate: function() {\n    console.log('Before update - The message is: ' + this.message);\n  },\n  updated: function() {\n    console.log('Component updated');\n  },\n  beforeDestroy: function() {\n    console.log('Before component destruction');\n  },\n  destroyed: function() {\n    console.log('Component destroyed');\n  },\n  methods: {\n    updateMessage: function() {\n      this.message = 'Updated message';\n    },\n    destroyComponent: function() {\n      this.$destroy();\n    }\n  }\n});\n```",
+   "lang": "en",
+   "vocab": [
+    "DOM",
+    "Hooks"
+   ],
+   "deepDives": [],
+   "visual": "hooks-flow",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "how do you bind data to the view in vue js-vue-4",
+   "question": {
+    "fa": "How do you _bind data_ to the _view_ in _Vue.js_?",
+    "en": "How do you _bind data_ to the _view_ in _Vue.js_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "In **Vue.js**, **Data Binding** establishes a connection between the model and the view, ensuring that changes in one are reflected in the other. Vue offers three primary binding types:",
+    "en": "In **Vue.js**, **Data Binding** establishes a connection between the model and the view, ensuring that changes in one are reflected in the other. Vue offers three primary binding types:"
+   },
+   "steps": [],
+   "answerMd": "In **Vue.js**, **Data Binding** establishes a connection between the model and the view, ensuring that changes in one are reflected in the other. Vue offers three primary binding types:\n\n- **One-time**: Ideal for scenarios where data doesn't change, and you want to initialize the view with it. Using this option can increase performance.\n- **One-way**: Data changes are propagated from the model to the view. It's beneficial in ensuring that the model is the single source of truth, simplifying the understanding of your application flow.\n- **Two-way**: This type of binding relationship is more dynamic, enabling changes made in either the view or the model to be reflected in the opposite entity.\n\n### Data Binding Syntax\n\n- **Text**: `{{ }}`\n- **HTML Attributes**: `:attrName=\"dataProp\"` or `v-bind:attrName=\"dataProp\"`\n- **Element Visibility**: `v-show=\"condition\"` or `v-if=\"condition\"`\n- **List Rendering**: `v-for`\n- **Event Listening**: `@event=\"handlerMethod\"` or `v-on:event=\"handlerMethod\"`\n\n### Key Directives\n\n- **v-bind**: Binds data to an element.\n- **v-model**: Establishes two-way data binding for form inputs.\n- **v-on**: Listens to events on elements and triggers event handler methods defined in the component.\n\n### Code Example: Vue.js Binding Types\n\nHere is the Vue data\n\n```javascript\ndata() {\n  return {\n    message: \"Hello, World!\",\n    isButtonDisabled: false,\n    textColor: \"red\",\n    users: [\n      { id: 1, name: \"Alice\" },\n      { id: 2, name: \"Bob\" }\n    ],\n    userProfile: {\n      id: 1,\n      name: \"Alice\",\n      email: \"alice@example.com\"\n    }\n  };\n},\nmethods: {\n  toggleButton: function() {\n    this.isButtonDisabled = !this.isButtonDisabled;\n  }\n}\n```\n\nHere is the Vue HTML\n\n```html\n{{ message }}\nToggle\nText in dynamic color\n\n  {{ user.name }}\n\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML"
+   ],
+   "deepDives": [],
+   "visual": "sql-query",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "how do you handle user inputs and form submissions in v-vue-8",
+   "question": {
+    "fa": "How do you handle user _inputs_ and _form submissions_ in _Vue.js_?",
+    "en": "How do you handle user _inputs_ and _form submissions_ in _Vue.js_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**Vue.js** simplifies user interactions and form handling through its reactive two-way data binding, utility directives, and validation libraries. Let's explore these features further.",
+    "en": "**Vue.js** simplifies user interactions and form handling through its reactive two-way data binding, utility directives, and validation libraries. Let's explore these features further."
+   },
+   "steps": [],
+   "answerMd": "**Vue.js** simplifies user interactions and form handling through its reactive two-way data binding, utility directives, and validation libraries. Let's explore these features further.\n\n### Two-Way Data Binding\n\nVue.js's **two-way data binding** ensures that changes in input fields are reflected in corresponding data properties and vice versa.\n\nFor two-way binding, use the `v-model` directive:\n\n```html\n\n{{ name }}\n```\n\nIn this example, `name` is the corresponding data property, and its value is updated as the user types in the `input` field.\n\n### Handling Event\n\nVue.js provides the **v-on** directive to handle user-triggered events, like `click`, `input`, or `submit`. \n\nFor example:\n```html\nClick Me\n```\n\nHere, the `handleClick` method is called when the button is clicked.\n\n### Customize Event Handling\n\nYou can combine `v-on` with the `.stop`, `.prevent`, and `.self` modifiers to fine-tune event behavior. For instance:\n\n- `.stop`: Prevent event propagation.\n- `.prevent`: Call `event.preventDefault()`.\n- `.self`: Trigger only if the event initiates from the element, not its children.\n\n**Example**:\n```html\nDo not propagate\n```\n\n### Form Submission\n\nTo handle form submissions and their associated actions, such as making an API call, use the **v-on:submit** directive.\n\n```html\n<form v-on:submit.prevent=\"submitForm\">\n  \n  Submit\n</form>\n```\n\nIn this example, `submitForm` is triggered when the form is submitted, preventing the default form action.\n\n### Async Form Submission\n\nIf your form submission involves asynchronous operations, like calling an API, you can use `async` methods with `await` within `v-on:submit` handlers:\n\n```html\n<form v-on:submit.prevent=\"submitForm\">\n  \n  Submit\n</form>\n\n<script>\n  methods: {\n    async submitForm() {\n        // perform async operations here\n    }\n  }\n</script>\n```\n\n### Input Validation with Watchers\n\nYou can ensure user inputs meet specific criteria using **watchers**:\n\n```javascript\ndata() {\n  return {\n    username: ''\n  };\n},\nwatch: {\n  username(newVal) {\n    if (newVal.length < 3) {\n      console.log('Username must be at least 3 characters long');\n    }\n  }\n}\n```\n\nIn this scenario, `submitForm` will only be called if the condition in the `watch` block is met. If the condition fails, the submission is prevented.\n\n### Extended Input Components\n\nFor form-specific needs, Vue provides dedicated components like `v-radio`, `v-checkbox`, and `v-select`:\n\n```html\n<v-form>\n    <v-radio v-model=\"gender\" :options=\"['male', 'female']\">Gender:</v-radio>\n    <v-checkbox v-model=\"agree\">I accept the terms and conditions</v-checkbox>\n    <v-checkbox v-model=\"newsletter\">Subscribe to our newsletter</v-checkbox>\n    <v-button @click=\"submit\">Submit</v-button>\n</v-form>\n```\n\nEach component performs both form **input submission** and **validation**.",
+   "lang": "en",
+   "vocab": [
+    "API",
+    "HTML",
+    "Validation"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "what are computed properties and how are they used-vue-11",
+   "question": {
+    "fa": "What are _computed properties_ and how are they used?",
+    "en": "What are _computed properties_ and how are they used?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**Computed properties** in Vue.js are derived data elements that automatically update whenever their \"watched\" dependencies change.",
+    "en": "**Computed properties** in Vue.js are derived data elements that automatically update whenever their \"watched\" dependencies change."
+   },
+   "steps": [],
+   "answerMd": "**Computed properties** in Vue.js are derived data elements that automatically update whenever their \"watched\" dependencies change.\n\nThey eliminate the need for manual tracking and updating of data, offering a simpler and more efficient data management tool.\n\n### Core Benefits\n\n- **Caching**: Computed values are cached based on their dependencies. They recalculate only when a dependency changes, enhancing performance.\n\n- **Simplicity**: Create and use computed properties with the same seamless syntax as other data properties, like `data` and `methods`.\n\n### When to Use Computed Properties\n\n- **Derivative Data**: It's best used for data that is derived from other data, rather than being independent.\n\n- **Data Aggregation**: For processes like filtering, sorting, and data aggregations like sums or averages.\n\n### Practical Applications\n\n- **Display Formatting**: For dynamic formatting, such as concealing sensitive data or changing number representations.\n\n- **Dependency Management**: To handle complex data relationships without manual tracking.\n\n- **User Interactions**: For managing user inputs and dynamic interface updates, such as marking all items in a list as \"done.\"\n\n### Performance Considerations\n\nWhile computed properties can aid performance through caching, be cautious with extremely complex and time-consuming computations. These can still introduce bottlenecks. In such cases, consider using techniques like debouncing or minimizing the use of relatively expensive computed properties.\n\n### Code Example: A Basic Computed Property\n\nHere is the Vue.js code:\n\n```vue\n<template>\n  \n    {{ reversedMessage }}\n    \n  \n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      message: 'Hello, Vue!',\n    };\n  },\n  computed: {\n    reversedMessage() {\n      return this.message.split('').reverse().join('');\n    },\n  },\n};\n</script>\n```",
+   "lang": "en",
+   "vocab": [
+    "Join",
+    "Debouncing"
+   ],
+   "deepDives": [],
+   "visual": "cache-flow",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "can you discuss the difference between computed propert-vue-12",
+   "question": {
+    "fa": "Can you discuss the difference between _computed properties_ and _methods_?",
+    "en": "Can you discuss the difference between _computed properties_ and _methods_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "- **Computed Properties**: These are like data fields that are derived from other data **based on specific logic**. You define computed properties using the `computed` option in a Vue component. - **Methods**: They are like functions, meaning they are **called on demand**. You define methods using the `methods` option in a Vue component.",
+    "en": "- **Computed Properties**: These are like data fields that are derived from other data **based on specific logic**. You define computed properties using the `computed` option in a Vue component. - **Methods**: They are like functions, meaning they are **called on demand**. You define methods using the `methods` option in a Vue component."
+   },
+   "steps": [],
+   "answerMd": "- **Computed Properties**: These are like data fields that are derived from other data **based on specific logic**. You define computed properties using the `computed` option in a Vue component.\n- **Methods**: They are like functions, meaning they are **called on demand**. You define methods using the `methods` option in a Vue component.\n\n#### Efficiency\n\n- **Computed Properties**: The natural caching mechanism in Vue ensures that if the data properties on which the computed property depends haven't changed, the computed property doesn't recompute.\n- **Methods**: They execute every time they are needed, irrespective of whether the underlying data has changed or not.\n\n#### Use in Templates\n\n- **Computed Properties**: They can be used in Vue templates very much like data properties. Vue knows when a computed property needs to be recomputed and takes care of it automatically.\n- **Methods**: Their use in templates is often not ideal because they can lead to unnecessary re-rendering, especially if the method involves some heavy computation.\n\n#### Data Reusability & Data Source\n\n- **Computed Properties**: They are perfect when you want to use a processed or derived version of the data in multiple places within the template or component. They abstract and cache the data transformation for you.\n- **Methods**: Useful when you need to perform an operation just once or need to trigger an action on an event, for example a button press.\n\n#### Common Examples\n\n- **Computed Properties**: Calculating the total price of items in a shopping cart, applying a filter to a list, or sorting an array.\n- **Methods**: Handling form submissions, initiating data fetch or AJAX requests, or any kind of action that needs to be explicitly triggered.",
+   "lang": "en",
+   "vocab": [
+    "Cache",
+    "AJAX"
+   ],
+   "deepDives": [],
+   "visual": "cache-flow",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "how do you bind inline styles in a vue template-vue-14",
+   "question": {
+    "fa": "How do you _bind inline styles_ in a _Vue template_?",
+    "en": "How do you _bind inline styles_ in a _Vue template_?"
+   },
+   "difficulty": "mid",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "In Vue.js, you can **bind inline styles to an element** through several methods like templates with `v-bind`, dynamic class bindings, and JS object-style declarations.",
+    "en": "In Vue.js, you can **bind inline styles to an element** through several methods like templates with `v-bind`, dynamic class bindings, and JS object-style declarations."
+   },
+   "steps": [],
+   "answerMd": "In Vue.js, you can **bind inline styles to an element** through several methods like templates with `v-bind`, dynamic class bindings, and JS object-style declarations.\n\n### Inline Style Binding Approaches\n\n1. **Using the `:style` Directive**: You can define an object with CSS styles and then bind it to the element. Each key-value pair represents a style property and its value.\n\n    ```vue\n    <template>\n      Styled Text\n    </template>\n    \n    <script>\n    export default {\n      data() {\n        return {\n          myStyles: {\n            color: 'blue',\n            'font-weight': 'bold',\n            fontFamily: 'Arial, sans-serif'\n          }\n        };\n      }\n    };\n    </script>\n    ```\n\n2. **Binding Inline Styles Directly**: This approach is useful when the style values need to be dynamic. However, it's less modular than using a style object.\n\n    ```vue\n    <template>\n        Dynamic Text\n    </template>\n    \n    <script>\n    export default {\n      data() {\n        return {\n          textColor: 'green',\n          textSize: 24\n        };\n      }\n    };\n    </script>\n    ```\n\n3. **CSS Modules**: Places **styles in a separate file, processes them with Vue Loader, and requires modular scoped styles in components**. This approach provides isolation and reusability.\n\n    1. Create a `styles.module.css` file\n\n        ```css\n        .styledText {\n           color: blue;\n           font-weight: bold;\n           font-family: 'Arial, sans-serif';\n        }\n        ```\n\n    2. Use the CSS module in the component\n\n        ```vue\n        <template>\n           Styled Text\n        </template>\n        \n        <script>\n        export default {\n           // ...rest of the component\n        };\n        </script>\n        ```\n\n### Benefits of Different Approaches\n\n- **Code Reusability**: The object approach with `:style` and the modular styles using CSS modules are great for style management and reusability.\n- **Dynamic Styling**: Binding styles directly with `:style` and using JS objects is suitable for dynamic style changes.\n- **Readability and Maintainability**: Each approach has its own visual language. Use the one that's most readable and maintainable for your team.\n\n### Additional Recommendations\n\n- **Multiple Styles**: Avoid grouping multiple styles under one key if you expect them to change independently.\n\n    ```vue\n    \n    \n    ```\n\n- **Modular Styles**: If you're using the object approach with `:style`, consider managing the styles in a separate object for better readability and maintainability.\n\n    ```vue\n    <template>\n      Styled Text\n    </template>\n\n    <script>\n    export default {\n      data() {\n        return {\n          mySeparateStylesObject: {\n            color: 'blue',\n            fontSize: '22px'\n          }\n        };\n      }\n    };\n    </script>\n    ```\n\n#### Explore all 100 answers here 👉 [Devinterview.io - Vue.js](https://devinterview.io/questions/web-and-mobile-development/vue-interview-questions)",
+   "lang": "en",
+   "vocab": [
+    "REST",
+    "CSS",
+    "HTTPS"
+   ],
+   "deepDives": [
+    "js-async-defer"
+   ],
+   "visual": "promise-async",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "what does css stand for and what is its primary use-css-0",
+   "question": {
+    "fa": "What does _CSS_ stand for and what is its primary use?",
+    "en": "What does _CSS_ stand for and what is its primary use?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "**Cascading Style Sheets** (**CSS**) is primarily designed to separate web page content from its visual presentation. This allows for a consistent and adaptable design across multiple web pages.",
+    "en": "**Cascading Style Sheets** (**CSS**) is primarily designed to separate web page content from its visual presentation. This allows for a consistent and adaptable design across multiple web pages."
+   },
+   "steps": [],
+   "answerMd": "**Cascading Style Sheets** (**CSS**) is primarily designed to separate web page content from its visual presentation. This allows for a consistent and adaptable design across multiple web pages.\n\n### Key Concepts\n\n- **Selectors**: Elements to which the style rules apply.\n- **Properties**: Visual features, such as font-size, color, and background.\n- **Values**: Specific settings for properties, like 'red' for the color property.\n\n### Visual Example\n\nHere is the HTML code:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>CSS Example</title>\n    \n</head>\n\n    <header>\n        Welcome to Our Site\n        <nav>\n            \n                Home\n                About\n                Contact\n            \n        </nav>\n    </header>\n    <section>\n        Latest News\n        \n            Breaking News: Big Event Tomorrow\n            Join us for our biggest event of the year!\n        \n    </section>\n    <footer>\n        &copy; 2022 YourSite\n    </footer>\n\n</html>\n```\n\nAnd, here is the accompanying CSS in `styles.css`:\n\n```css\n/* Targeting all text on the page */\nbody {\n  font-family: Arial, sans-serif;\n  color: #333;\n  background-color: #f4f4f4;\n}\n\n/* Targeting the header elements */\nheader {\n  background-color: #1e90ff;\n  padding: 1em 0;\n  text-align: center;\n}\n\n/* Targeting the nav elements */\nnav ul {\n  list-style-type: none;\n  padding: 0;\n}\n\n/* Targeting the nav links */\nnav a {\n  text-decoration: none;\n  color: #fff;\n  margin: 0 10px;\n}\n\n/* Targeting the main section */\nsection {\n  padding: 20px;\n}\n\n/* Targeting the footer element */\nfooter {\n  text-align: center;\n  margin-top: 50px;\n  padding: 10px;\n  background-color: #1e90ff;\n  color: #fff;\n}\n```",
+   "lang": "en",
+   "vocab": [
+    "Join",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "describe how to implement a css reset and why it is use-css-4",
+   "question": {
+    "fa": "Describe how to implement a _CSS reset_ and why it is useful.",
+    "en": "Describe how to implement a _CSS reset_ and why it is useful."
+   },
+   "difficulty": "senior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "A **CSS reset** is a set of styles intended to reduce browser inconsistencies in elements such as margins, paddings, and various typical style defaults.",
+    "en": "A **CSS reset** is a set of styles intended to reduce browser inconsistencies in elements such as margins, paddings, and various typical style defaults."
+   },
+   "steps": [],
+   "answerMd": "A **CSS reset** is a set of styles intended to reduce browser inconsistencies in elements such as margins, paddings, and various typical style defaults. \n\n### Benefits of CSS Reset\n\n- **Consistent Starting Point**: Eliminates default styling differences across browsers, making the design process more predictable.\n- **Consistent Box Model**: Ensures uniform calculations of element sizing (e.g., widths and heights) to prevent unexpected layout shifts.\n- **Want Only Custom Styles**: It's especially useful if you intend to start from a blank slate and apply your own bespoke styles.\n\n### The Code\n\nFor HTML:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  \n  <title>Document</title>\n</head>\n\n  Hello, CSS Reset!\n\n</html>\n```\n\nAnd for CSS, here is a simple **normalize.css**-based reset:\n\n```css\n/* reset.css */\n/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\nh1 {\n    font-size: 2em;\n    margin: 0.67em 0;\n}\n```",
+   "lang": "en",
+   "vocab": [
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "what is a pseudo element and what are they used for-css-6",
+   "question": {
+    "fa": "What is a _pseudo-element_, and what are they used for?",
+    "en": "What is a _pseudo-element_, and what are they used for?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "**Pseudo-elements** are virtual elements that give developers the power to style parts of an HTML document that don't correspond to actual HTML elements. Essentially, they let you apply styles to specific parts of an element without the need for extra HTML markup.",
+    "en": "**Pseudo-elements** are virtual elements that give developers the power to style parts of an HTML document that don't correspond to actual HTML elements. Essentially, they let you apply styles to specific parts of an element without the need for extra HTML markup."
+   },
+   "steps": [],
+   "answerMd": "**Pseudo-elements** are virtual elements that give developers the power to style parts of an HTML document that don't correspond to actual HTML elements. Essentially, they let you apply styles to specific parts of an element without the need for extra HTML markup.\n\nCommonly used `pseudo-elements` include `::before` and `::after` which let developers insert content before or after an element, respectively.\n\n### Key Features\n\n- **Automatic Insertion**: These pseudo-elements can add content continuously without requiring manual code changes.\n- **Dynamic Content**: With generated content and styles, pseudo-elements can adapt based on the specific conditions.\n- **Custom Styling**: Pseudo-elements enable developers to style parts of an element differently than the rest.\n\n### Practical Applications\n\n1. #### Indicating External Links\n\n   - **Link**: Indicating content that opens an external website.\n   - **Implementation**: Visual or textual cues like arrows or \"External Link\" next to anchor elements.\n\n2. #### Specialized Numbers and Letters\n\n   - **Link**: Styling a single letter or number within a text block.\n   - **Implementation**: Especially useful in design, for instance, highlighting the first letter of a paragraph with a larger font size.\n\n3. #### Responsive Backgrounds\n\n   - **Link**: Apply background images or colors specific to certain parts of an element for various screen sizes.\n   - **Implementation**: Use media queries within the pseudo-element for specific screen sizes.\n\n4. #### Code Blocks and Blockquotes\n\n   - **Link**: Add decorative elements preceding and following code blocks and blockquote elements.\n   - **Implementation**: Help highlight code samples or visually delineate long blockquote sections.\n\n5. #### Custom Radio Buttons and Checkboxes\n\n   - **Link**: Rework default styling for radio buttons and checkboxes for a more customized look.\n   - **Implementation**: Use ::before or ::after with content property to replace default appearance.\n\n6. #### Clear Floats\n\n   - **Link**: Overcome challenges in parent containers not respecting the height of floated child elements and collapsing.\n   - **Implementation**: Create an element with ::after pseudo-element where the content clears the floats.\n\n7. #### Hacks for Older Browsers\n\n   - **Link**: Sometimes, especially with prior versions of Internet Explorer, using pseudo-elements proves crucial for achieving desired stylings.\n   - **Implementation**: Useful for applying specifically crafted styles that wouldn't work properly on older browsers without this technique.",
+   "lang": "en",
+   "vocab": [
+    "REST",
+    "HTML"
+   ],
+   "deepDives": [],
+   "visual": "http-request",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "explain margin collapsing-css-11",
+   "question": {
+    "fa": "Explain _margin collapsing_.",
+    "en": "Explain _margin collapsing_."
+   },
+   "difficulty": "senior",
+   "tags": [
+    "css"
+   ],
+   "quickAnswer": {
+    "fa": "**Margin collapsing** can occur when there are adjacent vertical margins between elements. In such cases, the larger of the two margins becomes the \"collapsed margin.\"",
+    "en": "**Margin collapsing** can occur when there are adjacent vertical margins between elements. In such cases, the larger of the two margins becomes the \"collapsed margin.\""
+   },
+   "steps": [],
+   "answerMd": "**Margin collapsing** can occur when there are adjacent vertical margins between elements. In such cases, the larger of the two margins becomes the \"collapsed margin.\"\n\n### Types of Margin Collapsing\n1. **Adjacent Sibling Collapsing**: When two blocks or inline-block elements are hierarchically adjacent, such as being direct children of a common container, their top and bottom margins might collapse. For instance, in the code:\n\n   ```html\n   \n       This is paragraph 1\n       This is paragraph 2\n   \n   ```\n\n2. **Parent-Child Collapsing**: If there are no intervening content or padding or border between the parent and the first/last child inside it, the parent's margins might collapse with the child's corresponding margin.\n\n### Visual Representation of Margin Collapsing\n- Vertical margin collapse: \n\n- Horizontal margin collapse does not occur: \n\n### Preventing Margin Collapsing\n1. **Padding or Borders**: Introduce padding or borders to disrupt the margin collapsing behavior when required.  \n2. **Inline-Block or Floats**: Transform adjacent elements into `inline-block` or use `float` property.\n3. **Clearfix**: Employ a clearing technique for floated elements, which separates subsequent elements in the flow, ultimately preventing margin collapse.\n\n### CSS Rules and Margin Collapsing\n1. **Marginal vs. Calculated Total**: \n   - If margins are set, every other margin is respected.\n   - If margins are calculated to be a non-zero value, margins can be collapsed.\n   - Margins from both the top and the bottom end of the elements are considered.\n2. **Non-Root Elements**: The root `<html>` element's margins don't collapse.\n3. **Non-Adjacent Items**: A margin doesn't collapse through wrapping or inline elements.\n\nWhile margin collapsing can simplify layout management under specific conditions, it's essential to understand its behavior to ensure predictable and consistent designs.",
+   "lang": "en",
+   "vocab": [
+    "Container",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "load-balance",
+   "source": "Devinterview-io/css-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/CSS"
+   ]
+  },
+  {
+   "id": "can you explain the purpose of meta tags in html-html5-4",
+   "question": {
+    "fa": "Can you explain the purpose of _meta tags_ in HTML?",
+    "en": "Can you explain the purpose of _meta tags_ in HTML?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**Meta tags** provide metadata about a web page through information invisible to visitors but essential for search engines, social media, and other web technology. This metadata includes details such as the page's title, keywords, and description.",
+    "en": "**Meta tags** provide metadata about a web page through information invisible to visitors but essential for search engines, social media, and other web technology. This metadata includes details such as the page's title, keywords, and description."
+   },
+   "steps": [],
+   "answerMd": "**Meta tags** provide metadata about a web page through information invisible to visitors but essential for search engines, social media, and other web technology. This metadata includes details such as the page's title, keywords, and description.\n\n### Key Meta Tags\n\n- **Meta Description**: A concise summary of the page's content, often used in search engine results.\n\n- **Meta Keywords**: Historically used to specify relevant keywords for the page, but they have been largely deprecated due to abuse by spammers.\n\n- **Meta Robots**: Directs search engine bots on how to interact with the page, such as index it for search results, follow its links, or refrain from both.\n\n- **Meta Viewport**: Crucial for responsive design, it guides the browser on how to scale and display the page, especially useful for mobile devices.\n\n- **Meta Charset**: Defines the character encoding used on the webpage, ensuring text is displayed correctly.\n\n- **Meta Author**: Identifies the page's creator or author.\n\n- **Open Graph, Twitter Cards**: Specialized meta tags used by social platforms like Facebook and Twitter to optimize page sharing.\n\n- **Canonical URL**: Indicates the preferred URL when a page can be accessed through multiple paths.\n\n- **Refresh and Redirect**: Older, less common meta tags that dictate page behavior.\n\n### Code Example: Common Meta Tags\n\nHere is the HTML code:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"This is a sample web page with a concise description.\">\n    <meta name=\"keywords\" content=\"HTML, meta tags, web design, SEO\">\n    <meta name=\"author\" content=\"John Doe\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Sample Web Page</title>\n</head>\n\n    \n\n</html>\n```\n\n### Responsible Use of Meta Tags\n\nWith search engines evolving, many tags have diminished in significance. Here's the current state:\n\n- **Still Relevant**: Meta Description, Viewport, Charset, Author, and Canonical\n- **Limited Effect**: Keywords, Refresh, and Robots\n- **Specialized Fields**: Open Graph, Twitter Cards are necessary for tailored content on social platforms\n\nTo maintain a robust online presence, focus on high-quality content, user experience, and technical soundness, and don't solely rely on meta tags.",
+   "lang": "en",
+   "vocab": [
+    "Responsive Design",
+    "Index",
+    "Graph",
+    "SEO",
+    "HTML",
+    "Character Encoding",
+    "URL"
+   ],
+   "deepDives": [],
+   "visual": "sql-query",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "how do you serve your page in multiple languages-html5-8",
+   "question": {
+    "fa": "How do you serve your page in multiple _languages_?",
+    "en": "How do you serve your page in multiple _languages_?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "Let's discuss the **best practices** for serving web pages in multiple languages and the corresponding HTML5 tag, `<html lang=\"en\">`.",
+    "en": "Let's discuss the **best practices** for serving web pages in multiple languages and the corresponding HTML5 tag, `<html lang=\"en\">`."
+   },
+   "steps": [],
+   "answerMd": "Let's discuss the **best practices** for serving web pages in multiple languages and the corresponding HTML5 tag, `<html lang=\"en\">`.\n\n### Language Tag\n\nFor serving content in multiple languages and optimizing accessibility and search engine performance, you should use the `lang` attribute on the `<html>` tag. This is considered a **best practice**, even if the page is only in English.\n\n```html\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Your Website</title>\n  </head>\n  \n    \n  \n</html>\n```\n\n### Common Language Codes\n\nMost languages follow the two-letter ISO 639-1 code, such as \"en\" for English or \"es\" for Spanish. Some languages also use an extended ISO 639-2 or 639-3 code, which might require three to four letters, like \"por\" for Portuguese. \n\nFor dialects or region-specific content, you can use a hyphen, followed by an ISO 3166-1 alpha-2 country code. For instance:\n\n- \"en-GB\" for British English\n- \"es-ES\" for Spanish as spoken in Spain\n- \"pt-BR\" for Brazilian Portuguese\n- \"pt-PT\" for European Portuguese\n\nUnderstand that while the `lang` attribute assists in accessibility, user agents may not always recognize or act upon these subtags.\n\n### SEO Considerations\n\nServing content in multiple languages comes with SEO responsibilities. One common practice is to assign a *language-specific* URL for each version of your content. In addition to this, utilize human-readable URLs to effectively comminicate the language and the content topic/design.\n\nFor instance, use:\n- `example.com/en-US/about` for pages in American English.\n- `example.com/es-MX/sobre` for those in Mexican Spanish.\n\n### AI-Clearance Required\n\nThis technique requires further validation and clearance upon implementation as a lot is dependent on SEO constraints and localized content.",
+   "lang": "en",
+   "vocab": [
+    "SEO",
+    "HTML",
+    "Accessibility",
+    "Validation",
+    "URL"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what are semantic html tags and why are they important-html5-13",
+   "question": {
+    "fa": "What are _semantic HTML tags_ and why are they important?",
+    "en": "What are _semantic HTML tags_ and why are they important?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "html5"
+   ],
+   "quickAnswer": {
+    "fa": "**Semantic HTML tags** provide both structure and meaning to web content. They allow crawlers, browsers, and even assistive technologies to understand content better and present it more effectively. This approach improves accessibility and search engine optimization, making pages easier to maintain and understand.",
+    "en": "**Semantic HTML tags** provide both structure and meaning to web content. They allow crawlers, browsers, and even assistive technologies to understand content better and present it more effectively. This approach improves accessibility and search engine optimization, making pages easier to maintain and understand."
+   },
+   "steps": [],
+   "answerMd": "**Semantic HTML tags** provide both structure and meaning to web content. They allow crawlers, browsers, and even assistive technologies to understand content better and present it more effectively. This approach improves accessibility and search engine optimization, making pages easier to maintain and understand.\n\n### Benefits of Semantic Tags\n\n- **SEO and Accessibility**: Employing semantic tags improves your page's search engine ranking and ensures it's accessible to all users, including those with disabilities.\n\n- **Consistent Structure**: Semantic tags establish a cohesive layout, vital for large websites or platforms.\n\n- **Relevance to Bots and Crawlers**: Search engine algorithms dissect web pages more accurately when content is correctly labeled.\n\n- **Content Division**: Segregating content by their meaning makes the document more understandable and maintainable.\n\n### Common Semantic Tags\n\n- ``: A paragraph.\n- ` - `: Headings, with 1 (highest) to 6 (lowest) levels.\n- ` / `: Unordered or ordered list.\n- ``: List item inside a list.\n- ``: Anchor, used for links.\n- ``: An image.\n- `<figure> / <figcaption>`: For a figure such as an image, with accompanying caption.\n\n### Necessary vs. Optional Tags\n\nWhile essential tags like `<header>` and `<footer>` indicate crucial sections, many are optional based on the website's nature or the page's segregation needs. For example, a blog may require the `` tag, while a retail site might not.\n\nIn modern web development, the clear distinction offered by semantic tags is invaluable for quick comprehension and maintenance, yielding superior results for both users and developers.\n\n### Code Example: Before vs. After Semantic HTML\n\nConsider the before and after examples to see the impact of semantic tags.\n\n#### Before Semantic HTML\n\n```html\n\n    \n        Logo\n    \n    \n        Home\n        About\n        Contact\n    \n\n    \n        \n    \n    \n        Welcome\n        Some welcome text here.\n    \n\n    © 2022 Company Name\n\n```\n\n#### After Implementing Semantic Tags\n\n```html\n<header>\n    \n        Logo\n    \n    <nav>\n        Home\n        About\n        Contact\n    </nav>\n</header>\n\n<main>\n    <figure>\n        \n        <figcaption>A beautiful landscape</figcaption>\n    </figure>\n    <section>\n        Welcome\n        Some welcome text here.\n    </section>\n</main>\n\n<footer>\n    © 2022 Company Name\n</footer>\n```",
+   "lang": "en",
+   "vocab": [
+    "SEO",
+    "Semantic HTML",
+    "HTML",
+    "Accessibility"
+   ],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/html5-interview-questions",
+   "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTML"
+   ]
+  },
+  {
+   "id": "what is vue js and why would you use it-vue-0",
+   "question": {
+    "fa": "What is _Vue.js_ and why would you use it?",
+    "en": "What is _Vue.js_ and why would you use it?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**Vue.js** is a progressive JavaScript framework primarily used for building **user interfaces** and single-page applications. It is known for its adaptability, small file size, and the progressive learning curve.",
+    "en": "**Vue.js** is a progressive JavaScript framework primarily used for building **user interfaces** and single-page applications. It is known for its adaptability, small file size, and the progressive learning curve."
+   },
+   "steps": [],
+   "answerMd": "**Vue.js** is a progressive JavaScript framework primarily used for building **user interfaces** and single-page applications. It is known for its adaptability, small file size, and the progressive learning curve.\n\n### Key Features\n\n#### Virtual DOM\n\nVue uses a **virtual DOM**, which is a lightweight copy of the actual DOM. This approach significantly speeds up UI updates by only rendering what has changed.\n\n#### JS and Template Integration\n\nVue combines JavaScript and HTML-like templates for component structure. It then uses a **virtual DOM renderer** to update the actual DOM when data changes.\n\n#### Two-Way Data Binding\n\nVue offers **two-way data binding** using the `v-model` directive, where changes in the UI instantly reflect in the data model and vice versa.\n\n### Directives\n\nVue leverages **HTML directives** for actions, loops, and more. Examples include `v-if`, `v-for`, and `v-on`.\n\n### Integration with Major Front-End Tools\n\nVue pairs remarkably well with a broad array of front-end tools including:\n\n- **Webpack**: For asset bundling.\n- **Babel**: To transpile ES6.\n- **TypeScript**: For type-safety.\n- **ESLint**: For code linting.\n\n#### Let's look at the versioning and the stance on backward compatibility:\n\n- **Versioning Scheme**: Vue adheres to Semantic Versioning, making it easier for users to understand when there are breaking changes.\n\n- **Backward Compatibility**: While Vue places a strong emphasis on maintaining backward compatibility, it might introduce breaking changes in major releases. However, the Vue team assists users in the migration process, providing detailed documentation and migration paths.\n\n### Code Example: Bidirectional Data Binding\n\nHere is the Vue.js code:\n\n```vue\n<template>\n  \n    \n    Message is: {{ message }}\n  \n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      message: 'Hello Vue!'\n    }\n    }\n}\n</script>\n```",
+   "lang": "en",
+   "vocab": [
+    "DOM",
+    "Virtual DOM",
+    "Migration",
+    "HTML",
+    "TypeScript",
+    "Framework"
+   ],
+   "deepDives": [
+    "react-reconciliation-fiber"
+   ],
+   "visual": "react-render",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "how do you set up a project with vue js-vue-1",
+   "question": {
+    "fa": "How do you set up a project with _Vue.js_?",
+    "en": "How do you set up a project with _Vue.js_?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "To **initialize** a Vue.js project, utilize a **package manager** (npm or yarn) and the Vue CLI. This empowers you with tools like webpack and Babel, facilitates **incremental adoption**, and ensures best practices from the beginning.",
+    "en": "To **initialize** a Vue.js project, utilize a **package manager** (npm or yarn) and the Vue CLI. This empowers you with tools like webpack and Babel, facilitates **incremental adoption**, and ensures best practices from the beginning."
+   },
+   "steps": [],
+   "answerMd": "To **initialize** a Vue.js project, utilize a **package manager** (npm or yarn) and the Vue CLI. This empowers you with tools like webpack and Babel, facilitates **incremental adoption**, and ensures best practices from the beginning.\n\n### Steps for Project Setup\n\n1. **Install Vue CLI**:  \n   Run the specified command in a terminal.\n\n   - **npm**: `npm install -g @vue/cli`\n   - **Yarn**: `yarn global add @vue/cli`\n\n2. **Create a Vue Project**:  \n   Generate a new project using Vue CLI.\n\n   ```bash\n   vue create my-vue-app\n   ```\n\n   Select a default preset or **customize** the setup based on the project's requirements. After this, navigate into your project folder.\n\n3. **Project Structure**:  \n   Vue CLI sets up the project with a recommended structure including `public`, `src`, and various configuration files.\n\n4. **Development Server**:  \n   Boot up a local server to dynamically view project changes.\n\n   ```bash\n   npm run serve\n   ```\n\n5. **Production Build**:  \n   Generate an optimized, minified, and production-ready build.\n\n   ```bash\n   npm run build\n   ```\n\n6. **Project Configuration**:  \n   Manage project settings via `package.json` and `vue.config.js`. The latter aids in customizing build and development setups.\n\n7. **Code Editor Integration**:  \n   Use Vetur plugin for advanced Vue tooling support in VS Code. Other code editors might benefit from relevant extensions.\n\n8. **Ready for Development**:  \n   You are all set! Start building your Vue app.\n\n### Configurable Features\n\nThe Vue CLI allows selection from various **application features** during the initial setup. This ensures a starting point that is tailored to the project’s needs.\n\nFor instance, you can span from the basic setup like:\n\n- **Babel**: Employ the cutting-edge JavaScript features that are not completely standardized yet.\n- **Linter**: Keep code quality in check with ESLint.\n\nTo the advanced setup, which might include features such as:\n\n- **Vue Router**: For handling routing within the application.\n- **Vuex**: For state management, specifically in larger applications.\n- **CSS Pre-processors**: Integrate with Sass, Less, or Stylus for enhanced stylesheet capabilities.\n- **Unit Testing**: Incorporate unit tests often alongside tools like Jest or Mocha.\n\n### Vue CLI 5 Upgrades\n\nDepending on the **Vue CLI version** you're working with, the provided commands and available features might differ. Always leverage the most recent Vue CLI version.\n\nTo ensure **smooth transitions** between versions and harness the newest Vue capabilities, precise guidance on version-specific features and upgrades can be found in the official Vue CLI documentation.",
+   "lang": "en",
+   "vocab": [
+    "CSS",
+    "JSON"
+   ],
+   "deepDives": [],
+   "visual": "sql-query",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "what are vue js components and how do you use them-vue-3",
+   "question": {
+    "fa": "What are _Vue.js_ _components_ and how do you use them?",
+    "en": "What are _Vue.js_ _components_ and how do you use them?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "**Vue.js components** are reusable, self-contained elements that consist of three main parts: a **template**, **script**, and **style**. These encapsulated building blocks enable a clear separation of concerns within your web application. Efficiently constructed components can significantly contribute to the maintainability and scalability of your Vue app.",
+    "en": "**Vue.js components** are reusable, self-contained elements that consist of three main parts: a **template**, **script**, and **style**. These encapsulated building blocks enable a clear separation of concerns within your web application. Efficiently constructed components can significantly contribute to the maintainability and scalability of your Vue app."
+   },
+   "steps": [],
+   "answerMd": "**Vue.js components** are reusable, self-contained elements that consist of three main parts: a **template**, **script**, and **style**. These encapsulated building blocks enable a clear separation of concerns within your web application. Efficiently constructed components can significantly contribute to the maintainability and scalability of your Vue app.\n\nIn component-based **development**, a larger application is broken down into smaller, interconnected units—the components. Each component focuses on one specific task, such as presenting the user interface for an email, a customer, or a form. This modular structure streamlines the development process and enhances code reusability.\n\n### Anatomy of a Vue Component\n\nHere's the step by step:\n\n#### 1. Template\n\nThe template is the visual representation of a component, typically constructed using HTML. You can embed Vue directives, attributes, and expressions, allowing for dynamic rendering based on component data and logic.\n\n##### Example: Vue Component Template\n\n```html\n\n<template>\n  \n    {{ title }}\n    {{ content }}\n    Toggle Content\n  \n</template>\n```\n\n#### 2. Script\n\nThe script provides the component's behavior and data logic. It defines the Vue object options such as data, methods, computed properties, and watchers.\n\n##### Example: Vue Component Script\n\n```html\n\n<script>\nexport default {\n  data() {\n    return {\n      title: 'Component Title',\n      content: 'Dynamic content here!',\n      isContentVisible: true,\n    };\n  },\n  methods: {\n    toggleContentVisibility() {\n      this.isContentVisible = !this.isContentVisible;\n    },\n  },\n};\n</script>\n```\n\n#### 3. Style\n\nThe style section allows for component-specific CSS (or other pre-processed styles like SASS or LESS) encapsulation, preventing style bleed and conflicts across different parts of your application.\n\n##### Example: Vue Component Style\n\n```html\n\n<style scoped>\nh1 {\n  font-size: 1.5em;\n  color: #333;\n}\np {\n  color: darkslategray;\n  font-size: 1em;\n}\n</style>\n```\n\n### Registering Components\n\nThere are multiple ways to register Vue components:\n\n1. **Globally Registered Components**: Perfect for app-wide and frequent usage. Quickly added using Vue's `Vue.component` method.\n\n   Example:\n\n    ```javascript\n    Vue.component('my-global-component', {\n      // Component options\n    });\n    ```\n\n2. **Locally Registered Components**: Best for encapsulated, single-file components. Import and declare in a parent component.\n\n   Example:\n\n   ```javascript\n   import MyBaseComponent from './components/MyBaseComponent.vue';\n\n   export default {\n     components: {\n       'my-local-base-component': MyBaseComponent,\n     },\n   };\n   ```\n\n3. **Automatically Imported Components**: Offers on-the-fly component import. Ideal for tree-shaking and smaller bundle sizes.\n\n   Example:\n\n   ```javascript\n   async function loadGloballyRegisteredComponents() {\n     const { MyGlobalComponent } = await import('./components/MyGlobalComponent.vue');\n   }\n   ```\n\n4. **Component Registration via CLI or Build Tools**: Benefit from Vue's build tools and more streamlined workflows.\n\n   Example:\n\n    ```javascript\n    import MyLocalComponent from './components/MyLocalComponent.vue';\n\n    // In the build setup\n    Vue.component('my-local-component', MyLocalComponent);\n    ```\n\n### Practical Component-Driven Development\n\n1. **Code Reusability**: A well-designed and atomic component library ensures code efficiency and reusability.\n\n2. **Collaborative Development**: Parallel development and team collaboration are facilitated as each team member can work on different components independently.\n\n3. **Clear Code Structure**: Component-based development promotes a clear, self-documenting code structure, making onboarding and maintenance more manageable.\n\n4. **Improved Code Quality**: Smaller, isolated components are easier to test, reducing the potential for bugs or unexpected behavior.\n\n5. **Enhanced Project Scalability**: As your app grows, you can integrate new features and scale more seamlessly with the help of components.",
+   "lang": "en",
+   "vocab": [
+    "Tree",
+    "HTML",
+    "CSS"
+   ],
+   "deepDives": [],
+   "visual": "load-balance",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "explain the virtual dom in vue js-vue-6",
+   "question": {
+    "fa": "Explain the _virtual DOM_ in _Vue.js_.",
+    "en": "Explain the _virtual DOM_ in _Vue.js_."
+   },
+   "difficulty": "senior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "The **Virtual DOM** in Vue.js acts as an intermediary layer between the actual DOM and the Vue.js component's in-memory representation. Vue.js uses a **differencing algorithm** known as Dynamic Update to match the Virtual DOM to the actual DOM, leading to minimal, efficient, and real-time updates.",
+    "en": "The **Virtual DOM** in Vue.js acts as an intermediary layer between the actual DOM and the Vue.js component's in-memory representation. Vue.js uses a **differencing algorithm** known as Dynamic Update to match the Virtual DOM to the actual DOM, leading to minimal, efficient, and real-time updates."
+   },
+   "steps": [],
+   "answerMd": "The **Virtual DOM** in Vue.js acts as an intermediary layer between the actual DOM and the Vue.js component's in-memory representation. Vue.js uses a **differencing algorithm** known as Dynamic Update to match the Virtual DOM to the actual DOM, leading to minimal, efficient, and real-time updates.\n\n### Key Concepts\n\n1. **Declarative UI**: Vue.js employs declarative UI, allowing developers to state \"what\" should be displayed, and abstracts the \"how\" regarding DOM updates, using the Virtual DOM as a tool for efficiency.\n\n2. **Retention of State**: The Virtual DOM serves as a memory bank, preserving component states and rendering them to the actual DOM when necessary.\n\n3. **Batching**: Vue.js strategically groups multiple DOM updates from a single \"tick\" in a queue for optimum performance, regularly updating the real DOM only as needed based on queue contents.\n\n4. **Performance Optimization**: Through the efficient use of the Virtual DOM for DOM updates, Vue.js minimizes redundant re-renders and ensures that the cost of updates is proportional to the actual changes.\n\n5. **Cross-Platform Support**: As both the real DOM and the Virtual DOM have unified interfaces, components remain platform-independent, and developers can transition between different platforms seamlessly.\n\n### Advantages\n\n- **Performance**: Vue.js leverages the Virtual DOM to optimize and streamline DOM updates, resulting in faster user interfaces.\n   \n- **Ease of Use**: By abstracting the complexities associated with direct DOM manipulation, Vue.js empowers developers to focus on the application's logic and presentation layer.\n\n### Code Example: Virtual DOM\n\nHere is the JavaScript code:\n\n```javascript\n// Initial Array\nconst numbers = [1, 2, 3, 4, 5];\n\n// Changing Array\nnumbers[2] = 7;\n\n// Ensured updated Array\nconsole.log(numbers);  // [1, 2, 7, 4, 5]\n```\n\nIn this example, even though we update an element in the `numbers` array directly without using any Vue.js reactivity feature, the console log still prints out the modified array. This behavior stems from Vue.js reactivity and its reliance on the Virtual DOM for enhanced efficiency.",
+   "lang": "en",
+   "vocab": [
+    "DOM",
+    "Virtual DOM",
+    "Queue",
+    "Cross-Platform"
+   ],
+   "deepDives": [
+    "react-reconciliation-fiber"
+   ],
+   "visual": "react-render",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  },
+  {
+   "id": "what are watchers in vue js-vue-13",
+   "question": {
+    "fa": "What are _watchers_ in _Vue.js_?",
+    "en": "What are _watchers_ in _Vue.js_?"
+   },
+   "difficulty": "senior",
+   "tags": [
+    "vue"
+   ],
+   "quickAnswer": {
+    "fa": "In Vue.js, **watchers are key features** that track data changes and enable developers to execute specific logic or tasks in response to those changes.",
+    "en": "In Vue.js, **watchers are key features** that track data changes and enable developers to execute specific logic or tasks in response to those changes."
+   },
+   "steps": [],
+   "answerMd": "In Vue.js, **watchers are key features** that track data changes and enable developers to execute specific logic or tasks in response to those changes.\n\nThese watchers are defined inside Vue components and serve as an indispensable tool for building reactive behavior. They work in tandem with the Vue instance to monitor specific data properties, methods, or even component options.\n\n### How Are Watchers Defined?\n\nDevelopers can set up watchers in two primary ways:\n\n1. **Declared in the Watch Option**  \n    This option is preferred for more complex watcher functions that respond to multiple data sources or need additional parameters.\n\n    ```javascript\n    export default {\n      data() {\n        return {\n          items: [],\n          totalCount: 0\n        };\n      },\n      watch: {\n        items: {\n          deep: true,  // Detect changes at nested levels, if items are objects or arrays.\n          immediate: true, // Call the handler immediately once the component is created.\n          handler(newItems, oldItems) {\n            // Update the total count on item changes.\n            this.totalCount = newItems.length;\n          }\n        }\n      }\n    };\n    ```\n\n2. **Using a Method to Bypass Limitations**  \n    By using a more conventional method, Vue developers can watch computed properties, for example. They can also handle multiple related data sources if required.\n\n    ```javascript\n    export default {\n      data() {\n        return {\n          firstName: '',\n          lastName: ''.\n          fullName: ''\n        }\n      },\n      watch: {\n        firstName(val) {\n          this.fullName = val + ' ' + this.lastName;\n        },\n        lastName(val) {\n          this.fullName = this.firstName + ' ' + val;\n        }\n      }\n    };\n    ```\n\n### Performance Considerations\n\nWhile watchers are highly effective mechanisms for managing reactivity, unnecessary or excessive watchers can lead to performance bottlenecks in bigger Vue.js projects.\n\nDevelopers can use several techniques to optimize watchers and minimize their impact:\n\n-   **Leverage Computed Properties**: Instead of watching the same data value for changes, use computed properties to derive values and update automatically when dependent data changes.\n-   **Batch Updates When Possible**: If multiple changes to a data source would cause many watcher updates, Vue.js can batch these updates. But be sure to verify if the app architecture supports this behavior.\n-   **Reduce Unnecessary Updates**: Tools like `Immediate: true` in watchers ensure the handler is called once when the component loads, but use this option only when necessary.",
+   "lang": "en",
+   "vocab": [],
+   "deepDives": [],
+   "visual": "css-cascade",
+   "source": "Devinterview-io/vue-interview-questions",
+   "sources": [
+    "https://vuejs.org/guide/introduction"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2447 @@
+[
+ {
+  "en": "How to do logging in React Native?",
+  "q": "لاگ‌زدن در React Native چطور انجام می‌شود؟",
+  "qa": "می‌توانید از `console.log`، `console.warn` و… استفاده کنید؛ از React Native v0.29 به بعد با این دستورات لاگ‌ها را در کنسول می‌بینید:"
+ },
+ {
+  "en": "What is the difference between `useEffect` and `useLayoutEffect` in React?",
+  "q": "تفاوت useEffect و useLayoutEffect چیست؟",
+  "qa": "هر دو بعد از رندر اجرا می‌شوند اما در **زمان اجرا نسبت به paint** فرق دارند: `useEffect` بعد از commit و paint اجرا می‌شود؛ `useLayoutEffect` هم‌زمان و قبل از paint برای اندازه‌گیری‌های DOM."
+ },
+ {
+  "en": "What is reconciliation in React?",
+  "q": "reconciliation در React چیست؟",
+  "qa": "**Reconciliation** فرایند رندر-phase ری‌اکت است برای جور‌کردن درخت عنصر تازه با قبلی؛ نوع، جایگاه و key تعیین می‌کند چه چیزی حفظ شود."
+ },
+ {
+  "en": "What is virtual DOM in React?",
+  "q": "virtual DOM در React چیست؟",
+  "qa": "«Virtual DOM» در React درختی از آبجکت‌های ساده‌ی JS (elementهای ری‌اکت) است که ظاهر UI را توصیف می‌کند — کپی واقعی DOM نیست؛ با تغییر state/props دوباره محاسبه می‌شود."
+ },
+ {
+  "en": "Explain what React hydration is",
+  "q": "hydration در React را توضیح دهید.",
+  "qa": "**Hydration** فاز کلاینت است که درخت React را به HTML رندر‌شده از سرور می‌چسباند؛ event handlerها را وصل و markup موجود را تعاملی می‌کند."
+ },
+ {
+  "en": "How do you debug React applications?",
+  "q": "اپ‌های React را چطور دیباگ می‌کنید؟",
+  "qa": "از **React Developer Tools** برای بازرسی درخت کامپوننت و پروفایل commitها استفاده کنید؛ breakpoints مرورگر و ابزارهای شبکه برای رفتار زمان اجرا؛ StrictMode توسعه‌ای برای آشکار‌کردن رندرهای ناخالص."
+ },
+ {
+  "en": "What is React Fiber and how is it an improvement over the previous approach?",
+  "q": "React Fiber چیست و چه بهبودی نسبت به رویکرد قبلی است؟",
+  "qa": "**Fiber** معماری جدید reconciliation ری‌اکت از نسخه ۱۶ است؛ هر Fiber یک واحد کار است که ری‌اکت را قابل‌وقفه و اولویت‌پذیر می‌کند."
+ },
+ {
+  "en": "Why does React recommend against mutating state?",
+  "q": "چرا ری‌اکت توصیه می‌کند state را mutate نکنید؟",
+  "qa": "ری‌اکت state را snapshot فقط‌خواندنی می‌داند؛ mutation در جا همان مرجع را نگه می‌دارد و bailout، memo و Effectها را دور می‌زند."
+ },
+ {
+  "en": "What is the history behind React evolution?",
+  "q": "تاریخچه‌ی تحول React چیست؟",
+  "qa": "تاریخچه از ساخت **XHP** در ۲۰۱۰ شروع شد — افزونه‌ای PHP که قطعات XML را معتبر می‌کرد — و تا ساخته‌شدن نمونه‌ی اولیه **FaxJS** و عرضه‌ی عمومی React در ۲۰۱۳ ادامه یافت."
+ },
+ {
+  "en": "What are the major features of React?",
+  "q": "ویژگی‌های اصلی React کدام‌اند؟",
+  "qa": "React با ویژگی‌هایی مثل کامپوننت‌ها، DOM مجازی، declarative بودن، Hooks و React 19 یکی از محبوب‌ترین کتابخانه‌های UI شده است."
+ },
+ {
+  "en": "How does ReactJS work behind the scenes?",
+  "q": "ReactJS پشت صحنه چطور کار می‌کند؟",
+  "qa": "React ساده به‌نظر می‌رسد ولی پشت صحنه عملیات پیچیده‌ای برای به‌روزرسانی بهینه‌ی UI انجام می‌دهد: رندر، reconciliation و commit."
+ },
+ {
+  "en": "What are Server Actions in React 19?",
+  "q": "Server Actions در React 19 چیست؟",
+  "qa": "**Server Actions** اجازه می‌دهند مستقیم از کامپوننت‌های کلاینت تابع سمت سرور را صدا بزنید — بدون نوشتن endpoint جداگانه."
+ },
+ {
+  "en": "What is Streaming SSR and how does React 18+ improve it?",
+  "q": "Streaming SSR چیست و React 18 به بعد چه بهبودی داد؟",
+  "qa": "**Streaming SSR** یعنی ارسال HTML به‌صورت تکه‌تکه هم‌زمان با تولید؛ React 18+ این را با Suspense به‌شکل چشمگیری بهتر می‌کند."
+ },
+ {
+  "en": "What is CRA and its benefits?",
+  "q": "CRA چیست و سودهایش کدام‌اند؟",
+  "qa": "**⚠️ قدیمی:** Create React App دیگر فعالانه نگهداری نمی‌شود و از ۲۰۲۴ به بعد برای پروژه‌های جدید توصیه نمی‌شود."
+ },
+ {
+  "en": "Can I use javascript urls in react16.9?",
+  "q": "آیا در React 16.9 می‌توان از javascript: URLs استفاده کرد؟",
+  "qa": "**⚠️ منسوخ:** از React 19 به بعد، `javascript:` URLها دیگر پشتیبانی نمی‌شوند و ممکن است خطا بدهند. در React 16.9 فقط هشدار در کنسول ثبت می‌شد چون این URLها آسیپ‌پذیری XSS دارند."
+ },
+ {
+  "en": "What are the differences between Functional and Class Components?",
+  "q": "تفاوت کامپوننت‌های تابعی و کلاسی چیست؟",
+  "qa": "دو راه ساخت کامپوننت در React وجود دارد؛ کلاسی با `render` و چرخه‌ی حیات، تابعی ساده‌تر و امروز استاندارد — مخصوصاً با Hooks."
+ },
+ {
+  "en": "What is the benefit of strict mode?",
+  "q": "سود StrictMode چیست؟",
+  "qa": "`<StrictMode>` در این موارد کمک می‌کند: ۱) پیدا‌کردن باگ‌های رندر ناخالص (دوبار رندر) ۲) پیدا‌کردن فراموشی cleanup در effectها (اجرای دوباره‌ی effects)."
+ },
+ {
+  "en": "What are the guidelines to be followed for writing reducers?",
+  "q": "قواعد نوشتن reducerها چیست؟",
+  "qa": "دو قاعده‌ی اصلی: ۱) reducer باید **pure** باشد و state را mutate نکند — ورودی یکسان همیشه خروجی یکسان. ۲) در زمان رندر اجرا می‌شوند مشابه state updaterها."
+ },
+ {
+  "en": "What is an updater function? Should an updater function be used in all cases?",
+  "q": "updater function چیست؟ آیا همیشه باید استفاده شود؟",
+  "qa": "**Updater function** شکلی از setState است که به‌جای مقدار، **تابع** می‌گیرد و state قبلی را می‌بیند: `setCount(prev => prev + 1)` — قابل‌اعتماد و پیش‌بینی‌پذیر."
+ },
+ {
+  "en": "What are the best practices for using React Hooks?",
+  "q": "بهترین روش‌های استفاده از React Hooks چیست؟",
+  "qa": "قواعد هوک‌ها را رعایت کنید: فقط در بالاترین سطح، فقط از کامپوننت‌های تابعی یا custom hookها؛ وابستگی‌ها را کامل بنویسید و cleanup را فراموش نکنید."
+ },
+ {
+  "en": "What are useFormState and useFormStatus hooks?",
+  "q": "هوک‌های useFormState و useFormStatus چیستند؟",
+  "qa": "این دو هوک مدیریت فرم را با Server Actions در React 19 ساده می‌کنند. `useFormState` وضعیت فرم و پاسخ سرور را مدیریت می‌کند؛ `useFormStatus` وضعیت در انتظارِ فرم را می‌دهد."
+ },
+ {
+  "en": "What are dynamic routes and what are route parameters?",
+  "q": "routeهای داینامیک و route parameter ها چیستند؟",
+  "qa": "**روت داینامیک** مسیری است که به‌جای مقدار ثابت، **پارامتر مسیر** دارد تا یک تعریف، چند URL را بپوشاند؛ **پارامترها** بخش‌های نام‌دار با پیشوند `:` در React Router هستند و مقدارشان از URL استخراج می‌شود."
+ },
+ {
+  "en": "What are the different phases of component lifecycle?",
+  "q": "فازهای مختلف چرخه‌ی حیات کامپوننت کدام‌اند؟",
+  "qa": "سه فاز دارد: **Mounting** (آماده‌شدن در DOM: از constructor تا componentDidMount)، **Updating** (به‌روزرسانی props/state) و **Unmounting** (حذف از DOM)."
+ },
+ {
+  "en": "What are the lifecycle methods of React?",
+  "q": "متدهای چرخه‌ی حیات React کدام‌اند؟",
+  "qa": "قبل از React 16.3: componentWillMount، componentDidMount، componentWillReceiveProps، shouldComponentUpdate، componentWillUpdate، componentDidUpdate و componentWillUnmount — بعد از 16.3 برخی منسوخ و جایگزین شدند."
+ },
+ {
+  "en": "What is the purpose of using super constructor with props argument?",
+  "q": "هدف استفاده از super constructor با آرگومان props چیست؟",
+  "qa": "constructor کلاس فرزند تا `super()` صدا زده نشود به `this` دسترسی ندارد؛ پاس‌دادن props دلیلش دسترسی به `this.props` در constructor فرزند است."
+ },
+ {
+  "en": "How to set state with a dynamic key name?",
+  "q": "چطور state را با کلید داینامیک ست کنید؟",
+  "qa": "با ES6 یا Babel از **computed property names** استفاده می‌شود: `this.setState({ [event.target.id]: event.target.value })`"
+ },
+ {
+  "en": "What are error boundaries in React v16?",
+  "q": "error boundary ها در React 16 چیستند؟",
+  "qa": "**نکته:** از React 16 معرفی شدند و در ۱۸/۱۹ هم معتبرند. **Error boundary**ها کامپوننت‌هایی‌اند که خطاهای زیردرخت را می‌گیرند، لاگ می‌کنند و fallback نشان می‌دهند."
+ },
+ {
+  "en": "Is it good to use `setState()` in `componentWillMount()` method?",
+  "q": "استفاده از setState در componentWillMount خوب است؟",
+  "qa": "**⚠️ منسوخ:** `componentWillMount()` در React 17+ حذف شده و فقط برای اپ‌های قدیمی مرتبط است. از نظر فنی هم setState اینجا ایمن نبود چون رندر سمت سرور دوباره اجرا می‌شد."
+ },
+ {
+  "en": "What is the difference between constructor and getInitialState?",
+  "q": "تفاوت constructor و getInitialState چیست؟",
+  "qa": "با کلاس‌های ES6 در **constructor** مقدار‌دهی می‌کنید؛ `getInitialState()` فقط مال `React.createClass()` قدیمی است."
+ },
+ {
+  "en": "Does the statics object work with ES6 classes in React?",
+  "q": "آیا statics با کلاس‌های ES6 در React کار می‌کند؟",
+  "qa": "نه، `statics` فقط مال `React.createClass()` است؛ در کلاس‌های ES6 مستقیم static می‌نویسید."
+ },
+ {
+  "en": "How to create react class components without ES6?",
+  "q": "چطور بدون ES6 کامپوننت کلاسی React ساخت؟",
+  "qa": "از ماژول `create-react-class` استفاده می‌شود؛ defaultProps با `getDefaultProps()` و state اولیه با `getInitialState()` تعریف می‌شود."
+ },
+ {
+  "en": "What are React Mixins?",
+  "q": "Mixins در React چیستند؟",
+  "qa": "**⚠️ منسوخ:** Mixins میراث قدیمی‌اند و در React مدرن استفاده نمی‌شوند؛ قبلاً برای اشتراک منطق با `React.createClass()` بودند ولی مشکلاتی مثل تداخل نام و ردیابی دشوار state داشتند."
+ },
+ {
+  "en": "How do you decide between using React state, context, and external state managers?",
+  "q": "بین state ری‌اکت، Context و state manager بیرونی چطور انتخاب می‌کنید؟",
+  "qa": "ابزار را با نوع state تطبیق دهید: `useState`/`useReducer` برای state محلی و اول lift state up؛ Context فقط مقدار را در زیردرخت می‌برد؛ ابزارهای خارجی برای state پیچیده‌ی مشترک."
+ },
+ {
+  "en": "How do you handle asynchronous data loading in React applications?",
+  "q": "بارگذاری ناهم‌زمان داده در اپ‌های React چطور انجام می‌شود؟",
+  "qa": "اگر فریم‌ورک API بارگذاری دارد استفاده کنید؛ برای کش کلاینت TanStack Query، SWR یا RTK Query — dedupe، retry و refetch به پیکربندی ابزار بستگی دارد."
+ },
+ {
+  "en": "How would you optimize the performance of React contexts to reduce rerenders?",
+  "q": "عملکرد Contextها را چطور بهینه می‌کنید تا rerender کم شود؟",
+  "qa": "Consumerها هر بار که `value` provider طبق `Object.is` عوض شود رندر می‌شوند؛ نه `memo` نه Compiler جلویش را نمی‌گیرد. مقدار provider را پایدار نگه دارید، داده‌های متفاوت را به Contextهای جدا ببرید و dispatch پایدار را جدا کنید."
+ },
+ {
+  "en": "What are the benefits of using hooks in React?",
+  "q": "سودهای استفاده از hooks در React چیست؟",
+  "qa": "هوک‌ها به کامپوننت‌های تابعی state، context، ref و effects را بدون کلاس می‌دهند؛ Custom Hookها منطق را بدون wrapper می‌سازند. React 19 هم `useActionState` و `useOptimistic` اضافه کرد و `use(resource)` API جداگانه‌ای است نه هوک."
+ },
+ {
+  "en": "What are the rules of React hooks?",
+  "q": "قواعد React hooks کدام‌اند؟",
+  "qa": "فقط در بالاترین سطح کامپوننت تابعی یا custom hook صدا زده شوند — نه در حلقه، شرط، تابع تو در تو یا بعد از return زودهنگام. استثنا: API `use` که هوک نیست و شرطی مجاز است ولی در try/catch نمی‌آید."
+ },
+ {
+  "en": "What is React? Describe the benefits of React",
+  "q": "React چیست؟ سودهایش را توضیح دهید.",
+  "qa": "React کتابخانه‌ی متن‌باز نگه‌داری‌شده توسط Meta و جامعه است برای ساخت UI از کامپوننت‌ها؛ توصیف‌های declarative را با rendererهایی مثل React DOM و React Native به تغییرات واقعی تبدیل می‌کند."
+ },
+ {
+  "en": "What is the purpose of the `key` prop in React?",
+  "q": "هدف key prop در React چیست؟",
+  "qa": "`key` به ری‌اکت می‌گوید هر فرزند لیست کدام آیتم داده است تا state درست حفظ و DOM درست جابه‌جا شود؛ فقط بین خواهرها یکتا لازم است، نه سراسری. تغییر key راه استاندارد **ریست state** کامپوننت است."
+ },
+ {
+  "en": "Can you describe the useMemo() Hook?",
+  "q": "هوک useMemo() را توضیح می‌دهید؟",
+  "qa": "`useMemo` برای **بهینه‌سازی عملکرد** است: نتیجه‌ی محاسبات سنگین را بین رندرها memo می‌کند و فقط وقتی وابستگی‌ها عوض شد دوباره محاسبه می‌کند."
+ },
+ {
+  "en": "Can Hooks be used in class components?",
+  "q": "آیا در کامپوننت‌های کلاسی می‌شود هوک به‌کار برد؟",
+  "qa": "نه، هوک‌ها مخصوص کامپوننت‌های تابعی طراحی شده‌اند؛ چون به ترتیب فراخوانی در رندر وابسته‌اند و کلاس‌ها این مدل را ندارند."
+ },
+ {
+  "en": "How is useMemo different from useCallback?",
+  "q": "useMemo چه تفاوتی با useCallback دارد؟",
+  "qa": "در جدول: `useMemo` **نتیجه‌ی محاسبه** را memo می‌کند؛ `useCallback` خودِ **تابع** را — برای جلوگیری از رندر بی‌دلیلِ فرزندهایی که callback می‌گیرند."
+ },
+ {
+  "en": "What is the useId hook and when should you use it?",
+  "q": "هوک useId چیست و کِی استفاده می‌شود؟",
+  "qa": "`useId` از React 18 آمده و **شناسه‌ی یکتای پایدار** بین رندر سرور و کلاینت می‌دهد؛ عمدتاً برای ویژگی‌های دسترس‌پذیری مثل `for` و `aria-*`."
+ },
+ {
+  "en": "What are the differences between useEffect and useEvent (experimental)?",
+  "q": "تفاوت useEffect و useEvent (آزمایشی) چیست؟",
+  "qa": "`useEvent` هوکی **آزمایشی** است برای ساختن **هندلرهای رویداد پایدار** که همیشه آخرین props/state را می‌بینند بدون آنکه effect را دوباره فعال کنند — هنوز در React پایدار نشده."
+ },
+ {
+  "en": "What are the key features introduced in React 18?",
+  "q": "قابلیت‌های کلیدی معرفی‌شده در React 18 کدام‌اند؟",
+  "qa": "React 18 در مارس ۲۰۲۲ منتشر شد: **concurrent rendering**، automatic batching، Transitions، Suspense روی سرور و hydrateRoot/selective hydration."
+ },
+ {
+  "en": "What is the React Compiler (React Forget)?",
+  "q": "React Compiler (React Forget) چیست؟",
+  "qa": "**React Compiler** (پیش‌تر Forget) خودکار کامپوننت‌ها را با memoization لازم بهینه می‌کند و نیاز دستی به `useMemo`/`useCallback` را حذف می‌کند."
+ },
+ {
+  "en": "What is `renderToPipeableStream` and how is it different from `renderToString`?",
+  "q": "renderToPipeableStream چیست و چه تفاوتی با renderToString دارد؟",
+  "qa": "`renderToPipeableStream` API استریم SSR در React 18+ از `react-dom/server` است؛ HTML را تکه‌تکه می‌فرستد تا محتوا زودتر دیده شود و React بتواند مرزهای Suspense را هماهنگ کند — renderToString کل خروجی را یک‌جا و هم‌زمان می‌سازد."
+ },
+ {
+  "en": "How would you create a reusable Context?",
+  "q": "چطور یک Context قابل استفاده‌مجدد می‌سازید؟",
+  "qa": "یک **Context قابل استفاده‌مجدد** ساخت `createContext`، Provider (با state/logic محلی) و هوک مصرف را در یک ماژول جمع می‌کند و آبجکت خام Context را از مصرف‌کننده پنهان می‌کند."
+ },
+ {
+  "en": "What is the difference between client state and server state?",
+  "q": "تفاوت client state و server state چیست؟",
+  "qa": "**Client state** کاملاً در مرورگر زندگی می‌کند و مالکش UI است؛ **Server state** روی سرور زندگی می‌کند و با بک‌اند هم‌گام می‌شود — کش، dedupe و staleness دارد."
+ },
+ {
+  "en": "How would you structure Redux in a large application?",
+  "q": "Redux را در یک اپ بزرگ چطور ساختار می‌دهید؟",
+  "qa": "رویکرد توصیه‌شده (و طراحی Redux Toolkit) ساختار **feature folder / ducks** است نه تفکیک بر اساس نوع فنی (`actions/`، `reducers/`)."
+ },
+ {
+  "en": "How do you handle cross-slice communication?",
+  "q": "ارتباط بین sliceها را چطور هندل می‌کنید؟",
+  "qa": "چون هر `createSlice` فقط بخش خودش را مدیریت می‌کند، برای واکنش به اکشن‌های slice دیگر از `extraReducers` یا thunk استفاده می‌شود."
+ },
+ {
+  "en": "What is the difference between BrowserRouter, HashRouter, and MemoryRouter?",
+  "q": "تفاوت BrowserRouter و HashRouter و MemoryRouter چیست؟",
+  "qa": "هر سه پیاده‌سازی آماده‌ی `<Router>` از `react-router-dom` هستند: Browser از History API واقعی، Hash از بخش `#` آدرس (بدون تنظیم سرور)، Memory کاملاً در حافظه (برای تست و محیط‌های بدون URL)."
+ },
+ {
+  "en": "How do you implement protected/private routes?",
+  "q": "routeهای محافظت‌شده/خصوصی را چطور پیاده می‌کنید؟",
+  "qa": "روت محافظت‌شده فقط وقتی محتوا را رندر می‌کند که کاربر شرط را دارد (معمولاً احراز هویت) وگرنه به `/login` ریدایرکت می‌کند؛ در React Router معمولاً با کامپوننت wrapper و `<Navigate>`."
+ },
+ {
+  "en": "How do you handle 404 / Not Found routes?",
+  "q": "routeهای 404 را چطور هندل می‌کنید؟",
+  "qa": "React Router مسیرها را از بالا به پایین/خاص‌ترین اول جور می‌کند؛ پس مسیر catch-all با `path=\"*\"` در آخر، هر URL بدون تطابق را می‌گیرد — معادل v6+ همان رفتار است."
+ },
+ {
+  "en": "What are loaders, actions, and data APIs in modern React Router?",
+  "q": "loaders و actions و data API ها در React Router مدرن چیستند؟",
+  "qa": "از React Router v6.4 به بعد **data APIها** عرضه شد (`createBrowserRouter`، `loader`، `action`، `useLoaderData`، `useActionData`، `useFetcher`) که واکشی و تغییر داده را به سطح router می‌برد."
+ },
+ {
+  "en": "How do query parameters work?",
+  "q": "query parameter ها چطور کار می‌کنند؟",
+  "qa": "پارامترهای جست‌وجو بخش `?key=value&key2=value2` از URL است؛ برخلاف route params (بخش مسیر)، در React Router با `useSearchParams` خوانده و ست می‌شوند."
+ },
+ {
+  "en": "Why are String Refs legacy?",
+  "q": "چرا String Refs میراثی است؟",
+  "qa": "اگر با ری‌اکت قدیمی کار کرده باشید، `ref={'textInput'}` و دسترسی با `this.refs.textInput` را به یاد دارید — String Refs منسوخ شد چون باعث مشکلات ترکیب‌پذیری و عملکرد می‌شد؛ امروز callback ref یا `createRef`/`useRef` است."
+ },
+ {
+  "en": "How are error boundaries handled in React v15?",
+  "q": "error boundary ها در React v15 چطور هندل می‌شدند؟",
+  "qa": "**⚠️ قدیمی:** این سوال فقط جنبه‌ی تاریخی دارد؛ React v15 خیلی قدیمی است (۲۰۱۶) و error boundary اصلاً نداشت — خطا کل درخت را می‌انداخت."
+ },
+ {
+  "en": "What are the lifecycle methods going to be deprecated in React v16?",
+  "q": "کدام lifecycle method ها در React 16 منسوخ شدند؟",
+  "qa": "**⚠️ کاملاً منسوخ:** این متدها از React 17+ حذف شده‌اند: componentWillMount، componentWillReceiveProps و componentWillUpdate — به‌جایشان UNSAFE_ و گزینه‌های امن معرفی شد."
+ },
+ {
+  "en": "How to listen to state changes?",
+  "q": "تغییرات state را چطور گوش می‌دهید؟",
+  "qa": "متد `componentDidUpdate` هنگام تغییر state صدا زده می‌شود؛ مقایسه‌ی state و props قبلی با فعلی می‌گوید آیا تغییر معنادار بوده است."
+ },
+ {
+  "en": "How to use TypeScript in `create-react-app` application?",
+  "q": "TypeScript را در اپ create-react-app چطور استفاده می‌کنید؟",
+  "qa": "از react-scripts@3.3.0 به بعد می‌توانید با `--template [template-name]` اپ جدید بسازید: `npx create-react-app my-app --template typescript`."
+ },
+ {
+  "en": "Why should not call setState in componentWillUnmount?",
+  "q": "چرا نباید در componentWillUnmount setState کرد؟",
+  "qa": "چون بعد از unmount، کامپوننت هرگز دوباره mount نمی‌شود؛ setState در آن لحظه بی‌معنا و نشانه‌ی باگ است."
+ },
+ {
+  "en": "What are the features of create react app?",
+  "q": "قابلیت‌های create-react-app کدام‌اند؟",
+  "qa": "فهرست برخی قابلیت‌ها: React، JSX، ES6، TypeScript و Flow، CSS و Sass، PostCSS، استانداردهای lint و تست، build بهینه و استقرار."
+ },
+ {
+  "en": "What is state mutation and how to prevent it?",
+  "q": "state mutation چیست و چطور جلویش را می‌گیرید؟",
+  "qa": "**mutation** یعنی به‌روزرسانی state بدون فراخوانی `setState`/setter؛ معمولاً موقع محاسبات روی state رخ می‌دهد. راه‌حل: همیشه از setter استفاده و داده‌های تو در تو را کپی کنید."
+ },
+ {
+  "en": "How does virtual DOM in React work? What are its benefits and downsides?",
+  "q": "virtual DOM چطور کار می‌کند و سود و زیانش چیست؟",
+  "qa": "«Virtual DOM» کپی DOM مرورگر نیست؛ خلاصه‌ی elementهای ری‌اکت + درخت Fiber داخلی است. در فاز رندر تغییرات محاسبه و یک‌جا commit می‌شود؛ سود: بهینه‌سازی و پیش‌بینی‌پذیری — زیان: سربار مقایسه و حفظ دو درخت."
+ },
+ {
+  "en": "What is the difference between state and props in React?",
+  "q": "تفاوت state و props در React چیست؟",
+  "qa": "**State** داده‌ای است که کامپوننت مالکش است و در طول زمان به‌روزرسانی می‌کند؛ **props** داده‌ای است که از والد می‌گیرد و باید فقط‌خواندنی بماند. تغییر state رندر دوباره را فعال می‌کند؛ props جدید وقتی می‌رسد که والد رندر شود."
+ },
+ {
+  "en": "What is React?",
+  "q": "React چیست؟",
+  "qa": "React (React.js یا ReactJS) **کتابخانه‌ی متن‌باز فرانت‌اند JS** برای ساخت رابط‌های کاربری بر پایه‌ی کامپوننت‌ها است؛ برای view layer اپ‌ها و موبایل."
+ },
+ {
+  "en": "What is JSX?",
+  "q": "JSX چیست؟",
+  "qa": "_JSX_ مخفف JavaScript XML است: توسعه‌ی سینتکسی ECMAScript شبیه XML که شکرِ نحویِ `React.createElement()` است."
+ },
+ {
+  "en": "What is the difference between an Element and a Component?",
+  "q": "تفاوت Element و Component چیست؟",
+  "qa": "**Element:** آبجکت JS ساده‌ای که می‌خواهید روی UI ببینید — DOM node یا کامپوننت. **Component:** تابع یا کلاسی که element می‌سازد."
+ },
+ {
+  "en": "How to create components in React?",
+  "q": "در React چطور کامپوننت می‌سازید؟",
+  "qa": "کامپوننت‌ها بلوک‌های ساخت UI هستند؛ دو راه: **Function Component** (توابع خالص با props) و **Class Component** (کلاس با render)."
+ },
+ {
+  "en": "When to use a Class Component over a Function Component?",
+  "q": "کِی Class Component را به Function Component ترجیح می‌دهید؟",
+  "qa": "بعد از معرفی Hooks (از React 16.8 به بعد)، همیشه **Function Component** توصیه می‌شود؛ state و lifecycle و بقیه در تابعی هم موجود است."
+ },
+ {
+  "en": "What is state in React?",
+  "q": "state در React چیست؟",
+  "qa": "_State_ آبجکتی است که اطلاعاتِ قابل‌تغییر در طول عمر کامپوننت را نگه می‌دارد؛ تغییرش رندر دوباره را فعال می‌کند و ساده نگه‌داشتن state توصیه می‌شود."
+ },
+ {
+  "en": "What are props in React?",
+  "q": "props در React چیست؟",
+  "qa": "_Props_ ورودی‌های کامپوننت‌اند: مقادیر تکی یا آبجکت‌هایی که هنگام ساخت به کامپوننت داده می‌شوند مثل attributeهای تگ HTML؛ از والد به فرزند جریان دارند."
+ },
+ {
+  "en": "What is the difference between HTML and React event handling?",
+  "q": "تفاوت هندل رویداد در HTML و React چیست؟",
+  "qa": "تفاوت‌های اصلی: در React نام رویدادها camelCase هستند (onClick نه onclick)، مقدار رشته نمی‌گیرند بلکه تابع می‌گیرند، و preventDefault صریحاً صدا زده می‌شود."
+ },
+ {
+  "en": "What are synthetic events in React?",
+  "q": "synthetic event ها در React چیستند؟",
+  "qa": "`SyntheticEvent` wrapper بین‌مرورگری دور رویداد نیتیو مرورگر است؛ APIاش مثل رویداد نیتیو است شامل `stopPropagation` و `preventDefault`."
+ },
+ {
+  "en": "What are inline conditional expressions?",
+  "q": "عبارت‌های شرطی inline چیستند؟",
+  "qa": "می‌توانید از _if statements_ یا _عبارات سه‌گانه_ در JS (و JSX) استفاده کنید تا شرطی رندر کنید؛ عملگر && برای نمایش مشروط هم رایج است."
+ },
+ {
+  "en": "What is \"key\" prop and what is the benefit of using it in arrays of elements?",
+  "q": "key prop چیست و سودش در آرایه‌ی elementها چیست؟",
+  "qa": "`key` ویژگی ویژه‌ای است که موقع map روی آرایه‌ها **باید** بگذارید؛ به ری‌اکت کمک می‌کند بفهمد کدام آیتم عوض، اضافه یا حذف شده و state را حفظ کند."
+ },
+ {
+  "en": "What are controlled components?",
+  "q": "controlled component ها چیستند؟",
+  "qa": "**کامپوننت کنترل‌شده** کامپوننتی است که **وضعیت عنصر فرم را کاملاً مدیریت می‌کند** (input، textarea، select)؛ مقدار از state می‌آید و onChange آن را به‌روز می‌کند."
+ },
+ {
+  "en": "What are uncontrolled components?",
+  "q": "uncontrolled component ها چیستند؟",
+  "qa": "**کامپوننت‌های uncontrolled** عناصر فرمی‌اند که **وضعیت‌شان را خود DOM مدیریت می‌کند**؛ مقدار را با ref می‌خوانید نه با state."
+ },
+ {
+  "en": "What is the difference between createElement and cloneElement?",
+  "q": "تفاوت createElement و cloneElement چیست؟",
+  "qa": "`React.createElement` عنصر جدید با type و props مشخص می‌سازد؛ `React.cloneElement` عنصر موجود را با props ادغام‌شده‌ی جدید کپی می‌کند."
+ },
+ {
+  "en": "What is Lifting State Up in React?",
+  "q": "Lifting State Up در React چیست؟",
+  "qa": "وقتی چند کامپوننت به داده‌ی تغییر‌پذیر مشترک نیاز دارند، توصیه می‌شود **state مشترک را به نزدیک‌ترین والد مشترک** منتقل کنید؛ از آنجا به‌صورت props پایین می‌آید."
+ },
+ {
+  "en": "How to write comments in React?",
+  "q": "در React چطور کامنت می‌نویسید؟",
+  "qa": "کامنت‌ها در JSX مثل کامنت‌های چندخطی JS هستند ولی داخل براکت‌های {} پیچیده می‌شوند: `{/* کامنت */}`"
+ },
+ {
+  "en": "Does the lazy function support named exports?",
+  "q": "آیا تابع lazy از named export پشتیبانی می‌کند؟",
+  "qa": "نه، فعلاً `React.lazy` فقط **default export** را پشتیبانی می‌کند؛ برای named exports یک ماژول واسط با default export بسازید."
+ },
+ {
+  "en": "What are stateless components?",
+  "q": "stateless component ها چیستند؟",
+  "qa": "اگر رفتار کامپوننت مستقل از state باشد، stateless است؛ تابع یا کلاس هر دو مجازند ولی توابع ساده‌ترند."
+ },
+ {
+  "en": "What are stateful components?",
+  "q": "stateful component ها چیستند؟",
+  "qa": "اگر رفتار کامپوننت به **state** وابسته باشد، stateful است؛ معمولاً state را مدیریت و بقیه را از طریق props تغذیه می‌کنند."
+ },
+ {
+  "en": "What are the advantages of React?",
+  "q": "مزایای React کدام‌اند؟",
+  "qa": "فهرست مزایای اصلی React: عملکرد با virtual DOM، جامعه و اکوسیستم بزرگ، قابل‌اعتماد و شیوه‌ی declaration و…"
+ },
+ {
+  "en": "What are the limitations of React?",
+  "q": "محدودیت‌های React کدام‌اند؟",
+  "qa": "علاوه بر مزایا، چند محدودیت هم دارد: view layer فقط، نیاز به ابزار جانبی برای routing و state و…"
+ },
+ {
+  "en": "What are the recommended ways for static type checking?",
+  "q": "روش‌های توصیه‌شده برای static type checking کدام‌اند؟",
+  "qa": "**توصیه‌ی مدرن ۲۰۲۶:** **TypeScript** استاندارد صنعت برای type checking در React است؛ PropTypes هنوز موجود است ولی محدودیت دارد."
+ },
+ {
+  "en": "What is the use of react-dom package?",
+  "q": "پکیج react-dom چه کاربردی دارد؟",
+  "qa": "پکیج `react-dom` متدهای **مخصوص DOM** را در سطح بالای اپ می‌دهد: `createRoot`، `hydrateRoot` و… اکثر کامپوننت‌ها نیازی به آن ندارند."
+ },
+ {
+  "en": "How events are different in React?",
+  "q": "رویدادها در React چه تفاوتی دارند؟",
+  "qa": "هندل رویداد در React تفاوت‌های سینتکسی دارد: camelCase، تابع به‌جای رشته، preventDefault صریح و…"
+ },
+ {
+  "en": "How do you conditionally render components?",
+  "q": "رندر شرطی کامپوننت‌ها چطور انجام می‌شود؟",
+  "qa": "JSX `false` و `undefined` را رندر نمی‌کند؛ پس می‌توانید از شرط، عملگر سه‌گانه یا && برای نمایش مشروط استفاده کنید."
+ },
+ {
+  "en": "How do you memoize a component?",
+  "q": "کامپوننت را چطور memoize می‌کنید؟",
+  "qa": "کتابخانه‌هایی مثل `moize` برای memoize کامپوننت‌های تابعی موجودند؛ همچنین `React.memo` استاندارد ۱۶.۶+ است."
+ },
+ {
+  "en": "How to enable production mode in React?",
+  "q": "production mode در React چطور فعال می‌شود؟",
+  "qa": "با `DefinePlugin` در Webpack مقدار `NODE_ENV` را روی `production` بگذارید؛ PropTypes و هشدارهای اضافی حذف می‌شوند."
+ },
+ {
+  "en": "Do Hooks replace render props and higher order components?",
+  "q": "آیا Hooks جایگزین render props و HOC می‌شوند؟",
+  "qa": "هر دو render props و HOC فقط یک فرزند رندر می‌کنند؛ در بیشتر موارد **Hooks** ساده‌تر و کم‌حجم‌تر همین کار را می‌کنند."
+ },
+ {
+  "en": "What is a switching component?",
+  "q": "switching component چیست؟",
+  "qa": "**کامپوننت سوئیچینگ** کامپوننتی است که از بین چند کامپوننت یکی را رندر می‌کند؛ با آبجکت نگاشت prop به کامپوننت."
+ },
+ {
+  "en": "What are the Pointer Events supported in React?",
+  "q": "Pointer Event های پشتیبانی‌شده در React کدام‌اند؟",
+  "qa": "**Pointer Events** روش واحدی برای هندل همه‌ی رویدادهای ورودی است؛ در گذشته موس و listenerهای جدا داشتیم."
+ },
+ {
+  "en": "Are custom DOM attributes supported in React v16?",
+  "q": "آیا React 16 از attributeهای DOM سفارشی پشتیبانی می‌کند؟",
+  "qa": "**نکته:** از React 16 به بعد بله — attributeهای نامعلوم نادیده گرفته نمی‌شوند و به DOM منتقل می‌شوند."
+ },
+ {
+  "en": "How to loop inside JSX?",
+  "q": "داخل JSX چطور حلقه می‌زنید؟",
+  "qa": "ساده با `Array.prototype.map` و سینتکس فلشی ES6:"
+ },
+ {
+  "en": "How do you access props in attribute quotes?",
+  "q": "props را داخل گیومه‌ی attribute چطور دسترسی می‌گیرید؟",
+  "qa": "React در مقدار attribute از درون‌یابی متغیر پشتیبانی نمی‌کند؛ به‌جایش به‌صورت `{propName}` می‌نویسید."
+ },
+ {
+  "en": "What is React proptype array with shape?",
+  "q": "React proptype array با shape چیست؟",
+  "qa": "برای پاس‌دادن آرایه‌ای از آبجکت‌های با shape مشخص از `React.PropTypes.shape()` به‌عنوان آرگومان `PropTypes.arrayOf` استفاده می‌شود."
+ },
+ {
+  "en": "How to conditionally apply class attributes?",
+  "q": "کلاس‌ها را چطور شرطی اعمال می‌کنید؟",
+  "qa": "داخل گیومه‌ها براکت نگذارید چون رشته محسوب می‌شود؛ به‌جایش با template literal یا کتابخانه‌ی classnames ترکیب شرطی کنید."
+ },
+ {
+  "en": "What is the difference between React and ReactDOM?",
+  "q": "تفاوت React و ReactDOM چیست؟",
+  "qa": "پکیج `react` شامل `createElement`، `Component`، `Children` و helperهای elementها و کامپوننت‌هاست؛ `react-dom` متدهای مخصوص DOM را دارد."
+ },
+ {
+  "en": "How to use React label element?",
+  "q": "تگ label را در React چطور استفاده می‌کنید؟",
+  "qa": "اگر `<label>` را با attribute استاندارد `for` ببندید، در HTML ناقص می‌شود؛ در React از `htmlFor` استفاده کنید."
+ },
+ {
+  "en": "How to combine multiple inline style objects?",
+  "q": "چند inline style object را چطور ترکیب می‌کنید؟",
+  "qa": "در React معمولی با **عملگر spread**:"
+ },
+ {
+  "en": "How to pretty print JSON with React?",
+  "q": "JSON را با React چطور زیبا چاپ می‌کنید؟",
+  "qa": "از تگ `<pre>` استفاده کنید تا فرمت `JSON.stringify()` حفظ شود."
+ },
+ {
+  "en": "How to focus an input element on page load?",
+  "q": "هنگام load صفحه، input را چطور فوکوس می‌کنید؟",
+  "qa": "در کامپوننت تابعی از هوک `useEffect` برای ست‌کردن focus روی input هنگام بارگذاری استفاده می‌شود."
+ },
+ {
+  "en": "How can we find the version of React at runtime in the browser?",
+  "q": "نسخه‌ی React را در runtime مرورگر چطور می‌فهمید؟",
+  "qa": "با `React.version` نسخه را می‌گیرید."
+ },
+ {
+  "en": "How to add Google Analytics for React Router?",
+  "q": "Google Analytics را برای React Router چطور اضافه می‌کنید؟",
+  "qa": "روی آبجکت `history` listener بگذارید تا هر page view ثبت شود:"
+ },
+ {
+  "en": "How do you apply vendor prefixes to inline styles in React?",
+  "q": "vendor prefix ها را برای inline style ها در React چطور اعمال می‌کنید؟",
+  "qa": "React _vendor prefixها را خودکار اعمال نمی‌کند_؛ باید دستی اضافه کنید."
+ },
+ {
+  "en": "How to import and export components using React and ES6?",
+  "q": "کامپوننت‌ها را با React و ES6 چطور import و export می‌کنید؟",
+  "qa": "برای export کردن کامپوننت‌ها از `default` استفاده کنید."
+ },
+ {
+  "en": "What are the exceptions on React component naming?",
+  "q": "استثناها در نام‌گذاری کامپوننت‌های React کدام‌اند؟",
+  "qa": "نام کامپوننت با حرف بزرگ شروع می‌شود اما تگ‌های کوچک با نقطه (مثل `material.card`) استثنا هستند."
+ },
+ {
+  "en": "Is it possible to use async/await in plain React?",
+  "q": "در React خالص می‌شود async/await استفاده کرد؟",
+  "qa": "بله، تا وقتی محیط JS از ES2017+ پشتیبانی کند؛ مرورگرهای مدرن و ابزارهای build همه پشتیبانی دارند."
+ },
+ {
+  "en": "What are the common folder structures for React?",
+  "q": "ساختارهای پوشه‌ی رایج در پروژه‌های React کدام‌اند؟",
+  "qa": "دو روش رایج برای ساختار فایل‌های پروژه React وجود دارد."
+ },
+ {
+  "en": "What are the popular packages for animation?",
+  "q": "پکیج‌های محبوب animation کدام‌اند؟",
+  "qa": "_React Transition Group_ و _React Motion_ پکیج‌های محبوب انیمیشن در اکوسیستم React هستند."
+ },
+ {
+  "en": "What is the benefit of styles modules?",
+  "q": "سود style module ها چیست؟",
+  "qa": "مقدارهای استایل را در کامپوننت hard-code نکنید؛ مقادیری که بین کامپوننت‌های مختلف مشترک‌اند در ماژول استایل جدا نگه داشته می‌شوند."
+ },
+ {
+  "en": "What are the popular React-specific linters?",
+  "q": "linters محبوب مخصوص React کدام‌اند؟",
+  "qa": "ESLint رایج‌ترین linter JS است و پلاگین‌هایی مثل eslint-plugin-react-hooks برای React دارند."
+ },
+ {
+  "en": "What is React Router?",
+  "q": "React Router چیست؟",
+  "qa": "**React Router** کتابخانه‌ی قدرتمند routing روی React است که صفحه و flowهای جدید را فوق‌العاده سریع به اپ اضافه می‌کند و URL را همگام نگه می‌دارد."
+ },
+ {
+  "en": "How React Router is different from history library?",
+  "q": "React Router چه تفاوتی با کتابخانه‌ی history دارد؟",
+  "qa": "React Router wrapper دور کتابخانه‌ی `history` است که با historyهای browser و hash تعامل می‌کند."
+ },
+ {
+  "en": "What is the purpose of push() and replace() methods of history?",
+  "q": "هدف متدهای push() و replace() در history چیست؟",
+  "qa": "نمونه‌ی history دو متد ناوبری دارد: `push()` به تاریخچه اضافه می‌کند و `replace()` جایگزین می‌کند."
+ },
+ {
+  "en": "How to get query parameters in React Router v4?",
+  "q": "در React Router v4 query parameter ها را چطور می‌گیرید؟",
+  "qa": "پارس query string از React Router v4 حذف شد؛ باید خودتان با `URLSearchParams` یا کتابخانه‌ی کمکی پارس کنید."
+ },
+ {
+  "en": "How to pass params to history.push method in React Router v4?",
+  "q": "پارامترها را به history.push در React Router v4 چطور می‌دهید؟",
+  "qa": "موقع ناوبری می‌توانید props را به آبجکت `history` بدهید:"
+ },
+ {
+  "en": "How to implement default or NotFound page?",
+  "q": "صفحه‌ی default یا NotFound را چطور پیاده می‌کنید؟",
+  "qa": "`<Switch>` اولین `<Route>` مطابق را رندر می‌کند و `<Route>` بدون path همیشه match می‌شود؛ فقط path را حذف کنید."
+ },
+ {
+  "en": "How to get history on React Router v4?",
+  "q": "در React Router v4 آبجکت history را چطور می‌گیرید؟",
+  "qa": "مراحل گرفتن آبجکت `history` در React Router v4:"
+ },
+ {
+  "en": "How to perform automatic redirect after login?",
+  "q": "ریدایرکت خودکار بعد از لاگین چطور انجام می‌شود؟",
+  "qa": "پکیج `react-router` کامپوننت `<Redirect>` را در React Router می‌دهد؛ رندر آن به مکان جدید می‌رود مثل redirect سرور."
+ },
+ {
+  "en": "What is React Intl?",
+  "q": "React Intl چیست؟",
+  "qa": "_React Intl_ کتابخانه‌ی بین‌المللی‌سازی React است با کامپوننت‌های آماده و API که همه‌ی نیازهای i18n را پوشش می‌دهد."
+ },
+ {
+  "en": "What are the main features of React Intl?",
+  "q": "ویژگی‌های اصلی React Intl کدام‌اند؟",
+  "qa": "ویژگی‌های اصلی React Intl:"
+ },
+ {
+  "en": "What are the two ways of formatting in React Intl?",
+  "q": "دو روش فرمت‌دهی در React Intl کدام‌اند؟",
+  "qa": "کتابخانه دو راه برای فرمت رشته، عدد و تاریخ می‌دهد:"
+ },
+ {
+  "en": "How to use FormattedMessage as placeholder using React Intl?",
+  "q": "از FormattedMessage به‌عنوان placeholder چطور استفاده می‌کنید؟",
+  "qa": "کامپوننت‌های `<Formatted... />` از react-intl عنصر برمی‌گردانند نه متن خالص؛ پس برای placeholder و alt قابل استفاده نیستند."
+ },
+ {
+  "en": "How to access current locale with React Intl?",
+  "q": "locale فعلی را با React Intl چطور می‌گیرید؟",
+  "qa": "با `injectIntl()` در هر کامپوننتی locale فعلی را می‌گیرید:"
+ },
+ {
+  "en": "How to format date using React Intl?",
+  "q": "تاریخ را با React Intl چطور فرمت می‌کنید؟",
+  "qa": "HOC ی `injectIntl()` متد `formatDate()` را از طریق props به کامپوننت می‌دهد برای فرمت تاریخ."
+ },
+ {
+  "en": "What is Shallow Renderer in React testing?",
+  "q": "Shallow Renderer در تست React چیست؟",
+  "qa": "_Shallow rendering_ برای نوشتن unit test در React مفید است؛ کامپوننت را فقط **یک لایه عمق** رندر می‌کند و assertهای درباره‌ی خروجی را ممکن می‌کند."
+ },
+ {
+  "en": "What is TestRenderer package in React?",
+  "q": "پکیج TestRenderer چیست؟",
+  "qa": "این پکیج rendererای می‌دهد که کامپوننت‌ها را به آبجکت‌های JS خالص رندر می‌کند بدون وابستگی به DOM یا موبایل نیتیو."
+ },
+ {
+  "en": "What is the purpose of ReactTestUtils package?",
+  "q": "هدف پکیج ReactTestUtils چیست؟",
+  "qa": "_ReactTestUtils_ در پکیج with-addons ارائه می‌شود و عملیاتی روی DOM شبیه‌سازی‌شده برای **unit testing** انجام می‌دهد."
+ },
+ {
+  "en": "What is Jest?",
+  "q": "Jest چیست؟",
+  "qa": "_Jest_ فریم‌ورک unit test جاوااسکریپت ساخته‌شده توسط فیسبوک بر پایه‌ی Jasmine است؛ mock creation خودکار و محیط `jsdom` دارد."
+ },
+ {
+  "en": "What are the advantages of Jest over Jasmine?",
+  "q": "مزایای Jest نسبت به Jasmine چیست؟",
+  "qa": "چند مزیت نسبت به Jasmine:"
+ },
+ {
+  "en": "Give a simple example of Jest test case",
+  "q": "یک نمونه‌ی ساده از تست Jest بزنید.",
+  "qa": "تستی برای تابع جمع دو عدد در فایل `sum.js`:"
+ },
+ {
+  "en": "What is Redux?",
+  "q": "Redux چیست؟",
+  "qa": "**Redux** state containerِ قابل‌پیش‌بینی برای اپ‌های JS است که بیشتر با React استفاده می‌شود؛ مدیریت و مرکزیت‌دادن state اپ را ساده می‌کند."
+ },
+ {
+  "en": "What are the core principles of Redux?",
+  "q": "اصول هسته‌ای Redux کدام‌اند؟",
+  "qa": "Redux سه اصل بنیادی دارد:"
+ },
+ {
+  "en": "What is the difference between mapStateToProps and mapDispatchToProps?",
+  "q": "تفاوت mapStateToProps و mapDispatchToProps چیست؟",
+  "qa": "`mapStateToProps()` utilityای است که state به‌روزرسانی‌شده را به کامپوننت می‌دهد؛ `mapDispatchToProps` اکشن‌ها را به props مپ می‌کند."
+ },
+ {
+  "en": "Can I dispatch an action in reducer?",
+  "q": "داخل reducer می‌توان action dispatch کرد؟",
+  "qa": "dispatch کردن action درون reducer **anti-pattern** است؛ reducer باید _بدون side effect_ فقط action payload را هضم کند."
+ },
+ {
+  "en": "How to access Redux store outside a component?",
+  "q": "Redux store را بیرون از کامپوننت چطور می‌گیرید؟",
+  "qa": "store را از ماژولی که با `createStore()` ساخته شده export کنید؛ نباید window سراسری را آلوده کند."
+ },
+ {
+  "en": "What are the drawbacks of MVW pattern?",
+  "q": "معایب الگوی MVW چیست؟",
+  "qa": "۱. دستکاری DOM بسیار گران است و اپ را کند و ناکارآمد می‌کند. ۲. به‌خاطر وابستگی حلقوی، مدل‌های پیچیده…"
+ },
+ {
+  "en": "How to make AJAX request in Redux?",
+  "q": "درخواست AJAX در Redux چطور زده می‌شود؟",
+  "qa": "از middleware `redux-thunk` استفاده کنید که اکشن‌های ناهم‌زمان را تعریف می‌کند."
+ },
+ {
+  "en": "Should I keep all component's state in Redux store?",
+  "q": "آیا همه‌ی state کامپوننت‌ها را در Redux store نگه دارم؟",
+  "qa": "داده را در Redux store و state مربوط به UI را داخل خود کامپوننت نگه دارید."
+ },
+ {
+  "en": "What is the difference between component and container in React Redux?",
+  "q": "تفاوت component و container در React Redux چیست؟",
+  "qa": "**Component** کلاس یا تابعی است که بخش نمایشی اپ را توصیف می‌کند؛ **Container** wrapper دور کامپوننت است که به Redux store وصل و داده را می‌گیرد."
+ },
+ {
+  "en": "What is the purpose of the constants in Redux?",
+  "q": "هدف constants در Redux چیست؟",
+  "qa": "Constants پیدا‌کردن همه‌ی موارد استفاده‌ی یک قابلیت در کل پروژه را با IDE آسان می‌کند و از تایپ‌ویژه‌های ناخواسته جلوگیری می‌کند."
+ },
+ {
+  "en": "What are the different ways to write mapDispatchToProps?",
+  "q": "روش‌های مختلف نوشتن mapDispatchToProps کدام‌اند؟",
+  "qa": "چند راه برای bind کردن **action creatorها** به `dispatch()` در `mapDispatchToProps()` وجود دارد."
+ },
+ {
+  "en": "What is the use of the ownProps parameter in mapStateToProps and mapDispatchToProps?",
+  "q": "کاربرد پارامتر ownProps در mapStateToProps و mapDispatchToProps چیست؟",
+  "qa": "اگر `ownProps` مشخص شود، React Redux propsهای پاس‌داده‌شده به کامپوننت را به توابع _connect_ می‌دهد."
+ },
+ {
+  "en": "How to structure Redux top level directories?",
+  "q": "پوشه‌های سطح بالای Redux را چطور ساختار می‌دهید؟",
+  "qa": "بیشتر اپ‌ها چند پوشه‌ی سطح بالا به این شکل دارند:"
+ },
+ {
+  "en": "What is redux-saga?",
+  "q": "redux-saga چیست؟",
+  "qa": "`redux-saga` کتابخانه‌ای است که side effectها (کارهای ناهم‌زمان مثل fetch و دسترسی مرورگر) را متمرکز و ساده می‌کند."
+ },
+ {
+  "en": "What is the mental model of redux-saga?",
+  "q": "مدل ذهنی redux-saga چیست؟",
+  "qa": "_Saga_ مثل نخ جداگانه‌ای در اپ است که فقط مسئول side effectهاست؛ `redux-saga` یک redux _middleware_ است."
+ },
+ {
+  "en": "What are the differences between call and put in redux-saga?",
+  "q": "تفاوت call و put در redux-saga چیست؟",
+  "qa": "هر دو **effect creator** هستند: `call()` برای توابع ناهم‌زمان و `put()` برای dispatch کردن اکشن به store."
+ },
+ {
+  "en": "What is Redux Thunk?",
+  "q": "Redux Thunk چیست؟",
+  "qa": "_Redux Thunk_ middleware ای است که اجازه می‌دهد action creatorها **تابع** برگردانند نه action؛ thunk برای به‌تعویق‌انداختن dispatch یا شرطی‌کردن استفاده می‌شود."
+ },
+ {
+  "en": "What are the differences between redux-saga and redux-thunk?",
+  "q": "تفاوت redux-saga و redux-thunk چیست؟",
+  "qa": "هر دو side effectها را مدیریت می‌کنند: Thunk با **Promises** و Saga با **Generators** — پیچیدگی و قدرت متفاوتی دارند."
+ },
+ {
+  "en": "What is Redux DevTools?",
+  "q": "Redux DevTools چیست؟",
+  "qa": "_Redux DevTools_ محیط time travel زنده‌ویرایشی برای Redux با hot reloading، action replay و UI قابل‌شخصی‌سازی است."
+ },
+ {
+  "en": "What are the features of Redux DevTools?",
+  "q": "ویژگی‌های Redux DevTools کدام‌اند؟",
+  "qa": "برخی ویژگی‌های اصلی Redux DevTools:"
+ },
+ {
+  "en": "What is Redux Form?",
+  "q": "Redux Form چیست؟",
+  "qa": "_Redux Form_ با React و Redux کار می‌کند تا فرم React از Redux برای ذخیره‌ی state خودش استفاده کند؛ با HTML خام هم سازگار است."
+ },
+ {
+  "en": "What are the main features of Redux Form?",
+  "q": "ویژگی‌های اصلی Redux Form کدام‌اند؟",
+  "qa": "برخی ویژگی‌های اصلی Redux Form:"
+ },
+ {
+  "en": "How to add multiple middlewares to Redux?",
+  "q": "چند middleware را چطور به Redux اضافه می‌کنید؟",
+  "qa": "با `applyMiddleware()`: چند middleware را به‌عنوان آرگومان پاس می‌دهید."
+ },
+ {
+  "en": "How to set initial state in Redux?",
+  "q": "state اولیه در Redux چطور ست می‌شود؟",
+  "qa": "state اولیه را به‌عنوان آرگومان دوم به `createStore` می‌دهید:"
+ },
+ {
+  "en": "What is an action in Redux?",
+  "q": "action در Redux چیست؟",
+  "qa": "_Actionها_ آبجکت‌های ساده‌ی JS یا payloadهای اطلاعاتی‌اند که داده را از اپ به store می‌فرستند؛ تنها **منبع اطلاعاتی store**."
+ },
+ {
+  "en": "What is the difference between React Native and React?",
+  "q": "تفاوت React Native و React چیست؟",
+  "qa": "**React** کتابخانه‌ی JS برای ساخت رابط وب و سمت سرور است؛ **React Native** همان مفاهیم را برای اپ‌های نیتیو موبایل می‌برد."
+ },
+ {
+  "en": "How to test React Native apps?",
+  "q": "اپ‌های React Native را چطور تست می‌کنند؟",
+  "qa": "React Native فقط در شبیه‌سازهای موبایل مثل iOS و Android قابل تست است؛ با اپ Expo روی موبایل هم اجرا می‌شود."
+ },
+ {
+  "en": "How to debug your React Native?",
+  "q": "React Native را چطور دیباگ می‌کنید؟",
+  "qa": "این مراحل را برای دیباگ اپ React Native دنبال کنید:"
+ },
+ {
+  "en": "What is Flow?",
+  "q": "Flow چیست؟",
+  "qa": "_Flow_ **static type checker** برای پیدا‌کردن خطاهای نوع در JS است؛ انواع را با دقت ریزتر از نوع‌دهی خود JS بیان می‌کند."
+ },
+ {
+  "en": "What is the difference between Flow and PropTypes?",
+  "q": "تفاوت Flow و PropTypes چیست؟",
+  "qa": "**Flow** ابزار **تحلیل ایستا** با سوپرمجموعه‌ی زبان است؛ **PropTypes** فقط در runtime چک می‌کند و فقط propsها را."
+ },
+ {
+  "en": "How to use Font Awesome icons in React?",
+  "q": "آیکون‌های Font Awesome را در React چطور استفاده می‌کنید؟",
+  "qa": "این مراحل برای گنجاندن Font Awesome در React دنبال می‌شود:"
+ },
+ {
+  "en": "What is React Dev Tools?",
+  "q": "React Dev Tools چیست؟",
+  "qa": "_React Developer Tools_ بازرسی سلسله‌مراتب کامپوننت‌ها شامل props و state را ممکن می‌کند؛ هم افزور مرورگر هم افزونگی استandalone."
+ },
+ {
+  "en": "How to use Polymer in React?",
+  "q": "Polymer را در React چطور استفاده می‌کنید؟",
+  "qa": "این مراحل را برای استفاده از Polymer در React دنبال کنید:"
+ },
+ {
+  "en": "What are the advantages of React over Vue.js?",
+  "q": "مزایای React نسبت به Vue.js چیست؟",
+  "qa": "React این مزایا را نسبت به Vue.js دارد:"
+ },
+ {
+  "en": "What is the difference between React and Angular?",
+  "q": "تفاوت React و Angular چیست؟",
+  "qa": "تفاوت React و Angular را در قالب جدول می‌بینیم."
+ },
+ {
+  "en": "What are Styled Components?",
+  "q": "Styled Components چیست؟",
+  "qa": "`styled-components` کتابخانه‌ی JS برای استایل React است؛ حذف نقشه‌ی بین استایل و کامپوننت و اجازه‌ی CSS واقعی به‌عنوان…"
+ },
+ {
+  "en": "Give an example of Styled Components?",
+  "q": "یک مثال از Styled Components بزنید.",
+  "qa": "کامپوننت‌های `<Title>` و `<Wrapper>` با استایل‌های اختصاصی می‌سازیم."
+ },
+ {
+  "en": "What is Relay?",
+  "q": "Relay چیست؟",
+  "qa": "**Relay** فریم‌ورک JS برای لایه‌ی داده و ارتباط کلاینت-سرور در اپ‌های وب با لایه‌ی view ری‌اکت است."
+ },
+ {
+  "en": "What are the main features of Reselect library?",
+  "q": "ویژگی‌های اصلی کتابخانه‌ی Reselect کدام‌اند؟",
+  "qa": "ویژگی‌های اصلی کتابخانه‌ی Reselect:"
+ },
+ {
+  "en": "Can Redux only be used with React?",
+  "q": "Redux فقط با React قابل استفاده است؟",
+  "qa": "Redux می‌تواند برای هر UI layer استفاده شود؛ رایج‌ترین استفاده با React و React Native است ولی bindingهای دیگر هم هست."
+ },
+ {
+  "en": "Do you need to have a particular build tool to use Redux?",
+  "q": "برای استفاده از Redux به build tool خاصی نیاز است؟",
+  "qa": "Redux با ES6 نوشته و با Webpack و Babel به ES5 ترنسپایل شده؛ مستقل از build process قابل استفاده است."
+ },
+ {
+  "en": "How Redux Form initialValues get updated from state?",
+  "q": "initialValues در Redux Form چطور از state به‌روز می‌شود؟",
+  "qa": "باید تنظیم `enableReinitialize : true` را اضافه کنید."
+ },
+ {
+  "en": "How React PropTypes allow different types for one prop?",
+  "q": "React PropTypes چطور برای یک prop چند نوع را مجاز می‌کند؟",
+  "qa": "از متد `oneOfType()` در `PropTypes` استفاده می‌شود."
+ },
+ {
+  "en": "Can I import an SVG file as react component?",
+  "q": "می‌شود فایل SVG را به‌عنوان کامپوننت React import کرد؟",
+  "qa": "بله، SVG را مستقیم به‌عنوان کامپوننت import کنید نه فایل؛ از `react-scripts@2.0.0` به بعد در دسترس است."
+ },
+ {
+  "en": "What is render hijacking in react?",
+  "q": "render hijacking در React چیست؟",
+  "qa": "**render hijacking** یعنی کنترل خروجی کامپوننت توسط کامپوننت دیگر؛ در HOCها کامپوننت را تزئین می‌کنید تا خروجی را تغییر دهید."
+ },
+ {
+  "en": "How to pass numbers to React component?",
+  "q": "اعداد را چطور به کامپوننت React می‌دهید؟",
+  "qa": "اعداد را با آکولاد `{}` به‌عنوان props می‌دهید؛ رشته‌ها در گیومه دابل `\"\"` یا تکی `''` قرار می‌گیرند."
+ },
+ {
+  "en": "Do I need to keep all my state into Redux? Should I ever use react internal state?",
+  "q": "همه‌ی state را در Redux store نگه دارم یا state داخلی React هم؟",
+  "qa": "بسته به تصمیم توسعه‌دهنده است: چه stateهایی تشکیل‌دهنده‌ی اپ‌اند و هرکدام کجا باید زندگی کنند."
+ },
+ {
+  "en": "What is the purpose of registerServiceWorker in React?",
+  "q": "هدف registerServiceWorker در React چیست؟",
+  "qa": "React به‌طور پیش‌فرض بدون پیکربندی service worker می‌سازد؛ **service worker** Web API ای است که assetها را کش و…"
+ },
+ {
+  "en": "What is React memo function?",
+  "q": "تابع React.memo چیست؟",
+  "qa": "برای کامپوننت‌های کلاسی با **PureComponent یا shouldComponentUpdate** رندر وقتی props یکسان است محدود می‌شود؛ **React.memo** همین را برای کامپوننت‌های تابعی می‌دهد."
+ },
+ {
+  "en": "What is React lazy function?",
+  "q": "تابع React.lazy چیست؟",
+  "qa": "`React.lazy` اجازه می‌دهد import داینامیک را به‌عنوان کامپوننت عادی رندر کنید؛ bundle شامل `OtherComponent` را خودکار بارگذاری می‌کند."
+ },
+ {
+  "en": "What are hooks?",
+  "q": "hooks چیستند؟",
+  "qa": "هوک‌ها توابع JS ویژه‌ای هستند که state و قابلیت‌های React را بدون نوشتن کلاس ممکن می‌کنند؛ از React 16.8 معرفی شدند."
+ },
+ {
+  "en": "What are the differences between Flux and Redux?",
+  "q": "تفاوت Flux و Redux چیست؟",
+  "qa": "بزرگ‌ترین تفاوت مفهومی در خودِ جریان داده است:"
+ },
+ {
+  "en": "What are the benefits of React Router V4?",
+  "q": "سودهای React Router V4 کدام‌اند؟",
+  "qa": "مزایای اصلی ماژول React Router V4:"
+ },
+ {
+  "en": "Can you describe about componentDidCatch lifecycle method signature?",
+  "q": "امضای متد componentDidCatch چیست؟",
+  "qa": "**componentDidCatch** بعد از پرتاب خطا توسط کامپوننت فرزند فراخوانی می‌شود؛ دو پارامتر می‌گیرد: خطا و اطلاعات کامپوننت."
+ },
+ {
+  "en": "In which scenarios do error boundaries not catch errors?",
+  "q": "در چه سناریوهایی error boundary خطا را نمی‌گیرد؟",
+  "qa": "مواردی که error boundary کار نمی‌کند:"
+ },
+ {
+  "en": "What is the behavior of uncaught errors in react 16?",
+  "q": "رفتار خطاهای uncaught در React 16 چیست؟",
+  "qa": "**نکته:** از React 16 معرفی شد و در ۱۸/۱۹ هم ادامه دارد: خطای uncaught که توسط هیچ error boundary گرفته نشود، کل درخت کامپوننت را unmount می‌کند."
+ },
+ {
+  "en": "What is the proper placement for error boundaries?",
+  "q": "جایگاه درست error boundary ها کجاست؟",
+  "qa": "دانه‌بندی استفاده از error boundary به نیاز پروژه بستگی دارد: یا دور هر کامپوننت و یا فقط دور مهم‌ترین بخش‌ها."
+ },
+ {
+  "en": "What is the benefit of component stack trace from error boundary?",
+  "q": "سود component stack trace از error boundary چیست؟",
+  "qa": "React 16 علاوه بر پیام خطا و JS stack، **component stack trace** با نام فایل و شماره خط را هم نمایش می‌دهد."
+ },
+ {
+  "en": "What are default props?",
+  "q": "default props چیست؟",
+  "qa": "_defaultProps_ propertyای روی کامپوننت است که مقادیر پیش‌فرض props را ست می‌کند؛ وقتی والد مقدار نداده باشد استفاده می‌شود."
+ },
+ {
+  "en": "What is the purpose of displayName class property?",
+  "q": "هدف displayName class property چیست؟",
+  "qa": "رشته‌ی `displayName` در پیام‌های دیباگ استفاده می‌شود؛ معمولاً از نام کامپوننت استنتاج می‌شود و نیازی به ست صریح نیست."
+ },
+ {
+  "en": "What is the browser support for react applications?",
+  "q": "پشتیبانی مرورگرها از اپ‌های React چطور است؟",
+  "qa": "React همه‌ی مرورگرهای محبوب از جمله Internet Explorer 9 به بعد را پشتیبانی می‌کند؛ برای مرورگرهای قدیمی polyfill لازم است."
+ },
+ {
+  "en": "What is code-splitting?",
+  "q": "code-splitting چیست؟",
+  "qa": "**Code-splitting** قابلیتی است که باندلرهایی مثل Webpack و Browserify پشتیبانی می‌کنند: چند bundle که به‌صورت داینامیک بارگذاری می‌شوند."
+ },
+ {
+  "en": "Does React support all HTML attributes?",
+  "q": "آیا React همه‌ی HTML attribute ها را پشتیبانی می‌کند؟",
+  "qa": "از React 16 به بعد، attributeهای استاندارد و سفارشی DOM کاملاً پشتیبانی می‌شوند؛ نام‌ها camelCase هستند."
+ },
+ {
+  "en": "When component props defaults to true?",
+  "q": "کِی prop به‌صورت پیش‌فرض true می‌شود؟",
+  "qa": "اگر مقدار prop ندهید، پیش‌فرض true می‌شود تا رفتار HTML شبیه‌سازی شود."
+ },
+ {
+  "en": "What is NextJS and major features of it?",
+  "q": "Next.js چیست و ویژگی‌های اصلی‌اش کدام‌اند؟",
+  "qa": "Next.js فریم‌ورک سبک و محبوبی برای اپ‌های **static و server-rendered** با React است؛ استایل، routing و SSR را هم می‌دهد."
+ },
+ {
+  "en": "How do you pass an event handler to a component?",
+  "q": "event handler را چطور به کامپوننت می‌دهید؟",
+  "qa": "event handlerها و توابع دیگر را به‌عنوان props به کامپوننت فرزند می‌دهید:"
+ },
+ {
+  "en": "How to prevent a function from being called multiple times?",
+  "q": "چطور جلوی فراخوانی مکرر تابع را می‌گیرید؟",
+  "qa": "اگر از event handler مثل **onClick یا onScroll** استفاده می‌کنید و نمی‌خواهید callback سریع‌تر از حد صدا زده شود، از debounce یا throttle استفاده کنید."
+ },
+ {
+  "en": "How do you update rendered elements?",
+  "q": "element های رندر‌شده را چطور به‌روزرسانی می‌کنید؟",
+  "qa": "UI را با پاس‌دادن element تازه‌ساخته‌شده به متد `render` در ReactDOM به‌روزرسانی می‌کنید."
+ },
+ {
+  "en": "How do you say that props are readonly?",
+  "q": "چطور می‌گویید props فقط‌خواندنی است؟",
+  "qa": "وقتی کامپوننت را به‌عنوان تابع یا کلاس تعریف می‌کنید، هرگز نباید props خودش را تغییر دهد."
+ },
+ {
+  "en": "What are the conditions to safely use the index as a key?",
+  "q": "شرایط امن استفاده از index به‌عنوان key چیست؟",
+  "qa": "سه شرط برای اطمینان از امن بودن استفاده از index به‌عنوان key:"
+ },
+ {
+  "en": "Should keys be globally unique?",
+  "q": "آیا key ها باید سراسری یکتا باشند؟",
+  "qa": "keyها فقط بین خواهرها یکتا لازم‌اند نه سراسری؛ یعنی می‌توانید همان keyها را در لیست‌های مختلف استفاده کنید."
+ },
+ {
+  "en": "What is the popular choice for form handling?",
+  "q": "انتخاب محبوب برای هندل فرم چیست؟",
+  "qa": "`Formik` کتابخانه‌ی فرم برای React است: اعتبارسنجی، ردیابی فیلدهای بازدیدشده و مدیریت submit را حل می‌کند."
+ },
+ {
+  "en": "What are the advantages of formik over redux form library?",
+  "q": "مزایای formik نسبت به redux form کدام‌اند؟",
+  "qa": "دلایل اصلی توصیه‌ی formik به‌جای redux form:"
+ },
+ {
+  "en": "Can I use web components in react application?",
+  "q": "در اپ React می‌توان web component استفاده کرد؟",
+  "qa": "بله، web componentها در اپ React قابل استفاده‌اند؛ حتی اگر خیلی‌ها این ترکیب را استفاده نکنند، مخصوصاً برای…"
+ },
+ {
+  "en": "What is dynamic import?",
+  "q": "dynamic import چیست؟",
+  "qa": "code-splitting را با `dynamic import` در اپ انجام می‌دهید."
+ },
+ {
+  "en": "What are loadable components?",
+  "q": "loadable component ها چیستند؟",
+  "qa": "از React 18 به بعد، `React.lazy` و `Suspense` برای SSR هم در دسترس‌اند؛ قبل از ۱۸ توصیه می‌شد Loadable Components استفاده شود."
+ },
+ {
+  "en": "What is suspense component?",
+  "q": "suspense component چیست؟",
+  "qa": "**React Suspense** قابلیت داخلی است که رندر بخشی از UI را تا آماده‌شدن کار ناهم‌زمان (بارگذاری کامپوننت یا fetch) به تعویق می‌اندازد."
+ },
+ {
+  "en": "What is route based code splitting?",
+  "q": "route based code splitting چیست؟",
+  "qa": "بهترین جای code splitting مسیرهاست: کل صفحه یک‌جا رندر می‌شود و کاربر احتمالاً با صفحه تعامل ندارد تا لود کامل."
+ },
+ {
+  "en": "What is the purpose of default value in context?",
+  "q": "هدف default value در Context چیست؟",
+  "qa": "`defaultValue` فقط وقتی استفاده می‌شود که کامپوننت در درختش Provider متناظر نداشته باشد؛ برای تست و ایزوله مفید است."
+ },
+ {
+  "en": "What is diffing algorithm?",
+  "q": "diffing algorithm چیست؟",
+  "qa": "React به الگوریتمی نیاز دارد که بهینه UI را با جدیدترین درخت تطبیق دهد؛ **diffing algorithm** نسخه‌ی به‌روزشده را تولید می‌کند."
+ },
+ {
+  "en": "When do you need to use refs?",
+  "q": "کِی به refs نیاز دارید؟",
+  "qa": "چند کاربرد برای refs:"
+ },
+ {
+  "en": "Must prop be named as render for render props?",
+  "q": "آیا prop باید حتماً render نامیده شود برای render props؟",
+  "qa": "هرچند الگو render props نام دارد، prop لازم نیست حتماً render نام داشته باشد؛ هر prop که تابع است کافی است."
+ },
+ {
+  "en": "What are the problems of using render props with pure components?",
+  "q": "مشکلات render props با pure component چیست؟",
+  "qa": "اگر تابع را داخل render بسازید، هدف pure component نقض می‌شود چون مقایسه‌ی سطحی props همیشه false می‌دهد و هر رندر مقدار جدید می‌سازد."
+ },
+ {
+  "en": "What is windowing technique?",
+  "q": "تکنیک windowing چیست؟",
+  "qa": "**Windowing** تکنیکی است که در هر لحظه فقط بخش کوچکی از ردیف‌ها را رندر می‌کند و زمان رندر لیست بزرگ را به‌طور قابل‌توجه کم می‌کند."
+ },
+ {
+  "en": "How do you print falsy values in JSX?",
+  "q": "مقادیر falsy را در JSX چطور چاپ می‌کنید؟",
+  "qa": "مقادیر falsy مثل false، null، undefined و true فرزند معتبرند ولی چیزی رندر نمی‌کنند؛ اگر می‌خواهید نمایششان بدهید به رشته تبدیل کنید."
+ },
+ {
+  "en": "What is the typical use case of portals?",
+  "q": "کاربرد معمول portals چیست؟",
+  "qa": "**React Portalها** عمدتاً برای رندر **مودال، tooltip، dropdown، hovercard و اعلان‌ها** خارج از درخت والد والدِ DOM استفاده می‌شوند."
+ },
+ {
+  "en": "How do you set default value for uncontrolled component?",
+  "q": "مقدار پیش‌فرض uncontrolled component را چطور ست می‌کنید؟",
+  "qa": "در React، attribute `value` روی عنصر فرم مقدار DOM را override می‌کند؛ در uncontrolled از `defaultValue` استفاده کنید."
+ },
+ {
+  "en": "What is your favorite React stack?",
+  "q": "استک محبوب React شما چیست؟",
+  "qa": "اگرچه استک بین توسعه‌دهندگان متفاوت است، محبوب‌ترین استک در پروژه‌ی react boilerplate استفاده می‌شود: عمدتاً از…"
+ },
+ {
+  "en": "How to add Bootstrap to a react application?",
+  "q": "Bootstrap را چطور به اپ React اضافه می‌کنید؟",
+  "qa": "سه راه برای افزودن Bootstrap به اپ React دارید:"
+ },
+ {
+  "en": "Can you list down top websites or applications using react as front end framework?",
+  "q": "سایت‌ها یا اپ‌های برتر استفاده‌کننده از React را نام ببرید.",
+  "qa": "فهرست `top 10 websites`ی که از React به‌عنوان فریم‌ورک فرانت‌اند استفاده می‌کنند:"
+ },
+ {
+  "en": "Is it recommended to use CSS In JS technique in React?",
+  "q": "آیا CSS In JS در React توصیه می‌شود؟",
+  "qa": "React نظر قطعی ندارد؛ برای مبتدی نقطه‌ی شروع خوب تعریف استایل در فایل جدا یا کلاس‌های CSS معمولی است."
+ },
+ {
+  "en": "Do I need to rewrite all my class components with hooks?",
+  "q": "آیا باید همه‌ی class componentها را با hooks بازنویسی کنم؟",
+  "qa": "نه. می‌توانید در چند کامپوننت یا کامپوننت‌های جدید هوک را امتحان کنید بدون بازنویسی؛ برنامه‌ی حذف کلاس‌ها هم نیست."
+ },
+ {
+  "en": "What is useEffect hook? How to fetch data with React Hooks?",
+  "q": "هوک useEffect چیست؟ واکشی داده با React Hooks چطور انجام می‌شود؟",
+  "qa": "`useEffect` هوکی برای **side effects** در کامپوننت‌های تابعی است؛ عملیاتی که با دنیای بیرون تعامل دارند مثل fetch و subscription."
+ },
+ {
+  "en": "Is Hooks cover all use cases for classes?",
+  "q": "آیا Hooks همه‌ی کاربردهای کلاس‌ها را پوشش می‌دهد؟",
+  "qa": "هوک‌ها همه‌ی کاربردهای کلاس را پوشش نمی‌دهند ولی برنامه‌ی افزودن هست؛ معادل هوکی برای lifecycleهای غیررایج کلاسی فعلاً نیست."
+ },
+ {
+  "en": "What is the stable release for hooks support?",
+  "q": "انتشار پایدار پشتیبانی hooks کدام است؟",
+  "qa": "React در نسخه‌ی **16.8** پیاده‌سازی پایدار React Hooks را برای پکیج‌های زیر ارائه کرد."
+ },
+ {
+  "en": "What are the sources used for introducing hooks?",
+  "q": "منابع الهام‌بخش معرفی hooks کدام‌اند؟",
+  "qa": "هوک‌ها از چند منبع مختلف الهام گرفتند؛ برخی از آن‌ها:"
+ },
+ {
+  "en": "How do you access imperative API of web components?",
+  "q": "API imperative وب‌کامپوننت‌ها را چطور در دسترس می‌گیرید؟",
+  "qa": "وب‌کامپوننت‌ها معمولاً API imperative دارند؛ باید از **ref** برای تعامل مستقیم با DOM node استفاده کنید."
+ },
+ {
+  "en": "What is formik?",
+  "q": "Formik چیست؟",
+  "qa": "Formik کتابخانه‌ی فرم کوچک React است که سه مشکل بزرگ را حل می‌کند:"
+ },
+ {
+  "en": "What are typical middleware choices for handling asynchronous calls in Redux?",
+  "q": "middlewareهای رایج هندل درخواست‌های ناهم‌زمان در Redux کدام‌اند؟",
+  "qa": "انتخاب‌های محبوب در اکوسیستم Redux: `Redux Thunk`، `Redux Promise` و `Redux Saga`."
+ },
+ {
+  "en": "Do browsers understand JSX code?",
+  "q": "آیا مرورگرها کد JSX را می‌فهمند؟",
+  "qa": "نه، مرورگرها JSX را نمی‌فهمند؛ به transpiler نیاز دارید که JSX را به JS معمولی تبدیل کند — رایج‌ترین Babel است."
+ },
+ {
+  "en": "Describe about data flow in react?",
+  "q": "جریان داده در React را توضیح دهید.",
+  "qa": "React جریان داده‌ی **reactive یک‌طرفه** با props را پیاده می‌کند که boilerplate را کم و فهم را ساده‌تر از بایندینگ دوماهه می‌کند."
+ },
+ {
+  "en": "What is MobX?",
+  "q": "MobX چیست؟",
+  "qa": "**MobX** راه‌حل state management ساده، مقیاس‌پذیر و امتحان‌شده با برنامه‌نویسی reactive تابعی (TFRP) برای اپ‌های ReactJS است."
+ },
+ {
+  "en": "Should I learn ES6 before learning ReactJS?",
+  "q": "آیا قبل از React باید ES6 یاد بگیرم؟",
+  "qa": "نه، لازم نیست ولی منابع زیادی از React از ES6 استفاده می‌کنند؛ ویژگی‌های رایج را ببینید."
+ },
+ {
+  "en": "What is the difference between async mode and concurrent mode?",
+  "q": "تفاوت async mode و concurrent mode چیست؟",
+  "qa": "هر دو یک چیزند؛ قبلاً تیم React اسمش را «Async Mode» گذاشته بود و بعد برای تأکید بر هم‌زمانی، به **Concurrent Mode** تغییر کرد."
+ },
+ {
+  "en": "What is the purpose of eslint plugin for hooks?",
+  "q": "هدف پلاگین eslint برای hooks چیست؟",
+  "qa": "پلاگین ESLint قواعد هوک‌ها را تحمیل می‌کند تا باگ جلوگیری شود؛ هر تابعی که با «use» و حرف بزرگ شروع شود را هوک فرض می‌کند."
+ },
+ {
+  "en": "What is the difference between Imperative and Declarative in React?",
+  "q": "تفاوت Imperative و Declarative در React چیست؟",
+  "qa": "کامپوننت UI ساده مثل دکمه‌ی Like را تصور کنید: در imperative مرحله‌به‌مرحله می‌گویید چه‌کار کند؛ در declarative فقط وضعیت را توصیف می‌کنید."
+ },
+ {
+  "en": "What are the benefits of using TypeScript with ReactJS?",
+  "q": "سودهای استفاده از TypeScript با ReactJS چیست؟",
+  "qa": "چند سود استفاده از TypeScript با ReactJS:"
+ },
+ {
+  "en": "What are the benefits of new JSX transform?",
+  "q": "سودهای JSX transform جدید کدام‌اند؟",
+  "qa": "سه سود اصلی JSX transform جدید:"
+ },
+ {
+  "en": "How is the new JSX transform different from old transform?",
+  "q": "JSX transform جدید چه تفاوتی با قدیمی دارد؟",
+  "qa": "JSX transform جدید دیگر نیاز ندارد `React` در scope باشد؛ برای سناریوهای ساده import React لازم نیست."
+ },
+ {
+  "en": "What are React Server components?",
+  "q": "React Server Component ها چیستند؟",
+  "qa": "**React Server Component** راهی برای نوشتن کامپوننتی است که سمت **سرور** رندر می‌شود — هدف بهبود عملکرد اپ React."
+ },
+ {
+  "en": "What is prop drilling?",
+  "q": "prop drilling چیست؟",
+  "qa": "**Prop drilling** فرایند پاس‌دادن داده از کامپوننتی به کامپوننت دیگر از طریق کامپوننت‌های میانی درخت React است."
+ },
+ {
+  "en": "What is the difference between useState and useRef hook?",
+  "q": "تفاوت useState و useRef چیست؟",
+  "qa": "۱. `useState` بعد از آپدیت رندر دوباره فعال می‌کند؛ `useRef` رندر نمی‌کند. ۲. `useRef` مقدار mutable را بین رندرها نگه می‌دارد."
+ },
+ {
+  "en": "What is a wrapper component?",
+  "q": "wrapper component چیست؟",
+  "qa": "**wrapper** کامپوننتی است که کامپوننت یا گروه کامپوننت‌های دیگر را می‌پیچد؛ کاربردهای متنوعی دارد."
+ },
+ {
+  "en": "What are the differences between useEffect and useLayoutEffect hooks?",
+  "q": "تفاوت useEffect و useLayoutEffect چیست؟",
+  "qa": "هر دو برای هم‌گام‌سازی کامپوننت با سیستم بیرونی‌اند: `useEffect` بعد از paint اجرا می‌شود؛ `useLayoutEffect` قبل از paint و هم‌زمان."
+ },
+ {
+  "en": "What are the rules of JSX?",
+  "q": "قواعد JSX کدام‌اند؟",
+  "qa": "این ۳ قاعده موقع استفاده از JSX در اپ React باید رعایت شود:"
+ },
+ {
+  "en": "What is the reason behind multiple JSX tags to be wrapped?",
+  "q": "دلیل wrap شدن چند تگ JSX چیست؟",
+  "qa": "پشت صحنه JSX به آبجکت‌های JS معمولی تبدیل می‌شود؛ برگرداندن دو آبجکت از یک تابع بدون container ممکن نیست."
+ },
+ {
+  "en": "How do you prevent mutating array variables?",
+  "q": "چطور از mutation متغیرهای آرایه جلوگیری می‌کنید؟",
+  "qa": "متغیرهای بیرون از اسکوپ تابع شامل state و props و context منجر به mutation و نتیجه‌ی غیرقابل‌پیش‌بینی می‌شوند؛ همیشه کپی کنید."
+ },
+ {
+  "en": "What are capture phase events?",
+  "q": "capture phase event ها چیستند؟",
+  "qa": "رویداد `onClickCapture` ری‌اکت برای گرفتن همه‌ی رویدادهای فرزند قبل از propagation مفید است."
+ },
+ {
+  "en": "How does React updates screen in an application?",
+  "q": "React صفحه را در اپ چطور به‌روزرسانی می‌کند؟",
+  "qa": "React UI را در سه مرحله به‌روزرسانی می‌کند:"
+ },
+ {
+  "en": "How does React batch multiple state updates?",
+  "q": "React چند state update را چطور batch می‌کند؟",
+  "qa": "React جلوی رندر به‌ازای هر آپدیت را می‌گیرد با گروه‌کردن آپدیت‌ها در یک event handler؛ این **batching** نام دارد."
+ },
+ {
+  "en": "Is it possible to prevent automatic batching?",
+  "q": "آیا می‌توان از automatic batching جلوگیری کرد؟",
+  "qa": "بله، رفتار پیش‌فرض automatic batching قابل جلوگیری است؛ ممکن است بعد از هر آپدیت به رندر فوری نیاز داشته باشید — از `flushSync` استفاده کنید."
+ },
+ {
+  "en": "How do you update arrays inside state?",
+  "q": "آرایه‌های داخل state را چطور به‌روزرسانی می‌کنید؟",
+  "qa": "اگرچه آرایه‌ها در JS mutable هستند، در state باید immutable رفتار شوند؛ مشابه آبجکت‌ها از spread یا متدهای غیر-mutating استفاده کنید."
+ },
+ {
+  "en": "How do you use immer library for state updates?",
+  "q": "کتابخانه immer برای state updates چطور استفاده می‌شود؟",
+  "qa": "کتابخانه **Immer** تغییرناپذیری state را بر اساس مکانیزم **copy-on-write** تحمیل می‌کند؛ با JS proxy تغییرات را رصد می‌کند."
+ },
+ {
+  "en": "What are the preferred and non-preferred array operations for updating the state?",
+  "q": "عملیات آرایه‌ی ترجیحی و غیرترجیحی برای آپدیت state کدام‌اند؟",
+  "qa": "جدول زیر عملیات ترجیحی و غیرترجیحی آرایه برای به‌روزرسانی state کامپوننت را نشان می‌دهد."
+ },
+ {
+  "en": "What will happen by defining nested function components?",
+  "q": "تعریف کامپوننت تابعی تو در تو چه عواقبی دارد؟",
+  "qa": "از نظر فنی ممکن است ولی توصیه نمی‌شود؛ تعریف تو در تو باعث unmount و بازساخت در هر رندر و از‌دست‌رفتن state می‌شود."
+ },
+ {
+  "en": "Can I use keys for non-list items?",
+  "q": "آیا key ها برای آیتم‌های غیرلیست هم استفاده می‌شوند؟",
+  "qa": "keyها عمدتاً برای لیست‌ها هستند ولی فقط مخصوص لیست نیستند؛ در React برای متمایز‌کردن کامپوننت‌ها هم استفاده می‌شوند."
+ },
+ {
+  "en": "How is useReducer Different from useState?",
+  "q": "تفاوت useReducer و useState چیست؟",
+  "qa": "تفاوت‌های مهم بین `useState` و `useReducer`: | ویژگی | useState | useReducer | …"
+ },
+ {
+  "en": "What is useContext? What are the steps to follow for useContext?",
+  "q": "useContext چیست و مراحل استفاده از آن کدام‌اند؟",
+  "qa": "`useContext` هوک داخلی React است که مقدار Context را درون کامپوننت تابعی بدون نیاز به render prop یا HOC می‌دهد."
+ },
+ {
+  "en": "What are the use cases of useContext hook?",
+  "q": "کاربردهای هوک useContext کدام‌اند؟",
+  "qa": "`useContext` برای اشتراک داده بین کامپوننت‌ها بدون پاس‌دادن دستی props در هر لایه به‌کار می‌رود؛ کاربردها: theme، زبان، کاربر جاری و…"
+ },
+ {
+  "en": "When to use client and server components?",
+  "q": "کِی client component و کِی server component استفاده می‌کنید؟",
+  "qa": "اگر بدانید کدام بخش اپ به client component و کدام به server component نیاز دارد، ساخت Next.js بهینه می‌شود."
+ },
+ {
+  "en": "Can useState take a function as an initial value?",
+  "q": "آیا useState می‌تواند تابع به‌عنوان مقدار اولیه بگیرد؟",
+  "qa": "بله، `useState` می‌تواند تابع به‌عنوان مقدار اولیه بگیرد که **lazy initialization** نام دارد؛ فقط در رندر اول محاسبه می‌شود."
+ },
+ {
+  "en": "What happens if you call useState conditionally?",
+  "q": "اگر useState را شرطی صدا بزنید چه می‌شود؟",
+  "qa": "طبق قواعد هوک‌ها، هوک‌ها باید بدون شرط صدا زده شوند؛ صدا زدن شرطی، ترتیب هوک‌ها را بین رندرها به هم می‌ریزد و خطا می‌دهد."
+ },
+ {
+  "en": "Can you combine useReducer with useContext?",
+  "q": "آیا می‌توان useReducer را با useContext ترکیب کرد؟",
+  "qa": "بله، ترکیب **useReducer** با **useContext** برای ساخت state management سبک شبیه Redux رایج است."
+ },
+ {
+  "en": "Can you dispatch multiple actions in a row with useReducer?",
+  "q": "با useReducer می‌توان چند action پشت سر هم dispatch کرد؟",
+  "qa": "بله ولی نه در یک call؛ باید `dispatch` را چند بار جدا صدا بزنید — و React آنها را batch می‌کند."
+ },
+ {
+  "en": "Can You Use Multiple Contexts in One Component?",
+  "q": "در یک کامپوننت می‌توان چند Context استفاده کرد؟",
+  "qa": "بله، چند `useContext` را در همان کامپوننت — هرکدام برای یک Context — می‌توانید صدا بزنید."
+ },
+ {
+  "en": "What would the context value be for no matching provider?",
+  "q": "اگر Provider متناظر نباشد مقدار Context چه می‌شود؟",
+  "qa": "اگر `useContext(SomeContext)` صدا زده شود ولی **Provider متناظر بالاتر در درخت نباشد**، مقدار `defaultValue` برمی‌گردد."
+ },
+ {
+  "en": "When and how often does React invoke the setup and cleanup functions inside a useEffect hook?",
+  "q": "React کِی و چند بار setup و cleanup هوک useEffect را صدا می‌زند؟",
+  "qa": "۱. **اجرای setup (useEffect)** — بعد از commit؛ وابستگی‌ها تعیین می‌کنند دوباره اجرا شود یا نه؛ cleanup قبل از اجرای بعدی یا unmount."
+ },
+ {
+  "en": "What happens if you return a Promise from useEffect??",
+  "q": "اگر از useEffect Promise برگردانید چه می‌شود؟",
+  "qa": "**نباید** از useEffect Promise برگردانید؛ React انتظار دارد تابع یا undefined برگردد یا تابع cleanup — نه Promise. برای async از تابع داخلی جدا استفاده کنید."
+ },
+ {
+  "en": "Can you have multiple useEffect hooks in a single component?",
+  "q": "در یک کامپوننت چند useEffect مجاز است؟",
+  "qa": "بله، چند `useEffect` مجاز و توصیه می‌شود وقتی می‌خواهید نگرانی‌ها را جدا کنید — هرکدام وابستگی‌های خودش را دارد."
+ },
+ {
+  "en": "How to prevent infinite loops with useEffect?",
+  "q": "چطور جلوی حلقه‌ی بی‌نهایت در useEffect را می‌گیرید؟",
+  "qa": "حلقه بی‌نهایت وقتی رخ می‌دهد که effect stateی را آپدیت کند که در dependency array خودش است و دوباره اجرا شود؛ راه‌حل: وابستگی را درست تعریف یا از functional update استفاده کنید."
+ },
+ {
+  "en": "What are the usecases of useLayoutEffect?",
+  "q": "کاربردهای useLayoutEffect کدام‌اند؟",
+  "qa": "`useLayoutEffect` وقتی لازم است که effect **قبل از paint مرورگر** اجرا شود؛ مثلاً اندازه‌گیری DOM یا جلوگیری از چشمک."
+ },
+ {
+  "en": "What happens if you use useLayoutEffect for non-layout logic?",
+  "q": "اگر useLayoutEffect را برای منطق غیر-layout استفاده کنید چه می‌شود؟",
+  "qa": "استفاده از `useLayoutEffect` برای منطق **غیر مرتبط با layout** (لاگ، fetch، analytics) **توصیه نمی‌شود** — رندر را بلاک می‌کند."
+ },
+ {
+  "en": "How does useLayoutEffect cause layout thrashing?",
+  "q": "useLayoutEffect چطور layout thrashing ایجاد می‌کند؟",
+  "qa": "`useLayoutEffect` وقتی **مکرراً DOM را می‌خواند و می‌نویسد** می‌تواند **layout thrashing** بسازد؛ مرورگر مجبور به محاسبه‌ی مکرر layout می‌شود."
+ },
+ {
+  "en": "How Do You Use useRef to Access a DOM Element in React? Give an example.",
+  "q": "با useRef چطور به DOM element دسترسی می‌گیرید؟ مثال بزنید.",
+  "qa": "هوک `useRef` برای ارجاع مستقیم به DOM element — مثل فوکوس input یا اسکرول به بخش خاص — استفاده می‌شود؛ نمونه:"
+ },
+ {
+  "en": "Can you use useRef to persist values across renders??",
+  "q": "آیا با useRef می‌توان مقادیر را بین رندرها نگه داشت؟",
+  "qa": "بله، با `useRef` مقادیر را بین رندرها نگه می‌دارید؛ برخلاف `useState` تغییر `.current` رندر نمی‌کند ولی مقدار بین رندرها پایدار است."
+ },
+ {
+  "en": "Is it possible to access a ref in the render method?",
+  "q": "آیا در متد render می‌توان به ref دسترسی داشت؟",
+  "qa": "بله، می‌شود به ref در render دسترسی داشت ولی بستگی به نحوه‌ی استفاده و زمان در چرخه‌ی حیات دارد."
+ },
+ {
+  "en": "What are the common usecases of useRef hook?",
+  "q": "کاربردهای رایج useRef کدام‌اند؟",
+  "qa": "موارد رایج: فوکوس خودکار input هنگام mount، اسکرول به عنصر، اندازه‌گیری ابعاد عنصر، نگه‌داشتن interval/timeout و…"
+ },
+ {
+  "en": "What is useImperativeHandle Hook? Give an example.",
+  "q": "هوک useImperativeHandle چیست؟ مثال بزنید.",
+  "qa": "`useImperativeHandle` هوکی است که به **کامپوننت فرزند** اجازه می‌دهد **توابع یا propertyهای سفارشی** را به **والد** از طریق ref نمایش دهد."
+ },
+ {
+  "en": "When should you use useImperativeHandle?",
+  "q": "کِی useImperativeHandle استفاده می‌شود؟",
+  "qa": "هوک `useImperativeHandle` در موارد زیر استفاده می‌شود:"
+ },
+ {
+  "en": "Is that possible to use useImperativeHandle without forwardRef?",
+  "q": "آیا می‌توان useImperativeHandle را بدون forwardRef استفاده کرد؟",
+  "qa": "**نه.** `useImperativeHandle` فقط وقتی کار می‌کند که کامپوننت در `forwardRef` پیچیده شده باشد؛ ترکیب این دو برای دسترسی والد لازم است."
+ },
+ {
+  "en": "What is the useTransition hook and how does it differ from useDeferredValue?",
+  "q": "هوک useTransition چیست و چه تفاوتی با useDeferredValue دارد؟",
+  "qa": "`useTransition` آپدیت‌های state را به‌عنوان **transitionهای غیرفوری** علامت می‌زند تا UI حین کار سنگین پاسخ‌گو بماند."
+ },
+ {
+  "en": "What is the useDebugValue hook?",
+  "q": "هوک useDebugValue چیست؟",
+  "qa": "`useDebugValue` برای **نمایش برچسب** custom hookها در **React DevTools** است؛ دیباگ هوک‌های سفارشی را آسان می‌کند."
+ },
+ {
+  "en": "What is the use() hook in React 19?",
+  "q": "هوک use در React 19 چیست؟",
+  "qa": "هوک `use()` اجازه می‌دهد مقدار یک منبع (Promise یا Context) را حین رندر بخوانید، با یکپارچگی Suspense."
+ },
+ {
+  "en": "What is the difference between HOCs and Hooks?",
+  "q": "تفاوت HOC ها و Hooks چیست؟",
+  "qa": "هر دو **HOC** و **Hooks** برای استفاده‌ی مجدد منطق بین کامپوننت‌ها هستند ولی راه‌حل‌های کاملاً متفاوتی دارند."
+ },
+ {
+  "en": "What is createSelector?",
+  "q": "createSelector چیست؟",
+  "qa": "`createSelector` (از **Reselect** که Redux Toolkit دوباره export می‌کند) **selectorهای memoized** می‌سازد؛ یک یا چند input selector می‌گیرد."
+ },
+ {
+  "en": "What is normalized Redux state?",
+  "q": "normalized Redux state چیست؟",
+  "qa": "**state نرمال‌شده** داده را مثل پایگاه داده‌ی رابطه‌ای نگه می‌دارد: هر نوع entity در جدول lookup با کلید ID، نه تو در تو."
+ },
+ {
+  "en": "What is Redux middleware?",
+  "q": "Redux middleware چیست؟",
+  "qa": "**Middleware** راهی برای گسترش Redux با منطق سفارشی که **بین dispatch کردن اکشن و رسیدن به reducer** اجرا می‌شود."
+ },
+ {
+  "en": "What is the Redux middleware signature?",
+  "q": "امضای Redux middleware چیست؟",
+  "qa": "Middleware به‌صورت **سه تابع تو در تو (curried)** نوشته می‌شود:"
+ },
+ {
+  "en": "How do you handle race conditions in Redux?",
+  "q": "race condition ها در Redux چطور هندل می‌شوند؟",
+  "qa": "**Race condition** وقتی رخ می‌دهد که چند درخواست ناهم‌زمان در پرواز باشند و **به‌ترتیب اشتباه resolve شوند** — مثلاً کاربر سریع در جست‌وجو تایپ می‌کند."
+ },
+ {
+  "en": "Would you put all API data into Redux?",
+  "q": "همه‌ی داده‌ی API را در Redux می‌گذارید؟",
+  "qa": "**نه** — به‌صورت پیش‌فرض نه. داده‌ی سرور (ببینید client state در برابر server state) ویژگی‌های متفاوتی دارد و بهتر است با ابزارهایی مثل TanStack Query مدیریت شود."
+ },
+ {
+  "en": "What is the difference between Link, NavLink, and a?",
+  "q": "تفاوت Link و NavLink و a چیست؟",
+  "qa": "هر سه تگ anchor را در DOM رندر می‌کنند ولی با کلیک رفتار کاملاً متفاوتی دارند: `Link` بدون reload مسیر عوض می‌کند و `NavLink` فعال‌بودن را هم می‌فهمد."
+ },
+ {
+  "en": "What is Concurrent Rendering? (Legacy)",
+  "q": "Concurrent Rendering چیست؟",
+  "qa": "**Concurrent rendering** اپ‌های React را با رندر درخت‌های کامپوننت بدون بلاک‌کردن نخ اصلی UI پاسخ‌گوتر می‌کند."
+ },
+ {
+  "en": "What is the purpose of callback function as an argument of setState()?",
+  "q": "هدف callback به‌عنوان آرگومان setState چیست؟",
+  "qa": "تابع callback به‌عنوان آرگومان دوم `setState` بعد از آپدیت state و رندر کامپوننت اجرا می‌شود."
+ },
+ {
+  "en": "How to pass a parameter to an event handler or callback?",
+  "q": "پارامتر را به event handler یا callback چطور می‌دهید؟",
+  "qa": "می‌توانید از **تابع فلشی** دور **event handler** استفاده کنید و پارامتر بدهید:"
+ },
+ {
+  "en": "What is the use of refs?",
+  "q": "کاربرد refs چیست؟",
+  "qa": "_ref_ برای برگرداندن ارجاع به عنصر استفاده می‌شود؛ در بیشتر موارد **باید از آن دوری کرد** ولی برای فوکوس، انتخاب متن یا انیمیشن imperative مفید است."
+ },
+ {
+  "en": "How to create refs?",
+  "q": "refs چطور ساخته می‌شوند؟",
+  "qa": "دو رویکرد وجود دارد:"
+ },
+ {
+  "en": "What are forward refs?",
+  "q": "forward ref ها چیستند؟",
+  "qa": "_Ref forwarding_ قابلیتی است که به بعضی کامپوننت‌ها اجازه می‌دهد ref دریافتی را به فرزند پایین‌تر منتقل کنند."
+ },
+ {
+  "en": "Which is preferred option with in callback refs and findDOMNode()?",
+  "q": "callback ref یا findDOMNode کدام ترجیح دارد؟",
+  "qa": "_callback ref_ نسبت به `findDOMNode()` ترجیح دارد؛ چون `findDOMNode()` مانع بهبودهای آینده‌ی React می‌شود."
+ },
+ {
+  "en": "How to create props proxy for HOC component?",
+  "q": "props proxy برای کامپوننت HOC چطور ساخته می‌شود؟",
+  "qa": "با الگوی **props proxy** می‌توانید propsهای پاس‌داده به کامپوننت را اضافه/ویرایش کنید:"
+ },
+ {
+  "en": "What is context?",
+  "q": "Context چیست؟",
+  "qa": "_Context_ راهی برای انتقال داده از طریق درخت کامپوننت‌ها بدون پاس‌دادن دستی props در هر لایه فراهم می‌کند."
+ },
+ {
+  "en": "What would be the common mistake of function being called every time the component renders?",
+  "q": "خطای رایج فراخوانی تابع در هر رندر کامپوننت چیست؟",
+  "qa": "باید مطمئن شوید موقع پاس‌دادن تابع به‌عنوان پارامتر، تابع **فراخوانی نمی‌شود** — بلکه خود مرجعش پاس داده می‌شود."
+ },
+ {
+  "en": "What is the purpose of render method of react-dom?",
+  "q": "هدف متد render در react-dom چیست؟",
+  "qa": "این متد element ری‌اکت را در container داده‌شده رندر می‌کند و مرجع کامپوننت را برمی‌گرداند؛ اگر قبلاً رندر شده باشد، آپدیت می‌کند."
+ },
+ {
+  "en": "What will happen if you use setState() in constructor?",
+  "q": "اگر setState را در constructor استفاده کنید چه می‌شود؟",
+  "qa": "وقتی `setState()` را صدا می‌زنید علاوه بر assign کردن به state، کامپوننت و فرزندانش هم رندر می‌شوند؛ در constructor از مقدار‌دهی مستقیم استفاده کنید."
+ },
+ {
+  "en": "What will happen if you use props in initial state?",
+  "q": "اگر props را در state اولیه استفاده کنید چه می‌شود؟",
+  "qa": "اگر props تغییر کند بدون refresh کامپوننت، مقدار جدید هرگز نمایش داده نمی‌شود چون constructor فقط یک‌بار اجرا می‌شود."
+ },
+ {
+  "en": "How you use decorators in React?",
+  "q": "decorator ها را در React چطور استفاده می‌کنید؟",
+  "qa": "می‌توانید **کلاس کامپوننت** را _تزئین_ کنید؛ همان‌طور که کامپوننت را به تابع پاس می‌دهید. **Decoratorها** انعطاف و خوانایی می‌دهند."
+ },
+ {
+  "en": "What is the lifecycle methods order in mounting?",
+  "q": "ترتیب lifecycle method ها در mounting چیست؟",
+  "qa": "وقتی instance ساخته و در DOM درج می‌شود، متدها به این ترتیب صدا زده می‌شوند."
+ },
+ {
+  "en": "What is the purpose of getDerivedStateFromProps lifecycle method?",
+  "q": "هدف متد getDerivedStateFromProps چیست؟",
+  "qa": "متد ایستای جدید `getDerivedStateFromProps()` بعد از ساخت کامپوننت و قبل از هر رندر مجدد فراخوانی می‌شود؛ آبجکت state یا null برمی‌گرداند."
+ },
+ {
+  "en": "What is the purpose of getSnapshotBeforeUpdate lifecycle method?",
+  "q": "هدف متد getSnapshotBeforeUpdate چیست؟",
+  "qa": "متد `getSnapshotBeforeUpdate()` درست قبل از آپدیت DOM صدا زده می‌شود؛ مقدار برگشتی به componentDidUpdate به‌عنوان پارامتر سوم می‌رود."
+ },
+ {
+  "en": "What is the recommended way for naming components?",
+  "q": "روش توصیه‌شده نام‌گذاری کامپوننت‌ها چیست؟",
+  "qa": "توصیه می‌شود کامپوننت را با **مرجع** نام‌گذاری کنید نه با `displayName`."
+ },
+ {
+  "en": "What is the recommended ordering of methods in component class?",
+  "q": "ترتیب توصیه‌شده‌ی متدها در کلاس کامپوننت چیست؟",
+  "qa": "_ترتیب توصیه‌شده_ متدها از _mounting_ تا مرحله‌ی رندر:"
+ },
+ {
+  "en": "Can you force a component to re-render without calling setState?",
+  "q": "آیا می‌توان بدون setState کامپوننت را دوباره رندر کرد؟",
+  "qa": "به‌طور پیش‌فرض تغییر state یا props رندر را فعال می‌کند؛ اگر `render()` به داده‌ی دیگر وابسته است با `forceUpdate()` می‌توانید اجبار کنید."
+ },
+ {
+  "en": "What is the difference between super() and super(props) in React using ES6 classes?",
+  "q": "تفاوت super() و super(props) در کلاس‌های ES6 چیست؟",
+  "qa": "وقتی می‌خواهید در `constructor()` به `this.props` دسترسی داشته باشید باید props را به `super()` بدهید."
+ },
+ {
+  "en": "What is the difference between setState() and replaceState() methods?",
+  "q": "تفاوت setState و replaceState چیست؟",
+  "qa": "`setState()` وضعیت فعلی و قبلی را merge می‌کند؛ `replaceState()` state فعلی را دور می‌ریزد و با آبجکت جدید جایگزین می‌کند."
+ },
+ {
+  "en": "What is the recommended approach of removing an array element in React state?",
+  "q": "روش توصیه‌شده حذف عنصر آرایه از state چیست؟",
+  "qa": "رویکرد بهتر استفاده از `Array.prototype.filter()` است."
+ },
+ {
+  "en": "What are the possible ways of updating objects in state?",
+  "q": "روش‌های ممکن به‌روزرسانی آبجکت‌ها در state چیست؟",
+  "qa": "۱. **فراخوانی `setState()` با آبجکتی که با state ادغام می‌شود:**"
+ },
+ {
+  "en": "What are the approaches to include polyfills in your create-react-app?",
+  "q": "روش‌های گنجاندن polyfill ها در create-react-app چیست؟",
+  "qa": "دو رویکرد برای گنجاندن polyfillها در create-react-app:"
+ },
+ {
+  "en": "How to use https instead of http in create-react-app?",
+  "q": "در create-react-app چطور https را به‌جای http استفاده می‌کنید؟",
+  "qa": "فقط از پیکربندی `HTTPS=true` استفاده کنید؛ در بخش scripts در package.json ویرایش می‌کنید:"
+ },
+ {
+  "en": "How to avoid using relative path imports in create-react-app?",
+  "q": "در create-react-app چطور از import نسبی دوری می‌کنید؟",
+  "qa": "فایل `.env` در ریشه‌ی پروژه بسازید و مسیر import را بنویسید:"
+ },
+ {
+  "en": "How to define constants in React?",
+  "q": "constants را در React چطور تعریف می‌کنید؟",
+  "qa": "می‌توانید از فیلد `static` در ES7 برای تعریف ثابت استفاده کنید."
+ },
+ {
+  "en": "How to programmatically trigger click event in React?",
+  "q": "رویداد click را برنامه‌نویسی‌شده در React چطور فعال می‌کنید؟",
+  "qa": "با `ref` به `HTMLInputElement` زیرین دسترسی و رویداد را از طریق callback فعال می‌کنید؛ مرجع را به‌عنوان متغیر کلاس نگه دارید."
+ },
+ {
+  "en": "How to make AJAX call and in which component lifecycle methods should I make an AJAX call?",
+  "q": "درخواست AJAX را در کدام lifecycle method می‌زنید؟",
+  "qa": "از کتابخانه‌هایی مثل Axios، jQuery AJAX یا `fetch` داخلی مرورگر استفاده می‌شود؛ داده را در `componentDidMount()` واکشی می‌کنید."
+ },
+ {
+  "en": "How to dispatch an action on load?",
+  "q": "اکشن را هنگام load چطور dispatch می‌کنید؟",
+  "qa": "اکشن را در متد `componentDidMount()` dispatch می‌کنید و در `render()` داده را اعتبارسنجی می‌کنید."
+ },
+ {
+  "en": "How to use connect() from React Redux?",
+  "q": "connect() را از React Redux چطور استفاده می‌کنید؟",
+  "qa": "دو مرحله برای استفاده از store در container دارید:"
+ },
+ {
+  "en": "What are HOC factory implementations?",
+  "q": "پیاده‌سازی‌های HOC factory کدام‌اند؟",
+  "qa": "دو روش اصلی پیاده‌سازی HOC در React:"
+ },
+ {
+  "en": "How to use class field declarations syntax in React classes?",
+  "q": "سینتکس class field declarations را در کلاس‌های React چطور استفاده می‌کنید؟",
+  "qa": "کامپوننت‌های کلاسی React با **class field declarations** بسیار مختصر می‌شوند؛ state محلی را بدون constructor مقدار‌دهی می‌کنید."
+ },
+ {
+  "en": "What is the difference between try catch block and error boundaries?",
+  "q": "تفاوت try catch و error boundaries چیست؟",
+  "qa": "بلوک try catch با کد imperative کار می‌کند؛ error boundaries برای کد declarative برای رندر روی صفحه طراحی شده است."
+ },
+ {
+  "en": "What is the required method to be defined for a class component?",
+  "q": "متد اجباری کلاس کامپوننت کدام است؟",
+  "qa": "متد `render()` تنها متد اجباری در کلاس کامپوننت است؛ یعنی همه‌ی متدهای دیگر اختیاری هستند."
+ },
+ {
+  "en": "What is the main purpose of constructor?",
+  "q": "هدف اصلی constructor چیست؟",
+  "qa": "constructor عمدتاً برای دو هدف استفاده می‌شود:"
+ },
+ {
+  "en": "Is it mandatory to define constructor for React component?",
+  "q": "آیا تعریف constructor برای کامپوننت React اجباری است؟",
+  "qa": "نه، اجباری نیست؛ اگر state را initialize نمی‌کنید و متدها را bind نمی‌کنید، constructor لازم نیست."
+ },
+ {
+  "en": "What is the purpose of getDerivedStateFromError?",
+  "q": "هدف getDerivedStateFromError چیست؟",
+  "qa": "این lifecycle method بعد از پرتاب خطا توسط فرزند فراخوانی می‌شود؛ خطا را به‌عنوان پارامتر می‌گیرد و fallback UI را رندر می‌کند."
+ },
+ {
+  "en": "What is the methods order when component re-rendered?",
+  "q": "ترتیب متدها هنگام re-render کامپوننت چیست؟",
+  "qa": "آپدیت می‌تواند به‌خاطر تغییر props یا state باشد؛ متدها به این ترتیب در re-render صدا زده می‌شوند:"
+ },
+ {
+  "en": "What are the methods invoked during error handling?",
+  "q": "متدهای صدا‌زده‌شده حین هندل خطا کدام‌اند؟",
+  "qa": "این متدها موقع خطا در رندر، lifecycle method یا constructor فرزند صدا زده می‌شوند:"
+ },
+ {
+  "en": "What is the purpose of unmountComponentAtNode method?",
+  "q": "هدف متد unmountComponentAtNode چیست؟",
+  "qa": "این متد از react-dom در دسترس است و کامپوننت mount‌شده را از DOM حذف و event handlerها و state را پاک می‌کند."
+ },
+ {
+  "en": "What are the limitations with HOCs?",
+  "q": "محدودیت‌های HOC ها کدام‌اند؟",
+  "qa": "Higher-order componentها علاوه بر سودها چند نکته‌ی مهم دارند؛ به ترتیب:"
+ },
+ {
+  "en": "How to debug forwardRefs in DevTools?",
+  "q": "forwardRef ها را در DevTools چطور دیباگ می‌کنید؟",
+  "qa": "**React.forwardRef** تابع render را به‌عنوان پارامتر می‌پذیرد و DevTools از همین تابع برای نمایش ref forward شده استفاده می‌کند."
+ },
+ {
+  "en": "How do you say that state updates are merged?",
+  "q": "ادغام state updates را چطور توضیح می‌دهید؟",
+  "qa": "وقتی `setState()` را صدا می‌زنید، React آبجکت پاس‌داده‌شده را با state فعلی merge می‌کند."
+ },
+ {
+  "en": "How do you pass arguments to an event handler?",
+  "q": "آرگومان‌ها را به event handler چطور می‌دهید؟",
+  "qa": "در حلقه‌ها یا تکرارها، پاس‌دادن پارامتر اضافی به event handler رایج است؛ با تابع فلشی یا bind انجام می‌شود."
+ },
+ {
+  "en": "How to prevent component from rendering?",
+  "q": "چطور جلوی رندر کامپوننت را می‌گیرید؟",
+  "qa": "با برگرداندن `null` بر اساس شرط مشخص، کامپوننت را شرطی رندر می‌کنید."
+ },
+ {
+  "en": "What is a consumer?",
+  "q": "Consumer چیست؟",
+  "qa": "**Consumer** کامپوننت ری‌اکت است که به تغییرات Context مشترک می‌شود؛ یک تابع به‌عنوان فرزند می‌گیرد که مقدار فعلی context را دریافت می‌کند."
+ },
+ {
+  "en": "How do you solve performance corner cases while using context?",
+  "q": "تله‌های عملکرد Context را چطور حل می‌کنید؟",
+  "qa": "Context با **مرجع‌بودن** مقدار تصمیم به رندر می‌گیرد؛ بعضی تله‌ها رندر ناخواسته در consumerها فعال می‌کنند."
+ },
+ {
+  "en": "What is the purpose of forward ref in HOCs?",
+  "q": "هدف forward ref در HOCها چیست؟",
+  "qa": "refs به‌طور خودکار از HOC عبور نمی‌کنند چون prop نیستند و مثل **key** هندل می‌شوند؛ باید ref را صریحاً به کامپوننت داخل HOC منتقل کنید."
+ },
+ {
+  "en": "Is ref argument available for all functions or class components?",
+  "q": "آیا آرگومان ref برای همه‌ی توابع و کلاس‌ها در دسترس است؟",
+  "qa": "توابع و کلاس‌های عادی آرگومان `ref` نمی‌گیرند و در props هم نیست؛ فقط در **forwardRef** به‌عنوان آرگومان دوم می‌آید."
+ },
+ {
+  "en": "Is it possible to use react without JSX?",
+  "q": "آیا می‌توان React را بدون JSX استفاده کرد؟",
+  "qa": "بله، JSX اجباری نیست؛ در واقع وقتی نمی‌خواهید build environment پیکربندی کنید راحت‌تر است."
+ },
+ {
+  "en": "How do you create HOC using render props?",
+  "q": "HOC را با render props چطور می‌سازید؟",
+  "qa": "بیشتر HOCها را می‌توان با کامپوننت عادی با render prop پیاده کرد؛ مثلاً اگر ترجیح دارید…"
+ },
+ {
+  "en": "What is react scripts?",
+  "q": "react-scripts چیست؟",
+  "qa": "پکیج `react-scripts` مجموعه اسکریپت‌هایی از create-react-app است که شروع پروژه بدون پیکربندی build را ممکن می‌کند."
+ },
+ {
+  "en": "What is the purpose of renderToNodeStream method?",
+  "q": "هدف متد renderToNodeStream چیست؟",
+  "qa": "متد `ReactDOMServer#renderToNodeStream` HTML را در سرور تولید و در درخواست اولیه markup را می‌فرستد برای سریع‌ترشدن اولین paint."
+ },
+ {
+  "en": "How do you get redux scaffolding using create-react-app?",
+  "q": "با create-react-app چطور redux scaffolding می‌گیرید؟",
+  "qa": "تیم Redux قالب‌های رسمی redux+js یا redux+typescript برای create-react-app ارائه کرده؛ پروژه‌ی تولیدشده شامل…"
+ },
+ {
+  "en": "Explain one-way data flow of React and its benefits",
+  "q": "جریان داده‌ی یک‌طرفه React و سودهایش را توضیح دهید.",
+  "qa": "در React، **جریان داده‌ی یک‌طرفه** یعنی داده از والد به فرزند از طریق props و context حرکت می‌کند؛ فرزندان آن را فقط‌خواندنی می‌بینند و تغییرات را با callback به بالا می‌فرستند."
+ },
+ {
+  "en": "Explain server-side rendering of React applications and its benefits",
+  "q": "SSR اپ‌های React و سودهایش را توضیح دهید.",
+  "qa": "**SSR** خروجی React را در سرور به HTML تبدیل و به مرورگر می‌فرستد؛ `hydrateRoot` سپس React را به خروجی می‌چسباند. سودها: SEO بهتر و اولین paint سریع‌تر."
+ },
+ {
+  "en": "Explain static generation of React applications and its benefits",
+  "q": "Static Generation اپ‌های React و سودهایش را توضیح دهید.",
+  "qa": "**SSG** یعنی رندر HTML قبل از درخواست — معمولاً حین build — تا نتیجه کش و از CDN سرو شود؛ سریع‌ترین نوع تحویل است."
+ },
+ {
+  "en": "Explain the composition pattern in React",
+  "q": "الگوی composition در React را توضیح دهید.",
+  "qa": "**الگوی composition** یعنی ساخت UI با ترکیب کامپوننت‌های کوچک و قابل‌استفاده‌مجدد به‌جای وراثت از کلاس‌ها؛ انعطاف بیشتر و کد ساده‌تر."
+ },
+ {
+  "en": "Explain the presentational vs container component pattern in React",
+  "q": "الگوی presentational در برابر container را توضیح دهید.",
+  "qa": "الگوی **presentational در برابر container** («احمق در برابر باهوش») کامپوننت‌ها را دو نقش تقسیم می‌کند: نمایشی نحوه‌ی ظاهر را تعیین و container داده و منطق را مدیریت می‌کند."
+ },
+ {
+  "en": "Explain what happens when the useState setter function is called in React",
+  "q": "وقتی setter تابع useState صدا زده می‌شود چه رخ می‌دهد؟",
+  "qa": "صدا زدن setter مقدار جایگزین یا updater function را برای رندر بعدی صف می‌کند؛ در کدِ در حال اجرا متغیر را تغییر نمی‌دهد — تغییر در رندر بعدی اعمال می‌شود."
+ },
+ {
+  "en": "How do you localize React applications?",
+  "q": "اپ React را چطور localیزه می‌کنید؟",
+  "qa": "معمولاً از کتابخانه‌ای مثل `react-i18next` یا `react-intl` استفاده می‌شود؛ اول فایل‌های ترجمه را می‌سازید و بعد…"
+ },
+ {
+  "en": "How do you reset a component's state in React?",
+  "q": "state کامپوننت را در React چطور ریست می‌کنید؟",
+  "qa": "شهودی‌ترین راه دادن **`key` prop** و تغییر آن است: React نمونه‌ی قدیمی را unmount و نمونه‌ی تازه با state اولیه mount می‌کند."
+ },
+ {
+  "en": "How do you test React applications?",
+  "q": "اپ‌های React را چطور تست می‌کنید؟",
+  "qa": "استک رایج: Jest یا Vitest به‌عنوان runner با React Testing Library که تست رفتار مشاهده‌پذیر به‌جای جزئیات پیاده‌سازی را تشویق می‌کند."
+ },
+ {
+  "en": "What are error boundaries in React for?",
+  "q": "error boundary ها در React برای چیستند؟",
+  "qa": "خطاهای رندرِ درخت فرزند را می‌گیرند و fallback UI نشان می‌دهند به‌جای از‌دست‌رفتن کل ریشه‌ی React."
+ },
+ {
+  "en": "What are higher-order components in React?",
+  "q": "higher-order component ها در React چیستند؟",
+  "qa": "**HOCها** توابعی هستند که کامپوننت می‌گیرند و کامپوننت جدیدی با props یا رفتار اضافه برمی‌گردانند؛ برای استفاده‌ی مجدد منطق به‌کار می‌روند."
+ },
+ {
+  "en": "What are React Fragments used for?",
+  "q": "React Fragments برای چه استفاده می‌شوند؟",
+  "qa": "**Fragmentها** چند عنصر را بدون افزودن node اضافی به DOM گروه می‌کنند؛ وقتی می‌خواهید چند عنصر از کامپوننت برگردانید مفید است."
+ },
+ {
+  "en": "What are render props in React and what are they for?",
+  "q": "render props در React چیستند و برای چه؟",
+  "qa": "**Render props** تکنیکی برای اشتراک کد بین کامپوننت‌ها با propی است که مقدارش تابع است؛ کامپوننت آن تابع را با state یا داده‌ی داخلی صدا می‌زند."
+ },
+ {
+  "en": "What are some common pitfalls when doing data fetching in React?",
+  "q": "تله‌های رایج fetch داده در React کدام‌اند؟",
+  "qa": "شامل نبودن stateهای loading و error، نادیده‌گرفتن statusهای HTTP، فعال‌ماندن درخواست‌های کهنه، اجازه‌ی رقابت پاسخ‌ها و…"
+ },
+ {
+  "en": "What are some pitfalls about using context in React?",
+  "q": "تله‌های استفاده از Context در React کدام‌اند؟",
+  "qa": "Context راحت ولی آسان‌الخطاست: پاس‌دادن آبجکت یا آرایه‌ی تازه به‌عنوان `value` در هر رندر بزرگ‌ترین تله است و باعث رندر همه‌ی consumerها می‌شود."
+ },
+ {
+  "en": "What are some React anti-patterns?",
+  "q": "anti-pattern های React کدام‌اند؟",
+  "qa": "روش‌هایی که به کد ناکارآمد، باگ‌دار یا سخت‌نگهداری می‌انجامند؛ رایج‌ها در React مدرن (عصر هوک‌ها) شامل mutation مستقیم state و…"
+ },
+ {
+  "en": "What does the dependency array of useEffect affect?",
+  "q": "dependency array در useEffect چه اثری دارد؟",
+  "qa": "**dependency array** تعیین می‌کند ری‌اکت کِی effect را دوباره هم‌گام کند: بدون آرایه هر commit؛ با `[]` فقط بعد از mount؛ با مقادیر، وقتی تغییر کنند."
+ },
+ {
+  "en": "What is code splitting in a React application?",
+  "q": "code splitting در اپ React چیست؟",
+  "qa": "تکنیکی برای بهبود عملکرد با شکستن کد به chunkهای کوچک‌تر که به‌صورت on-demand بارگذاری می‌شوند — حجم اولیه کم می‌شود."
+ },
+ {
+  "en": "What is forwardRef() in React used for?",
+  "q": "forwardRef() در React برای چیست؟",
+  "qa": "از React 19 (دسامبر ۲۰۲۴)، `forwardRef()` **دیگر ضروری نیست**؛ کامپوننت‌های تابعی اکنون `ref` را به‌عنوان prop عادی می‌پذیرند."
+ },
+ {
+  "en": "What is JSX and how does it work?",
+  "q": "JSX چیست و چطور کار می‌کند؟",
+  "qa": "**JSX** توسعه‌ی سینتکس JS است که UI را با مارک‌آپ شبیه HTML داخل JS توصیف می‌کند؛ ابزار build آن را به فراخوانی‌های تابع عادی تبدیل می‌کند."
+ },
+ {
+  "en": "What is React Strict Mode and what are its benefits?",
+  "q": "React Strict Mode چیست و سودهایش کدام‌اند؟",
+  "qa": "`<StrictMode>` چک‌های فقط-توسعه را برای زیردرخت فعال می‌کند: رندر اضافی برای آشکار‌کردن رندر ناخالص و چرخه‌ی setup/cleanup اضافی برای Effects."
+ },
+ {
+  "en": "What is React Suspense and what does it enable?",
+  "q": "React Suspense چیست و چه چیزی را ممکن می‌کند؟",
+  "qa": "`Suspense` به React اجازه می‌دهد fallback نمایش دهد وقتی فرزند آماده‌ی رندر نیست؛ منابع پشتیبانی‌شده شامل `lazy`، cache با React 19 `use` و React Server…"
+ },
+ {
+  "en": "What is the difference between controlled and uncontrolled React components?",
+  "q": "تفاوت controlled و uncontrolled در React چیست؟",
+  "qa": "**Controlled** ورودی فرم را از state می‌رانَد: `value`/`checked` + `onChange` و state تک‌منبعِ حقیقت است؛ **uncontrolled** state را DOM مدیریت می‌کند و با ref خوانده می‌شود."
+ },
+ {
+  "en": "What is the difference between React Node, React Element and a React Component?",
+  "q": "تفاوت React Node و React Element و React Component چیست؟",
+  "qa": "**React Node** هر مقداری که ری‌اکت می‌تواند رندر کند؛ **Element** توصیف ساده‌ی UI و **Component** تابع یا کلاسی که element تولید می‌کند."
+ },
+ {
+  "en": "What is the Flux pattern and what are its benefits?",
+  "q": "الگوی Flux چیست و سودهایش کدام‌اند؟",
+  "qa": "**Flux** معماری تاریخی فیسبوک برای مدیریت state حول React است؛ اکشن از طریق dispatcher مرکزی به store می‌رود و view از store می‌خواند."
+ },
+ {
+  "en": "What is the useCallback hook in React and when should it be used?",
+  "q": "هوک useCallback چیست و کِی استفاده می‌شود؟",
+  "qa": "`useCallback` تعریف تابع را تا تغییر وابستگی‌ها memo می‌کند؛ نکته **پایداری مرجع** است تا `memo` و effectهای وابسته به تابع درست کار کنند."
+ },
+ {
+  "en": "What is the useId hook in React and when should it be used?",
+  "q": "هوک useId چیست و کِی استفاده می‌شود؟",
+  "qa": "`useId` (React 18) شناسه‌ی یکتای پایدار به‌ازای هر instance و **per React root** تولید می‌کند؛ علت اصلی: تولید IDهای بین سرور و کلاینت سازگار."
+ },
+ {
+  "en": "What is the useMemo hook in React and when should it be used?",
+  "q": "هوک useMemo چیست و کِی استفاده می‌شود؟",
+  "qa": "`useMemo` نتیجه‌ی محاسبه را بین رندرها تا تغییر وابستگی‌ها memo می‌کند؛ بهینه‌سازی عملکرد برای محاسبات سنگینِ اندازه‌گیری‌شده یا پایداری مرجع."
+ },
+ {
+  "en": "What is the useReducer hook in React and when should it be used?",
+  "q": "هوک useReducer چیست و کِی استفاده می‌شود؟",
+  "qa": "`useReducer` برای مدیریت منطق state پیچیده در کامپوننت‌های تابعی به‌کار می‌رود؛ جایگزین `useState` است و مناسب حالت‌های چندبخشی یا transitionهای مرتبط."
+ },
+ {
+  "en": "What is the consequence of using array indices as the value for `key`s in React?",
+  "q": "پیامد استفاده از اندیس به‌عنوان key در React چیست؟",
+  "qa": "استفاده از اندیس باعث reconciliation نادرست لیست هنگام جابه‌جایی، درج یا حذف می‌شود؛ اندیس جایگاه را نشان می‌دهد نه آیتم را و state می‌تواند گم شود."
+ },
+ {
+  "en": "What is the useRef hook in React and when should it be used?",
+  "q": "هوک useRef چیست و کِی استفاده می‌شود؟",
+  "qa": "`useRef` آبجکتی mutable می‌سازد که بین رندرها پایدار است؛ برای دسترسی و دستکاری DOM elementها یا نگه‌داشتن مقدار بدون رندر دوباره به‌کار می‌رود."
+ },
+ {
+  "en": "What is Virtual DOM?",
+  "q": "Virtual DOM چیست؟",
+  "qa": "_Virtual DOM (VDOM)_ نمایش سبک درون‌حافظه‌ای از _Real DOM_ است که کتابخانه‌هایی مثل React برای بهینه‌سازی رندر UI استفاده می‌کنند."
+ },
+ {
+  "en": "What is the difference between Shadow DOM and Virtual DOM?",
+  "q": "تفاوت Shadow DOM و Virtual DOM چیست؟",
+  "qa": "_Shadow DOM_ فناوری مرورگر برای **scoping متغیرها و CSS** در _web componentها_ است؛ _Virtual DOM_ مفهومی کتابخانه‌ای برای بهینه‌سازی رندر."
+ },
+ {
+  "en": "What is React Fiber?",
+  "q": "React Fiber چیست؟",
+  "qa": "**React Fiber** **موتور reconciliation جدید** ری‌اکت از نسخه ۱۶ است؛ بازنویسی کامل الگوریتم هسته (الگوریتم قدیمی stack-based)."
+ },
+ {
+  "en": "What is the main goal of React Fiber?",
+  "q": "هدف اصلی React Fiber چیست؟",
+  "qa": "هدف _Fiber_ افزایش مناسب‌بودن برای انیمیشن، layout و gestures؛ ویژگی برجسته **incremental rendering** یعنی تقسیم رندر به قطعات قابل‌وقفه."
+ },
+ {
+  "en": "What is children prop?",
+  "q": "children prop چیست؟",
+  "qa": "`children` prop ویژه‌ای در React برای پاس‌دادن elementها بین تگ باز و بسته‌ی کامپوننت است؛ معمولاً برای تزریق محتوای داینامیک به کار می‌رود."
+ },
+ {
+  "en": "What is reconciliation?",
+  "q": "reconciliation چیست؟",
+  "qa": "`Reconciliation` فرایند به‌روزرسانی Browser DOM توسط React و دلیل سرعت آن است؛ با **diffing algorithm** تغییرات حداقلی را محاسبه می‌کند."
+ },
+ {
+  "en": "Why React uses className over class attribute?",
+  "q": "چرا React از className به‌جای class استفاده می‌کند؟",
+  "qa": "React از **className** به‌جای **class** استفاده می‌کند چون `class` با کلیدواژه‌ی JS تداخل نام دارد."
+ },
+ {
+  "en": "What are fragments?",
+  "q": "fragment ها چیستند؟",
+  "qa": "الگوی رایج در React برگرداندن چند عنصر از یک کامپوننت است؛ _Fragments_ گروه‌کردن فرزندان را بدون node اضافی DOM ممکن می‌کنند."
+ },
+ {
+  "en": "Why fragments are better than container divs?",
+  "q": "چرا fragment ها بهتر از container div هستند؟",
+  "qa": "دلایل ترجیح fragmentها به container divهای DOM:"
+ },
+ {
+  "en": "What are portals in React?",
+  "q": "portal ها در React چیستند؟",
+  "qa": "**Portal** قابلیتی است که فرزندان را در DOM node خارج از سلسله‌مراتب والد رندر می‌کند — مخصوصاً برای مودال و tooltip."
+ },
+ {
+  "en": "How to apply validation on props in React?",
+  "q": "اعتبارسنجی props در React چطور انجام می‌شود؟",
+  "qa": "در **development mode**، ری‌اکت خودکار همه‌ی props را چک می‌کند تا نوع درست داشته باشند؛ نوع غلط هشدار کنسول می‌دهد."
+ },
+ {
+  "en": "What is ReactDOMServer?",
+  "q": "ReactDOMServer چیست؟",
+  "qa": "آبجکت `ReactDOMServer` رندر کامپوننت‌ها به **markup استاتیک** را ممکن می‌کند (عمدتاً روی node server)؛ عمدتاً برای SSR استفاده می‌شود."
+ },
+ {
+  "en": "How to use innerHTML in React?",
+  "q": "innerHTML را در React چطور استفاده می‌کنید؟",
+  "qa": "attribute `dangerouslySetInnerHTML` جایگزین `innerHTML` در React است؛ مثل innerHTML خطرناک است و فقط با داده‌ی sanitize‌شده استفاده شود."
+ },
+ {
+  "en": "What is the impact of indexes as keys?",
+  "q": "اثر استفاده از اندیس به‌عنوان key چیست؟",
+  "qa": "keyها باید **پایدار، قابل‌پیش‌بینی و یکتا** باشند تا ری‌اکت بتواند عناصر را ردیابی کند؛ اندیس در لیست‌های داینامیک مشکلاتی می‌سازد."
+ },
+ {
+  "en": "Why we need to be careful when spreading props on DOM elements?",
+  "q": "چرا موقع spread کردن props روی DOM elementها باید مواظب بود؟",
+  "qa": "موقع **spread props** خطر افزودن attributeهای ناشناخته به DOM هست؛ راه‌حل: prop destructuring و فقط عبوردادن موردنیازها."
+ },
+ {
+  "en": "How you implement Server Side Rendering or SSR?",
+  "q": "SSR را چطور پیاده می‌کنید؟",
+  "qa": "React از قبل برای رندر روی Node server آماده است؛ نسخه‌ی ویژه‌ی DOM renderer موجود است که همان API را دارد اما در SSR استفاده می‌شود."
+ },
+ {
+  "en": "Why should component names start with capital letter?",
+  "q": "چرا نام کامپوننت باید با حرف بزرگ شروع شود؟",
+  "qa": "اگر کامپوننت را با JSX رندر می‌کنید، نامش باید بزرگ شروع شود وگرنه React تگ HTML معمولی فرض و خطا می‌دهد."
+ },
+ {
+  "en": "Why ReactDOM is separated from React?",
+  "q": "چرا ReactDOM از React جدا شده؟",
+  "qa": "تیم React ویژگی‌های مربوط به DOM را در کتابخانه‌ی جدا _ReactDOM_ استخراج کرد؛ React v0.14 اولین نسخه‌ای است که جدا شدند."
+ },
+ {
+  "en": "How to re-render the view when the browser is resized?",
+  "q": "هنگام resize مرورگر view را چطور دوباره رندر می‌کنید؟",
+  "qa": "با هوک `useState` عرض و ارتفاع را مدیریت و با `useEffect` رویداد `resize` را اضافه/حذف می‌کنید تا state به‌روز شود."
+ },
+ {
+  "en": "Why can't you update props in React?",
+  "q": "چرا در React نمی‌توان props را به‌روزرسانی کرد؟",
+  "qa": "فلسفه‌ی React این است که props باید _immutable_ (فقط‌خواندنی) و _از بالا به پایین_ باشند؛ والد می‌فرستد و فرزند فقط می‌خواند."
+ },
+ {
+  "en": "What are the Router components of React Router v6?",
+  "q": "کامپوننت‌های Router در React Router v6 کدام‌اند؟",
+  "qa": "React Router v6 این ۴ کامپوننت `<Router>` را می‌دهد:"
+ },
+ {
+  "en": "How do you programmatically navigate using React Router v4?",
+  "q": "در React Router v4 ناوبری برنامه‌نویسی‌شده چطور انجام می‌شود؟",
+  "qa": "سه روش مختلف برای ناوبری برنامه‌نویسی‌شده در کامپوننت‌ها:"
+ },
+ {
+  "en": "Why you get Router may have only one child element warning?",
+  "q": "چرا هشدار Router may have only one child element می‌گیرید؟",
+  "qa": "باید Routeهایتان را در `<Switch>` بپیچید چون `<Switch>` یکتا است و فقط یک route را انحصاری رندر می‌کند."
+ },
+ {
+  "en": "Are there any similarities between Redux and RxJS?",
+  "q": "شباهتی بین Redux و RxJS هست؟",
+  "qa": "این کتابخانه‌ها برای اهداف بسیار متفاوتی خیلی فرق دارند ولی شباهت‌های کلی‌ای هم دارند."
+ },
+ {
+  "en": "How to reset state in Redux?",
+  "q": "state را در Redux چطور ریست می‌کنید؟",
+  "qa": "باید یک **root reducer** بنویسید که هندل اکشن را به reducer تولید‌شده توسط `combineReducers()` واگذار کند."
+ },
+ {
+  "en": "What is the difference between React context and React Redux?",
+  "q": "تفاوت React context و React Redux چیست؟",
+  "qa": "**Context** مستقیماً برای پاس‌دادن داده به کامپوننت‌های تو در تو عالی است؛ **Redux** برای مدیریت state پیچیده و مرکزیت‌یافته طراحی شده."
+ },
+ {
+  "en": "Why are Redux state functions called reducers?",
+  "q": "چرا توابع state در Redux به reducers نامیده می‌شوند؟",
+  "qa": "توابع state در Redux همیشه انباشتِ وضعیت را برمی‌گردانند (بر اساس همه‌ی actionهای قبلی و فعلی)؛ پس مثل reducer عمل می‌کنند."
+ },
+ {
+  "en": "What is the proper way to access Redux store?",
+  "q": "روش درست دسترسی به Redux store چیست؟",
+  "qa": "بهترین راه استفاده از تابع `connect()` است که کامپوننت جدیدی دور کامپوننت موجود می‌سازد (HOC)."
+ },
+ {
+  "en": "What are Redux selectors and why use them?",
+  "q": "Redux selector ها چیستند و چرا استفاده می‌شوند؟",
+  "qa": "_Selectorها_ توابعی هستند که state را به‌عنوان آرگومان می‌گیرند و داده‌ای برای کامپوننت برمی‌گردانند؛ انتزاع و memoization می‌دهند."
+ },
+ {
+  "en": "How Relay is different from Redux?",
+  "q": "Relay چه تفاوتی با Redux دارد؟",
+  "qa": "**Relay** شبیه Redux است چون هر دو store واحد دارند؛ تفاوت اصلی: Relay فقط state منشأ‌گرفته از سرور را مدیریت می‌کند و GraphQL محور است."
+ },
+ {
+  "en": "What is reselect and how it works?",
+  "q": "reselect چیست و چطور کار می‌کند؟",
+  "qa": "_Reselect_ **کتابخانه‌ی selector** (برای Redux) است که مفهوم _memoization_ را به‌کار می‌گیرد؛ داده‌ی مشتق‌شده را فقط با تغییر ورودی دوباره محاسبه می‌کند."
+ },
+ {
+  "en": "Why is DevTools not loading in Chrome for local files?",
+  "q": "چرا DevTools برای فایل‌های local در Chrome لود نمی‌شود؟",
+  "qa": "اگر فایل HTML محلی را باز کرده‌اید (`file://…`) باید اول _Chrome Extensions_ را باز و `Allow access to file URLs` را فعال کنید."
+ },
+ {
+  "en": "Why React tab is not showing up in DevTools?",
+  "q": "چرا تب React در DevTools نشان داده نمی‌شود؟",
+  "qa": "هنگام load صفحه، _React DevTools_ یک global به نام `__REACT_DEVTOOLS_GLOBAL_HOOK__` ست می‌کند و React حین initialize با آن ارتباط می‌گیرد."
+ },
+ {
+  "en": "How to prevent unnecessary updates using setState?",
+  "q": "چطور آپدیت‌های غیرضروری setState را جلوگیری می‌کنید؟",
+  "qa": "مقدار فعلی state را با مقدار موجود مقایسه و تصمیم می‌گیرید رندر شود یا نه؛ اگر یکی باشند آپدیت لازم نیست."
+ },
+ {
+  "en": "How do you render Array, Strings and Numbers in React 16 Version?",
+  "q": "آرایه، رشته و عدد را در React 16 چطور رندر می‌کنید؟",
+  "qa": "**نکته:** این سوال به React 16 اشاره دارد ولی در ۱۸/۱۹ هم معتبر است؛ هر سه نوع قابل رندر مستقیم در JSX هستند."
+ },
+ {
+  "en": "What rules need to be followed for hooks?",
+  "q": "قواعدی که برای هوک‌ها باید رعایت شوند کدام‌اند؟",
+  "qa": "دو قاعده برای استفاده از هوک‌ها لازم است:"
+ },
+ {
+  "en": "How to ensure hooks followed the rules in your project?",
+  "q": "در پروژه چطور اطمینان می‌دهید قواعد هوک‌ها رعایت شده‌اند؟",
+  "qa": "تیم React پلاگین **eslint-plugin-react-hooks** را منتشر کرده که دو قاعده‌ی هوک را تحمیل می‌کند؛ بخشی از API هوک‌هاست."
+ },
+ {
+  "en": "What is the purpose of callback function argument format of `setState()` in React and when should it be used?",
+  "q": "هدف فرمت callback در setState چیست و کِی استفاده می‌شود؟",
+  "qa": "شکل **updater function** (`setX(prev => ...)`) تضمین می‌کند هر آپدیت از آخرین مقدار صف‌شده محاسبه شود — حیاتی در آپدیت‌های سریع متوالی."
+ },
+ {
+  "en": "What are Keyed Fragments?",
+  "q": "Keyed Fragments چیستند؟",
+  "qa": "Fragmentهایی که `key` گرفته‌اند؛ موقع map کردن روی لیست‌ها برای حفظ هویت فرزندان در reconciliation ضروری‌اند."
+ },
+ {
+  "en": "How JSX prevents Injection Attacks?",
+  "q": "JSX چطور از حملات تزریق جلوگیری می‌کند؟",
+  "qa": "React DOM مقادیر embed‌شده در JSX را escape می‌کند؛ هیچ محتوایی که صریحاً نوشته نشده رندر نمی‌شود — همه‌چیز به رشته تبدیل می‌شود."
+ },
+ {
+  "en": "Why are you not required to use inheritance?",
+  "q": "چرا نیازی به استفاده از وراثت نیست؟",
+  "qa": "React ترکیب (composition) را به وراثت ترجیح می‌دهد؛ کامپوننت‌ها با props و children انعطاف‌پذیرتر ساخته می‌شوند."
+ },
+ {
+  "en": "Why do we use array destructuring (square brackets notation) in useState?",
+  "q": "چرا در useState از array destructuring استفاده می‌کنیم؟",
+  "qa": "چون `useState` آرایه‌ی دو‌تایی برمی‌گرداند: [مقدار، setter]؛ با destructuring نام‌های دلخواه می‌گذارید بدون نیاز به نام ثابت."
+ },
+ {
+  "en": "What are the differences between Redux and MobX?",
+  "q": "تفاوت‌های Redux و MobX چیست؟",
+  "qa": "در جدول: Redux متمرکز و immutable با dispatch صریح؛ MobX توزیع‌شده و reactive با observables و تغییر خودکار."
+ },
+ {
+  "en": "Explain concurrent rendering with an example",
+  "q": "رندر هم‌زمان را با مثال توضیح دهید.",
+  "qa": "React 18 با **concurrent rendering** رندر را قابل‌وقفه می‌کند؛ آپدیت کم‌اولویت (مثل فیلتر لیست) می‌تواند متوقف شود تا تایپ کاربر فوری پاسخ بگیرد."
+ },
+ {
+  "en": "How do you make sure that user remains authenticated on page refresh while using Context API State Management?",
+  "q": "با Context API چطور اطمینان می‌دهید کاربر بعد از refresh احراز هویت باقی بماند؟",
+  "qa": "توکن را در httpOnly cookie یا localStorage ذخیره و در ابتدای mount با useEffect از storage بخوانید و به Context ست کنید."
+ },
+ {
+  "en": "What is strict mode in React?",
+  "q": "strict mode در React چیست؟",
+  "qa": "`<StrictMode>` ابزار توسعه‌ای است که رندرهای اضافی، effects ناقص و APIهای منسوخ را آشکار می‌کند — در پروداکشن هیچ اثری ندارد."
+ },
+ {
+  "en": "Why does strict mode render twice in React?",
+  "q": "چرا strict mode در React دو بار رندر می‌کند؟",
+  "qa": "برای آشکار‌کردن **رندرهای ناخالص**: اگر رندر دوبار متفاوت باشد، یعنی کامپوننت ناخالص است و باید اصلاح شود؛ فقط در development فعال است."
+ },
+ {
+  "en": "How do you update objects inside state?",
+  "q": "آبجکت‌های داخل state را چطور به‌روزرسانی می‌کنید؟",
+  "qa": "با immutable update: کپی سطح اول با spread، سپس تغییر فیلد موردنظر — هرگز مستقیم آبجکت داخل state را تغییر ندهید."
+ },
+ {
+  "en": "What are the differences between page router and app router in nextjs?",
+  "q": "تفاوت page router و app router در Next.js چیست؟",
+  "qa": "App Router با Server Componentها، layoutهای nested و streaming SSR پیش‌فرض است؛ Page Router قدیمی‌تر و مبتنی بر فایل‌های pages/."
+ },
+ {
+  "en": "What types of values can useState hold?",
+  "q": "useState چه انواع مقداری را نگه می‌دارد؟",
+  "qa": "هر نوع قابل‌serialize: عدد، رشته، بولین، آرایه، آبجکت، null، undefined — هر ساختار داده‌ای JS."
+ },
+ {
+  "en": "Is useState Synchronous or Asynchronous?",
+  "q": "useState هم‌زمان است یا ناهم‌زمان؟",
+  "qa": "از دید API **هم‌زمان** است ولی آپدیت‌ها **batch می‌شوند**؛ مقدار در همان تیک تغییر نمی‌کند بلکه در رندر بعدی اعمال می‌شود."
+ },
+ {
+  "en": "What is useReducer? Why do you use useReducer?",
+  "q": "useReducer چیست و چرا استفاده می‌کنید؟",
+  "qa": "`useReducer` جایگزین useState برای stateهای پیچیده با چند sub-value یا منطق گذار وابسته به قبلی است؛ reducer تابع pureی است که state و action می‌گیرد."
+ },
+ {
+  "en": "How does `useReducer` works? Explain with an example",
+  "q": "useReducer چطور کار می‌کند؟ با مثال توضیح دهید.",
+  "qa": "reducer تابع pureی است که (state, action) می‌گیرد و state جدید برمی‌گرداند؛ `dispatch(action)` را صدا می‌زنید و reducer آن را پردازش می‌کند."
+ },
+ {
+  "en": "How does useContext works? Explain with an example",
+  "q": "useContext چطور کار می‌کند؟ با مثال توضیح دهید.",
+  "qa": "`useContext(SomeContext)` نزدیک‌ترین Provider بالای درخت را پیدا و مقدار فعلی آن را برمی‌گرداند؛ بدون پاس‌دادن props در هر لایه."
+ },
+ {
+  "en": "What's a common pitfall when using useContext with objects?",
+  "q": "تله‌ی رایج استفاده از useContext با آبجکت‌ها چیست؟",
+  "qa": "اگر `value` provider آبجکت inline باشد، هر رندر provider مرجع جدید می‌سازد و همه‌ی consumerها را بی‌دلیل re-render می‌کند؛ useMemo یا جدا‌کردن contextها."
+ },
+ {
+  "en": "How do reactive dependencies in the useEffect dependency array affect its execution behavior?",
+  "q": "وابستگی‌های reactive در dependency array اثر اجرای useEffect را چطور تعیین می‌کنند؟",
+  "qa": "React با `Object.is` هر dependency را مقایسه می‌کند؛ اگر هرکدام تغییر کند، effect دوباره اجرا می‌شود. آرایه‌ی خالی یعنی فقط یک‌بار بعد از mount."
+ },
+ {
+  "en": "How does useLayoutEffect work during server-side rendering (SSR)?",
+  "q": "useLayoutEffect در SSR چطور کار می‌کند؟",
+  "qa": "در SSR اجرا نمی‌شود چون DOM وجود ندارد؛ React هشدار می‌دهد که باید به useEffect تبدیل شود یا فقط کلاینت‌محور باشد."
+ },
+ {
+  "en": "Can useRef be used to store previous values?",
+  "q": "آیا useRef می‌تواند مقادیر قبلی را نگه دارد؟",
+  "qa": "بله، با ذخیره‌ی مقدار فعلی در `.current` حین رندر، مقدار قبلی در رندر بعدی در دسترس است — بدون رندر دوباره."
+ },
+ {
+  "en": "Does useMemo prevent re-rendering of child components?",
+  "q": "آیا useMemo جلوی رندر فرزند را می‌گیرد؟",
+  "qa": "نه مستقیم؛ `useMemo` فقط محاسبه را memo می‌کند. برای جلوگیری از رندر فرزند، `React.memo` دور کامپوننت فرزند لازم است و props باید مرجع‌پایدار باشند."
+ },
+ {
+  "en": "What is useCallback and why is it used?",
+  "q": "useCallback چیست و چرا استفاده می‌شود؟",
+  "qa": "`useCallback` تعریف تابع را تا تغییر وابستگی‌ها memo می‌کند؛ نکته **پایداری مرجع** است تا memo و effectهای وابسته به تابع درست کار کنند."
+ },
+ {
+  "en": "What are Custom React Hooks and How Can You Develop One?",
+  "q": "Custom React Hook ها چیستند و چطور ساخته می‌شوند؟",
+  "qa": "تابعی که نامش با `use` شروع می‌شود و هوک‌های دیگر را داخلش صدا می‌زنید؛ منطق stateful را بین کامپوننت‌ها بدون wrapper اشتراک می‌دهد."
+ },
+ {
+  "en": "What is the useDeferredValue hook?",
+  "q": "هوک useDeferredValue چیست؟",
+  "qa": "`useDeferredValue` نسخه‌ی به‌تاخیرافتاده‌ی یک مقدار را می‌دهد تا رندر سنگین با مقدار قدیمی انجام و بعد با مقدار جدید به‌روز شود؛ برای ورودی‌های جست‌وجو عالی."
+ },
+ {
+  "en": "What is the useInsertionEffect hook?",
+  "q": "هوک useInsertionEffect چیست؟",
+  "qa": "`useInsertionEffect` قبل از هر useLayoutEffect اجرا می‌شود؛ برای کتابخانه‌های CSS-in-JS طراحی شده تا استایل‌ها قبل از رندر تزریق شوند."
+ },
+ {
+  "en": "How do you share state logic between components using custom hooks?",
+  "q": "منطق state را با custom hook ها چطور بین کامپوننت‌ها به اشتراک می‌گذارید؟",
+  "qa": "منطق را در تابعی که با `use` شروع می‌شود کپسوله کنید و state و متدهای برگشتی را در هر کامپوننت مستقل داشته باشید — هر مصرف‌کننده state خودش را دارد."
+ },
+ {
+  "en": "How do you handle cleanup in useEffect?",
+  "q": "cleanup در useEffect چطور انجام می‌شود؟",
+  "qa": "تابعی را از effect برگردانید: unsubscribing، clearTimeout، abort controller — قبل از رندر بعدی یا unmount صدا زده می‌شود."
+ },
+ {
+  "en": "What is the useOptimistic hook?",
+  "q": "هوک useOptimistic چیست؟",
+  "qa": "`useOptimistic` (React 19) حین یک transition، مقدار optimistic نمایش می‌دهد و بعد از اتمام، به مقدار واقعی برمی‌گرداند — برای UX فوری فرم‌ها."
+ },
+ {
+  "en": "Does React.memo prevent Context consumers from re-rendering?",
+  "q": "آیا React.memo جلوی رندر consumerهای Context را می‌گیرد؟",
+  "qa": "نه؛ `useContext` در کامپوننت‌های memo‌شده هم هر بار که مقدار Context تغییر کند رندر را فعال می‌کند — باید context را تقسیم یا مقدار را memo کنید."
+ },
+ {
+  "en": "Why is Redux Toolkit recommended over Redux?",
+  "q": "چرا Redux Toolkit به Redux خالی توصیه می‌شود؟",
+  "qa": "RTK boilerplate را حذف می‌کند: `createSlice` با Immer، `configureStore` با defaults امن، و Thunk داخلی — کد کمتر و خطای کمتر."
+ },
+ {
+  "en": "How do you prevent unnecessary Redux re-renders?",
+  "q": "چطور رندرهای غیرضروری Redux را جلوگیری می‌کنید؟",
+  "qa": "با memoized selectorها (Reselect)، نگاشت فقط داده‌ی لازم در mapStateToProps، و استفاده از `React.memo` روی کامپوننت‌های متصل."
+ },
+ {
+  "en": "Why is normalized state important for performance?",
+  "q": "چرا state نرمال‌شده برای عملکرد مهم است؟",
+  "qa": "داده‌ی تو در تو باعث جست‌وجوی O(n) و کپی سنگین در update می‌شود؛ نرمال‌سازی با lookup جدولی دسترسی O(1) و به‌روزرسانی هدفمند می‌دهد."
+ },
+ {
+  "en": "What are Redux serializable values?",
+  "q": "مقادیر قابل‌serialize در Redux چیستند؟",
+  "qa": "فقط مقادیری که با JSON.stringify قابل بازسازی‌اند: رشته، عدد، بولین، آرایه، آبجکت ساده. توابع، Symbolها، Dateها و Mapها مجاز نیستند."
+ },
+ {
+  "en": "How do you persist Redux state?",
+  "q": "state را در Redux چطور پایدار می‌کنید؟",
+  "qa": "با کتابخانه‌ی `redux-persist` یا دستی: subscribe به store و ذخیره در localStorage؛ در شروع، state را از storage بخوانید و به createStore بدهید."
+ },
+ {
+  "en": "How do you debug a Redux performance problem?",
+  "q": "مشکل عملکرد Redux را چطور دیباگ می‌کنید؟",
+  "qa": "با Redux DevTools Profiler اکشن‌ها و رندرهای ناشی از آن‌ها را بررسی، selectorهای گران را با Reselect memo کنید و reducerهای سنگین را پیدا کنید."
+ },
+ {
+  "en": "What should be stored in Redux vs derived with selectors?",
+  "q": "چه چیزی در Redux ذخیره و چه چیزی با selectors مشتق می‌شود؟",
+  "qa": "فقط داده‌ی حداقلی و قابل‌تغییر را ذخیره کنید؛ هر چیزی که از state موجود قابل محاسبه است (مثل فیلتر و مرتب‌سازی) با selector مشتق کنید نه ذخیره."
+ },
+ {
+  "en": "How do you navigate programmatically in React Router?",
+  "q": "ناوبری برنامه‌نویسی‌شده در React Router چطور انجام می‌شود؟",
+  "qa": "با هوک `useNavigate` در v6: `navigate('/path')` یا `navigate(-1)` برای برگشت؛ در v5 از `history.push()` استفاده می‌شد."
+ },
+ {
+  "en": "Why should we not update the state directly?",
+  "q": "چرا نباید state را مستقیم به‌روزرسانی کرد؟",
+  "qa": "مutation مرجع را عوض نمی‌کند و React تغییر را نمی‌بیند — رندر رخ نمی‌دهد. باید با setter و ساخت آبجکت جدید آپدیت کنید تا reconciliation فعال شود."
+ },
+ {
+  "en": "How to bind methods or event handlers in JSX callbacks?",
+  "q": "متدها یا event handler ها در JSX callback ها چطور bind می‌شوند؟",
+  "qa": "چهار راه: bind در constructor، arrow function در callback، arrow function در render، یا class field syntax — هرکدام سود و هزینه دارد."
+ },
+ {
+  "en": "Why we need to pass a function to setState()?",
+  "q": "چرا باید تابع به setState بدهیم؟",
+  "qa": "چون state آپدیت‌ها را batch می‌کند؛ با پاس‌دادن تابع `(prev => ...)` هر آپدیت از آخرین مقدار صف‌شده محاسبه می‌شود و در توالی‌های سریع درست می‌ماند."
+ },
+ {
+  "en": "Why is isMounted() an anti-pattern and what is the proper solution?",
+  "q": "چرا isMounted() یک anti-pattern است و راه‌حل درست چیست؟",
+  "qa": "از isMounted برای جلوگیری از setState بعد از unmount استفاده می‌شد ولی نشت حافظه می‌دهد؛ راه‌حل درست: cleanup در useEffect و AbortController."
+ },
+ {
+  "en": "Is it possible to use React without rendering HTML?",
+  "q": "آیا می‌توان React را بدون رندر HTML استفاده کرد؟",
+  "qa": "بله، React Native و TestRenderer هیچ HTML تولید نمی‌کنند؛ React فقط موتور رندر است و renderer جدا دارد."
+ },
+ {
+  "en": "How to update a component every second?",
+  "q": "هر ثانیه کامپوننت را چطور به‌روزرسانی می‌کنید؟",
+  "qa": "با `useEffect` و `setInterval` که هر ۱۰۰۰ms state را آپدیت می‌کند؛ در cleanup حتماً `clearInterval` کنید تا نشت نکند."
+ },
+ {
+  "en": "Why is a component constructor called only once?",
+  "q": "چرا constructor کامپوننت فقط یک‌بار صدا زده می‌شود؟",
+  "qa": "React constructor را فقط هنگام **ساخت نمونه** یک‌بار صدا می‌زند؛ re-renderهای بعدی فقط render را دوباره اجرا می‌کنند و constructor را دور می‌زنند."
+ },
+ {
+  "en": "What are render props?",
+  "q": "render props چیستند؟",
+  "qa": "تکنیکی برای اشتراک منطق بین کامپوننت‌ها با propی که **تابع** است؛ کامپوننت آن را با داده‌ی داخلی صدا می‌زند تا فرزند رندر شود."
+ },
+ {
+  "en": "Whats the purpose of at symbol in the Redux connect decorator?",
+  "q": "هدف علامت @ در decorator ی connect در Redux چیست؟",
+  "qa": "`@connect(...)` سینتکس **decorator** است که همان کار `connect(...)(Component)` را می‌کند؛ نیاز به Babel plugin برای پشتیبانی دارد."
+ },
+ {
+  "en": "Why are inline ref callbacks or functions not recommended?",
+  "q": "چرا inline ref callback ها توصیه نمی‌شوند؟",
+  "qa": "هر رندر تابع ref جدیدی می‌سازد و React مرجع قدیمی را با null صدا و بعد جدید را صدا می‌زند — کد اضافی و رفتار ناخواسته؛ useCallback یا ref object بهتر است."
+ },
+ {
+  "en": "Why do you not need error boundaries for event handlers?",
+  "q": "چرا برای event handler ها به error boundary نیاز نیست؟",
+  "qa": "چون event handlerها خارج از رندر اجرا می‌شوند و خطایشان DOM را از بین نمی‌برد؛ کافی است در خود handler با try/catch هندل شود."
+ },
+ {
+  "en": "What are the possible return types of render method?",
+  "q": "انواع ممکن مقدار برگشتی متد render کدام‌اند؟",
+  "qa": "React elementها، آرایه‌ها و fragmentها، Portals، رشته و عدد، بولین یا null (هیچ‌چیز رندر نمی‌شود)."
+ },
+ {
+  "en": "Is it good to use arrow functions in render methods?",
+  "q": "استفاده از توابع فلشی در render خوب است؟",
+  "qa": "برای callbacks کوتاه راحت است ولی هر رندر تابع جدید می‌سازد که memoization فرزند را نقض می‌کند؛ برای کامپوننت‌های حساس به عملکرد از useCallback استفاده کنید."
+ },
+ {
+  "en": "Give an example on How to use context?",
+  "q": "مثالی از استفاده از Context بزنید.",
+  "qa": "`createContext` بسازید، Provider را بالای درخت با مقدار بگذارید و در فرزند با `useContext` یا `Context.Consumer` مصرف کنید."
+ },
+ {
+  "en": "How do you use contextType?",
+  "q": "contextType چطور استفاده می‌شود؟",
+  "qa": "در کلاس‌ها `static contextType = MyContext` ست کنید و بعد `this.context` در هر متد کلاس در دسترس است."
+ },
+ {
+  "en": "Why do you need additional care for component libraries while using forward refs?",
+  "q": "چرا در کتابخانه‌های کامپوننت با forwardRef باید مواظب باشید؟",
+  "qa": "چون کاربران کتابخانه انتظار دارند ref به DOM node اصلی برسد نه کامپوننت wrapper؛ باید ref را با forwardRef به عنصر واقعی منتقل کنید و propsهای اضافی را هم merge کنید."
+ },
+ {
+  "en": "What does re-rendering mean in React?",
+  "q": "re-rendering در React یعنی چه؟",
+  "qa": "یعنی React دوباره تابع کامپوننت را صدا می‌زند تا توصیف جدید UI بگیرد؛ بعد با reconciliation فقط تغییرات واقعی DOM اعمال می‌شوند."
+ },
+ {
+  "en": "What are React Portals used for?",
+  "q": "React Portals برای چه استفاده می‌شوند؟",
+  "qa": "رندر فرزندان در DOM node خارج از سلسله‌مراتب والد: مودال‌ها، tooltipها، dropdownها — که باید از overflow والد فرار کنند."
+ },
+ {
+  "en": "What are Pure Components?",
+  "q": "Pure Component ها چیستند؟",
+  "qa": "کامپوننت‌هایی که فقط وقتی props یا state تغییر کرده باشد رندر می‌شوند؛ `React.PureComponent` مقایسه سطحی خودکار انجام می‌دهد."
+ },
+ {
+  "en": "How Virtual DOM works?",
+  "q": "Virtual DOM چطور کار می‌کند؟",
+  "qa": "ری‌اکت درخت elementها را در حافظه نگه می‌دارد؛ با تغییر state درخت جدید می‌سازد، با قبلی diff می‌کند و فقط تغییرات را به DOM واقعی اعمال می‌کند."
+ },
+ {
+  "en": "What are Higher-Order Components?",
+  "q": "Higher-Order Component ها چیستند؟",
+  "qa": "**HOC** تابعی است که کامپوننت می‌گیرد و کامپوننت جدیدی با props یا رفتار اضافه برمی‌گرداند؛ الگویی برای اشتراک منطق cross-cutting."
+ },
+ {
+  "en": "How to use styles in React?",
+  "q": "استایل‌ها در React چطور اعمال می‌شوند؟",
+  "qa": "چهار روش: inline style object، CSS کلاس‌ها، CSS Modules و کتابخانه‌های CSS-in-JS مثل styled-components."
+ },
+ {
+  "en": "What is flux?",
+  "q": "flux چیست؟",
+  "qa": "**Flux** معماری تاریخی فیسبوک برای مدیریت state حول React است: action → dispatcher → store → view در جریان یک‌طرفه."
+ },
+ {
+  "en": "What are the downsides of Redux compared to Flux?",
+  "q": "معایب Redux نسبت به Flux چیست؟",
+  "qa": "Redux سخت‌گیرتر است: immutability اجباری، reducerهای pure، نبود side effect مستقیم — برای تیم‌های کوچک ممکن است overkill باشد."
+ },
+ {
+  "en": "What are the rules covered by diffing algorithm?",
+  "q": "قواعد پوشش‌داده‌شده توسط diffing algorithm کدام‌اند؟",
+  "qa": "سه قاعده: نوع‌های متفاوت → subtree جدید؛ keyهای یکسان → همان instance حفظ می‌شود؛ ترتیب فرزندان با key تعیین می‌شود نه index."
+ },
+ {
+  "en": "Can you explain how useState works internally?",
+  "q": "useState از داخل چطور کار می‌کند؟",
+  "qa": "ری‌اکت در Fiber node یک linked list از هوک‌ها نگه می‌دارد؛ `useState` از همین لیست با ترتیب فراخوانی مقدار می‌خواند و setter صف آپدیت را مدیریت می‌کند."
+ },
+ {
+  "en": "Is dispatch from useReducer asynchronous and does it update state immediately?",
+  "q": "dispatch در useReducer ناهم‌زمان است و state را بلافاصله آپدیت می‌کند؟",
+  "qa": "dispatch خودش **هم‌زمان** صف می‌کند ولی مقدار در همان تیک نمی‌آید؛ در رندر بعدی اعمال می‌شود — مثل useState."
+ },
+ {
+  "en": "How does React Fiber works? Explain in detail.",
+  "q": "React Fiber چطور کار می‌کند؟ با جزئیات توضیح دهید.",
+  "qa": "Fiber کار را به واحدهای کوچک می‌شکند: هر fiber نود درخت با اولویت است؛ فاز render قابل‌وقفه و commit یک‌جا و هم‌زمان است — دو فاز جدا."
+ },
+ {
+  "en": "What is the useSyncExternalStore hook?",
+  "q": "هوک useSyncExternalStore چیست؟",
+  "qa": "`useSyncExternalStore` برای خواندن state منبع بیرونی (store خارجی) با تضمین سازگاری بین رندرها و concurrent features طراحی شده است."
+ },
+ {
+  "en": "What happens when you dispatch an action?",
+  "q": "وقتی action را dispatch می‌کنید چه می‌شود؟",
+  "qa": "اکشن به همه‌ی middlewareها می‌رود، بعد به reducerهای ترکیب‌شده؛ هر reducer با اکشن، state جدید می‌سازد و subscriberها به‌روز می‌شوند."
+ }
+]

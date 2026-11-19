@@ -1,0 +1,3056 @@
+[
+ {
+  "file": "ai-ml-extra.json",
+  "id": "describe the architecture of a transformer model that is com-1",
+  "q": "Describe the architecture of a _transformer model_ that is commonly us",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml-extra.json",
+  "id": "can you explain the concept of attention mechanisms in trans-3",
+  "q": "Can you explain the concept of _attention mechanisms_ in transformer m",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml-extra.json",
+  "id": "discuss the significance of pre training and fine tuning in -5",
+  "q": "Discuss the significance of _pre-training_ and _fine-tuning_ in the co",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml-extra.json",
+  "id": "what is the role of transformers in achieving parallelizatio-7",
+  "q": "What is the role of _transformers_ in achieving parallelization in LLM",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml-extra.json",
+  "id": "what are some prominent applications of llms today-8",
+  "q": "What are some prominent _applications_ of LLMs today?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml-extra.json",
+  "id": "how is gpt 4 different from its predecessors like gpt 3 in t-9",
+  "q": "How is _GPT-4_ different from its predecessors like _GPT-3_ in terms o",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "what role does data versioning play in mlops-llmops-5",
+  "q": "What role does _data versioning_ play in _MLOps_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "explain how decision trees are utilized for nlp problem-nlp-14",
+  "q": "Explain how _Decision Trees_ are utilized for NLP problems.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "what is the universal approximation theorem-deep-learning-7",
+  "q": "What is the _universal approximation theorem_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "describe the architecture of a transformer model that is com-1",
+  "q": "Describe the architecture of a _transformer model_ that is commonly us",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "can you explain the concept of attention mechanisms in trans-3",
+  "q": "Can you explain the concept of _attention mechanisms_ in transformer m",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "discuss the significance of pre training and fine tuning in -5",
+  "q": "Discuss the significance of _pre-training_ and _fine-tuning_ in the co",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "what is the role of transformers in achieving parallelizatio-7",
+  "q": "What is the role of _transformers_ in achieving parallelization in LLM",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "what are some prominent applications of llms today-8",
+  "q": "What are some prominent _applications_ of LLMs today?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "ai-ml.json",
+  "id": "how is gpt 4 different from its predecessors like gpt 3 in t-9",
+  "q": "How is _GPT-4_ different from its predecessors like _GPT-3_ in terms o",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a treap and how does it combine the properties -binary-tree-data-structure-12",
+  "q": "What is a _Treap_, and how does it combine the properties of a binary ",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what are the advantages of heaps over sorted arrays-array-data-structure-7",
+  "q": "What are the advantages of _Heaps_ over _Sorted Arrays_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a null terminated string-string-data-structure-2",
+  "q": "What is a _Null-Terminated_ String?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what are some practical applications of a trie-trie-data-structure-4",
+  "q": "What are some _Practical Applications_ of a _Trie_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is stability in the context of sorting algorithms-sorting-algorithms-6",
+  "q": "What is _Stability_ in the context of _Sorting Algorithms_?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is the difference between greedy and heuristic alg-greedy-algorithms-3",
+  "q": "What is the difference between _Greedy_ and _Heuristic_ algorithms?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "compare the big o complexities of various sorting algor-big-o-notation-8",
+  "q": "Compare the Big-O complexities of various _sorting algorithms_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "evaluate the big o time complexity of binary search-big-o-notation-9",
+  "q": "Evaluate the Big-O _time complexity_ of _binary search_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how would you detect a cycle in a linked list-data-structures-11",
+  "q": "How would you detect a _cycle_ in a _linked list_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how do you determine the time complexity of a dynamic p-dynamic-programming-11",
+  "q": "How do you determine the _time complexity_ of a _Dynamic Programming_ ",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "find the longest palindromic substring in a given strin-dynamic-programming-14",
+  "q": "Find the _longest palindromic substring_ in a given _string_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a binary tree-binary-tree-data-structure-1",
+  "q": "What is a _Binary Tree_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a red black tree-binary-tree-data-structure-5",
+  "q": "What is a _Red-Black Tree_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "implement a queue using an array-array-data-structure-14",
+  "q": "Implement a _Queue_ using an array.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "explain how stacks are used in function call management-stack-data-structure-5",
+  "q": "Explain how _Stacks_ are used in _Function Call management_ in program",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "design a stack that supports retrieving the min element-stack-data-structure-10",
+  "q": "Design a _Stack_ that supports _Retrieving_ the min element in _O(1)_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how can you design a stack to be thread safe-stack-data-structure-11",
+  "q": "How can you design a _Stack_ to be thread-safe?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "implement a stack with a find middle operation in o 1 t-stack-data-structure-12",
+  "q": "Implement a _Stack_ with a _Find-Middle_ operation in _O(1)_ time.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a priority queue and how does it differ from a -queue-data-structure-3",
+  "q": "What is a _Priority Queue_ and how does it differ from a standard _Que",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how to implement a queue such that enqueue has o 1 and -queue-data-structure-8",
+  "q": "How to implement a _Queue_ such that _enqueue_ has _O(1)_ and _dequeue",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "compare strings and character arrays-string-data-structure-1",
+  "q": "Compare _Strings_ and _Character Arrays_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "explain height and depths in the context of a tree-tree-data-structure-2",
+  "q": "Explain _Height_ and _Depths_ in the context of a _Tree_.",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "discuss the properties of a full binary tree-tree-data-structure-7",
+  "q": "Discuss the properties of a _Full Binary Tree_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a trie-trie-data-structure-0",
+  "q": "What is a _Trie_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what are the advantages of tries over hash tables-trie-data-structure-1",
+  "q": "What are the advantages of _Tries_ over _Hash Tables_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how do you handle the case sensitivity problem in tries-trie-data-structure-3",
+  "q": "How do you handle the case sensitivity problem in _Tries_?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "describe how a trie can be used for implementing autoco-trie-data-structure-5",
+  "q": "Describe how a _Trie_ can be used for implementing autocomplete functi",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how is a trie used in text spell checking and correctio-trie-data-structure-7",
+  "q": "How is a _Trie_ used in text _spell-checking_ and correction systems?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "write the code to insert a word into a trie-trie-data-structure-9",
+  "q": "Write the code to insert a word into a _Trie_.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "implement a search function to determine if a word is i-trie-data-structure-10",
+  "q": "Implement a _Search_ function to determine if a word is included in a ",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "write a script to delete a word from a trie-trie-data-structure-11",
+  "q": "Write a script to _Delete_ a word from a _Trie_.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is sentinel search-searching-algorithms-5",
+  "q": "What is _Sentinel Search_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a greedy algorithm-greedy-algorithms-0",
+  "q": "What is a _Greedy Algorithm_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "is dijkstra s algorithm a greedy or dynamic programming-greedy-algorithms-5",
+  "q": "Is _Dijkstra's algorithm_ a _Greedy_ or _Dynamic Programming_ algorith",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "is there a way to mathematically prove that a greedy al-greedy-algorithms-6",
+  "q": "Is there a way to _Mathematically Prove_ that a _Greedy Algorithm_ wil",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how can you establish the correctness of a greedy algor-greedy-algorithms-12",
+  "q": "How can you establish the correctness of a _greedy algorithm_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "solve the tower of hanoi problem recursively-recursion-algorithm-9",
+  "q": "Solve the _Tower of Hanoi_ problem recursively.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "discuss how tail recursion can be optimized by compiler-recursion-algorithm-13",
+  "q": "Discuss how _Tail Recursion_ can be optimized by compilers and its ben",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is hashing-hash-table-data-structure-1",
+  "q": "What is _Hashing_?",
+  "flags": [
+   "absolute",
+   "deprecated"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "provide a simple example of a hash function-hash-table-data-structure-3",
+  "q": "Provide a simple example of a _Hash Function_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a tree data structure-binary-tree-data-structure-0",
+  "q": "What is a _Tree Data Structure_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how does heap sort compare to quick sort in terms of sp-heap-and-map-data-structures-11",
+  "q": "How does _Heap Sort_ compare to _Quick Sort_ in terms of speed and mem",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what are advantages and disadvantages of a trie-trie-data-structure-2",
+  "q": "What are _Advantages_ and _Disadvantages_ of a _Trie_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "explain the use of a trie in ip routing to match ip pre-trie-data-structure-6",
+  "q": "Explain the use of a _Trie_ in IP Routing to match IP prefixes.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "name some trie implementation strategies-trie-data-structure-8",
+  "q": "Name some _Trie Implementation_ strategies.",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "compare trie vs binary search tree-trie-data-structure-12",
+  "q": "Compare _Trie_ vs. _Binary Search Tree_.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how to choose between a hash table and a trie-trie-data-structure-13",
+  "q": "How to choose between a _Hash Table_ and a _Trie_?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what is a suffix trie and how does it differ from a sta-trie-data-structure-14",
+  "q": "What is a _Suffix Trie_, and how does it differ from a standard _Trie_",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "how does comparison based sorting differ from non compa-sorting-algorithms-4",
+  "q": "How does _Comparison-Based_ sorting differ from _Non-Comparison-Based_",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "define adaptive sorting and provide an example of an ad-sorting-algorithms-8",
+  "q": "Define _Adaptive Sorting_ and provide an example of an adaptive sort a",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "what are the drawbacks of sentinel search-searching-algorithms-6",
+  "q": "What are the _Drawbacks_ of _Sentinel Search_?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "explain the greedy choice property and its significance-greedy-algorithms-7",
+  "q": "Explain the _Greedy Choice Property_ and its significance in _greedy a",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "can greedy algorithms be used to solve optimization pro-greedy-algorithms-14",
+  "q": "Can _greedy algorithms_ be used to solve _optimization problems_? Give",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "algorithms.json",
+  "id": "explain the difference between divide conquer and dynam-divide-and-conquer-1",
+  "q": "Explain the difference between _Divide & Conquer_ and _Dynamic Program",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is a cache key and how is it used-caching-7",
+  "q": "What is a _cache key_ and how is it used?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is a livelock and how is it different from a deadl-concurrency-6",
+  "q": "What is a _livelock_ and how is it different from a _deadlock_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "how do you version an api-api-design-6",
+  "q": "How do you version an _API_?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is a mutex and how does it work-concurrency-13",
+  "q": "What is a _mutex_ and how does it work?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "how can you prevent sql injections-sql-8",
+  "q": "How can you prevent _SQL injections_?",
+  "flags": [
+   "version",
+   "absolute",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "when would you use method injection instead of construc-dependency-injection-6",
+  "q": "When would you use _method injection_ instead of _constructor injectio",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "how does each type of dependency injection affect the e-dependency-injection-9",
+  "q": "How does each type of _dependency injection_ affect the ease of _unit ",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "how would you detect and handle websocket connection lo-websocket-8",
+  "q": "How would you detect and handle WebSocket connection loss?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "explain how a websocket connection is closed-websocket-13",
+  "q": "Explain how a WebSocket connection is closed.",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "explain the purpose of the file system fs module-node-12",
+  "q": "Explain the purpose of the File System (fs) module.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "compare and contrast the drop delete and truncate comma-databases-8",
+  "q": "Compare and contrast the _DROP_, _DELETE_, and _TRUNCATE_ commands.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "describe the impact of cache size on performance-caching-3",
+  "q": "Describe the impact of _cache size_ on performance.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "explain the importance of cache expiration and how it i-caching-8",
+  "q": "Explain the importance of _cache expiration_ and how it is managed.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "describe what a mongodb database is-mongodb-5",
+  "q": "Describe what a _MongoDB database_ is.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is a redis key and how should you structure it for-redis-3",
+  "q": "What is a _Redis key_ and how should you structure it for best perform",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is sql and what is it used for-sql-0",
+  "q": "What is _SQL_ and what is it used for?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is a primary key in a database-sql-6",
+  "q": "What is a _primary key_ in a database?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is normalization explain with examples-sql-9",
+  "q": "What is _normalization_? Explain with examples.",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what is a subquery and when would you use one-sql-13",
+  "q": "What is a _subquery_, and when would you use one?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "describe the functions of the order by clause-sql-14",
+  "q": "Describe the functions of the _ORDER BY_ clause.",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "explain how the websocket handshake works-websocket-1",
+  "q": "Explain how the WebSocket handshake works.",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what are the limitations of websockets-websocket-3",
+  "q": "What are the limitations of WebSockets?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "can you describe the websocket api provided by html5-websocket-4",
+  "q": "Can you describe the WebSocket API provided by HTML5?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what are the security considerations when using websock-websocket-7",
+  "q": "What are the security considerations when using WebSockets?",
+  "flags": [
+   "absolute",
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "explain the role of ping pong frames in websockets-websocket-9",
+  "q": "Explain the role of ping/pong frames in WebSockets.",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "can websockets be used for broadcasting messages to mul-websocket-11",
+  "q": "Can WebSockets be used for broadcasting messages to multiple clients? ",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "backend.json",
+  "id": "what fallback mechanisms can be used if websockets are -websocket-14",
+  "q": "What fallback mechanisms can be used if WebSockets are not supported b",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "describe a situation where a dependency from another te-behavioral-senior-6",
+  "q": "Describe a situation where a dependency from another team was blocking",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "walk me through your approach to delivering a performan-behavioral-managerial-7",
+  "q": "Walk me through your approach to delivering a performance review for a",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "tell me about a time you received constructive feedback-behavioral-junior-1",
+  "q": "Tell me about a time you received constructive feedback that was diffi",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "describe a situation where you had to pivot your strate-behavioral-junior-3",
+  "q": "Describe a situation where you had to pivot your strategy midway throu",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "describe a scenario where you had to negotiate a techni-behavioral-senior-9",
+  "q": "Describe a scenario where you had to negotiate a technical contract or",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "tell me about a time you identified a fundamental archi-behavioral-staff-0",
+  "q": "Tell me about a time you identified a fundamental architectural flaw t",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "describe a situation where you strongly disagreed with -behavioral-staff-7",
+  "q": "Describe a situation where you strongly disagreed with an engineering ",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "behavioral.json",
+  "id": "tell me about a time you inherited a deeply fragmented -behavioral-staff-9",
+  "q": "Tell me about a time you inherited a deeply fragmented technical lands",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "what is the difference between encryption and hashing-web-security-4",
+  "q": "What is the difference between _encryption_ and _hashing_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "what is a cryptographic hash function and what properti-cryptography-2",
+  "q": "What is a _cryptographic hash function_, and what properties must it h",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "what is web security and why is it important-web-security-0",
+  "q": "What is _web security_, and why is it important?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "what are ssl and tls and what role do they play in web -web-security-2",
+  "q": "What are _SSL_ and _TLS_, and what role do they play in web security?",
+  "flags": [
+   "deprecated",
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "define the concept of a secure session and explain how -web-security-5",
+  "q": "Define the concept of a _secure session_ and explain how it is establi",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "describe what cross site request forgery csrf is and ho-web-security-9",
+  "q": "Describe what _Cross-Site Request Forgery (CSRF)_ is and how to preven",
+  "flags": [
+   "absolute",
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "explain the same origin policy and its importance in we-web-security-10",
+  "q": "Explain the _Same-Origin Policy_ and its importance in web security.",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "how can web cookies compromise security and how do you -web-security-12",
+  "q": "How can _web cookies_ compromise security, and how do you safeguard ag",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "describe the concept of session management in web secur-web-security-14",
+  "q": "Describe the concept of _session management_ in web security.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "cybersecurity.json",
+  "id": "what are the key differences between des and 3des-cryptography-14",
+  "q": "What are the key differences between _DES_ and _3DES_?",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "how does a load balancer distribute traffic in a statel-load-balancing-10",
+  "q": "How does a _load balancer_ distribute traffic in a _stateless_ vs _sta",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "in practice how do you reduce the size of docker images-docker-9",
+  "q": "In practice, how do you reduce the size of _Docker images_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "explain kubernetes dns resolution for services-kubernetes-12",
+  "q": "Explain _Kubernetes DNS_ resolution for _services_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "what is the azure service level agreement sla and how d-azure-7",
+  "q": "What is the _Azure Service Level Agreement (SLA)_ and how does it impa",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "describe how you would scale an azure virtual machine-azure-11",
+  "q": "Describe how you would _scale an Azure Virtual Machine_.",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "define load balancing in the context of modern web serv-load-balancing-0",
+  "q": "Define _load balancing_ in the context of modern web services.",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "can you list some common load balancing algorithms and -load-balancing-3",
+  "q": "Can you list some common _load balancing algorithms_ and briefly descr",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "describe the term sticky session in load balancing-load-balancing-4",
+  "q": "Describe the term \"_sticky session_\" in _load balancing_.",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "what is the concept of session persistence and why is i-load-balancing-11",
+  "q": "What is the concept of _session persistence_, and why is it important?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "devops-cloud.json",
+  "id": "how would you architect a system for high availability-availability-and-reliability-8",
+  "q": "How would you architect a system for _high availability_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "what are the basic types available in typescript-typescript-2",
+  "q": "What are the _basic types_ available in _TypeScript_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "what are directives in vue js can you give examples-vue-7",
+  "q": "What are _directives_ in _Vue.js_? Can you give examples?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "what are data attributes and when should they be used-html5-9",
+  "q": "What are _data-_* attributes and when should they be used?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "how do you declare variables in typescript-typescript-3",
+  "q": "How do you declare _variables_ in _TypeScript_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "how do you compile typescript files into javascript-typescript-9",
+  "q": "How do you compile _TypeScript_ files into _JavaScript_?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "explain classes in typescript how are they different fr-typescript-10",
+  "q": "Explain _classes_ in _TypeScript_. How are they different from _ES6 cl",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "how do you implement inheritance in typescript-typescript-11",
+  "q": "How do you implement _Inheritance_ in _TypeScript_?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "describe how to implement a css reset and why it is use-css-4",
+  "q": "Describe how to implement a _CSS reset_ and why it is useful.",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "can you explain the purpose of meta tags in html-html5-4",
+  "q": "Can you explain the purpose of _meta tags_ in HTML?",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "how do you serve your page in multiple languages-html5-8",
+  "q": "How do you serve your page in multiple _languages_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "what is vue js and why would you use it-vue-0",
+  "q": "What is _Vue.js_ and why would you use it?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "frontend.json",
+  "id": "how do you set up a project with vue js-vue-1",
+  "q": "How do you set up a project with _Vue.js_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-the-difference-between-double-equal-and-triple-equal",
+  "q": "What is the difference between `==` and `===` in JavaScript?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "whats-the-difference-between-a-variable-that-is-null-undefined-or-undeclared-how-would-you-go-about-checking-for-any-of-these-states",
+  "q": "What's the difference between a JavaScript variable that is: `null`, `",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "whats-the-difference-between-call-and-apply",
+  "q": "What's the difference between `.call` and `.apply` in JavaScript?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-code-coverage-and-how-it-can-be-used-to-assess-test-quality",
+  "q": "Explain the concept of code coverage and how it can be used to assess ",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-cross-site-request-forgery-csrf-and-its-mitigation-techniques",
+  "q": "Explain the concept of Cross-Site Request Forgery (CSRF) and its mitig",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-debouncing-and-throttling",
+  "q": "Explain the concept of debouncing and throttling",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-error-propagation-in-javascript",
+  "q": "Explain the concept of error propagation in JavaScript",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-inheritance-in-es2015-classes",
+  "q": "Explain the concept of inheritance in ES2015 classes",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-input-validation-and-its-importance-in-security",
+  "q": "Explain the concept of input validation and its importance in security",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-lazy-loading-and-how-it-can-improve-performance",
+  "q": "Explain the concept of lazy loading and how it can improve performance",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-partial-application",
+  "q": "Explain the concept of partial application",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-concept-of-tree-shaking-in-module-bundling",
+  "q": "Explain the concept of tree shaking in module bundling",
+  "flags": [
+   "version",
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-difference-between-documentqueryselector-and-documentgetelementbyid",
+  "q": "Explain the difference between `document.querySelector()` and `documen",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-difference-between-shallow-copy-and-deep-copy",
+  "q": "Explain the difference between shallow copy and deep copy",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-difference-between-unit-testing-integration-testing-and-end-to-end-testing",
+  "q": "Explain the difference between unit testing, integration testing, and ",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-different-ways-the-this-keyword-can-be-bound",
+  "q": "Explain the different ways the `this` keyword can be bound",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-can-you-avoid-problems-related-to-hoisting",
+  "q": "How can you avoid problems related to hoisting?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-can-you-implement-secure-authentication-and-authorization-in-javascript-applications",
+  "q": "How can you implement secure authentication and authorization in JavaS",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-can-you-prevent-clickjacking-attacks",
+  "q": "How can you prevent clickjacking attacks?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-can-you-prevent-sql-injection-vulnerabilities-in-javascript-applications",
+  "q": "How can you prevent SQL injection vulnerabilities in JavaScript applic",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-can-you-test-asynchronous-code-in-javascript",
+  "q": "How can you test asynchronous code in JavaScript?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-do-iframe-on-a-page-communicate",
+  "q": "How do `<iframe>` on a page communicate?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-do-you-check-if-an-object-has-a-specific-property",
+  "q": "How do you check if an object has a specific property?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-do-you-convert-a-string-to-a-number-in-javascript",
+  "q": "How do you convert a string to a number in JavaScript?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-do-you-detect-if-javascript-is-disabled-on-a-page",
+  "q": "How do you detect if JavaScript is disabled on a page?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-do-you-validate-form-elements-using-the-constraint-validation-api",
+  "q": "How do you validate form elements using the Constraint Validation API?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-is-promiseall-different-from-promiseallsettled",
+  "q": "How is `Promise.all()` different from `Promise.allSettled()`?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-default-parameters-and-how-are-they-used",
+  "q": "What are default parameters and how are they used?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-mocks-and-stubs-and-how-are-they-used-in-testing",
+  "q": "What are mocks and stubs and how are they used in testing?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-modules-and-why-are-they-useful",
+  "q": "What are modules and why are they useful?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-promises-and-how-do-they-work",
+  "q": "What are Promises and how do they work?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-some-best-practices-for-handling-sensitive-data-in-javascript",
+  "q": "What are some best practices for handling sensitive data in JavaScript",
+  "flags": [
+   "absolute",
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-some-tools-and-techniques-for-identifying-security-vulnerabilities-in-javascript-code",
+  "q": "What are some tools and techniques for identifying security vulnerabil",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-template-literals-and-how-are-they-used",
+  "q": "What are template literals and how are they used?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-different-types-of-errors-in-javascript",
+  "q": "What are the different types of errors in JavaScript?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-different-ways-to-make-an-api-call-in-javascript",
+  "q": "What are the different ways to make an API call in JavaScript?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-potential-pitfalls-of-using-closures",
+  "q": "What are the potential pitfalls of using closures?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-cross-site-scripting-xss-and-how-can-you-prevent-it",
+  "q": "What is Cross-Site Scripting (XSS) and how can you prevent it?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-the-difference-between-a-map-object-and-a-plain-object-in-javascript",
+  "q": "What is the difference between a `Map` object and a plain object in Ja",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-the-prototype-chain-and-how-does-it-work",
+  "q": "What is the prototype chain and how does it work?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what is the output of below code-sudjs-0",
+  "q": "What is the output of below code",
+  "flags": [
+   "code-output"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what is the output of below equality check-sudjs-3",
+  "q": "What is the output of below equality check",
+  "flags": [
+   "code-output"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what is the output of below code in latest chrome-sudjs-7",
+  "q": "What is the output of below code in latest Chrome",
+  "flags": [
+   "code-output",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what is the output of below code in non strict mode-sudjs-10",
+  "q": "What is the output of below code in non-strict mode",
+  "flags": [
+   "code-output"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what is the output of below code in an order-sudjs-68",
+  "q": "What is the output of below code in an order?",
+  "flags": [
+   "code-output"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "describe-event-capturing",
+  "q": "Describe event capturing in JavaScript and browsers",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "describe-the-difference-between-a-cookie-sessionstorage-and-localstorage",
+  "q": "Describe the difference between a cookie, `sessionStorage` and `localS",
+  "flags": [
+   "absolute",
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "describe-the-difference-between-script-async-and-script-defer",
+  "q": "Describe the difference between `<script>`, `<script async>` and `<scr",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "difference-between-function-person-var-person-person-and-var-person-new-person",
+  "q": "'Difference between: `function Person(){}`, `const person = Person()`,",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-event-delegation",
+  "q": "Explain event delegation in JavaScript",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-how-prototypal-inheritance-works",
+  "q": "Explain how prototypal inheritance works in JavaScript",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-advantage-is-there-for-using-the-arrow-syntax-for-a-method-in-a-constructor",
+  "q": "What advantage is there for using the JavaScript arrow syntax for a me",
+  "flags": [
+   "version",
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-pros-and-cons-of-using-promises-instead-of-callbacks",
+  "q": "What are the pros and cons of using Promises instead of callbacks in J",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-various-ways-to-create-objects-in-javascript",
+  "q": "What are the various ways to create objects in JavaScript?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-a-closure-and-how-why-would-you-use-one",
+  "q": "What is a closure in JavaScript, and how/why would you use one?",
+  "flags": [
+   "version",
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-can-you-share-code-between-files",
+  "q": "How can you share code between JavaScript files?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-benefits-of-using-spread-syntax-and-how-is-it-different-from-rest-syntax",
+  "q": "What are the benefits of using spread syntax in JavaScript and how is ",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-language-constructs-do-you-use-for-iterating-over-object-properties-and-array-items",
+  "q": "What language constructs do you use for iterating over object properti",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "why-is-extending-built-in-javascript-objects-not-a-good-idea",
+  "q": "Why is extending built-in JavaScript objects not a good idea?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what will be the output of this code and how would you modif-sudjs-86",
+  "q": "What will be the output of this code, and how would you modify it to g",
+  "flags": [
+   "absolute",
+   "code-output"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-hoisting",
+  "q": "Explain the concept of \"hoisting\" in JavaScript",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-how-this-works-in-javascript",
+  "q": "Explain how `this` works in JavaScript",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-the-differences-between-es6-class-and-es5-function-constructors",
+  "q": "What are the differences between JavaScript ES2015 classes and ES5 fun",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-event-loop-what-is-the-difference-between-call-stack-and-task-queue",
+  "q": "What is the event loop in JavaScript runtimes?",
+  "flags": [
+   "absolute",
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-the-differences-between-commonjs-modules-and-es-modules",
+  "q": "Explain the differences between CommonJS modules and ES modules in Jav",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "explain-what-a-single-page-app-is-and-how-to-make-one-seo-friendly",
+  "q": "Explain what a single page app is and how to make one SEO-friendly",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "how-does-javascript-garbage-collection-work",
+  "q": "How does JavaScript garbage collection work?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-are-server-sent-events",
+  "q": "What are server-sent events?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-is-use-strict-what-are-the-advantages-and-disadvantages-to-using-it",
+  "q": "What is `'use strict';` (strict mode) in JavaScript for?",
+  "flags": [
+   "version",
+   "absolute",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "what-tools-and-techniques-do-you-use-for-debugging-javascript-code",
+  "q": "What tools and techniques do you use for debugging JavaScript code?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "javascript.json",
+  "id": "when-would-you-use-document-write",
+  "q": "When would you use `document.write()`?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "what are extension functions in kotlin-kotlin-9",
+  "q": "What are _extension functions_ in _Kotlin_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "what is a smart cast in kotlin-kotlin-13",
+  "q": "What is a “smart cast” in _Kotlin_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "what are enumerations in swift and how do they support -swift-6",
+  "q": "What are _enumerations_ in _Swift_ and how do they support _associated",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "what is a pubspec yaml file and what is its purpose-flutter-10",
+  "q": "What is a `pubspec.yaml` file and what is its purpose?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "define a broadcast receiver and its use in android apps-android-7",
+  "q": "Define a _Broadcast Receiver_ and its use in Android apps.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "how do you create a basic react native application-react-native-2",
+  "q": "How do you create a basic _React Native application_?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "can you explain the purpose of optionals in swift-swift-2",
+  "q": "Can you explain the purpose of _optionals_ in _Swift_?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "describe the concept of type inference in swift-swift-8",
+  "q": "Describe the concept of _type inference_ in _Swift_.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "what is the purpose of the unit type in kotlin-kotlin-7",
+  "q": "What is the purpose of the `Unit` type in _Kotlin_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "what are components in react native-react-native-3",
+  "q": "What are _components_ in _React Native_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "mobile.json",
+  "id": "can you list some of the core components in react nativ-react-native-6",
+  "q": "Can you list some of the core components in _React Native_?",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-difference-between-state-and-props-in-react",
+  "q": "What is the difference between state and props in React?",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to create components in react-sudr-5",
+  "q": "How to create components in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "when to use a class component over a function component-sudr-6",
+  "q": "When to use a Class Component over a Function Component?",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is state in react-sudr-8",
+  "q": "What is state in React?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are props in react-sudr-9",
+  "q": "What are props in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is key prop and what is the benefit of using it in arra-sudr-14",
+  "q": "What is \"key\" prop and what is the benefit of using it in arrays of el",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the recommended ways for static type checking-sudr-38",
+  "q": "What are the recommended ways for static type checking?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you memoize a component-sudr-47",
+  "q": "How do you memoize a component?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "are custom dom attributes supported in react v16-sudr-54",
+  "q": "Are custom DOM attributes supported in React v16?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to loop inside jsx-sudr-55",
+  "q": "How to loop inside JSX?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "is it possible to use async await in plain react-sudr-72",
+  "q": "Is it possible to use async/await in plain React?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to implement default or notfound page-sudr-85",
+  "q": "How to implement _default_ or _NotFound_ page?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the difference between mapstatetoprops and mapdispat-sudr-104",
+  "q": "What is the difference between `mapStateToProps()` and `mapDispatchToP",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to do logging in react native-sudr-136",
+  "q": "How to do logging in React Native?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "do you need to have a particular build tool to use redux-sudr-153",
+  "q": "Do you need to have a particular build tool to use Redux?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "do i need to keep all my state into redux should i ever use -sudr-159",
+  "q": "Do I need to keep all my state into Redux? Should I ever use react int",
+  "flags": [
+   "legacy-browser",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are hooks-sudr-165",
+  "q": "What are hooks?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the benefits of react router v4-sudr-169",
+  "q": "What are the benefits of React Router V4?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the behavior of uncaught errors in react 16-sudr-172",
+  "q": "What is the behavior of uncaught errors in react 16?",
+  "flags": [
+   "version",
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "does react support all html attributes-sudr-180",
+  "q": "Does React support all HTML attributes?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "when component props defaults to true-sudr-181",
+  "q": "When component props defaults to true?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you say that props are readonly-sudr-187",
+  "q": "How do you say that props are readonly?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the conditions to safely use the index as a key-sudr-188",
+  "q": "What are the conditions to safely use the index as a key?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are loadable components-sudr-195",
+  "q": "What are loadable components?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the problems of using render props with pure compon-sudr-203",
+  "q": "What are the problems of using render props with pure components?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "should i learn es6 before learning reactjs-sudr-226",
+  "q": "Should I learn ES6 before learning ReactJS?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the differences between functional and class compon-sudr-240",
+  "q": "What are the differences between Functional and Class Components?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the benefit of strict mode-sudr-242",
+  "q": "What is the benefit of strict mode?",
+  "flags": [
+   "deprecated"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the guidelines to be followed for writing reducers-sudr-259",
+  "q": "What are the guidelines to be followed for writing reducers?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is an updater function should an updater function be us-sudr-268",
+  "q": "What is an updater function? Should an updater function be used in all",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the best practices for using react hooks-sudr-314",
+  "q": "What are the best practices for using React Hooks?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are useformstate and useformstatus hooks-sudr-319",
+  "q": "What are useFormState and useFormStatus hooks?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are dynamic routes and what are route parameters-sudr-345",
+  "q": "What are dynamic routes and what are route parameters?",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the different phases of component lifecycle-sudr-362",
+  "q": "What are the different phases of component lifecycle?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the lifecycle methods of react-sudr-363",
+  "q": "What are the lifecycle methods of React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the purpose of using super constructor with props ar-sudr-366",
+  "q": "What is the purpose of using super constructor with props argument?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to set state with a dynamic key name-sudr-367",
+  "q": "How to set state with a dynamic key name?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are error boundaries in react v16-sudr-369",
+  "q": "What are error boundaries in React v16?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "is it good to use setstate in componentwillmount method-sudr-373",
+  "q": "Is it good to use `setState()` in `componentWillMount()` method?",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what will happen if you use props in initial state-sudr-374",
+  "q": "What will happen if you use props in initial state?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the difference between constructor and getinitialsta-sudr-385",
+  "q": "What is the difference between constructor and getInitialState?",
+  "flags": [
+   "version",
+   "deprecated"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "does the statics object work with es6 classes in react-sudr-406",
+  "q": "Does the statics object work with ES6 classes in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you solve performance corner cases while using contex-sudr-430",
+  "q": "How do you solve performance corner cases while using context?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to create react class components without es6-sudr-434",
+  "q": "How to create react class components without ES6?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are react mixins-sudr-442",
+  "q": "What are React Mixins?",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how-do-you-decide-between-using-react-state-context-and-external-state-managers",
+  "q": "How do you decide between using React state, context, and external sta",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how-do-you-handle-asynchronous-data-loading-in-react-applications",
+  "q": "How do you handle asynchronous data loading in React applications?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how-would-one-optimize-the-performance-of-react-contexts-to-reduce-rerenders",
+  "q": "How would you optimize the performance of React contexts to reduce rer",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-the-benefits-of-using-hooks-in-react",
+  "q": "What are the benefits of using hooks in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-the-rules-of-react-hooks",
+  "q": "What are the rules of React hooks?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-react-describe-the-benefits-of-react",
+  "q": "What is React? Describe the benefits of React",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-purpose-of-the-key-prop-in-react",
+  "q": "What is the purpose of the `key` prop in React?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain-one-way-data-flow-of-react-and-its-benefits",
+  "q": "Explain one-way data flow of React and its benefits",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain-server-side-rendering-of-react-applications-and-its-benefits",
+  "q": "Explain server-side rendering of React applications and its benefits",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain-the-composition-pattern-in-react",
+  "q": "Explain the composition pattern in React",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain-the-presentational-vs-container-component-pattern-in-react",
+  "q": "Explain the presentational vs container component pattern in React",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain-what-happens-when-setstate-is-called-in-react",
+  "q": "Explain what happens when the `useState` setter function is called in ",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how-do-you-test-react-applications",
+  "q": "How do you test React applications?",
+  "flags": [
+   "version",
+   "deprecated"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-error-boundaries-in-react-for",
+  "q": "What are error boundaries in React for?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-higher-order-components-in-react",
+  "q": "What are higher-order components in React?",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-react-fragments-used-for",
+  "q": "What are React Fragments used for?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-render-props-in-react-and-what-are-they-for",
+  "q": "What are render props in React and what are they for?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-some-common-pitfalls-when-doing-data-fetching-in-react",
+  "q": "What are some common pitfalls when doing data fetching in React?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-some-pitfalls-about-using-context-in-react",
+  "q": "What are some pitfalls about using context in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-are-some-react-anti-patterns",
+  "q": "What are some React anti-patterns?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-does-the-dependency-array-of-useeffect-affect",
+  "q": "What does the dependency array of `useEffect` affect?",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-code-splitting-in-a-react-application",
+  "q": "What is code splitting in a React application?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-forwardref-in-react-used-for",
+  "q": "What is `forwardRef()` in React used for?",
+  "flags": [
+   "version",
+   "absolute",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-jsx-and-how-does-it-work",
+  "q": "What is JSX and how does it work?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-react-strict-mode-and-what-are-its-benefits",
+  "q": "What is React Strict Mode and what are its benefits?",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-react-suspense-and-what-does-it-enable",
+  "q": "What is React Suspense and what does it enable?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-consequence-of-using-array-indices-as-the-value-for-key-s-in-react",
+  "q": "What is the consequence of using array indices as the value for `key`s",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-difference-between-controlled-and-uncontrolled-react-components",
+  "q": "What is the difference between controlled and uncontrolled React compo",
+  "flags": [
+   "version",
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-difference-between-react-node-react-element-and-a-react-component",
+  "q": "What is the difference between React Node, React Element, and a React ",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-difference-between-useeffect-and-uselayouteffect-in-react",
+  "q": "What is the difference between `useEffect` and `useLayoutEffect` in Re",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-purpose-of-callback-function-argument-format-of-setstate-in-react-and-when-should-it-be-used",
+  "q": "What is the purpose of callback function argument format of `setState(",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-useid-hook-in-react-and-when-should-it-be-used",
+  "q": "What is the `useId` hook in React and when should it be used?",
+  "flags": [
+   "version",
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-usememo-hook-in-react-and-when-should-it-be-used",
+  "q": "What is the `useMemo` hook in React and when should it be used?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-the-useref-hook-in-react-and-when-should-it-be-used",
+  "q": "What is the `useRef` hook in React and when should it be used?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is react fiber-sudr-18",
+  "q": "What is React Fiber?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "why react uses classname over class attribute-sudr-29",
+  "q": "Why React uses `className` over `class` attribute?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to apply validation on props in react-sudr-35",
+  "q": "How to apply validation on props in React?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "why reactdom is separated from react-sudr-60",
+  "q": "Why ReactDOM is separated from React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "why are redux state functions called reducers-sudr-111",
+  "q": "Why are Redux state functions called reducers?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the proper way to access redux store-sudr-114",
+  "q": "What is the proper way to access Redux store?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you render array strings and numbers in react 16 vers-sudr-164",
+  "q": "How do you render Array, Strings and Numbers in React 16 Version?",
+  "flags": [
+   "version",
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what rules need to be followed for hooks-sudr-166",
+  "q": "What rules need to be followed for hooks?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how jsx prevents injection attacks-sudr-185",
+  "q": "How JSX prevents Injection Attacks?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the differences between redux and mobx-sudr-225",
+  "q": "What are the differences between Redux and MobX?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain concurrent rendering with an example-sudr-227",
+  "q": "Explain concurrent rendering with an example",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "can you describe the usememo hook-sudr-266",
+  "q": "Can you describe the useMemo() Hook?",
+  "flags": [
+   "legacy-browser"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "can hooks be used in class components-sudr-267",
+  "q": "Can Hooks be used in class components?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how is usememo different from usecallback-sudr-300",
+  "q": "How is useMemo different from useCallback?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the useid hook and when should you use it-sudr-305",
+  "q": "What is the useId hook and when should you use it?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the differences between useeffect and useevent expe-sudr-313",
+  "q": "What are the differences between useEffect and useEvent (experimental)",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the key features introduced in react 18-sudr-315",
+  "q": "What are the key features introduced in React 18?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the react compiler react forget-sudr-321",
+  "q": "What is the React Compiler (React Forget)?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is rendertopipeablestream and how is it different from -sudr-323",
+  "q": "What is `renderToPipeableStream` and how is it different from `renderT",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how would you create a reusable context-sudr-326",
+  "q": "How would you create a reusable Context?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the difference between client state and server state-sudr-328",
+  "q": "What is the difference between client state and server state?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how would you structure redux in a large application-sudr-336",
+  "q": "How would you structure Redux in a large application?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you handle cross slice communication-sudr-337",
+  "q": "How do you handle cross-slice communication?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the difference between browserrouter hashrouter and -sudr-344",
+  "q": "What is the difference between BrowserRouter, HashRouter, and MemoryRo",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you implement protected private routes-sudr-348",
+  "q": "How do you implement protected/private routes?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do you handle 404 not found routes-sudr-349",
+  "q": "How do you handle 404 / Not Found routes?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are loaders actions and data apis in modern react route-sudr-350",
+  "q": "What are loaders, actions, and data APIs in modern React Router?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how do query parameters work-sudr-351",
+  "q": "How do query parameters work?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "why are string refs legacy-sudr-361",
+  "q": "Why are String Refs legacy?",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how are error boundaries handled in react v15-sudr-370",
+  "q": "How are error boundaries handled in React v15?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the lifecycle methods going to be deprecated in rea-sudr-378",
+  "q": "What are the lifecycle methods going to be deprecated in React v16?",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to listen to state changes-sudr-389",
+  "q": "How to listen to state changes?",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how to use typescript in create react app application-sudr-405",
+  "q": "How to use TypeScript in `create-react-app` application?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "why should not call setstate in componentwillunmount-sudr-416",
+  "q": "Why should not call setState in componentWillUnmount?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the features of create react app-sudr-438",
+  "q": "What are the features of create react app?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is state mutation and how to prevent it-sudr-441",
+  "q": "What is state mutation and how to prevent it?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how-does-virtual-dom-in-react-work-what-are-its-benefits-and-downsides",
+  "q": "How does virtual DOM in React work? What are its benefits and downside",
+  "flags": [
+   "version",
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-reconciliation-in-react",
+  "q": "What is reconciliation in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-virtual-dom-in-react",
+  "q": "What is virtual DOM in React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "explain-what-react-hydration-is",
+  "q": "Explain what React hydration is",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how-do-you-debug-react-applications",
+  "q": "How do you debug React applications?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what-is-react-fiber-and-how-is-it-an-improvement-over-the-previous-approach",
+  "q": "What is React Fiber and how is it an improvement over the previous app",
+  "flags": [
+   "version",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "why-does-react-recommend-against-mutating-state",
+  "q": "Why does React recommend against mutating state?",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is the history behind react evolution-sudr-1",
+  "q": "What is the history behind React evolution?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are the major features of react-sudr-2",
+  "q": "What are the major features of React?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "how does reactjs work behind the scenes-sudr-260",
+  "q": "How does ReactJS work behind the scenes?",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what are server actions in react 19-sudr-318",
+  "q": "What are Server Actions in React 19?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is streaming ssr and how does react 18 improve it-sudr-322",
+  "q": "What is Streaming SSR and how does React 18+ improve it?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "what is cra and its benefits-sudr-376",
+  "q": "What is CRA and its benefits?",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "react.json",
+  "id": "can i use javascript urls in react16 9-sudr-443",
+  "q": "Can I use javascript urls in react16.9?",
+  "flags": [
+   "version",
+   "absolute",
+   "deprecated",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "describe the model view controller mvc architectural pa-software-architecture-10",
+  "q": "Describe the _Model-View-Controller (MVC)_ architectural pattern.",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "explain how versioning of services is handled in a soa -service-oriented-architecture-9",
+  "q": "Explain how _versioning_ of services is handled in a SOA environment.",
+  "flags": [
+   "version"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "can you delineate the role of a domain service versus a-domain-driven-design-13",
+  "q": "Can you delineate the role of a _Domain Service_ versus an _Applicatio",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "how do you ensure data consistency across microservices-microservices-14",
+  "q": "How do you ensure _data consistency_ across _microservices_?",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "what is cap theorem and why it s important for distribu-cap-theorem-0",
+  "q": "What is _CAP Theorem_ and why it's important for _distributed systems_",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "explain partition tolerance in a distributed system as -cap-theorem-3",
+  "q": "Explain _partition tolerance_ in a _distributed system_ as stated by t",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "how do quorums help in achieving consistency or availab-cap-theorem-12",
+  "q": "How do _quorums_ help in achieving _consistency_ or _availability_ in ",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "how do modern databases like cassandra or dynamodb addr-cap-theorem-13",
+  "q": "How do modern databases like _Cassandra_ or _DynamoDB_ address the cha",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "when should the singleton pattern be applied and what a-software-architecture-14",
+  "q": "When should the _Singleton pattern_ be applied and what are its drawba",
+  "flags": [
+   "absolute"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "what is the difference between the domain model and the-domain-driven-design-2",
+  "q": "What is the difference between the _Domain Model_ and the _Data Model_",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "why is ubiquitous language important in ddd and how do -domain-driven-design-6",
+  "q": "Why is _Ubiquitous Language_ important in _DDD_, and how do you establ",
+  "flags": [
+   "version",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "how would you identify aggregates in a domain model and-domain-driven-design-8",
+  "q": "How would you identify _Aggregates_ in a domain model, and what _bound",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "what is the difference between a repository and a servi-domain-driven-design-11",
+  "q": "What is the difference between a _Repository_ and a _Service_ in _DDD_",
+  "flags": [
+   "absolute",
+   "time-sensitive"
+  ]
+ },
+ {
+  "file": "system-design.json",
+  "id": "what considerations are there for implementing aggregat-domain-driven-design-14",
+  "q": "What considerations are there for implementing _Aggregates_ to ensure ",
+  "flags": [
+   "deprecated",
+   "time-sensitive"
+  ]
+ }
+]

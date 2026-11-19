@@ -1,0 +1,417 @@
+[
+ {
+  "en": "Design Pastebin.com (or Bit.ly) — a service that stores text and shares it via short links",
+  "q": "سیستمی مثل Pastebin.com طراحی کن: ذخیره‌ی متن و اشتراک از طریق لینک کوتاه",
+  "qa": "شفاف‌سازی: خواندن‌محور (۱۰:۱)، لینک عمومی، انقضا اختیاری، آمار اختیاری. برآورد: ترافیک در برابر storage تعیین‌کننده است؛ URL حدود ۷ کاراکتر → keyspace‏ ۶۲^۷."
+ },
+ {
+  "en": "Design a system that scales to millions of users on AWS",
+  "q": "سیستمی طراحی کن که روی AWS به میلیون‌ها کاربر مقیاس بدهد",
+  "qa": "ساده شروع کن: web tier بی‌حالت + LB؛ مقیاس افقی. Data tier: RDBMS تا جایی — بعد read replica، sharding یا NoSQL."
+ },
+ {
+  "en": "Give an example of a real system that favors consistency over availability.",
+  "q": "مثالی از سیستم واقعی که consistency را به availability ترجیح می‌دهد بزن.",
+  "qa": "نمونه‌ی شاخص: پایگاه‌های رابطه‌ای مثل **MySQL** یا **PostgreSQL** در تنظیمات پیش‌فرض‌شان که consistency را به availability ترجیح می‌دهند."
+ },
+ {
+  "en": "Design a web crawler",
+  "q": "یک وب‌کراولر طراحی کن",
+  "qa": "اجزا: URL frontier (صف اولویت‌دار)، HTML downloader، parser، content store، استخراج‌گر URL و فیلتر dedup. ادب: rate limit به‌ازای host و رعایت robots.txt."
+ },
+ {
+  "en": "Design Mint.com — a personal finance aggregation service",
+  "q": "سروی مثل Mint.com طراحی کن: تجمیع مالی شخصی",
+  "qa": "Ingestion: اتصال به بانک‌ها؛ منابع ناپایدار → صف + retry با backoff. ذخیره‌سازی: کاربران، حساب‌ها، تراکنش‌ها؛ داده‌ی حساس → رمزنگاری."
+ },
+ {
+  "en": "Design the data structures for a social network (Facebook/LinkedIn style)",
+  "q": "ساختارهای داده برای شبکه‌ی اجتماعی (سبک Facebook/LinkedIn) را طراحی کن",
+  "qa": "مدل هسته: گراف — کاربران گره و دوستی‌ها یال. ذخیره‌سازی: لیست دوستان در DB عریض/ستونی؛ برای کوئری‌های گرافی، graph DB یا adjacency کش‌شده."
+ },
+ {
+  "en": "Design Amazon's sales ranking by category feature",
+  "q": "قابلیت رتبه‌بندی فروش Amazon بر اساس دسته‌بندی را طراحی کن",
+  "qa": "منبع رتبه: تجمیع فروش به‌ازای (دسته، محصول). پایپلاین: رویداد فروش → صف → تجمیع‌گر → رتبه‌بندی که دوره‌ای به‌روز می‌شود."
+ },
+ {
+  "en": "What are the main benefits of using microservices?",
+  "q": "مزایای اصلی استفاده از میکروسرویس‌ها چیست؟",
+  "qa": "مزایای اصلی استفاده از **میکروسرویس‌ها** را می‌بینیم:"
+ },
+ {
+  "en": "What is Domain-Driven Design (DDD) and how is it related to microservices?",
+  "q": "Domain-Driven Design چیست و چه نسبتی با میکروسرویس‌ها دارد؟",
+  "qa": "**DDD** مدلی برای طراحی و ساخت میکروسرویس‌ها حول دامنه‌های کسب‌وکاری خاص است؛ پیچیدگی را کم و مرزها را شفاف می‌کند."
+ },
+ {
+  "en": "If a system is experiencing a partition (network failure), what strategies can you employ to maintain service?",
+  "q": "اگر سیستم دچار partition (قطعی شبکه) شده باشد، چه استراتژی‌هایی برای حفظ سرویس به‌کار می‌بری؟",
+  "qa": "در partition، تضمین هم‌زمان **consistency**، **availability** و **partition tolerance** چالش دارد؛ اما گزینه‌هایی هست: حالت فقط‌خواندنی، صف‌کردن نوشتن‌ها، یا پذیرش داده‌ی موقتاً قدیمی."
+ },
+ {
+  "en": "Discuss the concepts of coupling and cohesion.",
+  "q": "مفاهیم coupling و cohesion را بررسی کنید.",
+  "qa": "**Coupling** یعنی میزان وابستگی ماژول‌ها به هم؛ **کم‌بودن coupling** هدف طراحی است — ماژول‌ها تقریباً مستقل‌اند."
+ },
+ {
+  "en": "Describe the Model-View-Controller (MVC) architectural pattern.",
+  "q": "الگوی معماری MVC را توضیح دهید.",
+  "qa": "**MVC** الگویی معروف با جداسازی شفاف مسئولیت‌هاست؛ نرم‌افزار را به سه جزء اصلی می‌شکند و…"
+ },
+ {
+  "en": "What are the SOLID principles of object-oriented design?",
+  "q": "اصول SOLID طراحی شیءگرا کدام‌اند؟",
+  "qa": "**SOLID** سرنام پنج اصل بنیادی **برنامه‌نویسی شیءگرا** است؛ خوانایی، استفاده‌ی مجدد و نگهداری کد را بالا می‌برد."
+ },
+ {
+  "en": "Explain the concept of a service contract in SOA.",
+  "q": "مفهوم service contract در SOA را توضیح دهید.",
+  "qa": "**Service contract** سنگ‌بنای **SOA** است: نقش‌ها و انتظارات ارائه‌دهنده و مصرف‌کننده‌ی سرویس را تعریف می‌کند."
+ },
+ {
+  "en": "Explain how versioning of services is handled in a SOA environment.",
+  "q": "نسخه‌گذاری سرویس‌ها در محیط SOA چطور انجام می‌شود؟",
+  "qa": "در **SOA** سرویس‌ها باید با نیازها تکامل یابند؛ **نسخه‌گذاری سرویس** فرایند مدیریت این تغییرهاست."
+ },
+ {
+  "en": "Describe a scenario in which you might opt for synchronous communication over asynchronous in SOA.",
+  "q": "سناریویی را توضیح دهید که در SOA ارتباط هم‌زمان را به ناهم‌زمان ترجیح می‌دهی.",
+  "qa": "اغلب **ارتباط هم‌زمان** به‌خاطر فوریت، بازخورد بلادرنگ و کنترل دقیق سرتاسری ترجیح دارد؛ کاربردهای رایج:"
+ },
+ {
+  "en": "Can you delineate the role of a Domain Service versus an Application Service?",
+  "q": "نقش Domain Service در برابر Application Service را مشخص کن.",
+  "qa": "محتوای اولیه Domain Service و Application Service را قاطی کرده بود. **Domain Service** فقط منطق کسب‌وکاریِ قابل‌انتساب به هیچ entity واحد را در خود دارد."
+ },
+ {
+  "en": "Design the Twitter timeline and search (or Facebook feed and search)",
+  "q": "تایم‌لاین و جست‌وجوی توییتر (یا فید فیسبوک) را طراحی کن",
+  "qa": "تنش اصلی: fan-out روی نوشتن (خواندن سریع، گران برای سلبریتی‌ها) در برابر fan-out روی خواندن (نوشتن ارزان، خواندن کند). ترکیبی: push برای کاربر عادی، pull/merge برای سلبریتی."
+ },
+ {
+  "en": "Design a key-value store that supports search (like a distributed Redis)",
+  "q": "استور key-value با پشتیبانی جست‌وجو (مثل Redis توزیع‌شده) را طراحی کن",
+  "qa": "API: get/put/delete (+ جست‌وجوی کلید یا ایندکس ثانویه). توزیع: consistent hashing با virtual node برای بار یکنواخت."
+ },
+ {
+  "en": "What is a microservice and how does it differ from a monolithic architecture?",
+  "q": "میکروسرویس چیست و چه تفاوتی با معماری مونولیتیک دارد؟",
+  "qa": "**میکروسرویس** و **معماری مونولیتیک** دو پارادایم متمایز طراحی نرم‌افزار با ویژگی‌های خاص هرکدام هستند."
+ },
+ {
+  "en": "Can you describe the principles behind the microservices architecture?",
+  "q": "اصول پشت معماری میکروسرویس‌ها را توصیف کنید.",
+  "qa": "**میکروسرویس‌ها** سبک معماری‌ای است که اپ را مجموعه‌ای از سرویس‌های کوچک و کم‌جفت‌شده می‌بیند؛ هر سرویس خودکفا و مستقل است."
+ },
+ {
+  "en": "What are some of the challenges you might face when designing a microservices architecture?",
+  "q": "چالش‌های طراحی معماری میکروسرویس کدام‌اند؟",
+  "qa": "موقع **طراحی معماری میکروسرویس** با این چالش‌ها روبه‌رو می‌شوید:"
+ },
+ {
+  "en": "How do microservices communicate with each other?",
+  "q": "میکروسرویس‌ها چطور با هم ارتباط برقرار می‌کنند؟",
+  "qa": "**میکروسرویس‌ها** معمولاً با هم کار می‌کنند و به **مکانیزم‌های ارتباطی بهینه** نیاز دارند…"
+ },
+ {
+  "en": "How would you decompose a monolithic application into microservices?",
+  "q": "اپ مونولیتیک را چطور به میکروسرویس‌ها تجزیه می‌کنید؟",
+  "qa": "**تجزیه‌ی مونولیتیک** به میکروسرویس یعنی شکستن نرم‌افزار بزرگ به سرویس‌های کوچکِ به‌هم‌پیوسته. این مسیر…"
+ },
+ {
+  "en": "What strategies can be employed to manage transactions across multiple microservices?",
+  "q": "برای مدیریت تراکنش‌ها بین چند میکروسرویس چه استراتژی‌هایی به‌کار می‌رود؟",
+  "qa": "مدیریت تراکنش بین **میکروسرویس‌ها** چالش‌هایی دارد که ریشه در اصول استقلال و ایزوله‌بودن میکروسرویس‌هاست."
+ },
+ {
+  "en": "Explain the concept of Bounded Context in the microservices architecture.",
+  "q": "مفهوم Bounded Context در معماری میکروسرویس را توضیح دهید.",
+  "qa": "در **معماری میکروسرویس**، اصل «**Bounded Context**» بر تقسیم دامنه‌ی پیچیده‌ی کسب‌وکار به بخش‌های متمایز تأکید دارد."
+ },
+ {
+  "en": "How do you handle failure in a microservice?",
+  "q": "خرابی یک میکروسرویس را چطور هندل می‌کنید؟",
+  "qa": "در **معماری میکروسرویس** چند جزء کوچک با هم اپ را می‌سازند؛ خرابی یکی…"
+ },
+ {
+  "en": "What design patterns are commonly used in microservices architectures?",
+  "q": "الگوهای طراحی رایج در معماری میکروسرویس کدام‌اند؟",
+  "qa": "چند الگوی طراحی برای **معماری میکروسرویس** مناسب‌اند و best practiceهای طراحی و پیاده‌سازی را ارائه می‌دهند."
+ },
+ {
+  "en": "Can you describe the API Gateway pattern and its benefits?",
+  "q": "الگوی API Gateway و سودهایش را توصیف کنید.",
+  "qa": "**API Gateway** نقطه‌ی ورود واحد کلاینت برای دسترسی به قابلیت‌های **میکروسرویس**هاست."
+ },
+ {
+  "en": "Explain the Circuit Breaker pattern. Why is it important in a microservices ecosystem?",
+  "q": "الگوی Circuit Breaker را توضیح دهید؛ چرا در اکوسیستم میکروسرویس مهم است؟",
+  "qa": "**الگوی Circuit Breaker** مکانیزم کلیدی معماری میکروسرویس برای تقویت **تحمل خطا** و **مقاومت** است."
+ },
+ {
+  "en": "What is a Service Mesh? How does it aid in managing microservices?",
+  "q": "Service Mesh چیست و مدیریت میکروسرویس‌ها را چطور آسان می‌کند؟",
+  "qa": "**Service Mesh** لایه‌ی زیرساختی اختصاصی است که نیازمندی‌های شبکه‌ی **میکروسرویس‌ها** را ساده و ارتباط را مطمئن‌تر، امن‌تر و…"
+ },
+ {
+  "en": "How do you ensure data consistency across microservices?",
+  "q": "یکپارچگی داده بین میکروسرویس‌ها را چطور تضمین می‌کنید؟",
+  "qa": "**یکپارچگی داده** در معماری میکروسرویس برای اجرای درست عملیات حیاتی کسب‌وکار حیاتی است."
+ },
+ {
+  "en": "How does the CAP Theorem define consistency in the context of a distributed system?",
+  "q": "CAP Theorem consistency را در سیستم توزیع‌شده چطور تعریف می‌کند؟",
+  "qa": "در سیستم‌های توزیع‌شده، **consistency** یعنی همه‌ی نودها **آخرین نوشتن هر بخش سیستم را بازتاب دهند**."
+ },
+ {
+  "en": "What does availability mean in CAP Theorem?",
+  "q": "availability در CAP Theorem یعنی چه؟",
+  "qa": "**Availability** در CAP یعنی توان سیستم در **پاسخ‌دادن به‌موقع به درخواست‌های کاربر** حتی وقتی بخش‌هایی…"
+ },
+ {
+  "en": "Explain partition tolerance in a distributed system as stated by the CAP Theorem.",
+  "q": "partition tolerance را طبق CAP Theorem توضیح دهید.",
+  "qa": "**Partition tolerance** یعنی توان سیستم توزیع‌شده در **ماندن فعال حتی وقتی ارتباط بین بخش‌های سیستم قطع شود**."
+ },
+ {
+  "en": "Can you name a system that prefers availability over consistency?",
+  "q": "سیستمی را نام ببرید که availability را به consistency ترجیح می‌دهد.",
+  "qa": "سیستمی که **availability را بر strong consistency ترجیح می‌دهد** به سمت «AP» از CAP می‌رود."
+ },
+ {
+  "en": "What is meant by eventual consistency in the context of CAP Theorem?",
+  "q": "eventual consistency در بستر CAP Theorem یعنی چه؟",
+  "qa": "در **CAP**، «**eventual consistency**» یعنی با گذر زمان و بدون آپدیت بیشتر، همه‌ی replicaها به یک مقدار می‌رسند."
+ },
+ {
+  "en": "What trade-offs you might have to make in a distributed system design due to the CAP Theorem?",
+  "q": "به‌خاطر CAP Theorem در طراحی سیستم توزیع‌شده چه موازنه‌هایی لازم است؟",
+  "qa": "**CAP** (قضیه‌ی بروئر) روی **سیستم‌های توزیع‌شده قید** می‌گذارد: حداکثر دو تضمین از سه تضمین…"
+ },
+ {
+  "en": "How would you design a system that requires high availability and what trade-offs would you have to make according to the CAP Theorem?",
+  "q": "سیستمی با HA چطور طراحی می‌کنید و طبق CAP چه موازنه‌هایی لازم است؟",
+  "qa": "موقع **طراحی سیستم توزیع‌شده** با نیاز HA، تمرکز بر پاسخ‌گویی مطمئن پیوسته است؛ و طبق CAP باید…"
+ },
+ {
+  "en": "Considering the CAP Theorem, how would you approach building a distributed system that handles sensitive financial transactions?",
+  "q": "با توجه به CAP، سیستم توزیع‌شده‌ی تراکنش‌های مالی حساس را چطور می‌سازید؟",
+  "qa": "برای **تراکنش‌های مالی حساس** در نظر گرفتن **CAP** برای تضمین یکپارچگی حیاتی است؛ Consistency اولویت دارد."
+ },
+ {
+  "en": "Describe a scenario where a system may switch from being CA to AP during its operation due to external factors.",
+  "q": "سناریویی را توضیح دهید که سیستم به‌خاطر عوامل بیرونی از CA به AP تغییر حالت دهد.",
+  "qa": "تحلیل **CAP** نشان می‌دهد تضمین هم‌زمان هر سه دشوار است:"
+ },
+ {
+  "en": "How do quorums help in achieving consistency or availability in distributed systems, and how is this related to CAP Theorem?",
+  "q": "quorum ها چطور به consistency یا availability در سیستم‌های توزیع‌شده کمک می‌کنند و چه نسبتی با CAP دارند؟",
+  "qa": "در سیستم‌های توزیع‌شده، **quorumها** موازنه‌ی consistency قوی و availability بالا را ممکن می‌کنند؛ رابطه‌ی نزدیک با **CAP**."
+ },
+ {
+  "en": "How do modern databases like Cassandra or DynamoDB address the challenges posed by the CAP Theorem?",
+  "q": "پایگاه‌های داده‌ی مدرن مثل Cassandra و DynamoDB چالش‌های CAP را چطور حل می‌کنند؟",
+  "qa": "هیچ سیستم توزیع‌شده‌ای نمی‌تواند هم‌زمان **consistency**، **availability** و **partition tolerance** را تضمین کند؛ Cassandra و DynamoDB این را با…"
+ },
+ {
+  "en": "Explain how concepts like idempotency, commutativity and convergence are important in designs that are influenced by the CAP Theorem.",
+  "q": "اهمیت idempotency و commutativity و convergence در طراحی‌های متأثر از CAP را توضیح دهید.",
+  "qa": "در سیستم‌های توزیع‌شده، هم‌راستایی با CAP به استراتژی‌هایی می‌انجامد که بر **commutativity**، **idempotence** و **eventual consistency** تأکید دارند."
+ },
+ {
+  "en": "What is the difference between software architecture and software design?",
+  "q": "تفاوت software architecture و software design چیست؟",
+  "qa": "**معماری نرم‌افزار** و **طراحی نرم‌افزار** هر دو حیاتی‌اند؛ هم‌پوشانی جزئی دارند ولی مقیاس و سطح متفاوتی را پوشش می‌دهند."
+ },
+ {
+  "en": "Explain separation of concerns in software architecture.",
+  "q": "separation of concerns در معماری نرم‌افزار را توضیح دهید.",
+  "qa": "**SoC** اصل بنیادی طراحی است: تقسیم سیستم به بخش‌های متمایز که هرکدام مسئله‌ی خاصی را حل می‌کنند."
+ },
+ {
+  "en": "Define a system quality attribute and its importance in software architecture.",
+  "q": "system quality attribute را تعریف کنید و اهمیتش در معماری را بگویید.",
+  "qa": "**ویژگی‌های کیفی سیستم** (نیازمندی‌های غیرکارکردی) مکمل نیازمندی‌های کارکردی در شکل‌دادن معماری و طراحی‌اند."
+ },
+ {
+  "en": "Describe the concept of a software architectural pattern.",
+  "q": "مفهوم الگوی معماری نرم‌افزار را توضیح دهید.",
+  "qa": "**الگوی معماری نرم‌افزار** راه‌حل ساختارمند و آزموده‌ی یک مسئله‌ی طراحی تکرارشونده است؛ نقشه‌ی مفهومی سیستم می‌دهد."
+ },
+ {
+  "en": "What is the layered architectural pattern?",
+  "q": "الگوی معماری layered چیست؟",
+  "qa": "**الگوی Layered Architecture** با سازماندهی سلسله‌مراتبی اجزا در لایه‌های متمایز مشخص می‌شود که هرکدام مسئولیت خاصی دارند."
+ },
+ {
+  "en": "What are the elements of a good software architecture?",
+  "q": "عناصر معماری خوب نرم‌افزار کدام‌اند؟",
+  "qa": "**معماری مقاوم** سیستم را پایدار و قابل‌مدیریت می‌کند؛ عناصر کلیدی:"
+ },
+ {
+  "en": "Define modularity in software architecture.",
+  "q": "modularity در معماری نرم‌افزار را تعریف کنید.",
+  "qa": "**modularity** یعنی درجه‌ی قابلیت شکستن سیستم به ماژول‌های کارکردی یا منطقی جدا."
+ },
+ {
+  "en": "What is the principle of least knowledge (Law of Demeter) in architecture?",
+  "q": "اصل least knowledge (قانون دیمتر) در معماری چیست؟",
+  "qa": "**اصل کمترین دانش** (LoD یا قانون دیمتر) بر **کاهش وابستگی** بین ماژول‌ها و کلاس‌ها تأکید دارد تا سیستم…"
+ },
+ {
+  "en": "How are cross-cutting concerns addressed in software architecture?",
+  "q": "cross-cutting concern ها در معماری چطور هندل می‌شوند؟",
+  "qa": "**Cross-cutting concernها** جنبه‌هایی هستند که چند ماژول و لایه را قطع می‌کنند: لاگ، امنیت، کش. هندل‌شان…"
+ },
+ {
+  "en": "Explain the Publish-Subscribe pattern and its applications.",
+  "q": "الگوی Publish-Subscribe و کاربردهایش را توضیح دهید.",
+  "qa": "**الگوی Pub/Sub** الگوی پیام‌رسانی است که فرستنده‌ها (**publisher**) پیام را مستقیم به گیرنده نمی‌فرستند…"
+ },
+ {
+  "en": "Define Microservices architecture and contrast it with Monolithic architecture.",
+  "q": "معماری Microservices را تعریف و با Monolithic مقایسه کنید.",
+  "qa": "**میکروسرویس** و **مونولیتیک** دو رویکرد متمایز طراحی نرم‌افزار با مزایا و چالش‌های خاص هرکدام هستند."
+ },
+ {
+  "en": "When should the Singleton pattern be applied and what are its drawbacks?",
+  "q": "کِی الگوی Singleton به‌کار می‌رود و معایبش چیست؟",
+  "qa": "اگرچه **Singleton** سودهایی مثل نقطه‌ی دسترسی واحد و نمونه‌سازی دیرهنگام دارد، معایب و سوءاستفاده‌های احتمالی هم…"
+ },
+ {
+  "en": "What are the core principles of Service-Oriented Architecture (SOA)?",
+  "q": "اصول هسته‌ی SOA کدام‌اند؟",
+  "qa": "**SOA** مدل طراحی سیستم‌های نرم‌افزاری با سرویس‌های کم‌جفت‌شده است؛ هر سرویس خودکفا و…"
+ },
+ {
+  "en": "Can you describe the difference between SOA and a microservices architecture?",
+  "q": "تفاوت SOA و معماری میکروسرویس را توصیف کنید.",
+  "qa": "**SOA** و **میکروسرویس‌ها** اصول معماری مشترکی دارند ولی در تمرکز، ریزدانگی و استقرار متفاوت‌اند."
+ },
+ {
+  "en": "How does SOA facilitate service reusability?",
+  "q": "SOA استفاده‌ی مجدد از سرویس‌ها را چطور ممکن می‌کند؟",
+  "qa": "**SOA** با طراحی ماژولار، استانداردسازی قرارداد و **interoperability** استفاده‌ی مجدد از سرویس‌ها را ممکن می‌کند."
+ },
+ {
+  "en": "What is _CAP Theorem_ and why it's important for _distributed systems_?",
+  "q": "CAP Theorem چیست و چرا برای سیستم‌های توزیع‌شده مهم است؟",
+  "qa": "**CAP Theorem** (اریک بروئر، ۲۰۰۰) اصل بنیادی **سیستم‌های توزیع‌شده** است: از سه تضمین، حداکثر دو تا هم‌زمان ممکن است."
+ },
+ {
+  "en": "What is _loose coupling_ in SOA and why is it important?",
+  "q": "loose coupling در SOA چیست و چرا مهم است؟",
+  "qa": "**Loose coupling** در بستر **SOA** یعنی درجه‌ی وابستگی اجزای نرم‌افزار به هم؛ کم بودنش نگهداری و تکامل را آسان می‌کند."
+ },
+ {
+  "en": "What do you understand by service orchestration and service choreography in the context of SOA?",
+  "q": "service orchestration و service choreography در بستر SOA را توضیح می‌دهید؟",
+  "qa": "هر دو **Orchestration** و **Choreography** مکانیزم هماهنگی عملیات در **SOA** هستند."
+ },
+ {
+  "en": "How does SOA differ from traditional monolithic application architectures?",
+  "q": "SOA چه تفاوتی با معماری مونولیتیک سنتی دارد؟",
+  "qa": "**SOA** رویکرد ماژولار و جامع طراحی است که **انعطاف سیستم را بالا می‌برد**."
+ },
+ {
+  "en": "What role does a service registry play in SOA?",
+  "q": "نقش service registry در SOA چیست؟",
+  "qa": "در **SOA**، **service registry** فهرست حیاتی است که سرویس‌ها را برای discovery و ارتباط با هم ممکن می‌کند."
+ },
+ {
+  "en": "What factors do you consider when designing a service interface in SOA?",
+  "q": "موقع طراحی service interface در SOA چه ملاحظاتی دارید؟",
+  "qa": "**SOA** هدفش ساخت **سیستم‌های ماژولار و قابلیت‌تعامل** با تعریف interfaceهای شفاف سرویس است. عوامل…"
+ },
+ {
+  "en": "What are some of the common data formats used for service communication in SOA?",
+  "q": "فرمت‌های داده‌ی رایج ارتباط سرویس‌ها در SOA کدام‌اند؟",
+  "qa": "در **SOA** سرویس‌ها با **فرمت‌های داده‌ی استاندارد** ارتباط برقرار می‌کنند؛ رایج‌ترین‌ها:"
+ },
+ {
+  "en": "Provide an example of how you would refactor a monolithic application into a SOA-based architecture.",
+  "q": "مثالی بزن از بازآرایی اپ مونولیتیک به معماری SOA-محور.",
+  "qa": "فرایند **بازآرایی مونولیتیک به SOA** و نکات کلیدی‌اش را می‌بینیم:"
+ },
+ {
+  "en": "What is an Enterprise Service Bus (ESB) and how does it support SOA?",
+  "q": "Enterprise Service Bus چیست و SOA را چطور پشتیبانی می‌کند؟",
+  "qa": "**ESB** بخش بنیادی خیلی از معماری‌های **SOA** است."
+ },
+ {
+  "en": "How would you handle transaction management in a SOA system?",
+  "q": "مدیریت تراکنش در سیستم SOA را چطور انجام می‌دهید؟",
+  "qa": "سیستم‌های **SOA** از **سرویس‌های توزیع‌شده و کم‌جفت‌شده** پشتیبانی می‌کنند؛ مدیریت تراکنش بین این‌ها…"
+ },
+ {
+  "en": "What is Domain-Driven Design (DDD) and what are its core principles?",
+  "q": "Domain-Driven Design چیست و اصول هسته‌اش کدام‌اند؟",
+  "qa": "**DDD** روش‌شناسی معماری برای مدیریت سیستم‌های پیچیده با هم‌راستا‌کردن پیاده‌سازی فنی و…"
+ },
+ {
+  "en": "How does DDD differ from traditional data-driven or service-driven approaches?",
+  "q": "DDD چه تفاوتی با رویکردهای data-driven یا service-driven سنتی دارد؟",
+  "qa": "**DDD** تمرکز معماری را از اسکیمای ذخیره (data-driven) یا تجزیه‌ی کارکردی (service-driven) جابه‌جا می‌کند…"
+ },
+ {
+  "en": "What is the difference between the Domain Model and the Data Model in DDD?",
+  "q": "تفاوت Domain Model و Data Model در DDD چیست؟",
+  "qa": "**Domain Model** بازنمایی انتزاعی مفاهیم، قواعد و رفتارهای کسب‌وکار با زبان مشترک است؛ **Data Model** فقط ساختار ذخیره."
+ },
+ {
+  "en": "Can you explain what Bounded Contexts are in DDD and why they are important?",
+  "q": "Bounded Context ها در DDD چیستند و چرا مهم‌اند؟",
+  "qa": "**Bounded Context** مرز زبانی و منطقی قطعی است که **Domain Model** خاص در آن اعتبار دارد؛ زمینه‌ی مشخص می‌سازد."
+ },
+ {
+  "en": "What strategies can you use to define Bounded Contexts in a large system?",
+  "q": "برای تعریف Bounded Context ها در سیستم بزرگ چه استراتژی‌هایی دارید؟",
+  "qa": "در ۲۰۲۶، **DDD** از استراتژی شکستن مونولیتیک به ستون بنیادی **معماری Event-Driven** تکامل یافته است…"
+ },
+ {
+  "en": "How do you integrate multiple Bounded Contexts within a single system?",
+  "q": "چند Bounded Context را در یک سیستم چطور یکپارچه می‌کنید؟",
+  "qa": "یکپارچه‌سازی **Bounded Contextها** موازنه‌ی **استقلال سیستم** و **سازگاری دامنه** را مدیریت می‌کند؛ معماری‌های مدرن…"
+ },
+ {
+  "en": "Why is Ubiquitous Language important in DDD and how do you establish it?",
+  "q": "چرا Ubiquitous Language در DDD مهم است و چطور برقرارش می‌کنید؟",
+  "qa": "**زبان مشترک (UL)** مکانیزم اصلی کاهش **شکاف معنایی** بین نیت کسب‌وکار و پیاده‌سازی فنی است."
+ },
+ {
+  "en": "What is the role of Entities in DDD and how do they differ from Value Objects?",
+  "q": "نقش Entity ها در DDD چیست و چه تفاوتی با Value Object ها دارند؟",
+  "qa": "در **DDD**، **Entityها** و **Value Objectها** بلوک‌های اصلی لایه‌ی دامنه‌اند؛ تمایزشان…"
+ },
+ {
+  "en": "How would you identify Aggregates in a domain model and what boundary rules apply to them?",
+  "q": "Aggregate ها را در domain model چطور شناسایی می‌کنید و قواعد مرزشان چیست؟",
+  "qa": "**Aggregateها** مرزهای consistency در مدل دامنه‌اند؛ واحد اتمی گذار وضعیت و تضمین قواعد کسب‌وکار."
+ },
+ {
+  "en": "Can you explain what a Domain Event is and give an example of when it might be used?",
+  "q": "Domain Event چیست و مثالی از کاربردش بزنید.",
+  "qa": "**Domain Event** بازنمایی رسمی یک تغییر وضعیت مهم در bounded context است؛ «چه اتفاقی افتاد» را ثبت می‌کند."
+ },
+ {
+  "en": "How do Repositories function in DDD and what is their main responsibility?",
+  "q": "Repository ها در DDD چطور کار می‌کنند و مسئولیت اصلی‌شان چیست؟",
+  "qa": "**Repositoryها** لایه‌ی انتزاع بین **Domain Model** و **زیرساخت داده** هستند؛ در معماری مدرن…"
+ },
+ {
+  "en": "What is the difference between a Repository and a Service in DDD?",
+  "q": "تفاوت Repository و Service در DDD چیست؟",
+  "qa": "در **DDD**، تمایز **Repository** و **Service** با نسبت‌شان به **Aggregateها** تعریف می‌شود…"
+ },
+ {
+  "en": "How would you handle complex domain logic that involves multiple entities and value objects?",
+  "q": "منطق دامنه‌ی پیچیده‌ی درگیر چند entity و value object را چطور هندل می‌کنید؟",
+  "qa": "**DDD** استاندارد مدیریت منطق کسب‌وکاری پیچیده باقی است؛ در ۲۰۲۶ تمرکز از مونولیتیک ساده به…"
+ },
+ {
+  "en": "What considerations are there for implementing Aggregates to ensure transactional consistency?",
+  "q": "ملاحظات پیاده‌سازی Aggregate ها برای تضمین یکپارچگی تراکنشی چیست؟",
+  "qa": "**Aggregateها** واحد اتمی تغییر داده در DDD هستند؛ داخل مرز aggregate، ویژگی‌های **ACID**…"
+ }
+]

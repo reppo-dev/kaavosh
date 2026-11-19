@@ -1,0 +1,302 @@
+[
+ {
+  "en": "What are the challenges associated with _model deployment_ and how does _MLOps_ address them?",
+  "q": "چالش‌های model deployment چیست و MLOps چطور آن‌ها را حل می‌کند؟",
+  "qa": "**استقرار مدل** در ساختارهای سنتی به‌خاطر این‌ها سنگین است: محیط‌های متفاوت توسعه و پروداکشن، تیم‌های جدا، نبود یکپارچگی… MLOps با اتوماسیون و استانداردسازی حلش می‌کند."
+ },
+ {
+  "en": "What is _forward propagation_ and _backpropagation_?",
+  "q": "forward propagation و backpropagation چیستند؟",
+  "qa": "**Forward propagation** جریان اولیه‌ی داده‌ی ورودی از لایه‌های شبکه‌ی عصبی است؛ **backpropagation** گام بعدی: برگرداندن خطا به عقب برای اصلاح وزن‌ها."
+ },
+ {
+  "en": "What is a '_named entity_' and how is _Named Entity Recognition (NER)_ useful in NLP tasks?",
+  "q": "named entity چیست و Named Entity Recognition (NER) در NLP چه سودی دارد؟",
+  "qa": "در NLP، **نهاد نام‌دار (NE)** به اشیای دنیای واقعی — اشخاص، تاریخ‌ها، مکان‌ها — با نام خاص اشاره دارد؛ NER این‌ها را استخراج می‌کند."
+ },
+ {
+  "en": "Define sentiment analysis and discuss its applications.",
+  "q": "sentiment analysis را تعریف کنید و کاربردهایش را بررسی کنید.",
+  "qa": "**تحلیل احساسات** (استخراج نظرات) مطالعه‌ی محاسباتی احساسات، نگرش‌ها و نظرات مردم از داده‌ی متنی است؛ کاربردها: برند، بازخورد مشتری، سیاست."
+ },
+ {
+  "en": "What are n-grams and how do they contribute to language modeling?",
+  "q": "n-gram ها چیستند و در مدل‌سازی زبان چه نقشی دارند؟",
+  "qa": "**N-gramها** توالی کلمه یا کاراکتر با طول n هستند؛ نقش حیاتی در فهم زمینه و مدل‌سازی زبان دارند."
+ },
+ {
+  "en": "Define the term Lifecycle within the context of MLOps.",
+  "q": "اصطلاح Lifecycle در بستر MLOps را تعریف کنید.",
+  "qa": "در **MLOps**، چرخه‌ی حیات یعنی توالی ساختاریافته‌ی مراحل برای مدیریت سرتاسری و استقرار **مدل یادگیری ماشین**."
+ },
+ {
+  "en": "How does MLOps facilitate reproducibility in machine learning projects?",
+  "q": "MLOps بازتولید‌پذیری در پروژه‌های یادگیری ماشین را چطور ممکن می‌کند؟",
+  "qa": "**بازتولید‌پذیری** جنبه‌ی حیاتی اعتبارسنجی مدل است؛ **MLOps** با روش‌هایی کل گردش کار ML — از داده تا استقرار — را تکرار‌پذیر می‌کند."
+ },
+ {
+  "en": "What role does data versioning play in MLOps?",
+  "q": "نقش data versioning در MLOps چیست؟",
+  "qa": "**نسخه‌گذاری داده** تضمین می‌کند مدل‌ها همیشه با datasetهای سازگار و بازتولید‌پذیر آموزش ببینند؛ برای یکپارچگی ضروری است."
+ },
+ {
+  "en": "Explain _Continuous Integration (CI)_ and _Continuous Deployment (CD)_ within an _MLOps_ context.",
+  "q": "CI و CD در چارچوب MLOps را توضیح دهید.",
+  "qa": "**CI** و **CD** در چارچوب **MLOps** توسعه و استقرار مدل‌های یادگیری ماشین را روان می‌کنند."
+ },
+ {
+  "en": "Discuss the importance of monitoring and logging in MLOps.",
+  "q": "اهمیت monitoring و logging در MLOps را بررسی کنید.",
+  "qa": "در چرخه‌ی **MLOps**، **رصد پیوسته** و **لاگ مؤثر** برای حفظ کیفیت، امنیت و انطباق مدل ضروری‌اند."
+ },
+ {
+  "en": "What tools and platforms are commonly used for implementing MLOps?",
+  "q": "ابزارها و پلتفرم‌های رایج پیاده‌سازی MLOps کدام‌اند؟",
+  "qa": "MLOps چند مرحله دارد — از **جمع‌آوری داده** تا آموزش و استقرار مدل — و ابزارها و پلتفرم‌های مخصوص هر مرحله وجود دارد."
+ },
+ {
+  "en": "Discuss feature stores and their importance in MLOps workflows.",
+  "q": "feature store ها و اهمیتشان در workflowهای MLOps را بررسی کنید.",
+  "qa": "**Feature Storeها** دسترسی به داده را برای مدل‌های ML استاندارد می‌کنند و سازگاری بین توسعه، آموزش و استقرار را تضمین می‌کنند."
+ },
+ {
+  "en": "What is an artificial neural network?",
+  "q": "شبکه‌ی عصبی مصنوعی چیست؟",
+  "qa": "**ANN** مدل محاسباتی پیشرفته‌ای است که از مغز انسان الهام گرفته؛ با ساختار واحدهای به‌هم‌متصل مشخص می‌شود."
+ },
+ {
+  "en": "Describe the role of weights and biases in neural networks.",
+  "q": "نقش weight ها و bias ها در شبکه‌های عصبی چیست؟",
+  "qa": "**شبکه‌ی عصبی** با **وزن‌ها** و **biasها** داده‌ی ورودی را به خروجی متناظر تبدیل می‌کند."
+ },
+ {
+  "en": "Explain the difference between shallow and deep neural networks.",
+  "q": "تفاوت شبکه‌های عصبی shallow و deep چیست؟",
+  "qa": "**شبکه‌های shallow** لایه‌ی محدود دارند؛ **deep**ها (بیش از ۳ لایه) معماری عمیق‌تر و پیچیده‌تر دارند."
+ },
+ {
+  "en": "How do dropout layers help prevent overfitting?",
+  "q": "لایه‌های dropout چطور از overfitting جلوگیری می‌کنند؟",
+  "qa": "**لایه‌های dropout** در شبکه‌های عصبی سلاح قدرتمندی در برابر **بیش‌برازش** هستند."
+ },
+ {
+  "en": "Discuss the architecture and applications of Long Short-Term Memory networks (LSTMs).",
+  "q": "معماری و کاربردهای LSTM ها را بررسی کنید.",
+  "qa": "**LSTMها** نوعی **RNN** با ساختار پیشرفته‌تر هستند که مشکل محوشدگی gradient را کم می‌کنند؛ برای توالی‌ها مؤثرند."
+ },
+ {
+  "en": "What is the significance of Residual Networks (ResNets)?",
+  "q": "اهمیت Residual Networks (ResNets) چیست؟",
+  "qa": "**ResNetها** تحولی معماری در یادگیری عمیق‌اند: با **کاهش مشکل محوشدگی gradient** در شبکه‌های خیلی عمیق اثر گذاشتند."
+ },
+ {
+  "en": "What do you understand by the terms corpus, tokenization, and stopwords in NLP?",
+  "q": "اصطلاحات corpus و tokenization و stopwords در NLP را توضیح دهید.",
+  "qa": "در **NLP**، corpus، tokenization و stopwords مفاهیم بنیادی‌اند."
+ },
+ {
+  "en": "Distinguish between morphology and syntax in the context of NLP.",
+  "q": "تفاوت morphology و syntax در بستر NLP چیست؟",
+  "qa": "**Morphology** ساختار و ساختِ کلمات را بررسی می‌کند؛ **syntax** چینش آن‌ها در جمله‌ها را."
+ },
+ {
+  "en": "Explain the significance of Part-of-Speech (POS) tagging in NLP.",
+  "q": "اهمیت POS tagging در NLP چیست؟",
+  "qa": "**POS Tagging** با شناسایی اجزای گرامری متن — مثل نوع کلمات — نقش بنیادی در NLP دارد."
+ },
+ {
+  "en": "Describe lemmatization and stemming. When would you use one over the other?",
+  "q": "lemmatization و stemming را توضیح دهید؛ کِی کدام را استفاده می‌کنید؟",
+  "qa": "هر دو **lemmatization** و **stemming** روش‌های رساندن کلمات صرف‌شده به ریشه‌اند؛ انتخاب بسته به دقت موردنیاز است."
+ },
+ {
+  "en": "How does a dependency parser work and what information does it provide?",
+  "q": "dependency parser چطور کار می‌کند و چه اطلاعاتی می‌دهد؟",
+  "qa": "**dependency parser** ابزاری در **NLP** است که ساختار گرامری را از متن آزاد استخراج می‌کند."
+ },
+ {
+  "en": "Describe what a bag of words model is and its limitations.",
+  "q": "مدل bag of words را توضیح دهید و محدودیت‌هایش را بگویید.",
+  "qa": "مدل **Bag of Words (BoW)** تکنیک بنیادی NLP است؛ ترتیب کلمات و syntax را نادیده می‌گیرد — همین محدودیتش است."
+ },
+ {
+  "en": "Explain how the Naive Bayes classifier is used in NLP.",
+  "q": "طبقه‌بند Naive Bayes در NLP چطور استفاده می‌شود؟",
+  "qa": "**Naive Bayes** انتخابی محبوب برای طبقه‌بندی متن در **NLP** است؛ به سادگی و سرعتش معروف است."
+ },
+ {
+  "en": "How are Hidden Markov Models (HMMs) applied in NLP tasks?",
+  "q": "HMM ها در وظایف NLP چطور به‌کار می‌روند؟",
+  "qa": "**HMMها** به‌خاطر توان هندل **داده‌ی ترتیبی** نقش دیرینه‌ای در وظایف **NLP** دارند."
+ },
+ {
+  "en": "What are the advantages of using Random Forests in NLP?",
+  "q": "مزایای Random Forest ها در NLP چیست؟",
+  "qa": "اگرچه **Random Forestها** بیشتر با **طبقه‌بندی** شناخته می‌شوند، در **NLP** هم مزایای متعددی دارند."
+ },
+ {
+  "en": "Explain how Decision Trees are utilized for NLP problems.",
+  "q": "Decision Tree ها در مسائل NLP چطور استفاده می‌شوند؟",
+  "qa": "**Decision Treeها** در **NLP** چندمنظوره‌اند: راه‌حل تحلیل متن در تحلیل احساسات، طبقه‌بندی و…"
+ },
+ {
+  "en": "What is MLOps and how does it differ from traditional software development operations?",
+  "q": "MLOps چیست و چه تفاوتی با عملیات توسعه‌ی نرم‌افزار سنتی دارد؟",
+  "qa": "**MLOps** — خلاصه‌ی Machine Learning Operations — مجموعه روش‌ها و ابزارهایی است که از **DevOps** اقتباس و برای یادگیری ماشین تنظیم شده."
+ },
+ {
+  "en": "Describe the typical stages of the machine learning lifecycle.",
+  "q": "مراحل معمول چرخه‌ی حیات یادگیری ماشین را توضیح دهید.",
+  "qa": "**چرخه‌ی حیات ML** چند مرحله‌ی تکرارشونده دارد که هرکدام برای ساخت و نگهداری مدل‌های پربازده حیاتی‌اند."
+ },
+ {
+  "en": "What are the key components of a robust MLOps infrastructure?",
+  "q": "اجزای کلیدی زیرساخت مقاوم MLOps کدام‌اند؟",
+  "qa": "**MLOps** هدفش روان‌سازی فرایندها در کل چرخه و تضمین سازگاری، بازتولید‌پذیری و حاکمیت در توسعه‌ی مدل است."
+ },
+ {
+  "en": "How do containerization technologies like Docker contribute to MLOps practices?",
+  "q": "فناوری‌های کانتینری مثل Docker در روش‌های MLOps چه نقشی دارند؟",
+  "qa": "**فناوری‌های کانتینری** مثل **Docker** در workflowهای مدرن یادگیری ماشین — مخصوصاً **MLOps** — نقش حیاتی دارند."
+ },
+ {
+  "en": "Describe the function of model registries in MLOps.",
+  "q": "کارکرد model registry ها در MLOps را توضیح دهید.",
+  "qa": "در **MLOps**، **Model Registryها** نقش مهمی دارند؛ مثل repositoryها در توسعه‌ی سنتی، مدل‌های نسخه‌گذاری‌شده را نگه می‌دارند."
+ },
+ {
+  "en": "How does MLOps support model scalability and distribution?",
+  "q": "MLOps مقیاس‌پذیری و توزیع مدل را چطور پشتیبانی می‌کند؟",
+  "qa": "**MLOps** ترکیبی از استراتژی‌های **یادگیری ماشین** و **DevOps** است؛ تمرکز بر **عملکرد**، **اطمینان‌پذیری** و **مقیاس‌پذیری**."
+ },
+ {
+  "en": "Explain the concept of a data pipeline and its role in MLOps.",
+  "q": "مفهوم data pipeline و نقشش در MLOps را توضیح دهید.",
+  "qa": "در بستر MLOps، **data pipeline** سازه‌ای حیاتی است که داده‌ی آموزش، اعتبارسنجی و تست مدل‌ها را تضمین می‌کند."
+ },
+ {
+  "en": "Define deep learning and how it differs from other machine learning approaches.",
+  "q": "deep learning را تعریف کنید و تفاوتش با رویکردهای دیگر ML را بگویید.",
+  "qa": "**Deep Learning** زیرمجموعه‌ای از یادگیری ماشین با تأکید بر شبکه‌های عصبی چندلایه‌ی مصنوعی است؛ این **DNNها**…"
+ },
+ {
+  "en": "Explain the concept of depth in deep learning.",
+  "q": "مفهوم depth در deep learning را توضیح دهید.",
+  "qa": "در بستر **Deep Learning**، «depth» به تعداد لایه‌های شبکه‌ی عصبی اشاره دارد و وجه تمایز اصلی از روش‌های سنتی است."
+ },
+ {
+  "en": "What are activation functions and why are they necessary?",
+  "q": "activation function ها چیستند و چرا ضروری‌اند؟",
+  "qa": "**Activation functionها** نقش حیاتی در یادگیری عمیق دارند: غیرخطی‌بودن را به مدل می‌آورند تا شبکه الگوهای پیچیده را بیاموزد."
+ },
+ {
+  "en": "What is the vanishing gradient problem and how can it be avoided?",
+  "q": "مشکل vanishing gradient چیست و چطور اجتناب می‌شود؟",
+  "qa": "**مشکل Vanishing Gradient** در شبکه‌های عمیق وقتی رخ می‌دهد که **gradientها در بازپخش به عقب** هرچه کوچک‌تر شوند؛ راه‌حل‌هایی مثل ReLU و residual connections."
+ },
+ {
+  "en": "What is the universal approximation theorem?",
+  "q": "قضیه‌ی universal approximation چیست؟",
+  "qa": "**UAT** توان شگفت‌انگیز انواع خاصی از شبکه‌های عصبی را اثبات می‌کند: تقریب تقریباً هر تابع پیوسته."
+ },
+ {
+  "en": "What is a Convolutional Neural Network (CNN) and when would you use it?",
+  "q": "CNN چیست و کِی استفاده می‌شود؟",
+  "qa": "**CNN** مدل یادگیری عمیقی مخصوص وظایف داده‌ی بصری است: تشخیص تصویر یا ویدیو."
+ },
+ {
+  "en": "Explain Recurrent Neural Networks (RNNs) and their use cases.",
+  "q": "RNN ها و کاربردهایشان را توضیح دهید.",
+  "qa": "**RNNها** کلاسی از مدل‌های یادگیری عمیق مخصوص **داده‌ی ترتیبی** هستند؛ این توانایی را با حلقه‌های داخلی می‌گیرند."
+ },
+ {
+  "en": "How does a Transformer architecture function and in what context is it typically used?",
+  "q": "معماری Transformer چطور کار می‌کند و معمولاً در چه بستری استفاده می‌شود؟",
+  "qa": "**معماری Transformer** نوعی شبکه‌ی عصبی است که در وظایف **NLP** اثر بزرگی گذاشته — به‌خاطر…"
+ },
+ {
+  "en": "What is Natural Language Processing (NLP) and why is it important?",
+  "q": "NLP چیست و چرا مهم است؟",
+  "qa": "**NLP** تعامل بین کامپیوترها و زبان‌های انسانی را پوشش می‌دهد؛ فهم، تفسیر و تولید زبان طبیعی توسط ماشین."
+ },
+ {
+  "en": "Discuss the role of Support Vector Machines (SVM) in text classification.",
+  "q": "نقش SVM ها در طبقه‌بندی متن را بررسی کنید.",
+  "qa": "**طبقه‌بندی متن** وظیفه‌ی رایج **NLP** است و **SVMها** در این حوزه نقش کلیدی دارند."
+ },
+ {
+  "en": "What are Large Language Models (LLMs) and how do they work?",
+  "q": "LLM ها چیستند و چطور کار می‌کنند؟",
+  "qa": "**LLMها** معماری‌های بنیادی شبکه‌ی عصبی‌اند — عمدتاً بر پایه‌ی **Transformer** — بهینه‌شده برای تولید متن."
+ },
+ {
+  "en": "Describe the architecture of a transformer model that is commonly used in LLMs.",
+  "q": "معماری مدل transformer که در LLMها رایج است را توضیح دهید.",
+  "qa": "**معماری Transformer** از ساختار اولیه‌ی encoder-decoder (Vaswani و همکاران ۲۰۱۷) به پیکربندی **Causal Decoder-only** تکامل یافته است."
+ },
+ {
+  "en": "What are the main differences between LLMs and traditional statistical language models?",
+  "q": "تفاوت‌های اصلی LLM ها با مدل‌های زبانی آماری سنتی چیست؟",
+  "qa": "- **LLMها**: عمدتاً **Causal Decoder-only Transformer** با **Self-Attention** — مثل **GQA** یا **MLA** — استفاده می‌کنند."
+ },
+ {
+  "en": "Can you explain the concept of attention mechanisms in transformer models?",
+  "q": "مفهوم مکانیزم attention در مدل‌های transformer را توضیح می‌دهید؟",
+  "qa": "**مکانیزم Attention** پایه‌ی معماری Transformer است؛ recurrence ترتیبی O(n) مدل‌های RNN/LSTM را با پردازش موازی جایگزین می‌کند."
+ },
+ {
+  "en": "What are positional encodings in the context of LLMs?",
+  "q": "positional encoding ها در بستر LLM ها چیستند؟",
+  "qa": "**positional encoding**ها تزریق برداری هستند در **Causal Decoder-only** (مثل GPT-4 و Llama 3.x) و **Encoder-only** (مثل BERT)…"
+ },
+ {
+  "en": "Discuss the significance of pre-training and fine-tuning in the context of LLMs.",
+  "q": "اهمیت pre-training و fine-tuning در بستر LLM ها را بررسی کنید.",
+  "qa": "**Pre-training** فاز بنیادی است که مدل بازنمایی‌های عمومی را از datasetهای عظیم می‌آموزد؛ در ۲۰۲۶ معمولاً بیش از ۱…"
+ },
+ {
+  "en": "How do LLMs handle context and long-term dependencies in text?",
+  "q": "LLM ها context و وابستگی‌های بلندمدت در متن را چطور هندل می‌کنند؟",
+  "qa": "مکانیزم بنیادی هندل context در LLMها **Scaled Dot-Product Attention** است: جمع وزنی valueها (V) بر اساس…"
+ },
+ {
+  "en": "What is the role of transformers in achieving parallelization in LLMs?",
+  "q": "نقش transformer ها در موازی‌سازی LLM ها چیست؟",
+  "qa": "عملیات این‌طور تعریف می‌شود: Attention(Q, K, V) = softmax(QK^T/√d_k)·V — موازی‌سازی کامل پردازش توکن‌ها."
+ },
+ {
+  "en": "What are some prominent applications of LLMs today?",
+  "q": "کاربردهای برجسته‌ی LLM ها امروز کدام‌اند؟",
+  "qa": "فهرست کاربردهای برجسته‌ی LLMها در حوزه‌های مختلف امروز…"
+ },
+ {
+  "en": "How is _GPT-4_ different from its predecessors like _GPT-3_ in terms of capabilities and applications?",
+  "q": "GPT-4 از پیشینیانش مثل GPT-3 از نظر قابلیت و معماری چه تفاوتی دارد؟",
+  "qa": "- **GPT-3**: منتشرشده در ۲۰۲۰ با **Transformer متراکم** و ۱۷۵ میلیارد پارامتر؛ محدود به ۲۰۴۸ توکن. - **GPT-4**: معماری **MoE پراکنده**…"
+ },
+ {
+  "en": "Can you mention any domain-specific adaptations of LLMs?",
+  "q": "چند تطبیق دامنه‌محور LLM ها را نام ببرید.",
+  "qa": "- **استدلال بالینی**: مدل‌هایی مثل **Med-Gemini** و **Med-PaLM 2** روی داده‌های بالینی fine-tune شده‌اند تا عملکرد سطح متخصص در طب داشته باشند."
+ },
+ {
+  "en": "How do LLMs contribute to the field of sentiment analysis?",
+  "q": "LLM ها در حوزه‌ی تحلیل احساسات چه کمکی می‌کنند؟",
+  "qa": "**LLMها** تحلیل احساسات را از تطبیق الگوی ایستا به **استدلال معنایی چندبعدی** برده‌اند؛ مدل‌های مدرن…"
+ },
+ {
+  "en": "Describe how LLMs can be used in the generation of synthetic text.",
+  "q": "استفاده‌ی LLM ها در تولید متن مصنوعی را توضیح دهید.",
+  "qa": "مدل‌های مدرن **LLM** معماری **Autoregressive Causal Decoder** دارند (مثل GPT-4 و Llama-3.1 و Mistral) و متن مصنوعی تولید می‌کنند."
+ },
+ {
+  "en": "In what ways can LLMs be utilized for language translation?",
+  "q": "LLM ها برای ترجمه‌ی زبان به چه شکل‌هایی استفاده می‌شوند؟",
+  "qa": "با zero-shot prompt: «متن را به زبان هدف ترجمه کن» — پیچیدگی استنتاج O(n) به‌ازای هر توکن با KV-caching."
+ },
+ {
+  "en": "Discuss the application of LLMs in conversation AI and chatbots.",
+  "q": "کاربرد LLM ها در هوش مصنوعی مکالمه‌ای و chatbot ها را بررسی کنید.",
+  "qa": "**LLMها** — مخصوصاً معماری‌های **Causal Decoder-only** — چت‌بات‌ها را از سیستم‌های سختِ قاعده‌محور به مکالمه‌ی روان برده‌اند."
+ }
+]
