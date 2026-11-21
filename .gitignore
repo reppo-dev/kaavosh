@@ -20,6 +20,8 @@
 
 # misc
 .DS_Store
+Thumbs.db
+desktop.ini
 *.pem
 
 # debug
@@ -28,6 +30,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 dev-debug.log
+*.log
 
 # env files (can opt-in for committing if needed)
 .env*
