@@ -61,7 +61,7 @@ const byDifficulty = (qs: InterviewQuestion[]) =>
 
 /** Persian overrides for bank questions: fa-bank/<slug>.json = [{en, q, qa}] */
 const normKey = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-type FaEntry = { en: string; q: string; qa?: string };
+type FaEntry = { en: string; q: string; qa?: string; am?: string };
 
 function loadFaBank(slug: string): Record<string, FaEntry> {
   const map: Record<string, FaEntry> = {};
@@ -85,6 +85,7 @@ function applyFa(slug: string, qs: InterviewQuestion[]): InterviewQuestion[] {
       ...q,
       question: { fa: o.q, en: q.question.en },
       quickAnswer: o.qa ? { fa: o.qa, en: q.quickAnswer.en } : q.quickAnswer,
+      answerMdFa: o.am || undefined,
       hasFa: true,
     };
   });

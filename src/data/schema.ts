@@ -186,6 +186,8 @@ export interface InterviewQuestion {
   source?: string;
   /** Imported questions: full original answer (English markdown, sanitized). */
   answerMd?: string;
+  /** Persian translation of the full answer body (bank questions; set by applyFa). */
+  answerMdFa?: string;
   /** Imported code-output questions: the snippet the question refers to. */
   questionCode?: string;
   /** Imported questions are English originals — shown with an EN badge. */

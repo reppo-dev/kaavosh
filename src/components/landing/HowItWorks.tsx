@@ -52,16 +52,16 @@ export function HowItWorks() {
                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, ease: [0.21, 0.65, 0.35, 1] }}
-                  className={`relative flex items-start gap-6 md:w-1/2 ${
+                  className={`relative flex items-start gap-6 md:w-1/2 ps-16 ${
                     leftSide
-                      ? "md:pe-14 md:justify-self-end md:text-end"
+                      ? "md:ps-0 md:pe-14 md:justify-self-end md:text-end"
                       : "md:ps-14 md:justify-self-start"
-                  } ps-16 md:ps-0 ${!leftSide && "md:ps-14"}`}
+                  }`}
                 >
                   {/* node */}
                   <span
-                    className={`absolute start-0 top-0 flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br ${s.accent} text-white shadow-[0_0_36px_-8px_rgba(99,102,241,0.55)] md:start-auto ${
-                      leftSide ? "md:-end-7" : "md:-start-7"
+                    className={`absolute top-0 flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br ${s.accent} text-white shadow-[0_0_36px_-8px_rgba(99,102,241,0.55)] start-0 ${
+                      leftSide ? "md:start-auto md:-end-7" : "md:-start-7"
                     }`}
                   >
                     <Icon className="size-6" />

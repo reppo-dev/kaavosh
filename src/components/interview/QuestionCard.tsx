@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, GitBranch, Quote, ListOrdered, Lightbulb, BookMarked, Telescope, CheckCircle2, ExternalLink } from "lucide-react";
+import { ChevronDown, GitBranch, Quote, ListOrdered, BookMarked, Telescope, CheckCircle2, ExternalLink } from "lucide-react";
 import { Explainer } from "@/components/explainers/registry";
 import { ExplainerFrame } from "@/components/ui/ExplainerFrame";
 import { CodeBlock } from "@/components/ui/CodeBlock";
@@ -288,18 +288,24 @@ export function QuestionCard({
                   {q.questionCode}
                 </pre>
               )}
-              {q.answerMd && (
-                <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                  <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/45">
-                    <ListOrdered className="size-3.5" />
-                    {locale === "fa" ? "پاسخ کامل" : "Full answer"}
-                    <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[10px] text-white/50">EN</span>
-                  </p>
-                  <div className="mt-2.5" dir="ltr">
-                    <Md md={q.answerMd} />
+              {q.answerMd && (() => {
+                const faBody = locale === "fa" && q.answerMdFa;
+                const body = faBody ? q.answerMdFa! : q.answerMd!;
+                return (
+                  <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                    <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/45">
+                      <ListOrdered className="size-3.5" />
+                      {locale === "fa" ? "پاسخ کامل" : "Full answer"}
+                      <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[10px] text-white/50">
+                        {faBody ? "FA" : "EN"}
+                      </span>
+                    </p>
+                    <div className="mt-2.5" dir={faBody ? "rtl" : "ltr"}>
+                      <Md md={body} />
+                    </div>
                   </div>
-                </div>
-              )}
+                );
+              })()}
 
               {/* step-by-step (with deep-dive markers) */}
               <div>

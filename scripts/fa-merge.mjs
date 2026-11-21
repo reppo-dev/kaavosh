@@ -28,19 +28,20 @@ let updated = 0;
 for (const b of batches) {
   const arr = JSON.parse(readFileSync(b, "utf8"));
   for (const e of arr) {
-    if (!e.en || (!e.q && !e.qa)) {
-      console.error(`SKIP bad entry (missing en/q/qa): ${JSON.stringify(e).slice(0, 120)}`);
+    if (!e.en || (!e.q && !e.qa && !e.am)) {
+      console.error(`SKIP bad entry (missing en/q/qa/am): ${JSON.stringify(e).slice(0, 120)}`);
       continue;
     }
     const k = normKey(e.en);
     if (map.has(k)) {
       const old = map.get(k);
-      // merge: keep existing fields, fill in missing ones, overwrite q/qa when provided
+      // merge: keep existing fields, fill in missing ones, overwrite q/qa/am when provided
       map.set(k, {
         ...old,
         ...e,
         q: e.q || old.q,
         qa: e.qa || old.qa,
+        am: e.am || old.am,
       });
       updated++;
     } else if (!e.q) {

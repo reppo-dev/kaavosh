@@ -1,12 +1,14 @@
-# کاوش / Kaavosh 🧭
+# Kaavosh 🧭
 
-> **مسیرهای یادگیری برنامه‌نویسی، از صفر تا استخدام — دوزبانه (فارسی/انگلیسی)، با انیمیشن‌های اسکرول و توضیح تصویریِ کدنویسی‌شده**
+**English** · [فارسی (Persian)](README.fa.md)
+
+> **Programming learning paths, from zero to hired — bilingual (FA/EN), with scroll animations and code-drawn visual explainers.**
 >
-> Programming learning paths, from zero to hired — bilingual (FA/EN), with scroll animations and code-drawn visual explainers.
+> مسیرهای یادگیری برنامه‌نویسی، از صفر تا استخدام — دوزبانه (فارسی/انگلیسی)، با انیمیشن‌های اسکرول و توضیح تصویریِ کدنویسی‌شده.
 
 ---
 
-## ⚡ شروع سریع (Quick Start)
+## ⚡ Quick Start
 
 ```bash
 cd kaavosh
@@ -14,138 +16,173 @@ npm install
 npm run dev
 ```
 
-سپس در مرورگر باز کنید: **http://localhost:3000** → به‌صورت خودکار به `/fa` ریدایرکت می‌شود.
+Open **http://localhost:3000** — it redirects to `/fa` (the Persian locale) automatically.
 
-| اسکریپت | کار |
+| Script | Purpose |
 | --- | --- |
-| `npm run dev` | سرور توسعه (Turbopack) |
-| `npm run build` | بیلد پروداکشن |
-| `npm run start` | اجرای نسخه بیلدشده |
-| `npm run lint` | بررسی ESLint |
+| `npm run dev` | Dev server (Turbopack) |
+| `npm run build` | Production build |
+| `npm run start` | Serve the built app |
+| `npm run lint` | ESLint |
+
+No external services, database or API — the whole site is static, built from local data files.
 
 ---
 
-## 🧱 تکنولوژی‌ها
+## 📦 Content at a Glance
 
-| ابزار | نقش |
-| --- | --- |
-| **Next.js 16** (App Router, `cacheComponents`) | فریم‌ورک |
-| **TypeScript** | تایپ‌سیفتی کامل |
-| **Tailwind CSS 4** | استایل (توکن‌های طراحی در `globals.css`) |
-| **motion (Framer Motion)** | انیمیشن‌های اسکرول، whileInView، useScroll |
-| **next-intl** | دوزبانه fa/en با مسیر `/fa` و `/en` و RTL خودکار |
-| **Vazirmatn + Inter** | فونت فارسی و انگلیسی (next/font) |
-| **lucide-react** | آیکون‌ها |
-
-بدون هیچ سرویس بیرونی، دیتابیس یا API — کل سایت استاتیک از فایل‌های دیتا بیلد می‌شود.
+| Section | Count | Notes |
+| --- | --- | --- |
+| Learning paths | **6 paths** | Frontend, Backend, DevOps & Cloud, AI/ML, Cybersecurity, Mobile |
+| Interview questions | **11 fields × 1,724 Q&A** | Imported from popular open-source interview repos; Persian question text 100% complete |
+| Persian full answers | **984 of 1,724** | 8 fields complete; `algorithms` and `react` in progress — untranslated bodies fall back to English with an EN badge |
+| Glossary | **383 terms in 11 categories** | Searchable, category-filtered |
+| Concept animations | **34 explainers** | All drawn in-browser with SVG + CSS + motion |
 
 ---
 
-## 🗂 معماری پوشه‌ها
+## 🧱 Tech Stack
+
+| Tool | Role |
+| --- | --- |
+| **Next.js 16** (App Router, `cacheComponents`) | Framework |
+| **TypeScript** | Full type safety |
+| **Tailwind CSS 4** | Styling (design tokens in `globals.css`) |
+| **motion (Framer Motion)** | Scroll animations, whileInView, useScroll |
+| **next-intl** | fa/en bilingual routing with automatic RTL |
+| **Vazirmatn + Inter** | Persian and English fonts (next/font) |
+| **lucide-react** | Icons |
+
+---
+
+## 🗂 Project Structure
 
 ```text
 src/
 ├── app/
-│   ├── [locale]/                    ← همه صفحات زیر این مسیر (fa/en)
-│   │   ├── layout.tsx               ← RTL/LTR، فونت‌ها، هدر/فوتر، ScrollProgress
-│   │   ├── page.tsx                 ← صفحه لندینگ (اسکرول انیمیشن هر بخش)
-│   │   ├── paths/page.tsx           ← گرید همه مسیرهای یادگیری
-│   │   ├── paths/[slug]/page.tsx    ← نقشه راه یک مسیر (خط کشیده‌شونده با اسکرول)
-│   │   ├── interview/page.tsx       ← هاب سوال‌های مصاحبه
-│   │   ├── interview/[field]/page.tsx ← سوال‌های یک حوزه (آکاردئون + فیلتر سطح)
-│   │   ├── glossary/page.tsx        ← واژه‌نامه (جست‌وجو + فیلتر دسته)
-│   │   └── not-found.tsx            ← ۴۰۴
-│   └── globals.css                  ← سیستم طراحی (توکن‌ها، glass، marquee، …)
-├── data/                            ← ⭐ همه محتوا اینجاست (فقط همین‌ها را ویرایش کنید)
-│   ├── schema.ts                    ← تایپ‌های مرجع — قرارداد همه فایل‌های دیتا
-│   ├── site.ts                      ← نام و معرفی سایت (هدر/فوتر/متا)
-│   ├── faq.ts                       ← سوال‌های پرتکرار لندینگ
-│   ├── explainers.ts                ← متادیتای ۱۲ انیمیشن مفهومی
-│   ├── paths/                       ← ۶ مسیر یادگیری + index.ts
-│   ├── interview/                   ← ۹ حوزه مصاحبه + index.ts
-│   ├── interview-bank/              ← بانک ۷۲۳ سوال وارداتی از ریپوها (JSON، تولیدشده با scripts/build-interview-bank.mjs)
-│   └── glossary/                    ← ۴۲ واژه + دسته‌ها + index.ts
+│   ├── [locale]/                    ← all pages live under this route (fa/en)
+│   │   ├── layout.tsx               ← RTL/LTR, fonts, header/footer, ScrollProgress
+│   │   ├── page.tsx                 ← landing page (scroll-animated sections)
+│   │   ├── paths/page.tsx           ← grid of all learning paths
+│   │   ├── paths/[slug]/page.tsx    ← one path's roadmap (scroll-drawn line)
+│   │   ├── interview/page.tsx       ← interview hub
+│   │   ├── interview/[field]/page.tsx ← one field's questions (accordion + level filter)
+│   │   ├── glossary/page.tsx        ← glossary (search + category filter)
+│   │   └── not-found.tsx            ← 404
+│   └── globals.css                  ← design system (tokens, glass, marquee, …)
+├── data/                            ← ⭐ all content lives here (edit only these)
+│   ├── schema.ts                    ← reference types — the contract for every data file
+│   ├── site.ts                      ← site name and intro (header/footer/meta)
+│   ├── faq.ts                       ← landing FAQ
+│   ├── explainers.ts                ← metadata for the concept animations
+│   ├── paths/                       ← 6 learning paths + index.ts
+│   ├── interview/                   ← interview fields + index.ts
+│   ├── interview-bank/              ← 1,724 imported questions (JSON) + fa-bank/ (Persian translations)
+│   └── glossary/                    ← 383 terms in 11 categories + index.ts
 ├── components/
 │   ├── layout/                      ← Header, Footer, LocaleSwitcher, LogoMark
-│   ├── landing/                     ← بخش‌های صفحه اصلی (Hero, HowItWorks, …)
-│   ├── paths/                       ← RoadmapTimeline (نقشه راه متحرک)
+│   ├── landing/                     ← landing sections (Hero, HowItWorks, …)
+│   ├── paths/                       ← RoadmapTimeline (animated roadmap)
 │   ├── interview/                   ← QuestionCard, InterviewList
 │   ├── glossary/                    ← GlossaryExplorer
-│   ├── explainers/                  ← ⭐ ۱۲ انیمیشن SVG + registry
+│   ├── explainers/                  ← ⭐ 34 SVG animations + registry
 │   ├── motion/                      ← Reveal, Stagger, TiltCard, NumberTicker, ScrollProgress
 │   ├── ui/                          ← SectionHeading, CodeBlock, Badge, ResourceChip, ExplainerFrame
-│   └── icons/registry.tsx           ← نگاشت اسم آیکون دیتا → آیکون lucide
+│   └── icons/registry.tsx           ← data icon-name → lucide icon mapping
 ├── i18n/                            ← routing, request, navigation (next-intl)
-├── lib/                             ← theme.ts (رنگ‌ها), i18n-helpers.ts (pick و اعداد فارسی)
-├── messages/                        ← fa.json / en.json (متن‌های UI)
-└── middleware.ts                    ← ریدایرکت / به /fa
+├── lib/                             ← theme.ts (colors), i18n-helpers.ts (pick, Persian numerals)
+├── messages/                        ← fa.json / en.json (UI strings)
+└── middleware.ts                    ← redirects / to /fa
 ```
 
 ---
 
-## 📊 راهنمای فایل‌های دیتا (DATA GUIDE)
+## 📊 Data File Guide
 
-**قانون طلایی:** محتوا فقط در `src/data/**` زندگی می‌کند؛ هیچ متنی داخل کامپوننت‌ها هاردکد نشده.
+**Golden rule:** content lives only in `src/data/**`; nothing is hardcoded inside components.
 
-| فایل دیتا | محتوا | کجا نمایش داده می‌شود |
+| Data file | Contents | Rendered in |
 | --- | --- | --- |
-| `data/schema.ts` | همه تایپ‌ها (`Localized`, `LearningPath`, `InterviewQuestion`, …) | مرجع همه فایل‌ها |
-| `data/site.ts` | نام، شعار، توضیح سایت | هدر، فوتر، متادیتای صفحه |
-| `data/faq.ts` | ۵ سوال پرتکرار | لندینگ → بخش FAQ |
-| `data/explainers.ts` | عنوان/توضیح هر انیمیشن | کارت انیمیشن‌ها |
-| `data/paths/*.ts` | ۶ مسیر × ۵ مرحله (topics, skills, resources, visual) | لندینگ → کارت‌های مسیر؛ `/paths`؛ `/paths/[slug]` (نقشه راه) |
-| `data/paths/index.ts` | رجیستری مسیرها + `getPathBySlug` | generateStaticParams و صفحات |
-| `data/interview/*.ts` | ۵ حوزه × ۶–۷ سوال (quickAnswer, steps, code, followUps, visual) | لندینگ (آمار)؛ `/interview`؛ `/interview/[field]` |
-| `data/interview/index.ts` | رجیستری حوزه‌ها + `getFieldBySlug` | generateStaticParams و صفحات |
-| `data/glossary/terms.ts` | ۴۲ واژه‌ی هسته + **ادغام همه‌ی فایل‌های `terms-more/`** (مجموع ۱۸۰ واژه در ۱۱ دسته) | `/glossary` + کارت‌های واژه‌ی سوال‌های مصاحبه |
-| `data/glossary/terms-more/*.ts` | واژه‌های تکمیلی هر دسته (fundamentals, frontend, backend, database, devops, security, networking, mobile, ai) | از طریق terms.ts → `/glossary` |
-| `data/glossary/categories.ts` | ۱۱ دسته واژه‌نامه | فیلتر بالای `/glossary` |
-| `messages/fa.json` + `en.json` | متن‌های UI (دکمه‌ها، عنوان بخش‌ها، …) | همه کامپوننت‌ها با `useTranslations` |
+| `data/schema.ts` | All types (`Localized`, `LearningPath`, `InterviewQuestion`, …) | Referenced by every data file |
+| `data/site.ts` | Name, tagline, site description | Header, footer, page metadata |
+| `data/faq.ts` | Landing FAQ | Landing → FAQ section |
+| `data/explainers.ts` | Title/caption per animation | Animation cards |
+| `data/paths/*.ts` | 6 paths × 5 stages (topics, skills, resources, visual) | Landing path cards; `/paths`; `/paths/[slug]` |
+| `data/interview/*.ts` | Hand-written fields (30-second answer, steps, code, followUps) | `/interview`; `/interview/[field]` |
+| `data/interview/index.ts` | 11-field registry + applies `fa-bank/` Persian overrides | generateStaticParams and pages |
+| `data/interview-bank/*.json` | 1,724-question bank (original English, with source & difficulty) | via `interview/index.ts` |
+| `data/interview-bank/fa-bank/*.json` | Persian per question: `q` (question), `qa` (30-second answer), `am` (full answer) | Applied onto question cards |
+| `data/glossary/terms.ts` | Glossary core + **merges every `terms-more/` file** (383 terms in 11 categories) | `/glossary` + inline term cards |
+| `data/glossary/categories.ts` | 11 glossary categories | Filter bar on `/glossary` |
+| `messages/fa.json` + `en.json` | UI strings (buttons, section headings, …) | Every component via `useTranslations` |
 
-### چطور محتوا اضافه کنم؟
+### How to add content
 
-1. **مسیر جدید:** فایل تازه در `data/paths/` بسازید (کپی از `frontend.ts`)، در `data/paths/index.ts` ثبتش کنید — صفحه `/paths/[slug]` خودکار ساخته می‌شود.
-2. **سوال جدید:** یک آبجکت به آرایه `questions` هر حوزه در `data/interview/*.ts` اضافه کنید — همین.
-3. **واژه جدید:** فایل دسته‌اش در `data/glossary/terms-more/` را باز کنید و اضافه کنید (یا اگر واژه‌ی هسته است، به terms.ts)؛ شمارنده‌ها خودکار به‌روز می‌شوند.
-4. **انیمیشن جدید:** یک `VisualKind` به `schema.ts` اضافه کنید، کامپوننت SVG بسازید، در `explainers/registry.tsx` رجیسترش کنید و متادیتای آن را در `explainers.ts` بنویسید.
+1. **New path:** create a file in `data/paths/` (copy `frontend.ts`), register it in `data/paths/index.ts` — the `/paths/[slug]` page is generated automatically.
+2. **New question:** add an object to a field's `questions` array in `data/interview/*.ts` — that's it.
+3. **New term:** open the term's category file in `data/glossary/terms-more/` and add it; counters update automatically.
+4. **New animation:** add a `VisualKind` to `schema.ts`, build the SVG component, register it in `explainers/registry.tsx`, and write its metadata in `explainers.ts`.
 
-> ⚠️ هر رشته‌ی قابل‌مشاهده باید `{ fa: "...", en: "..." }` باشد و در فارسی نیم‌فاصله (‌) رعایت شود.
-
----
-
-## 🎬 درباره انیمیشن‌های مفهومی
-
-به‌جای ویدیو یا عکس دانلودی، هر مفهوم سخت با **SVG + CSS + motion** همان‌جا در مرورگر کشیده می‌شود:
-
-- بدون دانلود، بدون مصرف اینترنت، همیشه شارپ، بی‌نهایت بار قابل‌پخش.
-- لیست کامل: سفر درخواست HTTP، حلقه رویداد، رندر ری‌اکت، DOM→پیکسل، گیت، کانتینر در برابر VM، توکن احراز هویت، JOIN، رمزنگاری، آموزش مدل ML، خط لوله CI/CD، چرخه حیات موبایل.
-- همه در `src/components/explainers/` — با رجیستری `VisualKind → کامپوننت`.
-
-همچنین همه انیمیشن‌ها به `prefers-reduced-motion` احترام می‌گذارند.
+> ⚠️ Every user-visible string must be `{ fa: "...", en: "..." }`, and Persian text must use proper half-spaces (ZWNJ).
 
 ---
 
-## ✍️ استایل محتوایی (قرارداد آموزشی)
+## 🌐 Bilingual & RTL
 
-مطابق سبک دانشنامه‌ی شما، همه محتواها همین زنجیره را دنبال می‌کنند:
-
-1. **تعریف ساده** — اول مفهوم با کلمات روزمره
-2. **تمثیل** — قیاس با زندگی واقعی (صف نانوایی، فهرست کتاب، جعبه‌ها…)
-3. **اصطلاح تخصصی** — بعد از فهمیدن، اسم رسمی‌اش
-
-در سوال‌های مصاحبه: اول **پاسخ ۳۰ ثانیه‌ای**، بعد **شکستن همان پاسخ به قدم‌های کوچک**، بعد **سوال‌های بعدی مصاحبه‌گر** و در آخر **کد نمونه**.
+- Routes: `/fa/...` and `/en/...` — the root redirects to `/fa`.
+- Fonts: Persian → Vazirmatn, English → Inter (automatic via `dir`).
+- All spacing uses Tailwind logical utilities (`ps/pe/ms/me/start/end`), so RTL just works.
+- Numbers are localized to Persian digits with `toLocaleNumber()`.
+- **Full answers:** when a Persian translation (`am`) exists it renders RTL with an **FA** badge; otherwise the English original renders LTR with an **EN** badge.
 
 ---
 
-## 🌐 دوزبانه و RTL
+## 🔄 Persian Translation Pipeline (fa pipeline)
 
-- مسیرها: `/fa/...` و `/en/...` — ریشه به `/fa` ریدایرکت می‌شود.
-- فونت: فارسی → Vazirmatn، انگلیسی → Inter (خودکار با `dir`).
-- تمام فاصله‌ها با utility های منطقی Tailwind (`ps/pe/ms/me/start/end`) هستند، پس RTL خودکار درست است.
-- اعداد در فارسی با `toLocaleNumber()` فارسی می‌شوند.
+The question bank comes from English repos; Persian translations are added stage by stage with these scripts:
+
+```bash
+# 1) dump a field's full answers that have no Persian translation yet
+node scripts/fa-dump-body.mjs <slug>
+
+# 2) split the dump into ~12k-character translation chunks
+node scripts/fa-chunk.mjs <slug>
+
+# 3) after translating each chunk, merge it into the canonical fa-bank/<slug>.json
+node scripts/fa-merge.mjs <slug> scripts/_fa-todo/<batch>.json [...]
+```
+
+- Working files in `scripts/_fa-todo/` are transient and git-ignored; the only final output is `fa-bank/*.json`.
+- `fa-bank/<slug>.json` is an array of `{ en, q?, qa?, am? }`: `en` is the unique key (the question's English title), `q` the Persian question, `qa` the 30-second answer, `am` the full markdown answer.
+- Rebuild the bank from the source repos: `node scripts/build-interview-bank.mjs`
+
+**Current status:** Persian question text is complete for all 1,724 questions; Persian full answers cover 984 (8 fields complete; `algorithms` and `react` in progress).
 
 ---
 
-## 📄 مجوز محتوا
+## 🎬 About the Concept Animations
 
-تمام متن‌ها اورجینال نوشته شده‌اند. لینک‌ها فقط به منابع معتبر (MDN، مستندات رسمی، roadmap.sh، freeCodeCamp، The Odin Project، OWASP و…) اشاره می‌کنند.
+Instead of downloaded videos or images, every hard concept is drawn **in-browser with SVG + CSS + motion**:
+
+- No downloads, no network cost, always sharp, replayable forever.
+- Examples: the journey of an HTTP request, the JavaScript event loop, React render & reconciliation, DOM→pixel, Git, containers vs VMs, JWT auth, JOIN, encryption, ML training, CI/CD pipeline, mobile lifecycle, sorting, stack/queue, hash table, linked list, graph traversal, memoization, Trie, and more — 34 in total.
+- All live in `src/components/explainers/` — with a `VisualKind → component` registry.
+- Every animation respects `prefers-reduced-motion`.
+
+---
+
+## ✍️ Content Style (Teaching Convention)
+
+All content follows the same chain:
+
+1. **Plain definition** — the concept in everyday words first
+2. **Analogy** — a real-life comparison (a bakery queue, a book index, boxes…)
+3. **The technical term** — its official name, once it makes sense
+
+For interview questions: the **30-second answer** first, then the same answer **broken into small steps**, then **likely follow-up questions**, and finally a **sample code snippet**.
+
+---
+
+## 📄 Content License
+
+All texts are original. Links point only to reputable sources (MDN, official docs, roadmap.sh, freeCodeCamp, The Odin Project, OWASP, …).
