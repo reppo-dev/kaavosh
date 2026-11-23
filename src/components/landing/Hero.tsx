@@ -68,27 +68,27 @@ export function Hero() {
   const words = [t("titleLine1"), t("titleLine2"), t("titleLine3")];
 
   return (
-    <section className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 pt-28 pb-16">
+    <section className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-12 sm:px-6 sm:pt-28 sm:pb-16">
       {/* backdrop */}
       <div aria-hidden className="grid-bg absolute inset-0" />
-      <motion.div aria-hidden style={{ y: orbY1 }} className="absolute -top-24 start-[8%] size-80 rounded-full bg-indigo-600/20 blur-[110px]" />
-      <motion.div aria-hidden style={{ y: orbY2 }} className="absolute top-1/3 end-[6%] size-96 rounded-full bg-cyan-500/15 blur-[130px]" />
-      <motion.div aria-hidden style={{ y: orbY1 }} className="absolute bottom-0 start-1/3 size-72 rounded-full bg-fuchsia-600/10 blur-[120px]" />
+      <motion.div aria-hidden style={{ y: orbY1 }} className="absolute -top-24 start-[8%] size-64 rounded-full bg-indigo-600/20 blur-[110px] sm:size-80" />
+      <motion.div aria-hidden style={{ y: orbY2 }} className="absolute top-1/3 end-[6%] size-72 rounded-full bg-cyan-500/15 blur-[130px] sm:size-96" />
+      <motion.div aria-hidden style={{ y: orbY1 }} className="absolute bottom-0 start-1/3 size-56 rounded-full bg-fuchsia-600/10 blur-[120px] sm:size-72" />
 
-      <motion.div style={{ opacity: fade }} className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-8 text-center">
+      <motion.div style={{ opacity: fade }} className="relative z-10 flex w-full max-w-6xl min-w-0 flex-col items-center gap-6 text-center sm:gap-8">
         {/* badge */}
         <motion.span
           initial={{ opacity: 0, y: -14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] px-4 py-1.5 text-xs font-medium text-white/75 ring-1 ring-white/15"
+          className="inline-flex max-w-full items-center gap-2 rounded-full bg-white/[0.06] px-3.5 py-1.5 text-xs font-medium text-white/75 ring-1 ring-white/15 sm:px-4"
         >
-          <span className="size-1.5 animate-pulse-soft rounded-full bg-emerald-400" />
-          {t("badge")}
+          <span className="size-1.5 shrink-0 animate-pulse-soft rounded-full bg-emerald-400" />
+          <span className="truncate">{t("badge")}</span>
         </motion.span>
 
         {/* headline — masked line-by-line reveal */}
-        <h1 className="text-[clamp(2.2rem,7vw,4.6rem)] font-extrabold leading-[1.15] tracking-tight">
+        <h1 className="max-w-full text-[clamp(1.85rem,7.2vw,4.6rem)] font-extrabold leading-[1.15] tracking-tight">
           {words.map((w, i) => (
             <span key={i} className="block overflow-hidden py-0.5">
               <motion.span
@@ -117,18 +117,18 @@ export function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.75 }}
-          className="flex flex-wrap items-center justify-center gap-3"
+          className="flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
         >
           <Link
             href="/paths"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 px-6 py-3 text-sm font-bold text-white shadow-[0_0_40px_-8px_rgba(99,102,241,0.6)] transition hover:shadow-[0_0_54px_-6px_rgba(99,102,241,0.8)]"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 px-6 py-3 text-sm font-bold text-white shadow-[0_0_40px_-8px_rgba(99,102,241,0.6)] transition hover:shadow-[0_0_54px_-6px_rgba(99,102,241,0.8)] sm:w-auto"
           >
             {t("ctaPaths")}
             <Arrow className="size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
           </Link>
           <Link
             href="/interview"
-            className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] px-6 py-3 text-sm font-bold text-white/85 ring-1 ring-white/15 backdrop-blur transition hover:bg-white/10"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/[0.06] px-6 py-3 text-sm font-bold text-white/85 ring-1 ring-white/15 backdrop-blur transition hover:bg-white/10 sm:w-auto"
           >
             {t("ctaInterview")}
           </Link>
@@ -139,25 +139,25 @@ export function Hero() {
           initial={{ opacity: 0, y: 30, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full max-w-2xl"
+          className="w-full min-w-0 max-w-2xl"
         >
-          <div className="rounded-2xl border border-white/10 bg-[#0a0c14]/90 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] backdrop-blur">
-            <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-2.5">
-              <div className="flex gap-1.5">
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0c14]/90 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] backdrop-blur">
+            <div className="flex items-center justify-between gap-2 border-b border-white/[0.06] px-3.5 py-2.5 sm:px-4">
+              <div className="flex shrink-0 gap-1.5">
                 <span className="size-2.5 rounded-full bg-[#fb7185]/80" />
                 <span className="size-2.5 rounded-full bg-[#fbbf24]/80" />
                 <span className="size-2.5 rounded-full bg-[#34d399]/80" />
               </div>
-              <span className="font-mono text-[10px] text-white/35">{t("terminal.caption")}</span>
-              <LogoMark className="size-4 opacity-70" />
+              <span className="min-w-0 truncate font-mono text-[10px] text-white/35">{t("terminal.caption")}</span>
+              <LogoMark className="size-4 shrink-0 opacity-70" />
             </div>
-            <div dir="ltr" className="space-y-1.5 px-5 py-4 text-left font-mono text-[13px] leading-relaxed">
-              <p className="text-[#a5b4fc]">
+            <div dir="ltr" className="space-y-1.5 overflow-x-auto px-4 py-3.5 text-left font-mono text-[11px] leading-relaxed sm:px-5 sm:py-4 sm:text-[13px]">
+              <p className="break-words text-[#a5b4fc]">
                 {typed}
                 {step === 0 && <span className="animate-pulse-soft text-white">▌</span>}
               </p>
               {lines.slice(1).map((l, i) => (
-                <p key={i} className={l.cls} style={{ opacity: step >= i + 1 ? 1 : 0, transition: "opacity .3s" }}>
+                <p key={i} className={`break-words ${l.cls}`} style={{ opacity: step >= i + 1 ? 1 : 0, transition: "opacity .3s" }}>
                   {l.text}
                 </p>
               ))}
@@ -166,10 +166,10 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* scroll hint */}
+      {/* scroll hint — placed in flow on small screens to avoid overlapping the terminal */}
       <motion.div
         style={{ opacity: fade }}
-        className="absolute bottom-6 z-10 flex flex-col items-center gap-1.5 text-white/40"
+        className="relative z-10 mt-8 flex flex-col items-center gap-1.5 text-white/40 sm:mt-10"
       >
         <span className="text-[11px]">{t("scrollHint")}</span>
         <motion.div animate={{ y: [0, 7, 0] }} transition={{ duration: 1.8, repeat: Infinity }}>

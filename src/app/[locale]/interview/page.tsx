@@ -26,33 +26,33 @@ export default async function InterviewHubPage({
   const Arrow = locale === "fa" ? ArrowLeft : ArrowRight;
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-clip">
       <div aria-hidden className="grid-bg absolute inset-x-0 top-0 h-96" />
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-violet-600/10 to-transparent"
       />
-      <section className="relative mx-auto max-w-6xl px-4 pb-24 pt-32 sm:px-6">
+      <section className="relative mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 sm:pb-24 sm:pt-32">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
         <p className="mt-6 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/30">
-            <MessagesSquare className="size-3.5" />
-            {t("updated")}
+          <span className="inline-flex max-w-full items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/30">
+            <MessagesSquare className="size-3.5 shrink-0" />
+            <span className="truncate">{t("updated")}</span>
           </span>
         </p>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
           {interviewFields.map((f) => {
             const a = accents[f.accent];
             const Icon = iconRegistry[f.icon];
             return (
-              <Stagger key={f.slug}>
-                <StaggerItem>
+              <Stagger key={f.slug} className="h-full min-w-0">
+                <StaggerItem className="h-full min-w-0">
                   <TiltCard glowColor={a.hex} className="h-full">
                     <Link
                       href={`/interview/${f.slug}`}
-                      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/25"
+                      className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25 sm:p-6"
                     >
                       <div className={`mb-5 flex size-12 items-center justify-center rounded-xl ${a.bgSoft} ring-1 ${a.border}`}>
                         <Icon className={`size-6 ${a.text}`} />
@@ -84,16 +84,16 @@ export default async function InterviewHubPage({
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {interviewSources.map((s) => (
-              <Stagger key={s.repo}>
-                <StaggerItem>
+              <Stagger key={s.repo} className="h-full min-w-0">
+                <StaggerItem className="h-full min-w-0">
                   <a
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25"
+                    className="group flex h-full min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-sm font-bold leading-snug text-white/90">
+                      <h3 className="min-w-0 flex-1 break-words text-sm font-bold leading-snug text-white/90">
                         {pick(s.title, locale)}
                       </h3>
                       <ExternalLink className="mt-0.5 size-4 shrink-0 text-white/30 transition-colors group-hover:text-white/70" />
@@ -110,7 +110,7 @@ export default async function InterviewHubPage({
                         {t("sourcesUpdated")}: {s.pushed}
                       </span>
                     </div>
-                    <span dir="ltr" className="mt-3 truncate text-[11px] text-white/30">
+                    <span dir="ltr" className="mt-3 block max-w-full truncate text-[11px] text-white/30">
                       {s.repo}
                     </span>
                   </a>

@@ -15,7 +15,7 @@ export function CtaSection() {
   const Arrow = locale === "fa" ? ArrowLeft : ArrowRight;
 
   return (
-    <section className="relative px-4 py-24 sm:px-6 sm:py-32">
+    <section className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -33,17 +33,17 @@ export function CtaSection() {
         />
         <div aria-hidden className="grid-bg absolute inset-0" />
 
-        <div className="relative flex flex-col items-center gap-5 px-6 py-16 text-center sm:py-20">
+        <div className="relative flex flex-col items-center gap-4 px-5 py-12 text-center sm:gap-5 sm:px-6 sm:py-20">
           <span className="flex size-12 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
             <Sparkles className="size-6 text-cyan-300" />
           </span>
-          <h2 className="max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <h2 className="max-w-2xl text-2xl font-extrabold tracking-tight sm:text-4xl">
             {t("title")}
           </h2>
           <p className="max-w-xl text-sm text-white/60 sm:text-base">{t("subtitle")}</p>
           <Link
             href="/paths"
-            className="group mt-2 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-extrabold text-[#05060a] transition hover:bg-cyan-200"
+            className="group mt-2 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-[#05060a] transition hover:bg-cyan-200 sm:px-7 sm:py-3.5"
           >
             {t("button")}
             <Arrow className="size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />

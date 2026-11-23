@@ -21,18 +21,18 @@ export function InterviewTeaser() {
   const Arrow = locale === "fa" ? ArrowLeft : ArrowRight;
 
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative overflow-x-clip py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="mt-14 grid items-center gap-8 lg:grid-cols-2">
+        <div className="mt-10 grid items-center gap-6 sm:mt-14 sm:gap-8 lg:grid-cols-2">
           {/* mock question card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6"
+            className="min-w-0 rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6"
           >
             <div className="flex flex-wrap items-center gap-2">
               <DifficultyBadge difficulty="mid" label={d("mid")} />
@@ -88,8 +88,8 @@ export function InterviewTeaser() {
                 ].map((step, i) => (
                   <motion.li
                     key={i}
-                    initial={{ opacity: 0, x: 10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 + i * 0.18, duration: 0.5 }}
                     className="flex items-start gap-2.5 text-sm text-white/70"
@@ -97,7 +97,7 @@ export function InterviewTeaser() {
                     <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-white/10 font-mono text-[10px] text-white/60">
                       {locale === "fa" ? ["۱", "۲", "۳", "۴"][i] : i + 1}
                     </span>
-                    {step}
+                    <span className="min-w-0 flex-1">{step}</span>
                   </motion.li>
                 ))}
               </ol>
@@ -110,7 +110,7 @@ export function InterviewTeaser() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="space-y-4"
+            className="min-w-0 space-y-4"
           >
             <CodeBlock
               language="jsx"

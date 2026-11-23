@@ -28,23 +28,23 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative overflow-x-clip py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div ref={ref} className="relative mt-16">
+        <div ref={ref} className="relative mt-12 sm:mt-16">
           {/* progress line */}
-          <div aria-hidden className="absolute top-0 bottom-0 start-[27px] w-px bg-white/10 md:start-1/2" />
+          <div aria-hidden className="absolute top-0 bottom-0 start-[21px] w-px bg-white/10 sm:start-[27px] md:start-1/2" />
           <motion.div
             aria-hidden
             style={{ scaleY: lineScale }}
-            className="absolute top-0 bottom-0 start-[27px] w-px origin-top bg-gradient-to-b from-indigo-400 via-cyan-400 to-fuchsia-400 md:start-1/2"
+            className="absolute top-0 bottom-0 start-[21px] w-px origin-top bg-gradient-to-b from-indigo-400 via-cyan-400 to-fuchsia-400 sm:start-[27px] md:start-1/2"
           />
 
-          <div className="space-y-14">
+          <div className="grid gap-10 sm:gap-14">
             {steps.map((s, i) => {
+              const firstSide = i % 2 === 0; // alternates around the center line
               const Icon = s.icon;
-              const leftSide = i % 2 === 0; // alternates around the center line
               return (
                 <motion.div
                   key={s.key}
@@ -52,26 +52,26 @@ export function HowItWorks() {
                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, ease: [0.21, 0.65, 0.35, 1] }}
-                  className={`relative flex items-start gap-6 md:w-1/2 ps-16 ${
-                    leftSide
-                      ? "md:ps-0 md:pe-14 md:justify-self-end md:text-end"
-                      : "md:ps-14 md:justify-self-start"
+                  className={`relative flex min-w-0 items-start gap-4 ps-14 sm:gap-6 sm:ps-16 md:w-1/2 ${
+                    firstSide
+                      ? "md:justify-self-start md:ps-0 md:pe-14 md:text-end"
+                      : "md:justify-self-end md:ps-14 md:text-start"
                   }`}
                 >
                   {/* node */}
                   <span
-                    className={`absolute top-0 flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br ${s.accent} text-white shadow-[0_0_36px_-8px_rgba(99,102,241,0.55)] start-0 ${
-                      leftSide ? "md:start-auto md:-end-7" : "md:-start-7"
+                    className={`absolute top-0 start-0 flex size-11 items-center justify-center rounded-xl bg-gradient-to-br ${s.accent} text-white shadow-[0_0_36px_-8px_rgba(99,102,241,0.55)] sm:size-14 sm:rounded-2xl ${
+                      firstSide ? "md:start-auto md:-end-7" : "md:-start-7"
                     }`}
                   >
-                    <Icon className="size-6" />
+                    <Icon className="size-5 sm:size-6" />
                   </span>
 
-                  <div className={`flex-1 ${leftSide ? "md:pe-12" : "md:ps-12"}`}>
+                  <div className={`min-w-0 flex-1 ${firstSide ? "md:pe-4" : "md:ps-4"}`}>
                     <span className="font-mono text-xs text-white/35">
                       0{i + 1}
                     </span>
-                    <h3 className="mt-1 text-xl font-bold">{t(`${s.key}.title`)}</h3>
+                    <h3 className="mt-1 text-lg font-bold sm:text-xl">{t(`${s.key}.title`)}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-white/55">
                       {t(`${s.key}.detail`)}
                     </p>

@@ -35,7 +35,7 @@ function Md({ md }: { md: string }) {
   let i = 0;
   let key = 0;
   const codeCls =
-    "whitespace-pre overflow-x-auto rounded-lg border border-white/10 bg-[#0a0c14] px-3 py-2 text-start font-mono text-[12px] text-[#c9cfdf]";
+    "max-w-full whitespace-pre overflow-x-auto rounded-lg border border-white/10 bg-[#0a0c14] px-3 py-2 text-start font-mono text-[12px] text-[#c9cfdf]";
   while (i < lines.length) {
     const line = lines[i];
     if (line.startsWith("```")) {
@@ -49,12 +49,12 @@ function Md({ md }: { md: string }) {
     if (line.startsWith("|")) {
       const buf: string[] = [];
       while (i < lines.length && lines[i].startsWith("|")) buf.push(lines[i++]);
-      blocks.push(<pre key={key++} className={`${codeCls} whitespace-pre-wrap`}>{buf.join("\n")}</pre>);
+      blocks.push(<pre key={key++} className={codeCls}>{buf.join("\n")}</pre>);
       continue;
     }
     if (/^#{1,6} /.test(line)) {
       blocks.push(
-        <p key={key++} className="mt-1 text-sm font-bold text-white/80">{plain(line.replace(/^#+ /, ""))}</p>,
+        <p key={key++} className="mt-1 break-words text-sm font-bold text-white/80">{plain(line.replace(/^#+ /, ""))}</p>,
       );
       i++;
       continue;
@@ -65,7 +65,7 @@ function Md({ md }: { md: string }) {
       blocks.push(
         <ul key={key++} className="ms-4 list-disc space-y-1">
           {buf.map((b, bi) => (
-            <li key={bi} className="text-[13px] leading-relaxed text-white/60">{plain(b)}</li>
+            <li key={bi} className="break-words text-[13px] leading-relaxed text-white/60">{plain(b)}</li>
           ))}
         </ul>,
       );
@@ -77,7 +77,7 @@ function Md({ md }: { md: string }) {
       blocks.push(
         <ol key={key++} className="ms-4 list-decimal space-y-1">
           {buf.map((b, bi) => (
-            <li key={bi} className="text-[13px] leading-relaxed text-white/60">{plain(b)}</li>
+            <li key={bi} className="break-words text-[13px] leading-relaxed text-white/60">{plain(b)}</li>
           ))}
         </ol>,
       );
@@ -100,10 +100,10 @@ function Md({ md }: { md: string }) {
       buf.push(lines[i++]);
     }
     blocks.push(
-      <p key={key++} className="text-[13px] leading-relaxed text-white/65">{plain(buf.join(" "))}</p>,
+      <p key={key++} className="break-words text-[13px] leading-relaxed text-white/65">{plain(buf.join(" "))}</p>,
     );
   }
-  return <div className="space-y-2.5">{blocks}</div>;
+  return <div className="min-w-0 space-y-2.5">{blocks}</div>;
 }
 
 const labels = {
@@ -230,13 +230,13 @@ export function QuestionCard({
       <button
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-start gap-4 px-5 py-5 text-start sm:px-6"
+        className="flex w-full items-start gap-3 px-4 py-4 text-start sm:gap-4 sm:px-6 sm:py-5"
       >
-        <span className={`mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-xl ${a.bgSoft} font-mono text-sm font-bold ring-1 ${a.border} ${a.text}`}>
+        <span className={`mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-xl sm:size-9 ${a.bgSoft} font-mono text-xs font-bold ring-1 sm:text-sm ${a.border} ${a.text}`}>
           {num}
         </span>
-        <span className="flex-1">
-          <span className="block text-base font-bold leading-relaxed text-white/90 sm:text-lg">
+        <span className="min-w-0 flex-1">
+          <span className="block break-words text-[15px] font-bold leading-relaxed text-white/90 sm:text-lg">
             {pick(q.question, locale)}
           </span>
           <span className="mt-2 flex flex-wrap gap-1.5">
@@ -264,7 +264,7 @@ export function QuestionCard({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
           >
-            <div className="space-y-5 px-5 pb-6 sm:px-6">
+            <div className="min-w-0 space-y-5 px-4 pb-5 sm:px-6 sm:pb-6">
               {/* 30-second answer */}
               <div className={`rounded-xl border ${a.border} ${a.bgSofter} p-4`}>
                 <p className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider ${a.text}`}>
@@ -281,7 +281,7 @@ export function QuestionCard({
 
               {/* imported full answer (English original) */}
               {q.questionCode && (
-                <pre dir="ltr" className="overflow-x-auto rounded-xl border border-white/10 bg-[#0a0c14] px-4 py-3 text-start font-mono text-[12px] leading-relaxed text-[#c9cfdf]">
+                <pre dir="ltr" className="max-w-full overflow-x-auto rounded-xl border border-white/10 bg-[#0a0c14] px-3.5 py-3 text-start font-mono text-[12px] leading-relaxed text-[#c9cfdf] sm:px-4">
                   {q.questionCode}
                 </pre>
               )}
@@ -289,15 +289,15 @@ export function QuestionCard({
                 const faBody = locale === "fa" && q.answerMdFa;
                 const body = faBody ? q.answerMdFa! : q.answerMd!;
                 return (
-                  <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                  <div className="min-w-0 rounded-xl border border-white/10 bg-white/[0.02] p-3.5 sm:p-4">
                     <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/45">
-                      <ListOrdered className="size-3.5" />
+                      <ListOrdered className="size-3.5 shrink-0" />
                       {locale === "fa" ? "پاسخ کامل" : "Full answer"}
                       <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[10px] text-white/50">
                         {faBody ? "FA" : "EN"}
                       </span>
                     </p>
-                    <div className="mt-2.5" dir={faBody ? "rtl" : "ltr"}>
+                    <div className="mt-2.5 min-w-0" dir={faBody ? "rtl" : "ltr"}>
                       <Md md={body} />
                     </div>
                   </div>
@@ -306,9 +306,9 @@ export function QuestionCard({
 
               {/* step-by-step (with deep-dive markers) */}
               {q.steps.length > 0 && (
-                <div>
+                <div className="min-w-0">
                   <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/45">
-                    <ListOrdered className="size-3.5" />
+                    <ListOrdered className="size-3.5 shrink-0" />
                     {fieldLabels.stepByStep}
                   </p>
                   <ol className="relative mt-3 space-y-4 ps-6">
@@ -316,10 +316,10 @@ export function QuestionCard({
                     {q.steps.map((step, si) => (
                       <motion.li
                         key={si}
-                        initial={{ opacity: 0, x: 14 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.12 + si * 0.08, duration: 0.45 }}
-                        className="relative"
+                        className="relative min-w-0"
                       >
                         <span className={`absolute -start-6 top-1 flex size-5 items-center justify-center rounded-full border border-white/15 bg-[#0a0c14] font-mono text-[10px] ${a.text}`}>
                           {toLocaleNumber(si + 1, locale)}
@@ -328,10 +328,10 @@ export function QuestionCard({
                           {pick(step.title, locale)}
                           {step.deepDive && <DiveMarker diveId={step.deepDive} compact />}
                         </p>
-                        <p className="mt-1 text-sm leading-relaxed text-white/60">{pick(step.detail, locale)}</p>
+                        <p className="mt-1 break-words text-sm leading-relaxed text-white/60">{pick(step.detail, locale)}</p>
                         {step.deepDive && <DiveMarker diveId={step.deepDive} />}
                         {step.code && (
-                          <pre dir="ltr" className="mt-2 overflow-x-auto rounded-lg border border-white/10 bg-[#0a0c14] px-3 py-2 text-start font-mono text-xs text-[#c9cfdf]">
+                          <pre dir="ltr" className="mt-2 max-w-full overflow-x-auto rounded-lg border border-white/10 bg-[#0a0c14] px-3 py-2 text-start font-mono text-xs text-[#c9cfdf]">
                             {step.code}
                           </pre>
                         )}
@@ -381,8 +381,8 @@ export function QuestionCard({
                               className="overflow-hidden"
                             >
                               <div className={`rounded-xl border ${a.border} bg-white/[0.04] p-4`}>
-                                <div className="flex items-baseline justify-between gap-2">
-                                  <span dir="ltr" className="text-start font-mono text-sm font-bold text-white">
+                                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                                  <span dir="ltr" className="min-w-0 break-words text-start font-mono text-sm font-bold text-white">
                                     {t.term}
                                   </span>
                                   {locale === "fa" && (

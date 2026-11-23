@@ -25,8 +25,9 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // close the mobile menu whenever the route changes
-  useEffect(() => setOpen(false), [pathname]);
+  // track which pathname the menu was opened on so navigating closes it cleanly
+  const [openPath, setOpenPath] = useState<string | null>(null);
+  const isOpen = open && openPath === pathname;
 
   const links = [
     { href: "/paths", label: t("paths") },
@@ -37,15 +38,19 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open
+        scrolled || isOpen
           ? "glass border-b border-white/[0.06] shadow-[0_8px_40px_-16px_rgba(0,0,0,0.7)]"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <LogoMark className="size-8 transition-transform duration-500 group-hover:rotate-[20deg]" />
-          <span className="text-lg font-extrabold tracking-tight">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-4 sm:px-6">
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          className="group flex min-w-0 items-center gap-2 sm:gap-2.5"
+        >
+          <LogoMark className="size-8 shrink-0 transition-transform duration-500 group-hover:rotate-[20deg]" />
+          <span className="truncate text-base font-extrabold tracking-tight sm:text-lg">
             {locale === "fa" ? (
               <>
                 کاوش<span className="mx-1.5 font-semibold text-white/40">/</span>
@@ -84,23 +89,31 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <LocaleSwitcher />
           {/* mobile burger */}
           <button
-            aria-label={open ? t("closeMenu") : t("openMenu")}
-            onClick={() => setOpen((v) => !v)}
+            aria-label={isOpen ? t("closeMenu") : t("openMenu")}
+            aria-expanded={isOpen}
+            onClick={() => {
+              if (isOpen) {
+                setOpen(false);
+              } else {
+                setOpenPath(pathname);
+                setOpen(true);
+              }
+            }}
             className="flex size-9 items-center justify-center rounded-lg text-white/80 ring-1 ring-white/15 transition hover:bg-white/10 md:hidden"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.span
-                key={open ? "x" : "bars"}
+                key={isOpen ? "x" : "bars"}
                 initial={{ rotate: -90, opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 exit={{ rotate: 90, opacity: 0 }}
                 transition={{ duration: 0.18 }}
               >
-                {open ? (
+                {isOpen ? (
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                   </svg>
@@ -117,7 +130,7 @@ export function Header() {
 
       {/* mobile menu */}
       <AnimatePresence>
-        {open && (
+        {isOpen && (
           <motion.nav
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -130,6 +143,7 @@ export function Header() {
                 <Link
                   key={l.href}
                   href={l.href}
+                  onClick={() => setOpen(false)}
                   className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/75 transition hover:bg-white/10 hover:text-white"
                 >
                   {l.label}

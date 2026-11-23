@@ -13,8 +13,8 @@ export function MarqueeStrip({ locale }: { locale: Locale }) {
 
   return (
     <div className="relative flex flex-col gap-3 overflow-hidden border-y border-white/[0.06] bg-white/[0.02] py-5" dir="ltr">
-      <div className="pointer-events-none absolute inset-y-0 start-0 z-10 w-24 bg-gradient-to-r from-[#05060a] to-transparent rtl:bg-gradient-to-l" />
-      <div className="pointer-events-none absolute inset-y-0 end-0 z-10 w-24 bg-gradient-to-l from-[#05060a] to-transparent rtl:bg-gradient-to-r" />
+      <div className="pointer-events-none absolute inset-y-0 start-0 z-10 w-10 bg-gradient-to-r from-[#05060a] to-transparent sm:w-24" />
+      <div className="pointer-events-none absolute inset-y-0 end-0 z-10 w-10 bg-gradient-to-l from-[#05060a] to-transparent sm:w-24" />
 
       <div className="flex w-max animate-marquee gap-3">
         {[...uniqA, ...uniqA].map((topic, i) => (

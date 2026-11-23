@@ -31,7 +31,7 @@ export function SectionHeading({
         </span>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className="max-w-3xl text-3xl font-extrabold leading-[1.25] tracking-tight sm:text-4xl lg:text-[2.75rem]">
+        <h2 className="max-w-3xl break-words text-2xl font-extrabold leading-[1.25] tracking-tight sm:text-4xl lg:text-[2.75rem]">
           {head}{" "}
           {last && <span className="text-gradient">{last}</span>}
         </h2>

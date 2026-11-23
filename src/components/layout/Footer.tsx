@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex items-center justify-between border-t border-white/[0.06] pt-6 text-xs text-white/35">
+        <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-white/[0.06] pt-6 text-center text-xs text-white/35 sm:mt-12 sm:flex-row sm:text-start">
           <span>
             {locale === "fa" ? `© ۲۰۲۶ ${site.name.fa} · ${site.name.en}` : `© 2026 ${site.name.en}`}
           </span>

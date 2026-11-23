@@ -46,14 +46,14 @@ export function InterviewList({
   return (
     <div>
       {/* filter pills */}
-      <div className="mb-8 flex flex-wrap items-center gap-2">
+      <div className="mb-6 flex flex-wrap items-center gap-1.5 sm:mb-8 sm:gap-2">
         {filters.map((f) => {
           const active = filter === f.id;
           return (
             <button
               key={f.id}
               onClick={() => setFilter(f.id)}
-              className={`relative rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`relative rounded-full px-3.5 py-2 text-xs font-semibold transition sm:px-4 sm:text-sm ${
                 active ? "text-white" : "text-white/55 hover:text-white"
               }`}
             >

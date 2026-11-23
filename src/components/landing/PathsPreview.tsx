@@ -21,11 +21,11 @@ export function PathsPreview() {
   const Arrow = locale === "fa" ? ArrowLeft : ArrowRight;
 
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {learningPaths.map((p, i) => {
             const a = accents[p.accent];
             const Icon = iconRegistry[p.icon];
@@ -36,11 +36,12 @@ export function PathsPreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.65, delay: (i % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="min-w-0"
               >
                 <TiltCard glowColor={a.hex} className="h-full">
                   <Link
                     href={`/paths/${p.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/25"
+                    className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25 sm:p-6"
                   >
                     <div className={`mb-5 flex size-12 items-center justify-center rounded-xl ${a.bgSoft} ring-1 ${a.border}`}>
                       <Icon className={`size-6 ${a.text}`} />

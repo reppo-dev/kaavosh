@@ -68,8 +68,8 @@ export function GlossaryExplorer({ labels }: { labels: { searchPlaceholder: stri
         />
       </div>
 
-      {/* category pills */}
-      <div className="mt-6 flex flex-wrap justify-center gap-2">
+      {/* category pills — horizontal scroll strip on mobile, centered wrap on sm+ */}
+      <div className="-mx-4 mt-6 flex flex-nowrap gap-2 overflow-x-auto px-4 pb-1 no-scrollbar sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
         {catList.map((c) => {
           const active = cat === c.id;
           const a = c.cat ? accents[c.cat.accent] : null;
@@ -78,7 +78,7 @@ export function GlossaryExplorer({ labels }: { labels: { searchPlaceholder: stri
             <button
               key={c.id}
               onClick={() => setCat(c.id)}
-              className={`relative inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
+              className={`relative inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
                 active
                   ? a
                     ? `${a.bgSoft} ${a.text} ring-1 ${a.border}`
@@ -86,7 +86,7 @@ export function GlossaryExplorer({ labels }: { labels: { searchPlaceholder: stri
                   : "text-white/50 hover:bg-white/[0.06] hover:text-white"
               }`}
             >
-              {Icon && <Icon className="size-3.5" />}
+              {Icon && <Icon className="size-3.5 shrink-0" />}
               {c.label}
             </button>
           );
@@ -112,17 +112,17 @@ export function GlossaryExplorer({ labels }: { labels: { searchPlaceholder: stri
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.94, y: -10 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25"
+                  className="group flex min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-white/25 sm:p-5"
                 >
-                  <div className="flex items-baseline justify-between gap-2">
-                    <h3 dir="ltr" className="text-start font-mono text-base font-bold text-white">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 dir="ltr" className="min-w-0 break-words text-start font-mono text-base font-bold text-white">
                       {t.term}
                     </h3>
                     {locale === "fa" && (
                       <span className={`text-sm font-bold ${a.text}`}>{t.fa}</span>
                     )}
                   </div>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-white/65">
+                  <p className="mt-3 flex-1 break-words text-sm leading-relaxed text-white/65">
                     {pick(t.definition, locale)}
                   </p>
 

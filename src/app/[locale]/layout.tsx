@@ -70,7 +70,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dirFor(locale)}
-      className={`${vazirmatn.variable} ${inter.variable} ${mono.variable} h-full antialiased`}
+      className={`${vazirmatn.variable} ${inter.variable} ${mono.variable} h-full overflow-x-clip antialiased`}
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col overflow-x-clip bg-ink text-[#eceef6]">
@@ -78,7 +78,7 @@ export default async function LocaleLayout({
           <ScrollProgress />
           <div aria-hidden className="noise-layer pointer-events-none fixed inset-0 z-[70]" />
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="min-w-0 flex-1 overflow-x-clip">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

@@ -18,11 +18,11 @@ export function FaqSection() {
   const [open, setOpen] = useState<string | null>(faqItems[0].id);
 
   return (
-    <section className="relative py-24 sm:py-28">
+    <section className="relative py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="mt-12 space-y-3">
+        <div className="mt-10 space-y-3 sm:mt-12">
           {faqItems.map((item, i) => {
             const isOpen = open === item.id;
             return (
@@ -41,9 +41,9 @@ export function FaqSection() {
                 <button
                   onClick={() => setOpen(isOpen ? null : item.id)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-start"
+                  className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-start sm:gap-4 sm:px-5 sm:py-4"
                 >
-                  <span className="text-sm font-bold text-white/85 sm:text-base">
+                  <span className="min-w-0 flex-1 text-sm font-bold text-white/85 sm:text-base">
                     {pick(item.question, locale)}
                   </span>
                   <motion.span
@@ -64,7 +64,7 @@ export function FaqSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
                     >
-                      <p className="px-5 pb-5 text-sm leading-relaxed text-white/60">
+                      <p className="px-4 pb-4 text-sm leading-relaxed text-white/60 sm:px-5 sm:pb-5">
                         {pick(item.answer, locale)}
                       </p>
                     </motion.div>

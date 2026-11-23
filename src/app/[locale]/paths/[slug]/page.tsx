@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Briefcase } from "lucide-react";
+import { ArrowLeft, Briefcase } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { RoadmapTimeline } from "@/components/paths/RoadmapTimeline";
 import { iconRegistry } from "@/components/icons/registry";
@@ -48,47 +48,46 @@ export default async function PathDetailPage({
   const rt = await getTranslations({ locale: rawLocale, namespace: "resourceType" });
   const a = accents[path.accent];
   const Icon = iconRegistry[path.icon];
-  const Arrow = locale === "fa" ? ArrowLeft : ArrowRight;
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-clip">
       <div aria-hidden className="grid-bg absolute inset-x-0 top-0 h-[420px]" />
       <div
         aria-hidden
         className={`absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b ${a.bgSofter} to-transparent`}
       />
 
-      <section className="relative mx-auto max-w-6xl px-4 pb-28 pt-28 sm:px-6">
+      <section className="relative mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 sm:pb-28 sm:pt-28">
         {/* breadcrumb */}
         <Link
           href="/paths"
           className="inline-flex items-center gap-1.5 text-sm text-white/50 transition hover:text-white"
         >
-          <Arrow className="size-4 rtl:rotate-180" />
+          <ArrowLeft className="size-4 rtl:rotate-180" />
           {t("backToPaths")}
         </Link>
 
         {/* hero */}
-        <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-start">
-          <span className={`flex size-16 shrink-0 items-center justify-center rounded-2xl ${a.bgSoft} ring-1 ${a.border} ${a.glowShadow}`}>
-            <Icon className={`size-8 ${a.text}`} />
+        <div className="mt-6 flex flex-col gap-5 sm:mt-8 sm:flex-row sm:items-start sm:gap-6">
+          <span className={`flex size-14 shrink-0 items-center justify-center rounded-2xl sm:size-16 ${a.bgSoft} ring-1 ${a.border} ${a.glowShadow}`}>
+            <Icon className={`size-7 sm:size-8 ${a.text}`} />
           </span>
-          <div className="flex-1">
-            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+          <div className="min-w-0 flex-1">
+            <h1 className="break-words text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
               {pick(path.title, locale)}
             </h1>
-            <p className={`mt-2 text-lg font-semibold ${a.textSoft}`}>{pick(path.tagline, locale)}</p>
-            <p className="mt-4 max-w-3xl leading-relaxed text-white/60">
+            <p className={`mt-2 text-base font-semibold sm:text-lg ${a.textSoft}`}>{pick(path.tagline, locale)}</p>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/60 sm:mt-4 sm:text-base">
               {pick(path.description, locale)}
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/55">
+            <div className="mt-5 flex flex-wrap items-start gap-x-6 gap-y-2 text-sm text-white/55">
               <span className="inline-flex items-center gap-1.5">
-                <span className={`size-2 rounded-full ${a.solid}`} />
+                <span className={`size-2 shrink-0 rounded-full ${a.solid}`} />
                 {pick(path.totalDuration, locale)}
               </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Briefcase className={`size-4 ${a.text}`} />
-                {path.roles.map((r) => pick(r, locale)).join(" · ")}
+              <span className="inline-flex items-start gap-1.5">
+                <Briefcase className={`mt-0.5 size-4 shrink-0 ${a.text}`} />
+                <span>{path.roles.map((r) => pick(r, locale)).join(" · ")}</span>
               </span>
             </div>
           </div>

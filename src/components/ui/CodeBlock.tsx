@@ -29,7 +29,7 @@ export function CodeBlock({
   }
 
   return (
-    <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0a0c14]">
+    <div className="w-full min-w-0 max-w-full overflow-hidden rounded-xl border border-white/10 bg-[#0a0c14]">
       <div className="flex items-center justify-between border-b border-white/[0.06] px-3.5 py-2">
         <div className="flex items-center gap-3">
           <div className="flex gap-1.5">
@@ -49,13 +49,13 @@ export function CodeBlock({
           {copied ? <Check className="size-3.5 text-emerald-400" /> : <Copy className="size-3.5" />}
         </button>
       </div>
-      <pre dir="ltr" className="overflow-x-auto px-4 py-3.5 text-start">
-        <code className="font-mono text-[13px] leading-relaxed text-[#c9cfdf]">
+      <pre dir="ltr" className="max-w-full overflow-x-auto px-3.5 py-3 text-start sm:px-4 sm:py-3.5">
+        <code className="font-mono text-[12px] leading-relaxed text-[#c9cfdf] sm:text-[13px]">
           {code}
         </code>
       </pre>
       {caption && (
-        <p className="border-t border-white/[0.06] px-4 py-2 text-xs text-white/45">
+        <p className="border-t border-white/[0.06] px-3.5 py-2 text-xs text-white/45 sm:px-4">
           {caption}
         </p>
       )}

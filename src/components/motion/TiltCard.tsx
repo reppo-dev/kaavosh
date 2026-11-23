@@ -52,7 +52,7 @@ export function TiltCard({
         py.set(0.5);
       }}
       style={{ rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}
-      className={`group relative ${className ?? ""}`}
+      className={`group relative min-w-0 ${className ?? ""}`}
     >
       {/* pointer-following glow */}
       <div
