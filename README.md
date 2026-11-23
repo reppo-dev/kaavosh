@@ -34,10 +34,10 @@ No external services, database or API — the whole site is static, built from l
 | Section | Count | Notes |
 | --- | --- | --- |
 | Learning paths | **6 paths** | Frontend, Backend, DevOps & Cloud, AI/ML, Cybersecurity, Mobile |
-| Interview questions | **11 fields × 1,724 Q&A** | Imported from popular open-source interview repos; Persian question text 100% complete |
-| Persian full answers | **984 of 1,724** | 8 fields complete; `algorithms` and `react` in progress — untranslated bodies fall back to English with an EN badge |
-| Glossary | **383 terms in 11 categories** | Searchable, category-filtered |
-| Concept animations | **34 explainers** | All drawn in-browser with SVG + CSS + motion |
+| Interview questions | **11 fields × 1,724 Q&A** | Imported from open-source interview repos with full attribution; 100% bilingual (FA & EN) |
+| Persian full answers | **1,724 of 1,724 (100%)** | All 11 fields translated to Persian with RTL support |
+| Glossary | **540 terms in 12 categories** | Searchable, category-filtered, with everyday analogies |
+| Concept animations | **35 explainers** | All drawn in-browser with SVG + CSS + motion |
 
 ---
 
@@ -156,7 +156,7 @@ node scripts/fa-merge.mjs <slug> scripts/_fa-todo/<batch>.json [...]
 - `fa-bank/<slug>.json` is an array of `{ en, q?, qa?, am? }`: `en` is the unique key (the question's English title), `q` the Persian question, `qa` the 30-second answer, `am` the full markdown answer.
 - Rebuild the bank from the source repos: `node scripts/build-interview-bank.mjs`
 
-**Current status:** Persian question text is complete for all 1,724 questions; Persian full answers cover 984 (8 fields complete; `algorithms` and `react` in progress).
+**Current status:** Persian question text, 30-second answers, and full markdown answers are **100% complete** across all 1,724 questions and 11 fields.
 
 ---
 
@@ -165,7 +165,7 @@ node scripts/fa-merge.mjs <slug> scripts/_fa-todo/<batch>.json [...]
 Instead of downloaded videos or images, every hard concept is drawn **in-browser with SVG + CSS + motion**:
 
 - No downloads, no network cost, always sharp, replayable forever.
-- Examples: the journey of an HTTP request, the JavaScript event loop, React render & reconciliation, DOM→pixel, Git, containers vs VMs, JWT auth, JOIN, encryption, ML training, CI/CD pipeline, mobile lifecycle, sorting, stack/queue, hash table, linked list, graph traversal, memoization, Trie, and more — 34 in total.
+- Examples: the journey of an HTTP request, the JavaScript event loop, React render & reconciliation, DOM→pixel, Git, containers vs VMs, JWT auth, JOIN, encryption, ML training, CI/CD pipeline, mobile lifecycle, sorting, stack/queue, hash table, linked list, graph traversal, memoization, Trie, and more — 35 in total.
 - All live in `src/components/explainers/` — with a `VisualKind → component` registry.
 - Every animation respects `prefers-reduced-motion`.
 
@@ -183,6 +183,11 @@ For interview questions: the **30-second answer** first, then the same answer **
 
 ---
 
-## 📄 Content License
+## 📄 Licensing & Attribution
 
-All texts are original. Links point only to reputable sources (MDN, official docs, roadmap.sh, freeCodeCamp, The Odin Project, OWASP, …).
+This repository clearly separates licensing across three layers:
+
+- **Source Code (`src/app`, `src/components`, `src/lib`, `src/i18n`, `scripts`):** Licensed under the **MIT License** — see [`LICENSE`](./LICENSE).
+- **Original Authored Content (`src/data/paths`, `src/data/glossary`, `src/data/deep-dives.ts`, `src/data/faq.ts`, `src/data/interview-bank/fa-bank`):** Licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)** — see [`LICENSE-CONTENT.md`](./LICENSE-CONTENT.md).
+- **Imported Third-Party Interview Bank (`src/data/interview-bank/*.json`):** Preserves upstream licenses, source links, and original attribution for every imported question — see [`THIRD_PARTY_LICENSES.md`](./THIRD_PARTY_LICENSES.md).
+
