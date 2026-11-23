@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./LocaleSwitcher";
@@ -13,6 +13,7 @@ import { LogoMark } from "./LogoMark";
  */
 export function Header() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -45,8 +46,14 @@ export function Header() {
         <Link href="/" className="group flex items-center gap-2.5">
           <LogoMark className="size-8 transition-transform duration-500 group-hover:rotate-[20deg]" />
           <span className="text-lg font-extrabold tracking-tight">
-            کاوش<span className="mx-1.5 font-semibold text-white/40">/</span>
-            <span className="text-gradient">Kaavosh</span>
+            {locale === "fa" ? (
+              <>
+                کاوش<span className="mx-1.5 font-semibold text-white/40">/</span>
+                <span className="text-gradient">Kaavosh</span>
+              </>
+            ) : (
+              <span className="text-gradient">Kaavosh</span>
+            )}
           </span>
         </Link>
 

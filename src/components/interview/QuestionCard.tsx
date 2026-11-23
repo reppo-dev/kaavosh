@@ -8,7 +8,7 @@ import { ExplainerFrame } from "@/components/ui/ExplainerFrame";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 import { Chip } from "@/components/ui/Badge";
 import { accents } from "@/lib/theme";
-import { pick, type Locale } from "@/lib/i18n-helpers";
+import { pick, toLocaleNumber, type Locale } from "@/lib/i18n-helpers";
 import { glossaryTerms } from "@/data/glossary";
 import { deepDiveIndex } from "@/data/deep-dives";
 import type { DeepDive, InterviewQuestion } from "@/data/schema";
@@ -149,10 +149,7 @@ export function QuestionCard({
   const [openVocab, setOpenVocab] = useState<string | null>(null);
   const [openDives, setOpenDives] = useState<Set<string>>(new Set());
   const a = accents[accent];
-  const num =
-    locale === "fa"
-      ? ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۱۰"][index] ?? String(index + 1)
-      : String(index + 1);
+  const num = toLocaleNumber(index + 1, locale);
   const ui = labels[locale];
 
   function toggleDive(id: string) {
@@ -174,7 +171,7 @@ export function QuestionCard({
           className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-bold transition ${a.bgSoft} ${a.text} ring-1 ${a.border} hover:brightness-125`}
         >
           <Telescope className="size-3" />
-          {compact ? "؟" : ui.dive}
+          {compact ? (locale === "fa" ? "؟" : "?") : ui.dive}
           <ChevronDown className={`size-3 transition-transform ${isOpen ? "rotate-180" : ""}`} />
         </button>
         <AnimatePresence initial={false}>
@@ -203,7 +200,7 @@ export function QuestionCard({
                           rel="noopener noreferrer"
                           className="mt-2 inline-block text-[11px] text-white/40 underline underline-offset-2 hover:text-white/70"
                         >
-                          source ↗
+                          {locale === "fa" ? "منبع ↗" : "source ↗"}
                         </a>
                       )}
                     </span>
@@ -308,39 +305,41 @@ export function QuestionCard({
               })()}
 
               {/* step-by-step (with deep-dive markers) */}
-              <div>
-                <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/45">
-                  <ListOrdered className="size-3.5" />
-                  {fieldLabels.stepByStep}
-                </p>
-                <ol className="relative mt-3 space-y-4 ps-6">
-                  <span aria-hidden className="absolute inset-y-2 start-[10px] w-px bg-white/10" />
-                  {q.steps.map((step, si) => (
-                    <motion.li
-                      key={si}
-                      initial={{ opacity: 0, x: 14 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.12 + si * 0.08, duration: 0.45 }}
-                      className="relative"
-                    >
-                      <span className={`absolute -start-6 top-1 flex size-5 items-center justify-center rounded-full border border-white/15 bg-[#0a0c14] font-mono text-[10px] ${a.text}`}>
-                        {locale === "fa" ? "۱۲۳۴۵۶۷۸۹"[si] : si + 1}
-                      </span>
-                      <p className="flex flex-wrap items-center gap-2 text-sm font-bold text-white/85">
-                        {pick(step.title, locale)}
-                        {step.deepDive && <DiveMarker diveId={step.deepDive} compact />}
-                      </p>
-                      <p className="mt-1 text-sm leading-relaxed text-white/60">{pick(step.detail, locale)}</p>
-                      {step.deepDive && <DiveMarker diveId={step.deepDive} />}
-                      {step.code && (
-                        <pre dir="ltr" className="mt-2 overflow-x-auto rounded-lg border border-white/10 bg-[#0a0c14] px-3 py-2 text-start font-mono text-xs text-[#c9cfdf]">
-                          {step.code}
-                        </pre>
-                      )}
-                    </motion.li>
-                  ))}
-                </ol>
-              </div>
+              {q.steps.length > 0 && (
+                <div>
+                  <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white/45">
+                    <ListOrdered className="size-3.5" />
+                    {fieldLabels.stepByStep}
+                  </p>
+                  <ol className="relative mt-3 space-y-4 ps-6">
+                    <span aria-hidden className="absolute inset-y-2 start-[10px] w-px bg-white/10" />
+                    {q.steps.map((step, si) => (
+                      <motion.li
+                        key={si}
+                        initial={{ opacity: 0, x: 14 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.12 + si * 0.08, duration: 0.45 }}
+                        className="relative"
+                      >
+                        <span className={`absolute -start-6 top-1 flex size-5 items-center justify-center rounded-full border border-white/15 bg-[#0a0c14] font-mono text-[10px] ${a.text}`}>
+                          {toLocaleNumber(si + 1, locale)}
+                        </span>
+                        <p className="flex flex-wrap items-center gap-2 text-sm font-bold text-white/85">
+                          {pick(step.title, locale)}
+                          {step.deepDive && <DiveMarker diveId={step.deepDive} compact />}
+                        </p>
+                        <p className="mt-1 text-sm leading-relaxed text-white/60">{pick(step.detail, locale)}</p>
+                        {step.deepDive && <DiveMarker diveId={step.deepDive} />}
+                        {step.code && (
+                          <pre dir="ltr" className="mt-2 overflow-x-auto rounded-lg border border-white/10 bg-[#0a0c14] px-3 py-2 text-start font-mono text-xs text-[#c9cfdf]">
+                            {step.code}
+                          </pre>
+                        )}
+                      </motion.li>
+                    ))}
+                  </ol>
+                </div>
+              )}
 
               {/* vocabulary cards */}
               <div>

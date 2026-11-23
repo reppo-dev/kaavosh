@@ -68,4 +68,10 @@ export const glossaryCategories: GlossaryCategory[] = [
     accent: "sky",
     title: { fa: "طراحی سیستم", en: "System Design" },
   },
+  {
+    id: "behavioral",
+    icon: "messages-square",
+    accent: "indigo",
+    title: { fa: "فرهنگ مهندسی و رفتاری", en: "Engineering & Behavioral" },
+  },
 ];

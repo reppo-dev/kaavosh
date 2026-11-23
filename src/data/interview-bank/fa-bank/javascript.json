@@ -861,7 +861,7 @@
   "en": "Write a function that returns a random HEX color",
   "q": "تابعی بنویس که یک رنگ HEX تصادفی برگرداند.",
   "qa": "تابع random HEX: از `Math.random()` ضرب‌در 0xffffff، تبدیل به base 16 با `toString(16)` و padStart تا طول ۶.",
-  "am": "```javascript\nconst HEX_PREFIX = \"#\";\nconst HEX_RADIX = 16;\nconst HEX_LENGTH = 6;\n\nfunction generateRandomHex() {\n  return (\n    HEX_PREFIX +\n    Math.floor(Math.random() * 0xffffff)\n      .toString(HEX_RADIX)\n      .padStart(HEX_LENGTH, \"0\")\n  );\n}\n```\n\n---\n\n****"
+  "am": "برای تولید یک کد رنگ تصادفی هگزادسیمال، یک عدد تصادفی بین `0` تا `0xffffff` تولید می‌کنیم، آن را به مبنای ۱۶ تبدیل می‌کنیم و با `padStart(6, \"0\")` مطمئن می‌شویم طول آن همیشه ۶ رقم باشد:\n\n```javascript\nconst HEX_PREFIX = \"#\";\nconst HEX_RADIX = 16;\nconst HEX_LENGTH = 6;\n\nfunction generateRandomHex() {\n  return (\n    HEX_PREFIX +\n    Math.floor(Math.random() * 0xffffff)\n      .toString(HEX_RADIX)\n      .padStart(HEX_LENGTH, \"0\")\n  );\n}\n```"
  },
  {
   "en": "What is the output of below code in an order?",

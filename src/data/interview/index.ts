@@ -1,6 +1,4 @@
 import type { InterviewField, InterviewQuestion } from "../schema";
-import fs from "node:fs";
-import path from "node:path";
 import { frontendInterview } from "./frontend";
 import { backendInterview } from "./backend";
 import { devopsInterview } from "./devops-cloud";
@@ -16,8 +14,8 @@ import { cybersecurityInterview } from "./cybersecurity";
  *  2. The import bank (src/data/interview-bank/*.json): every question extracted,
  *     deduped, categorized and difficulty-sorted from the cloned open-source repos
  *     (greatfrontend, sudheerj, Devinterview-io ×69, system-design-primer,
- *     tech-interview-handbook). Bank questions keep their English original — each
- *     card shows its source and an EN badge. Rebuild: node scripts/build-interview-bank.mjs
+ *     tech-interview-handbook). Persian translations live in fa-bank/<slug>.json.
+ *     Rebuild: node scripts/build-interview-bank.mjs
  */
 import bankJsJson from "../interview-bank/javascript.json";
 import bankReactJson from "../interview-bank/react.json";
@@ -30,6 +28,18 @@ import bankSdJson from "../interview-bank/system-design.json";
 import bankBhJson from "../interview-bank/behavioral.json";
 import bankAlgoJson from "../interview-bank/algorithms.json";
 import bankMobileJson from "../interview-bank/mobile.json";
+
+import faJsJson from "../interview-bank/fa-bank/javascript.json";
+import faReactJson from "../interview-bank/fa-bank/react.json";
+import faFrontendJson from "../interview-bank/fa-bank/frontend.json";
+import faBackendJson from "../interview-bank/fa-bank/backend.json";
+import faDevopsJson from "../interview-bank/fa-bank/devops-cloud.json";
+import faCyberJson from "../interview-bank/fa-bank/cybersecurity.json";
+import faAiMlJson from "../interview-bank/fa-bank/ai-ml.json";
+import faSdJson from "../interview-bank/fa-bank/system-design.json";
+import faBhJson from "../interview-bank/fa-bank/behavioral.json";
+import faAlgoJson from "../interview-bank/fa-bank/algorithms.json";
+import faMobileJson from "../interview-bank/fa-bank/mobile.json";
 
 type BankFile = { meta: Omit<InterviewField, "questions">; questions: InterviewQuestion[] };
 
@@ -59,19 +69,29 @@ const RANK = { junior: 0, mid: 1, senior: 2 } as const;
 const byDifficulty = (qs: InterviewQuestion[]) =>
   [...qs].sort((a, b) => RANK[a.difficulty] - RANK[b.difficulty]);
 
-/** Persian overrides for bank questions: fa-bank/<slug>.json = [{en, q, qa}] */
+/** Persian overrides for bank questions: fa-bank/<slug>.json = [{en, q, qa, am}] */
 const normKey = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 type FaEntry = { en: string; q: string; qa?: string; am?: string };
 
+const faBySlug: Record<string, FaEntry[]> = {
+  javascript: faJsJson as FaEntry[],
+  react: faReactJson as FaEntry[],
+  frontend: faFrontendJson as FaEntry[],
+  backend: faBackendJson as FaEntry[],
+  "devops-cloud": faDevopsJson as FaEntry[],
+  cybersecurity: faCyberJson as FaEntry[],
+  "ai-ml": faAiMlJson as FaEntry[],
+  "system-design": faSdJson as FaEntry[],
+  behavioral: faBhJson as FaEntry[],
+  algorithms: faAlgoJson as FaEntry[],
+  mobile: faMobileJson as FaEntry[],
+};
+
 function loadFaBank(slug: string): Record<string, FaEntry> {
   const map: Record<string, FaEntry> = {};
-  try {
-    const p = path.join(process.cwd(), "src/data/interview-bank/fa-bank", slug + ".json");
-    const arr = JSON.parse(fs.readFileSync(p, "utf8")) as FaEntry[];
-    for (const e of arr) map[normKey(e.en)] = e;
-  } catch {
-    /* no fa file for this slug yet */
-  }
+  const arr = faBySlug[slug];
+  if (!arr) return map;
+  for (const e of arr) map[normKey(e.en)] = e;
   return map;
 }
 

@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LogoMark } from "./LogoMark";
 import { site } from "@/data/site";
@@ -10,6 +10,7 @@ import { site } from "@/data/site";
 export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
+  const locale = useLocale();
 
   const links = [
     { href: "/paths", label: t("paths") },
@@ -25,7 +26,9 @@ export function Footer() {
           <div className="max-w-sm">
             <div className="flex items-center gap-2.5">
               <LogoMark className="size-8" />
-              <span className="text-lg font-extrabold">{site.name.fa} / Kaavosh</span>
+              <span className="text-lg font-extrabold">
+                {locale === "fa" ? `${site.name.fa} / ${site.name.en}` : site.name.en}
+              </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/50">
               {t("tagline")}
@@ -59,7 +62,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex items-center justify-between border-t border-white/[0.06] pt-6 text-xs text-white/35">
-          <span>© 2026 Kaavosh · کاوش</span>
+          <span>
+            {locale === "fa" ? `© ۲۰۲۶ ${site.name.fa} · ${site.name.en}` : `© 2026 ${site.name.en}`}
+          </span>
           <span>{t("copyright")}</span>
         </div>
       </div>

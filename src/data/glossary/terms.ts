@@ -1,36 +1,48 @@
 import type { GlossaryTerm } from "../schema";
 import { moreFundamentalsTerms } from "./terms-more/fundamentals";
 import { moreFundamentalsTerms2 } from "./terms-more/fundamentals-2";
+import { moreFundamentalsTerms3 } from "./terms-more/fundamentals-3";
 import { moreFrontendTerms } from "./terms-more/frontend";
 import { moreFrontendTerms2 } from "./terms-more/frontend-2";
 import { moreFrontendTerms3 } from "./terms-more/frontend-3";
+import { moreFrontendTerms4 } from "./terms-more/frontend-4";
 import { moreBackendTerms } from "./terms-more/backend";
 import { moreBackendTerms2 } from "./terms-more/backend-2";
 import { moreBackendTerms3 } from "./terms-more/backend-3";
+import { moreBackendTerms4 } from "./terms-more/backend-4";
 import { moreDatabaseTerms } from "./terms-more/database";
 import { moreDatabaseTerms2 } from "./terms-more/database-2";
+import { moreDatabaseTerms3 } from "./terms-more/database-3";
 import { moreDevopsTerms } from "./terms-more/devops";
 import { moreDevopsTerms2 } from "./terms-more/devops-2";
 import { moreDevopsTerms3 } from "./terms-more/devops-3";
+import { moreDevopsTerms4 } from "./terms-more/devops-4";
 import { moreSecurityTerms } from "./terms-more/security";
 import { moreSecurityTerms2 } from "./terms-more/security-2";
+import { moreSecurityTerms3 } from "./terms-more/security-3";
 import { moreNetworkingTerms } from "./terms-more/networking";
 import { moreNetworkingTerms2 } from "./terms-more/networking-2";
+import { moreNetworkingTerms3 } from "./terms-more/networking-3";
 import { moreMobileTerms } from "./terms-more/mobile";
 import { moreMobileTerms2 } from "./terms-more/mobile-2";
+import { moreMobileTerms3 } from "./terms-more/mobile-3";
 import { moreAlgorithmsTerms } from "./terms-more/algorithms";
 import { moreAlgorithmsTerms2 } from "./terms-more/algorithms-2";
 import { moreAlgorithmsTerms3 } from "./terms-more/algorithms-3";
+import { moreAlgorithmsTerms4 } from "./terms-more/algorithms-4";
 import { moreSystemDesignTerms } from "./terms-more/system-design";
 import { moreSystemDesignTerms2 } from "./terms-more/system-design-2";
+import { moreSystemDesignTerms3 } from "./terms-more/system-design-3";
 import { moreAiTerms } from "./terms-more/ai";
 import { moreAiTerms2 } from "./terms-more/ai-2";
 import { moreAiTerms3 } from "./terms-more/ai-3";
+import { moreAiTerms4 } from "./terms-more/ai-4";
+import { behavioralTerms } from "./terms-more/behavioral";
 
 /**
  * DATA FILE — Glossary terms. Consumed by: /glossary searchable cards grid + inline term tooltips.
  * Structure: the 42 core terms below + per-category extension files in terms-more/.
- * Total coverage: ~370 terms across 11 categories (v4: mined from the interview bank Q&A).
+ * Total coverage: 540 terms across 12 categories.
  */
 const coreGlossaryTerms: GlossaryTerm[] = [
   /* ── fundamentals ─────────────────────────────────────────────── */
@@ -641,29 +653,41 @@ export const glossaryTerms: GlossaryTerm[] = [
   ...coreGlossaryTerms,
   ...moreFundamentalsTerms,
   ...moreFundamentalsTerms2,
+  ...moreFundamentalsTerms3,
   ...moreFrontendTerms,
   ...moreFrontendTerms2,
   ...moreFrontendTerms3,
+  ...moreFrontendTerms4,
   ...moreBackendTerms,
   ...moreBackendTerms2,
   ...moreBackendTerms3,
+  ...moreBackendTerms4,
   ...moreDatabaseTerms,
   ...moreDatabaseTerms2,
+  ...moreDatabaseTerms3,
   ...moreDevopsTerms,
   ...moreDevopsTerms2,
   ...moreDevopsTerms3,
+  ...moreDevopsTerms4,
   ...moreSecurityTerms,
   ...moreSecurityTerms2,
+  ...moreSecurityTerms3,
   ...moreNetworkingTerms,
   ...moreNetworkingTerms2,
+  ...moreNetworkingTerms3,
   ...moreMobileTerms,
   ...moreMobileTerms2,
+  ...moreMobileTerms3,
   ...moreAlgorithmsTerms,
   ...moreAlgorithmsTerms2,
   ...moreAlgorithmsTerms3,
+  ...moreAlgorithmsTerms4,
   ...moreSystemDesignTerms,
   ...moreSystemDesignTerms2,
+  ...moreSystemDesignTerms3,
   ...moreAiTerms,
   ...moreAiTerms2,
   ...moreAiTerms3,
+  ...moreAiTerms4,
+  ...behavioralTerms,
 ];

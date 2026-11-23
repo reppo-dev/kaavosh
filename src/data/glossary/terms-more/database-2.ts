@@ -91,8 +91,8 @@ export const moreDatabaseTerms2: GlossaryTerm[] = [
     fa: "دستور آماده",
     category: "database",
     definition: {
-      fa: "Prepared statement کوئری را با جای‌نگهدار (؟ یا $1) از پیش می‌فرستد تا پلن اجرا یک‌بار آماده شود و مقادیر بعداً جداگانه بایند شوند. دو مزیت: جلوگیری از SQL Injection (مقدار هرگز به متن کوئری نمی‌چسبد) و اجرای سریع‌تر کوئری‌های پرتکرار.",
-      en: "A prepared statement sends the query with placeholders (؟ or $1) so the execution plan is prepared once and values are bound separately afterwards. Two wins: SQL injection prevention (values never merge into query text) and faster repeated execution.",
+      fa: "Prepared statement کوئری را با جای‌نگهدار (? یا $1) از پیش می‌فرستد تا پلن اجرا یک‌بار آماده شود و مقادیر بعداً جداگانه بایند شوند. دو مزیت: جلوگیری از SQL Injection (مقدار هرگز به متن کوئری نمی‌چسبد) و اجرای سریع‌تر کوئری‌های پرتکرار.",
+      en: "A prepared statement sends the query with placeholders (? or $1) so the execution plan is prepared once and values are bound separately afterwards. Two wins: SQL injection prevention (values never merge into query text) and faster repeated execution.",
     },
     analogy: {
       fa: "مثل فرم چاپی بانک: ساختار فرم ثابت است و شما فقط خانه‌های خالی را پر می‌کنید — کسی نمی‌تواند با نوشتن در خانه‌ها «ساختار» فرم را عوض کند.",

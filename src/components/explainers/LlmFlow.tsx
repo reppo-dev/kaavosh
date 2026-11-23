@@ -9,8 +9,8 @@ import { useExplainerLocale } from "./useExplainerLocale";
  * transformer layers, and the next token is chosen — one at a time.
  */
 export function LlmFlowExplainer() {
-  const { L } = useExplainerLocale();
-  const tokens = ["شهر", "زیبا", "است"];
+  const { locale, L } = useExplainerLocale();
+  const tokens = locale === "fa" ? ["هوای", "امـ", "روز"] : ["the", "wea", "ther"];
 
   return (
     <svg viewBox="0 0 420 230" className="w-full" role="img">
